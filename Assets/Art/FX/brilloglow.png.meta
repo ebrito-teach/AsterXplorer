@@ -1,0 +1,897 @@
+fileFormatVersion: 2
+guid: 9e7070c396bd80b4bb9680ce3df61684
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6558088134770628229
+    second: brilloglow_0
+  - first:
+      213: -2973022771660296617
+    second: brilloglow_1
+  - first:
+      213: 6578977879696431649
+    second: brilloglow_2
+  - first:
+      213: -5823081970348198213
+    second: brilloglow_3
+  - first:
+      213: 5475156994120117862
+    second: brilloglow_4
+  - first:
+      213: 2644481279764211710
+    second: brilloglow_5
+  - first:
+      213: 8409647162241173697
+    second: brilloglow_6
+  - first:
+      213: 6735445469974907669
+    second: brilloglow_7
+  - first:
+      213: -3669214987778992195
+    second: brilloglow_8
+  - first:
+      213: 6714791501616887422
+    second: brilloglow_9
+  - first:
+      213: 2001271615722915739
+    second: brilloglow_10
+  - first:
+      213: 8808858660897525885
+    second: brilloglow_11
+  - first:
+      213: -3885589182665350566
+    second: brilloglow_12
+  - first:
+      213: -2707579256351911172
+    second: brilloglow_13
+  - first:
+      213: 804590226475388296
+    second: brilloglow_14
+  - first:
+      213: -5708810906978669900
+    second: brilloglow_15
+  - first:
+      213: 2239509926344467665
+    second: brilloglow_16
+  - first:
+      213: 5373213256985307322
+    second: brilloglow_17
+  - first:
+      213: -587947665179021622
+    second: brilloglow_18
+  - first:
+      213: 4696596157240405904
+    second: brilloglow_19
+  - first:
+      213: 713431469014985528
+    second: brilloglow_20
+  - first:
+      213: 90405290396760002
+    second: brilloglow_21
+  - first:
+      213: -6143408426238875372
+    second: brilloglow_22
+  - first:
+      213: -339669781143257749
+    second: brilloglow_23
+  - first:
+      213: 8080381548965889375
+    second: brilloglow_24
+  - first:
+      213: -3026241585892214392
+    second: brilloglow_25
+  - first:
+      213: -899518508494172366
+    second: brilloglow_26
+  - first:
+      213: 6062223072895773995
+    second: brilloglow_27
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 0
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: brilloglow_0
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 1321
+        width: 51
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58615be8962030b50800000000000000
+      internalID: 6558088134770628229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brilloglow_1
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 1301
+        width: 94
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75e6a0a7a83bdb6d0800000000000000
+      internalID: -2973022771660296617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brilloglow_2
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 1192
+        width: 306
+        height: 317
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12a557056893d4b50800000000000000
+      internalID: 6578977879696431649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brilloglow_3
+      rect:
+        serializedVersion: 2
+        x: 1033
+        y: 1176
+        width: 341
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb6f96bccc1403fa0800000000000000
+      internalID: -5823081970348198213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brilloglow_4
+      rect:
+        serializedVersion: 2
+        x: 1437
+        y: 1233
+        width: 222
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66e660c074aabfb40800000000000000
+      internalID: 5475156994120117862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brilloglow_5
+      rect:
+        serializedVersion: 2
+        x: 1802
+        y: 1263
+        width: 175
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef7248f76b513b420800000000000000
+      internalID: 2644481279764211710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brilloglow_6
+      rect:
+        serializedVersion: 2
+        x: 2162
+        y: 1276
+        width: 131
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c8c1cfa98115b470800000000000000
+      internalID: 8409647162241173697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brilloglow_7
+      rect:
+        serializedVersion: 2
+        x: 2527
+        y: 1314
+        width: 85
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51b4ed118fb197d50800000000000000
+      internalID: 6735445469974907669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brilloglow_8
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 941
+        width: 45
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db7d4e0b864541dc0800000000000000
+      internalID: -3669214987778992195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brilloglow_9
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 905
+        width: 104
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e76bfa25b4bbf2d50800000000000000
+      internalID: 6714791501616887422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brilloglow_10
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 785
+        width: 683
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b978c3a6ee1f5cb10800000000000000
+      internalID: 2001271615722915739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brilloglow_11
+      rect:
+        serializedVersion: 2
+        x: 1419
+        y: 832
+        width: 254
+        height: 259
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d709b6fd74a5f3a70800000000000000
+      internalID: 8808858660897525885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brilloglow_12
+      rect:
+        serializedVersion: 2
+        x: 1783
+        y: 847
+        width: 218
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a52a120a93d931ac0800000000000000
+      internalID: -3885589182665350566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brilloglow_13
+      rect:
+        serializedVersion: 2
+        x: 2143
+        y: 857
+        width: 186
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf29deff20fbc6ad0800000000000000
+      internalID: -2707579256351911172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brilloglow_14
+      rect:
+        serializedVersion: 2
+        x: 2501
+        y: 871
+        width: 149
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88d01de4c8a7a2b00800000000000000
+      internalID: 804590226475388296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brilloglow_15
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 533
+        width: 47
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ba29a70aba36c0b0800000000000000
+      internalID: -5708810906978669900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brilloglow_16
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 493
+        width: 121
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d429be9966541f10800000000000000
+      internalID: 2239509926344467665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brilloglow_17
+      rect:
+        serializedVersion: 2
+        x: 706
+        y: 409
+        width: 310
+        height: 316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab8670d1dfc719a40800000000000000
+      internalID: 5373213256985307322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brilloglow_18
+      rect:
+        serializedVersion: 2
+        x: 1042
+        y: 411
+        width: 316
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aceeb7ea6b037d7f0800000000000000
+      internalID: -587947665179021622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brilloglow_19
+      rect:
+        serializedVersion: 2
+        x: 1407
+        y: 421
+        width: 279
+        height: 294
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09f67c54259ad2140800000000000000
+      internalID: 4696596157240405904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brilloglow_20
+      rect:
+        serializedVersion: 2
+        x: 1777
+        y: 437
+        width: 235
+        height: 267
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83b2932242e96e900800000000000000
+      internalID: 713431469014985528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brilloglow_21
+      rect:
+        serializedVersion: 2
+        x: 2135
+        y: 456
+        width: 200
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c73ae3f12f214100800000000000000
+      internalID: 90405290396760002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brilloglow_22
+      rect:
+        serializedVersion: 2
+        x: 2502
+        y: 490
+        width: 134
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 419e3e3e59a3ebaa0800000000000000
+      internalID: -6143408426238875372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brilloglow_23
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 86
+        width: 193
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6d750a3220494bf0800000000000000
+      internalID: -339669781143257749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brilloglow_24
+      rect:
+        serializedVersion: 2
+        x: 715
+        y: 50
+        width: 276
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f558bb30538432070800000000000000
+      internalID: 8080381548965889375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brilloglow_25
+      rect:
+        serializedVersion: 2
+        x: 1078
+        y: 51
+        width: 259
+        height: 267
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8893164bf41a006d0800000000000000
+      internalID: -3026241585892214392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brilloglow_26
+      rect:
+        serializedVersion: 2
+        x: 1422
+        y: 56
+        width: 238
+        height: 244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23fc050bea44483f0800000000000000
+      internalID: -899518508494172366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brilloglow_27
+      rect:
+        serializedVersion: 2
+        x: 1789
+        y: 75
+        width: 199
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2d212904c7512450800000000000000
+      internalID: 6062223072895773995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      brilloglow_0: 6558088134770628229
+      brilloglow_1: -2973022771660296617
+      brilloglow_10: 2001271615722915739
+      brilloglow_11: 8808858660897525885
+      brilloglow_12: -3885589182665350566
+      brilloglow_13: -2707579256351911172
+      brilloglow_14: 804590226475388296
+      brilloglow_15: -5708810906978669900
+      brilloglow_16: 2239509926344467665
+      brilloglow_17: 5373213256985307322
+      brilloglow_18: -587947665179021622
+      brilloglow_19: 4696596157240405904
+      brilloglow_2: 6578977879696431649
+      brilloglow_20: 713431469014985528
+      brilloglow_21: 90405290396760002
+      brilloglow_22: -6143408426238875372
+      brilloglow_23: -339669781143257749
+      brilloglow_24: 8080381548965889375
+      brilloglow_25: -3026241585892214392
+      brilloglow_26: -899518508494172366
+      brilloglow_27: 6062223072895773995
+      brilloglow_3: -5823081970348198213
+      brilloglow_4: 5475156994120117862
+      brilloglow_5: 2644481279764211710
+      brilloglow_6: 8409647162241173697
+      brilloglow_7: 6735445469974907669
+      brilloglow_8: -3669214987778992195
+      brilloglow_9: 6714791501616887422
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

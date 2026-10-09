@@ -1,0 +1,3757 @@
+fileFormatVersion: 2
+guid: 31a5415bcda26dd4c8bac61e84680072
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5870013207809413043
+    second: rockfragment_0
+  - first:
+      213: -4113930569434175125
+    second: rockfragment_1
+  - first:
+      213: -516570110117803119
+    second: rockfragment_2
+  - first:
+      213: -9035861057195579569
+    second: rockfragment_3
+  - first:
+      213: 7886758982152078842
+    second: rockfragment_4
+  - first:
+      213: -1475616240309271442
+    second: rockfragment_5
+  - first:
+      213: 8527619429875668337
+    second: rockfragment_6
+  - first:
+      213: 5261889200736217594
+    second: rockfragment_7
+  - first:
+      213: 4544980182086262042
+    second: rockfragment_8
+  - first:
+      213: 7212472597378853770
+    second: rockfragment_9
+  - first:
+      213: -5955030850622712933
+    second: rockfragment_10
+  - first:
+      213: -4448299069222795574
+    second: rockfragment_11
+  - first:
+      213: 3241081332772752012
+    second: rockfragment_12
+  - first:
+      213: -2631179928872784375
+    second: rockfragment_13
+  - first:
+      213: -1901050187206184136
+    second: rockfragment_14
+  - first:
+      213: -4162534842883500478
+    second: rockfragment_15
+  - first:
+      213: 7545593473380988959
+    second: rockfragment_16
+  - first:
+      213: 7974477373176274503
+    second: rockfragment_17
+  - first:
+      213: 2373606503505765782
+    second: rockfragment_18
+  - first:
+      213: -5214604744250865382
+    second: rockfragment_19
+  - first:
+      213: -7675832607361018931
+    second: rockfragment_20
+  - first:
+      213: 4201894167987931046
+    second: rockfragment_21
+  - first:
+      213: 4520669939997959896
+    second: rockfragment_22
+  - first:
+      213: -5402101252478147439
+    second: rockfragment_23
+  - first:
+      213: 1543301251950992898
+    second: rockfragment_24
+  - first:
+      213: -846918521489032528
+    second: rockfragment_25
+  - first:
+      213: -579268894887114062
+    second: rockfragment_26
+  - first:
+      213: -5024671319193086068
+    second: rockfragment_27
+  - first:
+      213: -7316227147034834323
+    second: rockfragment_28
+  - first:
+      213: -4015518561221818309
+    second: rockfragment_29
+  - first:
+      213: 6861218879401562179
+    second: rockfragment_30
+  - first:
+      213: 5240306195564061004
+    second: rockfragment_31
+  - first:
+      213: 8689061774233103658
+    second: rockfragment_32
+  - first:
+      213: -1264820334396628503
+    second: rockfragment_33
+  - first:
+      213: 9143247943338053394
+    second: rockfragment_34
+  - first:
+      213: 5170044467199246289
+    second: rockfragment_35
+  - first:
+      213: -4005481120119798444
+    second: rockfragment_36
+  - first:
+      213: 469624956658923959
+    second: rockfragment_37
+  - first:
+      213: 8508828805911266058
+    second: rockfragment_38
+  - first:
+      213: 6663213459145176787
+    second: rockfragment_39
+  - first:
+      213: 4397372695321374607
+    second: rockfragment_40
+  - first:
+      213: -1081051999189325799
+    second: rockfragment_41
+  - first:
+      213: -8760055989227689725
+    second: rockfragment_42
+  - first:
+      213: -7491039631500682633
+    second: rockfragment_43
+  - first:
+      213: -7230875266754680392
+    second: rockfragment_44
+  - first:
+      213: -8704045543261179500
+    second: rockfragment_45
+  - first:
+      213: 7407672449116456240
+    second: rockfragment_46
+  - first:
+      213: -8934899905962675218
+    second: rockfragment_47
+  - first:
+      213: 171253049515879944
+    second: rockfragment_48
+  - first:
+      213: 103893038591905555
+    second: rockfragment_49
+  - first:
+      213: -5179495499576435439
+    second: rockfragment_50
+  - first:
+      213: 9181789623509467995
+    second: rockfragment_51
+  - first:
+      213: 4077861974058249252
+    second: rockfragment_52
+  - first:
+      213: -1638688834038387279
+    second: rockfragment_53
+  - first:
+      213: 5686164992071154236
+    second: rockfragment_54
+  - first:
+      213: -8659847178570513362
+    second: rockfragment_55
+  - first:
+      213: 776805792064317109
+    second: rockfragment_56
+  - first:
+      213: 5762662650388953884
+    second: rockfragment_57
+  - first:
+      213: 4753748225172318905
+    second: rockfragment_58
+  - first:
+      213: 7698778713042961960
+    second: rockfragment_59
+  - first:
+      213: -2990418385214267772
+    second: rockfragment_60
+  - first:
+      213: -2033267323538946472
+    second: rockfragment_61
+  - first:
+      213: 1289642717926265447
+    second: rockfragment_62
+  - first:
+      213: -1606367612337644561
+    second: rockfragment_63
+  - first:
+      213: -2919375709787715504
+    second: rockfragment_64
+  - first:
+      213: 8946888358987503966
+    second: rockfragment_65
+  - first:
+      213: -7717110618669324645
+    second: rockfragment_66
+  - first:
+      213: 8508182960508691609
+    second: rockfragment_67
+  - first:
+      213: 1214932516524067138
+    second: rockfragment_68
+  - first:
+      213: -2682999142703575332
+    second: rockfragment_69
+  - first:
+      213: 1478685427427787853
+    second: rockfragment_70
+  - first:
+      213: -4974923536001901939
+    second: rockfragment_71
+  - first:
+      213: 4803723688465139268
+    second: rockfragment_72
+  - first:
+      213: -1554457715305698894
+    second: rockfragment_73
+  - first:
+      213: -5336574008845014722
+    second: rockfragment_74
+  - first:
+      213: -3152121663956119271
+    second: rockfragment_75
+  - first:
+      213: 7985631781729195034
+    second: rockfragment_76
+  - first:
+      213: -5070348970059535652
+    second: rockfragment_77
+  - first:
+      213: -2614753390223576778
+    second: rockfragment_78
+  - first:
+      213: 3305499285343783631
+    second: rockfragment_79
+  - first:
+      213: 2427066577188687914
+    second: rockfragment_80
+  - first:
+      213: -2142640885056315021
+    second: rockfragment_81
+  - first:
+      213: -1746403900167484048
+    second: rockfragment_82
+  - first:
+      213: -1636271301324153143
+    second: rockfragment_83
+  - first:
+      213: -5042149733015228924
+    second: rockfragment_84
+  - first:
+      213: -2638811480975672733
+    second: rockfragment_85
+  - first:
+      213: 6211948790558773898
+    second: rockfragment_86
+  - first:
+      213: -1180001172494515572
+    second: rockfragment_87
+  - first:
+      213: 8501594200628991162
+    second: rockfragment_88
+  - first:
+      213: -6090307415108036975
+    second: rockfragment_89
+  - first:
+      213: 2882929421784337179
+    second: rockfragment_90
+  - first:
+      213: 5683582685513636736
+    second: rockfragment_91
+  - first:
+      213: 5027987357173633354
+    second: rockfragment_92
+  - first:
+      213: 5442414412247888529
+    second: rockfragment_93
+  - first:
+      213: -1376997271481158129
+    second: rockfragment_94
+  - first:
+      213: 2042393544677818119
+    second: rockfragment_95
+  - first:
+      213: -9077647968747824095
+    second: rockfragment_96
+  - first:
+      213: 3211379211418095818
+    second: rockfragment_97
+  - first:
+      213: -1153219124042511645
+    second: rockfragment_98
+  - first:
+      213: 1446889715071356729
+    second: rockfragment_99
+  - first:
+      213: 2916571779935670085
+    second: rockfragment_100
+  - first:
+      213: -7189154827973177983
+    second: rockfragment_101
+  - first:
+      213: 4575711565759895237
+    second: rockfragment_102
+  - first:
+      213: 3445795213380998565
+    second: rockfragment_103
+  - first:
+      213: 3153364562292723344
+    second: rockfragment_104
+  - first:
+      213: 7287080593002131649
+    second: rockfragment_105
+  - first:
+      213: 4316757427498627965
+    second: rockfragment_106
+  - first:
+      213: 7810656276266801500
+    second: rockfragment_107
+  - first:
+      213: 5429550605706849284
+    second: rockfragment_108
+  - first:
+      213: -5050531859734219443
+    second: rockfragment_109
+  - first:
+      213: -30970183537015592
+    second: rockfragment_110
+  - first:
+      213: -5773353326077441525
+    second: rockfragment_111
+  - first:
+      213: -4906523609333995630
+    second: rockfragment_112
+  - first:
+      213: 234930921645491830
+    second: rockfragment_113
+  - first:
+      213: -5423179983214920868
+    second: rockfragment_114
+  - first:
+      213: -597002618918337740
+    second: rockfragment_115
+  - first:
+      213: -8567864029425847887
+    second: rockfragment_116
+  - first:
+      213: 7424786827675069266
+    second: rockfragment_117
+  - first:
+      213: -1395566719017100607
+    second: rockfragment_118
+  - first:
+      213: 5742888443032965853
+    second: rockfragment_119
+  - first:
+      213: 330757794203428362
+    second: rockfragment_120
+  - first:
+      213: -1012693706333441909
+    second: rockfragment_121
+  - first:
+      213: -5237457183974866574
+    second: rockfragment_122
+  - first:
+      213: -6109072103198216083
+    second: rockfragment_123
+  - first:
+      213: 1526027931295461109
+    second: rockfragment_124
+  - first:
+      213: 1980696401443831161
+    second: rockfragment_125
+  - first:
+      213: 4718948228524857075
+    second: rockfragment_126
+  - first:
+      213: -7302982265067181030
+    second: rockfragment_127
+  - first:
+      213: -1616643911518690666
+    second: rockfragment_128
+  - first:
+      213: 5033886730666172306
+    second: rockfragment_129
+  - first:
+      213: 4228150606790049478
+    second: rockfragment_130
+  - first:
+      213: 7166135878782299091
+    second: rockfragment_131
+  - first:
+      213: 3847824666154336185
+    second: rockfragment_132
+  - first:
+      213: 2947352815500442777
+    second: rockfragment_133
+  - first:
+      213: 1268898713172975356
+    second: rockfragment_134
+  - first:
+      213: 3020242781705996870
+    second: rockfragment_135
+  - first:
+      213: 5893915760145863845
+    second: rockfragment_136
+  - first:
+      213: -5967205970708018469
+    second: rockfragment_137
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 0
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: rockfragment_0
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 1219
+        width: 228
+        height: 252
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d403ba19616898ea0800000000000000
+      internalID: -5870013207809413043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_1
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 1219
+        width: 254
+        height: 251
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b69614291f168e6c0800000000000000
+      internalID: -4113930569434175125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_2
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 1218
+        width: 127
+        height: 253
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19b08d4c836c4d8f0800000000000000
+      internalID: -516570110117803119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_3
+      rect:
+        serializedVersion: 2
+        x: 841
+        y: 1253
+        width: 142
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4762161e3c2a9280800000000000000
+      internalID: -9035861057195579569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_4
+      rect:
+        serializedVersion: 2
+        x: 1081
+        y: 1219
+        width: 240
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af5cb482285637d60800000000000000
+      internalID: 7886758982152078842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_5
+      rect:
+        serializedVersion: 2
+        x: 1163
+        y: 1327
+        width: 168
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e64819bf8de858be0800000000000000
+      internalID: -1475616240309271442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_6
+      rect:
+        serializedVersion: 2
+        x: 1430
+        y: 1230
+        width: 235
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1755571b0b0385670800000000000000
+      internalID: 8527619429875668337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_7
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 1385
+        width: 74
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af9a851795cf50940800000000000000
+      internalID: 5261889200736217594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_8
+      rect:
+        serializedVersion: 2
+        x: 1947
+        y: 1375
+        width: 56
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1d11703563031f30800000000000000
+      internalID: 4544980182086262042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_9
+      rect:
+        serializedVersion: 2
+        x: 2136
+        y: 1391
+        width: 58
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8b610f2d99d71460800000000000000
+      internalID: 7212472597378853770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_10
+      rect:
+        serializedVersion: 2
+        x: 2292
+        y: 1370
+        width: 37
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9314221efa7b5da0800000000000000
+      internalID: -5955030850622712933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_11
+      rect:
+        serializedVersion: 2
+        x: 2497
+        y: 1397
+        width: 22
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac6464c80977442c0800000000000000
+      internalID: -4448299069222795574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_12
+      rect:
+        serializedVersion: 2
+        x: 2630
+        y: 1402
+        width: 31
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8ac118dc42aafc20800000000000000
+      internalID: 3241081332772752012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_13
+      rect:
+        serializedVersion: 2
+        x: 1849
+        y: 1315
+        width: 99
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90e66679bcb2c7bd0800000000000000
+      internalID: -2631179928872784375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_14
+      rect:
+        serializedVersion: 2
+        x: 1901
+        y: 1357
+        width: 23
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 833b26b4dec1e95e0800000000000000
+      internalID: -1901050187206184136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_15
+      rect:
+        serializedVersion: 2
+        x: 2199
+        y: 1327
+        width: 20
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2461ebc4d94bb36c0800000000000000
+      internalID: -4162534842883500478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_16
+      rect:
+        serializedVersion: 2
+        x: 1994
+        y: 1328
+        width: 11
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f183168294557b860800000000000000
+      internalID: 7545593473380988959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_17
+      rect:
+        serializedVersion: 2
+        x: 1810
+        y: 1224
+        width: 66
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74edf899be80bae60800000000000000
+      internalID: 7974477373176274503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_18
+      rect:
+        serializedVersion: 2
+        x: 2262
+        y: 1297
+        width: 21
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 695a40ef98eb0f020800000000000000
+      internalID: 2373606503505765782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_19
+      rect:
+        serializedVersion: 2
+        x: 1936
+        y: 1237
+        width: 63
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a194cdefc9002a7b0800000000000000
+      internalID: -5214604744250865382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_20
+      rect:
+        serializedVersion: 2
+        x: 2140
+        y: 1242
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc3d2e279e6f97590800000000000000
+      internalID: -7675832607361018931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_21
+      rect:
+        serializedVersion: 2
+        x: 2308
+        y: 1236
+        width: 40
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a7c4b2bb70205a30800000000000000
+      internalID: 4201894167987931046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_22
+      rect:
+        serializedVersion: 2
+        x: 2503
+        y: 1242
+        width: 34
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d66d50eb55acbe30800000000000000
+      internalID: 4520669939997959896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_23
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 1273
+        width: 26
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 194e85d4881e705b0800000000000000
+      internalID: -5402101252478147439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_24
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 845
+        width: 240
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20e54f7df48ea6510800000000000000
+      internalID: 1543301251950992898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_25
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 834
+        width: 253
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ba72f487142f34f0800000000000000
+      internalID: -846918521489032528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_26
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 999
+        width: 85
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ba02da520606f7f0800000000000000
+      internalID: -579268894887114062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_27
+      rect:
+        serializedVersion: 2
+        x: 871
+        y: 869
+        width: 114
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c87176a9e08c44ab0800000000000000
+      internalID: -5024671319193086068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_28
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 975
+        width: 120
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6a4bec3c2a877a90800000000000000
+      internalID: -7316227147034834323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_29
+      rect:
+        serializedVersion: 2
+        x: 1237
+        y: 984
+        width: 95
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b38c269c4230648c0800000000000000
+      internalID: -4015518561221818309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_30
+      rect:
+        serializedVersion: 2
+        x: 1430
+        y: 845
+        width: 241
+        height: 230
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3401fe0f732f73f50800000000000000
+      internalID: 6861218879401562179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_31
+      rect:
+        serializedVersion: 2
+        x: 1781
+        y: 991
+        width: 87
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c41efd478be49b840800000000000000
+      internalID: 5240306195564061004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_32
+      rect:
+        serializedVersion: 2
+        x: 1911
+        y: 1057
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2de694a5afb59870800000000000000
+      internalID: 8689061774233103658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_33
+      rect:
+        serializedVersion: 2
+        x: 1941
+        y: 1003
+        width: 63
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e1299f6b94727ee0800000000000000
+      internalID: -1264820334396628503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_34
+      rect:
+        serializedVersion: 2
+        x: 2128
+        y: 1010
+        width: 52
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21f4cfbbf8753ee70800000000000000
+      internalID: 9143247943338053394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_35
+      rect:
+        serializedVersion: 2
+        x: 2243
+        y: 997
+        width: 88
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1df72640d00bfb740800000000000000
+      internalID: 5170044467199246289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_36
+      rect:
+        serializedVersion: 2
+        x: 2485
+        y: 1029
+        width: 22
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 455c9b8a42ca968c0800000000000000
+      internalID: -4005481120119798444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_37
+      rect:
+        serializedVersion: 2
+        x: 2634
+        y: 1015
+        width: 25
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b9305fe861748600800000000000000
+      internalID: 469624956658923959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_38
+      rect:
+        serializedVersion: 2
+        x: 1915
+        y: 1017
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a03c3fe97be651670800000000000000
+      internalID: 8508828805911266058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_39
+      rect:
+        serializedVersion: 2
+        x: 2224
+        y: 988
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d633fe765d787c50800000000000000
+      internalID: 6663213459145176787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_40
+      rect:
+        serializedVersion: 2
+        x: 737
+        y: 949
+        width: 80
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8fe1a90b2b960d30800000000000000
+      internalID: 4397372695321374607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_41
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 931
+        width: 66
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91828943fe45ff0f0800000000000000
+      internalID: -1081051999189325799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_42
+      rect:
+        serializedVersion: 2
+        x: 1072
+        y: 838
+        width: 115
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 309ec859d770e6680800000000000000
+      internalID: -8760055989227689725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_43
+      rect:
+        serializedVersion: 2
+        x: 1075
+        y: 963
+        width: 22
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77a5706f42b7a0890800000000000000
+      internalID: -7491039631500682633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_44
+      rect:
+        serializedVersion: 2
+        x: 1195
+        y: 960
+        width: 36
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b9ede57145c6ab90800000000000000
+      internalID: -7230875266754680392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_45
+      rect:
+        serializedVersion: 2
+        x: 1312
+        y: 955
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4917815c1b4053780800000000000000
+      internalID: -8704045543261179500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_46
+      rect:
+        serializedVersion: 2
+        x: 1797
+        y: 839
+        width: 150
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 035c80e48d65dc660800000000000000
+      internalID: 7407672449116456240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_47
+      rect:
+        serializedVersion: 2
+        x: 1981
+        y: 951
+        width: 34
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee37c69efdbd00480800000000000000
+      internalID: -8934899905962675218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_48
+      rect:
+        serializedVersion: 2
+        x: 2136
+        y: 852
+        width: 103
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80ea81fbdb9606200800000000000000
+      internalID: 171253049515879944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_49
+      rect:
+        serializedVersion: 2
+        x: 2237
+        y: 960
+        width: 54
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31f08eb0b2a117100800000000000000
+      internalID: 103893038591905555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_50
+      rect:
+        serializedVersion: 2
+        x: 2294
+        y: 979
+        width: 29
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11d1308094cbe18b0800000000000000
+      internalID: -5179495499576435439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_51
+      rect:
+        serializedVersion: 2
+        x: 2605
+        y: 975
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5346afe3054c6f70800000000000000
+      internalID: 9181789623509467995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_52
+      rect:
+        serializedVersion: 2
+        x: 1189
+        y: 869
+        width: 117
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42ca0d62cd9779830800000000000000
+      internalID: 4077861974058249252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_53
+      rect:
+        serializedVersion: 2
+        x: 1951
+        y: 951
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bd2eb500353249e0800000000000000
+      internalID: -1638688834038387279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_54
+      rect:
+        serializedVersion: 2
+        x: 1957
+        y: 950
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3ab9a60fe059ee40800000000000000
+      internalID: 5686164992071154236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_55
+      rect:
+        serializedVersion: 2
+        x: 2245
+        y: 931
+        width: 25
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e24c2287fda02d780800000000000000
+      internalID: -8659847178570513362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_56
+      rect:
+        serializedVersion: 2
+        x: 2272
+        y: 953
+        width: 14
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b6a57f80c4c7ca00800000000000000
+      internalID: 776805792064317109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_57
+      rect:
+        serializedVersion: 2
+        x: 759
+        y: 834
+        width: 104
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1b38dc062719ff40800000000000000
+      internalID: 5762662650388953884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_58
+      rect:
+        serializedVersion: 2
+        x: 2270
+        y: 933
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ba2a0903d4b8f140800000000000000
+      internalID: 4753748225172318905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_59
+      rect:
+        serializedVersion: 2
+        x: 2547
+        y: 932
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 826c34b137e87da60800000000000000
+      internalID: 7698778713042961960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_60
+      rect:
+        serializedVersion: 2
+        x: 1922
+        y: 856
+        width: 80
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48e91839256ef76d0800000000000000
+      internalID: -2990418385214267772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_61
+      rect:
+        serializedVersion: 2
+        x: 2296
+        y: 886
+        width: 31
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8564d07542268c3e0800000000000000
+      internalID: -2033267323538946472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_62
+      rect:
+        serializedVersion: 2
+        x: 2496
+        y: 881
+        width: 30
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7621a29183bb5e110800000000000000
+      internalID: 1289642717926265447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_63
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 832
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: feb1cefda2905b9e0800000000000000
+      internalID: -1606367612337644561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_64
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 455
+        width: 232
+        height: 248
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 058033c624b4c77d0800000000000000
+      internalID: -2919375709787715504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_65
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 450
+        width: 242
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5917825f8bb92c70800000000000000
+      internalID: 8946888358987503966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_66
+      rect:
+        serializedVersion: 2
+        x: 742
+        y: 559
+        width: 110
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b96e1d187c057e490800000000000000
+      internalID: -7717110618669324645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_67
+      rect:
+        serializedVersion: 2
+        x: 867
+        y: 484
+        width: 113
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 994e6250353231670800000000000000
+      internalID: 8508182960508691609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_68
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 551
+        width: 152
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2490d71dfae4cd010800000000000000
+      internalID: 1214932516524067138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_69
+      rect:
+        serializedVersion: 2
+        x: 1247
+        y: 592
+        width: 86
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdec97eae7214cad0800000000000000
+      internalID: -2682999142703575332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_70
+      rect:
+        serializedVersion: 2
+        x: 1427
+        y: 482
+        width: 232
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d444164df88558410800000000000000
+      internalID: 1478685427427787853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_71
+      rect:
+        serializedVersion: 2
+        x: 1775
+        y: 581
+        width: 88
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8a50ebf66585fab0800000000000000
+      internalID: -4974923536001901939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_72
+      rect:
+        serializedVersion: 2
+        x: 1941
+        y: 649
+        width: 6
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44608125e314aa240800000000000000
+      internalID: 4803723688465139268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_73
+      rect:
+        serializedVersion: 2
+        x: 1952
+        y: 608
+        width: 46
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b9a6dc91f47d6ae0800000000000000
+      internalID: -1554457715305698894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_74
+      rect:
+        serializedVersion: 2
+        x: 2130
+        y: 633
+        width: 39
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e39e53d963ea0f5b0800000000000000
+      internalID: -5336574008845014722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_75
+      rect:
+        serializedVersion: 2
+        x: 2292
+        y: 614
+        width: 33
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 911151b1c0a6144d0800000000000000
+      internalID: -3152121663956119271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_76
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 559
+        width: 56
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a14d909bbc9a2de60800000000000000
+      internalID: 7985631781729195034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_77
+      rect:
+        serializedVersion: 2
+        x: 1902
+        y: 605
+        width: 27
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cda6550c97082a9b0800000000000000
+      internalID: -5070348970059535652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_78
+      rect:
+        serializedVersion: 2
+        x: 1941
+        y: 637
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 631b97825a786bbd0800000000000000
+      internalID: -2614753390223576778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_79
+      rect:
+        serializedVersion: 2
+        x: 2198
+        y: 618
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fca4934361e7fdd20800000000000000
+      internalID: 3305499285343783631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_80
+      rect:
+        serializedVersion: 2
+        x: 1075
+        y: 461
+        width: 142
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a201e8b513caea120800000000000000
+      internalID: 2427066577188687914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_81
+      rect:
+        serializedVersion: 2
+        x: 1227
+        y: 481
+        width: 74
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3716dfc977fc342e0800000000000000
+      internalID: -2142640885056315021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_82
+      rect:
+        serializedVersion: 2
+        x: 1847
+        y: 522
+        width: 79
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07d0928d7e683c7e0800000000000000
+      internalID: -1746403900167484048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_83
+      rect:
+        serializedVersion: 2
+        x: 1924
+        y: 559
+        width: 22
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ce5868bbebca49e0800000000000000
+      internalID: -1636271301324153143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_84
+      rect:
+        serializedVersion: 2
+        x: 1982
+        y: 565
+        width: 33
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40eeb43488fa60ab0800000000000000
+      internalID: -5042149733015228924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_85
+      rect:
+        serializedVersion: 2
+        x: 2171
+        y: 570
+        width: 78
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36af83760fe016bd0800000000000000
+      internalID: -2638811480975672733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_86
+      rect:
+        serializedVersion: 2
+        x: 749
+        y: 446
+        width: 114
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a825c204386453650800000000000000
+      internalID: 6211948790558773898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_87
+      rect:
+        serializedVersion: 2
+        x: 1579
+        y: 462
+        width: 59
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c828bee7f2bcf9fe0800000000000000
+      internalID: -1180001172494515572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_88
+      rect:
+        serializedVersion: 2
+        x: 1794
+        y: 463
+        width: 61
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab41301d1eabbf570800000000000000
+      internalID: 8501594200628991162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_89
+      rect:
+        serializedVersion: 2
+        x: 1946
+        y: 469
+        width: 45
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 196de8d7ca1ea7ba0800000000000000
+      internalID: -6090307415108036975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_90
+      rect:
+        serializedVersion: 2
+        x: 2136
+        y: 483
+        width: 46
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1b4af1e809320820800000000000000
+      internalID: 2882929421784337179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_91
+      rect:
+        serializedVersion: 2
+        x: 2228
+        y: 496
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08bd99de65420ee40800000000000000
+      internalID: 5683582685513636736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_92
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 71
+        width: 239
+        height: 247
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a415d77acdff6c540800000000000000
+      internalID: 5027987357173633354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_93
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 77
+        width: 248
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1927082a217578b40800000000000000
+      internalID: 5442414412247888529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_94
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 239
+        width: 53
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f06fea8f64ce3ece0800000000000000
+      internalID: -1376997271481158129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_95
+      rect:
+        serializedVersion: 2
+        x: 846
+        y: 293
+        width: 17
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70f721a9b1a085c10800000000000000
+      internalID: 2042393544677818119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_96
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 188
+        width: 124
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12c5db29447b50280800000000000000
+      internalID: -9077647968747824095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_97
+      rect:
+        serializedVersion: 2
+        x: 1109
+        y: 224
+        width: 100
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac056afc06c119c20800000000000000
+      internalID: 3211379211418095818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_98
+      rect:
+        serializedVersion: 2
+        x: 1232
+        y: 194
+        width: 104
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ea42431151feffe0800000000000000
+      internalID: -1153219124042511645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_99
+      rect:
+        serializedVersion: 2
+        x: 1465
+        y: 212
+        width: 75
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93f8ef7a782641410800000000000000
+      internalID: 1446889715071356729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_100
+      rect:
+        serializedVersion: 2
+        x: 1540
+        y: 281
+        width: 7
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54f8ef8c49eb97820800000000000000
+      internalID: 2916571779935670085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_101
+      rect:
+        serializedVersion: 2
+        x: 1546
+        y: 185
+        width: 131
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18dcf5316cdfa3c90800000000000000
+      internalID: -7189154827973177983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_102
+      rect:
+        serializedVersion: 2
+        x: 1775
+        y: 213
+        width: 85
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c6d3c70d61308f30800000000000000
+      internalID: 4575711565759895237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_103
+      rect:
+        serializedVersion: 2
+        x: 1941
+        y: 222
+        width: 65
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a5d05e6d7ce1df20800000000000000
+      internalID: 3445795213380998565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_104
+      rect:
+        serializedVersion: 2
+        x: 1903
+        y: 281
+        width: 17
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09e43c6bc5003cb20800000000000000
+      internalID: 3153364562292723344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_105
+      rect:
+        serializedVersion: 2
+        x: 2136
+        y: 247
+        width: 41
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c0f883d039e02560800000000000000
+      internalID: 7287080593002131649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_106
+      rect:
+        serializedVersion: 2
+        x: 2306
+        y: 228
+        width: 28
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d73b597520438eb30800000000000000
+      internalID: 4316757427498627965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_107
+      rect:
+        serializedVersion: 2
+        x: 1544
+        y: 252
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c59de892086056c60800000000000000
+      internalID: 7810656276266801500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_108
+      rect:
+        serializedVersion: 2
+        x: 2250
+        y: 255
+        width: 23
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40ce9274283a95b40800000000000000
+      internalID: 5429550605706849284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_109
+      rect:
+        serializedVersion: 2
+        x: 777
+        y: 240
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d45bfbd4808e8e9b0800000000000000
+      internalID: -5050531859734219443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_110
+      rect:
+        serializedVersion: 2
+        x: 1425
+        y: 222
+        width: 29
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d4c5ab38c8f19ff0800000000000000
+      internalID: -30970183537015592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_111
+      rect:
+        serializedVersion: 2
+        x: 1526
+        y: 206
+        width: 27
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0a855c0dbde0efa0800000000000000
+      internalID: -5773353326077441525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_112
+      rect:
+        serializedVersion: 2
+        x: 741
+        y: 77
+        width: 149
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 297649fe5c688ebb0800000000000000
+      internalID: -4906523609333995630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_113
+      rect:
+        serializedVersion: 2
+        x: 1081
+        y: 210
+        width: 28
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6764f63bd64a24300800000000000000
+      internalID: 234930921645491830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_114
+      rect:
+        serializedVersion: 2
+        x: 1179
+        y: 198
+        width: 19
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5b377bd98efcb4b0800000000000000
+      internalID: -5423179983214920868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_115
+      rect:
+        serializedVersion: 2
+        x: 1210
+        y: 212
+        width: 20
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4330569f74507b7f0800000000000000
+      internalID: -597002618918337740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_116
+      rect:
+        serializedVersion: 2
+        x: 1427
+        y: 89
+        width: 130
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b1b93a4f05d81980800000000000000
+      internalID: -8567864029425847887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_117
+      rect:
+        serializedVersion: 2
+        x: 1809
+        y: 186
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25b629418442a0760800000000000000
+      internalID: 7424786827675069266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_118
+      rect:
+        serializedVersion: 2
+        x: 1934
+        y: 197
+        width: 17
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cad0ac8673f1ace0800000000000000
+      internalID: -1395566719017100607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_119
+      rect:
+        serializedVersion: 2
+        x: 1993
+        y: 192
+        width: 19
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd21daf9c96d2bf40800000000000000
+      internalID: 5742888443032965853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_120
+      rect:
+        serializedVersion: 2
+        x: 2187
+        y: 168
+        width: 48
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a06ef2e1676179400800000000000000
+      internalID: 330757794203428362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_121
+      rect:
+        serializedVersion: 2
+        x: 1076
+        y: 77
+        width: 132
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b80b8b7807032f1f0800000000000000
+      internalID: -1012693706333441909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_122
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 192
+        width: 32
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2714cdeb070d057b0800000000000000
+      internalID: -5237457183974866574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_123
+      rect:
+        serializedVersion: 2
+        x: 1864
+        y: 153
+        width: 41
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d603f951a47383ba0800000000000000
+      internalID: -6109072103198216083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_124
+      rect:
+        serializedVersion: 2
+        x: 2241
+        y: 194
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fea03a715a8d2510800000000000000
+      internalID: 1526027931295461109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_125
+      rect:
+        serializedVersion: 2
+        x: 2259
+        y: 194
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97d34f702e8dc7b10800000000000000
+      internalID: 1980696401443831161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_126
+      rect:
+        serializedVersion: 2
+        x: 2273
+        y: 194
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f6deaa69621d7140800000000000000
+      internalID: 4718948228524857075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_127
+      rect:
+        serializedVersion: 2
+        x: 2337
+        y: 197
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1c61b1a25896aa90800000000000000
+      internalID: -7302982265067181030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_128
+      rect:
+        serializedVersion: 2
+        x: 903
+        y: 106
+        width: 57
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69261a58de68099e0800000000000000
+      internalID: -1616643911518690666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_129
+      rect:
+        serializedVersion: 2
+        x: 1236
+        y: 100
+        width: 76
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29fd8e49f45fbd540800000000000000
+      internalID: 5033886730666172306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_130
+      rect:
+        serializedVersion: 2
+        x: 1555
+        y: 171
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ceb29e33986daa30800000000000000
+      internalID: 4228150606790049478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_131
+      rect:
+        serializedVersion: 2
+        x: 1575
+        y: 77
+        width: 79
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3db200b2d9a337360800000000000000
+      internalID: 7166135878782299091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_132
+      rect:
+        serializedVersion: 2
+        x: 1808
+        y: 77
+        width: 68
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bf7d10b528366530800000000000000
+      internalID: 3847824666154336185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_133
+      rect:
+        serializedVersion: 2
+        x: 1901
+        y: 136
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99cb6ab15c917e820800000000000000
+      internalID: 2947352815500442777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_134
+      rect:
+        serializedVersion: 2
+        x: 2309
+        y: 110
+        width: 33
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfe10ae18a80c9110800000000000000
+      internalID: 1268898713172975356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_135
+      rect:
+        serializedVersion: 2
+        x: 1211
+        y: 82
+        width: 30
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64a060bdece0ae920800000000000000
+      internalID: 3020242781705996870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_136
+      rect:
+        serializedVersion: 2
+        x: 1952
+        y: 85
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a4129318256bc150800000000000000
+      internalID: 5893915760145863845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockfragment_137
+      rect:
+        serializedVersion: 2
+        x: 2165
+        y: 103
+        width: 20
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdacb5609c9303da0800000000000000
+      internalID: -5967205970708018469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      rockfragment_0: -5870013207809413043
+      rockfragment_1: -4113930569434175125
+      rockfragment_10: -5955030850622712933
+      rockfragment_100: 2916571779935670085
+      rockfragment_101: -7189154827973177983
+      rockfragment_102: 4575711565759895237
+      rockfragment_103: 3445795213380998565
+      rockfragment_104: 3153364562292723344
+      rockfragment_105: 7287080593002131649
+      rockfragment_106: 4316757427498627965
+      rockfragment_107: 7810656276266801500
+      rockfragment_108: 5429550605706849284
+      rockfragment_109: -5050531859734219443
+      rockfragment_11: -4448299069222795574
+      rockfragment_110: -30970183537015592
+      rockfragment_111: -5773353326077441525
+      rockfragment_112: -4906523609333995630
+      rockfragment_113: 234930921645491830
+      rockfragment_114: -5423179983214920868
+      rockfragment_115: -597002618918337740
+      rockfragment_116: -8567864029425847887
+      rockfragment_117: 7424786827675069266
+      rockfragment_118: -1395566719017100607
+      rockfragment_119: 5742888443032965853
+      rockfragment_12: 3241081332772752012
+      rockfragment_120: 330757794203428362
+      rockfragment_121: -1012693706333441909
+      rockfragment_122: -5237457183974866574
+      rockfragment_123: -6109072103198216083
+      rockfragment_124: 1526027931295461109
+      rockfragment_125: 1980696401443831161
+      rockfragment_126: 4718948228524857075
+      rockfragment_127: -7302982265067181030
+      rockfragment_128: -1616643911518690666
+      rockfragment_129: 5033886730666172306
+      rockfragment_13: -2631179928872784375
+      rockfragment_130: 4228150606790049478
+      rockfragment_131: 7166135878782299091
+      rockfragment_132: 3847824666154336185
+      rockfragment_133: 2947352815500442777
+      rockfragment_134: 1268898713172975356
+      rockfragment_135: 3020242781705996870
+      rockfragment_136: 5893915760145863845
+      rockfragment_137: -5967205970708018469
+      rockfragment_14: -1901050187206184136
+      rockfragment_15: -4162534842883500478
+      rockfragment_16: 7545593473380988959
+      rockfragment_17: 7974477373176274503
+      rockfragment_18: 2373606503505765782
+      rockfragment_19: -5214604744250865382
+      rockfragment_2: -516570110117803119
+      rockfragment_20: -7675832607361018931
+      rockfragment_21: 4201894167987931046
+      rockfragment_22: 4520669939997959896
+      rockfragment_23: -5402101252478147439
+      rockfragment_24: 1543301251950992898
+      rockfragment_25: -846918521489032528
+      rockfragment_26: -579268894887114062
+      rockfragment_27: -5024671319193086068
+      rockfragment_28: -7316227147034834323
+      rockfragment_29: -4015518561221818309
+      rockfragment_3: -9035861057195579569
+      rockfragment_30: 6861218879401562179
+      rockfragment_31: 5240306195564061004
+      rockfragment_32: 8689061774233103658
+      rockfragment_33: -1264820334396628503
+      rockfragment_34: 9143247943338053394
+      rockfragment_35: 5170044467199246289
+      rockfragment_36: -4005481120119798444
+      rockfragment_37: 469624956658923959
+      rockfragment_38: 8508828805911266058
+      rockfragment_39: 6663213459145176787
+      rockfragment_4: 7886758982152078842
+      rockfragment_40: 4397372695321374607
+      rockfragment_41: -1081051999189325799
+      rockfragment_42: -8760055989227689725
+      rockfragment_43: -7491039631500682633
+      rockfragment_44: -7230875266754680392
+      rockfragment_45: -8704045543261179500
+      rockfragment_46: 7407672449116456240
+      rockfragment_47: -8934899905962675218
+      rockfragment_48: 171253049515879944
+      rockfragment_49: 103893038591905555
+      rockfragment_5: -1475616240309271442
+      rockfragment_50: -5179495499576435439
+      rockfragment_51: 9181789623509467995
+      rockfragment_52: 4077861974058249252
+      rockfragment_53: -1638688834038387279
+      rockfragment_54: 5686164992071154236
+      rockfragment_55: -8659847178570513362
+      rockfragment_56: 776805792064317109
+      rockfragment_57: 5762662650388953884
+      rockfragment_58: 4753748225172318905
+      rockfragment_59: 7698778713042961960
+      rockfragment_6: 8527619429875668337
+      rockfragment_60: -2990418385214267772
+      rockfragment_61: -2033267323538946472
+      rockfragment_62: 1289642717926265447
+      rockfragment_63: -1606367612337644561
+      rockfragment_64: -2919375709787715504
+      rockfragment_65: 8946888358987503966
+      rockfragment_66: -7717110618669324645
+      rockfragment_67: 8508182960508691609
+      rockfragment_68: 1214932516524067138
+      rockfragment_69: -2682999142703575332
+      rockfragment_7: 5261889200736217594
+      rockfragment_70: 1478685427427787853
+      rockfragment_71: -4974923536001901939
+      rockfragment_72: 4803723688465139268
+      rockfragment_73: -1554457715305698894
+      rockfragment_74: -5336574008845014722
+      rockfragment_75: -3152121663956119271
+      rockfragment_76: 7985631781729195034
+      rockfragment_77: -5070348970059535652
+      rockfragment_78: -2614753390223576778
+      rockfragment_79: 3305499285343783631
+      rockfragment_8: 4544980182086262042
+      rockfragment_80: 2427066577188687914
+      rockfragment_81: -2142640885056315021
+      rockfragment_82: -1746403900167484048
+      rockfragment_83: -1636271301324153143
+      rockfragment_84: -5042149733015228924
+      rockfragment_85: -2638811480975672733
+      rockfragment_86: 6211948790558773898
+      rockfragment_87: -1180001172494515572
+      rockfragment_88: 8501594200628991162
+      rockfragment_89: -6090307415108036975
+      rockfragment_9: 7212472597378853770
+      rockfragment_90: 2882929421784337179
+      rockfragment_91: 5683582685513636736
+      rockfragment_92: 5027987357173633354
+      rockfragment_93: 5442414412247888529
+      rockfragment_94: -1376997271481158129
+      rockfragment_95: 2042393544677818119
+      rockfragment_96: -9077647968747824095
+      rockfragment_97: 3211379211418095818
+      rockfragment_98: -1153219124042511645
+      rockfragment_99: 1446889715071356729
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

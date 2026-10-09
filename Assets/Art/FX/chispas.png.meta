@@ -1,0 +1,3679 @@
+fileFormatVersion: 2
+guid: a5101fcb14e0c5c47adb05a73d09ac09
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2663453762533702744
+    second: chispas_0
+  - first:
+      213: 2818764788633577704
+    second: chispas_1
+  - first:
+      213: 1416685368504512520
+    second: chispas_2
+  - first:
+      213: 4873901167897417780
+    second: chispas_3
+  - first:
+      213: -547286176920272980
+    second: chispas_4
+  - first:
+      213: -4132421063773567004
+    second: chispas_5
+  - first:
+      213: 4924577237612406178
+    second: chispas_6
+  - first:
+      213: 216274637384043287
+    second: chispas_7
+  - first:
+      213: -157974375292461576
+    second: chispas_8
+  - first:
+      213: 6902442114662832085
+    second: chispas_9
+  - first:
+      213: -8477599589595670263
+    second: chispas_10
+  - first:
+      213: 7385907174035493432
+    second: chispas_11
+  - first:
+      213: -2683776393369469368
+    second: chispas_12
+  - first:
+      213: 9136825252139557764
+    second: chispas_13
+  - first:
+      213: 1918068882338517760
+    second: chispas_14
+  - first:
+      213: 8978944690783237247
+    second: chispas_15
+  - first:
+      213: -8174081414667404095
+    second: chispas_16
+  - first:
+      213: -1872978294476320349
+    second: chispas_17
+  - first:
+      213: 2804604688055857778
+    second: chispas_18
+  - first:
+      213: -1552647463309884617
+    second: chispas_19
+  - first:
+      213: -4229367604873110297
+    second: chispas_20
+  - first:
+      213: 2689266475636593698
+    second: chispas_21
+  - first:
+      213: -7287180366097322342
+    second: chispas_22
+  - first:
+      213: -8362471538587312075
+    second: chispas_23
+  - first:
+      213: -7273201926365490691
+    second: chispas_24
+  - first:
+      213: 8624356584481897995
+    second: chispas_25
+  - first:
+      213: 1323947306333738674
+    second: chispas_26
+  - first:
+      213: -145089475075135156
+    second: chispas_27
+  - first:
+      213: 8755440287912233516
+    second: chispas_28
+  - first:
+      213: 1921127652119767823
+    second: chispas_29
+  - first:
+      213: -7579836839620331865
+    second: chispas_30
+  - first:
+      213: 391116180683781306
+    second: chispas_31
+  - first:
+      213: 6155295254317514505
+    second: chispas_32
+  - first:
+      213: -5292914220606147222
+    second: chispas_33
+  - first:
+      213: -2943882496370662710
+    second: chispas_34
+  - first:
+      213: -4664728078585462837
+    second: chispas_35
+  - first:
+      213: -4444164198249482152
+    second: chispas_36
+  - first:
+      213: -5180539647154497526
+    second: chispas_37
+  - first:
+      213: -466339934990976776
+    second: chispas_38
+  - first:
+      213: 6066099213776957030
+    second: chispas_39
+  - first:
+      213: 3801775256378745930
+    second: chispas_40
+  - first:
+      213: -8295595857102681366
+    second: chispas_41
+  - first:
+      213: -2693299197299685205
+    second: chispas_42
+  - first:
+      213: 5497762623784711420
+    second: chispas_43
+  - first:
+      213: -7468259687375230139
+    second: chispas_44
+  - first:
+      213: 8449896705058043909
+    second: chispas_45
+  - first:
+      213: -9183293297484093640
+    second: chispas_46
+  - first:
+      213: -103048803183164050
+    second: chispas_47
+  - first:
+      213: 2795094289184874034
+    second: chispas_48
+  - first:
+      213: -8925115068391892311
+    second: chispas_49
+  - first:
+      213: 6497545981469105545
+    second: chispas_50
+  - first:
+      213: 3209333377074470933
+    second: chispas_51
+  - first:
+      213: 197166916088330490
+    second: chispas_52
+  - first:
+      213: -4186755931958145381
+    second: chispas_53
+  - first:
+      213: -6313079998400808550
+    second: chispas_54
+  - first:
+      213: -1804523467735887928
+    second: chispas_55
+  - first:
+      213: -4738472856958143359
+    second: chispas_56
+  - first:
+      213: -5558446281145306910
+    second: chispas_57
+  - first:
+      213: -6366201602176659642
+    second: chispas_58
+  - first:
+      213: -1440498443811125178
+    second: chispas_59
+  - first:
+      213: 2674230153506603810
+    second: chispas_60
+  - first:
+      213: 6824392526320352367
+    second: chispas_61
+  - first:
+      213: -6274016671387615002
+    second: chispas_62
+  - first:
+      213: -5094710748500209490
+    second: chispas_63
+  - first:
+      213: 6821303417158146037
+    second: chispas_64
+  - first:
+      213: 8080641354125288156
+    second: chispas_65
+  - first:
+      213: 9018533902184617708
+    second: chispas_66
+  - first:
+      213: -461864592228217099
+    second: chispas_67
+  - first:
+      213: 5395615720384379314
+    second: chispas_68
+  - first:
+      213: -5884503955971851614
+    second: chispas_69
+  - first:
+      213: -4904277587108651696
+    second: chispas_70
+  - first:
+      213: -7229608170760839134
+    second: chispas_71
+  - first:
+      213: 5080104817559065651
+    second: chispas_72
+  - first:
+      213: 250496916957880040
+    second: chispas_73
+  - first:
+      213: -8240905174278819759
+    second: chispas_74
+  - first:
+      213: -763880053097878652
+    second: chispas_75
+  - first:
+      213: -1102922877277545697
+    second: chispas_76
+  - first:
+      213: 1055088784050381544
+    second: chispas_77
+  - first:
+      213: -2280863791320823105
+    second: chispas_78
+  - first:
+      213: 5509746352733202148
+    second: chispas_79
+  - first:
+      213: -2886244466573252311
+    second: chispas_80
+  - first:
+      213: 2594372213753124089
+    second: chispas_81
+  - first:
+      213: 5369597871325351877
+    second: chispas_82
+  - first:
+      213: -792458402817153145
+    second: chispas_83
+  - first:
+      213: 2768660250415666233
+    second: chispas_84
+  - first:
+      213: 2942934037425176382
+    second: chispas_85
+  - first:
+      213: -5026360817765575267
+    second: chispas_86
+  - first:
+      213: 5906658455458400985
+    second: chispas_87
+  - first:
+      213: -2745412717010454133
+    second: chispas_88
+  - first:
+      213: 4779896137314156682
+    second: chispas_89
+  - first:
+      213: 7614491713777264181
+    second: chispas_90
+  - first:
+      213: -702956486248824214
+    second: chispas_91
+  - first:
+      213: 8752321190347557372
+    second: chispas_92
+  - first:
+      213: -8516901748775851720
+    second: chispas_93
+  - first:
+      213: 1335759939699973924
+    second: chispas_94
+  - first:
+      213: 7071702707049090618
+    second: chispas_95
+  - first:
+      213: -289293294167930295
+    second: chispas_96
+  - first:
+      213: 8685212634434700345
+    second: chispas_97
+  - first:
+      213: 7250967900830745208
+    second: chispas_98
+  - first:
+      213: 1883343054115030135
+    second: chispas_99
+  - first:
+      213: 8057838954423476204
+    second: chispas_100
+  - first:
+      213: 4966589023803436702
+    second: chispas_101
+  - first:
+      213: 686141848085069951
+    second: chispas_102
+  - first:
+      213: -3073054045562141806
+    second: chispas_103
+  - first:
+      213: 8195723188070816818
+    second: chispas_104
+  - first:
+      213: -6056398800971125071
+    second: chispas_105
+  - first:
+      213: 2112283104551173260
+    second: chispas_106
+  - first:
+      213: 4771665450031999976
+    second: chispas_107
+  - first:
+      213: 3646022457267870325
+    second: chispas_108
+  - first:
+      213: 217253631429684290
+    second: chispas_109
+  - first:
+      213: 454861769359423016
+    second: chispas_110
+  - first:
+      213: -7329477752387966764
+    second: chispas_111
+  - first:
+      213: 177301222427414724
+    second: chispas_112
+  - first:
+      213: 1071069400680763014
+    second: chispas_113
+  - first:
+      213: -3850524968453511005
+    second: chispas_114
+  - first:
+      213: -5782176518586308299
+    second: chispas_115
+  - first:
+      213: 4543950819555135702
+    second: chispas_116
+  - first:
+      213: -8287467764909940851
+    second: chispas_117
+  - first:
+      213: -6640056826473611154
+    second: chispas_118
+  - first:
+      213: -4027132863701713663
+    second: chispas_119
+  - first:
+      213: -8679225910511678035
+    second: chispas_120
+  - first:
+      213: 339034764902807569
+    second: chispas_121
+  - first:
+      213: -3836782360073998904
+    second: chispas_122
+  - first:
+      213: 6373358074170394744
+    second: chispas_123
+  - first:
+      213: -5443988196014545400
+    second: chispas_124
+  - first:
+      213: -1451959505128291977
+    second: chispas_125
+  - first:
+      213: 7101903650267012512
+    second: chispas_126
+  - first:
+      213: -6071366628487212126
+    second: chispas_127
+  - first:
+      213: -2432624013087205472
+    second: chispas_128
+  - first:
+      213: 1957835273517751783
+    second: chispas_129
+  - first:
+      213: 2743523397058289725
+    second: chispas_130
+  - first:
+      213: -882520373957617778
+    second: chispas_131
+  - first:
+      213: -5112651969733806332
+    second: chispas_132
+  - first:
+      213: -5672758821371882333
+    second: chispas_133
+  - first:
+      213: -6966918655688527709
+    second: chispas_134
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 0
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: chispas_0
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 1265
+        width: 256
+        height: 198
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a340802ae2890bd0800000000000000
+      internalID: -2663453762533702744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_1
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 1448
+        width: 16
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e822eb04a34e1720800000000000000
+      internalID: 2818764788633577704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_2
+      rect:
+        serializedVersion: 2
+        x: 857
+        y: 1402
+        width: 40
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 800743436d319a310800000000000000
+      internalID: 1416685368504512520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_3
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 1265
+        width: 211
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43813e60a4393a340800000000000000
+      internalID: 4873901167897417780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_4
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 1413
+        width: 16
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: caf7f2a2f16a768f0800000000000000
+      internalID: -547286176920272980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_5
+      rect:
+        serializedVersion: 2
+        x: 925
+        y: 1390
+        width: 44
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e74f6fdfe0b6a6c0800000000000000
+      internalID: -4132421063773567004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_6
+      rect:
+        serializedVersion: 2
+        x: 1167
+        y: 1405
+        width: 18
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a5acd4f7ec975440800000000000000
+      internalID: 4924577237612406178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_7
+      rect:
+        serializedVersion: 2
+        x: 1523
+        y: 1425
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71bc33703ac500300800000000000000
+      internalID: 216274637384043287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_8
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 1393
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fd14158423cecdf0800000000000000
+      internalID: -157974375292461576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_9
+      rect:
+        serializedVersion: 2
+        x: 743
+        y: 1265
+        width: 223
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d79c2758866acf50800000000000000
+      internalID: 6902442114662832085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_10
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 1368
+        width: 39
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 909172ae614895a80800000000000000
+      internalID: -8477599589595670263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_11
+      rect:
+        serializedVersion: 2
+        x: 1082
+        y: 1406
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 832156c4173008660800000000000000
+      internalID: 7385907174035493432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_12
+      rect:
+        serializedVersion: 2
+        x: 1752
+        y: 1390
+        width: 28
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84e32a8e69f41cad0800000000000000
+      internalID: -2683776393369469368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_13
+      rect:
+        serializedVersion: 2
+        x: 1098
+        y: 1366
+        width: 45
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 483e89868268cce70800000000000000
+      internalID: 9136825252139557764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_14
+      rect:
+        serializedVersion: 2
+        x: 1189
+        y: 1355
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00394827c795e9a10800000000000000
+      internalID: 1918068882338517760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_15
+      rect:
+        serializedVersion: 2
+        x: 1259
+        y: 1379
+        width: 39
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f74b300bf9e9b9c70800000000000000
+      internalID: 8978944690783237247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_16
+      rect:
+        serializedVersion: 2
+        x: 1449
+        y: 1379
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cc70a1f244df8e80800000000000000
+      internalID: -8174081414667404095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_17
+      rect:
+        serializedVersion: 2
+        x: 1489
+        y: 1379
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a1d8b52a28d106e0800000000000000
+      internalID: -1872978294476320349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_18
+      rect:
+        serializedVersion: 2
+        x: 1833
+        y: 1379
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 272f6f6ba15fbe620800000000000000
+      internalID: 2804604688055857778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_19
+      rect:
+        serializedVersion: 2
+        x: 961
+        y: 1356
+        width: 41
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 733c000cb53e37ae0800000000000000
+      internalID: -1552647463309884617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_20
+      rect:
+        serializedVersion: 2
+        x: 1098
+        y: 1342
+        width: 6
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ec5efe42944e45c0800000000000000
+      internalID: -4229367604873110297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_21
+      rect:
+        serializedVersion: 2
+        x: 1109
+        y: 1344
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2249faa7c91325520800000000000000
+      internalID: 2689266475636593698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_22
+      rect:
+        serializedVersion: 2
+        x: 1143
+        y: 1356
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9e6190f01cbeda90800000000000000
+      internalID: -7287180366097322342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_23
+      rect:
+        serializedVersion: 2
+        x: 1166
+        y: 1344
+        width: 19
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5306032217882fb80800000000000000
+      internalID: -8362471538587312075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_24
+      rect:
+        serializedVersion: 2
+        x: 1454
+        y: 1343
+        width: 28
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df15c4f0265601b90800000000000000
+      internalID: -7273201926365490691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_25
+      rect:
+        serializedVersion: 2
+        x: 1809
+        y: 1356
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0e385aae9edfa770800000000000000
+      internalID: 8624356584481897995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_26
+      rect:
+        serializedVersion: 2
+        x: 1867
+        y: 1356
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b69b5f7f0b9f5210800000000000000
+      internalID: 1323947306333738674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_27
+      rect:
+        serializedVersion: 2
+        x: 1121
+        y: 1299
+        width: 51
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c49af7124e98cfdf0800000000000000
+      internalID: -145089475075135156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_28
+      rect:
+        serializedVersion: 2
+        x: 1213
+        y: 1309
+        width: 47
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2a0725bd82918970800000000000000
+      internalID: 8755440287912233516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_29
+      rect:
+        serializedVersion: 2
+        x: 1409
+        y: 1332
+        width: 28
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0b67c8cb6739aa10800000000000000
+      internalID: 1921127652119767823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_30
+      rect:
+        serializedVersion: 2
+        x: 1766
+        y: 1334
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a6b207dd820fc690800000000000000
+      internalID: -7579836839620331865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_31
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 1299
+        width: 50
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab4709718168d6500800000000000000
+      internalID: 391116180683781306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_32
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 1298
+        width: 62
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90f3e31fb600c6550800000000000000
+      internalID: 6155295254317514505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_33
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 1299
+        width: 35
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6538263f8acb86b0800000000000000
+      internalID: -5292914220606147222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_34
+      rect:
+        serializedVersion: 2
+        x: 1189
+        y: 1298
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac22657877a3527d0800000000000000
+      internalID: -2943882496370662710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_35
+      rect:
+        serializedVersion: 2
+        x: 1442
+        y: 1299
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcf7f1ef68e834fb0800000000000000
+      internalID: -4664728078585462837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_36
+      rect:
+        serializedVersion: 2
+        x: 1533
+        y: 1274
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 858b4d735382352c0800000000000000
+      internalID: -4444164198249482152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_37
+      rect:
+        serializedVersion: 2
+        x: 1797
+        y: 1275
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a08578a73a60b18b0800000000000000
+      internalID: -5180539647154497526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_38
+      rect:
+        serializedVersion: 2
+        x: 1155
+        y: 1275
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f8b846cc4a3789f0800000000000000
+      internalID: -466339934990976776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_39
+      rect:
+        serializedVersion: 2
+        x: 1215
+        y: 1287
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66ea379681d1f2450800000000000000
+      internalID: 6066099213776957030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_40
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 1270
+        width: 17
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a442358f37e92c430800000000000000
+      internalID: 3801775256378745930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_41
+      rect:
+        serializedVersion: 2
+        x: 1578
+        y: 1275
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aea4139158f10ec80800000000000000
+      internalID: -8295595857102681366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_42
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 863
+        width: 221
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba88b1756aa7f9ad0800000000000000
+      internalID: -2693299197299685205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_43
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 852
+        width: 222
+        height: 198
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf47b1a5af9fb4c40800000000000000
+      internalID: 5497762623784711420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_44
+      rect:
+        serializedVersion: 2
+        x: 869
+        y: 968
+        width: 96
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54b21a302696b5890800000000000000
+      internalID: -7468259687375230139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_45
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 840
+        width: 164
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5087ab5a840144570800000000000000
+      internalID: 8449896705058043909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_46
+      rect:
+        serializedVersion: 2
+        x: 1176
+        y: 1012
+        width: 9
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8372c3fa6636e8080800000000000000
+      internalID: -9183293297484093640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_47
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 977
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e650db3d8a5e19ef0800000000000000
+      internalID: -103048803183164050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_48
+      rect:
+        serializedVersion: 2
+        x: 1293
+        y: 1001
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23e569c627b2ac620800000000000000
+      internalID: 2795094289184874034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_49
+      rect:
+        serializedVersion: 2
+        x: 1453
+        y: 1027
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9aad301f12f932480800000000000000
+      internalID: -8925115068391892311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_50
+      rect:
+        serializedVersion: 2
+        x: 1454
+        y: 941
+        width: 121
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98d9b3905abeb2a50800000000000000
+      internalID: 6497545981469105545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_51
+      rect:
+        serializedVersion: 2
+        x: 1738
+        y: 995
+        width: 15
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5102452e3b7d98c20800000000000000
+      internalID: 3209333377074470933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_52
+      rect:
+        serializedVersion: 2
+        x: 2096
+        y: 986
+        width: 18
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af877eaf34a7cb200800000000000000
+      internalID: 197166916088330490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_53
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 889
+        width: 119
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9e006a89a7a5e5c0800000000000000
+      internalID: -4186755931958145381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_54
+      rect:
+        serializedVersion: 2
+        x: 582
+        y: 1000
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9932b8803f6368a0800000000000000
+      internalID: -6313079998400808550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_55
+      rect:
+        serializedVersion: 2
+        x: 1145
+        y: 907
+        width: 73
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cf0fb4877b05f6e0800000000000000
+      internalID: -1804523467735887928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_56
+      rect:
+        serializedVersion: 2
+        x: 1809
+        y: 1000
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 184fd27ca009d3eb0800000000000000
+      internalID: -4738472856958143359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_57
+      rect:
+        serializedVersion: 2
+        x: 2051
+        y: 1001
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e03e35ae8e6cd2b0800000000000000
+      internalID: -5558446281145306910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_58
+      rect:
+        serializedVersion: 2
+        x: 2073
+        y: 989
+        width: 20
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64fccb55f55b6a7a0800000000000000
+      internalID: -6366201602176659642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_59
+      rect:
+        serializedVersion: 2
+        x: 1786
+        y: 964
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64882252c42520ce0800000000000000
+      internalID: -1440498443811125178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_60
+      rect:
+        serializedVersion: 2
+        x: 2003
+        y: 977
+        width: 19
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 223466be726cc1520800000000000000
+      internalID: 2674230153506603810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_61
+      rect:
+        serializedVersion: 2
+        x: 2118
+        y: 962
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6cb72378dc15be50800000000000000
+      internalID: 6824392526320352367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_62
+      rect:
+        serializedVersion: 2
+        x: 2310
+        y: 975
+        width: 22
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e0001b14173ee8a0800000000000000
+      internalID: -6274016671387615002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_63
+      rect:
+        serializedVersion: 2
+        x: 1236
+        y: 863
+        width: 97
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea0d7423193fb49b0800000000000000
+      internalID: -5094710748500209490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_64
+      rect:
+        serializedVersion: 2
+        x: 1420
+        y: 944
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f79edc21532aae50800000000000000
+      internalID: 6821303417158146037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_65
+      rect:
+        serializedVersion: 2
+        x: 1514
+        y: 895
+        width: 94
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd228fd9f74342070800000000000000
+      internalID: 8080641354125288156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_66
+      rect:
+        serializedVersion: 2
+        x: 1709
+        y: 930
+        width: 16
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce618824dc4482d70800000000000000
+      internalID: 9018533902184617708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_67
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 945
+        width: 25
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fe08e5b9902799f0800000000000000
+      internalID: -461864592228217099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_68
+      rect:
+        serializedVersion: 2
+        x: 2002
+        y: 942
+        width: 29
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b9360619e311ea40800000000000000
+      internalID: 5395615720384379314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_69
+      rect:
+        serializedVersion: 2
+        x: 2015
+        y: 954
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2aabae854da065ea0800000000000000
+      internalID: -5884503955971851614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_70
+      rect:
+        serializedVersion: 2
+        x: 2126
+        y: 935
+        width: 21
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05d9a7cb48180fbb0800000000000000
+      internalID: -4904277587108651696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_71
+      rect:
+        serializedVersion: 2
+        x: 2293
+        y: 949
+        width: 24
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 220e98c3ca54bab90800000000000000
+      internalID: -7229608170760839134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_72
+      rect:
+        serializedVersion: 2
+        x: 1443
+        y: 863
+        width: 73
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 334db508a68208640800000000000000
+      internalID: 5080104817559065651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_73
+      rect:
+        serializedVersion: 2
+        x: 1718
+        y: 915
+        width: 31
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8eeda986e91f97300800000000000000
+      internalID: 250496916957880040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_74
+      rect:
+        serializedVersion: 2
+        x: 1809
+        y: 863
+        width: 51
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 150be6bf76c62ad80800000000000000
+      internalID: -8240905174278819759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_75
+      rect:
+        serializedVersion: 2
+        x: 2027
+        y: 926
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48b281093272665f0800000000000000
+      internalID: -763880053097878652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_76
+      rect:
+        serializedVersion: 2
+        x: 1146
+        y: 880
+        width: 27
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1b58359c71a1b0f0800000000000000
+      internalID: -1102922877277545697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_77
+      rect:
+        serializedVersion: 2
+        x: 1187
+        y: 890
+        width: 35
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e262d3b8ad64ae00800000000000000
+      internalID: 1055088784050381544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_78
+      rect:
+        serializedVersion: 2
+        x: 1789
+        y: 896
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fba8541677eb850e0800000000000000
+      internalID: -2280863791320823105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_79
+      rect:
+        serializedVersion: 2
+        x: 2108
+        y: 896
+        width: 10
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e6aa2dad1d867c40800000000000000
+      internalID: 5509746352733202148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_80
+      rect:
+        serializedVersion: 2
+        x: 2371
+        y: 898
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 929e6fa13fff1f7d0800000000000000
+      internalID: -2886244466573252311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_81
+      rect:
+        serializedVersion: 2
+        x: 1787
+        y: 874
+        width: 26
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f416e768cf010420800000000000000
+      internalID: 2594372213753124089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_82
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 658
+        width: 26
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cf8a0b80d4a48a40800000000000000
+      internalID: 5369597871325351877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_83
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 461
+        width: 233
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7876fc0084f9005f0800000000000000
+      internalID: -792458402817153145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_84
+      rect:
+        serializedVersion: 2
+        x: 1052
+        y: 656
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93415c924d14c6620800000000000000
+      internalID: 2768660250415666233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_85
+      rect:
+        serializedVersion: 2
+        x: 1327
+        y: 655
+        width: 21
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3f322a2ae667d820800000000000000
+      internalID: 2942934037425176382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_86
+      rect:
+        serializedVersion: 2
+        x: 1616
+        y: 668
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9514209777ce3ab0800000000000000
+      internalID: -5026360817765575267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_87
+      rect:
+        serializedVersion: 2
+        x: 2406
+        y: 657
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9dac727029aa8f150800000000000000
+      internalID: 5906658455458400985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_88
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 461
+        width: 199
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8970c00ea556e9d0800000000000000
+      internalID: -2745412717010454133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_89
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 645
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a804fdf363a955240800000000000000
+      internalID: 4779896137314156682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_90
+      rect:
+        serializedVersion: 2
+        x: 1814
+        y: 648
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53669d0dedb1ca960800000000000000
+      internalID: 7614491713777264181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_91
+      rect:
+        serializedVersion: 2
+        x: 2084
+        y: 644
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a620598dcc89e36f0800000000000000
+      internalID: -702956486248824214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_92
+      rect:
+        serializedVersion: 2
+        x: 937
+        y: 588
+        width: 39
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf94ac630cd767970800000000000000
+      internalID: 8752321190347557372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_93
+      rect:
+        serializedVersion: 2
+        x: 1007
+        y: 618
+        width: 27
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 839ef45ebf2edc980800000000000000
+      internalID: -8516901748775851720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_94
+      rect:
+        serializedVersion: 2
+        x: 1302
+        y: 614
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42f93078692998210800000000000000
+      internalID: 1335759939699973924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_95
+      rect:
+        serializedVersion: 2
+        x: 1398
+        y: 462
+        width: 190
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3e44d2052cb32260800000000000000
+      internalID: 7071702707049090618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_96
+      rect:
+        serializedVersion: 2
+        x: 1833
+        y: 622
+        width: 24
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94ac73d18493cfbf0800000000000000
+      internalID: -289293294167930295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_97
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 531
+        width: 84
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9340732ffd2188870800000000000000
+      internalID: 8685212634434700345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_98
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 587
+        width: 17
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 872c6c673ec90a460800000000000000
+      internalID: 7250967900830745208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_99
+      rect:
+        serializedVersion: 2
+        x: 846
+        y: 462
+        width: 166
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 774c9b2878af22a10800000000000000
+      internalID: 1883343054115030135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_100
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 462
+        width: 142
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cef57b736d133df60800000000000000
+      internalID: 8057838954423476204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_101
+      rect:
+        serializedVersion: 2
+        x: 1797
+        y: 575
+        width: 18
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9e682d276edce440800000000000000
+      internalID: 4966589023803436702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_102
+      rect:
+        serializedVersion: 2
+        x: 1843
+        y: 600
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7004a0206aa58900800000000000000
+      internalID: 686141848085069951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_103
+      rect:
+        serializedVersion: 2
+        x: 2109
+        y: 600
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29301b690a15a55d0800000000000000
+      internalID: -3073054045562141806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_104
+      rect:
+        serializedVersion: 2
+        x: 1683
+        y: 472
+        width: 111
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23c946611de0db170800000000000000
+      internalID: 8195723188070816818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_105
+      rect:
+        serializedVersion: 2
+        x: 1810
+        y: 552
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bea302f06953fba0800000000000000
+      internalID: -6056398800971125071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_106
+      rect:
+        serializedVersion: 2
+        x: 2005
+        y: 533
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8cf4dfca46505d10800000000000000
+      internalID: 2112283104551173260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_107
+      rect:
+        serializedVersion: 2
+        x: 2024
+        y: 553
+        width: 75
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8eb6928027c583240800000000000000
+      internalID: 4771665450031999976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_108
+      rect:
+        serializedVersion: 2
+        x: 1959
+        y: 474
+        width: 50
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57a5c808b16499230800000000000000
+      internalID: 3646022457267870325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_109
+      rect:
+        serializedVersion: 2
+        x: 2256
+        y: 495
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24ca787d607d30300800000000000000
+      internalID: 217253631429684290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_110
+      rect:
+        serializedVersion: 2
+        x: 950
+        y: 256
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 826f2988e5eff4600800000000000000
+      internalID: 454861769359423016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_111
+      rect:
+        serializedVersion: 2
+        x: 1237
+        y: 244
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d869c341d6784a90800000000000000
+      internalID: -7329477752387966764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_112
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 187
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c0570db586e57200800000000000000
+      internalID: 177301222427414724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_113
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 119
+        width: 85
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68e0e55f1f33dde00800000000000000
+      internalID: 1071069400680763014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_114
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 137
+        width: 120
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a86e8031ff209ac0800000000000000
+      internalID: -3850524968453511005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_115
+      rect:
+        serializedVersion: 2
+        x: 891
+        y: 84
+        width: 143
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 539ee05771591cfa0800000000000000
+      internalID: -5782176518586308299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_116
+      rect:
+        serializedVersion: 2
+        x: 1166
+        y: 83
+        width: 156
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d0dd6c023b5f0f30800000000000000
+      internalID: 4543950819555135702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_117
+      rect:
+        serializedVersion: 2
+        x: 1512
+        y: 186
+        width: 7
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8fda090afffcfc80800000000000000
+      internalID: -8287467764909940851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_118
+      rect:
+        serializedVersion: 2
+        x: 1787
+        y: 174
+        width: 16
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6002a13f77c9d3a0800000000000000
+      internalID: -6640056826473611154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_119
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 132
+        width: 62
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10df1c34fffbc18c0800000000000000
+      internalID: -4027132863701713663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_120
+      rect:
+        serializedVersion: 2
+        x: 870
+        y: 164
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dadc596d4023d8780800000000000000
+      internalID: -8679225910511678035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_121
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 164
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1183a88825e74b400800000000000000
+      internalID: 339034764902807569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_122
+      rect:
+        serializedVersion: 2
+        x: 1149
+        y: 152
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cded4b85c201cac0800000000000000
+      internalID: -3836782360073998904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_123
+      rect:
+        serializedVersion: 2
+        x: 1327
+        y: 152
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8784b45a667b27850800000000000000
+      internalID: 6373358074170394744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_124
+      rect:
+        serializedVersion: 2
+        x: 1442
+        y: 152
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 806222744911374b0800000000000000
+      internalID: -5443988196014545400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_125
+      rect:
+        serializedVersion: 2
+        x: 1476
+        y: 128
+        width: 86
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 771839cd58a99dbe0800000000000000
+      internalID: -1451959505128291977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_126
+      rect:
+        serializedVersion: 2
+        x: 1580
+        y: 152
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ad173f0eb70f8260800000000000000
+      internalID: 7101903650267012512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_127
+      rect:
+        serializedVersion: 2
+        x: 1786
+        y: 152
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a3dbd7083c2ebba0800000000000000
+      internalID: -6071366628487212126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_128
+      rect:
+        serializedVersion: 2
+        x: 1809
+        y: 152
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a71ad349559d3ed0800000000000000
+      internalID: -2432624013087205472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_129
+      rect:
+        serializedVersion: 2
+        x: 2044
+        y: 130
+        width: 45
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ed51c6eec0ab2b10800000000000000
+      internalID: 1957835273517751783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_130
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 122
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d30e1aa6ef3f21620800000000000000
+      internalID: 2743523397058289725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_131
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 119
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e87163b4568a0c3f0800000000000000
+      internalID: -882520373957617778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_132
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 111
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 407b0db1f163c09b0800000000000000
+      internalID: -5112651969733806332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_133
+      rect:
+        serializedVersion: 2
+        x: 1786
+        y: 118
+        width: 17
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a45aa358ef4641b0800000000000000
+      internalID: -5672758821371882333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chispas_134
+      rect:
+        serializedVersion: 2
+        x: 1239
+        y: 62
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a0b4ac1568805f90800000000000000
+      internalID: -6966918655688527709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      chispas_0: -2663453762533702744
+      chispas_1: 2818764788633577704
+      chispas_10: -8477599589595670263
+      chispas_100: 8057838954423476204
+      chispas_101: 4966589023803436702
+      chispas_102: 686141848085069951
+      chispas_103: -3073054045562141806
+      chispas_104: 8195723188070816818
+      chispas_105: -6056398800971125071
+      chispas_106: 2112283104551173260
+      chispas_107: 4771665450031999976
+      chispas_108: 3646022457267870325
+      chispas_109: 217253631429684290
+      chispas_11: 7385907174035493432
+      chispas_110: 454861769359423016
+      chispas_111: -7329477752387966764
+      chispas_112: 177301222427414724
+      chispas_113: 1071069400680763014
+      chispas_114: -3850524968453511005
+      chispas_115: -5782176518586308299
+      chispas_116: 4543950819555135702
+      chispas_117: -8287467764909940851
+      chispas_118: -6640056826473611154
+      chispas_119: -4027132863701713663
+      chispas_12: -2683776393369469368
+      chispas_120: -8679225910511678035
+      chispas_121: 339034764902807569
+      chispas_122: -3836782360073998904
+      chispas_123: 6373358074170394744
+      chispas_124: -5443988196014545400
+      chispas_125: -1451959505128291977
+      chispas_126: 7101903650267012512
+      chispas_127: -6071366628487212126
+      chispas_128: -2432624013087205472
+      chispas_129: 1957835273517751783
+      chispas_13: 9136825252139557764
+      chispas_130: 2743523397058289725
+      chispas_131: -882520373957617778
+      chispas_132: -5112651969733806332
+      chispas_133: -5672758821371882333
+      chispas_134: -6966918655688527709
+      chispas_14: 1918068882338517760
+      chispas_15: 8978944690783237247
+      chispas_16: -8174081414667404095
+      chispas_17: -1872978294476320349
+      chispas_18: 2804604688055857778
+      chispas_19: -1552647463309884617
+      chispas_2: 1416685368504512520
+      chispas_20: -4229367604873110297
+      chispas_21: 2689266475636593698
+      chispas_22: -7287180366097322342
+      chispas_23: -8362471538587312075
+      chispas_24: -7273201926365490691
+      chispas_25: 8624356584481897995
+      chispas_26: 1323947306333738674
+      chispas_27: -145089475075135156
+      chispas_28: 8755440287912233516
+      chispas_29: 1921127652119767823
+      chispas_3: 4873901167897417780
+      chispas_30: -7579836839620331865
+      chispas_31: 391116180683781306
+      chispas_32: 6155295254317514505
+      chispas_33: -5292914220606147222
+      chispas_34: -2943882496370662710
+      chispas_35: -4664728078585462837
+      chispas_36: -4444164198249482152
+      chispas_37: -5180539647154497526
+      chispas_38: -466339934990976776
+      chispas_39: 6066099213776957030
+      chispas_4: -547286176920272980
+      chispas_40: 3801775256378745930
+      chispas_41: -8295595857102681366
+      chispas_42: -2693299197299685205
+      chispas_43: 5497762623784711420
+      chispas_44: -7468259687375230139
+      chispas_45: 8449896705058043909
+      chispas_46: -9183293297484093640
+      chispas_47: -103048803183164050
+      chispas_48: 2795094289184874034
+      chispas_49: -8925115068391892311
+      chispas_5: -4132421063773567004
+      chispas_50: 6497545981469105545
+      chispas_51: 3209333377074470933
+      chispas_52: 197166916088330490
+      chispas_53: -4186755931958145381
+      chispas_54: -6313079998400808550
+      chispas_55: -1804523467735887928
+      chispas_56: -4738472856958143359
+      chispas_57: -5558446281145306910
+      chispas_58: -6366201602176659642
+      chispas_59: -1440498443811125178
+      chispas_6: 4924577237612406178
+      chispas_60: 2674230153506603810
+      chispas_61: 6824392526320352367
+      chispas_62: -6274016671387615002
+      chispas_63: -5094710748500209490
+      chispas_64: 6821303417158146037
+      chispas_65: 8080641354125288156
+      chispas_66: 9018533902184617708
+      chispas_67: -461864592228217099
+      chispas_68: 5395615720384379314
+      chispas_69: -5884503955971851614
+      chispas_7: 216274637384043287
+      chispas_70: -4904277587108651696
+      chispas_71: -7229608170760839134
+      chispas_72: 5080104817559065651
+      chispas_73: 250496916957880040
+      chispas_74: -8240905174278819759
+      chispas_75: -763880053097878652
+      chispas_76: -1102922877277545697
+      chispas_77: 1055088784050381544
+      chispas_78: -2280863791320823105
+      chispas_79: 5509746352733202148
+      chispas_8: -157974375292461576
+      chispas_80: -2886244466573252311
+      chispas_81: 2594372213753124089
+      chispas_82: 5369597871325351877
+      chispas_83: -792458402817153145
+      chispas_84: 2768660250415666233
+      chispas_85: 2942934037425176382
+      chispas_86: -5026360817765575267
+      chispas_87: 5906658455458400985
+      chispas_88: -2745412717010454133
+      chispas_89: 4779896137314156682
+      chispas_9: 6902442114662832085
+      chispas_90: 7614491713777264181
+      chispas_91: -702956486248824214
+      chispas_92: 8752321190347557372
+      chispas_93: -8516901748775851720
+      chispas_94: 1335759939699973924
+      chispas_95: 7071702707049090618
+      chispas_96: -289293294167930295
+      chispas_97: 8685212634434700345
+      chispas_98: 7250967900830745208
+      chispas_99: 1883343054115030135
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,1625 @@
+fileFormatVersion: 2
+guid: c8d4f5b2c0a98b149979a9c9bc64500f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4086125846274253146
+    second: fuegojetpack_0
+  - first:
+      213: -3388751516790442414
+    second: fuegojetpack_1
+  - first:
+      213: 5886807654515812139
+    second: fuegojetpack_2
+  - first:
+      213: 6957892528969057781
+    second: fuegojetpack_3
+  - first:
+      213: 5700554988886865015
+    second: fuegojetpack_4
+  - first:
+      213: -8779154682739260589
+    second: fuegojetpack_5
+  - first:
+      213: -4881313986684251079
+    second: fuegojetpack_6
+  - first:
+      213: 6947974410901177845
+    second: fuegojetpack_7
+  - first:
+      213: 2360017215286022818
+    second: fuegojetpack_8
+  - first:
+      213: 1642669007406315036
+    second: fuegojetpack_9
+  - first:
+      213: -779067476144404099
+    second: fuegojetpack_10
+  - first:
+      213: 7939263357420839146
+    second: fuegojetpack_11
+  - first:
+      213: 2287060419680503264
+    second: fuegojetpack_12
+  - first:
+      213: 6482657154789157622
+    second: fuegojetpack_13
+  - first:
+      213: 7688601775464813961
+    second: fuegojetpack_14
+  - first:
+      213: 8296567125705229420
+    second: fuegojetpack_15
+  - first:
+      213: 4441682179834074296
+    second: fuegojetpack_16
+  - first:
+      213: -9031564558885891998
+    second: fuegojetpack_17
+  - first:
+      213: 6371638780478713983
+    second: fuegojetpack_18
+  - first:
+      213: -6096804570456241414
+    second: fuegojetpack_19
+  - first:
+      213: -1201182006584766705
+    second: fuegojetpack_20
+  - first:
+      213: -1106275953708082492
+    second: fuegojetpack_21
+  - first:
+      213: 2453525205263653008
+    second: fuegojetpack_22
+  - first:
+      213: 4913949974089331402
+    second: fuegojetpack_23
+  - first:
+      213: -2983270864485264747
+    second: fuegojetpack_24
+  - first:
+      213: -2530647608554612207
+    second: fuegojetpack_25
+  - first:
+      213: 1658382004885909510
+    second: fuegojetpack_26
+  - first:
+      213: 2792127783423842028
+    second: fuegojetpack_27
+  - first:
+      213: 2113777633089504143
+    second: fuegojetpack_28
+  - first:
+      213: -81423277545880014
+    second: fuegojetpack_29
+  - first:
+      213: -3515028497912637294
+    second: fuegojetpack_30
+  - first:
+      213: 7723952329756917609
+    second: fuegojetpack_31
+  - first:
+      213: -3709138404827926230
+    second: fuegojetpack_32
+  - first:
+      213: 4181664398765942290
+    second: fuegojetpack_33
+  - first:
+      213: 6606491076491410925
+    second: fuegojetpack_34
+  - first:
+      213: 605185983933171322
+    second: fuegojetpack_35
+  - first:
+      213: 3855719155373892647
+    second: fuegojetpack_36
+  - first:
+      213: 8758827023701664056
+    second: fuegojetpack_37
+  - first:
+      213: 695931095348349754
+    second: fuegojetpack_38
+  - first:
+      213: -4185043874330787054
+    second: fuegojetpack_39
+  - first:
+      213: 5633039057475895711
+    second: fuegojetpack_40
+  - first:
+      213: -8815305906355922174
+    second: fuegojetpack_41
+  - first:
+      213: -8642020819937728714
+    second: fuegojetpack_42
+  - first:
+      213: 760328098115478286
+    second: fuegojetpack_43
+  - first:
+      213: 1177784330819604120
+    second: fuegojetpack_44
+  - first:
+      213: -3138082093322096435
+    second: fuegojetpack_45
+  - first:
+      213: -8472842652907739417
+    second: fuegojetpack_46
+  - first:
+      213: 159399239602731727
+    second: fuegojetpack_47
+  - first:
+      213: 5954945147976916006
+    second: fuegojetpack_48
+  - first:
+      213: 8295858024272560707
+    second: fuegojetpack_49
+  - first:
+      213: -1431175121594985629
+    second: fuegojetpack_50
+  - first:
+      213: 6820637730238875941
+    second: fuegojetpack_51
+  - first:
+      213: 1567401503255661286
+    second: fuegojetpack_52
+  - first:
+      213: -6132170034230881058
+    second: fuegojetpack_53
+  - first:
+      213: 4295288095492202323
+    second: fuegojetpack_54
+  - first:
+      213: -9168186798617752208
+    second: fuegojetpack_55
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 0
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: fuegojetpack_0
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 1403
+        width: 95
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6aed749213a2b47c0800000000000000
+      internalID: -4086125846274253146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fuegojetpack_1
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 1277
+        width: 213
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 256b3a9237cb8f0d0800000000000000
+      internalID: -3388751516790442414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fuegojetpack_2
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 1179
+        width: 295
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2727744f5422b150800000000000000
+      internalID: 5886807654515812139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fuegojetpack_3
+      rect:
+        serializedVersion: 2
+        x: 1042
+        y: 1174
+        width: 313
+        height: 342
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f58b8ef3666f8060800000000000000
+      internalID: 6957892528969057781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fuegojetpack_4
+      rect:
+        serializedVersion: 2
+        x: 1396
+        y: 1183
+        width: 309
+        height: 337
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 774be2f3f807c1f40800000000000000
+      internalID: 5700554988886865015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fuegojetpack_5
+      rect:
+        serializedVersion: 2
+        x: 1774
+        y: 1214
+        width: 272
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3538e1b745d2a2680800000000000000
+      internalID: -8779154682739260589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fuegojetpack_6
+      rect:
+        serializedVersion: 2
+        x: 2206
+        y: 1345
+        width: 177
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9341a8a9ac6124cb0800000000000000
+      internalID: -4881313986684251079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fuegojetpack_7
+      rect:
+        serializedVersion: 2
+        x: 2248
+        y: 1338
+        width: 17
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f5c44e2ae92c6060800000000000000
+      internalID: 6947974410901177845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fuegojetpack_8
+      rect:
+        serializedVersion: 2
+        x: 2273
+        y: 1343
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a21ee4472770c020800000000000000
+      internalID: 2360017215286022818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fuegojetpack_9
+      rect:
+        serializedVersion: 2
+        x: 2194
+        y: 1292
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c163ffd42ceebc610800000000000000
+      internalID: 1642669007406315036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fuegojetpack_10
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 1015
+        width: 102
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d794a5412423035f0800000000000000
+      internalID: -779067476144404099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fuegojetpack_11
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 900
+        width: 205
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae02855a5fded2e60800000000000000
+      internalID: 7939263357420839146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fuegojetpack_12
+      rect:
+        serializedVersion: 2
+        x: 694
+        y: 802
+        width: 305
+        height: 323
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e589e695554dbf10800000000000000
+      internalID: 2287060419680503264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fuegojetpack_13
+      rect:
+        serializedVersion: 2
+        x: 1030
+        y: 781
+        width: 321
+        height: 349
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fa2adfe55607f950800000000000000
+      internalID: 6482657154789157622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fuegojetpack_14
+      rect:
+        serializedVersion: 2
+        x: 1378
+        y: 785
+        width: 317
+        height: 342
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 985940e249663ba60800000000000000
+      internalID: 7688601775464813961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fuegojetpack_15
+      rect:
+        serializedVersion: 2
+        x: 1736
+        y: 802
+        width: 305
+        height: 329
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6408def7d3532370800000000000000
+      internalID: 8296567125705229420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fuegojetpack_16
+      rect:
+        serializedVersion: 2
+        x: 2131
+        y: 858
+        width: 244
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b45136d86604ad30800000000000000
+      internalID: 4441682179834074296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fuegojetpack_17
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 616
+        width: 103
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 260599d82ef69a280800000000000000
+      internalID: -9031564558885891998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fuegojetpack_18
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 494
+        width: 229
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f70798366bb9c6850800000000000000
+      internalID: 6371638780478713983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fuegojetpack_19
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 427
+        width: 289
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afa4af0ab8cc36ba0800000000000000
+      internalID: -6096804570456241414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fuegojetpack_20
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 403
+        width: 313
+        height: 343
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0f8ce2445b845fe0800000000000000
+      internalID: -1201182006584766705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fuegojetpack_21
+      rect:
+        serializedVersion: 2
+        x: 1405
+        y: 421
+        width: 290
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ca5ca3a1e7b5a0f0800000000000000
+      internalID: -1106275953708082492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fuegojetpack_22
+      rect:
+        serializedVersion: 2
+        x: 1782
+        y: 454
+        width: 251
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0981533cc2cac0220800000000000000
+      internalID: 2453525205263653008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fuegojetpack_23
+      rect:
+        serializedVersion: 2
+        x: 2161
+        y: 493
+        width: 208
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac272a9577bd13440800000000000000
+      internalID: 4913949974089331402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fuegojetpack_24
+      rect:
+        serializedVersion: 2
+        x: 2148
+        y: 484
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 592559d64fa4996d0800000000000000
+      internalID: -2983270864485264747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fuegojetpack_25
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 222
+        width: 115
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11a1960786551ecd0800000000000000
+      internalID: -2530647608554612207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fuegojetpack_26
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 108
+        width: 215
+        height: 241
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 600ff1f95a1c30710800000000000000
+      internalID: 1658382004885909510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fuegojetpack_27
+      rect:
+        serializedVersion: 2
+        x: 727
+        y: 60
+        width: 274
+        height: 295
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce61a7afc61afb620800000000000000
+      internalID: 2792127783423842028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fuegojetpack_28
+      rect:
+        serializedVersion: 2
+        x: 1087
+        y: 48
+        width: 269
+        height: 319
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f83477ade85a55d10800000000000000
+      internalID: 2113777633089504143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fuegojetpack_29
+      rect:
+        serializedVersion: 2
+        x: 1414
+        y: 43
+        width: 286
+        height: 314
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2360e61e5f9bedef0800000000000000
+      internalID: -81423277545880014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fuegojetpack_30
+      rect:
+        serializedVersion: 2
+        x: 1896
+        y: 145
+        width: 142
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 298da8e543c183fc0800000000000000
+      internalID: -3515028497912637294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fuegojetpack_31
+      rect:
+        serializedVersion: 2
+        x: 2212
+        y: 112
+        width: 153
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96f363d78bdf03b60800000000000000
+      internalID: 7723952329756917609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fuegojetpack_32
+      rect:
+        serializedVersion: 2
+        x: 2564
+        y: 299
+        width: 26
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a21f87dc54e768cc0800000000000000
+      internalID: -3709138404827926230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fuegojetpack_33
+      rect:
+        serializedVersion: 2
+        x: 2607
+        y: 231
+        width: 80
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21667528d91480a30800000000000000
+      internalID: 4181664398765942290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fuegojetpack_34
+      rect:
+        serializedVersion: 2
+        x: 2479
+        y: 255
+        width: 53
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dedfe02a1a8feab50800000000000000
+      internalID: 6606491076491410925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fuegojetpack_35
+      rect:
+        serializedVersion: 2
+        x: 2542
+        y: 287
+        width: 17
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a76c16b227d066800800000000000000
+      internalID: 605185983933171322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fuegojetpack_36
+      rect:
+        serializedVersion: 2
+        x: 1769
+        y: 187
+        width: 91
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 724eab1b424428530800000000000000
+      internalID: 3855719155373892647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fuegojetpack_37
+      rect:
+        serializedVersion: 2
+        x: 1810
+        y: 233
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83164d495ca9d8970800000000000000
+      internalID: 8758827023701664056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fuegojetpack_38
+      rect:
+        serializedVersion: 2
+        x: 2114
+        y: 102
+        width: 92
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3b036ed4a178a900800000000000000
+      internalID: 695931095348349754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fuegojetpack_39
+      rect:
+        serializedVersion: 2
+        x: 2456
+        y: 209
+        width: 33
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 213c61505ccbbe5c0800000000000000
+      internalID: -4185043874330787054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fuegojetpack_40
+      rect:
+        serializedVersion: 2
+        x: 1879
+        y: 176
+        width: 49
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9180ca7d239c2e40800000000000000
+      internalID: 5633039057475895711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fuegojetpack_41
+      rect:
+        serializedVersion: 2
+        x: 2675
+        y: 197
+        width: 22
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20b9041dbfdb9a580800000000000000
+      internalID: -8815305906355922174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fuegojetpack_42
+      rect:
+        serializedVersion: 2
+        x: 1764
+        y: 85
+        width: 83
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 637e4160adf511880800000000000000
+      internalID: -8642020819937728714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fuegojetpack_43
+      rect:
+        serializedVersion: 2
+        x: 2486
+        y: 131
+        width: 14
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e03ebe8706a3d8a00800000000000000
+      internalID: 760328098115478286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fuegojetpack_44
+      rect:
+        serializedVersion: 2
+        x: 2667
+        y: 152
+        width: 31
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89e0684db94585010800000000000000
+      internalID: 1177784330819604120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fuegojetpack_45
+      rect:
+        serializedVersion: 2
+        x: 1833
+        y: 59
+        width: 149
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc0b58f56fa4374d0800000000000000
+      internalID: -3138082093322096435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fuegojetpack_46
+      rect:
+        serializedVersion: 2
+        x: 1863
+        y: 111
+        width: 31
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e6e7ab8f7a6a6a80800000000000000
+      internalID: -8472842652907739417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fuegojetpack_47
+      rect:
+        serializedVersion: 2
+        x: 2173
+        y: 60
+        width: 94
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcafcfd83cc463200800000000000000
+      internalID: 159399239602731727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fuegojetpack_48
+      rect:
+        serializedVersion: 2
+        x: 2263
+        y: 84
+        width: 56
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62c991abf0734a250800000000000000
+      internalID: 5954945147976916006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fuegojetpack_49
+      rect:
+        serializedVersion: 2
+        x: 2513
+        y: 103
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34207d37beec02370800000000000000
+      internalID: 8295858024272560707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fuegojetpack_50
+      rect:
+        serializedVersion: 2
+        x: 2539
+        y: 95
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36354f14fc1732ce0800000000000000
+      internalID: -1431175121594985629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fuegojetpack_51
+      rect:
+        serializedVersion: 2
+        x: 2648
+        y: 111
+        width: 26
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 529c38cd0e5c7ae50800000000000000
+      internalID: 6820637730238875941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fuegojetpack_52
+      rect:
+        serializedVersion: 2
+        x: 1073
+        y: 84
+        width: 13
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ea87fddc5780c510800000000000000
+      internalID: 1567401503255661286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fuegojetpack_53
+      rect:
+        serializedVersion: 2
+        x: 2519
+        y: 82
+        width: 23
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed49f5fe7d726eaa0800000000000000
+      internalID: -6132170034230881058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fuegojetpack_54
+      rect:
+        serializedVersion: 2
+        x: 2561
+        y: 72
+        width: 47
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35fd6c3f3cdeb9b30800000000000000
+      internalID: 4295288095492202323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fuegojetpack_55
+      rect:
+        serializedVersion: 2
+        x: 1882
+        y: 53
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07d86f98eae04c080800000000000000
+      internalID: -9168186798617752208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      fuegojetpack_0: -4086125846274253146
+      fuegojetpack_1: -3388751516790442414
+      fuegojetpack_10: -779067476144404099
+      fuegojetpack_11: 7939263357420839146
+      fuegojetpack_12: 2287060419680503264
+      fuegojetpack_13: 6482657154789157622
+      fuegojetpack_14: 7688601775464813961
+      fuegojetpack_15: 8296567125705229420
+      fuegojetpack_16: 4441682179834074296
+      fuegojetpack_17: -9031564558885891998
+      fuegojetpack_18: 6371638780478713983
+      fuegojetpack_19: -6096804570456241414
+      fuegojetpack_2: 5886807654515812139
+      fuegojetpack_20: -1201182006584766705
+      fuegojetpack_21: -1106275953708082492
+      fuegojetpack_22: 2453525205263653008
+      fuegojetpack_23: 4913949974089331402
+      fuegojetpack_24: -2983270864485264747
+      fuegojetpack_25: -2530647608554612207
+      fuegojetpack_26: 1658382004885909510
+      fuegojetpack_27: 2792127783423842028
+      fuegojetpack_28: 2113777633089504143
+      fuegojetpack_29: -81423277545880014
+      fuegojetpack_3: 6957892528969057781
+      fuegojetpack_30: -3515028497912637294
+      fuegojetpack_31: 7723952329756917609
+      fuegojetpack_32: -3709138404827926230
+      fuegojetpack_33: 4181664398765942290
+      fuegojetpack_34: 6606491076491410925
+      fuegojetpack_35: 605185983933171322
+      fuegojetpack_36: 3855719155373892647
+      fuegojetpack_37: 8758827023701664056
+      fuegojetpack_38: 695931095348349754
+      fuegojetpack_39: -4185043874330787054
+      fuegojetpack_4: 5700554988886865015
+      fuegojetpack_40: 5633039057475895711
+      fuegojetpack_41: -8815305906355922174
+      fuegojetpack_42: -8642020819937728714
+      fuegojetpack_43: 760328098115478286
+      fuegojetpack_44: 1177784330819604120
+      fuegojetpack_45: -3138082093322096435
+      fuegojetpack_46: -8472842652907739417
+      fuegojetpack_47: 159399239602731727
+      fuegojetpack_48: 5954945147976916006
+      fuegojetpack_49: 8295858024272560707
+      fuegojetpack_5: -8779154682739260589
+      fuegojetpack_50: -1431175121594985629
+      fuegojetpack_51: 6820637730238875941
+      fuegojetpack_52: 1567401503255661286
+      fuegojetpack_53: -6132170034230881058
+      fuegojetpack_54: 4295288095492202323
+      fuegojetpack_55: -9168186798617752208
+      fuegojetpack_6: -4881313986684251079
+      fuegojetpack_7: 6947974410901177845
+      fuegojetpack_8: 2360017215286022818
+      fuegojetpack_9: 1642669007406315036
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

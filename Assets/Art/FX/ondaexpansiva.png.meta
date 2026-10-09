@@ -1,0 +1,1443 @@
+fileFormatVersion: 2
+guid: 7981d2377b6679a47ba738113f7109e1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8642036651773691129
+    second: ondaexpansiva_0
+  - first:
+      213: -2435725917262045059
+    second: ondaexpansiva_1
+  - first:
+      213: 2358654415429955765
+    second: ondaexpansiva_2
+  - first:
+      213: 8832852223436862315
+    second: ondaexpansiva_3
+  - first:
+      213: -4611404713532769993
+    second: ondaexpansiva_4
+  - first:
+      213: 4082691322841016224
+    second: ondaexpansiva_5
+  - first:
+      213: 4719014662360614632
+    second: ondaexpansiva_6
+  - first:
+      213: -4525234539988159106
+    second: ondaexpansiva_7
+  - first:
+      213: -2727168399676836622
+    second: ondaexpansiva_8
+  - first:
+      213: -3061998192455091039
+    second: ondaexpansiva_9
+  - first:
+      213: -8559257059996785647
+    second: ondaexpansiva_10
+  - first:
+      213: 8744824337524602107
+    second: ondaexpansiva_11
+  - first:
+      213: -9121051499095338701
+    second: ondaexpansiva_12
+  - first:
+      213: -5016470535901272156
+    second: ondaexpansiva_13
+  - first:
+      213: 1165498172801250983
+    second: ondaexpansiva_14
+  - first:
+      213: -6053407987653331085
+    second: ondaexpansiva_15
+  - first:
+      213: -951751085788305757
+    second: ondaexpansiva_16
+  - first:
+      213: -6153350887847677732
+    second: ondaexpansiva_17
+  - first:
+      213: -5721720083019713936
+    second: ondaexpansiva_18
+  - first:
+      213: -4190532879278411008
+    second: ondaexpansiva_19
+  - first:
+      213: 3249658461187343017
+    second: ondaexpansiva_20
+  - first:
+      213: 642634727615879058
+    second: ondaexpansiva_21
+  - first:
+      213: -6622929468100073225
+    second: ondaexpansiva_22
+  - first:
+      213: 4833870469038285664
+    second: ondaexpansiva_23
+  - first:
+      213: 1495230549931294022
+    second: ondaexpansiva_24
+  - first:
+      213: 8541001922805940896
+    second: ondaexpansiva_25
+  - first:
+      213: 7278677544281773769
+    second: ondaexpansiva_26
+  - first:
+      213: -6646538948056382308
+    second: ondaexpansiva_27
+  - first:
+      213: -6166888937618938489
+    second: ondaexpansiva_28
+  - first:
+      213: -8942804518482628411
+    second: ondaexpansiva_29
+  - first:
+      213: -2790523913071190678
+    second: ondaexpansiva_30
+  - first:
+      213: 1316150874232472944
+    second: ondaexpansiva_31
+  - first:
+      213: 7874293744370700196
+    second: ondaexpansiva_32
+  - first:
+      213: 1104651326189495639
+    second: ondaexpansiva_33
+  - first:
+      213: 738530151681109151
+    second: ondaexpansiva_34
+  - first:
+      213: 8199923771544670274
+    second: ondaexpansiva_35
+  - first:
+      213: -325576802124504911
+    second: ondaexpansiva_36
+  - first:
+      213: -6390652015914970791
+    second: ondaexpansiva_37
+  - first:
+      213: -693971518394890273
+    second: ondaexpansiva_38
+  - first:
+      213: 4316203172779953269
+    second: ondaexpansiva_39
+  - first:
+      213: -7746392522108614516
+    second: ondaexpansiva_40
+  - first:
+      213: 1758194307854270124
+    second: ondaexpansiva_41
+  - first:
+      213: 5733909001029070518
+    second: ondaexpansiva_42
+  - first:
+      213: -5383709901963038799
+    second: ondaexpansiva_43
+  - first:
+      213: -2294845905084842337
+    second: ondaexpansiva_44
+  - first:
+      213: 4348272229123694660
+    second: ondaexpansiva_45
+  - first:
+      213: 1567839157276418500
+    second: ondaexpansiva_46
+  - first:
+      213: -3872685794107173786
+    second: ondaexpansiva_47
+  - first:
+      213: -1855189637356493526
+    second: ondaexpansiva_48
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 0
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ondaexpansiva_0
+      rect:
+        serializedVersion: 2
+        x: 755
+        y: 1236
+        width: 209
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f480ec1c8eaee770800000000000000
+      internalID: 8642036651773691129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ondaexpansiva_1
+      rect:
+        serializedVersion: 2
+        x: 1069
+        y: 1208
+        width: 267
+        height: 272
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d70226bee20923ed0800000000000000
+      internalID: -2435725917262045059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ondaexpansiva_2
+      rect:
+        serializedVersion: 2
+        x: 1391
+        y: 1185
+        width: 312
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b0fb93b1bf9bb020800000000000000
+      internalID: 2358654415429955765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ondaexpansiva_3
+      rect:
+        serializedVersion: 2
+        x: 1746
+        y: 1218
+        width: 132
+        height: 263
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b63397b7c48949a70800000000000000
+      internalID: 8832852223436862315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ondaexpansiva_4
+      rect:
+        serializedVersion: 2
+        x: 1883
+        y: 1207
+        width: 152
+        height: 278
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 739315668dff000c0800000000000000
+      internalID: -4611404713532769993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ondaexpansiva_5
+      rect:
+        serializedVersion: 2
+        x: 2175
+        y: 1436
+        width: 28
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a722898022a8a830800000000000000
+      internalID: 4082691322841016224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ondaexpansiva_6
+      rect:
+        serializedVersion: 2
+        x: 2230
+        y: 1448
+        width: 55
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e64ddf35de4d7140800000000000000
+      internalID: 4719014662360614632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ondaexpansiva_7
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 1293
+        width: 97
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e757dae59232331c0800000000000000
+      internalID: -4525234539988159106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ondaexpansiva_8
+      rect:
+        serializedVersion: 2
+        x: 2112
+        y: 1368
+        width: 13
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f477962ac6272ad0800000000000000
+      internalID: -2727168399676836622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ondaexpansiva_9
+      rect:
+        serializedVersion: 2
+        x: 2312
+        y: 1343
+        width: 48
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ac73dbfdd89185d0800000000000000
+      internalID: -3061998192455091039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ondaexpansiva_10
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 1322
+        width: 32
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11423a58d09673980800000000000000
+      internalID: -8559257059996785647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ondaexpansiva_11
+      rect:
+        serializedVersion: 2
+        x: 2108
+        y: 1311
+        width: 19
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf43855276bdb5970800000000000000
+      internalID: 8744824337524602107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ondaexpansiva_12
+      rect:
+        serializedVersion: 2
+        x: 2125
+        y: 1262
+        width: 45
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 331d06aacf38b6180800000000000000
+      internalID: -9121051499095338701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ondaexpansiva_13
+      rect:
+        serializedVersion: 2
+        x: 2329
+        y: 1264
+        width: 20
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a7246140aae16ab0800000000000000
+      internalID: -5016470535901272156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ondaexpansiva_14
+      rect:
+        serializedVersion: 2
+        x: 1856
+        y: 1211
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a67f20c96eac2010800000000000000
+      internalID: 1165498172801250983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ondaexpansiva_15
+      rect:
+        serializedVersion: 2
+        x: 2206
+        y: 1212
+        width: 36
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 377396fe189fdfba0800000000000000
+      internalID: -6053407987653331085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ondaexpansiva_16
+      rect:
+        serializedVersion: 2
+        x: 2272
+        y: 1226
+        width: 18
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a6eef81e63bac2f0800000000000000
+      internalID: -951751085788305757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ondaexpansiva_17
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 934
+        width: 62
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd0318728f7ea9aa0800000000000000
+      internalID: -6153350887847677732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ondaexpansiva_18
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 896
+        width: 135
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 072346346ed5890b0800000000000000
+      internalID: -5721720083019713936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ondaexpansiva_19
+      rect:
+        serializedVersion: 2
+        x: 743
+        y: 854
+        width: 222
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 003f3077c8c38d5c0800000000000000
+      internalID: -4190532879278411008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ondaexpansiva_20
+      rect:
+        serializedVersion: 2
+        x: 1066
+        y: 827
+        width: 274
+        height: 272
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a20a6c272b191d20800000000000000
+      internalID: 3249658461187343017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ondaexpansiva_21
+      rect:
+        serializedVersion: 2
+        x: 1396
+        y: 816
+        width: 302
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 297dfd341e81be800800000000000000
+      internalID: 642634727615879058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ondaexpansiva_22
+      rect:
+        serializedVersion: 2
+        x: 1747
+        y: 816
+        width: 292
+        height: 294
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f8ad611db0a614a0800000000000000
+      internalID: -6622929468100073225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ondaexpansiva_23
+      rect:
+        serializedVersion: 2
+        x: 2102
+        y: 828
+        width: 264
+        height: 274
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0632745a49b551340800000000000000
+      internalID: 4833870469038285664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ondaexpansiva_24
+      rect:
+        serializedVersion: 2
+        x: 2453
+        y: 950
+        width: 27
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64d77f9534020c410800000000000000
+      internalID: 1495230549931294022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ondaexpansiva_25
+      rect:
+        serializedVersion: 2
+        x: 2579
+        y: 920
+        width: 96
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a2c6c22ffbb78670800000000000000
+      internalID: 8541001922805940896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ondaexpansiva_26
+      rect:
+        serializedVersion: 2
+        x: 2489
+        y: 853
+        width: 73
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c6178599ae030560800000000000000
+      internalID: 7278677544281773769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ondaexpansiva_27
+      rect:
+        serializedVersion: 2
+        x: 2625
+        y: 886
+        width: 17
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c940d47aa00c2c3a0800000000000000
+      internalID: -6646538948056382308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ondaexpansiva_28
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 548
+        width: 55
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 785efef4f2fca6aa0800000000000000
+      internalID: -6166888937618938489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ondaexpansiva_29
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 513
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c0b514eba6c4e380800000000000000
+      internalID: -8942804518482628411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ondaexpansiva_30
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 467
+        width: 217
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6d982039411649d0800000000000000
+      internalID: -2790523913071190678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ondaexpansiva_31
+      rect:
+        serializedVersion: 2
+        x: 1075
+        y: 445
+        width: 258
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07542713f38e34210800000000000000
+      internalID: 1316150874232472944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ondaexpansiva_32
+      rect:
+        serializedVersion: 2
+        x: 1399
+        y: 427
+        width: 298
+        height: 298
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4afcb42d07c174d60800000000000000
+      internalID: 7874293744370700196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ondaexpansiva_33
+      rect:
+        serializedVersion: 2
+        x: 1734
+        y: 406
+        width: 323
+        height: 332
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 755603a4782845f00800000000000000
+      internalID: 1104651326189495639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ondaexpansiva_34
+      rect:
+        serializedVersion: 2
+        x: 2095
+        y: 404
+        width: 292
+        height: 326
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9c2ed29249cf3a00800000000000000
+      internalID: 738530151681109151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ondaexpansiva_35
+      rect:
+        serializedVersion: 2
+        x: 738
+        y: 76
+        width: 231
+        height: 229
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2409334a93bfbc170800000000000000
+      internalID: 8199923771544670274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ondaexpansiva_36
+      rect:
+        serializedVersion: 2
+        x: 1077
+        y: 67
+        width: 252
+        height: 249
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b0e24a9f915b7bf0800000000000000
+      internalID: -325576802124504911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ondaexpansiva_37
+      rect:
+        serializedVersion: 2
+        x: 1401
+        y: 46
+        width: 303
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9511144c9d7df47a0800000000000000
+      internalID: -6390652015914970791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ondaexpansiva_38
+      rect:
+        serializedVersion: 2
+        x: 1743
+        y: 60
+        width: 296
+        height: 282
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd785d1b4948e56f0800000000000000
+      internalID: -693971518394890273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ondaexpansiva_39
+      rect:
+        serializedVersion: 2
+        x: 2194
+        y: 281
+        width: 19
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57c86fbdaeb36eb30800000000000000
+      internalID: 4316203172779953269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ondaexpansiva_40
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 142
+        width: 89
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8849f41b094f7490800000000000000
+      internalID: -7746392522108614516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ondaexpansiva_41
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 112
+        width: 165
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cae74cd586c566810800000000000000
+      internalID: 1758194307854270124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ondaexpansiva_42
+      rect:
+        serializedVersion: 2
+        x: 2102
+        y: 199
+        width: 57
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bea0cc5bdfe29f40800000000000000
+      internalID: 5733909001029070518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ondaexpansiva_43
+      rect:
+        serializedVersion: 2
+        x: 2181
+        y: 228
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bf6db74e583945b0800000000000000
+      internalID: -5383709901963038799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ondaexpansiva_44
+      rect:
+        serializedVersion: 2
+        x: 2332
+        y: 171
+        width: 31
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9e7825dec11720e0800000000000000
+      internalID: -2294845905084842337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ondaexpansiva_45
+      rect:
+        serializedVersion: 2
+        x: 2118
+        y: 175
+        width: 18
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4402d93ed8a285c30800000000000000
+      internalID: 4348272229123694660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ondaexpansiva_46
+      rect:
+        serializedVersion: 2
+        x: 2132
+        y: 133
+        width: 21
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c1a862286512c510800000000000000
+      internalID: 1567839157276418500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ondaexpansiva_47
+      rect:
+        serializedVersion: 2
+        x: 2182
+        y: 99
+        width: 38
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6645a83e9c4714ac0800000000000000
+      internalID: -3872685794107173786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ondaexpansiva_48
+      rect:
+        serializedVersion: 2
+        x: 2227
+        y: 55
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a256162aada0146e0800000000000000
+      internalID: -1855189637356493526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      ondaexpansiva_0: 8642036651773691129
+      ondaexpansiva_1: -2435725917262045059
+      ondaexpansiva_10: -8559257059996785647
+      ondaexpansiva_11: 8744824337524602107
+      ondaexpansiva_12: -9121051499095338701
+      ondaexpansiva_13: -5016470535901272156
+      ondaexpansiva_14: 1165498172801250983
+      ondaexpansiva_15: -6053407987653331085
+      ondaexpansiva_16: -951751085788305757
+      ondaexpansiva_17: -6153350887847677732
+      ondaexpansiva_18: -5721720083019713936
+      ondaexpansiva_19: -4190532879278411008
+      ondaexpansiva_2: 2358654415429955765
+      ondaexpansiva_20: 3249658461187343017
+      ondaexpansiva_21: 642634727615879058
+      ondaexpansiva_22: -6622929468100073225
+      ondaexpansiva_23: 4833870469038285664
+      ondaexpansiva_24: 1495230549931294022
+      ondaexpansiva_25: 8541001922805940896
+      ondaexpansiva_26: 7278677544281773769
+      ondaexpansiva_27: -6646538948056382308
+      ondaexpansiva_28: -6166888937618938489
+      ondaexpansiva_29: -8942804518482628411
+      ondaexpansiva_3: 8832852223436862315
+      ondaexpansiva_30: -2790523913071190678
+      ondaexpansiva_31: 1316150874232472944
+      ondaexpansiva_32: 7874293744370700196
+      ondaexpansiva_33: 1104651326189495639
+      ondaexpansiva_34: 738530151681109151
+      ondaexpansiva_35: 8199923771544670274
+      ondaexpansiva_36: -325576802124504911
+      ondaexpansiva_37: -6390652015914970791
+      ondaexpansiva_38: -693971518394890273
+      ondaexpansiva_39: 4316203172779953269
+      ondaexpansiva_4: -4611404713532769993
+      ondaexpansiva_40: -7746392522108614516
+      ondaexpansiva_41: 1758194307854270124
+      ondaexpansiva_42: 5733909001029070518
+      ondaexpansiva_43: -5383709901963038799
+      ondaexpansiva_44: -2294845905084842337
+      ondaexpansiva_45: 4348272229123694660
+      ondaexpansiva_46: 1567839157276418500
+      ondaexpansiva_47: -3872685794107173786
+      ondaexpansiva_48: -1855189637356493526
+      ondaexpansiva_5: 4082691322841016224
+      ondaexpansiva_6: 4719014662360614632
+      ondaexpansiva_7: -4525234539988159106
+      ondaexpansiva_8: -2727168399676836622
+      ondaexpansiva_9: -3061998192455091039
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

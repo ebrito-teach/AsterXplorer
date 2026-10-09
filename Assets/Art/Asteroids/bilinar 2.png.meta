@@ -1,0 +1,1547 @@
+fileFormatVersion: 2
+guid: 6423bb44a26c63746b73906b190faf4a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3560625889737112122
+    second: bilinar 2_0
+  - first:
+      213: 7994864471580129164
+    second: bilinar 2_1
+  - first:
+      213: -5610057365524694815
+    second: bilinar 2_2
+  - first:
+      213: -4891524013981870938
+    second: bilinar 2_3
+  - first:
+      213: -3480563874597227143
+    second: bilinar 2_4
+  - first:
+      213: 6244133138092035857
+    second: bilinar 2_5
+  - first:
+      213: 1203792375526352454
+    second: bilinar 2_6
+  - first:
+      213: -2619785300423821273
+    second: bilinar 2_7
+  - first:
+      213: -1567429111654748960
+    second: bilinar 2_8
+  - first:
+      213: 5333565033934770150
+    second: bilinar 2_9
+  - first:
+      213: -8529127991369543300
+    second: bilinar 2_10
+  - first:
+      213: 5764649246791511528
+    second: bilinar 2_11
+  - first:
+      213: 7458087129108632038
+    second: bilinar 2_12
+  - first:
+      213: -5306096823213934956
+    second: bilinar 2_13
+  - first:
+      213: -6176573042014043081
+    second: bilinar 2_14
+  - first:
+      213: -5549244153012434394
+    second: bilinar 2_15
+  - first:
+      213: 4032075444262592645
+    second: bilinar 2_16
+  - first:
+      213: 1885871502630822190
+    second: bilinar 2_17
+  - first:
+      213: 2200936717931262664
+    second: bilinar 2_18
+  - first:
+      213: 5366076350074904204
+    second: bilinar 2_19
+  - first:
+      213: 2283541259942196982
+    second: bilinar 2_20
+  - first:
+      213: 7707183279887309516
+    second: bilinar 2_21
+  - first:
+      213: -4768412808309119885
+    second: bilinar 2_22
+  - first:
+      213: -8966281189943120753
+    second: bilinar 2_23
+  - first:
+      213: 972991801279649550
+    second: bilinar 2_24
+  - first:
+      213: 6784100672962885498
+    second: bilinar 2_25
+  - first:
+      213: 634668602468858032
+    second: bilinar 2_26
+  - first:
+      213: -2826287432838460484
+    second: bilinar 2_27
+  - first:
+      213: -4830958604714647342
+    second: bilinar 2_28
+  - first:
+      213: -9198044849152882736
+    second: bilinar 2_29
+  - first:
+      213: 722601772197108284
+    second: bilinar 2_30
+  - first:
+      213: 5689640406604198092
+    second: bilinar 2_31
+  - first:
+      213: -2870907718307094051
+    second: bilinar 2_32
+  - first:
+      213: 5259546420069582118
+    second: bilinar 2_33
+  - first:
+      213: 3476842441061388175
+    second: bilinar 2_34
+  - first:
+      213: 4791761847543729834
+    second: bilinar 2_35
+  - first:
+      213: 3760925997089453143
+    second: bilinar 2_36
+  - first:
+      213: -506407021593683626
+    second: bilinar 2_37
+  - first:
+      213: 3553987809606260487
+    second: bilinar 2_38
+  - first:
+      213: -3018752803884546611
+    second: bilinar 2_39
+  - first:
+      213: -207505287535097368
+    second: bilinar 2_40
+  - first:
+      213: -8634666058402187317
+    second: bilinar 2_41
+  - first:
+      213: 1524075447402872737
+    second: bilinar 2_42
+  - first:
+      213: 2632812699873074097
+    second: bilinar 2_43
+  - first:
+      213: 2689751897407030134
+    second: bilinar 2_44
+  - first:
+      213: -8059838214319582195
+    second: bilinar 2_45
+  - first:
+      213: 6507273199849924081
+    second: bilinar 2_46
+  - first:
+      213: -1974159869361624157
+    second: bilinar 2_47
+  - first:
+      213: -1972802762300527924
+    second: bilinar 2_48
+  - first:
+      213: -163502777962031990
+    second: bilinar 2_49
+  - first:
+      213: 7476458535914247829
+    second: bilinar 2_50
+  - first:
+      213: 957975993187757294
+    second: bilinar 2_51
+  - first:
+      213: -5980691733587204335
+    second: bilinar 2_52
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 250
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: bilinar 2_0
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 1209
+        width: 284
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3af6d7b162e96130800000000000000
+      internalID: 3560625889737112122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bilinar 2_1
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 1212
+        width: 288
+        height: 282
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c87bce7d0e673fe60800000000000000
+      internalID: 7994864471580129164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bilinar 2_2
+      rect:
+        serializedVersion: 2
+        x: 715
+        y: 1212
+        width: 280
+        height: 289
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e83656ac821522b0800000000000000
+      internalID: -5610057365524694815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bilinar 2_3
+      rect:
+        serializedVersion: 2
+        x: 982
+        y: 1322
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a4515063d0dd1cb0800000000000000
+      internalID: -4891524013981870938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bilinar 2_4
+      rect:
+        serializedVersion: 2
+        x: 1069
+        y: 1212
+        width: 271
+        height: 283
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 975339cc89d82bfc0800000000000000
+      internalID: -3480563874597227143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bilinar 2_5
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 1212
+        width: 285
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11f883a910e97a650800000000000000
+      internalID: 6244133138092035857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bilinar 2_6
+      rect:
+        serializedVersion: 2
+        x: 1753
+        y: 1209
+        width: 283
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 646629e99cab4b010800000000000000
+      internalID: 1203792375526352454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bilinar 2_7
+      rect:
+        serializedVersion: 2
+        x: 2095
+        y: 1209
+        width: 281
+        height: 289
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 728b2744627a4abd0800000000000000
+      internalID: -2619785300423821273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bilinar 2_8
+      rect:
+        serializedVersion: 2
+        x: 2440
+        y: 1209
+        width: 285
+        height: 289
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ec663d078f5f3ae0800000000000000
+      internalID: -1567429111654748960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bilinar 2_9
+      rect:
+        serializedVersion: 2
+        x: 964
+        y: 1239
+        width: 37
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ef4022d321a40a40800000000000000
+      internalID: 5333565033934770150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bilinar 2_10
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 819
+        width: 284
+        height: 293
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c71d396f74372a980800000000000000
+      internalID: -8529127991369543300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bilinar 2_11
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 830
+        width: 279
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ed2bb192f5200050800000000000000
+      internalID: 5764649246791511528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bilinar 2_12
+      rect:
+        serializedVersion: 2
+        x: 723
+        y: 823
+        width: 273
+        height: 282
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e1de62bab2708760800000000000000
+      internalID: 7458087129108632038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bilinar 2_13
+      rect:
+        serializedVersion: 2
+        x: 1067
+        y: 820
+        width: 273
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 496318c5d05fc56b0800000000000000
+      internalID: -5306096823213934956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bilinar 2_14
+      rect:
+        serializedVersion: 2
+        x: 1407
+        y: 818
+        width: 285
+        height: 295
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 734cf7d0b87684aa0800000000000000
+      internalID: -6176573042014043081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bilinar 2_15
+      rect:
+        serializedVersion: 2
+        x: 1752
+        y: 819
+        width: 284
+        height: 294
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62ac7cf08df1df2b0800000000000000
+      internalID: -5549244153012434394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bilinar 2_16
+      rect:
+        serializedVersion: 2
+        x: 2087
+        y: 825
+        width: 295
+        height: 285
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 580e8d2f04fc4f730800000000000000
+      internalID: 4032075444262592645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bilinar 2_17
+      rect:
+        serializedVersion: 2
+        x: 2436
+        y: 818
+        width: 290
+        height: 295
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e21a75ec326fb2a10800000000000000
+      internalID: 1885871502630822190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bilinar 2_18
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 429
+        width: 262
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c2386da84c4b8e10800000000000000
+      internalID: 2200936717931262664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bilinar 2_19
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 429
+        width: 276
+        height: 285
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8ed6db7202287a40800000000000000
+      internalID: 5366076350074904204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bilinar 2_20
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 677
+        width: 45
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f67dcc5da4c0bf10800000000000000
+      internalID: 2283541259942196982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bilinar 2_21
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 693
+        width: 13
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cca5380db5a65fa60800000000000000
+      internalID: 7707183279887309516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bilinar 2_22
+      rect:
+        serializedVersion: 2
+        x: 974
+        y: 681
+        width: 22
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 374ef42a0d133ddb0800000000000000
+      internalID: -4768412808309119885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bilinar 2_23
+      rect:
+        serializedVersion: 2
+        x: 1060
+        y: 435
+        width: 284
+        height: 282
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8c6c2d53ce519380800000000000000
+      internalID: -8966281189943120753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bilinar 2_24
+      rect:
+        serializedVersion: 2
+        x: 1407
+        y: 428
+        width: 285
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0714ac53e2c08d00800000000000000
+      internalID: 972991801279649550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bilinar 2_25
+      rect:
+        serializedVersion: 2
+        x: 1812
+        y: 691
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a77f07c4e97f52e50800000000000000
+      internalID: 6784100672962885498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bilinar 2_26
+      rect:
+        serializedVersion: 2
+        x: 1824
+        y: 688
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b8ff383bbbcec800800000000000000
+      internalID: 634668602468858032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bilinar 2_27
+      rect:
+        serializedVersion: 2
+        x: 1991
+        y: 667
+        width: 40
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbb438cdd8207c8d0800000000000000
+      internalID: -2826287432838460484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bilinar 2_28
+      rect:
+        serializedVersion: 2
+        x: 2093
+        y: 429
+        width: 288
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d0ed599ebcf4fcb0800000000000000
+      internalID: -4830958604714647342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bilinar 2_29
+      rect:
+        serializedVersion: 2
+        x: 2438
+        y: 429
+        width: 287
+        height: 289
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d7812a61faf95080800000000000000
+      internalID: -9198044849152882736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bilinar 2_30
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 627
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3a50e9bb72370a00800000000000000
+      internalID: 722601772197108284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bilinar 2_31
+      rect:
+        serializedVersion: 2
+        x: 747
+        y: 441
+        width: 244
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc03a570ec9a5fe40800000000000000
+      internalID: 5689640406604198092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bilinar 2_32
+      rect:
+        serializedVersion: 2
+        x: 1754
+        y: 641
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd1e06314ac7828d0800000000000000
+      internalID: -2870907718307094051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bilinar 2_33
+      rect:
+        serializedVersion: 2
+        x: 1766
+        y: 458
+        width: 236
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 625ccef4a99adf840800000000000000
+      internalID: 5259546420069582118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bilinar 2_34
+      rect:
+        serializedVersion: 2
+        x: 2004
+        y: 597
+        width: 24
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8f477f67c9304030800000000000000
+      internalID: 3476842441061388175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bilinar 2_35
+      rect:
+        serializedVersion: 2
+        x: 724
+        y: 488
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aae0d133302cf7240800000000000000
+      internalID: 4791761847543729834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bilinar 2_36
+      rect:
+        serializedVersion: 2
+        x: 968
+        y: 463
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7547c03a44e713430800000000000000
+      internalID: 3760925997089453143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bilinar 2_37
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 437
+        width: 18
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65915263f71e8f8f0800000000000000
+      internalID: -506407021593683626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bilinar 2_38
+      rect:
+        serializedVersion: 2
+        x: 1771
+        y: 436
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70756af351d425130800000000000000
+      internalID: 3553987809606260487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bilinar 2_39
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 465
+        width: 14
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc54fb3a15c3b16d0800000000000000
+      internalID: -3018752803884546611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bilinar 2_40
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 427
+        width: 33
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e984775a0bce1df0800000000000000
+      internalID: -207505287535097368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bilinar 2_41
+      rect:
+        serializedVersion: 2
+        x: 1873
+        y: 434
+        width: 14
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc7b0d2e7f08b2880800000000000000
+      internalID: -8634666058402187317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bilinar 2_42
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 50
+        width: 267
+        height: 267
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1afb7556b8a962510800000000000000
+      internalID: 1524075447402872737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bilinar 2_43
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 250
+        width: 50
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bb52188331a98420800000000000000
+      internalID: 2632812699873074097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bilinar 2_44
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 50
+        width: 265
+        height: 263
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67301ea891be35520800000000000000
+      internalID: 2689751897407030134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bilinar 2_45
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 301
+        width: 21
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d04dc50d8d3b52090800000000000000
+      internalID: -8059838214319582195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bilinar 2_46
+      rect:
+        serializedVersion: 2
+        x: 727
+        y: 44
+        width: 271
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f5697d8f7a7e4a50800000000000000
+      internalID: 6507273199849924081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bilinar 2_47
+      rect:
+        serializedVersion: 2
+        x: 1066
+        y: 44
+        width: 276
+        height: 285
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ab6ed0fe006a94e0800000000000000
+      internalID: -1974159869361624157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bilinar 2_48
+      rect:
+        serializedVersion: 2
+        x: 1411
+        y: 44
+        width: 277
+        height: 274
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccaea2d07523f94e0800000000000000
+      internalID: -1972802762300527924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bilinar 2_49
+      rect:
+        serializedVersion: 2
+        x: 1761
+        y: 44
+        width: 265
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8498c7f61f1bbdf0800000000000000
+      internalID: -163502777962031990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bilinar 2_50
+      rect:
+        serializedVersion: 2
+        x: 2098
+        y: 44
+        width: 277
+        height: 282
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5961b1b2d67b1c760800000000000000
+      internalID: 7476458535914247829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bilinar 2_51
+      rect:
+        serializedVersion: 2
+        x: 2442
+        y: 44
+        width: 278
+        height: 274
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eecee49171a6b4d00800000000000000
+      internalID: 957975993187757294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bilinar 2_52
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 44
+        width: 52
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1176b6c2e80500da0800000000000000
+      internalID: -5980691733587204335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      bilinar 2_0: 3560625889737112122
+      bilinar 2_1: 7994864471580129164
+      bilinar 2_10: -8529127991369543300
+      bilinar 2_11: 5764649246791511528
+      bilinar 2_12: 7458087129108632038
+      bilinar 2_13: -5306096823213934956
+      bilinar 2_14: -6176573042014043081
+      bilinar 2_15: -5549244153012434394
+      bilinar 2_16: 4032075444262592645
+      bilinar 2_17: 1885871502630822190
+      bilinar 2_18: 2200936717931262664
+      bilinar 2_19: 5366076350074904204
+      bilinar 2_2: -5610057365524694815
+      bilinar 2_20: 2283541259942196982
+      bilinar 2_21: 7707183279887309516
+      bilinar 2_22: -4768412808309119885
+      bilinar 2_23: -8966281189943120753
+      bilinar 2_24: 972991801279649550
+      bilinar 2_25: 6784100672962885498
+      bilinar 2_26: 634668602468858032
+      bilinar 2_27: -2826287432838460484
+      bilinar 2_28: -4830958604714647342
+      bilinar 2_29: -9198044849152882736
+      bilinar 2_3: -4891524013981870938
+      bilinar 2_30: 722601772197108284
+      bilinar 2_31: 5689640406604198092
+      bilinar 2_32: -2870907718307094051
+      bilinar 2_33: 5259546420069582118
+      bilinar 2_34: 3476842441061388175
+      bilinar 2_35: 4791761847543729834
+      bilinar 2_36: 3760925997089453143
+      bilinar 2_37: -506407021593683626
+      bilinar 2_38: 3553987809606260487
+      bilinar 2_39: -3018752803884546611
+      bilinar 2_4: -3480563874597227143
+      bilinar 2_40: -207505287535097368
+      bilinar 2_41: -8634666058402187317
+      bilinar 2_42: 1524075447402872737
+      bilinar 2_43: 2632812699873074097
+      bilinar 2_44: 2689751897407030134
+      bilinar 2_45: -8059838214319582195
+      bilinar 2_46: 6507273199849924081
+      bilinar 2_47: -1974159869361624157
+      bilinar 2_48: -1972802762300527924
+      bilinar 2_49: -163502777962031990
+      bilinar 2_5: 6244133138092035857
+      bilinar 2_50: 7476458535914247829
+      bilinar 2_51: 957975993187757294
+      bilinar 2_52: -5980691733587204335
+      bilinar 2_6: 1203792375526352454
+      bilinar 2_7: -2619785300423821273
+      bilinar 2_8: -1567429111654748960
+      bilinar 2_9: 5333565033934770150
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

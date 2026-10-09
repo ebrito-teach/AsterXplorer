@@ -1,0 +1,1027 @@
+fileFormatVersion: 2
+guid: 752d4bd340224d1409f3426346dd51bf
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3763433324915964391
+    second: listo4_0
+  - first:
+      213: 6502706983414204421
+    second: listo4_1
+  - first:
+      213: 7569389854566790700
+    second: listo4_2
+  - first:
+      213: -3459668795505313242
+    second: listo4_3
+  - first:
+      213: -7653309000556975910
+    second: listo4_4
+  - first:
+      213: -7102574052474727498
+    second: listo4_5
+  - first:
+      213: -8677303978654917844
+    second: listo4_6
+  - first:
+      213: 6013753022722946455
+    second: listo4_7
+  - first:
+      213: -87355417113008574
+    second: listo4_8
+  - first:
+      213: 2650182455250049868
+    second: listo4_9
+  - first:
+      213: 1876326055309646057
+    second: listo4_10
+  - first:
+      213: -2460484684511976830
+    second: listo4_11
+  - first:
+      213: -5836233382259476382
+    second: listo4_12
+  - first:
+      213: -6020282945892723035
+    second: listo4_13
+  - first:
+      213: 5777898790180322770
+    second: listo4_14
+  - first:
+      213: -268824581301244781
+    second: listo4_15
+  - first:
+      213: -4161695656277602848
+    second: listo4_16
+  - first:
+      213: 1840185891119395328
+    second: listo4_17
+  - first:
+      213: 4245929641464984622
+    second: listo4_18
+  - first:
+      213: -3052952181131063291
+    second: listo4_19
+  - first:
+      213: -1101883752566216332
+    second: listo4_20
+  - first:
+      213: -3742101450106961820
+    second: listo4_21
+  - first:
+      213: -6364685122019728884
+    second: listo4_22
+  - first:
+      213: -3901436831486190800
+    second: listo4_23
+  - first:
+      213: 8593072062646425155
+    second: listo4_24
+  - first:
+      213: 5076852848959375451
+    second: listo4_25
+  - first:
+      213: -6677085248858293405
+    second: listo4_26
+  - first:
+      213: -8937477613208379466
+    second: listo4_27
+  - first:
+      213: -4953350868074191057
+    second: listo4_28
+  - first:
+      213: 5927607257914288561
+    second: listo4_29
+  - first:
+      213: 8116530613044626160
+    second: listo4_30
+  - first:
+      213: 9074777356313910590
+    second: listo4_31
+  - first:
+      213: 6635527812766627124
+    second: listo4_32
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 250
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: listo4_0
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 1277
+        width: 186
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e9bb736ba66a3430800000000000000
+      internalID: 3763433324915964391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: listo4_1
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 1254
+        width: 209
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5080bd07c814e3a50800000000000000
+      internalID: 6502706983414204421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: listo4_2
+      rect:
+        serializedVersion: 2
+        x: 755
+        y: 1265
+        width: 210
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2636e7e7ffdb0960800000000000000
+      internalID: 7569389854566790700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: listo4_3
+      rect:
+        serializedVersion: 2
+        x: 1099
+        y: 1266
+        width: 210
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62af6638f89ccffc0800000000000000
+      internalID: -3459668795505313242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: listo4_4
+      rect:
+        serializedVersion: 2
+        x: 1444
+        y: 1254
+        width: 219
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad86081530cf9c590800000000000000
+      internalID: -7653309000556975910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: listo4_5
+      rect:
+        serializedVersion: 2
+        x: 1776
+        y: 1243
+        width: 233
+        height: 244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b35653c7869e6d90800000000000000
+      internalID: -7102574052474727498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: listo4_6
+      rect:
+        serializedVersion: 2
+        x: 2122
+        y: 1243
+        width: 230
+        height: 244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2b90387106049780800000000000000
+      internalID: -8677303978654917844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: listo4_7
+      rect:
+        serializedVersion: 2
+        x: 2488
+        y: 1267
+        width: 186
+        height: 197
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 795355e0384257350800000000000000
+      internalID: 6013753022722946455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: listo4_8
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 876
+        width: 231
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 246e5c106b6a9cef0800000000000000
+      internalID: -87355417113008574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: listo4_9
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 865
+        width: 232
+        height: 244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4bd62bd6e657c420800000000000000
+      internalID: 2650182455250049868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: listo4_10
+      rect:
+        serializedVersion: 2
+        x: 755
+        y: 876
+        width: 198
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e89a892b9c0a0a10800000000000000
+      internalID: 1876326055309646057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: listo4_11
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 876
+        width: 232
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 282ef54373a9addd0800000000000000
+      internalID: -2460484684511976830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: listo4_12
+      rect:
+        serializedVersion: 2
+        x: 1432
+        y: 864
+        width: 234
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 268b52819a8810fa0800000000000000
+      internalID: -5836233382259476382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: listo4_13
+      rect:
+        serializedVersion: 2
+        x: 1777
+        y: 865
+        width: 231
+        height: 230
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a6d8babe88a37ca0800000000000000
+      internalID: -6020282945892723035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: listo4_14
+      rect:
+        serializedVersion: 2
+        x: 2121
+        y: 876
+        width: 231
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2dd7bd846583f2050800000000000000
+      internalID: 5777898790180322770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: listo4_15
+      rect:
+        serializedVersion: 2
+        x: 2465
+        y: 865
+        width: 231
+        height: 231
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39c65a4b771f44cf0800000000000000
+      internalID: -268824581301244781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: listo4_16
+      rect:
+        serializedVersion: 2
+        x: 2646
+        y: 1058
+        width: 63
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ed8948a9dfae36c0800000000000000
+      internalID: -4161695656277602848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: listo4_17
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 462
+        width: 232
+        height: 246
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0027bd87157a98910800000000000000
+      internalID: 1840185891119395328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: listo4_18
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 452
+        width: 230
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2472d453829cea30800000000000000
+      internalID: 4245929641464984622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: listo4_19
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 462
+        width: 258
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 500dd6f9a2cb1a5d0800000000000000
+      internalID: -3052952181131063291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: listo4_20
+      rect:
+        serializedVersion: 2
+        x: 1076
+        y: 475
+        width: 257
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4792488a09255b0f0800000000000000
+      internalID: -1101883752566216332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: listo4_21
+      rect:
+        serializedVersion: 2
+        x: 1419
+        y: 452
+        width: 258
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46086e0ce82611cc0800000000000000
+      internalID: -3742101450106961820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: listo4_22
+      rect:
+        serializedVersion: 2
+        x: 1777
+        y: 452
+        width: 231
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c02ecc26a981ca7a0800000000000000
+      internalID: -6364685122019728884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: listo4_23
+      rect:
+        serializedVersion: 2
+        x: 2108
+        y: 463
+        width: 256
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03bd3a95fdf4bd9c0800000000000000
+      internalID: -3901436831486190800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: listo4_24
+      rect:
+        serializedVersion: 2
+        x: 2466
+        y: 462
+        width: 238
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3469f5f4389b04770800000000000000
+      internalID: 8593072062646425155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: listo4_25
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 73
+        width: 231
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b58472f84ca947640800000000000000
+      internalID: 5076852848959375451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: listo4_26
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 73
+        width: 231
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36bfcc6c75a3653a0800000000000000
+      internalID: -6677085248858293405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: listo4_27
+      rect:
+        serializedVersion: 2
+        x: 732
+        y: 73
+        width: 255
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bf55bca673b7f380800000000000000
+      internalID: -8937477613208379466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: listo4_28
+      rect:
+        serializedVersion: 2
+        x: 1076
+        y: 60
+        width: 256
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f27a09421a9224bb0800000000000000
+      internalID: -4953350868074191057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: listo4_29
+      rect:
+        serializedVersion: 2
+        x: 1409
+        y: 49
+        width: 279
+        height: 279
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b922003567134250800000000000000
+      internalID: 5927607257914288561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: listo4_30
+      rect:
+        serializedVersion: 2
+        x: 1777
+        y: 73
+        width: 243
+        height: 247
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f2cb1fd695b3a070800000000000000
+      internalID: 8116530613044626160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: listo4_31
+      rect:
+        serializedVersion: 2
+        x: 2109
+        y: 61
+        width: 255
+        height: 244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3d59d2ece510fd70800000000000000
+      internalID: 9074777356313910590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: listo4_32
+      rect:
+        serializedVersion: 2
+        x: 2465
+        y: 73
+        width: 231
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 435fd21a361261c50800000000000000
+      internalID: 6635527812766627124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      listo4_0: 3763433324915964391
+      listo4_1: 6502706983414204421
+      listo4_10: 1876326055309646057
+      listo4_11: -2460484684511976830
+      listo4_12: -5836233382259476382
+      listo4_13: -6020282945892723035
+      listo4_14: 5777898790180322770
+      listo4_15: -268824581301244781
+      listo4_16: -4161695656277602848
+      listo4_17: 1840185891119395328
+      listo4_18: 4245929641464984622
+      listo4_19: -3052952181131063291
+      listo4_2: 7569389854566790700
+      listo4_20: -1101883752566216332
+      listo4_21: -3742101450106961820
+      listo4_22: -6364685122019728884
+      listo4_23: -3901436831486190800
+      listo4_24: 8593072062646425155
+      listo4_25: 5076852848959375451
+      listo4_26: -6677085248858293405
+      listo4_27: -8937477613208379466
+      listo4_28: -4953350868074191057
+      listo4_29: 5927607257914288561
+      listo4_3: -3459668795505313242
+      listo4_30: 8116530613044626160
+      listo4_31: 9074777356313910590
+      listo4_32: 6635527812766627124
+      listo4_4: -7653309000556975910
+      listo4_5: -7102574052474727498
+      listo4_6: -8677303978654917844
+      listo4_7: 6013753022722946455
+      listo4_8: -87355417113008574
+      listo4_9: 2650182455250049868
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

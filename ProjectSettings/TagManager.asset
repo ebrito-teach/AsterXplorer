@@ -2,7 +2,7 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!78 &1
 TagManager:
-  serializedVersion: 2
+  serializedVersion: 3
   tags: []
   layers:
   - Default
@@ -11,12 +11,12 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Player
+  - AsteroidStatic
+  - AsteroidMoving
+  - Fragment
+  - Walls
+  - Goal
   - 
   - 
   - 
@@ -41,3 +41,23 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Player
+    uniqueID: 827644297
+    locked: 0
+  - name: BG_Stars
+    uniqueID: 1525882917
+    locked: 0
+  - name: BG_Objects
+    uniqueID: 703726681
+    locked: 0
+  - name: BG_Dust
+    uniqueID: 1754838485
+    locked: 0
+  - name: Asteroids
+    uniqueID: 1804894423
+    locked: 0
+  - name: FX
+    uniqueID: 4293996329
+    locked: 0
+  m_RenderingLayers:
+  - Default

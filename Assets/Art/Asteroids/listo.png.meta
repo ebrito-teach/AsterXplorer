@@ -1,0 +1,1261 @@
+fileFormatVersion: 2
+guid: f3341d09dc3ffe140bc91b19efaddac4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -754581487715784627
+    second: listo_0
+  - first:
+      213: 441404832677507555
+    second: listo_1
+  - first:
+      213: 286090439775553867
+    second: listo_2
+  - first:
+      213: -7200991658339677724
+    second: listo_3
+  - first:
+      213: -5861094940544738549
+    second: listo_4
+  - first:
+      213: -8677006817010095607
+    second: listo_5
+  - first:
+      213: -2915326703305398082
+    second: listo_6
+  - first:
+      213: 2606059947128220654
+    second: listo_7
+  - first:
+      213: 1369367091739110761
+    second: listo_8
+  - first:
+      213: -7091787770596282817
+    second: listo_9
+  - first:
+      213: -230765982488167758
+    second: listo_10
+  - first:
+      213: 7507162572311099947
+    second: listo_11
+  - first:
+      213: 5946928947879769734
+    second: listo_12
+  - first:
+      213: -6943786229033573954
+    second: listo_13
+  - first:
+      213: 3240240860929429357
+    second: listo_14
+  - first:
+      213: -6781898798941113790
+    second: listo_15
+  - first:
+      213: -7597837133258888060
+    second: listo_16
+  - first:
+      213: 1567517833559679122
+    second: listo_17
+  - first:
+      213: -4774507163627237365
+    second: listo_18
+  - first:
+      213: 1593657275676276343
+    second: listo_19
+  - first:
+      213: 1008199762584553491
+    second: listo_20
+  - first:
+      213: 7251781320807735104
+    second: listo_21
+  - first:
+      213: -7425713581121148503
+    second: listo_22
+  - first:
+      213: -1510269504223470272
+    second: listo_23
+  - first:
+      213: -539765813465481279
+    second: listo_24
+  - first:
+      213: -1139316587393495653
+    second: listo_25
+  - first:
+      213: -8503168546892067692
+    second: listo_26
+  - first:
+      213: -4476961844683198664
+    second: listo_27
+  - first:
+      213: 1752853218220401716
+    second: listo_28
+  - first:
+      213: -139155408740837866
+    second: listo_29
+  - first:
+      213: -3438949906750046043
+    second: listo_30
+  - first:
+      213: 676399041583751932
+    second: listo_31
+  - first:
+      213: -6351847211419105216
+    second: listo_32
+  - first:
+      213: -1848234731571734147
+    second: listo_33
+  - first:
+      213: -4024879899894629943
+    second: listo_34
+  - first:
+      213: -269348283029012993
+    second: listo_35
+  - first:
+      213: 323680002008923523
+    second: listo_36
+  - first:
+      213: -2046761552879305566
+    second: listo_37
+  - first:
+      213: -5010233931683982646
+    second: listo_38
+  - first:
+      213: -2541933930832919864
+    second: listo_39
+  - first:
+      213: 7794110341121755347
+    second: listo_40
+  - first:
+      213: 6720251550345936249
+    second: listo_41
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 250
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: listo_0
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 1221
+        width: 258
+        height: 261
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d486d9682203785f0800000000000000
+      internalID: -754581487715784627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: listo_1
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 1220
+        width: 261
+        height: 267
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e132ed4b5f202600800000000000000
+      internalID: 441404832677507555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: listo_2
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 1231
+        width: 262
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b49057c3db568f300800000000000000
+      internalID: 286090439775553867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: listo_3
+      rect:
+        serializedVersion: 2
+        x: 1070
+        y: 1226
+        width: 262
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e9cc1e3d30f01c90800000000000000
+      internalID: -7200991658339677724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: listo_4
+      rect:
+        serializedVersion: 2
+        x: 1420
+        y: 1220
+        width: 257
+        height: 267
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0bddf9743539aea0800000000000000
+      internalID: -5861094940544738549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: listo_5
+      rect:
+        serializedVersion: 2
+        x: 1769
+        y: 1230
+        width: 251
+        height: 246
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90a687ec544159780800000000000000
+      internalID: -8677006817010095607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: listo_6
+      rect:
+        serializedVersion: 2
+        x: 2102
+        y: 1220
+        width: 262
+        height: 267
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb865453fcdaa87d0800000000000000
+      internalID: -2915326703305398082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: listo_7
+      rect:
+        serializedVersion: 2
+        x: 2452
+        y: 1418
+        width: 39
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eeb63f3e6b59a2420800000000000000
+      internalID: 2606059947128220654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: listo_8
+      rect:
+        serializedVersion: 2
+        x: 2470
+        y: 1242
+        width: 227
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96d283e5d18f00310800000000000000
+      internalID: 1369367091739110761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: listo_9
+      rect:
+        serializedVersion: 2
+        x: 2666
+        y: 1442
+        width: 42
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3e2627b898e49d90800000000000000
+      internalID: -7091787770596282817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: listo_10
+      rect:
+        serializedVersion: 2
+        x: 2634
+        y: 1231
+        width: 52
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ba7c83cf872cccf0800000000000000
+      internalID: -230765982488167758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: listo_11
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 829
+        width: 262
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2af5b9b59cce2860800000000000000
+      internalID: 7507162572311099947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: listo_12
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 830
+        width: 261
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6867cd2be5cb78250800000000000000
+      internalID: 5946928947879769734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: listo_13
+      rect:
+        serializedVersion: 2
+        x: 732
+        y: 830
+        width: 257
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb16436e637b2af90800000000000000
+      internalID: -6943786229033573954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: listo_14
+      rect:
+        serializedVersion: 2
+        x: 1076
+        y: 837
+        width: 251
+        height: 249
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6f876e35e5a7fc20800000000000000
+      internalID: 3240240860929429357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: listo_15
+      rect:
+        serializedVersion: 2
+        x: 1278
+        y: 1043
+        width: 55
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 242777279fad1e1a0800000000000000
+      internalID: -6781898798941113790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: listo_16
+      rect:
+        serializedVersion: 2
+        x: 1421
+        y: 832
+        width: 256
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48ce4d2e16f0f8690800000000000000
+      internalID: -7597837133258888060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: listo_17
+      rect:
+        serializedVersion: 2
+        x: 1769
+        y: 836
+        width: 246
+        height: 244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2902a602a21f0c510800000000000000
+      internalID: 1567517833559679122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: listo_18
+      rect:
+        serializedVersion: 2
+        x: 2109
+        y: 836
+        width: 249
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b00d076f70b8dbdb0800000000000000
+      internalID: -4774507163627237365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: listo_19
+      rect:
+        serializedVersion: 2
+        x: 2453
+        y: 830
+        width: 250
+        height: 267
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 776b66249decd1610800000000000000
+      internalID: 1593657275676276343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: listo_20
+      rect:
+        serializedVersion: 2
+        x: 1276
+        y: 830
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3184c77a758ddfd00800000000000000
+      internalID: 1008199762584553491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: listo_21
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 445
+        width: 264
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04fde8f80b083a460800000000000000
+      internalID: 7251781320807735104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: listo_22
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 457
+        width: 250
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a9ea7157d092f890800000000000000
+      internalID: -7425713581121148503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: listo_23
+      rect:
+        serializedVersion: 2
+        x: 732
+        y: 446
+        width: 257
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04d97ad33e17a0be0800000000000000
+      internalID: -1510269504223470272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: listo_24
+      rect:
+        serializedVersion: 2
+        x: 1076
+        y: 446
+        width: 256
+        height: 261
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cf7d7a3add5288f0800000000000000
+      internalID: -539765813465481279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: listo_25
+      rect:
+        serializedVersion: 2
+        x: 1426
+        y: 445
+        width: 244
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9d43b1a9955030f0800000000000000
+      internalID: -1139316587393495653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: listo_26
+      rect:
+        serializedVersion: 2
+        x: 1763
+        y: 446
+        width: 257
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49c4931224daef980800000000000000
+      internalID: -8503168546892067692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: listo_27
+      rect:
+        serializedVersion: 2
+        x: 2108
+        y: 451
+        width: 251
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83f2ea61ce2aed1c0800000000000000
+      internalID: -4476961844683198664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: listo_28
+      rect:
+        serializedVersion: 2
+        x: 2452
+        y: 451
+        width: 251
+        height: 254
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4346d6707b2635810800000000000000
+      internalID: 1752853218220401716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: listo_29
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 56
+        width: 263
+        height: 267
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6169d6d94ee911ef0800000000000000
+      internalID: -139155408740837866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: listo_30
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 61
+        width: 249
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a00dc7b7456640d0800000000000000
+      internalID: -3438949906750046043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: listo_31
+      rect:
+        serializedVersion: 2
+        x: 732
+        y: 61
+        width: 256
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf2a308385d036900800000000000000
+      internalID: 676399041583751932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: listo_32
+      rect:
+        serializedVersion: 2
+        x: 774
+        y: 296
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0480fcf5d94b9d7a0800000000000000
+      internalID: -6351847211419105216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: listo_33
+      rect:
+        serializedVersion: 2
+        x: 946
+        y: 273
+        width: 42
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d799023dd40c956e0800000000000000
+      internalID: -1848234731571734147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: listo_34
+      rect:
+        serializedVersion: 2
+        x: 1075
+        y: 56
+        width: 252
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c9bb274e01c428c0800000000000000
+      internalID: -4024879899894629943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: listo_35
+      rect:
+        serializedVersion: 2
+        x: 1415
+        y: 56
+        width: 262
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffdb135e925134cf0800000000000000
+      internalID: -269348283029012993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: listo_36
+      rect:
+        serializedVersion: 2
+        x: 1765
+        y: 61
+        width: 247
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38db3a43f31fd7400800000000000000
+      internalID: 323680002008923523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: listo_37
+      rect:
+        serializedVersion: 2
+        x: 2109
+        y: 61
+        width: 255
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2acb3bc36317893e0800000000000000
+      internalID: -2046761552879305566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: listo_38
+      rect:
+        serializedVersion: 2
+        x: 2452
+        y: 55
+        width: 251
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac21e54d8c2187ab0800000000000000
+      internalID: -5010233931683982646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: listo_39
+      rect:
+        serializedVersion: 2
+        x: 915
+        y: 39
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c20132ce8c39bcd0800000000000000
+      internalID: -2541933930832919864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: listo_40
+      rect:
+        serializedVersion: 2
+        x: 1288
+        y: 55
+        width: 39
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d8c2ce6f0e3a2c60800000000000000
+      internalID: 7794110341121755347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: listo_41
+      rect:
+        serializedVersion: 2
+        x: 2652
+        y: 55
+        width: 52
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97d33abfd21234d50800000000000000
+      internalID: 6720251550345936249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      listo_0: -754581487715784627
+      listo_1: 441404832677507555
+      listo_10: -230765982488167758
+      listo_11: 7507162572311099947
+      listo_12: 5946928947879769734
+      listo_13: -6943786229033573954
+      listo_14: 3240240860929429357
+      listo_15: -6781898798941113790
+      listo_16: -7597837133258888060
+      listo_17: 1567517833559679122
+      listo_18: -4774507163627237365
+      listo_19: 1593657275676276343
+      listo_2: 286090439775553867
+      listo_20: 1008199762584553491
+      listo_21: 7251781320807735104
+      listo_22: -7425713581121148503
+      listo_23: -1510269504223470272
+      listo_24: -539765813465481279
+      listo_25: -1139316587393495653
+      listo_26: -8503168546892067692
+      listo_27: -4476961844683198664
+      listo_28: 1752853218220401716
+      listo_29: -139155408740837866
+      listo_3: -7200991658339677724
+      listo_30: -3438949906750046043
+      listo_31: 676399041583751932
+      listo_32: -6351847211419105216
+      listo_33: -1848234731571734147
+      listo_34: -4024879899894629943
+      listo_35: -269348283029012993
+      listo_36: 323680002008923523
+      listo_37: -2046761552879305566
+      listo_38: -5010233931683982646
+      listo_39: -2541933930832919864
+      listo_4: -5861094940544738549
+      listo_40: 7794110341121755347
+      listo_41: 6720251550345936249
+      listo_5: -8677006817010095607
+      listo_6: -2915326703305398082
+      listo_7: 2606059947128220654
+      listo_8: 1369367091739110761
+      listo_9: -7091787770596282817
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
