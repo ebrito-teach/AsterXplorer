@@ -1,0 +1,1001 @@
+fileFormatVersion: 2
+guid: e4025975a9618f64181669d4807021b3
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8158989395265988424
+    second: fragmentos_roca_0
+  - first:
+      213: -1180953260354763990
+    second: fragmentos_roca_1
+  - first:
+      213: -5298108687718906482
+    second: fragmentos_roca_2
+  - first:
+      213: 7050571120237129616
+    second: fragmentos_roca_3
+  - first:
+      213: 6968557172533460033
+    second: fragmentos_roca_4
+  - first:
+      213: -1062709582898273366
+    second: fragmentos_roca_5
+  - first:
+      213: 2499126295581980331
+    second: fragmentos_roca_6
+  - first:
+      213: -6258449107554479362
+    second: fragmentos_roca_7
+  - first:
+      213: 7190214211903900490
+    second: fragmentos_roca_8
+  - first:
+      213: -8585498451502009581
+    second: fragmentos_roca_9
+  - first:
+      213: -5763530589324826304
+    second: fragmentos_roca_10
+  - first:
+      213: -9201142132128417105
+    second: fragmentos_roca_11
+  - first:
+      213: 2830590666430125622
+    second: fragmentos_roca_12
+  - first:
+      213: -5962070007763355714
+    second: fragmentos_roca_13
+  - first:
+      213: 3393614723684526856
+    second: fragmentos_roca_14
+  - first:
+      213: -8276721564141229473
+    second: fragmentos_roca_15
+  - first:
+      213: -2498838582920483532
+    second: fragmentos_roca_16
+  - first:
+      213: -4678526788289095642
+    second: fragmentos_roca_17
+  - first:
+      213: 2594435380247458117
+    second: fragmentos_roca_18
+  - first:
+      213: 4943361316532194841
+    second: fragmentos_roca_19
+  - first:
+      213: 7543012910531214422
+    second: fragmentos_roca_20
+  - first:
+      213: -3581596911896063431
+    second: fragmentos_roca_21
+  - first:
+      213: 1487164965732475752
+    second: fragmentos_roca_22
+  - first:
+      213: 5471343305566165190
+    second: fragmentos_roca_23
+  - first:
+      213: -2187648385153242809
+    second: fragmentos_roca_24
+  - first:
+      213: 6431965043607436437
+    second: fragmentos_roca_25
+  - first:
+      213: 4983312557390929972
+    second: fragmentos_roca_26
+  - first:
+      213: 4541421543835450866
+    second: fragmentos_roca_27
+  - first:
+      213: -6551675190679330792
+    second: fragmentos_roca_28
+  - first:
+      213: -584439431068164800
+    second: fragmentos_roca_29
+  - first:
+      213: 6251685103328382335
+    second: fragmentos_roca_30
+  - first:
+      213: -662343768231822274
+    second: fragmentos_roca_31
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: fragmentos_roca_0
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 834
+        width: 117
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 847220770ad8a3170800000000000000
+      internalID: 8158989395265988424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fragmentos_roca_1
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 843
+        width: 120
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a23073444496c9fe0800000000000000
+      internalID: -1180953260354763990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fragmentos_roca_2
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 838
+        width: 94
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e858a1718365976b0800000000000000
+      internalID: -5298108687718906482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fragmentos_roca_3
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 849
+        width: 81
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09fac5d0419a8d160800000000000000
+      internalID: 7050571120237129616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fragmentos_roca_4
+      rect:
+        serializedVersion: 2
+        x: 1108
+        y: 858
+        width: 88
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14c7bd1d3d945b060800000000000000
+      internalID: 6968557172533460033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fragmentos_roca_5
+      rect:
+        serializedVersion: 2
+        x: 1375
+        y: 864
+        width: 65
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa3e1fbc34f7041f0800000000000000
+      internalID: -1062709582898273366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fragmentos_roca_6
+      rect:
+        serializedVersion: 2
+        x: 1635
+        y: 864
+        width: 58
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba67009ff1eaea220800000000000000
+      internalID: 2499126295581980331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fragmentos_roca_7
+      rect:
+        serializedVersion: 2
+        x: 1898
+        y: 866
+        width: 43
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef2da5302b58529a0800000000000000
+      internalID: -6258449107554479362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fragmentos_roca_8
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 578
+        width: 107
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4b4f77fab5c8c360800000000000000
+      internalID: 7190214211903900490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fragmentos_roca_9
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 584
+        width: 101
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3137e8275ae2ad880800000000000000
+      internalID: -8585498451502009581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fragmentos_roca_10
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 577
+        width: 105
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 049223b2773d300b0800000000000000
+      internalID: -5763530589324826304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fragmentos_roca_11
+      rect:
+        serializedVersion: 2
+        x: 845
+        y: 587
+        width: 101
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: faafa960bf9fe4080800000000000000
+      internalID: -9201142132128417105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fragmentos_roca_12
+      rect:
+        serializedVersion: 2
+        x: 1105
+        y: 584
+        width: 94
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6369a19c637484720800000000000000
+      internalID: 2830590666430125622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fragmentos_roca_13
+      rect:
+        serializedVersion: 2
+        x: 1368
+        y: 594
+        width: 80
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb731459ae8724da0800000000000000
+      internalID: -5962070007763355714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fragmentos_roca_14
+      rect:
+        serializedVersion: 2
+        x: 1629
+        y: 602
+        width: 69
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80b60cd6c9a881f20800000000000000
+      internalID: 3393614723684526856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fragmentos_roca_15
+      rect:
+        serializedVersion: 2
+        x: 1890
+        y: 613
+        width: 59
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5aeb80e69d232d80800000000000000
+      internalID: -8276721564141229473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fragmentos_roca_16
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 325
+        width: 112
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43debf95c87525dd0800000000000000
+      internalID: -2498838582920483532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fragmentos_roca_17
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 328
+        width: 111
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62811e78ca8821fb0800000000000000
+      internalID: -4678526788289095642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fragmentos_roca_18
+      rect:
+        serializedVersion: 2
+        x: 573
+        y: 322
+        width: 134
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 541fa508b39410420800000000000000
+      internalID: 2594435380247458117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fragmentos_roca_19
+      rect:
+        serializedVersion: 2
+        x: 854
+        y: 322
+        width: 83
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91e0f442de85a9440800000000000000
+      internalID: 4943361316532194841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fragmentos_roca_20
+      rect:
+        serializedVersion: 2
+        x: 1107
+        y: 343
+        width: 90
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65cf56c074a2ea860800000000000000
+      internalID: 7543012910531214422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fragmentos_roca_21
+      rect:
+        serializedVersion: 2
+        x: 1367
+        y: 340
+        width: 82
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9329cc1b59c9b4ec0800000000000000
+      internalID: -3581596911896063431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fragmentos_roca_22
+      rect:
+        serializedVersion: 2
+        x: 1624
+        y: 338
+        width: 80
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 863e3e038a873a410800000000000000
+      internalID: 1487164965732475752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fragmentos_roca_23
+      rect:
+        serializedVersion: 2
+        x: 1892
+        y: 357
+        width: 55
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c89b7c7fbd1eeb40800000000000000
+      internalID: 5471343305566165190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fragmentos_roca_24
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 49
+        width: 136
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 749eb756269e3a1e0800000000000000
+      internalID: -2187648385153242809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fragmentos_roca_25
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 66
+        width: 117
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59c73ff012ee24950800000000000000
+      internalID: 6431965043607436437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fragmentos_roca_26
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 67
+        width: 128
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 430a7044e58482540800000000000000
+      internalID: 4983312557390929972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fragmentos_roca_27
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 74
+        width: 98
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fd3e9725de560f30800000000000000
+      internalID: 4541421543835450866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fragmentos_roca_28
+      rect:
+        serializedVersion: 2
+        x: 1103
+        y: 78
+        width: 97
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 810a1d75026c315a0800000000000000
+      internalID: -6551675190679330792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fragmentos_roca_29
+      rect:
+        serializedVersion: 2
+        x: 1372
+        y: 88
+        width: 72
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04d53761f67a3e7f0800000000000000
+      internalID: -584439431068164800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fragmentos_roca_30
+      rect:
+        serializedVersion: 2
+        x: 1635
+        y: 97
+        width: 58
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7d4d778a7272c650800000000000000
+      internalID: 6251685103328382335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fragmentos_roca_31
+      rect:
+        serializedVersion: 2
+        x: 1895
+        y: 99
+        width: 50
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3c395f1ad1eec6f0800000000000000
+      internalID: -662343768231822274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      fragmentos_roca_0: 8158989395265988424
+      fragmentos_roca_1: -1180953260354763990
+      fragmentos_roca_10: -5763530589324826304
+      fragmentos_roca_11: -9201142132128417105
+      fragmentos_roca_12: 2830590666430125622
+      fragmentos_roca_13: -5962070007763355714
+      fragmentos_roca_14: 3393614723684526856
+      fragmentos_roca_15: -8276721564141229473
+      fragmentos_roca_16: -2498838582920483532
+      fragmentos_roca_17: -4678526788289095642
+      fragmentos_roca_18: 2594435380247458117
+      fragmentos_roca_19: 4943361316532194841
+      fragmentos_roca_2: -5298108687718906482
+      fragmentos_roca_20: 7543012910531214422
+      fragmentos_roca_21: -3581596911896063431
+      fragmentos_roca_22: 1487164965732475752
+      fragmentos_roca_23: 5471343305566165190
+      fragmentos_roca_24: -2187648385153242809
+      fragmentos_roca_25: 6431965043607436437
+      fragmentos_roca_26: 4983312557390929972
+      fragmentos_roca_27: 4541421543835450866
+      fragmentos_roca_28: -6551675190679330792
+      fragmentos_roca_29: -584439431068164800
+      fragmentos_roca_3: 7050571120237129616
+      fragmentos_roca_30: 6251685103328382335
+      fragmentos_roca_31: -662343768231822274
+      fragmentos_roca_4: 6968557172533460033
+      fragmentos_roca_5: -1062709582898273366
+      fragmentos_roca_6: 2499126295581980331
+      fragmentos_roca_7: -6258449107554479362
+      fragmentos_roca_8: 7190214211903900490
+      fragmentos_roca_9: -8585498451502009581
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

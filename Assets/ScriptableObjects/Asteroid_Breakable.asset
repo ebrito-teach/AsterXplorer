@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3385fcd6f37f044496ad136341eb108, type: 3}
+  m_Name: Asteroid_Breakable
+  m_EditorClassIdentifier: Assembly-CSharp::AsteroidTypeData
+  id: asteroid
+  behavior: 3
+  sprites:
+  - {fileID: 3763433324915964391, guid: 752d4bd340224d1409f3426346dd51bf, type: 3}
+  - {fileID: 6502706983414204421, guid: 752d4bd340224d1409f3426346dd51bf, type: 3}
+  - {fileID: 7569389854566790700, guid: 752d4bd340224d1409f3426346dd51bf, type: 3}
+  - {fileID: -3459668795505313242, guid: 752d4bd340224d1409f3426346dd51bf, type: 3}
+  - {fileID: -7653309000556975910, guid: 752d4bd340224d1409f3426346dd51bf, type: 3}
+  - {fileID: -7102574052474727498, guid: 752d4bd340224d1409f3426346dd51bf, type: 3}
+  - {fileID: -8677303978654917844, guid: 752d4bd340224d1409f3426346dd51bf, type: 3}
+  - {fileID: 6013753022722946455, guid: 752d4bd340224d1409f3426346dd51bf, type: 3}
+  - {fileID: -87355417113008574, guid: 752d4bd340224d1409f3426346dd51bf, type: 3}
+  - {fileID: 2650182455250049868, guid: 752d4bd340224d1409f3426346dd51bf, type: 3}
+  - {fileID: 1876326055309646057, guid: 752d4bd340224d1409f3426346dd51bf, type: 3}
+  - {fileID: -2460484684511976830, guid: 752d4bd340224d1409f3426346dd51bf, type: 3}
+  - {fileID: -5836233382259476382, guid: 752d4bd340224d1409f3426346dd51bf, type: 3}
+  - {fileID: -6020282945892723035, guid: 752d4bd340224d1409f3426346dd51bf, type: 3}
+  - {fileID: 5777898790180322770, guid: 752d4bd340224d1409f3426346dd51bf, type: 3}
+  - {fileID: -268824581301244781, guid: 752d4bd340224d1409f3426346dd51bf, type: 3}
+  - {fileID: 1840185891119395328, guid: 752d4bd340224d1409f3426346dd51bf, type: 3}
+  - {fileID: 4245929641464984622, guid: 752d4bd340224d1409f3426346dd51bf, type: 3}
+  - {fileID: -3052952181131063291, guid: 752d4bd340224d1409f3426346dd51bf, type: 3}
+  - {fileID: -1101883752566216332, guid: 752d4bd340224d1409f3426346dd51bf, type: 3}
+  - {fileID: -3742101450106961820, guid: 752d4bd340224d1409f3426346dd51bf, type: 3}
+  - {fileID: -6364685122019728884, guid: 752d4bd340224d1409f3426346dd51bf, type: 3}
+  - {fileID: -3901436831486190800, guid: 752d4bd340224d1409f3426346dd51bf, type: 3}
+  - {fileID: 8593072062646425155, guid: 752d4bd340224d1409f3426346dd51bf, type: 3}
+  - {fileID: 5076852848959375451, guid: 752d4bd340224d1409f3426346dd51bf, type: 3}
+  - {fileID: -6677085248858293405, guid: 752d4bd340224d1409f3426346dd51bf, type: 3}
+  - {fileID: -8937477613208379466, guid: 752d4bd340224d1409f3426346dd51bf, type: 3}
+  - {fileID: -4953350868074191057, guid: 752d4bd340224d1409f3426346dd51bf, type: 3}
+  - {fileID: 5927607257914288561, guid: 752d4bd340224d1409f3426346dd51bf, type: 3}
+  - {fileID: 8116530613044626160, guid: 752d4bd340224d1409f3426346dd51bf, type: 3}
+  - {fileID: 9074777356313910590, guid: 752d4bd340224d1409f3426346dd51bf, type: 3}
+  - {fileID: 6635527812766627124, guid: 752d4bd340224d1409f3426346dd51bf, type: 3}
+  sizeRange: {x: 0.6, y: 1.3}
+  sizeSkew: 1
+  speedRange: {x: 1.4, y: 2.4}
+  spinRange: {x: -60, y: 60}
+  sizeAffectsSpeed: 1
+  followFlow: 0.8
+  flowSpread: 25
+  turnRate: 30
+  wander: 0.06
+  restoreSpeed: 1
+  restoreRate: 0.2
+  recycle: 1
+  material: {fileID: 6200000, guid: a4e07163db09a9745bd72e322991aa57, type: 2}
+  massPerArea: 1
+  massExponent: 2.5
+  densityRange: {x: 0.8, y: 1.3}
+  colliderFactor: 0.6
+  killsPlayer: 1
+  canBreak: 1
+  cost: 4
+  minLevel: 7
+  spawnWeight: 1

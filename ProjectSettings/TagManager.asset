@@ -41,8 +41,8 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Player
-    uniqueID: 827644297
+  - name: BG_Nebula
+    uniqueID: 3436742465
     locked: 0
   - name: BG_Stars
     uniqueID: 1525882917
@@ -55,6 +55,9 @@ TagManager:
     locked: 0
   - name: Asteroids
     uniqueID: 1804894423
+    locked: 0
+  - name: Player
+    uniqueID: 827644297
     locked: 0
   - name: FX
     uniqueID: 4293996329

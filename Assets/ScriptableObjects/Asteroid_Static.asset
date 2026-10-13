@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3385fcd6f37f044496ad136341eb108, type: 3}
+  m_Name: Asteroid_Static
+  m_EditorClassIdentifier: Assembly-CSharp::AsteroidTypeData
+  id: asteroid
+  behavior: 0
+  sprites:
+  - {fileID: 3560625889737112122, guid: 6423bb44a26c63746b73906b190faf4a, type: 3}
+  - {fileID: 7994864471580129164, guid: 6423bb44a26c63746b73906b190faf4a, type: 3}
+  - {fileID: -5610057365524694815, guid: 6423bb44a26c63746b73906b190faf4a, type: 3}
+  - {fileID: -3480563874597227143, guid: 6423bb44a26c63746b73906b190faf4a, type: 3}
+  - {fileID: 6244133138092035857, guid: 6423bb44a26c63746b73906b190faf4a, type: 3}
+  - {fileID: 1203792375526352454, guid: 6423bb44a26c63746b73906b190faf4a, type: 3}
+  - {fileID: -2619785300423821273, guid: 6423bb44a26c63746b73906b190faf4a, type: 3}
+  - {fileID: -1567429111654748960, guid: 6423bb44a26c63746b73906b190faf4a, type: 3}
+  - {fileID: -8529127991369543300, guid: 6423bb44a26c63746b73906b190faf4a, type: 3}
+  - {fileID: 5764649246791511528, guid: 6423bb44a26c63746b73906b190faf4a, type: 3}
+  - {fileID: 7458087129108632038, guid: 6423bb44a26c63746b73906b190faf4a, type: 3}
+  - {fileID: -5306096823213934956, guid: 6423bb44a26c63746b73906b190faf4a, type: 3}
+  - {fileID: -6176573042014043081, guid: 6423bb44a26c63746b73906b190faf4a, type: 3}
+  - {fileID: -5549244153012434394, guid: 6423bb44a26c63746b73906b190faf4a, type: 3}
+  - {fileID: 4032075444262592645, guid: 6423bb44a26c63746b73906b190faf4a, type: 3}
+  - {fileID: 1885871502630822190, guid: 6423bb44a26c63746b73906b190faf4a, type: 3}
+  - {fileID: 2200936717931262664, guid: 6423bb44a26c63746b73906b190faf4a, type: 3}
+  - {fileID: 5366076350074904204, guid: 6423bb44a26c63746b73906b190faf4a, type: 3}
+  - {fileID: -8966281189943120753, guid: 6423bb44a26c63746b73906b190faf4a, type: 3}
+  - {fileID: 972991801279649550, guid: 6423bb44a26c63746b73906b190faf4a, type: 3}
+  - {fileID: -4830958604714647342, guid: 6423bb44a26c63746b73906b190faf4a, type: 3}
+  - {fileID: -9198044849152882736, guid: 6423bb44a26c63746b73906b190faf4a, type: 3}
+  - {fileID: 5689640406604198092, guid: 6423bb44a26c63746b73906b190faf4a, type: 3}
+  - {fileID: 5259546420069582118, guid: 6423bb44a26c63746b73906b190faf4a, type: 3}
+  - {fileID: 1524075447402872737, guid: 6423bb44a26c63746b73906b190faf4a, type: 3}
+  - {fileID: 2689751897407030134, guid: 6423bb44a26c63746b73906b190faf4a, type: 3}
+  - {fileID: 6507273199849924081, guid: 6423bb44a26c63746b73906b190faf4a, type: 3}
+  - {fileID: -1974159869361624157, guid: 6423bb44a26c63746b73906b190faf4a, type: 3}
+  - {fileID: -1972802762300527924, guid: 6423bb44a26c63746b73906b190faf4a, type: 3}
+  - {fileID: -163502777962031990, guid: 6423bb44a26c63746b73906b190faf4a, type: 3}
+  - {fileID: 7476458535914247829, guid: 6423bb44a26c63746b73906b190faf4a, type: 3}
+  - {fileID: 957975993187757294, guid: 6423bb44a26c63746b73906b190faf4a, type: 3}
+  sizeRange: {x: 0.7, y: 1.6}
+  sizeSkew: 1
+  speedRange: {x: 0, y: 0}
+  spinRange: {x: -10, y: 10}
+  sizeAffectsSpeed: 1
+  followFlow: 0.85
+  flowSpread: 25
+  turnRate: 40
+  wander: 0.08
+  restoreSpeed: 0
+  restoreRate: 0.6
+  recycle: 1
+  material: {fileID: 6200000, guid: de8a8e3ed8be70741b87fb9d3dbfca58, type: 2}
+  massPerArea: 1
+  massExponent: 2.5
+  densityRange: {x: 1, y: 1}
+  colliderFactor: 0.9
+  killsPlayer: 0
+  canBreak: 0
+  cost: 1
+  minLevel: 1
+  spawnWeight: 1

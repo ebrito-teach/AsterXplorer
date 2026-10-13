@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 // Se ejecuta antes que los demás Start para que el área esté lista cuando otros la consulten
@@ -10,40 +12,64 @@ public class GameBounds : MonoBehaviour
     [SerializeField] private Camera cam;
     [SerializeField] private PhysicsMaterial2D wallMaterial;
 
-    [Header("Zonas de la interfaz que NO son área jugable (opcional)")]
-    [Tooltip("Su borde SUPERIOR marca dónde empieza el área jugable (zona de controles)")]
-    [SerializeField] private RectTransform bottomReserved;
-    [Tooltip("Su borde INFERIOR marca dónde termina el área jugable (zona del HUD)")]
-    [SerializeField] private RectTransform topReserved;
+    [Header("Zonas de la interfaz que el jugador no puede pisar")]
+    [Tooltip("RectTransforms bajo la palanca y los botones (sin imagen). Se vuelven obstáculos invisibles")]
+    [SerializeField] private RectTransform[] blockedZones;
+    [Tooltip("Evita que el jugador entre bajo el notch o las barras del sistema")]
+    [SerializeField] private bool respectSafeArea = true;
 
     [Header("Paredes")]
     [SerializeField] private float wallThickness = 2f;
     [SerializeField] private float padding = 0f;
 
+    [Header("Esquina de la meta (fracciones del área jugable)")]
+    [Tooltip("x, y = esquina inferior izquierda de la zona; w, h = tamaño. Valores entre 0 y 1")]
+    [SerializeField] private Rect goalCornerNormalized = new Rect(0.80f, 0.55f, 0.15f, 0.35f);
+
     /// Área jugable en unidades de mundo (dentro de las paredes).
     public Rect Area { get; private set; }
     /// Todo lo que ve la cámara.
     public Rect CameraRect { get; private set; }
+    /// Esquina donde aparecerá el agujero negro.
+    public Rect GoalCorner { get; private set; }
+    public IReadOnlyList<Rect> BlockedRects => blockedRects;
     public bool IsReady { get; private set; }
 
     BoxCollider2D top, bottom, left, right;
+    BoxCollider2D[] blockedColliders;
+    readonly List<Rect> blockedRects = new List<Rect>();
+    readonly Vector3[] corners = new Vector3[4];
     float lastSize, lastAspect;
     int lastW, lastH;
     Rect lastSafe;
-    readonly Vector3[] corners = new Vector3[4];
 
     void Awake()
     {
         Instance = this;
         if (cam == null) cam = Camera.main;
+
         top    = CreateWall("Wall_Top");
         bottom = CreateWall("Wall_Bottom");
         left   = CreateWall("Wall_Left");
         right  = CreateWall("Wall_Right");
+
+        int n = blockedZones != null ? blockedZones.Length : 0;
+        blockedColliders = new BoxCollider2D[n];
+        for (int i = 0; i < n; i++) blockedColliders[i] = CreateWall("Blocked_" + i);
     }
 
     // Start (y no Awake) para que CameraAspectFitter ya haya fijado el tamaño de la cámara
-    void Start() { Rebuild(); }
+    void Start()
+    {
+        Rebuild();
+        StartCoroutine(RebuildNextFrame());   // el Canvas termina de calcular su escala en el primer frame
+    }
+
+    IEnumerator RebuildNextFrame()
+    {
+        yield return null;
+        Rebuild();
+    }
 
     void LateUpdate()
     {
@@ -77,20 +103,24 @@ public class GameBounds : MonoBehaviour
         float h = cam.orthographicSize * 2f;
         float w = h * cam.aspect;
         Vector2 c = cam.transform.position;
+        CameraRect = new Rect(c.x - w / 2f, c.y - h / 2f, w, h);
 
-        float xMin = c.x - w / 2f, xMax = c.x + w / 2f;
-        float yMin = c.y - h / 2f, yMax = c.y + h / 2f;
-        CameraRect = new Rect(xMin, yMin, w, h);
+        // Márgenes del sistema (notch, esquinas redondeadas, barra de gestos), en unidades de mundo
+        float insetL = 0f, insetR = 0f, insetT = 0f, insetB = 0f;
+        if (respectSafeArea && Screen.width > 0 && Screen.height > 0)
+        {
+            Rect sa = Screen.safeArea;
+            float ux = w / Screen.width, uy = h / Screen.height;
+            insetL = sa.xMin * ux;
+            insetR = (Screen.width - sa.xMax) * ux;
+            insetB = sa.yMin * uy;
+            insetT = (Screen.height - sa.yMax) * uy;
+        }
 
-        // Recorta el área jugable según las zonas de interfaz reservadas
-        Canvas.ForceUpdateCanvases();
-        if (bottomReserved != null)
-            yMin = Mathf.Max(yMin, ScreenToWorldY(EdgeScreenY(bottomReserved, true)));
-        if (topReserved != null)
-            yMax = Mathf.Min(yMax, ScreenToWorldY(EdgeScreenY(topReserved, false)));
-
-        float areaH = Mathf.Max(0.5f, (yMax - yMin) - 2f * padding);
-        Area = new Rect(xMin + padding, yMin + padding, w - 2f * padding, areaH);
+        Area = new Rect(CameraRect.xMin + insetL + padding,
+                        CameraRect.yMin + insetB + padding,
+                        Mathf.Max(1f, w - insetL - insetR - 2f * padding),
+                        Mathf.Max(1f, h - insetT - insetB - 2f * padding));
 
         float t = wallThickness;
         Place(top,    new Vector2(Area.center.x, Area.yMax + t / 2f), new Vector2(Area.width + 2f * t, t));
@@ -98,21 +128,41 @@ public class GameBounds : MonoBehaviour
         Place(left,   new Vector2(Area.xMin - t / 2f, Area.center.y), new Vector2(t, Area.height + 2f * t));
         Place(right,  new Vector2(Area.xMax + t / 2f, Area.center.y), new Vector2(t, Area.height + 2f * t));
 
+        var g = goalCornerNormalized;
+        GoalCorner = new Rect(Area.xMin + g.x * Area.width, Area.yMin + g.y * Area.height,
+                              g.width * Area.width, g.height * Area.height);
+
+        RebuildBlockedZones();
         IsReady = true;
     }
 
-    // Coordenada Y en píxeles de pantalla del borde superior (o inferior) de un RectTransform.
-    // Con el Canvas en Screen Space - Overlay, las esquinas ya vienen en píxeles.
-    float EdgeScreenY(RectTransform rt, bool topEdge)
+    void RebuildBlockedZones()
     {
-        rt.GetWorldCorners(corners);        // 0=abajo-izq, 1=arriba-izq
-        return topEdge ? corners[1].y : corners[0].y;
+        blockedRects.Clear();
+        if (blockedZones == null) return;
+
+        Canvas.ForceUpdateCanvases();
+        for (int i = 0; i < blockedZones.Length; i++)
+        {
+            var rt = blockedZones[i];
+            if (rt == null || blockedColliders[i] == null) continue;
+
+            // Con el Canvas en Screen Space - Overlay, las esquinas vienen en píxeles de pantalla
+            rt.GetWorldCorners(corners);
+            Vector2 a = ScreenToWorld(corners[0]);
+            Vector2 b = ScreenToWorld(corners[2]);
+            var r = new Rect(Mathf.Min(a.x, b.x), Mathf.Min(a.y, b.y),
+                             Mathf.Abs(b.x - a.x), Mathf.Abs(b.y - a.y));
+
+            blockedRects.Add(r);
+            Place(blockedColliders[i], r.center, r.size);
+        }
     }
 
-    float ScreenToWorldY(float screenY)
+    Vector2 ScreenToWorld(Vector3 screen)
     {
         float z = Mathf.Abs(cam.transform.position.z);
-        return cam.ScreenToWorldPoint(new Vector3(Screen.width * 0.5f, screenY, z)).y;
+        return cam.ScreenToWorldPoint(new Vector3(screen.x, screen.y, z));
     }
 
     static void Place(BoxCollider2D col, Vector2 pos, Vector2 size)
@@ -129,12 +179,32 @@ public class GameBounds : MonoBehaviour
         p.x > Area.xMin + margin && p.x < Area.xMax - margin &&
         p.y > Area.yMin + margin && p.y < Area.yMax - margin;
 
+    /// ¿Cae el punto dentro de alguna zona de controles (con margen extra)?
+    public bool IsBlocked(Vector2 p, float margin = 0f)
+    {
+        foreach (var r in blockedRects)
+        {
+            var e = new Rect(r.xMin - margin, r.yMin - margin, r.width + 2f * margin, r.height + 2f * margin);
+            if (e.Contains(p)) return true;
+        }
+        return false;
+    }
+
+    public Vector2 RandomGoalPoint() =>
+        new Vector2(Random.Range(GoalCorner.xMin, GoalCorner.xMax),
+                    Random.Range(GoalCorner.yMin, GoalCorner.yMax));
+
     void OnDrawGizmos()
     {
-        if (!Application.isPlaying) return;
+        if (!Application.isPlaying || !IsReady) return;
+
         Gizmos.color = new Color(1f, 1f, 1f, 0.25f);
         Gizmos.DrawWireCube(CameraRect.center, CameraRect.size);
         Gizmos.color = Color.cyan;
         Gizmos.DrawWireCube(Area.center, Area.size);
+        Gizmos.color = Color.red;
+        foreach (var r in blockedRects) Gizmos.DrawWireCube(r.center, r.size);
+        Gizmos.color = Color.magenta;
+        Gizmos.DrawWireCube(GoalCorner.center, GoalCorner.size);
     }
 }
