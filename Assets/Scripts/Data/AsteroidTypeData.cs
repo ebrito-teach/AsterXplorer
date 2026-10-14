@@ -92,6 +92,11 @@ public class AsteroidTypeData : ScriptableObject
     public float dislodgeMassRatio = 4f;
     [Tooltip("Este asteroide desplaza a los estáticos a su paso (colosos y cometas)")]
     public bool dislodgesStatics = false;
+    [Tooltip("IMPARABLE: atraviesa el cinturón sin que nada lo desvíe ni lo frene. Un cuerpo " +
+             "mil veces más pesado que todo lo demás no sufre una desviación medible, así que " +
+             "esto es lo realista además de lo jugable. Sin esto, los guijarros le hacen de " +
+             "colchón, lo rebotan y se sale de la pantalla. Marcar en colosos")]
+    public bool unstoppable = false;
 
     [Header("Órbitas — yo puedo quedar atrapado")]
     [Tooltip("Este asteroide puede quedar capturado en la órbita de un cuerpo mayor")]

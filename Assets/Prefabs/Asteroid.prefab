@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8160397429859783056}
   - component: {fileID: 3317599990342695050}
   - component: {fileID: 3383378186225674711}
+  - component: {fileID: 8814672451879377788}
   m_Layer: 8
   m_Name: Asteroid
   m_TagString: Untagged
@@ -169,3 +170,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8400479034d3c3c429def588034bbbd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Asteroid
+--- !u!114 &8814672451879377788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6226085290768106687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59d6f32a777c6b74d903a53786daac53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AsteroidBreaker

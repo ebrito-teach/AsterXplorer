@@ -52,7 +52,7 @@ MonoBehaviour:
   minWorldRadius: 0.2
   prefabOverride: {fileID: 0}
   speedRange: {x: 2.2, y: 3}
-  spinRange: {x: -6, y: 6}
+  spinRange: {x: -15, y: 15}
   sizeAffectsSpeed: 0
   speedScaling: 1
   followFlow: 0.9
@@ -60,7 +60,7 @@ MonoBehaviour:
   turnRate: 8
   wander: 0
   restoreSpeed: 1
-  restoreRate: 0.5
+  restoreRate: 0.9
   recycle: 1
   material: {fileID: 6200000, guid: a4e07163db09a9745bd72e322991aa57, type: 2}
   massPerArea: 5

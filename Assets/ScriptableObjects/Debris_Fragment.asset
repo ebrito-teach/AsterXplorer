@@ -17,7 +17,7 @@ MonoBehaviour:
   sprites: []
   sizeRange: {x: 0.35, y: 0.7}
   sizeSkew: 1.4
-  minWorldRadius: 0.15
+  minWorldRadius: 0.1
   prefabOverride: {fileID: 0}
   speedRange: {x: 1.3, y: 2.5}
   spinRange: {x: -220, y: 220}
@@ -28,7 +28,7 @@ MonoBehaviour:
   turnRate: 40
   wander: 0
   restoreSpeed: 0
-  restoreRate: 0.2
+  restoreRate: 0.9
   recycle: 0
   material: {fileID: 6200000, guid: a4e07163db09a9745bd72e322991aa57, type: 2}
   massPerArea: 1

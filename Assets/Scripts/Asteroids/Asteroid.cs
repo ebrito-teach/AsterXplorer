@@ -61,6 +61,9 @@ public class Asteroid : MonoBehaviour
     Vector2 lastVelocity;      // velocidad con la que entró en el paso de física
     bool followsFlow, restoreInterpolation, dislodged, countedAsDebris;
     bool captureRollUsed;
+    bool unstoppable;          // cinemático a propósito: nada puede desviarlo
+    bool hasEnteredView;       // ya se ha dejado ver al menos una vez
+    float spawnTime;
 
     // Órbita
     Asteroid orbitHost;
@@ -105,6 +108,9 @@ public class Asteroid : MonoBehaviour
         pulledUntil = 0f;
         lastVelocity = Vector2.zero;
         captureRollUsed = false;
+        unstoppable = type.unstoppable && type.behavior != AsteroidBehavior.Static;
+        hasEnteredView = false;
+        spawnTime = Time.time;
         lifetimeEnd = type.lifetime > 0f ? Time.time + type.lifetime * Random.Range(0.85f, 1.15f) : -1f;
         sr.color = Color.white;
 
@@ -166,7 +172,10 @@ public class Asteroid : MonoBehaviour
         }
         else
         {
-            rb.bodyType = RigidbodyType2D.Dynamic;
+            // Un coloso pesa mil veces más que todo lo demás del cinturón. La desviación
+            // que le provocaría un guijarro no es medible, así que lo correcto Y lo jugable
+            // es que sea cinemático: avanza como si nada existiera, y empuja lo que toca.
+            rb.bodyType = unstoppable ? RigidbodyType2D.Kinematic : RigidbodyType2D.Dynamic;
             rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
             Launch(position);
         }
@@ -289,7 +298,9 @@ public class Asteroid : MonoBehaviour
 
         if (orbitHost != null) { TickOrbit(); return; }
 
-        if (rb.bodyType == RigidbodyType2D.Kinematic)
+        // Un estático de verdad no se simula. Un imparable (coloso) SÍ, aunque sea cinemático:
+        // es cinemático precisamente para que nada pueda desviarlo.
+        if (rb.bodyType == RigidbodyType2D.Kinematic && !unstoppable)
         {
             if (Type.pullRadius > 0f) ApplyMagneticPull();
             return;
@@ -297,7 +308,7 @@ public class Asteroid : MonoBehaviour
 
         var flow = FlowField.Instance;
 
-        if (flow != null && !flow.DespawnRect.Contains(rb.position))
+        if (flow != null && IsOutOfPlay(flow))
         {
             bool replace = Type.recycle && Type.behavior != AsteroidBehavior.Debris && !dislodged;
             if (replace)
@@ -326,7 +337,7 @@ public class Asteroid : MonoBehaviour
             rb.linearVelocity = vel;
         }
 
-        if (Type.wander > 0f)
+        if (Type.wander > 0f && rb.bodyType == RigidbodyType2D.Dynamic)
         {
             float t = Time.time * 0.35f;
             Vector2 n = new Vector2(Mathf.PerlinNoise(noiseSeedA, t) - 0.5f,
@@ -344,6 +355,27 @@ public class Asteroid : MonoBehaviour
         }
         float newSp = Mathf.MoveTowards(sp, targetSpeed, Type.restoreRate * Time.fixedDeltaTime);
         rb.linearVelocity = vel * (newSp / sp);
+    }
+
+    /// ¿Se ha ido de verdad? Tres salvedades que antes no estaban:
+    ///  - un cuerpo grande necesita tanto margen como su radio, o desaparece en cuanto
+    ///    asoma el borde;
+    ///  - nada se recicla hasta haberse dejado ver, porque un coloso nace a 12.74 y el
+    ///    límite de reciclado está en 13.2: medio empujón y se iba sin llegar a entrar;
+    ///  - pasados 12 s sin entrar, se recicla igual, por si quedó atascado fuera.
+    bool IsOutOfPlay(FlowField flow)
+    {
+        var gb = GameBounds.Instance;
+        if (gb != null && !hasEnteredView && gb.CameraRect.Contains(rb.position))
+            hasEnteredView = true;
+
+        Rect d = flow.DespawnRect;
+        float m = Mathf.Max(0f, WorldRadius);
+        if (rb.position.x > d.xMin - m && rb.position.x < d.xMax + m &&
+            rb.position.y > d.yMin - m && rb.position.y < d.yMax + m) return false;
+
+        if (!hasEnteredView && Time.time - spawnTime < 12f) return false;
+        return true;
     }
 
     // ---------------------------------------------------------------- órbitas
@@ -549,6 +581,7 @@ public class Asteroid : MonoBehaviour
     /// Aceleración, no fuerza: el arrastre no depende de lo que pese el guijarro.
     public void ReceivePull(Vector2 acceleration)
     {
+        if (rb.bodyType != RigidbodyType2D.Dynamic) return;
         rb.AddForce(acceleration * rb.mass);
         pulledUntil = Time.time + 0.25f;
     }

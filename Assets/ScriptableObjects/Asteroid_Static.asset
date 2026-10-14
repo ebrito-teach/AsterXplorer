@@ -45,7 +45,7 @@ MonoBehaviour:
   turnRate: 40
   wander: 0.08
   restoreSpeed: 0
-  restoreRate: 0.6
+  restoreRate: 0.9
   recycle: 1
   material: {fileID: 6200000, guid: de8a8e3ed8be70741b87fb9d3dbfca58, type: 2}
   massPerArea: 1
