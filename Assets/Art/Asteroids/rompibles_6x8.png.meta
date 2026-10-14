@@ -1,0 +1,1417 @@
+fileFormatVersion: 2
+guid: 5edc199e20572354eb185749608dd317
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7308414314902634171
+    second: rompibles_6x8_0
+  - first:
+      213: 6754071741744739403
+    second: rompibles_6x8_1
+  - first:
+      213: 3882130571647578322
+    second: rompibles_6x8_2
+  - first:
+      213: 2209299438927424589
+    second: rompibles_6x8_3
+  - first:
+      213: 1334001017665754372
+    second: rompibles_6x8_4
+  - first:
+      213: 3672774400756321960
+    second: rompibles_6x8_5
+  - first:
+      213: 2177262209990084862
+    second: rompibles_6x8_6
+  - first:
+      213: -4730673525431096399
+    second: rompibles_6x8_7
+  - first:
+      213: -5611705418977379813
+    second: rompibles_6x8_8
+  - first:
+      213: 1022515330289853274
+    second: rompibles_6x8_9
+  - first:
+      213: 6385862263722725837
+    second: rompibles_6x8_10
+  - first:
+      213: -7047986086729649802
+    second: rompibles_6x8_11
+  - first:
+      213: 1036097714207306758
+    second: rompibles_6x8_12
+  - first:
+      213: 4138678264139708370
+    second: rompibles_6x8_13
+  - first:
+      213: -5806774323916196597
+    second: rompibles_6x8_14
+  - first:
+      213: -2154196254282512371
+    second: rompibles_6x8_15
+  - first:
+      213: 5747636853427568906
+    second: rompibles_6x8_16
+  - first:
+      213: 8967599556488683080
+    second: rompibles_6x8_17
+  - first:
+      213: 2365158776670931657
+    second: rompibles_6x8_18
+  - first:
+      213: -3619067314222817427
+    second: rompibles_6x8_19
+  - first:
+      213: -1850321495482839168
+    second: rompibles_6x8_20
+  - first:
+      213: -6361833570522347123
+    second: rompibles_6x8_21
+  - first:
+      213: -5638350069004467471
+    second: rompibles_6x8_22
+  - first:
+      213: -409192478564568202
+    second: rompibles_6x8_23
+  - first:
+      213: 6404451702567355273
+    second: rompibles_6x8_24
+  - first:
+      213: -3201464912845698060
+    second: rompibles_6x8_25
+  - first:
+      213: -5236533141981136425
+    second: rompibles_6x8_26
+  - first:
+      213: 3979678024569993223
+    second: rompibles_6x8_27
+  - first:
+      213: -66985347362333192
+    second: rompibles_6x8_28
+  - first:
+      213: 268136428442436390
+    second: rompibles_6x8_29
+  - first:
+      213: -7756988528678561428
+    second: rompibles_6x8_30
+  - first:
+      213: 4367775352820751780
+    second: rompibles_6x8_31
+  - first:
+      213: 8623274427707157170
+    second: rompibles_6x8_32
+  - first:
+      213: 3354713364008515299
+    second: rompibles_6x8_33
+  - first:
+      213: 8330444768835376440
+    second: rompibles_6x8_34
+  - first:
+      213: -2530176758529355851
+    second: rompibles_6x8_35
+  - first:
+      213: 6292539394351043380
+    second: rompibles_6x8_36
+  - first:
+      213: -4394088166772546162
+    second: rompibles_6x8_37
+  - first:
+      213: -8832558669121515909
+    second: rompibles_6x8_38
+  - first:
+      213: -5674068955368986026
+    second: rompibles_6x8_39
+  - first:
+      213: -88864555462097174
+    second: rompibles_6x8_40
+  - first:
+      213: 5064982429901826415
+    second: rompibles_6x8_41
+  - first:
+      213: 9177310110731067414
+    second: rompibles_6x8_42
+  - first:
+      213: -2161694514851095523
+    second: rompibles_6x8_43
+  - first:
+      213: 2441855736461308808
+    second: rompibles_6x8_44
+  - first:
+      213: 2086614165055297356
+    second: rompibles_6x8_45
+  - first:
+      213: 8394766074798713409
+    second: rompibles_6x8_46
+  - first:
+      213: -980194592297515866
+    second: rompibles_6x8_47
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 400
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: rompibles_6x8_0
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 2637
+        width: 442
+        height: 358
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54149d8f6eb439a90800000000000000
+      internalID: -7308414314902634171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rompibles_6x8_1
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 2649
+        width: 350
+        height: 335
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b44f23ae6784bbd50800000000000000
+      internalID: 6754071741744739403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rompibles_6x8_2
+      rect:
+        serializedVersion: 2
+        x: 1083
+        y: 2648
+        width: 393
+        height: 337
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d0fcbebf2910e530800000000000000
+      internalID: 3882130571647578322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rompibles_6x8_3
+      rect:
+        serializedVersion: 2
+        x: 1650
+        y: 2681
+        width: 283
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4c2db3622209ae10800000000000000
+      internalID: 2209299438927424589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rompibles_6x8_4
+      rect:
+        serializedVersion: 2
+        x: 2177
+        y: 2678
+        width: 254
+        height: 277
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4051af39bd2538210800000000000000
+      internalID: 1334001017665754372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rompibles_6x8_5
+      rect:
+        serializedVersion: 2
+        x: 2693
+        y: 2680
+        width: 246
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ae8a39bbd058f230800000000000000
+      internalID: 3672774400756321960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rompibles_6x8_6
+      rect:
+        serializedVersion: 2
+        x: 3216
+        y: 2697
+        width: 223
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef84751c170373e10800000000000000
+      internalID: 2177262209990084862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rompibles_6x8_7
+      rect:
+        serializedVersion: 2
+        x: 3744
+        y: 2706
+        width: 192
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bba5582e75495eb0800000000000000
+      internalID: -4730673525431096399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rompibles_6x8_8
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 2105
+        width: 442
+        height: 398
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1af7bd47a73f12b0800000000000000
+      internalID: -5611705418977379813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rompibles_6x8_9
+      rect:
+        serializedVersion: 2
+        x: 559
+        y: 2130
+        width: 418
+        height: 349
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a53615f7644b03e00800000000000000
+      internalID: 1022515330289853274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rompibles_6x8_10
+      rect:
+        serializedVersion: 2
+        x: 1038
+        y: 2138
+        width: 483
+        height: 333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc1d3c525e32f9850800000000000000
+      internalID: 6385862263722725837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rompibles_6x8_11
+      rect:
+        serializedVersion: 2
+        x: 1598
+        y: 2166
+        width: 388
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6717596fef5803e90800000000000000
+      internalID: -7047986086729649802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rompibles_6x8_12
+      rect:
+        serializedVersion: 2
+        x: 2120
+        y: 2153
+        width: 367
+        height: 303
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 604bbefa165f06e00800000000000000
+      internalID: 1036097714207306758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rompibles_6x8_13
+      rect:
+        serializedVersion: 2
+        x: 2661
+        y: 2169
+        width: 310
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d77dad14f98f6930800000000000000
+      internalID: 4138678264139708370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rompibles_6x8_14
+      rect:
+        serializedVersion: 2
+        x: 3217
+        y: 2200
+        width: 222
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b05bd1c94813a6fa0800000000000000
+      internalID: -5806774323916196597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rompibles_6x8_15
+      rect:
+        serializedVersion: 2
+        x: 3753
+        y: 2213
+        width: 173
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d08830f8be1ca12e0800000000000000
+      internalID: -2154196254282512371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rompibles_6x8_16
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 1630
+        width: 442
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a018e721445b3cf40800000000000000
+      internalID: 5747636853427568906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rompibles_6x8_17
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1643
+        width: 336
+        height: 298
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84e5574c840537c70800000000000000
+      internalID: 8967599556488683080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rompibles_6x8_18
+      rect:
+        serializedVersion: 2
+        x: 1071
+        y: 1649
+        width: 417
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ca4ed0506bb2d020800000000000000
+      internalID: 2365158776670931657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rompibles_6x8_19
+      rect:
+        serializedVersion: 2
+        x: 1639
+        y: 1669
+        width: 305
+        height: 247
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6f958dc37d76cdc0800000000000000
+      internalID: -3619067314222817427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rompibles_6x8_20
+      rect:
+        serializedVersion: 2
+        x: 2175
+        y: 1670
+        width: 257
+        height: 244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08fc97d37665256e0800000000000000
+      internalID: -1850321495482839168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rompibles_6x8_21
+      rect:
+        serializedVersion: 2
+        x: 2695
+        y: 1669
+        width: 242
+        height: 246
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d894cd4f21a36b7a0800000000000000
+      internalID: -6361833570522347123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rompibles_6x8_22
+      rect:
+        serializedVersion: 2
+        x: 3250
+        y: 1691
+        width: 156
+        height: 202
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f280b94c7e80c1b0800000000000000
+      internalID: -5638350069004467471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rompibles_6x8_23
+      rect:
+        serializedVersion: 2
+        x: 3758
+        y: 1702
+        width: 163
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 673b566db91425af0800000000000000
+      internalID: -409192478564568202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rompibles_6x8_24
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 1130
+        width: 442
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9834ca824ee21e850800000000000000
+      internalID: 6404451702567355273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rompibles_6x8_25
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 1131
+        width: 324
+        height: 298
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fb84f4bf9c1293d0800000000000000
+      internalID: -3201464912845698060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rompibles_6x8_26
+      rect:
+        serializedVersion: 2
+        x: 1063
+        y: 1138
+        width: 434
+        height: 285
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d977a90ad81457b0800000000000000
+      internalID: -5236533141981136425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rompibles_6x8_27
+      rect:
+        serializedVersion: 2
+        x: 1652
+        y: 1159
+        width: 279
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7083ceef318aa3730800000000000000
+      internalID: 3979678024569993223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rompibles_6x8_28
+      rect:
+        serializedVersion: 2
+        x: 2184
+        y: 1154
+        width: 239
+        height: 253
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fddf457e25021ff0800000000000000
+      internalID: -66985347362333192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rompibles_6x8_29
+      rect:
+        serializedVersion: 2
+        x: 2701
+        y: 1160
+        width: 230
+        height: 241
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62347a839ac98b300800000000000000
+      internalID: 268136428442436390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rompibles_6x8_30
+      rect:
+        serializedVersion: 2
+        x: 3236
+        y: 1189
+        width: 183
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c69955d0804a95490800000000000000
+      internalID: -7756988528678561428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rompibles_6x8_31
+      rect:
+        serializedVersion: 2
+        x: 3763
+        y: 1197
+        width: 153
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ad569bba847d9c30800000000000000
+      internalID: 4367775352820751780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rompibles_6x8_32
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 578
+        width: 442
+        height: 380
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bae13867660ca770800000000000000
+      internalID: 8623274427707157170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rompibles_6x8_33
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 586
+        width: 424
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e6bbf0d7065e8e20800000000000000
+      internalID: 3354713364008515299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rompibles_6x8_34
+      rect:
+        serializedVersion: 2
+        x: 1038
+        y: 605
+        width: 483
+        height: 327
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8359173716fab9370800000000000000
+      internalID: 8330444768835376440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rompibles_6x8_35
+      rect:
+        serializedVersion: 2
+        x: 1626
+        y: 631
+        width: 332
+        height: 274
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bf88e0c4a103ecd0800000000000000
+      internalID: -2530176758529355851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rompibles_6x8_36
+      rect:
+        serializedVersion: 2
+        x: 2167
+        y: 647
+        width: 274
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43312776d37935750800000000000000
+      internalID: 6292539394351043380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rompibles_6x8_37
+      rect:
+        serializedVersion: 2
+        x: 2668
+        y: 629
+        width: 296
+        height: 278
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8566cbd7101503c0800000000000000
+      internalID: -4394088166772546162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rompibles_6x8_38
+      rect:
+        serializedVersion: 2
+        x: 3230
+        y: 658
+        width: 196
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7e0735ffa27c6580800000000000000
+      internalID: -8832558669121515909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rompibles_6x8_39
+      rect:
+        serializedVersion: 2
+        x: 3751
+        y: 674
+        width: 177
+        height: 189
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65ae82cf858a141b0800000000000000
+      internalID: -5674068955368986026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rompibles_6x8_40
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 57
+        width: 442
+        height: 399
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae60f8a582a44cef0800000000000000
+      internalID: -88864555462097174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rompibles_6x8_41
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 74
+        width: 375
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f69a4ef3fae6a4640800000000000000
+      internalID: 5064982429901826415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rompibles_6x8_42
+      rect:
+        serializedVersion: 2
+        x: 1038
+        y: 87
+        width: 483
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 610e9b71cea5c5f70800000000000000
+      internalID: 9177310110731067414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rompibles_6x8_43
+      rect:
+        serializedVersion: 2
+        x: 1633
+        y: 118
+        width: 317
+        height: 277
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1cd369ba4e1002e0800000000000000
+      internalID: -2161694514851095523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rompibles_6x8_44
+      rect:
+        serializedVersion: 2
+        x: 2140
+        y: 116
+        width: 327
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 883b684dad633e120800000000000000
+      internalID: 2441855736461308808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rompibles_6x8_45
+      rect:
+        serializedVersion: 2
+        x: 2663
+        y: 125
+        width: 306
+        height: 263
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c475b6b178425fc10800000000000000
+      internalID: 2086614165055297356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rompibles_6x8_46
+      rect:
+        serializedVersion: 2
+        x: 3229
+        y: 153
+        width: 198
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14aa0e48443308470800000000000000
+      internalID: 8394766074798713409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rompibles_6x8_47
+      rect:
+        serializedVersion: 2
+        x: 3761
+        y: 169
+        width: 157
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a4095b2636a562f0800000000000000
+      internalID: -980194592297515866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      rompibles_6x8_0: -7308414314902634171
+      rompibles_6x8_1: 6754071741744739403
+      rompibles_6x8_10: 6385862263722725837
+      rompibles_6x8_11: -7047986086729649802
+      rompibles_6x8_12: 1036097714207306758
+      rompibles_6x8_13: 4138678264139708370
+      rompibles_6x8_14: -5806774323916196597
+      rompibles_6x8_15: -2154196254282512371
+      rompibles_6x8_16: 5747636853427568906
+      rompibles_6x8_17: 8967599556488683080
+      rompibles_6x8_18: 2365158776670931657
+      rompibles_6x8_19: -3619067314222817427
+      rompibles_6x8_2: 3882130571647578322
+      rompibles_6x8_20: -1850321495482839168
+      rompibles_6x8_21: -6361833570522347123
+      rompibles_6x8_22: -5638350069004467471
+      rompibles_6x8_23: -409192478564568202
+      rompibles_6x8_24: 6404451702567355273
+      rompibles_6x8_25: -3201464912845698060
+      rompibles_6x8_26: -5236533141981136425
+      rompibles_6x8_27: 3979678024569993223
+      rompibles_6x8_28: -66985347362333192
+      rompibles_6x8_29: 268136428442436390
+      rompibles_6x8_3: 2209299438927424589
+      rompibles_6x8_30: -7756988528678561428
+      rompibles_6x8_31: 4367775352820751780
+      rompibles_6x8_32: 8623274427707157170
+      rompibles_6x8_33: 3354713364008515299
+      rompibles_6x8_34: 8330444768835376440
+      rompibles_6x8_35: -2530176758529355851
+      rompibles_6x8_36: 6292539394351043380
+      rompibles_6x8_37: -4394088166772546162
+      rompibles_6x8_38: -8832558669121515909
+      rompibles_6x8_39: -5674068955368986026
+      rompibles_6x8_4: 1334001017665754372
+      rompibles_6x8_40: -88864555462097174
+      rompibles_6x8_41: 5064982429901826415
+      rompibles_6x8_42: 9177310110731067414
+      rompibles_6x8_43: -2161694514851095523
+      rompibles_6x8_44: 2441855736461308808
+      rompibles_6x8_45: 2086614165055297356
+      rompibles_6x8_46: 8394766074798713409
+      rompibles_6x8_47: -980194592297515866
+      rompibles_6x8_5: 3672774400756321960
+      rompibles_6x8_6: 2177262209990084862
+      rompibles_6x8_7: -4730673525431096399
+      rompibles_6x8_8: -5611705418977379813
+      rompibles_6x8_9: 1022515330289853274
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -12,60 +12,123 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3385fcd6f37f044496ad136341eb108, type: 3}
   m_Name: Asteroid_Breakable
   m_EditorClassIdentifier: Assembly-CSharp::AsteroidTypeData
-  id: asteroid
+  id: breakable
   behavior: 3
   sprites:
-  - {fileID: 3763433324915964391, guid: 752d4bd340224d1409f3426346dd51bf, type: 3}
-  - {fileID: 6502706983414204421, guid: 752d4bd340224d1409f3426346dd51bf, type: 3}
-  - {fileID: 7569389854566790700, guid: 752d4bd340224d1409f3426346dd51bf, type: 3}
-  - {fileID: -3459668795505313242, guid: 752d4bd340224d1409f3426346dd51bf, type: 3}
-  - {fileID: -7653309000556975910, guid: 752d4bd340224d1409f3426346dd51bf, type: 3}
-  - {fileID: -7102574052474727498, guid: 752d4bd340224d1409f3426346dd51bf, type: 3}
-  - {fileID: -8677303978654917844, guid: 752d4bd340224d1409f3426346dd51bf, type: 3}
-  - {fileID: 6013753022722946455, guid: 752d4bd340224d1409f3426346dd51bf, type: 3}
-  - {fileID: -87355417113008574, guid: 752d4bd340224d1409f3426346dd51bf, type: 3}
-  - {fileID: 2650182455250049868, guid: 752d4bd340224d1409f3426346dd51bf, type: 3}
-  - {fileID: 1876326055309646057, guid: 752d4bd340224d1409f3426346dd51bf, type: 3}
-  - {fileID: -2460484684511976830, guid: 752d4bd340224d1409f3426346dd51bf, type: 3}
-  - {fileID: -5836233382259476382, guid: 752d4bd340224d1409f3426346dd51bf, type: 3}
-  - {fileID: -6020282945892723035, guid: 752d4bd340224d1409f3426346dd51bf, type: 3}
-  - {fileID: 5777898790180322770, guid: 752d4bd340224d1409f3426346dd51bf, type: 3}
-  - {fileID: -268824581301244781, guid: 752d4bd340224d1409f3426346dd51bf, type: 3}
-  - {fileID: 1840185891119395328, guid: 752d4bd340224d1409f3426346dd51bf, type: 3}
-  - {fileID: 4245929641464984622, guid: 752d4bd340224d1409f3426346dd51bf, type: 3}
-  - {fileID: -3052952181131063291, guid: 752d4bd340224d1409f3426346dd51bf, type: 3}
-  - {fileID: -1101883752566216332, guid: 752d4bd340224d1409f3426346dd51bf, type: 3}
-  - {fileID: -3742101450106961820, guid: 752d4bd340224d1409f3426346dd51bf, type: 3}
-  - {fileID: -6364685122019728884, guid: 752d4bd340224d1409f3426346dd51bf, type: 3}
-  - {fileID: -3901436831486190800, guid: 752d4bd340224d1409f3426346dd51bf, type: 3}
-  - {fileID: 8593072062646425155, guid: 752d4bd340224d1409f3426346dd51bf, type: 3}
-  - {fileID: 5076852848959375451, guid: 752d4bd340224d1409f3426346dd51bf, type: 3}
-  - {fileID: -6677085248858293405, guid: 752d4bd340224d1409f3426346dd51bf, type: 3}
-  - {fileID: -8937477613208379466, guid: 752d4bd340224d1409f3426346dd51bf, type: 3}
-  - {fileID: -4953350868074191057, guid: 752d4bd340224d1409f3426346dd51bf, type: 3}
-  - {fileID: 5927607257914288561, guid: 752d4bd340224d1409f3426346dd51bf, type: 3}
-  - {fileID: 8116530613044626160, guid: 752d4bd340224d1409f3426346dd51bf, type: 3}
-  - {fileID: 9074777356313910590, guid: 752d4bd340224d1409f3426346dd51bf, type: 3}
-  - {fileID: 6635527812766627124, guid: 752d4bd340224d1409f3426346dd51bf, type: 3}
-  sizeRange: {x: 0.6, y: 1.3}
+  - {fileID: -7308414314902634171, guid: 5edc199e20572354eb185749608dd317, type: 3}
+  - {fileID: -5611705418977379813, guid: 5edc199e20572354eb185749608dd317, type: 3}
+  - {fileID: 5747636853427568906, guid: 5edc199e20572354eb185749608dd317, type: 3}
+  - {fileID: 6404451702567355273, guid: 5edc199e20572354eb185749608dd317, type: 3}
+  - {fileID: 8623274427707157170, guid: 5edc199e20572354eb185749608dd317, type: 3}
+  - {fileID: -88864555462097174, guid: 5edc199e20572354eb185749608dd317, type: 3}
+  sizeRange: {x: 0.55, y: 1.2}
   sizeSkew: 1
-  speedRange: {x: 1.4, y: 2.4}
-  spinRange: {x: -60, y: 60}
+  minWorldRadius: 0.2
+  prefabOverride: {fileID: 0}
+  speedRange: {x: 2.8, y: 4.5}
+  spinRange: {x: -100, y: 100}
   sizeAffectsSpeed: 1
+  speedScaling: 1
   followFlow: 0.8
   flowSpread: 25
   turnRate: 30
   wander: 0.06
   restoreSpeed: 1
-  restoreRate: 0.2
+  restoreRate: 0.9
   recycle: 1
   material: {fileID: 6200000, guid: a4e07163db09a9745bd72e322991aa57, type: 2}
   massPerArea: 1
-  massExponent: 2.5
+  massExponent: 3
   densityRange: {x: 0.8, y: 1.3}
-  colliderFactor: 0.6
+  colliderFactor: 0.9
+  launchBoost: 1.4
+  impactSpeedCap: 2.2
+  keepsImpulse: 0.85
+  reboundDamping: 0.85
+  impactEnergyLoss: 0.55
+  impactSpinLoss: 0.2
+  impactSpeedFloor: 0.55
+  noRestoreSeconds: 1.4
+  canBeDislodged: 0
+  dislodgeMassRatio: 4
+  dislodgesStatics: 0
+  canBeCaptured: 0
+  captureChance: 0.12
+  captureMaxRadius: 0.32
+  captureMinSpeed: 0.6
+  captureMaxSpeed: 3.5
+  acceptsMoons: 0
+  maxMoons: 4
+  moonCaptureMultiplier: 1
+  moonGap: 0.3
+  moonOrbitSpeed: {x: 30, y: 75}
+  moonTrail: 0
+  moonsAreLethal: 0
+  pullRadius: 0
+  pullForce: 9
+  pullMaxTargetRadius: 0.45
+  pullMaxTargetMassFraction: 0.08
   killsPlayer: 1
   canBreak: 1
+  fragmentType: {fileID: 11400000, guid: 9fc9553795252224cba0ee2144907e02, type: 2}
+  fragmentGroups:
+  - sprites:
+    - {fileID: 6754071741744739403, guid: 5edc199e20572354eb185749608dd317, type: 3}
+    - {fileID: 3882130571647578322, guid: 5edc199e20572354eb185749608dd317, type: 3}
+    - {fileID: 2209299438927424589, guid: 5edc199e20572354eb185749608dd317, type: 3}
+    - {fileID: 1334001017665754372, guid: 5edc199e20572354eb185749608dd317, type: 3}
+    - {fileID: 3672774400756321960, guid: 5edc199e20572354eb185749608dd317, type: 3}
+    - {fileID: 2177262209990084862, guid: 5edc199e20572354eb185749608dd317, type: 3}
+    - {fileID: -4730673525431096399, guid: 5edc199e20572354eb185749608dd317, type: 3}
+  - sprites:
+    - {fileID: 1022515330289853274, guid: 5edc199e20572354eb185749608dd317, type: 3}
+    - {fileID: 6385862263722725837, guid: 5edc199e20572354eb185749608dd317, type: 3}
+    - {fileID: -7047986086729649802, guid: 5edc199e20572354eb185749608dd317, type: 3}
+    - {fileID: 1036097714207306758, guid: 5edc199e20572354eb185749608dd317, type: 3}
+    - {fileID: 4138678264139708370, guid: 5edc199e20572354eb185749608dd317, type: 3}
+    - {fileID: -5806774323916196597, guid: 5edc199e20572354eb185749608dd317, type: 3}
+    - {fileID: -2154196254282512371, guid: 5edc199e20572354eb185749608dd317, type: 3}
+  - sprites:
+    - {fileID: 8967599556488683080, guid: 5edc199e20572354eb185749608dd317, type: 3}
+    - {fileID: 2365158776670931657, guid: 5edc199e20572354eb185749608dd317, type: 3}
+    - {fileID: -3619067314222817427, guid: 5edc199e20572354eb185749608dd317, type: 3}
+    - {fileID: -1850321495482839168, guid: 5edc199e20572354eb185749608dd317, type: 3}
+    - {fileID: -6361833570522347123, guid: 5edc199e20572354eb185749608dd317, type: 3}
+    - {fileID: -5638350069004467471, guid: 5edc199e20572354eb185749608dd317, type: 3}
+    - {fileID: -409192478564568202, guid: 5edc199e20572354eb185749608dd317, type: 3}
+  - sprites:
+    - {fileID: -3201464912845698060, guid: 5edc199e20572354eb185749608dd317, type: 3}
+    - {fileID: -5236533141981136425, guid: 5edc199e20572354eb185749608dd317, type: 3}
+    - {fileID: 3979678024569993223, guid: 5edc199e20572354eb185749608dd317, type: 3}
+    - {fileID: -66985347362333192, guid: 5edc199e20572354eb185749608dd317, type: 3}
+    - {fileID: 268136428442436390, guid: 5edc199e20572354eb185749608dd317, type: 3}
+    - {fileID: -7756988528678561428, guid: 5edc199e20572354eb185749608dd317, type: 3}
+    - {fileID: 4367775352820751780, guid: 5edc199e20572354eb185749608dd317, type: 3}
+  - sprites:
+    - {fileID: 3354713364008515299, guid: 5edc199e20572354eb185749608dd317, type: 3}
+    - {fileID: 8330444768835376440, guid: 5edc199e20572354eb185749608dd317, type: 3}
+    - {fileID: -2530176758529355851, guid: 5edc199e20572354eb185749608dd317, type: 3}
+    - {fileID: 6292539394351043380, guid: 5edc199e20572354eb185749608dd317, type: 3}
+    - {fileID: -4394088166772546162, guid: 5edc199e20572354eb185749608dd317, type: 3}
+    - {fileID: -8832558669121515909, guid: 5edc199e20572354eb185749608dd317, type: 3}
+    - {fileID: -5674068955368986026, guid: 5edc199e20572354eb185749608dd317, type: 3}
+  - sprites:
+    - {fileID: 5064982429901826415, guid: 5edc199e20572354eb185749608dd317, type: 3}
+    - {fileID: 9177310110731067414, guid: 5edc199e20572354eb185749608dd317, type: 3}
+    - {fileID: -2161694514851095523, guid: 5edc199e20572354eb185749608dd317, type: 3}
+    - {fileID: 2441855736461308808, guid: 5edc199e20572354eb185749608dd317, type: 3}
+    - {fileID: 2086614165055297356, guid: 5edc199e20572354eb185749608dd317, type: 3}
+    - {fileID: 8394766074798713409, guid: 5edc199e20572354eb185749608dd317, type: 3}
+    - {fileID: -980194592297515866, guid: 5edc199e20572354eb185749608dd317, type: 3}
+  fragmentCount: {x: 3, y: 5}
+  fragmentBoost: {x: 1.3, y: 1.6}
+  breakMinSpeed: 0.5
+  breakShield: 0.4
+  maxFragmentsAlive: 40
+  breakOnlyOnScreen: 1
+  logBreakRejections: 1
+  lifetime: 0
+  comet: {fileID: 0}
   cost: 4
   minLevel: 7
   spawnWeight: 1

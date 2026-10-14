@@ -32,6 +32,10 @@ public class ColossusDirector : MonoBehaviour
     [SerializeField] private float avoidPlayerRadius = 4f;
     [Tooltip("Cuánto más allá del borde nace, para que no aparezca de golpe. Debe ser menor que (Despawn Margin - Spawn Margin) del FlowField")]
     [SerializeField] private float extraPush = 1f;
+    [Tooltip("Margen por dentro del borde visible. El coloso entra siempre dentro de esta banda, " +
+             "así que SIEMPRE cruza la pantalla y se ve. Sin esto podía nacer en la esquina del " +
+             "margen de spawn y atravesar el nivel entero por fuera de cámara")]
+    [SerializeField] private float visibleInset = 1.2f;
 
     /// Posición de entrada y tipo. Aquí se conectarán la alerta del HUD y el sonido.
     public event System.Action<Vector2, AsteroidTypeData> ColossusSpawned;
@@ -76,14 +80,7 @@ public class ColossusDirector : MonoBehaviour
         var flow = FlowField.Instance;
         if (type == null || flow == null || pool == null) return null;
 
-        Vector2 avoid = player != null ? (Vector2)player.position : Vector2.zero;
-        Vector2 p = flow.RandomEntryPoint(avoid, avoidPlayerRadius);
-
-        // Más allá del borde, porque es enorme
-        Rect r = flow.SpawnRect;
-        const float eps = 0.05f;
-        if (p.x <= r.xMin + eps) p.x -= extraPush; else if (p.x >= r.xMax - eps) p.x += extraPush;
-        if (p.y <= r.yMin + eps) p.y -= extraPush; else if (p.y >= r.yMax - eps) p.y += extraPush;
+        Vector2 p = EntryPoint(flow);
 
         var a = pool.Spawn(type, p);
         alive++;
@@ -93,6 +90,48 @@ public class ColossusDirector : MonoBehaviour
         Debug.Log($"ColossusDirector: entra '{type.id}' en {p}. Probabilidad actual por asteroide: {ChanceAt(level):P2}");
         ColossusSpawned?.Invoke(p, type);
         return a;
+    }
+
+    /// Nace fuera de pantalla pero SIEMPRE a una altura (o anchura) visible, para que su
+    /// trayectoria cruce el campo de juego y el jugador lo vea venir.
+    Vector2 EntryPoint(FlowField flow)
+    {
+        Rect spawn = flow.SpawnRect;
+        Rect cam = GameBounds.Instance != null ? GameBounds.Instance.CameraRect : spawn;
+        Vector2 avoid = player != null ? (Vector2)player.position : Vector2.zero;
+
+        Vector2 p = flow.RandomEntryPoint(avoid, avoidPlayerRadius);
+        const float eps = 0.05f;
+        bool fromSide = p.x <= spawn.xMin + eps || p.x >= spawn.xMax - eps;
+
+        // Banda visible, con un margen por dentro para que no entre rozando la esquina
+        float inset = Mathf.Max(0f, visibleInset);
+        if (fromSide)
+        {
+            float min = cam.yMin + inset, max = cam.yMax - inset;
+            if (min > max) { min = max = cam.center.y; }
+            p.y = PickAway(min, max, avoid.y, avoidPlayerRadius);
+            p.x += p.x <= spawn.xMin + eps ? -extraPush : extraPush;
+        }
+        else
+        {
+            float min = cam.xMin + inset, max = cam.xMax - inset;
+            if (min > max) { min = max = cam.center.x; }
+            p.x = PickAway(min, max, avoid.x, avoidPlayerRadius);
+            p.y += p.y <= spawn.yMin + eps ? -extraPush : extraPush;
+        }
+        return p;
+    }
+
+    // Un valor dentro de la banda visible, lejos del jugador. Si no hay hueco, el extremo más lejano.
+    static float PickAway(float min, float max, float avoid, float radius)
+    {
+        for (int i = 0; i < 8; i++)
+        {
+            float v = Random.Range(min, max);
+            if (Mathf.Abs(v - avoid) > radius) return v;
+        }
+        return Mathf.Abs(min - avoid) > Mathf.Abs(max - avoid) ? min : max;
     }
 
     public void NotifyGone() { alive = Mathf.Max(0, alive - 1); }

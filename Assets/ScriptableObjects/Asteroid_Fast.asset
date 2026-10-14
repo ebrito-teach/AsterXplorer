@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3385fcd6f37f044496ad136341eb108, type: 3}
   m_Name: Asteroid_Fast
   m_EditorClassIdentifier: Assembly-CSharp::AsteroidTypeData
-  id: asteroid
+  id: fast
   behavior: 2
   sprites:
   - {fileID: -754581487715784627, guid: f3341d09dc3ffe140bc91b19efaddac4, type: 3}
@@ -47,25 +47,66 @@ MonoBehaviour:
   - {fileID: 323680002008923523, guid: f3341d09dc3ffe140bc91b19efaddac4, type: 3}
   - {fileID: -2046761552879305566, guid: f3341d09dc3ffe140bc91b19efaddac4, type: 3}
   - {fileID: -5010233931683982646, guid: f3341d09dc3ffe140bc91b19efaddac4, type: 3}
-  sizeRange: {x: 0.2, y: 0.5}
+  sizeRange: {x: 0.35, y: 0.8}
   sizeSkew: 1.2
-  speedRange: {x: 2.6, y: 4.2}
-  spinRange: {x: -60, y: 60}
+  minWorldRadius: 0.18
+  prefabOverride: {fileID: 0}
+  speedRange: {x: 5.5, y: 8}
+  spinRange: {x: -200, y: 200}
   sizeAffectsSpeed: 1
+  speedScaling: 1
   followFlow: 0.8
   flowSpread: 15
   turnRate: 25
   wander: 0.03
   restoreSpeed: 1
-  restoreRate: 0.2
+  restoreRate: 1.1
   recycle: 1
   material: {fileID: 6200000, guid: a4e07163db09a9745bd72e322991aa57, type: 2}
   massPerArea: 1
-  massExponent: 2.5
+  massExponent: 3
   densityRange: {x: 1, y: 1.6}
   colliderFactor: 0.9
+  launchBoost: 1.3
+  impactSpeedCap: 3.5
+  keepsImpulse: 0.9
+  reboundDamping: 0.85
+  impactEnergyLoss: 0.15
+  impactSpinLoss: 0.35
+  impactSpeedFloor: 0.6
+  noRestoreSeconds: 0.4
+  canBeDislodged: 0
+  dislodgeMassRatio: 4
+  dislodgesStatics: 0
+  canBeCaptured: 1
+  captureChance: 0.08
+  captureMaxRadius: 0.32
+  captureMinSpeed: 0.6
+  captureMaxSpeed: 3.5
+  acceptsMoons: 0
+  maxMoons: 4
+  moonCaptureMultiplier: 1
+  moonGap: 0.3
+  moonOrbitSpeed: {x: 30, y: 75}
+  moonTrail: 0
+  moonsAreLethal: 0
+  pullRadius: 0
+  pullForce: 9
+  pullMaxTargetRadius: 0.45
+  pullMaxTargetMassFraction: 0.08
   killsPlayer: 1
   canBreak: 0
+  fragmentType: {fileID: 0}
+  fragmentGroups: []
+  fragmentCount: {x: 3, y: 5}
+  fragmentBoost: {x: 1.3, y: 1.6}
+  breakMinSpeed: 0.5
+  breakShield: 0.4
+  maxFragmentsAlive: 40
+  breakOnlyOnScreen: 1
+  logBreakRejections: 0
+  lifetime: 0
+  comet: {fileID: 0}
   cost: 3
   minLevel: 4
   spawnWeight: 1.5

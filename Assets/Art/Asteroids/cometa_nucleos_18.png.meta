@@ -1,0 +1,637 @@
+fileFormatVersion: 2
+guid: 92fd80a97d6e1814e8c4e5ea2687f1b8
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 347040871412301870
+    second: cometa_nucleos_18_0
+  - first:
+      213: -216267014244960384
+    second: cometa_nucleos_18_1
+  - first:
+      213: 4232841243213440519
+    second: cometa_nucleos_18_2
+  - first:
+      213: -8236728345146682621
+    second: cometa_nucleos_18_3
+  - first:
+      213: 4301895364757836162
+    second: cometa_nucleos_18_4
+  - first:
+      213: 1740653727839805115
+    second: cometa_nucleos_18_5
+  - first:
+      213: 7481877810943825220
+    second: cometa_nucleos_18_6
+  - first:
+      213: 6126888736080645520
+    second: cometa_nucleos_18_7
+  - first:
+      213: -3834626974521473681
+    second: cometa_nucleos_18_8
+  - first:
+      213: -2760122488789716196
+    second: cometa_nucleos_18_9
+  - first:
+      213: -5117449733168700662
+    second: cometa_nucleos_18_10
+  - first:
+      213: -7028583758357648832
+    second: cometa_nucleos_18_11
+  - first:
+      213: -8683107550501358811
+    second: cometa_nucleos_18_12
+  - first:
+      213: 7951569754828844724
+    second: cometa_nucleos_18_13
+  - first:
+      213: -4429135029764626975
+    second: cometa_nucleos_18_14
+  - first:
+      213: 2712594286580320121
+    second: cometa_nucleos_18_15
+  - first:
+      213: -630866232124025982
+    second: cometa_nucleos_18_16
+  - first:
+      213: 3955530383933169039
+    second: cometa_nucleos_18_17
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 400
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: cometa_nucleos_18_0
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 1069
+        width: 391
+        height: 423
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e20821775dfe0d400800000000000000
+      internalID: 347040871412301870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cometa_nucleos_18_1
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 1071
+        width: 386
+        height: 419
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0877b4fdb4aaffcf0800000000000000
+      internalID: -216267014244960384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cometa_nucleos_18_2
+      rect:
+        serializedVersion: 2
+        x: 1081
+        y: 1069
+        width: 398
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7062c542fa21eba30800000000000000
+      internalID: 4232841243213440519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cometa_nucleos_18_3
+      rect:
+        serializedVersion: 2
+        x: 1594
+        y: 1069
+        width: 396
+        height: 423
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 303142cc53341bd80800000000000000
+      internalID: -8236728345146682621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cometa_nucleos_18_4
+      rect:
+        serializedVersion: 2
+        x: 2116
+        y: 1070
+        width: 376
+        height: 421
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2815a45ba0763bb30800000000000000
+      internalID: 4301895364757836162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cometa_nucleos_18_5
+      rect:
+        serializedVersion: 2
+        x: 2617
+        y: 1066
+        width: 397
+        height: 428
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbed9d4d75b082810800000000000000
+      internalID: 1740653727839805115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cometa_nucleos_18_6
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 560
+        width: 388
+        height: 416
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4451f267a38f4d760800000000000000
+      internalID: 7481877810943825220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cometa_nucleos_18_7
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 560
+        width: 396
+        height: 416
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09dcd6408d4170550800000000000000
+      internalID: 6126888736080645520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cometa_nucleos_18_8
+      rect:
+        serializedVersion: 2
+        x: 1082
+        y: 556
+        width: 396
+        height: 425
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f654489551ba8cac0800000000000000
+      internalID: -3834626974521473681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cometa_nucleos_18_9
+      rect:
+        serializedVersion: 2
+        x: 1594
+        y: 559
+        width: 396
+        height: 418
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c133f1f583312b9d0800000000000000
+      internalID: -2760122488789716196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cometa_nucleos_18_10
+      rect:
+        serializedVersion: 2
+        x: 2107
+        y: 559
+        width: 393
+        height: 418
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a03ef82c49a2bf8b0800000000000000
+      internalID: -5117449733168700662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cometa_nucleos_18_11
+      rect:
+        serializedVersion: 2
+        x: 2618
+        y: 556
+        width: 396
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04a23019f44757e90800000000000000
+      internalID: -7028583758357648832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cometa_nucleos_18_12
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 46
+        width: 388
+        height: 420
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 523bad910b76f7780800000000000000
+      internalID: -8683107550501358811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cometa_nucleos_18_13
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 47
+        width: 388
+        height: 418
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4be20531096a95e60800000000000000
+      internalID: 7951569754828844724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cometa_nucleos_18_14
+      rect:
+        serializedVersion: 2
+        x: 1082
+        y: 46
+        width: 395
+        height: 421
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e5e3a0382d8882c0800000000000000
+      internalID: -4429135029764626975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cometa_nucleos_18_15
+      rect:
+        serializedVersion: 2
+        x: 1593
+        y: 47
+        width: 397
+        height: 418
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 977cf57b12215a520800000000000000
+      internalID: 2712594286580320121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cometa_nucleos_18_16
+      rect:
+        serializedVersion: 2
+        x: 2109
+        y: 47
+        width: 389
+        height: 418
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 283557d1186be37f0800000000000000
+      internalID: -630866232124025982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cometa_nucleos_18_17
+      rect:
+        serializedVersion: 2
+        x: 2617
+        y: 44
+        width: 397
+        height: 425
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8dd9984dedd4e630800000000000000
+      internalID: 3955530383933169039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      cometa_nucleos_18_0: 347040871412301870
+      cometa_nucleos_18_1: -216267014244960384
+      cometa_nucleos_18_10: -5117449733168700662
+      cometa_nucleos_18_11: -7028583758357648832
+      cometa_nucleos_18_12: -8683107550501358811
+      cometa_nucleos_18_13: 7951569754828844724
+      cometa_nucleos_18_14: -4429135029764626975
+      cometa_nucleos_18_15: 2712594286580320121
+      cometa_nucleos_18_16: -630866232124025982
+      cometa_nucleos_18_17: 3955530383933169039
+      cometa_nucleos_18_2: 4232841243213440519
+      cometa_nucleos_18_3: -8236728345146682621
+      cometa_nucleos_18_4: 4301895364757836162
+      cometa_nucleos_18_5: 1740653727839805115
+      cometa_nucleos_18_6: 7481877810943825220
+      cometa_nucleos_18_7: 6126888736080645520
+      cometa_nucleos_18_8: -3834626974521473681
+      cometa_nucleos_18_9: -2760122488789716196
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

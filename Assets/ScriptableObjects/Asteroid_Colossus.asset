@@ -12,36 +12,101 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3385fcd6f37f044496ad136341eb108, type: 3}
   m_Name: Asteroid_Colossus
   m_EditorClassIdentifier: Assembly-CSharp::AsteroidTypeData
-  id: asteroid
+  id: colossus
   behavior: 4
   sprites:
-  - {fileID: -3514778592508653203, guid: 69b5bb0d871f3dc43be3e06dbaa1d559, type: 3}
-  - {fileID: 3306024150323243441, guid: 69b5bb0d871f3dc43be3e06dbaa1d559, type: 3}
-  - {fileID: 4348621248091214300, guid: 69b5bb0d871f3dc43be3e06dbaa1d559, type: 3}
-  - {fileID: 2955373666542398874, guid: 69b5bb0d871f3dc43be3e06dbaa1d559, type: 3}
-  - {fileID: -6186293076613078600, guid: 69b5bb0d871f3dc43be3e06dbaa1d559, type: 3}
-  - {fileID: -887430189151681537, guid: 69b5bb0d871f3dc43be3e06dbaa1d559, type: 3}
-  - {fileID: -8844637777401521279, guid: 69b5bb0d871f3dc43be3e06dbaa1d559, type: 3}
-  - {fileID: 6008546431773164921, guid: 69b5bb0d871f3dc43be3e06dbaa1d559, type: 3}
-  sizeRange: {x: 2.2, y: 2.8}
+  - {fileID: 7235648944755135552, guid: d601774cea3c57e479ba548a619d5e12, type: 3}
+  - {fileID: 654945778113968675, guid: d601774cea3c57e479ba548a619d5e12, type: 3}
+  - {fileID: -4157373481861801272, guid: d601774cea3c57e479ba548a619d5e12, type: 3}
+  - {fileID: 3232268012833465749, guid: d601774cea3c57e479ba548a619d5e12, type: 3}
+  - {fileID: 5622128814276335767, guid: d601774cea3c57e479ba548a619d5e12, type: 3}
+  - {fileID: 8102265554048827804, guid: d601774cea3c57e479ba548a619d5e12, type: 3}
+  - {fileID: 5882623664910374058, guid: d601774cea3c57e479ba548a619d5e12, type: 3}
+  - {fileID: -3767143580699956313, guid: d601774cea3c57e479ba548a619d5e12, type: 3}
+  - {fileID: 6692491507276416263, guid: d601774cea3c57e479ba548a619d5e12, type: 3}
+  - {fileID: -1050939038231138891, guid: d601774cea3c57e479ba548a619d5e12, type: 3}
+  - {fileID: -1800058091977953911, guid: d601774cea3c57e479ba548a619d5e12, type: 3}
+  - {fileID: -5466124980852191703, guid: d601774cea3c57e479ba548a619d5e12, type: 3}
+  - {fileID: 1769552533289712711, guid: d601774cea3c57e479ba548a619d5e12, type: 3}
+  - {fileID: -631311517182559061, guid: d601774cea3c57e479ba548a619d5e12, type: 3}
+  - {fileID: -1564853788206939119, guid: d601774cea3c57e479ba548a619d5e12, type: 3}
+  - {fileID: -73121999480005493, guid: d601774cea3c57e479ba548a619d5e12, type: 3}
+  - {fileID: -6052607151552929660, guid: 15d7f5c2861f3b045938b7549dc1c37b, type: 3}
+  - {fileID: -6620765363898486699, guid: 15d7f5c2861f3b045938b7549dc1c37b, type: 3}
+  - {fileID: 5603269190193153106, guid: 15d7f5c2861f3b045938b7549dc1c37b, type: 3}
+  - {fileID: 3250670538981913550, guid: 15d7f5c2861f3b045938b7549dc1c37b, type: 3}
+  - {fileID: -5162304469822367705, guid: 15d7f5c2861f3b045938b7549dc1c37b, type: 3}
+  - {fileID: 8302574944450902833, guid: 15d7f5c2861f3b045938b7549dc1c37b, type: 3}
+  - {fileID: -7064603993233663662, guid: 15d7f5c2861f3b045938b7549dc1c37b, type: 3}
+  - {fileID: -5471421424020487848, guid: 15d7f5c2861f3b045938b7549dc1c37b, type: 3}
+  - {fileID: 7726520573620900773, guid: 15d7f5c2861f3b045938b7549dc1c37b, type: 3}
+  - {fileID: -5563478790179366251, guid: 15d7f5c2861f3b045938b7549dc1c37b, type: 3}
+  - {fileID: 6944807683177595251, guid: 15d7f5c2861f3b045938b7549dc1c37b, type: 3}
+  - {fileID: -2548611929840563335, guid: 15d7f5c2861f3b045938b7549dc1c37b, type: 3}
+  - {fileID: 262962089020473555, guid: 15d7f5c2861f3b045938b7549dc1c37b, type: 3}
+  - {fileID: 7069850586183909704, guid: 15d7f5c2861f3b045938b7549dc1c37b, type: 3}
+  - {fileID: -3311441006315851228, guid: 15d7f5c2861f3b045938b7549dc1c37b, type: 3}
+  - {fileID: -7755180952027138153, guid: 15d7f5c2861f3b045938b7549dc1c37b, type: 3}
+  sizeRange: {x: 4.5, y: 7}
   sizeSkew: 1
-  speedRange: {x: 1, y: 1.5}
+  minWorldRadius: 0.2
+  prefabOverride: {fileID: 0}
+  speedRange: {x: 2.2, y: 3}
   spinRange: {x: -6, y: 6}
   sizeAffectsSpeed: 0
+  speedScaling: 1
   followFlow: 0.9
   flowSpread: 10
   turnRate: 8
   wander: 0
   restoreSpeed: 1
-  restoreRate: 0.2
+  restoreRate: 0.5
   recycle: 1
   material: {fileID: 6200000, guid: a4e07163db09a9745bd72e322991aa57, type: 2}
   massPerArea: 5
-  massExponent: 2.5
+  massExponent: 3
   densityRange: {x: 1.3, y: 1.7}
   colliderFactor: 0.95
+  launchBoost: 1
+  impactSpeedCap: 0
+  keepsImpulse: 0.85
+  reboundDamping: 1
+  impactEnergyLoss: 0.03
+  impactSpinLoss: 0.03
+  impactSpeedFloor: 0.9
+  noRestoreSeconds: 0.2
+  canBeDislodged: 1
+  dislodgeMassRatio: 4
+  dislodgesStatics: 1
+  canBeCaptured: 0
+  captureChance: 0.12
+  captureMaxRadius: 0.32
+  captureMinSpeed: 0.6
+  captureMaxSpeed: 3.5
+  acceptsMoons: 1
+  maxMoons: 6
+  moonCaptureMultiplier: 5
+  moonGap: 0.6
+  moonOrbitSpeed: {x: 20, y: 45}
+  moonTrail: 0.5
+  moonsAreLethal: 1
+  pullRadius: 5
+  pullForce: 14
+  pullMaxTargetRadius: 0.5
+  pullMaxTargetMassFraction: 0.03
   killsPlayer: 1
   canBreak: 0
+  fragmentType: {fileID: 0}
+  fragmentGroups: []
+  fragmentCount: {x: 3, y: 5}
+  fragmentBoost: {x: 1.3, y: 1.6}
+  breakMinSpeed: 0.5
+  breakShield: 0.4
+  maxFragmentsAlive: 40
+  breakOnlyOnScreen: 1
+  logBreakRejections: 0
+  lifetime: 0
+  comet: {fileID: 0}
   cost: 0
   minLevel: 1
   spawnWeight: 0

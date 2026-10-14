@@ -1,10 +1,25 @@
 fileFormatVersion: 2
-guid: 49b7530c105eaaf4d93fd9ecfa5add37
+guid: fc1622b8ff0154e4693aa203fc301675
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1139892300730384260
-    second: Gemini_Generated_Image_mtjvhpmtjvhpmtjv.jpg - Editada_0
+      213: 4984966729566584908
+    second: bg_nebula_06_0
+  - first:
+      213: 5460498704255462316
+    second: bg_nebula_06_1
+  - first:
+      213: -1759602652078157138
+    second: bg_nebula_06_2
+  - first:
+      213: -3428573097394485559
+    second: bg_nebula_06_3
+  - first:
+      213: 6529402675693456289
+    second: bg_nebula_06_4
+  - first:
+      213: -3487740879110175879
+    second: bg_nebula_06_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,12 +61,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 190
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -72,7 +87,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 4096
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -152,13 +167,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Gemini_Generated_Image_mtjvhpmtjvhpmtjv.jpg - Editada_0
+      name: bg_nebula_06_0
       rect:
         serializedVersion: 2
-        x: 28
-        y: 878
-        width: 1320
-        height: 1354
+        x: 21
+        y: 4
+        width: 1984
+        height: 1009
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -167,8 +182,118 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c7043ccedf94e20f0800000000000000
-      internalID: -1139892300730384260
+      spriteID: c4005fc34d82e2540800000000000000
+      internalID: 4984966729566584908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_nebula_06_1
+      rect:
+        serializedVersion: 2
+        x: 1990
+        y: 649
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: caba0abf3a697cb40800000000000000
+      internalID: 5460498704255462316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_nebula_06_2
+      rect:
+        serializedVersion: 2
+        x: 1991
+        y: 641
+        width: 17
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea2db01f5b2a497e0800000000000000
+      internalID: -1759602652078157138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_nebula_06_3
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 14
+        width: 12
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c6475beee24b60d0800000000000000
+      internalID: -3428573097394485559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_nebula_06_4
+      rect:
+        serializedVersion: 2
+        x: 1581
+        y: 4
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ab8138a3291d9a50800000000000000
+      internalID: 6529402675693456289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_nebula_06_5
+      rect:
+        serializedVersion: 2
+        x: 1590
+        y: 8
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9738708362e099fc0800000000000000
+      internalID: -3487740879110175879
       vertices: []
       indices: 
       edges: []
@@ -177,7 +302,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -187,7 +312,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Gemini_Generated_Image_mtjvhpmtjvhpmtjv.jpg - Editada_0: -1139892300730384260
+      bg_nebula_06_0: 4984966729566584908
+      bg_nebula_06_1: 5460498704255462316
+      bg_nebula_06_2: -1759602652078157138
+      bg_nebula_06_3: -3428573097394485559
+      bg_nebula_06_4: 6529402675693456289
+      bg_nebula_06_5: -3487740879110175879
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

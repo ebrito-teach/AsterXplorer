@@ -12,15 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f676111781b116c4aab39f31c71698b4, type: 3}
   m_Name: DifficultyProfile
   m_EditorClassIdentifier: Assembly-CSharp::DifficultyProfile
-  tierLength: 30
-  baseBudget: 26
-  budgetPerLevel: 0.9
-  budgetPerTier: 8
-  maxBudget: 160
-  maxMovingAsteroids: 45
+  tierLength: 20
+  baseBudget: 45
+  budgetPerLevel: 1.2
+  budgetPerTier: 10
+  maxBudget: 180
+  maxMovingAsteroids: 55
   speedPerLevel: 0.006
   speedPerTier: 0.06
-  maxSpeedMultiplier: 1.8
+  maxSpeedMultiplier: 2.1
+  calmEvery: 7
+  surgeEvery: 5
+  calmFactor: 0.65
+  surgeFactor: 1.45
+  moodAffectsSpeed: 0.5
   flowAmplitudeBase: 45
   flowAmplitudePerTier: 6
   flowAmplitudeMax: 90
