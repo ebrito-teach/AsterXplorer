@@ -383,7 +383,10 @@ public class Asteroid : MonoBehaviour
         if (rb.position.x > d.xMin - m && rb.position.x < d.xMax + m &&
             rb.position.y > d.yMin - m && rb.position.y < d.yMax + m) return false;
 
-        if (!hasEnteredView && Time.time - spawnTime < 12f) return false;
+        // La gracia de "aún no se ha dejado ver" es SOLO para los imparables, que nacen muy
+        // lejos por su tamaño. Aplicada a todos, un asteroide que nacía fuera y se alejaba
+        // vivía 12 s volando hacia ninguna parte: de ahí los choques en (-17, 18.9).
+        if (!hasEnteredView && unstoppable && Time.time - spawnTime < 12f) return false;
         return true;
     }
 
@@ -583,7 +586,25 @@ public class Asteroid : MonoBehaviour
 
             float span = Mathf.Max(0.01f, radius - WorldRadius);
             float k = Mathf.Clamp01(1f - (dist - WorldRadius) / span);
-            t.ReceivePull(d / dist * (Type.pullForce * k * k));
+            Vector2 toCenter = d / dist;
+
+            // Un tirón puramente radial hace que todo caiga en picado contra el casco y se
+            // quede ahí amontonado. En un campo gravitatorio real los cuerpos NO caen en línea
+            // recta: espiralan. La componente tangencial es lo que convierte el amontonamiento
+            // en un enjambre que gira alrededor.
+            Vector2 accel = toCenter;
+            float tg = Mathf.Clamp01(Type.pullTangential);
+            if (tg > 0f)
+            {
+                Vector2 side = new Vector2(-toCenter.y, toCenter.x);
+                Vector2 rel = t.Body.linearVelocity - rb.linearVelocity;
+                // El giro continúa el sentido que el guijarro ya llevaba: nada de tirones bruscos
+                float sign = rel.x * toCenter.y - rel.y * toCenter.x;
+                side *= sign >= 0f ? 1f : -1f;
+                accel = Vector2.Lerp(toCenter, side, tg).normalized;
+            }
+
+            t.ReceivePull(accel * (Type.pullForce * k * k));
         }
     }
 
@@ -631,7 +652,10 @@ public class Asteroid : MonoBehaviour
             if (Physics2D.OverlapCircle(p, 1.3f, mask) != null) continue;
 
             float size = w.RandomSize() * Random.Range(Type.wakeSizeScale.x, Type.wakeSizeScale.y);
-            pool.Spawn(w, p, size);
+            var left = pool.Spawn(w, p, size);
+            // Escombro recién arrancado: tumbea mucho más rápido que el terreno asentado.
+            // Y de paso se distingue a simple vista de un estático de toda la vida.
+            if (left != null) left.Body.angularVelocity *= Mathf.Max(0.1f, Type.wakeSpinScale);
             return;
         }
     }
@@ -748,6 +772,23 @@ public class Asteroid : MonoBehaviour
             // disparando los guijarros a velocidades absurdas, y el jugador muere sí o sí.
             if (other.Unstoppable)
             {
+                // Apartarse del casco, no quedarse delante. Un imparable que empuja de frente
+                // vuelve a alcanzarte al frame siguiente y te arrastra pegado a él; con una
+                // componente lateral el guijarro resbala por el costado y lo deja pasar.
+                // Es además lo que hace un choque no frontal: desvía de lado.
+                float side = Mathf.Clamp01(other.Type.shoveSideways);
+                if (side > 0f)
+                {
+                    Vector2 n = rb.position - other.Body.position;
+                    if (n.sqrMagnitude > 0.0001f)
+                    {
+                        n.Normalize();
+                        Vector2 tangent = new Vector2(-n.y, n.x);
+                        if (Vector2.Dot(v, tangent) < 0f) tangent = -tangent;
+                        v = Vector2.Lerp(v, tangent * v.magnitude, side);
+                    }
+                }
+
                 float cap = other.Body.linearVelocity.magnitude *
                             Mathf.Max(0.1f, other.Type.shoveSpeedMultiplier);
                 float sp = v.magnitude;

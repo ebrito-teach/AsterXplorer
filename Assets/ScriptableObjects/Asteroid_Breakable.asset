@@ -65,13 +65,21 @@ MonoBehaviour:
   moonOrbitSpeed: {x: 30, y: 75}
   moonTrail: 0
   moonsAreLethal: 0
+  wakeType: {fileID: 0}
+  wakeEvery: 3.5
+  wakeChance: 0.85
+  wakeSpread: 3.5
+  wakeSizeScale: {x: 0.5, y: 1}
+  wakeSpinScale: 3.5
   pullRadius: 0
   pullForce: 9
   pullMaxTargetRadius: 0.45
   pullMaxTargetMassFraction: 0.08
+  pullTangential: 0.65
   killsPlayer: 1
   lethalMinRadius: 0
   shoveSpeedMultiplier: 2
+  shoveSideways: 0.6
   canBreak: 1
   fragmentType: {fileID: 11400000, guid: 9fc9553795252224cba0ee2144907e02, type: 2}
   fragmentGroups:
@@ -134,7 +142,7 @@ MonoBehaviour:
   breakShield: 0.4
   maxFragmentsAlive: 12
   breakOnlyOnScreen: 1
-  logBreakRejections: 1
+  logBreakRejections: 0
   lifetime: 0
   comet: {fileID: 0}
   cost: 7

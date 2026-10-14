@@ -144,6 +144,9 @@ public class AsteroidTypeData : ScriptableObject
     public float wakeSpread = 3.5f;
     [Tooltip("Tamaño del depósito respecto al normal de su tipo")]
     public Vector2 wakeSizeScale = new Vector2(0.5f, 1f);
+    [Tooltip("Multiplica el giro de lo que deja. Escombro recién arrancado tumbea mucho más " +
+             "rápido que el terreno asentado, y así se distingue a simple vista")]
+    public float wakeSpinScale = 3.5f;
 
     [Header("Campo magnético (colosos y cometas)")]
     [Tooltip("Radio en unidades dentro del cual atrae a los asteroides pequeños. 0 = no atrae")]
@@ -154,6 +157,10 @@ public class AsteroidTypeData : ScriptableObject
     public float pullMaxTargetRadius = 0.45f;
     [Tooltip("Masa máxima del arrastrado, en fracción de la masa propia")]
     [Range(0f, 1f)] public float pullMaxTargetMassFraction = 0.08f;
+    [Tooltip("Cuánto del tirón es TANGENCIAL en vez de radial. 0 = caen en picado contra el " +
+             "casco y se amontonan. 0.65 = espiralan y forman un enjambre girando alrededor, " +
+             "que es como se comporta un cuerpo en un campo gravitatorio real")]
+    [Range(0f, 1f)] public float pullTangential = 0.65f;
 
     [Header("Reglas")]
     public bool killsPlayer = true;
@@ -166,6 +173,10 @@ public class AsteroidTypeData : ScriptableObject
              "infinita que va a v, el cuerpo ligero sale como mucho a 2v. Sin este tope, el " +
              "motor resuelve la penetración y dispara los guijarros a velocidades imposibles")]
     public float shoveSpeedMultiplier = 2f;
+    [Tooltip("Cuánto del empujón se convierte en LATERAL, para que lo golpeado resbale por el " +
+             "costado en vez de quedarse delante siendo arrastrado. 0 = empuja de frente y se " +
+             "queda pegado al casco")]
+    [Range(0f, 1f)] public float shoveSideways = 0.6f;
     public bool canBreak = false;
 
     [Header("Rotura (solo tipos que se rompen)")]

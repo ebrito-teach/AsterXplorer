@@ -82,7 +82,7 @@ MonoBehaviour:
   unstoppable: 0
   canBeCaptured: 1
   captureChance: 0.08
-  captureMaxRadius: 38
+  captureMaxRadius: 0.38
   captureMinSpeed: 0.6
   captureMaxSpeed: 7
   acceptsMoons: 0
@@ -97,13 +97,16 @@ MonoBehaviour:
   wakeChance: 0.85
   wakeSpread: 3.5
   wakeSizeScale: {x: 0.5, y: 1}
+  wakeSpinScale: 3.5
   pullRadius: 0
   pullForce: 9
   pullMaxTargetRadius: 0.45
   pullMaxTargetMassFraction: 0.08
+  pullTangential: 0.65
   killsPlayer: 1
   lethalMinRadius: 0
   shoveSpeedMultiplier: 2
+  shoveSideways: 0.6
   canBreak: 0
   fragmentType: {fileID: 0}
   fragmentGroups: []

@@ -10129,8 +10129,8 @@ MonoBehaviour:
   guaranteeUntilLevel: 1
   guaranteeAfterSeconds: 45
   minSecondsAfterStart: 6
-  maxAlive: 1
-  cooldownSeconds: 30
+  maxAlive: 2
+  cooldownSeconds: 18
   cooldownReductionPerTier: 3
   minCooldown: 12
   tierLength: 20

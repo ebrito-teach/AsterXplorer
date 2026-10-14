@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: DifficultyProfile
   m_EditorClassIdentifier: Assembly-CSharp::DifficultyProfile
   tierLength: 20
-  baseBudget: 45
+  baseBudget: 34
   budgetPerLevel: 1.2
   budgetPerTier: 10
   maxBudget: 180
