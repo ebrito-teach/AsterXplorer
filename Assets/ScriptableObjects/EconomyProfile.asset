@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ecc01b1ae1315d47ab1acf6ed53392d, type: 3}
+  m_Name: EconomyProfile
+  m_EditorClassIdentifier: Assembly-CSharp::EconomyProfile
+  geodeChance: 0.12
+  geodeMin: 20
+  geodeMax: 120
+  geodeOncePerLevel: 1
+  priceCommon: 1200
+  priceUncommon: 2400
+  priceRare: 4000
+  packs:
+  - productId: crystals_small
+    label: "Pu\xF1ado"
+    crystals: 1500
+    usd: 0.99
+  - productId: crystals_medium
+    label: Bolsa
+    crystals: 3300
+    usd: 1.99
+  - productId: crystals_large
+    label: Veta
+    crystals: 5400
+    usd: 2.99
+  milestones:
+  - level: 10
+    characterId: hito_01
+  - level: 30
+    characterId: hito_02
+  - level: 60
+    characterId: hito_03
+  - level: 100
+    characterId: hito_04
+  - level: 160
+    characterId: hito_05
+  - level: 250
+    characterId: hito_06

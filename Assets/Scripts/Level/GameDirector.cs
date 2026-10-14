@@ -10,6 +10,11 @@ using UnityEngine;
 /// La semilla de cada nivel sale del número de nivel y de la partida, así que el nivel 7
 /// siempre es el mismo nivel 7 dentro de una partida. Reintentar te devuelve EXACTAMENTE el
 /// mismo reparto: puedes aprendértelo, que es lo que hace que fallar no sea frustrante.
+///
+/// Desde el Hito 2 habla con GameProgress: de ahí saca la partida a continuar y ahí avisa de
+/// cada nivel superado y de cada muerte. Si GameProgress no está en la escena, el director
+/// sigue funcionando igual — sin guardar. Eso es a propósito: quiero poder probar niveles sin
+/// ensuciar el guardado real.
 [DefaultExecutionOrder(5)]      // antes de LevelPopulator (10): le quita el arranque automático
 public class GameDirector : MonoBehaviour
 {
@@ -26,6 +31,12 @@ public class GameDirector : MonoBehaviour
     [Tooltip("Al reintentar, el nivel se genera otra vez igual. Desactívalo solo si prefieres " +
              "que cada intento sea distinto")]
     [SerializeField] private bool sameLevelOnRetry = true;
+    [Tooltip("Si hay una partida guardada a medias, continúa por donde iba. Desactívalo para " +
+             "probar siempre desde Nivel Inicial sin tocar el guardado")]
+    [SerializeField] private bool resumeFromSave = true;
+    [Tooltip("Avisa a GameProgress de cada nivel superado y de cada muerte. Desactívalo para " +
+             "probar niveles sin ensuciar el guardado real")]
+    [SerializeField] private bool recordProgress = true;
 
     [Header("Ritmo")]
     [SerializeField] private float startDelay = 0.4f;
@@ -42,13 +53,19 @@ public class GameDirector : MonoBehaviour
     public int Deaths { get; private set; }
     public bool Running { get; private set; }
     public bool GoalMirrored { get; private set; }
+    /// Semilla del nivel en curso. La necesita quien tenga que sortear algo con el nivel
+    /// (la geoda, por ejemplo) y salir igual en cada intento.
+    public int CurrentSeed { get; private set; }
 
-    /// Para el HUD y el guardado, cuando lleguen
+    /// Para el HUD y el guardado
     public event System.Action<int> LevelStarted;
     public event System.Action<int> LevelCleared;
     public event System.Action<int> PlayerDied;
 
     int retries;
+    float levelStartTime;
+
+    GameProgress Progress => recordProgress ? GameProgress.Instance : null;
 
     void Awake()
     {
@@ -74,8 +91,27 @@ public class GameDirector : MonoBehaviour
 
     IEnumerator Start()
     {
+        int level = Mathf.Max(1, startLevel);
+
+        var p = Progress;
+        if (p != null)
+        {
+            // Continuar: la semilla viene del guardado, o la partida entera no sería la misma
+            if (resumeFromSave && p.HasRun)
+            {
+                runSeed = p.Data.run.runSeed;
+                level = Mathf.Max(1, p.Data.run.level);
+                Deaths = p.Data.run.deaths;
+                Debug.Log($"GameDirector: se continúa la partida guardada en el nivel {level}.");
+            }
+            else
+            {
+                p.BeginRun(runSeed, level);
+            }
+        }
+
         yield return new WaitForSeconds(startDelay);
-        StartLevel(Mathf.Max(1, startLevel));
+        StartLevel(level);
     }
 
     /// Semilla de un nivel: depende de la partida y del número, nunca del momento.
@@ -93,7 +129,8 @@ public class GameDirector : MonoBehaviour
     public void StartLevel(int level)
     {
         CurrentLevel = Mathf.Max(1, level);
-        int seed = SeedFor(CurrentLevel);
+        CurrentSeed = SeedFor(CurrentLevel);
+        int seed = CurrentSeed;
 
         // 1. La corriente primero: de ella depende de qué lado va la meta
         if (FlowField.Instance != null) FlowField.Instance.Randomize(seed);
@@ -117,6 +154,7 @@ public class GameDirector : MonoBehaviour
         if (populator != null) populator.StartLevel(CurrentLevel, seed);
 
         Running = true;
+        levelStartTime = Time.time;
         LevelStarted?.Invoke(CurrentLevel);
         Debug.Log($"GameDirector: nivel {CurrentLevel} (semilla {seed}, meta " +
                   $"{(GoalMirrored ? "izquierda" : "derecha")}, intentos previos {retries})");
@@ -127,6 +165,11 @@ public class GameDirector : MonoBehaviour
         if (!Running) return;
         Running = false;
         retries = 0;
+
+        float seconds = Time.time - levelStartTime;
+        var p = Progress;
+        if (p != null) p.LevelCleared(CurrentLevel, seconds);
+
         LevelCleared?.Invoke(CurrentLevel);
         StartCoroutine(Advance(CurrentLevel + 1, nextLevelDelay));
     }
@@ -137,9 +180,23 @@ public class GameDirector : MonoBehaviour
         Running = false;
         Deaths++;
         retries++;
+
+        var p = Progress;
+        if (p != null) p.PlayerDied(CurrentLevel);
+
         PlayerDied?.Invoke(CurrentLevel);
         // Mismo nivel: no se pierde el progreso por morir
         StartCoroutine(Advance(CurrentLevel, respawnDelay));
+    }
+
+    /// Abandonar la partida: cierra la marca y la mete en el top. Lo llamará el menú de pausa
+    /// en el Hito 6; de momento está aquí para que el guardado quede cerrado y no a medias.
+    public void AbandonRun()
+    {
+        Running = false;
+        StopAllCoroutines();
+        var p = Progress;
+        if (p != null) p.SubmitRun();
     }
 
     IEnumerator Advance(int level, float delay)

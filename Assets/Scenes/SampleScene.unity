@@ -249,6 +249,53 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &199610768
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 199610770}
+  - component: {fileID: 199610769}
+  m_Layer: 0
+  m_Name: GameProgress
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &199610769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 199610768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fed8a3789e01ae94b8c48a9ce68d5323, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameProgress
+  economy: {fileID: 11400000, guid: dbd45b85f763e9b45909afc3f62b6e9e, type: 2}
+  autoSave: 1
+  defaultCharacterId: boy
+--- !u!4 &199610770
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 199610768}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &203573229
 GameObject:
   m_ObjectHideFlags: 0
@@ -10700,6 +10747,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 848801469}
+  - component: {fileID: 848801470}
+  - component: {fileID: 848801471}
   m_Layer: 0
   m_Name: Goal
   m_TagString: Untagged
@@ -10724,6 +10773,81 @@ Transform:
   - {fileID: 1878382495}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &848801470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 848801468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f0015c6176594c4894bea9746a7ee49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Goal
+  disc: {fileID: 1204878798}
+  discSpin: 0
+  discPulse: 0.04
+  discPulseSpeed: 0.9
+  halo: {fileID: 1878382495}
+  haloSpin: 34
+  discSprites:
+  - {fileID: -6087740131698630459, guid: f02167b71def7b84eb0ce6474f17c053, type: 3}
+  - {fileID: 1431231697973978100, guid: f02167b71def7b84eb0ce6474f17c053, type: 3}
+  - {fileID: -962988805560164380, guid: f02167b71def7b84eb0ce6474f17c053, type: 3}
+  - {fileID: -3054053550571349785, guid: f02167b71def7b84eb0ce6474f17c053, type: 3}
+  - {fileID: 7514573503140590322, guid: f02167b71def7b84eb0ce6474f17c053, type: 3}
+  - {fileID: -299912667209987920, guid: f02167b71def7b84eb0ce6474f17c053, type: 3}
+  haloSprites:
+  - {fileID: 21300000, guid: 60a09f10c30cf0e468c928eb60ce1b13, type: 3}
+  - {fileID: 21300000, guid: 125031eae6745c446831869bd089ce01, type: 3}
+  - {fileID: 21300000, guid: b7fbd53c861440c479585c558eb0325d, type: 3}
+  - {fileID: 21300000, guid: 00f688231f578f0408da223823c91dc9, type: 3}
+  - {fileID: 21300000, guid: 7299c3797f2b2294281d985034bf183a, type: 3}
+  - {fileID: 21300000, guid: 54a84fe91c4e1d04280f75252b9c094a, type: 3}
+  tintHaloLikeDisc: 0
+  pullRadius: 4.5
+  pullForce: 7
+  eventHorizon: 0.6
+  absorbTime: 1.1
+  absorbSpin: 900
+  swallowAsteroids: 1
+  asteroidPullFactor: 0.9
+  asteroidHorizon: 0.45
+  maxSwallowRadius: 1.2
+--- !u!114 &848801471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 848801468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 433027e1e246a7042bc3ab24e04a795c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AccretionSpots
+  sprites:
+  - {fileID: 21300000, guid: 4664b26f17eb88e4189d53c4c18eb8a3, type: 3}
+  - {fileID: 21300000, guid: 5dba43c468a0c044989c221ab092daf5, type: 3}
+  - {fileID: 21300000, guid: 6b9ce3d62d4a0db4486fc31419eb421e, type: 3}
+  - {fileID: 21300000, guid: a9cc7835b221e434488ec0ab2411cdef, type: 3}
+  count: 4
+  sizeRange: {x: 0.18, y: 0.34}
+  tintFrom: {fileID: 1204878800}
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  brightness: 0.85
+  radius: {x: 1.5, y: 0.35}
+  tiltDegrees: -8
+  rpm: 14
+  speedSpread: {x: 0.75, y: 1.35}
+  farScale: 0.62
+  farAlpha: 0.45
+  orderInFront: -1
+  orderBehind: -4
+  sortingLayer: Asteroids
+  flickerSpeed: 2.3
+  flickerAmount: 0.25
 --- !u!1 &854299646
 GameObject:
   m_ObjectHideFlags: 0
@@ -11016,7 +11140,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1204878798}
   - component: {fileID: 1204878800}
-  - component: {fileID: 1204878799}
   m_Layer: 0
   m_Name: Disc
   m_TagString: Untagged
@@ -11039,48 +11162,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 848801469}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1204878799
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1204878797}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f0015c6176594c4894bea9746a7ee49, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Goal
-  disc: {fileID: 1204878798}
-  discSpin: -22
-  discPulse: 0.04
-  discPulseSpeed: 0.9
-  halo: {fileID: 1878382495}
-  haloSpin: 34
-  discSprites:
-  - {fileID: -6087740131698630459, guid: f02167b71def7b84eb0ce6474f17c053, type: 3}
-  - {fileID: 1431231697973978100, guid: f02167b71def7b84eb0ce6474f17c053, type: 3}
-  - {fileID: -962988805560164380, guid: f02167b71def7b84eb0ce6474f17c053, type: 3}
-  - {fileID: -3054053550571349785, guid: f02167b71def7b84eb0ce6474f17c053, type: 3}
-  - {fileID: 7514573503140590322, guid: f02167b71def7b84eb0ce6474f17c053, type: 3}
-  - {fileID: -299912667209987920, guid: f02167b71def7b84eb0ce6474f17c053, type: 3}
-  haloSprites:
-  - {fileID: 21300000, guid: 60a09f10c30cf0e468c928eb60ce1b13, type: 3}
-  - {fileID: 21300000, guid: 125031eae6745c446831869bd089ce01, type: 3}
-  - {fileID: 21300000, guid: b7fbd53c861440c479585c558eb0325d, type: 3}
-  - {fileID: 21300000, guid: 00f688231f578f0408da223823c91dc9, type: 3}
-  - {fileID: 21300000, guid: 7299c3797f2b2294281d985034bf183a, type: 3}
-  - {fileID: 21300000, guid: 54a84fe91c4e1d04280f75252b9c094a, type: 3}
-  tintHaloLikeDisc: 0
-  pullRadius: 4.5
-  pullForce: 7
-  eventHorizon: 0.6
-  absorbTime: 1.1
-  absorbSpin: 900
-  swallowAsteroids: 1
-  asteroidPullFactor: 0.9
-  asteroidHorizon: 0.45
-  maxSwallowRadius: 1.2
 --- !u!212 &1204878800
 SpriteRenderer:
   serializedVersion: 2
@@ -16678,7 +16759,7 @@ SpriteRenderer:
   m_SortingOrder: -3
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 60a09f10c30cf0e468c928eb60ce1b13, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.5882353}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.4509804}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -21613,10 +21694,12 @@ MonoBehaviour:
   populator: {fileID: 104327158}
   player: {fileID: 1679237101}
   playerStart: {fileID: 1679237105}
-  goal: {fileID: 1204878799}
+  goal: {fileID: 848801470}
   startLevel: 1
   runSeed: 0
   sameLevelOnRetry: 1
+  resumeFromSave: 1
+  recordProgress: 0
   startDelay: 0.4
   nextLevelDelay: 1.1
   respawnDelay: 1.4
@@ -21630,7 +21713,7 @@ Transform:
   m_GameObject: {fileID: 2029263806}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.75182, y: 5.88504, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -21660,3 +21743,4 @@ SceneRoots:
   - {fileID: 534132924}
   - {fileID: 848801469}
   - {fileID: 2029263808}
+  - {fileID: 199610770}
