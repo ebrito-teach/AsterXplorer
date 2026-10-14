@@ -34,6 +34,8 @@ public class GameBounds : MonoBehaviour
     public Rect GoalCorner { get; private set; }
     public IReadOnlyList<Rect> BlockedRects => blockedRects;
     public bool IsReady { get; private set; }
+    /// La meta está en el lado contrario al habitual (nivel espejado)
+    public bool GoalMirrored { get; private set; }
 
     BoxCollider2D top, bottom, left, right;
     BoxCollider2D[] blockedColliders;
@@ -128,12 +130,26 @@ public class GameBounds : MonoBehaviour
         Place(left,   new Vector2(Area.xMin - t / 2f, Area.center.y), new Vector2(t, Area.height + 2f * t));
         Place(right,  new Vector2(Area.xMax + t / 2f, Area.center.y), new Vector2(t, Area.height + 2f * t));
 
-        var g = goalCornerNormalized;
-        GoalCorner = new Rect(Area.xMin + g.x * Area.width, Area.yMin + g.y * Area.height,
-                              g.width * Area.width, g.height * Area.height);
+        ApplyGoalCorner();
 
         RebuildBlockedZones();
         IsReady = true;
+    }
+
+    /// La meta va RÍO ARRIBA. Si la corriente del nivel va al revés, la esquina se refleja
+    /// en horizontal (nunca en vertical: abajo están la palanca y los botones).
+    public void SetGoalMirrored(bool mirrored)
+    {
+        GoalMirrored = mirrored;
+        if (IsReady || Area.width > 0f) ApplyGoalCorner();
+    }
+
+    void ApplyGoalCorner()
+    {
+        var g = goalCornerNormalized;
+        float x = GoalMirrored ? 1f - g.x - g.width : g.x;
+        GoalCorner = new Rect(Area.xMin + x * Area.width, Area.yMin + g.y * Area.height,
+                              g.width * Area.width, g.height * Area.height);
     }
 
     void RebuildBlockedZones()

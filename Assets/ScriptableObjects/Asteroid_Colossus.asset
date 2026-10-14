@@ -96,13 +96,16 @@ MonoBehaviour:
   wakeChance: 0.85
   wakeSpread: 3.5
   wakeSizeScale: {x: 0.5, y: 1}
+  wakeSpinScale: 3.5
   pullRadius: 5
-  pullForce: 14
+  pullForce: 8
   pullMaxTargetRadius: 0.5
   pullMaxTargetMassFraction: 0.03
+  pullTangential: 0.65
   killsPlayer: 1
   lethalMinRadius: 0
   shoveSpeedMultiplier: 2
+  shoveSideways: 0.6
   canBreak: 0
   fragmentType: {fileID: 0}
   fragmentGroups: []

@@ -49,9 +49,11 @@ public class FlowField : MonoBehaviour
         var prev = Random.state;
         if (seed >= 0) Random.InitState(seed);
 
-        float r = Random.value;
-        float side = r < 0.55f ? 180f : (r < 0.85f ? 0f : (Random.value < 0.5f ? 90f : 270f));
-        baseAngle = side + Random.Range(-15f, 15f);
+        // Solo izquierda o derecha, con desviación. Con corriente vertical no habría un
+        // "lado" al que llevar la meta, y abajo están la palanca y los botones. Además es más
+        // fiel: un cinturón tiene un eje dominante, porque el movimiento orbital es tangencial.
+        float side = Random.value < 0.5f ? 180f : 0f;
+        baseAngle = side + Random.Range(-35f, 35f);
         seedX = Random.Range(0f, 1000f);
         seedY = Random.Range(0f, 1000f);
 

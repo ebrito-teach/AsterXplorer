@@ -50,6 +50,9 @@ public class PlayerController : MonoBehaviour
     public bool IsStunned => Time.time < stunUntil;
     public bool IsInvulnerable => Time.time < invulnerableUntil;
     public bool IsDead { get; private set; }
+    /// El agujero negro se lo está tragando: ni control ni física
+    public bool IsAbsorbed { get; private set; }
+    public Rigidbody2D Body => rb;
 
     /// Golpe contra algo: velocidad del choque (para sacudida, vibración, sonido...)
     public event System.Action<float> OnImpact;
@@ -157,5 +160,48 @@ public class PlayerController : MonoBehaviour
         if (visual != null) visual.gameObject.SetActive(false);
 
         OnDied?.Invoke();
+    }
+
+    /// Lo llama el agujero negro al cruzar el horizonte: suelta el control y la física,
+    /// y deja que el Goal anime la caída.
+    public void BeginAbsorb()
+    {
+        if (IsAbsorbed || IsDead) return;
+        IsAbsorbed = true;
+        thrustLevel = 0f;
+        brakeLevel = 0f;
+        rb.linearVelocity = Vector2.zero;
+        rb.angularVelocity = 0f;
+        rb.simulated = false;
+        enabled = false;                  // deja de leer la entrada
+    }
+
+    /// Vuelve a la vida al empezar un nivel. Sustituye a recargar la escena entera: así no se
+    /// pierden los pools ni hay parón de carga entre nivel y nivel.
+    public void Respawn()
+    {
+        IsDead = false;
+        IsAbsorbed = false;
+        enabled = true;
+
+        transform.localScale = Vector3.one;
+        transform.rotation = Quaternion.identity;
+
+        rb.simulated = true;
+        rb.linearVelocity = Vector2.zero;
+        rb.angularVelocity = 0f;
+
+        thrustLevel = 0f;
+        brakeLevel = 0f;
+        stunUntil = 0f;
+        invulnerableUntil = Time.time + startInvulnerability;
+
+        if (visual != null)
+        {
+            visual.gameObject.SetActive(true);
+            visual.localScale = Vector3.one;
+            visual.localPosition = Vector3.zero;
+        }
+        if (visualRenderer != null) visualRenderer.color = Color.white;
     }
 }

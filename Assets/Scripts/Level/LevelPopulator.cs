@@ -41,7 +41,16 @@ public class LevelPopulator : MonoBehaviour
     int targetPopulation;
     float nextTopUp;
 
-    void Start() { StartLevel(level, randomSeed ? Random.Range(0, int.MaxValue) : seed); }
+    bool autoStart = true;
+
+    /// El GameDirector llama a esto en su Awake: a partir de ahí el nivel lo decide él.
+    public void SuppressAutoStart() { autoStart = false; }
+
+    void Start()
+    {
+        if (!autoStart) return;
+        StartLevel(level, randomSeed ? Random.Range(0, int.MaxValue) : seed);
+    }
 
     void OnDestroy() { if (pool != null) pool.OnExited -= HandleExit; }
 

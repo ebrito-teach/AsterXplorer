@@ -64,13 +64,16 @@ MonoBehaviour:
   wakeChance: 0.85
   wakeSpread: 3.5
   wakeSizeScale: {x: 0.5, y: 1}
+  wakeSpinScale: 3.5
   pullRadius: 0
   pullForce: 9
   pullMaxTargetRadius: 0.45
   pullMaxTargetMassFraction: 0.08
+  pullTangential: 0.65
   killsPlayer: 1
-  lethalMinRadius: 0
+  lethalMinRadius: 0.22
   shoveSpeedMultiplier: 2
+  shoveSideways: 0.6
   canBreak: 0
   fragmentType: {fileID: 0}
   fragmentGroups: []
@@ -86,7 +89,7 @@ MonoBehaviour:
   maxFragmentsAlive: 40
   breakOnlyOnScreen: 1
   logBreakRejections: 0
-  lifetime: 7
+  lifetime: 4
   comet: {fileID: 0}
   cost: 0
   minLevel: 1

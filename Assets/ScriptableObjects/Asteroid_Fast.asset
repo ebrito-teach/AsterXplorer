@@ -68,7 +68,7 @@ MonoBehaviour:
   densityRange: {x: 1, y: 1.6}
   colliderFactor: 0.9
   launchBoost: 1.3
-  impactSpeedCap: 3.5
+  impactSpeedCap: 0
   keepsImpulse: 0.9
   reboundDamping: 0.85
   impactEnergyLoss: 0.15
@@ -96,13 +96,16 @@ MonoBehaviour:
   wakeChance: 0.85
   wakeSpread: 3.5
   wakeSizeScale: {x: 0.5, y: 1}
+  wakeSpinScale: 3.5
   pullRadius: 0
   pullForce: 9
   pullMaxTargetRadius: 0.45
   pullMaxTargetMassFraction: 0.08
+  pullTangential: 0.65
   killsPlayer: 1
   lethalMinRadius: 0
   shoveSpeedMultiplier: 2
+  shoveSideways: 0.6
   canBreak: 0
   fragmentType: {fileID: 0}
   fragmentGroups: []
