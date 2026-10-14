@@ -1,0 +1,2145 @@
+fileFormatVersion: 2
+guid: 3018dd713e0c4d945928e618cb067054
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -9142653115804829861
+    second: fx_anillo_3x1_0
+  - first:
+      213: -921028977435522110
+    second: fx_anillo_3x1_1
+  - first:
+      213: -710553593589645261
+    second: fx_anillo_3x1_2
+  - first:
+      213: -7315800602721450843
+    second: fx_anillo_3x1_3
+  - first:
+      213: 444958478356950288
+    second: fx_anillo_3x1_4
+  - first:
+      213: -1081640399891574753
+    second: fx_anillo_3x1_5
+  - first:
+      213: 5792969280787583538
+    second: fx_anillo_3x1_6
+  - first:
+      213: -2046837680594267327
+    second: fx_anillo_3x1_7
+  - first:
+      213: -3779485002271995437
+    second: fx_anillo_3x1_8
+  - first:
+      213: 8779105090273892929
+    second: fx_anillo_3x1_9
+  - first:
+      213: -782611825584716727
+    second: fx_anillo_3x1_10
+  - first:
+      213: 1795497273557023997
+    second: fx_anillo_3x1_11
+  - first:
+      213: -5077627693326808900
+    second: fx_anillo_3x1_12
+  - first:
+      213: 5913204786393895615
+    second: fx_anillo_3x1_13
+  - first:
+      213: -8034226767177045002
+    second: fx_anillo_3x1_14
+  - first:
+      213: 2880180970233607210
+    second: fx_anillo_3x1_15
+  - first:
+      213: -1429973007623506313
+    second: fx_anillo_3x1_16
+  - first:
+      213: -5444185686879007749
+    second: fx_anillo_3x1_17
+  - first:
+      213: -5994296097219577691
+    second: fx_anillo_3x1_18
+  - first:
+      213: 6253904403301439800
+    second: fx_anillo_3x1_19
+  - first:
+      213: -5525183866766620399
+    second: fx_anillo_3x1_20
+  - first:
+      213: -2966910940408293646
+    second: fx_anillo_3x1_21
+  - first:
+      213: -180518657171123747
+    second: fx_anillo_3x1_22
+  - first:
+      213: 6707198083949247630
+    second: fx_anillo_3x1_23
+  - first:
+      213: -7629483640757931161
+    second: fx_anillo_3x1_24
+  - first:
+      213: 7664214981941076684
+    second: fx_anillo_3x1_25
+  - first:
+      213: 1824095685555798449
+    second: fx_anillo_3x1_26
+  - first:
+      213: -4115391998544948140
+    second: fx_anillo_3x1_27
+  - first:
+      213: -5137172412948314599
+    second: fx_anillo_3x1_28
+  - first:
+      213: 8455899602887757756
+    second: fx_anillo_3x1_29
+  - first:
+      213: 8127457344259593758
+    second: fx_anillo_3x1_30
+  - first:
+      213: 2863101027465300615
+    second: fx_anillo_3x1_31
+  - first:
+      213: -8924222459317648506
+    second: fx_anillo_3x1_32
+  - first:
+      213: -2990879673184256711
+    second: fx_anillo_3x1_33
+  - first:
+      213: 6251193805378868114
+    second: fx_anillo_3x1_34
+  - first:
+      213: 6379480118671340264
+    second: fx_anillo_3x1_35
+  - first:
+      213: -3969753539490652543
+    second: fx_anillo_3x1_36
+  - first:
+      213: -7958534493223438116
+    second: fx_anillo_3x1_37
+  - first:
+      213: -6117598208878194517
+    second: fx_anillo_3x1_38
+  - first:
+      213: 2247464296360718722
+    second: fx_anillo_3x1_39
+  - first:
+      213: -3952501350548990250
+    second: fx_anillo_3x1_40
+  - first:
+      213: 11477551540707427
+    second: fx_anillo_3x1_41
+  - first:
+      213: 759548426463183902
+    second: fx_anillo_3x1_42
+  - first:
+      213: 2544914170312868285
+    second: fx_anillo_3x1_43
+  - first:
+      213: -3020136234890195970
+    second: fx_anillo_3x1_44
+  - first:
+      213: 3223667201875233740
+    second: fx_anillo_3x1_45
+  - first:
+      213: 4218216719479106472
+    second: fx_anillo_3x1_46
+  - first:
+      213: -1719911937475762706
+    second: fx_anillo_3x1_47
+  - first:
+      213: -4368486595036455529
+    second: fx_anillo_3x1_48
+  - first:
+      213: 9201311976864646270
+    second: fx_anillo_3x1_49
+  - first:
+      213: -8194450033333119560
+    second: fx_anillo_3x1_50
+  - first:
+      213: 6582014415361587053
+    second: fx_anillo_3x1_51
+  - first:
+      213: 6647415382602825715
+    second: fx_anillo_3x1_52
+  - first:
+      213: -8615614171525611134
+    second: fx_anillo_3x1_53
+  - first:
+      213: 4138903671216964436
+    second: fx_anillo_3x1_54
+  - first:
+      213: 1286038371229931978
+    second: fx_anillo_3x1_55
+  - first:
+      213: -952999433296292252
+    second: fx_anillo_3x1_56
+  - first:
+      213: 1851477208704671783
+    second: fx_anillo_3x1_57
+  - first:
+      213: 1698809285994762059
+    second: fx_anillo_3x1_58
+  - first:
+      213: 2706975920343019721
+    second: fx_anillo_3x1_59
+  - first:
+      213: -1521116254341374195
+    second: fx_anillo_3x1_60
+  - first:
+      213: 3408173964661620589
+    second: fx_anillo_3x1_61
+  - first:
+      213: 6854406149559229471
+    second: fx_anillo_3x1_62
+  - first:
+      213: -3012477172756383292
+    second: fx_anillo_3x1_63
+  - first:
+      213: 962838637543792783
+    second: fx_anillo_3x1_64
+  - first:
+      213: 6844068307500986508
+    second: fx_anillo_3x1_65
+  - first:
+      213: -8733614988848698300
+    second: fx_anillo_3x1_66
+  - first:
+      213: 3559532568199093669
+    second: fx_anillo_3x1_67
+  - first:
+      213: -9152827124871268034
+    second: fx_anillo_3x1_68
+  - first:
+      213: 639042764909192421
+    second: fx_anillo_3x1_69
+  - first:
+      213: 8492374936901327595
+    second: fx_anillo_3x1_70
+  - first:
+      213: 4602508810852355624
+    second: fx_anillo_3x1_71
+  - first:
+      213: 1619874098858127712
+    second: fx_anillo_3x1_72
+  - first:
+      213: -8370114446883014101
+    second: fx_anillo_3x1_73
+  - first:
+      213: 5069538598673031398
+    second: fx_anillo_3x1_74
+  - first:
+      213: 4516137270075875299
+    second: fx_anillo_3x1_75
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 0
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: 50
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 1
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: fx_anillo_3x1_0
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 34
+        width: 449
+        height: 445
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b57b5d75e65ce1180800000000000000
+      internalID: -9142653115804829861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_anillo_3x1_1
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 472
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cb4d1c5609d733f0800000000000000
+      internalID: -921028977435522110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_anillo_3x1_2
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 466
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3304634754b9326f0800000000000000
+      internalID: -710553593589645261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_anillo_3x1_3
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 30
+        width: 344
+        height: 453
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a40333dc1e097a90800000000000000
+      internalID: -7315800602721450843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_anillo_3x1_4
+      rect:
+        serializedVersion: 2
+        x: 1053
+        y: 32
+        width: 353
+        height: 449
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01da34ae06fcc2600800000000000000
+      internalID: 444958478356950288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_anillo_3x1_5
+      rect:
+        serializedVersion: 2
+        x: 1223
+        y: 452
+        width: 26
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1050cd79cd3df0f0800000000000000
+      internalID: -1081640399891574753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_anillo_3x1_6
+      rect:
+        serializedVersion: 2
+        x: 1253
+        y: 465
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23218105ed2c46050800000000000000
+      internalID: 5792969280787583538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_anillo_3x1_7
+      rect:
+        serializedVersion: 2
+        x: 1266
+        y: 464
+        width: 40
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1435b4f59fb2893e0800000000000000
+      internalID: -2046837680594267327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_anillo_3x1_8
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 441
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d949ad3a629c8bc0800000000000000
+      internalID: -3779485002271995437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_anillo_3x1_9
+      rect:
+        serializedVersion: 2
+        x: 1248
+        y: 444
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14a599fd095a5d970800000000000000
+      internalID: 8779105090273892929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_anillo_3x1_10
+      rect:
+        serializedVersion: 2
+        x: 1277
+        y: 441
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 944c00be0ba9325f0800000000000000
+      internalID: -782611825584716727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_anillo_3x1_11
+      rect:
+        serializedVersion: 2
+        x: 1295
+        y: 439
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfc7c81e143eae810800000000000000
+      internalID: 1795497273557023997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_anillo_3x1_12
+      rect:
+        serializedVersion: 2
+        x: 1308
+        y: 443
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb8c19de384a889b0800000000000000
+      internalID: -5077627693326808900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_anillo_3x1_13
+      rect:
+        serializedVersion: 2
+        x: 1337
+        y: 445
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb2d5297c6cef0250800000000000000
+      internalID: 5913204786393895615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_anillo_3x1_14
+      rect:
+        serializedVersion: 2
+        x: 882
+        y: 421
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fb2a798251b08090800000000000000
+      internalID: -8034226767177045002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_anillo_3x1_15
+      rect:
+        serializedVersion: 2
+        x: 1346
+        y: 428
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a243d93255578f720800000000000000
+      internalID: 2880180970233607210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_anillo_3x1_16
+      rect:
+        serializedVersion: 2
+        x: 1346
+        y: 424
+        width: 11
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 776343a3027b72ce0800000000000000
+      internalID: -1429973007623506313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_anillo_3x1_17
+      rect:
+        serializedVersion: 2
+        x: 1355
+        y: 430
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfb8f4a56fd5274b0800000000000000
+      internalID: -5444185686879007749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_anillo_3x1_18
+      rect:
+        serializedVersion: 2
+        x: 1361
+        y: 420
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a877be657bffcca0800000000000000
+      internalID: -5994296097219577691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_anillo_3x1_19
+      rect:
+        serializedVersion: 2
+        x: 1403
+        y: 416
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83998029be45ac650800000000000000
+      internalID: 6253904403301439800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_anillo_3x1_20
+      rect:
+        serializedVersion: 2
+        x: 1338
+        y: 399
+        width: 28
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11908aefb8a9253b0800000000000000
+      internalID: -5525183866766620399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_anillo_3x1_21
+      rect:
+        serializedVersion: 2
+        x: 1345
+        y: 418
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f65eb4183a63d6d0800000000000000
+      internalID: -2966910940408293646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_anillo_3x1_22
+      rect:
+        serializedVersion: 2
+        x: 1345
+        y: 109
+        width: 161
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd11cfbdc3bae7df0800000000000000
+      internalID: -180518657171123747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_anillo_3x1_23
+      rect:
+        serializedVersion: 2
+        x: 883
+        y: 394
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8cb9fffe11c41d50800000000000000
+      internalID: 6707198083949247630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_anillo_3x1_24
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 30
+        width: 335
+        height: 356
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76338fc2d01ae1690800000000000000
+      internalID: -7629483640757931161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_anillo_3x1_25
+      rect:
+        serializedVersion: 2
+        x: 878
+        y: 381
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc223d85be2cc5a60800000000000000
+      internalID: 7664214981941076684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_anillo_3x1_26
+      rect:
+        serializedVersion: 2
+        x: 936
+        y: 372
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b140ed8c5d705910800000000000000
+      internalID: 1824095685555798449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_anillo_3x1_27
+      rect:
+        serializedVersion: 2
+        x: 1342
+        y: 355
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4545e3718c033e6c0800000000000000
+      internalID: -4115391998544948140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_anillo_3x1_28
+      rect:
+        serializedVersion: 2
+        x: 1071
+        y: 331
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 916874888e815b8b0800000000000000
+      internalID: -5137172412948314599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_anillo_3x1_29
+      rect:
+        serializedVersion: 2
+        x: 1057
+        y: 316
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbfcd7633e3695570800000000000000
+      internalID: 8455899602887757756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_anillo_3x1_30
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 307
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e169bbbb4678ac070800000000000000
+      internalID: 8127457344259593758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_anillo_3x1_31
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 281
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78a00221737cbb720800000000000000
+      internalID: 2863101027465300615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_anillo_3x1_32
+      rect:
+        serializedVersion: 2
+        x: 954
+        y: 293
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6830fcfa4fac62480800000000000000
+      internalID: -8924222459317648506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_anillo_3x1_33
+      rect:
+        serializedVersion: 2
+        x: 1480
+        y: 294
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93d7ae998c24e76d0800000000000000
+      internalID: -2990879673184256711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_anillo_3x1_34
+      rect:
+        serializedVersion: 2
+        x: 956
+        y: 283
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 293dabf45a3b0c650800000000000000
+      internalID: 6251193805378868114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_anillo_3x1_35
+      rect:
+        serializedVersion: 2
+        x: 1072
+        y: 279
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e272153e57788850800000000000000
+      internalID: 6379480118671340264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_anillo_3x1_36
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 268
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18e5fc0403a98e8c0800000000000000
+      internalID: -3969753539490652543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_anillo_3x1_37
+      rect:
+        serializedVersion: 2
+        x: 961
+        y: 275
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd839b66b0b9d8190800000000000000
+      internalID: -7958534493223438116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_anillo_3x1_38
+      rect:
+        serializedVersion: 2
+        x: 1475
+        y: 270
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba0df3967dce91ba0800000000000000
+      internalID: -6117598208878194517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_anillo_3x1_39
+      rect:
+        serializedVersion: 2
+        x: 1484
+        y: 268
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28134f5bed8903f10800000000000000
+      internalID: 2247464296360718722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_anillo_3x1_40
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 257
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d6964286f4e529c0800000000000000
+      internalID: -3952501350548990250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_anillo_3x1_41
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 240
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 360a976b5c6c82000800000000000000
+      internalID: 11477551540707427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_anillo_3x1_42
+      rect:
+        serializedVersion: 2
+        x: 1066
+        y: 249
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e148b0505457a8a00800000000000000
+      internalID: 759548426463183902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_anillo_3x1_43
+      rect:
+        serializedVersion: 2
+        x: 1473
+        y: 246
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db14b5154f9515320800000000000000
+      internalID: 2544914170312868285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_anillo_3x1_44
+      rect:
+        serializedVersion: 2
+        x: 1063
+        y: 237
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efb851288125616d0800000000000000
+      internalID: -3020136234890195970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_anillo_3x1_45
+      rect:
+        serializedVersion: 2
+        x: 1480
+        y: 227
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccbc9d98d34ccbc20800000000000000
+      internalID: 3223667201875233740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_anillo_3x1_46
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 208
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ab6a2ed1cd1a8a30800000000000000
+      internalID: 4218216719479106472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_anillo_3x1_47
+      rect:
+        serializedVersion: 2
+        x: 961
+        y: 217
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee5adc19435a128e0800000000000000
+      internalID: -1719911937475762706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_anillo_3x1_48
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 200
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79ddbc846940063c0800000000000000
+      internalID: -4368486595036455529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_anillo_3x1_49
+      rect:
+        serializedVersion: 2
+        x: 1479
+        y: 180
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7480980e70a1bf70800000000000000
+      internalID: 9201311976864646270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_anillo_3x1_50
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 107
+        width: 19
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b5dd795c17774e80800000000000000
+      internalID: -8194450033333119560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_anillo_3x1_51
+      rect:
+        serializedVersion: 2
+        x: 1234
+        y: 36
+        width: 111
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d67b02edc33085b50800000000000000
+      internalID: 6582014415361587053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_anillo_3x1_52
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 80
+        width: 96
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ff328a221d504c50800000000000000
+      internalID: 6647415382602825715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_anillo_3x1_53
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 116
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2810568fe803f6880800000000000000
+      internalID: -8615614171525611134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_anillo_3x1_54
+      rect:
+        serializedVersion: 2
+        x: 1415
+        y: 111
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 453827ac5f6507930800000000000000
+      internalID: 4138903671216964436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_anillo_3x1_55
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 96
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac99eacb51de8d110800000000000000
+      internalID: 1286038371229931978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_anillo_3x1_56
+      rect:
+        serializedVersion: 2
+        x: 1186
+        y: 42
+        width: 54
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 466d93b801446c2f0800000000000000
+      internalID: -952999433296292252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_anillo_3x1_57
+      rect:
+        serializedVersion: 2
+        x: 1203
+        y: 91
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 720e29636b4c1b910800000000000000
+      internalID: 1851477208704671783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_anillo_3x1_58
+      rect:
+        serializedVersion: 2
+        x: 1420
+        y: 85
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4f4ad08b02639710800000000000000
+      internalID: 1698809285994762059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_anillo_3x1_59
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 67
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c0f493e14c119520800000000000000
+      internalID: 2706975920343019721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_anillo_3x1_60
+      rect:
+        serializedVersion: 2
+        x: 1186
+        y: 78
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0fd8ed63d8e3eae0800000000000000
+      internalID: -1521116254341374195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_anillo_3x1_61
+      rect:
+        serializedVersion: 2
+        x: 1203
+        y: 80
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6ff360e9244c4f20800000000000000
+      internalID: 3408173964661620589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_anillo_3x1_62
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 66
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1c1bbaa31ebf1f50800000000000000
+      internalID: 6854406149559229471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_anillo_3x1_63
+      rect:
+        serializedVersion: 2
+        x: 1351
+        y: 78
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c9f1efd8f78136d0800000000000000
+      internalID: -3012477172756383292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_anillo_3x1_64
+      rect:
+        serializedVersion: 2
+        x: 1366
+        y: 78
+        width: 10
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f80a1d6b3a0bc5d00800000000000000
+      internalID: 962838637543792783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_anillo_3x1_65
+      rect:
+        serializedVersion: 2
+        x: 751
+        y: 65
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c80fa1f3dd30bfe50800000000000000
+      internalID: 6844068307500986508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_anillo_3x1_66
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 53
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44c65a8b077fbc680800000000000000
+      internalID: -8733614988848698300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_anillo_3x1_67
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 60
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5add0f5f200066130800000000000000
+      internalID: 3559532568199093669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_anillo_3x1_68
+      rect:
+        serializedVersion: 2
+        x: 1226
+        y: 61
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e39fc734930aaf080800000000000000
+      internalID: -9152827124871268034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_anillo_3x1_69
+      rect:
+        serializedVersion: 2
+        x: 1241
+        y: 53
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e422b642065ed800800000000000000
+      internalID: 639042764909192421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_anillo_3x1_70
+      rect:
+        serializedVersion: 2
+        x: 1255
+        y: 51
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bea1f65b20afad570800000000000000
+      internalID: 8492374936901327595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_anillo_3x1_71
+      rect:
+        serializedVersion: 2
+        x: 1262
+        y: 59
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82ec57ad0656fdf30800000000000000
+      internalID: 4602508810852355624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_anillo_3x1_72
+      rect:
+        serializedVersion: 2
+        x: 1371
+        y: 52
+        width: 11
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0617b4319e2fa7610800000000000000
+      internalID: 1619874098858127712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_anillo_3x1_73
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 31
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2a3c20e14167db80800000000000000
+      internalID: -8370114446883014101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_anillo_3x1_74
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 36
+        width: 20
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e0a905fe7e9a5640800000000000000
+      internalID: 5069538598673031398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_anillo_3x1_75
+      rect:
+        serializedVersion: 2
+        x: 1295
+        y: 32
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ef56cb6bea8cae30800000000000000
+      internalID: 4516137270075875299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      fx_anillo_3x1_0: -9142653115804829861
+      fx_anillo_3x1_1: -921028977435522110
+      fx_anillo_3x1_10: -782611825584716727
+      fx_anillo_3x1_11: 1795497273557023997
+      fx_anillo_3x1_12: -5077627693326808900
+      fx_anillo_3x1_13: 5913204786393895615
+      fx_anillo_3x1_14: -8034226767177045002
+      fx_anillo_3x1_15: 2880180970233607210
+      fx_anillo_3x1_16: -1429973007623506313
+      fx_anillo_3x1_17: -5444185686879007749
+      fx_anillo_3x1_18: -5994296097219577691
+      fx_anillo_3x1_19: 6253904403301439800
+      fx_anillo_3x1_2: -710553593589645261
+      fx_anillo_3x1_20: -5525183866766620399
+      fx_anillo_3x1_21: -2966910940408293646
+      fx_anillo_3x1_22: -180518657171123747
+      fx_anillo_3x1_23: 6707198083949247630
+      fx_anillo_3x1_24: -7629483640757931161
+      fx_anillo_3x1_25: 7664214981941076684
+      fx_anillo_3x1_26: 1824095685555798449
+      fx_anillo_3x1_27: -4115391998544948140
+      fx_anillo_3x1_28: -5137172412948314599
+      fx_anillo_3x1_29: 8455899602887757756
+      fx_anillo_3x1_3: -7315800602721450843
+      fx_anillo_3x1_30: 8127457344259593758
+      fx_anillo_3x1_31: 2863101027465300615
+      fx_anillo_3x1_32: -8924222459317648506
+      fx_anillo_3x1_33: -2990879673184256711
+      fx_anillo_3x1_34: 6251193805378868114
+      fx_anillo_3x1_35: 6379480118671340264
+      fx_anillo_3x1_36: -3969753539490652543
+      fx_anillo_3x1_37: -7958534493223438116
+      fx_anillo_3x1_38: -6117598208878194517
+      fx_anillo_3x1_39: 2247464296360718722
+      fx_anillo_3x1_4: 444958478356950288
+      fx_anillo_3x1_40: -3952501350548990250
+      fx_anillo_3x1_41: 11477551540707427
+      fx_anillo_3x1_42: 759548426463183902
+      fx_anillo_3x1_43: 2544914170312868285
+      fx_anillo_3x1_44: -3020136234890195970
+      fx_anillo_3x1_45: 3223667201875233740
+      fx_anillo_3x1_46: 4218216719479106472
+      fx_anillo_3x1_47: -1719911937475762706
+      fx_anillo_3x1_48: -4368486595036455529
+      fx_anillo_3x1_49: 9201311976864646270
+      fx_anillo_3x1_5: -1081640399891574753
+      fx_anillo_3x1_50: -8194450033333119560
+      fx_anillo_3x1_51: 6582014415361587053
+      fx_anillo_3x1_52: 6647415382602825715
+      fx_anillo_3x1_53: -8615614171525611134
+      fx_anillo_3x1_54: 4138903671216964436
+      fx_anillo_3x1_55: 1286038371229931978
+      fx_anillo_3x1_56: -952999433296292252
+      fx_anillo_3x1_57: 1851477208704671783
+      fx_anillo_3x1_58: 1698809285994762059
+      fx_anillo_3x1_59: 2706975920343019721
+      fx_anillo_3x1_6: 5792969280787583538
+      fx_anillo_3x1_60: -1521116254341374195
+      fx_anillo_3x1_61: 3408173964661620589
+      fx_anillo_3x1_62: 6854406149559229471
+      fx_anillo_3x1_63: -3012477172756383292
+      fx_anillo_3x1_64: 962838637543792783
+      fx_anillo_3x1_65: 6844068307500986508
+      fx_anillo_3x1_66: -8733614988848698300
+      fx_anillo_3x1_67: 3559532568199093669
+      fx_anillo_3x1_68: -9152827124871268034
+      fx_anillo_3x1_69: 639042764909192421
+      fx_anillo_3x1_7: -2046837680594267327
+      fx_anillo_3x1_70: 8492374936901327595
+      fx_anillo_3x1_71: 4602508810852355624
+      fx_anillo_3x1_72: 1619874098858127712
+      fx_anillo_3x1_73: -8370114446883014101
+      fx_anillo_3x1_74: 5069538598673031398
+      fx_anillo_3x1_75: 4516137270075875299
+      fx_anillo_3x1_8: -3779485002271995437
+      fx_anillo_3x1_9: 8779105090273892929
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

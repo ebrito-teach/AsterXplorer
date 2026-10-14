@@ -41,10 +41,29 @@ public class ImpactFeedback : MonoBehaviour
     [SerializeField] private float maxZoomOut = 0.25f;      // unidades de tamaño ortográfico
     [SerializeField] private float zoomRecover = 1.5f;
 
-    [Header("Partículas (opcional)")]
-    [Tooltip("Estallido en el punto de contacto. Sirve el mismo FX_Break que ya tienes")]
+    [Header("Polvo (FX_Impact_Dust)")]
     [SerializeField] private ParticleSystem impactFx;
-    [SerializeField] private float fxMinEnergy = 12f;
+    [SerializeField] private float fxMinEnergy = 3f;
+    [Tooltip("Partículas que emite: la primera en el golpe más flojo, la segunda en el más " +
+             "fuerte. Con más de 15 el polvo tapa el campo de juego")]
+    [SerializeField] private Vector2Int fxBurst = new Vector2Int(3, 12);
+    [Tooltip("Escala del efecto entre el golpe más flojo y el más fuerte")]
+    [SerializeField] private Vector2 fxScale = new Vector2(0.6f, 1.4f);
+
+    [Header("Destello (FX_Impact_Flash)")]
+    [SerializeField] private ParticleSystem flashFx;
+    [SerializeField] private float flashMinEnergy = 2f;
+
+    [Header("Anillo de eyección (FX_Impact_Ring)")]
+    [Tooltip("Solo en los golpes gordos: si sale en todos, pierde todo el peso")]
+    [SerializeField] private ParticleSystem ringFx;
+    [SerializeField] private float ringMinEnergy = 14f;
+
+    [Header("Esquirlas (FX_Impact_Sparks)")]
+    [Tooltip("Se orienta sola hacia donde sale la eyecta. Su Shape debe ser Cone")]
+    [SerializeField] private ParticleSystem sparksFx;
+    [SerializeField] private float sparksMinEnergy = 4f;
+    [SerializeField] private Vector2Int sparksBurst = new Vector2Int(3, 12);
 
     Vector3 camBase;
     float baseSize;
@@ -84,7 +103,7 @@ public class ImpactFeedback : MonoBehaviour
         }
     }
 
-    void OnImpact(Vector2 point, float energy, float heaviestMass)
+    void OnImpact(Vector2 point, Vector2 dir, float energy, float heaviestMass)
     {
         if (energy < minEnergy) return;
 
@@ -113,8 +132,32 @@ public class ImpactFeedback : MonoBehaviour
         if (impactFx != null && energy >= fxMinEnergy)
         {
             impactFx.transform.position = point;
-            impactFx.transform.localScale = Vector3.one * Mathf.Lerp(0.8f, 2.2f, t);
-            impactFx.Emit(Mathf.RoundToInt(Mathf.Lerp(8f, 40f, t)));
+            impactFx.transform.localScale = Vector3.one * Mathf.Lerp(fxScale.x, fxScale.y, t);
+            impactFx.Emit(Mathf.RoundToInt(Mathf.Lerp(fxBurst.x, fxBurst.y, t)));
+        }
+
+        if (flashFx != null && energy >= flashMinEnergy)
+        {
+            flashFx.transform.position = point;
+            flashFx.transform.localScale = Vector3.one * Mathf.Lerp(0.6f, 1.5f, t);
+            flashFx.Emit(1);
+        }
+
+        if (ringFx != null && energy >= ringMinEnergy)
+        {
+            ringFx.transform.position = point;
+            ringFx.transform.localScale = Vector3.one * Mathf.Lerp(0.8f, 1.8f, t);
+            ringFx.Emit(1);
+        }
+
+        if (sparksFx != null && energy >= sparksMinEnergy)
+        {
+            sparksFx.transform.position = point;
+            // El cono apunta hacia donde sale la eyecta. Con la rotación X de -90 que Unity
+            // da por defecto al sistema, el cono mira a +Y del mundo; esto lo lleva a 'dir'.
+            sparksFx.transform.rotation = Quaternion.FromToRotation(Vector3.up, (Vector3)dir)
+                                        * Quaternion.Euler(-90f, 0f, 0f);
+            sparksFx.Emit(Mathf.RoundToInt(Mathf.Lerp(sparksBurst.x, sparksBurst.y, t)));
         }
     }
 

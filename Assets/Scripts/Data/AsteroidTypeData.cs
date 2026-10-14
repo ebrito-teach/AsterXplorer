@@ -130,6 +130,21 @@ public class AsteroidTypeData : ScriptableObject
              "verdadero en un coloso o un cometa (enjambre mortal que viaja con él)")]
     public bool moonsAreLethal = false;
 
+    [Header("Estela de escombro: lo que DEJA al pasar")]
+    [Tooltip("Tipo que va depositando a su paso, normalmente Asteroid_Static. Un cuerpo que " +
+             "barre un cinturón no solo aparta material: arranca y deja caer el suyo, y parte " +
+             "de lo que levanta vuelve a posarse detrás. Así el coloso TRANSFORMA el nivel en " +
+             "vez de vaciarlo")]
+    public AsteroidTypeData wakeType;
+    [Tooltip("Unidades que recorre entre un depósito y el siguiente")]
+    public float wakeEvery = 3.5f;
+    [Tooltip("Probabilidad de depositar en cada intervalo")]
+    [Range(0f, 1f)] public float wakeChance = 0.85f;
+    [Tooltip("Dispersión perpendicular a su trayectoria, en unidades")]
+    public float wakeSpread = 3.5f;
+    [Tooltip("Tamaño del depósito respecto al normal de su tipo")]
+    public Vector2 wakeSizeScale = new Vector2(0.5f, 1f);
+
     [Header("Campo magnético (colosos y cometas)")]
     [Tooltip("Radio en unidades dentro del cual atrae a los asteroides pequeños. 0 = no atrae")]
     public float pullRadius = 0f;

@@ -1,0 +1,1573 @@
+fileFormatVersion: 2
+guid: e8dbaaf0af070994784628b79c51b1e6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3794521097538984357
+    second: gravilla_6x9_0
+  - first:
+      213: -3304362551562291678
+    second: gravilla_6x9_1
+  - first:
+      213: -4958590048823702163
+    second: gravilla_6x9_2
+  - first:
+      213: -5005176650886045921
+    second: gravilla_6x9_3
+  - first:
+      213: -6708468007630410009
+    second: gravilla_6x9_4
+  - first:
+      213: 1080966535467256304
+    second: gravilla_6x9_5
+  - first:
+      213: -5074292312168502991
+    second: gravilla_6x9_6
+  - first:
+      213: 199107806147107017
+    second: gravilla_6x9_7
+  - first:
+      213: -4917898397503937845
+    second: gravilla_6x9_8
+  - first:
+      213: 7157969902233723070
+    second: gravilla_6x9_9
+  - first:
+      213: 3422427500071950367
+    second: gravilla_6x9_10
+  - first:
+      213: -3891626432650917438
+    second: gravilla_6x9_11
+  - first:
+      213: -2348954381425077611
+    second: gravilla_6x9_12
+  - first:
+      213: 1269379939584515857
+    second: gravilla_6x9_13
+  - first:
+      213: -4110472255144183782
+    second: gravilla_6x9_14
+  - first:
+      213: 8060381099442333682
+    second: gravilla_6x9_15
+  - first:
+      213: 408728210153750323
+    second: gravilla_6x9_16
+  - first:
+      213: -8846475453704284916
+    second: gravilla_6x9_17
+  - first:
+      213: 2179530719489048373
+    second: gravilla_6x9_18
+  - first:
+      213: 7507091596429870629
+    second: gravilla_6x9_19
+  - first:
+      213: 7960627289907775735
+    second: gravilla_6x9_20
+  - first:
+      213: 5427810107797554389
+    second: gravilla_6x9_21
+  - first:
+      213: -7018933962145351883
+    second: gravilla_6x9_22
+  - first:
+      213: -4159564299408968515
+    second: gravilla_6x9_23
+  - first:
+      213: 3697708440125957448
+    second: gravilla_6x9_24
+  - first:
+      213: 2138237310277391153
+    second: gravilla_6x9_25
+  - first:
+      213: 6998616859841240907
+    second: gravilla_6x9_26
+  - first:
+      213: -7798131135939761411
+    second: gravilla_6x9_27
+  - first:
+      213: 681868207107469965
+    second: gravilla_6x9_28
+  - first:
+      213: 7716912254015255603
+    second: gravilla_6x9_29
+  - first:
+      213: 1804161676427724141
+    second: gravilla_6x9_30
+  - first:
+      213: 3048125782231110263
+    second: gravilla_6x9_31
+  - first:
+      213: -3499299355464285620
+    second: gravilla_6x9_32
+  - first:
+      213: -6643818694978630706
+    second: gravilla_6x9_33
+  - first:
+      213: 5141038288267049332
+    second: gravilla_6x9_34
+  - first:
+      213: 3288887652605098095
+    second: gravilla_6x9_35
+  - first:
+      213: 2570198394545928169
+    second: gravilla_6x9_36
+  - first:
+      213: -6014023267614480055
+    second: gravilla_6x9_37
+  - first:
+      213: -7357443390913123645
+    second: gravilla_6x9_38
+  - first:
+      213: -6968811069942341190
+    second: gravilla_6x9_39
+  - first:
+      213: -5407522052904106856
+    second: gravilla_6x9_40
+  - first:
+      213: -7538858850465593950
+    second: gravilla_6x9_41
+  - first:
+      213: -6452948001865048440
+    second: gravilla_6x9_42
+  - first:
+      213: -3882578496166977870
+    second: gravilla_6x9_43
+  - first:
+      213: -3537943205689460253
+    second: gravilla_6x9_44
+  - first:
+      213: -6720155811593768839
+    second: gravilla_6x9_45
+  - first:
+      213: 5303193671245364408
+    second: gravilla_6x9_46
+  - first:
+      213: -1057334224130551814
+    second: gravilla_6x9_47
+  - first:
+      213: -4175003153546295990
+    second: gravilla_6x9_48
+  - first:
+      213: -8317441249655094866
+    second: gravilla_6x9_49
+  - first:
+      213: -1252626251132492904
+    second: gravilla_6x9_50
+  - first:
+      213: -4980265959220012055
+    second: gravilla_6x9_51
+  - first:
+      213: -6277435518770455111
+    second: gravilla_6x9_52
+  - first:
+      213: 520190705389800812
+    second: gravilla_6x9_53
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 1800
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: gravilla_6x9_0
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 1297
+        width: 189
+        height: 223
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a9598f75d8d8a430800000000000000
+      internalID: 3794521097538984357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gravilla_6x9_1
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 1299
+        width: 180
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 226b60144cb8422d0800000000000000
+      internalID: -3304362551562291678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gravilla_6x9_2
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 1310
+        width: 189
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6d83115f9c8f2bb0800000000000000
+      internalID: -4958590048823702163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gravilla_6x9_3
+      rect:
+        serializedVersion: 2
+        x: 821
+        y: 1312
+        width: 150
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1f9bd5ca5a0a8ab0800000000000000
+      internalID: -5005176650886045921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gravilla_6x9_4
+      rect:
+        serializedVersion: 2
+        x: 1075
+        y: 1320
+        width: 154
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7eeed1ad3ebb6e2a0800000000000000
+      internalID: -6708468007630410009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gravilla_6x9_5
+      rect:
+        serializedVersion: 2
+        x: 1339
+        y: 1331
+        width: 137
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f94c98365d500f00800000000000000
+      internalID: 1080966535467256304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gravilla_6x9_6
+      rect:
+        serializedVersion: 2
+        x: 1615
+        y: 1341
+        width: 98
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13963bed60e7499b0800000000000000
+      internalID: -5074292312168502991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gravilla_6x9_7
+      rect:
+        serializedVersion: 2
+        x: 1872
+        y: 1361
+        width: 96
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c8d769ae7f53c200800000000000000
+      internalID: 199107806147107017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gravilla_6x9_8
+      rect:
+        serializedVersion: 2
+        x: 2140
+        y: 1369
+        width: 71
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc2a05fa67d10cbb0800000000000000
+      internalID: -4917898397503937845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gravilla_6x9_9
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 1043
+        width: 225
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb0249793b7365360800000000000000
+      internalID: 7157969902233723070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gravilla_6x9_10
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 1050
+        width: 217
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f181153bda7ee7f20800000000000000
+      internalID: 3422427500071950367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gravilla_6x9_11
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 1050
+        width: 168
+        height: 205
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c94253d06a2ef9c0800000000000000
+      internalID: -3891626432650917438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gravilla_6x9_12
+      rect:
+        serializedVersion: 2
+        x: 814
+        y: 1056
+        width: 163
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5929f857f66d66fd0800000000000000
+      internalID: -2348954381425077611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gravilla_6x9_13
+      rect:
+        serializedVersion: 2
+        x: 1058
+        y: 1069
+        width: 187
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11f11ff545ebd9110800000000000000
+      internalID: 1269379939584515857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gravilla_6x9_14
+      rect:
+        serializedVersion: 2
+        x: 1340
+        y: 1080
+        width: 136
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a18380d134ba4f6c0800000000000000
+      internalID: -4110472255144183782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gravilla_6x9_15
+      rect:
+        serializedVersion: 2
+        x: 1610
+        y: 1084
+        width: 108
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f7688a77e93cdf60800000000000000
+      internalID: 8060381099442333682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gravilla_6x9_16
+      rect:
+        serializedVersion: 2
+        x: 1872
+        y: 1106
+        width: 95
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33f35ef34281ca500800000000000000
+      internalID: 408728210153750323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gravilla_6x9_17
+      rect:
+        serializedVersion: 2
+        x: 2137
+        y: 1113
+        width: 77
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c055ebb02710b3580800000000000000
+      internalID: -8846475453704284916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gravilla_6x9_18
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 783
+        width: 211
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53f323844af3f3e10800000000000000
+      internalID: 2179530719489048373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gravilla_6x9_19
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 790
+        width: 203
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 526c58d580c8e2860800000000000000
+      internalID: 7507091596429870629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gravilla_6x9_20
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 804
+        width: 217
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f8cb3cc754d97e60800000000000000
+      internalID: 7960627289907775735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gravilla_6x9_21
+      rect:
+        serializedVersion: 2
+        x: 787
+        y: 813
+        width: 217
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d44c870984735b40800000000000000
+      internalID: 5427810107797554389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gravilla_6x9_22
+      rect:
+        serializedVersion: 2
+        x: 1070
+        y: 805
+        width: 162
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 537b664dfbcb79e90800000000000000
+      internalID: -7018933962145351883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gravilla_6x9_23
+      rect:
+        serializedVersion: 2
+        x: 1332
+        y: 820
+        width: 151
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db4f459de424646c0800000000000000
+      internalID: -4159564299408968515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gravilla_6x9_24
+      rect:
+        serializedVersion: 2
+        x: 1603
+        y: 822
+        width: 121
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 845eba82c36e05330800000000000000
+      internalID: 3697708440125957448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gravilla_6x9_25
+      rect:
+        serializedVersion: 2
+        x: 1864
+        y: 846
+        width: 112
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 133129c318b8cad10800000000000000
+      internalID: 2138237310277391153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gravilla_6x9_26
+      rect:
+        serializedVersion: 2
+        x: 2135
+        y: 859
+        width: 82
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4f95e924f4102160800000000000000
+      internalID: 6998616859841240907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gravilla_6x9_27
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 529
+        width: 221
+        height: 223
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfaa5625c0977c390800000000000000
+      internalID: -7798131135939761411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gravilla_6x9_28
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 533
+        width: 207
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d82f54c858b767900800000000000000
+      internalID: 681868207107469965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gravilla_6x9_29
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 545
+        width: 210
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 334307f1fcaf71b60800000000000000
+      internalID: 7716912254015255603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gravilla_6x9_30
+      rect:
+        serializedVersion: 2
+        x: 809
+        y: 537
+        width: 174
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6509d06c7ba90910800000000000000
+      internalID: 1804161676427724141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gravilla_6x9_31
+      rect:
+        serializedVersion: 2
+        x: 1055
+        y: 561
+        width: 196
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7725890df3e1d4a20800000000000000
+      internalID: 3048125782231110263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gravilla_6x9_32
+      rect:
+        serializedVersion: 2
+        x: 1332
+        y: 560
+        width: 152
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c424ccab6cdff6fc0800000000000000
+      internalID: -3499299355464285620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gravilla_6x9_33
+      rect:
+        serializedVersion: 2
+        x: 1608
+        y: 565
+        width: 111
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecb03bde81a6cc3a0800000000000000
+      internalID: -6643818694978630706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gravilla_6x9_34
+      rect:
+        serializedVersion: 2
+        x: 1873
+        y: 582
+        width: 93
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 479f6d4b513a85740800000000000000
+      internalID: 5141038288267049332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gravilla_6x9_35
+      rect:
+        serializedVersion: 2
+        x: 2135
+        y: 603
+        width: 82
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f68f1bf05e974ad20800000000000000
+      internalID: 3288887652605098095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gravilla_6x9_36
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 275
+        width: 223
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e7703582dd2ba320800000000000000
+      internalID: 2570198394545928169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gravilla_6x9_37
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 279
+        width: 188
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 949a7e6a3b5e98ca0800000000000000
+      internalID: -6014023267614480055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gravilla_6x9_38
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 298
+        width: 221
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3cae395a73c15e990800000000000000
+      internalID: -7357443390913123645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gravilla_6x9_39
+      rect:
+        serializedVersion: 2
+        x: 807
+        y: 284
+        width: 178
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab1e645114fc94f90800000000000000
+      internalID: -6968811069942341190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gravilla_6x9_40
+      rect:
+        serializedVersion: 2
+        x: 1072
+        y: 285
+        width: 160
+        height: 197
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8944f89d75f94f4b0800000000000000
+      internalID: -5407522052904106856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gravilla_6x9_41
+      rect:
+        serializedVersion: 2
+        x: 1333
+        y: 310
+        width: 149
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a5403e61d7906790800000000000000
+      internalID: -7538858850465593950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gravilla_6x9_42
+      rect:
+        serializedVersion: 2
+        x: 1599
+        y: 331
+        width: 129
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88e54c24bf58276a0800000000000000
+      internalID: -6452948001865048440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gravilla_6x9_43
+      rect:
+        serializedVersion: 2
+        x: 1877
+        y: 328
+        width: 85
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2be9563bd6f4e1ac0800000000000000
+      internalID: -3882578496166977870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gravilla_6x9_44
+      rect:
+        serializedVersion: 2
+        x: 2132
+        y: 346
+        width: 87
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e97f553663b6eec0800000000000000
+      internalID: -3537943205689460253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gravilla_6x9_45
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 22
+        width: 223
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9703daee4e53db2a0800000000000000
+      internalID: -6720155811593768839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gravilla_6x9_46
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 29
+        width: 215
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bcfda5eb8ab89940800000000000000
+      internalID: 5303193671245364408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gravilla_6x9_47
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 35
+        width: 181
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: affc5d900289351f0800000000000000
+      internalID: -1057334224130551814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gravilla_6x9_48
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 40
+        width: 207
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a45ccb080c86f06c0800000000000000
+      internalID: -4175003153546295990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gravilla_6x9_49
+      rect:
+        serializedVersion: 2
+        x: 1071
+        y: 31
+        width: 162
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea1802a4043829c80800000000000000
+      internalID: -8317441249655094866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gravilla_6x9_50
+      rect:
+        serializedVersion: 2
+        x: 1332
+        y: 62
+        width: 152
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8932be0bf07cd9ee0800000000000000
+      internalID: -1252626251132492904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gravilla_6x9_51
+      rect:
+        serializedVersion: 2
+        x: 1610
+        y: 66
+        width: 108
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9eb98b52f7a82eab0800000000000000
+      internalID: -4980265959220012055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gravilla_6x9_52
+      rect:
+        serializedVersion: 2
+        x: 1877
+        y: 82
+        width: 85
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bd544ba7a112e8a0800000000000000
+      internalID: -6277435518770455111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gravilla_6x9_53
+      rect:
+        serializedVersion: 2
+        x: 2143
+        y: 93
+        width: 66
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6d0832c0b6183700800000000000000
+      internalID: 520190705389800812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      gravilla_6x9_0: 3794521097538984357
+      gravilla_6x9_1: -3304362551562291678
+      gravilla_6x9_10: 3422427500071950367
+      gravilla_6x9_11: -3891626432650917438
+      gravilla_6x9_12: -2348954381425077611
+      gravilla_6x9_13: 1269379939584515857
+      gravilla_6x9_14: -4110472255144183782
+      gravilla_6x9_15: 8060381099442333682
+      gravilla_6x9_16: 408728210153750323
+      gravilla_6x9_17: -8846475453704284916
+      gravilla_6x9_18: 2179530719489048373
+      gravilla_6x9_19: 7507091596429870629
+      gravilla_6x9_2: -4958590048823702163
+      gravilla_6x9_20: 7960627289907775735
+      gravilla_6x9_21: 5427810107797554389
+      gravilla_6x9_22: -7018933962145351883
+      gravilla_6x9_23: -4159564299408968515
+      gravilla_6x9_24: 3697708440125957448
+      gravilla_6x9_25: 2138237310277391153
+      gravilla_6x9_26: 6998616859841240907
+      gravilla_6x9_27: -7798131135939761411
+      gravilla_6x9_28: 681868207107469965
+      gravilla_6x9_29: 7716912254015255603
+      gravilla_6x9_3: -5005176650886045921
+      gravilla_6x9_30: 1804161676427724141
+      gravilla_6x9_31: 3048125782231110263
+      gravilla_6x9_32: -3499299355464285620
+      gravilla_6x9_33: -6643818694978630706
+      gravilla_6x9_34: 5141038288267049332
+      gravilla_6x9_35: 3288887652605098095
+      gravilla_6x9_36: 2570198394545928169
+      gravilla_6x9_37: -6014023267614480055
+      gravilla_6x9_38: -7357443390913123645
+      gravilla_6x9_39: -6968811069942341190
+      gravilla_6x9_4: -6708468007630410009
+      gravilla_6x9_40: -5407522052904106856
+      gravilla_6x9_41: -7538858850465593950
+      gravilla_6x9_42: -6452948001865048440
+      gravilla_6x9_43: -3882578496166977870
+      gravilla_6x9_44: -3537943205689460253
+      gravilla_6x9_45: -6720155811593768839
+      gravilla_6x9_46: 5303193671245364408
+      gravilla_6x9_47: -1057334224130551814
+      gravilla_6x9_48: -4175003153546295990
+      gravilla_6x9_49: -8317441249655094866
+      gravilla_6x9_5: 1080966535467256304
+      gravilla_6x9_50: -1252626251132492904
+      gravilla_6x9_51: -4980265959220012055
+      gravilla_6x9_52: -6277435518770455111
+      gravilla_6x9_53: 520190705389800812
+      gravilla_6x9_6: -5074292312168502991
+      gravilla_6x9_7: 199107806147107017
+      gravilla_6x9_8: -4917898397503937845
+      gravilla_6x9_9: 7157969902233723070
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

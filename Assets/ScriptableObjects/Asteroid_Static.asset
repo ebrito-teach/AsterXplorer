@@ -63,6 +63,7 @@ MonoBehaviour:
   canBeDislodged: 1
   dislodgeMassRatio: 4
   dislodgesStatics: 0
+  unstoppable: 0
   canBeCaptured: 0
   captureChance: 0.12
   captureMaxRadius: 0.32
@@ -71,7 +72,7 @@ MonoBehaviour:
   acceptsMoons: 1
   maxMoons: 3
   moonCaptureMultiplier: 1
-  moonGap: 0.3
+  moonGap: 2.5
   moonOrbitSpeed: {x: 25, y: 60}
   moonTrail: 0
   moonsAreLethal: 0
@@ -80,10 +81,17 @@ MonoBehaviour:
   pullMaxTargetRadius: 0.45
   pullMaxTargetMassFraction: 0.08
   killsPlayer: 0
+  lethalMinRadius: 0
+  shoveSpeedMultiplier: 2
   canBreak: 0
   fragmentType: {fileID: 0}
   fragmentGroups: []
   fragmentCount: {x: 3, y: 5}
+  largestFragment: 0.55
+  fragmentSizeFalloff: 0.72
+  ejectaConeAngle: 35
+  ejectaSpeedFraction: 0.25
+  ejectaSpeedExponent: 1.22
   fragmentBoost: {x: 1.3, y: 1.6}
   breakMinSpeed: 0.5
   breakShield: 0.4

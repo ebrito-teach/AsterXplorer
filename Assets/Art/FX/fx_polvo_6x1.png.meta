@@ -1,0 +1,4511 @@
+fileFormatVersion: 2
+guid: f49d69e89c4e8614893fb5454ece038a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1918077192360415926
+    second: fx_polvo_6x1_0
+  - first:
+      213: -5795277952395536596
+    second: fx_polvo_6x1_1
+  - first:
+      213: -2745464429114746829
+    second: fx_polvo_6x1_2
+  - first:
+      213: 9175784319278601911
+    second: fx_polvo_6x1_3
+  - first:
+      213: 7978441820147104149
+    second: fx_polvo_6x1_4
+  - first:
+      213: 5188462932120542847
+    second: fx_polvo_6x1_5
+  - first:
+      213: -383488051415394988
+    second: fx_polvo_6x1_6
+  - first:
+      213: 4219950428156499329
+    second: fx_polvo_6x1_7
+  - first:
+      213: 6586030998080146556
+    second: fx_polvo_6x1_8
+  - first:
+      213: -8178664101892170286
+    second: fx_polvo_6x1_9
+  - first:
+      213: 1756311245733508297
+    second: fx_polvo_6x1_10
+  - first:
+      213: -3096176045018679754
+    second: fx_polvo_6x1_11
+  - first:
+      213: -4446176952005932842
+    second: fx_polvo_6x1_12
+  - first:
+      213: -683799318491774448
+    second: fx_polvo_6x1_13
+  - first:
+      213: -860977569533596310
+    second: fx_polvo_6x1_14
+  - first:
+      213: -16601271924925765
+    second: fx_polvo_6x1_15
+  - first:
+      213: 6360643624615726980
+    second: fx_polvo_6x1_16
+  - first:
+      213: 491541349896337825
+    second: fx_polvo_6x1_17
+  - first:
+      213: -3018054537489734913
+    second: fx_polvo_6x1_18
+  - first:
+      213: 3079175054160842690
+    second: fx_polvo_6x1_19
+  - first:
+      213: -2753257136825368217
+    second: fx_polvo_6x1_20
+  - first:
+      213: -4708488022410110703
+    second: fx_polvo_6x1_21
+  - first:
+      213: 4729423544264792432
+    second: fx_polvo_6x1_22
+  - first:
+      213: -5994169359795812348
+    second: fx_polvo_6x1_23
+  - first:
+      213: -216643436460171814
+    second: fx_polvo_6x1_24
+  - first:
+      213: 6384771664539117661
+    second: fx_polvo_6x1_25
+  - first:
+      213: 8378975042449045477
+    second: fx_polvo_6x1_26
+  - first:
+      213: -3561950776373424298
+    second: fx_polvo_6x1_27
+  - first:
+      213: 152651639742514180
+    second: fx_polvo_6x1_28
+  - first:
+      213: 2982547757545659215
+    second: fx_polvo_6x1_29
+  - first:
+      213: 6238953389613719530
+    second: fx_polvo_6x1_30
+  - first:
+      213: 5550027156197384907
+    second: fx_polvo_6x1_31
+  - first:
+      213: 5694268585847705418
+    second: fx_polvo_6x1_32
+  - first:
+      213: -8822480552700377572
+    second: fx_polvo_6x1_33
+  - first:
+      213: -8162591418046432033
+    second: fx_polvo_6x1_34
+  - first:
+      213: -7266175408413280349
+    second: fx_polvo_6x1_35
+  - first:
+      213: 2053491019359911908
+    second: fx_polvo_6x1_36
+  - first:
+      213: -5157958027199709906
+    second: fx_polvo_6x1_37
+  - first:
+      213: -8142346604883025174
+    second: fx_polvo_6x1_38
+  - first:
+      213: -1197697198934641485
+    second: fx_polvo_6x1_39
+  - first:
+      213: -8963534056733538341
+    second: fx_polvo_6x1_40
+  - first:
+      213: 472863516003674812
+    second: fx_polvo_6x1_41
+  - first:
+      213: 8719619982106034623
+    second: fx_polvo_6x1_42
+  - first:
+      213: -4041688097325051569
+    second: fx_polvo_6x1_43
+  - first:
+      213: 9078188422919420636
+    second: fx_polvo_6x1_44
+  - first:
+      213: -9206998467243697517
+    second: fx_polvo_6x1_45
+  - first:
+      213: 6880887497449507197
+    second: fx_polvo_6x1_46
+  - first:
+      213: -3566669499262031407
+    second: fx_polvo_6x1_47
+  - first:
+      213: -6020390582012803655
+    second: fx_polvo_6x1_48
+  - first:
+      213: 5800553169692687502
+    second: fx_polvo_6x1_49
+  - first:
+      213: -7282405435146255211
+    second: fx_polvo_6x1_50
+  - first:
+      213: -3462928806047727515
+    second: fx_polvo_6x1_51
+  - first:
+      213: 8964494752652687652
+    second: fx_polvo_6x1_52
+  - first:
+      213: 5813203335347869434
+    second: fx_polvo_6x1_53
+  - first:
+      213: -6091411821533845534
+    second: fx_polvo_6x1_54
+  - first:
+      213: -4659268532745992008
+    second: fx_polvo_6x1_55
+  - first:
+      213: 896795557725397639
+    second: fx_polvo_6x1_56
+  - first:
+      213: -573341309481158293
+    second: fx_polvo_6x1_57
+  - first:
+      213: -6254831275707330506
+    second: fx_polvo_6x1_58
+  - first:
+      213: -5242043402795750575
+    second: fx_polvo_6x1_59
+  - first:
+      213: 3687560684831286436
+    second: fx_polvo_6x1_60
+  - first:
+      213: 1610387843315479178
+    second: fx_polvo_6x1_61
+  - first:
+      213: -4281323859553208829
+    second: fx_polvo_6x1_62
+  - first:
+      213: 5097834476155803357
+    second: fx_polvo_6x1_63
+  - first:
+      213: 4847967309422022011
+    second: fx_polvo_6x1_64
+  - first:
+      213: -2377017396545212812
+    second: fx_polvo_6x1_65
+  - first:
+      213: -2784335054123771926
+    second: fx_polvo_6x1_66
+  - first:
+      213: -593397123467036574
+    second: fx_polvo_6x1_67
+  - first:
+      213: 8056052161890263418
+    second: fx_polvo_6x1_68
+  - first:
+      213: 115946933045942012
+    second: fx_polvo_6x1_69
+  - first:
+      213: 2322115218039223342
+    second: fx_polvo_6x1_70
+  - first:
+      213: -3785196448885254751
+    second: fx_polvo_6x1_71
+  - first:
+      213: 7677274519698112990
+    second: fx_polvo_6x1_72
+  - first:
+      213: 8930426574871195774
+    second: fx_polvo_6x1_73
+  - first:
+      213: -6151404764612227094
+    second: fx_polvo_6x1_74
+  - first:
+      213: 6072167229500884181
+    second: fx_polvo_6x1_75
+  - first:
+      213: -5089776502316754890
+    second: fx_polvo_6x1_76
+  - first:
+      213: 179052266617729166
+    second: fx_polvo_6x1_77
+  - first:
+      213: -8001567870433617680
+    second: fx_polvo_6x1_78
+  - first:
+      213: -6807333104655413088
+    second: fx_polvo_6x1_79
+  - first:
+      213: -5923815292168908209
+    second: fx_polvo_6x1_80
+  - first:
+      213: -2303132420290493011
+    second: fx_polvo_6x1_81
+  - first:
+      213: -5464217600791696975
+    second: fx_polvo_6x1_82
+  - first:
+      213: -1880045820754689720
+    second: fx_polvo_6x1_83
+  - first:
+      213: 4418647849613252154
+    second: fx_polvo_6x1_84
+  - first:
+      213: 5907233921069136527
+    second: fx_polvo_6x1_85
+  - first:
+      213: 3247477738616777559
+    second: fx_polvo_6x1_86
+  - first:
+      213: 9102482418539895333
+    second: fx_polvo_6x1_87
+  - first:
+      213: -8192460765294982860
+    second: fx_polvo_6x1_88
+  - first:
+      213: -954956025428039599
+    second: fx_polvo_6x1_89
+  - first:
+      213: 1231327620918552779
+    second: fx_polvo_6x1_90
+  - first:
+      213: 2093763675777900728
+    second: fx_polvo_6x1_91
+  - first:
+      213: 2119594855716610846
+    second: fx_polvo_6x1_92
+  - first:
+      213: 5681902333438142111
+    second: fx_polvo_6x1_93
+  - first:
+      213: -4594714988779642686
+    second: fx_polvo_6x1_94
+  - first:
+      213: -959830384430681621
+    second: fx_polvo_6x1_95
+  - first:
+      213: -8178409037703107592
+    second: fx_polvo_6x1_96
+  - first:
+      213: -5310773920900074996
+    second: fx_polvo_6x1_97
+  - first:
+      213: -6907332752137397060
+    second: fx_polvo_6x1_98
+  - first:
+      213: 4408120858572793557
+    second: fx_polvo_6x1_99
+  - first:
+      213: 4165481331282911407
+    second: fx_polvo_6x1_100
+  - first:
+      213: 2219335033654243173
+    second: fx_polvo_6x1_101
+  - first:
+      213: 972652074383472410
+    second: fx_polvo_6x1_102
+  - first:
+      213: -8724944638854147707
+    second: fx_polvo_6x1_103
+  - first:
+      213: -893067772430705904
+    second: fx_polvo_6x1_104
+  - first:
+      213: 5392134035885478522
+    second: fx_polvo_6x1_105
+  - first:
+      213: 5770531074778502840
+    second: fx_polvo_6x1_106
+  - first:
+      213: 5922427102127516222
+    second: fx_polvo_6x1_107
+  - first:
+      213: -5417239426203312323
+    second: fx_polvo_6x1_108
+  - first:
+      213: -6790046118353797410
+    second: fx_polvo_6x1_109
+  - first:
+      213: -2725227624465942413
+    second: fx_polvo_6x1_110
+  - first:
+      213: 7734642628782213914
+    second: fx_polvo_6x1_111
+  - first:
+      213: 2949711351275233149
+    second: fx_polvo_6x1_112
+  - first:
+      213: 4997913271857285480
+    second: fx_polvo_6x1_113
+  - first:
+      213: 8375826617941449239
+    second: fx_polvo_6x1_114
+  - first:
+      213: -5394491868829043947
+    second: fx_polvo_6x1_115
+  - first:
+      213: -7016350512944217325
+    second: fx_polvo_6x1_116
+  - first:
+      213: -2549375356260140434
+    second: fx_polvo_6x1_117
+  - first:
+      213: 4398462941014389585
+    second: fx_polvo_6x1_118
+  - first:
+      213: 9063691276920427146
+    second: fx_polvo_6x1_119
+  - first:
+      213: 3147762440189537112
+    second: fx_polvo_6x1_120
+  - first:
+      213: 879060906951428562
+    second: fx_polvo_6x1_121
+  - first:
+      213: -5387328119870346059
+    second: fx_polvo_6x1_122
+  - first:
+      213: 5340935786305962440
+    second: fx_polvo_6x1_123
+  - first:
+      213: 8674573320022051172
+    second: fx_polvo_6x1_124
+  - first:
+      213: -2380973473662443559
+    second: fx_polvo_6x1_125
+  - first:
+      213: 7747349056238039343
+    second: fx_polvo_6x1_126
+  - first:
+      213: 4331168975949577482
+    second: fx_polvo_6x1_127
+  - first:
+      213: -1011007685915366738
+    second: fx_polvo_6x1_128
+  - first:
+      213: -8571609544517218000
+    second: fx_polvo_6x1_129
+  - first:
+      213: -320095024543089853
+    second: fx_polvo_6x1_130
+  - first:
+      213: -6477919807105087498
+    second: fx_polvo_6x1_131
+  - first:
+      213: 7454492328875829135
+    second: fx_polvo_6x1_132
+  - first:
+      213: 4268795599567648497
+    second: fx_polvo_6x1_133
+  - first:
+      213: -1643868322707234608
+    second: fx_polvo_6x1_134
+  - first:
+      213: -8035779237196024034
+    second: fx_polvo_6x1_135
+  - first:
+      213: 3771645107731740719
+    second: fx_polvo_6x1_136
+  - first:
+      213: 8760847051154540138
+    second: fx_polvo_6x1_137
+  - first:
+      213: 5287822015913371600
+    second: fx_polvo_6x1_138
+  - first:
+      213: -8250392831765492867
+    second: fx_polvo_6x1_139
+  - first:
+      213: 2875834033470456504
+    second: fx_polvo_6x1_140
+  - first:
+      213: -2627476048923246878
+    second: fx_polvo_6x1_141
+  - first:
+      213: -2360406013337654482
+    second: fx_polvo_6x1_142
+  - first:
+      213: 5576390513692947533
+    second: fx_polvo_6x1_143
+  - first:
+      213: 3854890012869027323
+    second: fx_polvo_6x1_144
+  - first:
+      213: -1253560359123255143
+    second: fx_polvo_6x1_145
+  - first:
+      213: -3818870648743191644
+    second: fx_polvo_6x1_146
+  - first:
+      213: 8679921763554400018
+    second: fx_polvo_6x1_147
+  - first:
+      213: 2989633614989788724
+    second: fx_polvo_6x1_148
+  - first:
+      213: 2060546130570628862
+    second: fx_polvo_6x1_149
+  - first:
+      213: -7260438993213694181
+    second: fx_polvo_6x1_150
+  - first:
+      213: -2759150262469055907
+    second: fx_polvo_6x1_151
+  - first:
+      213: 4313116133490091647
+    second: fx_polvo_6x1_152
+  - first:
+      213: -1916900351417508879
+    second: fx_polvo_6x1_153
+  - first:
+      213: 347776273351630504
+    second: fx_polvo_6x1_154
+  - first:
+      213: 8570000728652620495
+    second: fx_polvo_6x1_155
+  - first:
+      213: -3814303359483615560
+    second: fx_polvo_6x1_156
+  - first:
+      213: 4262181594730260578
+    second: fx_polvo_6x1_157
+  - first:
+      213: 9060730703891929723
+    second: fx_polvo_6x1_158
+  - first:
+      213: -7228582013672999519
+    second: fx_polvo_6x1_159
+  - first:
+      213: -6987254396699788364
+    second: fx_polvo_6x1_160
+  - first:
+      213: 8935703366244844719
+    second: fx_polvo_6x1_161
+  - first:
+      213: -1016556194735947934
+    second: fx_polvo_6x1_162
+  - first:
+      213: -1372233007477307006
+    second: fx_polvo_6x1_163
+  - first:
+      213: -1269562584245564751
+    second: fx_polvo_6x1_164
+  - first:
+      213: -933653967006275802
+    second: fx_polvo_6x1_165
+  - first:
+      213: -5468060285908500582
+    second: fx_polvo_6x1_166
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: fx_polvo_6x1_0
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 470
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b2db664b016e9a10800000000000000
+      internalID: 1918077192360415926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_1
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 462
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c279fc03869039fa0800000000000000
+      internalID: -5795277952395536596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_2
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 471
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3381527d5a626e9d0800000000000000
+      internalID: -2745464429114746829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_3
+      rect:
+        serializedVersion: 2
+        x: 870
+        y: 468
+        width: 19
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b65336193fe65f70800000000000000
+      internalID: 9175784319278601911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_4
+      rect:
+        serializedVersion: 2
+        x: 1063
+        y: 31
+        width: 441
+        height: 452
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5993df6509e19be60800000000000000
+      internalID: 7978441820147104149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_5
+      rect:
+        serializedVersion: 2
+        x: 1291
+        y: 470
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7e935f0c8f110840800000000000000
+      internalID: 5188462932120542847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_6
+      rect:
+        serializedVersion: 2
+        x: 1329
+        y: 440
+        width: 38
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45557c726a39daaf0800000000000000
+      internalID: -383488051415394988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_7
+      rect:
+        serializedVersion: 2
+        x: 1431
+        y: 476
+        width: 13
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18596006e86409a30800000000000000
+      internalID: 4219950428156499329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_8
+      rect:
+        serializedVersion: 2
+        x: 2128
+        y: 413
+        width: 119
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7c47486c48466b50800000000000000
+      internalID: 6586030998080146556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_9
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 32
+        width: 439
+        height: 440
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2dd5a7de45c8f7e80800000000000000
+      internalID: -8178664101892170286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_10
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 457
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c438fcc5cbaf5810800000000000000
+      internalID: 1756311245733508297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_11
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 466
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63676929a4c2805d0800000000000000
+      internalID: -3096176045018679754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_12
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 462
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d848277e910c42c0800000000000000
+      internalID: -4446176952005932842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_13
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 459
+        width: 19
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 012c4ab8428a286f0800000000000000
+      internalID: -683799318491774448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_14
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 33
+        width: 398
+        height: 440
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6dee5056713d04f0800000000000000
+      internalID: -860977569533596310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_15
+      rect:
+        serializedVersion: 2
+        x: 1217
+        y: 465
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bba581c2b3505cff0800000000000000
+      internalID: -16601271924925765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_16
+      rect:
+        serializedVersion: 2
+        x: 1252
+        y: 462
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48fc21c2dab854850800000000000000
+      internalID: 6360643624615726980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_17
+      rect:
+        serializedVersion: 2
+        x: 1268
+        y: 450
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a9bcf0e04e42d600800000000000000
+      internalID: 491541349896337825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_18
+      rect:
+        serializedVersion: 2
+        x: 1321
+        y: 464
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff22b247367bd16d0800000000000000
+      internalID: -3018054537489734913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_19
+      rect:
+        serializedVersion: 2
+        x: 1388
+        y: 462
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cf4088c56d6bba20800000000000000
+      internalID: 3079175054160842690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_20
+      rect:
+        serializedVersion: 2
+        x: 1422
+        y: 461
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7610730b8377ac9d0800000000000000
+      internalID: -2753257136825368217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_21
+      rect:
+        serializedVersion: 2
+        x: 2320
+        y: 431
+        width: 36
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 119501b171718aeb0800000000000000
+      internalID: -4708488022410110703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_22
+      rect:
+        serializedVersion: 2
+        x: 2379
+        y: 455
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 079954ce7a942a140800000000000000
+      internalID: 4729423544264792432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_23
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 437
+        width: 13
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40807d9c9be60dca0800000000000000
+      internalID: -5994169359795812348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_24
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 454
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: add1fde31f35efcf0800000000000000
+      internalID: -216643436460171814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_25
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 451
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5865dc30044b9850800000000000000
+      internalID: 6384771664539117661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_26
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 452
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e7f90b4869184470800000000000000
+      internalID: 8378975042449045477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_27
+      rect:
+        serializedVersion: 2
+        x: 1290
+        y: 430
+        width: 18
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65fc5d214a8619ec0800000000000000
+      internalID: -3561950776373424298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_28
+      rect:
+        serializedVersion: 2
+        x: 1304
+        y: 455
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 404cb398bd35e1200800000000000000
+      internalID: 152651639742514180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_29
+      rect:
+        serializedVersion: 2
+        x: 1391
+        y: 449
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4b952e1263246920800000000000000
+      internalID: 2982547757545659215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_30
+      rect:
+        serializedVersion: 2
+        x: 1413
+        y: 448
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aef152e6d07359650800000000000000
+      internalID: 6238953389613719530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_31
+      rect:
+        serializedVersion: 2
+        x: 1486
+        y: 449
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc2aae21b48a50d40800000000000000
+      internalID: 5550027156197384907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_32
+      rect:
+        serializedVersion: 2
+        x: 1565
+        y: 53
+        width: 452
+        height: 406
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4f4e1bfb1b160f40800000000000000
+      internalID: 5694268585847705418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_33
+      rect:
+        serializedVersion: 2
+        x: 1169
+        y: 440
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c16808a4ea0409580800000000000000
+      internalID: -8822480552700377572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_34
+      rect:
+        serializedVersion: 2
+        x: 2247
+        y: 442
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdcb0b04a56a8be80800000000000000
+      internalID: -8162591418046432033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_35
+      rect:
+        serializedVersion: 2
+        x: 2389
+        y: 434
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a7f8d1c6fb592b90800000000000000
+      internalID: -7266175408413280349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_36
+      rect:
+        serializedVersion: 2
+        x: 2397
+        y: 422
+        width: 52
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4eff666c3377f7c10800000000000000
+      internalID: 2053491019359911908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_37
+      rect:
+        serializedVersion: 2
+        x: 1494
+        y: 404
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2df26690804b68b0800000000000000
+      internalID: -5157958027199709906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_38
+      rect:
+        serializedVersion: 2
+        x: 2318
+        y: 425
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae2e6d127e2900f80800000000000000
+      internalID: -8142346604883025174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_39
+      rect:
+        serializedVersion: 2
+        x: 2352
+        y: 424
+        width: 26
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b435054ebce06fe0800000000000000
+      internalID: -1197697198934641485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_40
+      rect:
+        serializedVersion: 2
+        x: 1487
+        y: 403
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd7084824412b9380800000000000000
+      internalID: -8963534056733538341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_41
+      rect:
+        serializedVersion: 2
+        x: 2115
+        y: 379
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cba24aaccd2ff8600800000000000000
+      internalID: 472863516003674812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_42
+      rect:
+        serializedVersion: 2
+        x: 2127
+        y: 36
+        width: 403
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb104d9dc20520970800000000000000
+      internalID: 8719619982106034623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_43
+      rect:
+        serializedVersion: 2
+        x: 2170
+        y: 394
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f41140ad61a09e7c0800000000000000
+      internalID: -4041688097325051569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_44
+      rect:
+        serializedVersion: 2
+        x: 2179
+        y: 396
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdafc28b5443cfd70800000000000000
+      internalID: 9078188422919420636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_45
+      rect:
+        serializedVersion: 2
+        x: 2194
+        y: 409
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39a9f50ccab2a3080800000000000000
+      internalID: -9206998467243697517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_46
+      rect:
+        serializedVersion: 2
+        x: 2194
+        y: 394
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7987e0f8b2dd7f50800000000000000
+      internalID: 6880887497449507197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_47
+      rect:
+        serializedVersion: 2
+        x: 2205
+        y: 391
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d92449ccf4a08ec0800000000000000
+      internalID: -3566669499262031407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_48
+      rect:
+        serializedVersion: 2
+        x: 2217
+        y: 391
+        width: 36
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b5050eb9a6437ca0800000000000000
+      internalID: -6020390582012803655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_49
+      rect:
+        serializedVersion: 2
+        x: 2252
+        y: 395
+        width: 29
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8c7c4c0064bf7050800000000000000
+      internalID: 5800553169692687502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_50
+      rect:
+        serializedVersion: 2
+        x: 2256
+        y: 399
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 594cbbf27d2bfea90800000000000000
+      internalID: -7282405435146255211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_51
+      rect:
+        serializedVersion: 2
+        x: 2261
+        y: 373
+        width: 43
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 560ce09299431ffc0800000000000000
+      internalID: -3462928806047727515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_52
+      rect:
+        serializedVersion: 2
+        x: 2289
+        y: 393
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42977ba4b78486c70800000000000000
+      internalID: 8964494752652687652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_53
+      rect:
+        serializedVersion: 2
+        x: 2333
+        y: 410
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af6968242a5aca050800000000000000
+      internalID: 5813203335347869434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_54
+      rect:
+        serializedVersion: 2
+        x: 2344
+        y: 388
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e72cd4d835f67ba0800000000000000
+      internalID: -6091411821533845534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_55
+      rect:
+        serializedVersion: 2
+        x: 2357
+        y: 393
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b8058094f3f65fb0800000000000000
+      internalID: -4659268532745992008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_56
+      rect:
+        serializedVersion: 2
+        x: 2373
+        y: 390
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 782ee5eeece027c00800000000000000
+      internalID: 896795557725397639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_57
+      rect:
+        serializedVersion: 2
+        x: 2378
+        y: 400
+        width: 21
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b697151ed151b08f0800000000000000
+      internalID: -573341309481158293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_58
+      rect:
+        serializedVersion: 2
+        x: 2417
+        y: 394
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 630167128106239a0800000000000000
+      internalID: -6254831275707330506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_59
+      rect:
+        serializedVersion: 2
+        x: 2147
+        y: 378
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15bed277c458047b0800000000000000
+      internalID: -5242043402795750575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_60
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 368
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a4a013c7e8dc2330800000000000000
+      internalID: 3687560684831286436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_61
+      rect:
+        serializedVersion: 2
+        x: 2124
+        y: 353
+        width: 15
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a823d67163f395610800000000000000
+      internalID: 1610387843315479178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_62
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 349
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3063de612aea594c0800000000000000
+      internalID: -4281323859553208829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_63
+      rect:
+        serializedVersion: 2
+        x: 958
+        y: 350
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd6910352752fb640800000000000000
+      internalID: 5097834476155803357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_64
+      rect:
+        serializedVersion: 2
+        x: 1480
+        y: 357
+        width: 18
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7d4ec01590774340800000000000000
+      internalID: 4847967309422022011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_65
+      rect:
+        serializedVersion: 2
+        x: 2589
+        y: 148
+        width: 453
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47eaff59543230fd0800000000000000
+      internalID: -2377017396545212812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_66
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 345
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae7d843350e0c59d0800000000000000
+      internalID: -2784335054123771926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_67
+      rect:
+        serializedVersion: 2
+        x: 1484
+        y: 332
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 268320dc574d3c7f0800000000000000
+      internalID: -593397123467036574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_68
+      rect:
+        serializedVersion: 2
+        x: 2090
+        y: 333
+        width: 22
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a71ac7922c8dccf60800000000000000
+      internalID: 8056052161890263418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_69
+      rect:
+        serializedVersion: 2
+        x: 2144
+        y: 343
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf6dffc0f1deb9100800000000000000
+      internalID: 115946933045942012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_70
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 328
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e24b1cadc7fc93020800000000000000
+      internalID: 2322115218039223342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_71
+      rect:
+        serializedVersion: 2
+        x: 1491
+        y: 330
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a5df1372e7487bc0800000000000000
+      internalID: -3785196448885254751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_72
+      rect:
+        serializedVersion: 2
+        x: 2083
+        y: 329
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed183cdef782b8a60800000000000000
+      internalID: 7677274519698112990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_73
+      rect:
+        serializedVersion: 2
+        x: 2147
+        y: 333
+        width: 11
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e70f7e787af3feb70800000000000000
+      internalID: 8930426574871195774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_74
+      rect:
+        serializedVersion: 2
+        x: 2481
+        y: 329
+        width: 17
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aef84a745f1d1aaa0800000000000000
+      internalID: -6151404764612227094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_75
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 317
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d40b2b6ceba44450800000000000000
+      internalID: 6072167229500884181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_76
+      rect:
+        serializedVersion: 2
+        x: 1461
+        y: 297
+        width: 43
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6389749ec3b7d59b0800000000000000
+      internalID: -5089776502316754890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_77
+      rect:
+        serializedVersion: 2
+        x: 2078
+        y: 273
+        width: 21
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e807afb761f1c7200800000000000000
+      internalID: 179052266617729166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_78
+      rect:
+        serializedVersion: 2
+        x: 2487
+        y: 321
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f810ac7a68b4f090800000000000000
+      internalID: -8001567870433617680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_79
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 307
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a0d14dab9e7781a0800000000000000
+      internalID: -6807333104655413088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_80
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 293
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f42de33a0616acda0800000000000000
+      internalID: -5923815292168908209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_81
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 295
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da546e92441a900e0800000000000000
+      internalID: -2303132420290493011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_82
+      rect:
+        serializedVersion: 2
+        x: 2114
+        y: 295
+        width: 35
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b9af51fa033b24b0800000000000000
+      internalID: -5464217600791696975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_83
+      rect:
+        serializedVersion: 2
+        x: 2146
+        y: 295
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8418574794cb8e5e0800000000000000
+      internalID: -1880045820754689720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_84
+      rect:
+        serializedVersion: 2
+        x: 2493
+        y: 286
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a36ddb7eec0325d30800000000000000
+      internalID: 4418647849613252154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_85
+      rect:
+        serializedVersion: 2
+        x: 2504
+        y: 284
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8ab67e04f5baf150800000000000000
+      internalID: 5907233921069136527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_86
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 276
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75bed322ccb511d20800000000000000
+      internalID: 3247477738616777559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_87
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 273
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52a1f4b5883825e70800000000000000
+      internalID: 9102482418539895333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_88
+      rect:
+        serializedVersion: 2
+        x: 1486
+        y: 275
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4398448e6588e4e80800000000000000
+      internalID: -8192460765294982860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_89
+      rect:
+        serializedVersion: 2
+        x: 2606
+        y: 265
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1582e30fd805fb2f0800000000000000
+      internalID: -954956025428039599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_90
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 258
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc82af682fd861110800000000000000
+      internalID: 1231327620918552779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_91
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 264
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b0ab5a48fa8e0d10800000000000000
+      internalID: 2093763675777900728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_92
+      rect:
+        serializedVersion: 2
+        x: 1490
+        y: 253
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e13ebba8a405a6d10800000000000000
+      internalID: 2119594855716610846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_93
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 235
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f962b09711c2ade40800000000000000
+      internalID: 5681902333438142111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_94
+      rect:
+        serializedVersion: 2
+        x: 2079
+        y: 178
+        width: 36
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c060a1cf0b4c30c0800000000000000
+      internalID: -4594714988779642686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_95
+      rect:
+        serializedVersion: 2
+        x: 2120
+        y: 226
+        width: 22
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be1f16bc95ffda2f0800000000000000
+      internalID: -959830384430681621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_96
+      rect:
+        serializedVersion: 2
+        x: 2143
+        y: 237
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fbacdfaf44708e80800000000000000
+      internalID: -8178409037703107592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_97
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 220
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c02b752b1475c46b0800000000000000
+      internalID: -5310773920900074996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_98
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 226
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbcdd6365793420a0800000000000000
+      internalID: -6907332752137397060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_99
+      rect:
+        serializedVersion: 2
+        x: 2111
+        y: 215
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d6a83ec09acc2d30800000000000000
+      internalID: 4408120858572793557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_100
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 213
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa0a3ad7333cec930800000000000000
+      internalID: 4165481331282911407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_101
+      rect:
+        serializedVersion: 2
+        x: 1490
+        y: 215
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56f6a8e5479acce10800000000000000
+      internalID: 2219335033654243173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_102
+      rect:
+        serializedVersion: 2
+        x: 2522
+        y: 204
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a177ca788ed8f7d00800000000000000
+      internalID: 972652074383472410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_103
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 205
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5815624e315cae680800000000000000
+      internalID: -8724944638854147707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_104
+      rect:
+        serializedVersion: 2
+        x: 1062
+        y: 206
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01b1be7b79f2b93f0800000000000000
+      internalID: -893067772430705904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_105
+      rect:
+        serializedVersion: 2
+        x: 2132
+        y: 202
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a725f3e3655b4da40800000000000000
+      internalID: 5392134035885478522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_106
+      rect:
+        serializedVersion: 2
+        x: 2143
+        y: 204
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b6968d507b051050800000000000000
+      internalID: 5770531074778502840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_107
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 186
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3ae47e2210b03250800000000000000
+      internalID: 5922427102127516222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_108
+      rect:
+        serializedVersion: 2
+        x: 1490
+        y: 185
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3f19e1917912d4b0800000000000000
+      internalID: -5417239426203312323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_109
+      rect:
+        serializedVersion: 2
+        x: 2513
+        y: 190
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ede7003d709e4c1a0800000000000000
+      internalID: -6790046118353797410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_110
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 166
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37830a71aeb0e2ad0800000000000000
+      internalID: -2725227624465942413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_111
+      rect:
+        serializedVersion: 2
+        x: 1496
+        y: 167
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1b4821bd78f65b60800000000000000
+      internalID: 7734642628782213914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_112
+      rect:
+        serializedVersion: 2
+        x: 2515
+        y: 172
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7f92b288da7fe820800000000000000
+      internalID: 2949711351275233149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_113
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 147
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 869834304a72c5540800000000000000
+      internalID: 4997913271857285480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_114
+      rect:
+        serializedVersion: 2
+        x: 2089
+        y: 132
+        width: 31
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71a59a69ee9ec3470800000000000000
+      internalID: 8375826617941449239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_115
+      rect:
+        serializedVersion: 2
+        x: 1057
+        y: 132
+        width: 22
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51336bef93ae225b0800000000000000
+      internalID: -5394491868829043947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_116
+      rect:
+        serializedVersion: 2
+        x: 2167
+        y: 127
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3138458f16ae0ae90800000000000000
+      internalID: -7016350512944217325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_117
+      rect:
+        serializedVersion: 2
+        x: 2207
+        y: 125
+        width: 19
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6abaf2ee9cce9cd0800000000000000
+      internalID: -2549375356260140434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_118
+      rect:
+        serializedVersion: 2
+        x: 2275
+        y: 120
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 153f1e4adba7a0d30800000000000000
+      internalID: 4398462941014389585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_119
+      rect:
+        serializedVersion: 2
+        x: 2310
+        y: 120
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8216a2e133b8cd70800000000000000
+      internalID: 9063691276920427146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_120
+      rect:
+        serializedVersion: 2
+        x: 2350
+        y: 127
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85b60d403491fab20800000000000000
+      internalID: 3147762440189537112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_121
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 127
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d9c5c6cc3d033c00800000000000000
+      internalID: 879060906951428562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_122
+      rect:
+        serializedVersion: 2
+        x: 2267
+        y: 113
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bca7a64e9d5c35b0800000000000000
+      internalID: -5387328119870346059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_123
+      rect:
+        serializedVersion: 2
+        x: 2301
+        y: 120
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c140f6dcc0de1a40800000000000000
+      internalID: 5340935786305962440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_124
+      rect:
+        serializedVersion: 2
+        x: 2313
+        y: 113
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 469cef58976426870800000000000000
+      internalID: 8674573320022051172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_125
+      rect:
+        serializedVersion: 2
+        x: 2329
+        y: 103
+        width: 25
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9dfd8ba9d3515fed0800000000000000
+      internalID: -2380973473662443559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_126
+      rect:
+        serializedVersion: 2
+        x: 2360
+        y: 113
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f21b6006bec148b60800000000000000
+      internalID: 7747349056238039343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_127
+      rect:
+        serializedVersion: 2
+        x: 2415
+        y: 109
+        width: 23
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0dbaa17c376b1c30800000000000000
+      internalID: 4331168975949577482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_128
+      rect:
+        serializedVersion: 2
+        x: 2446
+        y: 117
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eaa23dfbddd28f1f0800000000000000
+      internalID: -1011007685915366738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_129
+      rect:
+        serializedVersion: 2
+        x: 2507
+        y: 110
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03114b998868b0980800000000000000
+      internalID: -8571609544517218000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_130
+      rect:
+        serializedVersion: 2
+        x: 2182
+        y: 98
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34b3db7654bce8bf0800000000000000
+      internalID: -320095024543089853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_131
+      rect:
+        serializedVersion: 2
+        x: 2216
+        y: 105
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f7c806c14ec916a0800000000000000
+      internalID: -6477919807105087498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_132
+      rect:
+        serializedVersion: 2
+        x: 2233
+        y: 106
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f87a48b074da37760800000000000000
+      internalID: 7454492328875829135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_133
+      rect:
+        serializedVersion: 2
+        x: 2281
+        y: 99
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f6faf21bfecd3b30800000000000000
+      internalID: 4268795599567648497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_134
+      rect:
+        serializedVersion: 2
+        x: 2314
+        y: 98
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d0a487587ecf29e0800000000000000
+      internalID: -1643868322707234608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_135
+      rect:
+        serializedVersion: 2
+        x: 2377
+        y: 106
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e17b871fb5d2b7090800000000000000
+      internalID: -8035779237196024034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_136
+      rect:
+        serializedVersion: 2
+        x: 2397
+        y: 103
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f28b0311e33975430800000000000000
+      internalID: 3771645107731740719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_137
+      rect:
+        serializedVersion: 2
+        x: 2190
+        y: 86
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a66489fd9f7c49970800000000000000
+      internalID: 8760847051154540138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_138
+      rect:
+        serializedVersion: 2
+        x: 2326
+        y: 97
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d7a10e7b1e126940800000000000000
+      internalID: 5287822015913371600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_139
+      rect:
+        serializedVersion: 2
+        x: 2343
+        y: 88
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7b40359e67b08d80800000000000000
+      internalID: -8250392831765492867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_140
+      rect:
+        serializedVersion: 2
+        x: 2356
+        y: 98
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b24cfd01d309e720800000000000000
+      internalID: 2875834033470456504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_141
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 76
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ee35185474598bd0800000000000000
+      internalID: -2627476048923246878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_142
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 79
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2b2051ac372e3fd0800000000000000
+      internalID: -2360406013337654482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_143
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 74
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d44b68190a1536d40800000000000000
+      internalID: 5576390513692947533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_144
+      rect:
+        serializedVersion: 2
+        x: 1058
+        y: 83
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf56249ea025f7530800000000000000
+      internalID: 3854890012869027323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_145
+      rect:
+        serializedVersion: 2
+        x: 2182
+        y: 73
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99082f9be757a9ee0800000000000000
+      internalID: -1253560359123255143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_146
+      rect:
+        serializedVersion: 2
+        x: 2302
+        y: 71
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ab1f72d065a00bc0800000000000000
+      internalID: -3818870648743191644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_147
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 67
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21797d21bd6457870800000000000000
+      internalID: 8679921763554400018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_148
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 71
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 436880edeef4d7920800000000000000
+      internalID: 2989633614989788724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_149
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 68
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efec7fbd9c7889c10800000000000000
+      internalID: 2060546130570628862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_150
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 62
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1f5a10043dbd3b90800000000000000
+      internalID: -7260438993213694181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_151
+      rect:
+        serializedVersion: 2
+        x: 2235
+        y: 71
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5a2b93747785b9d0800000000000000
+      internalID: -2759150262469055907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_152
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 59
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f76eea385444bdb30800000000000000
+      internalID: 4313116133490091647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_153
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 58
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fb10fb594dc565e0800000000000000
+      internalID: -1916900351417508879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_154
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 54
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8aede629dac83d400800000000000000
+      internalID: 347776273351630504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_155
+      rect:
+        serializedVersion: 2
+        x: 2215
+        y: 53
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc2ad24c142cee670800000000000000
+      internalID: 8570000728652620495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_156
+      rect:
+        serializedVersion: 2
+        x: 2338
+        y: 51
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b66668bd4fd01bc0800000000000000
+      internalID: -3814303359483615560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_157
+      rect:
+        serializedVersion: 2
+        x: 2378
+        y: 52
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 268ea12149f462b30800000000000000
+      internalID: 4262181594730260578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_158
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 50
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7a14f2c19e2ebd70800000000000000
+      internalID: 9060730703891929723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_159
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 47
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a53e3d05faeeab90800000000000000
+      internalID: -7228582013672999519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_160
+      rect:
+        serializedVersion: 2
+        x: 2334
+        y: 40
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bb3c617529480f90800000000000000
+      internalID: -6987254396699788364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_161
+      rect:
+        serializedVersion: 2
+        x: 2406
+        y: 44
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa449434edef10c70800000000000000
+      internalID: 8935703366244844719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_162
+      rect:
+        serializedVersion: 2
+        x: 845
+        y: 32
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26f7a8ed68774e1f0800000000000000
+      internalID: -1016556194735947934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_163
+      rect:
+        serializedVersion: 2
+        x: 856
+        y: 39
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 289cf30a959d4fce0800000000000000
+      internalID: -1372233007477307006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_164
+      rect:
+        serializedVersion: 2
+        x: 2247
+        y: 42
+        width: 15
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ba8ae95e8b916ee0800000000000000
+      internalID: -1269562584245564751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_165
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 31
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 627e479e9aefa03f0800000000000000
+      internalID: -933653967006275802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_polvo_6x1_166
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 31
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9fb008142c8d14b0800000000000000
+      internalID: -5468060285908500582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      fx_polvo_6x1_0: 1918077192360415926
+      fx_polvo_6x1_1: -5795277952395536596
+      fx_polvo_6x1_10: 1756311245733508297
+      fx_polvo_6x1_100: 4165481331282911407
+      fx_polvo_6x1_101: 2219335033654243173
+      fx_polvo_6x1_102: 972652074383472410
+      fx_polvo_6x1_103: -8724944638854147707
+      fx_polvo_6x1_104: -893067772430705904
+      fx_polvo_6x1_105: 5392134035885478522
+      fx_polvo_6x1_106: 5770531074778502840
+      fx_polvo_6x1_107: 5922427102127516222
+      fx_polvo_6x1_108: -5417239426203312323
+      fx_polvo_6x1_109: -6790046118353797410
+      fx_polvo_6x1_11: -3096176045018679754
+      fx_polvo_6x1_110: -2725227624465942413
+      fx_polvo_6x1_111: 7734642628782213914
+      fx_polvo_6x1_112: 2949711351275233149
+      fx_polvo_6x1_113: 4997913271857285480
+      fx_polvo_6x1_114: 8375826617941449239
+      fx_polvo_6x1_115: -5394491868829043947
+      fx_polvo_6x1_116: -7016350512944217325
+      fx_polvo_6x1_117: -2549375356260140434
+      fx_polvo_6x1_118: 4398462941014389585
+      fx_polvo_6x1_119: 9063691276920427146
+      fx_polvo_6x1_12: -4446176952005932842
+      fx_polvo_6x1_120: 3147762440189537112
+      fx_polvo_6x1_121: 879060906951428562
+      fx_polvo_6x1_122: -5387328119870346059
+      fx_polvo_6x1_123: 5340935786305962440
+      fx_polvo_6x1_124: 8674573320022051172
+      fx_polvo_6x1_125: -2380973473662443559
+      fx_polvo_6x1_126: 7747349056238039343
+      fx_polvo_6x1_127: 4331168975949577482
+      fx_polvo_6x1_128: -1011007685915366738
+      fx_polvo_6x1_129: -8571609544517218000
+      fx_polvo_6x1_13: -683799318491774448
+      fx_polvo_6x1_130: -320095024543089853
+      fx_polvo_6x1_131: -6477919807105087498
+      fx_polvo_6x1_132: 7454492328875829135
+      fx_polvo_6x1_133: 4268795599567648497
+      fx_polvo_6x1_134: -1643868322707234608
+      fx_polvo_6x1_135: -8035779237196024034
+      fx_polvo_6x1_136: 3771645107731740719
+      fx_polvo_6x1_137: 8760847051154540138
+      fx_polvo_6x1_138: 5287822015913371600
+      fx_polvo_6x1_139: -8250392831765492867
+      fx_polvo_6x1_14: -860977569533596310
+      fx_polvo_6x1_140: 2875834033470456504
+      fx_polvo_6x1_141: -2627476048923246878
+      fx_polvo_6x1_142: -2360406013337654482
+      fx_polvo_6x1_143: 5576390513692947533
+      fx_polvo_6x1_144: 3854890012869027323
+      fx_polvo_6x1_145: -1253560359123255143
+      fx_polvo_6x1_146: -3818870648743191644
+      fx_polvo_6x1_147: 8679921763554400018
+      fx_polvo_6x1_148: 2989633614989788724
+      fx_polvo_6x1_149: 2060546130570628862
+      fx_polvo_6x1_15: -16601271924925765
+      fx_polvo_6x1_150: -7260438993213694181
+      fx_polvo_6x1_151: -2759150262469055907
+      fx_polvo_6x1_152: 4313116133490091647
+      fx_polvo_6x1_153: -1916900351417508879
+      fx_polvo_6x1_154: 347776273351630504
+      fx_polvo_6x1_155: 8570000728652620495
+      fx_polvo_6x1_156: -3814303359483615560
+      fx_polvo_6x1_157: 4262181594730260578
+      fx_polvo_6x1_158: 9060730703891929723
+      fx_polvo_6x1_159: -7228582013672999519
+      fx_polvo_6x1_16: 6360643624615726980
+      fx_polvo_6x1_160: -6987254396699788364
+      fx_polvo_6x1_161: 8935703366244844719
+      fx_polvo_6x1_162: -1016556194735947934
+      fx_polvo_6x1_163: -1372233007477307006
+      fx_polvo_6x1_164: -1269562584245564751
+      fx_polvo_6x1_165: -933653967006275802
+      fx_polvo_6x1_166: -5468060285908500582
+      fx_polvo_6x1_17: 491541349896337825
+      fx_polvo_6x1_18: -3018054537489734913
+      fx_polvo_6x1_19: 3079175054160842690
+      fx_polvo_6x1_2: -2745464429114746829
+      fx_polvo_6x1_20: -2753257136825368217
+      fx_polvo_6x1_21: -4708488022410110703
+      fx_polvo_6x1_22: 4729423544264792432
+      fx_polvo_6x1_23: -5994169359795812348
+      fx_polvo_6x1_24: -216643436460171814
+      fx_polvo_6x1_25: 6384771664539117661
+      fx_polvo_6x1_26: 8378975042449045477
+      fx_polvo_6x1_27: -3561950776373424298
+      fx_polvo_6x1_28: 152651639742514180
+      fx_polvo_6x1_29: 2982547757545659215
+      fx_polvo_6x1_3: 9175784319278601911
+      fx_polvo_6x1_30: 6238953389613719530
+      fx_polvo_6x1_31: 5550027156197384907
+      fx_polvo_6x1_32: 5694268585847705418
+      fx_polvo_6x1_33: -8822480552700377572
+      fx_polvo_6x1_34: -8162591418046432033
+      fx_polvo_6x1_35: -7266175408413280349
+      fx_polvo_6x1_36: 2053491019359911908
+      fx_polvo_6x1_37: -5157958027199709906
+      fx_polvo_6x1_38: -8142346604883025174
+      fx_polvo_6x1_39: -1197697198934641485
+      fx_polvo_6x1_4: 7978441820147104149
+      fx_polvo_6x1_40: -8963534056733538341
+      fx_polvo_6x1_41: 472863516003674812
+      fx_polvo_6x1_42: 8719619982106034623
+      fx_polvo_6x1_43: -4041688097325051569
+      fx_polvo_6x1_44: 9078188422919420636
+      fx_polvo_6x1_45: -9206998467243697517
+      fx_polvo_6x1_46: 6880887497449507197
+      fx_polvo_6x1_47: -3566669499262031407
+      fx_polvo_6x1_48: -6020390582012803655
+      fx_polvo_6x1_49: 5800553169692687502
+      fx_polvo_6x1_5: 5188462932120542847
+      fx_polvo_6x1_50: -7282405435146255211
+      fx_polvo_6x1_51: -3462928806047727515
+      fx_polvo_6x1_52: 8964494752652687652
+      fx_polvo_6x1_53: 5813203335347869434
+      fx_polvo_6x1_54: -6091411821533845534
+      fx_polvo_6x1_55: -4659268532745992008
+      fx_polvo_6x1_56: 896795557725397639
+      fx_polvo_6x1_57: -573341309481158293
+      fx_polvo_6x1_58: -6254831275707330506
+      fx_polvo_6x1_59: -5242043402795750575
+      fx_polvo_6x1_6: -383488051415394988
+      fx_polvo_6x1_60: 3687560684831286436
+      fx_polvo_6x1_61: 1610387843315479178
+      fx_polvo_6x1_62: -4281323859553208829
+      fx_polvo_6x1_63: 5097834476155803357
+      fx_polvo_6x1_64: 4847967309422022011
+      fx_polvo_6x1_65: -2377017396545212812
+      fx_polvo_6x1_66: -2784335054123771926
+      fx_polvo_6x1_67: -593397123467036574
+      fx_polvo_6x1_68: 8056052161890263418
+      fx_polvo_6x1_69: 115946933045942012
+      fx_polvo_6x1_7: 4219950428156499329
+      fx_polvo_6x1_70: 2322115218039223342
+      fx_polvo_6x1_71: -3785196448885254751
+      fx_polvo_6x1_72: 7677274519698112990
+      fx_polvo_6x1_73: 8930426574871195774
+      fx_polvo_6x1_74: -6151404764612227094
+      fx_polvo_6x1_75: 6072167229500884181
+      fx_polvo_6x1_76: -5089776502316754890
+      fx_polvo_6x1_77: 179052266617729166
+      fx_polvo_6x1_78: -8001567870433617680
+      fx_polvo_6x1_79: -6807333104655413088
+      fx_polvo_6x1_8: 6586030998080146556
+      fx_polvo_6x1_80: -5923815292168908209
+      fx_polvo_6x1_81: -2303132420290493011
+      fx_polvo_6x1_82: -5464217600791696975
+      fx_polvo_6x1_83: -1880045820754689720
+      fx_polvo_6x1_84: 4418647849613252154
+      fx_polvo_6x1_85: 5907233921069136527
+      fx_polvo_6x1_86: 3247477738616777559
+      fx_polvo_6x1_87: 9102482418539895333
+      fx_polvo_6x1_88: -8192460765294982860
+      fx_polvo_6x1_89: -954956025428039599
+      fx_polvo_6x1_9: -8178664101892170286
+      fx_polvo_6x1_90: 1231327620918552779
+      fx_polvo_6x1_91: 2093763675777900728
+      fx_polvo_6x1_92: 2119594855716610846
+      fx_polvo_6x1_93: 5681902333438142111
+      fx_polvo_6x1_94: -4594714988779642686
+      fx_polvo_6x1_95: -959830384430681621
+      fx_polvo_6x1_96: -8178409037703107592
+      fx_polvo_6x1_97: -5310773920900074996
+      fx_polvo_6x1_98: -6907332752137397060
+      fx_polvo_6x1_99: 4408120858572793557
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

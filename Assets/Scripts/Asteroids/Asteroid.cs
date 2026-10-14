@@ -9,9 +9,9 @@ public class Asteroid : MonoBehaviour
     /// Desprendimientos y fragmentos vivos en este momento
     public static int DebrisAlive { get; private set; }
 
-    /// Choque fuerte entre dos cuerpos: punto, energía del impacto y masa del mayor.
-    /// Lo escucha ImpactFeedback para sacudir la cámara y parar el tiempo un instante.
-    public static event System.Action<Vector2, float, float> HeavyImpact;
+    /// Choque fuerte entre dos cuerpos: punto, dirección de salida de la eyecta, energía
+    /// del impacto y masa del mayor. Lo escucha ImpactFeedback.
+    public static event System.Action<Vector2, Vector2, float, float> HeavyImpact;
 
     public AsteroidTypeData Type { get; private set; }
     public float Size { get; private set; }
@@ -62,6 +62,7 @@ public class Asteroid : MonoBehaviour
     float shedTimer;
     float restoreBlockedUntil;
     float pulledUntil;
+    float wakeAccum;
     Vector2 lastVelocity;      // velocidad con la que entró en el paso de física
     bool followsFlow, restoreInterpolation, dislodged, countedAsDebris;
     bool captureRollUsed;
@@ -110,6 +111,7 @@ public class Asteroid : MonoBehaviour
         moons.Clear();
         restoreBlockedUntil = 0f;
         pulledUntil = 0f;
+        wakeAccum = 0f;
         lastVelocity = Vector2.zero;
         captureRollUsed = false;
         unstoppable = type.unstoppable && type.behavior != AsteroidBehavior.Static;
@@ -314,7 +316,9 @@ public class Asteroid : MonoBehaviour
 
         if (flow != null && IsOutOfPlay(flow))
         {
-            bool replace = Type.recycle && Type.behavior != AsteroidBehavior.Debris && !dislodged;
+            // Un estático soltado por el coloso TAMBIÉN se sustituye. Antes no, y por eso
+            // cada paso del coloso vaciaba el nivel de forma permanente.
+            bool replace = Type.recycle && Type.behavior != AsteroidBehavior.Debris;
             if (replace)
             {
                 if (pool != null && pool.NotifyExited(this)) return;
@@ -326,6 +330,7 @@ public class Asteroid : MonoBehaviour
 
         if (Type.dislodgesStatics) DislodgeNearbyStatics();
         if (Type.pullRadius > 0f) ApplyMagneticPull();
+        if (Type.wakeType != null) TickWake();
         if (Type.comet != null) TickShedding();
 
         Vector2 vel = rb.linearVelocity;
@@ -590,6 +595,47 @@ public class Asteroid : MonoBehaviour
         pulledUntil = Time.time + 0.25f;
     }
 
+    // ---------------------------------------------------------------- estela de escombro
+    // Un cuerpo que barre un cinturón no solo aparta material: arranca el suyo y parte de lo
+    // que levanta vuelve a posarse detrás de él. Así el coloso TRANSFORMA el nivel en vez de
+    // vaciarlo, y deja terreno nuevo donde antes había hueco.
+    void TickWake()
+    {
+        var w = Type.wakeType;
+        if (w == null || pool == null) return;
+
+        wakeAccum += rb.linearVelocity.magnitude * Time.fixedDeltaTime;
+        if (wakeAccum < Mathf.Max(0.5f, Type.wakeEvery)) return;
+        wakeAccum = 0f;
+        if (Random.value > Type.wakeChance) return;
+
+        var gb = GameBounds.Instance;
+        if (gb == null) return;
+        Rect cam = gb.CameraRect;
+        Vector2 playerPos = AvoidPoint();
+
+        Vector2 v = rb.linearVelocity;
+        Vector2 back = v.sqrMagnitude > 0.01f ? -v.normalized : Vector2.left;
+        Vector2 side = new Vector2(-back.y, back.x);
+        int mask = LayerMask.GetMask("AsteroidMoving", "AsteroidStatic");
+
+        for (int attempt = 0; attempt < 10; attempt++)
+        {
+            Vector2 p = rb.position
+                      + back * (WorldRadius + Random.Range(0.5f, 2.5f))
+                      + side * Random.Range(-Type.wakeSpread, Type.wakeSpread);
+
+            if (!cam.Contains(p)) continue;                        // solo donde se vea
+            if (gb.IsBlocked(p, 1f)) continue;                     // no bajo los controles
+            if (Vector2.Distance(p, playerPos) < 3f) continue;     // nunca encima del jugador
+            if (Physics2D.OverlapCircle(p, 1.3f, mask) != null) continue;
+
+            float size = w.RandomSize() * Random.Range(Type.wakeSizeScale.x, Type.wakeSizeScale.y);
+            pool.Spawn(w, p, size);
+            return;
+        }
+    }
+
     // ---------------------------------------------------------------- cometas
     void TickShedding()
     {
@@ -660,8 +706,18 @@ public class Asteroid : MonoBehaviour
         float m1 = rb.mass, m2 = Mathf.Max(0.0001f, other.Mass);
         float reduced = (m1 * m2) / (m1 + m2);
         float energy = 0.5f * reduced * impactSpeed * impactSpeed;
-        Vector2 point = c.contactCount > 0 ? c.GetContact(0).point : rb.position;
-        HeavyImpact(point, energy, m1);
+
+        Vector2 point = rb.position, dir;
+        if (c.contactCount > 0)
+        {
+            var ct = c.GetContact(0);
+            point = ct.point;
+            dir = ct.normal;                       // la eyecta sale por donde entró el golpe
+        }
+        else dir = (other.Body.position - rb.position);
+        if (dir.sqrMagnitude < 0.0001f) dir = Vector2.up;
+
+        HeavyImpact(point, dir.normalized, energy, m1);
     }
 
     /// Dos casos opuestos:

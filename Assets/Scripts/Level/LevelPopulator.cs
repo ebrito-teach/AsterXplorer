@@ -23,8 +23,23 @@ public class LevelPopulator : MonoBehaviour
     [SerializeField] private float blockedMargin = 0.6f;
     [SerializeField] private float goalMargin = 1.5f;
 
+    [Header("Mantenimiento de la población")]
+    [Tooltip("Repone asteroides hasta volver a la cantidad del nivel. Sin esto, cada paso " +
+             "del coloso vacía la pantalla para siempre y el nivel se regala")]
+    [SerializeField] private bool keepPopulation = true;
+    [Tooltip("Cada cuánto comprueba la población (segundos)")]
+    [SerializeField] private float topUpInterval = 0.6f;
+    [Tooltip("Cuántos repone como mucho en cada comprobación, para que el cinturón se " +
+             "rellene poco a poco y no de golpe")]
+    [SerializeField] private int topUpPerCheck = 2;
+    [Tooltip("La corriente cambia de dirección en cada nivel, derivada de la semilla. " +
+             "Sin esto todos los niveles fluyen hacia el mismo lado y se sienten iguales")]
+    [SerializeField] private bool randomizeFlowPerLevel = true;
+
     readonly List<AsteroidTypeData> unlocked = new List<AsteroidTypeData>();
     int currentLevel;
+    int targetPopulation;
+    float nextTopUp;
 
     void Start() { StartLevel(level, randomSeed ? Random.Range(0, int.MaxValue) : seed); }
 
@@ -50,7 +65,11 @@ public class LevelPopulator : MonoBehaviour
 
         Asteroid.SpeedMultiplier = difficulty.SpeedMultiplier(currentLevel);
         if (FlowField.Instance != null)
+        {
+            // Cada nivel tiene su propia corriente, reproducible con la semilla
+            if (randomizeFlowPerLevel) FlowField.Instance.Randomize(newSeed);
             FlowField.Instance.SetAmplitude(difficulty.FlowAmplitude(currentLevel));
+        }
 
         // Tipos disponibles en este nivel (los colosos los gestiona su director)
         unlocked.Clear();
@@ -106,32 +125,65 @@ public class LevelPopulator : MonoBehaviour
             }
         }
 
+        targetPopulation = count;
+        nextTopUp = Time.time + 2f;
+
         Debug.Log($"LevelPopulator: nivel {currentLevel} (etapa {difficulty.Tier(currentLevel)}), semilla {newSeed}: " +
                   $"{count}/{shopping.Count} asteroides, presupuesto {difficulty.Budget(currentLevel):0.#}, " +
-                  $"velocidad x{Asteroid.SpeedMultiplier:0.00}");
+                  $"velocidad x{Asteroid.SpeedMultiplier:0.00}, corriente {(FlowField.Instance != null ? FlowField.Instance.BaseAngle : 0f):0}°");
+    }
+
+    // ------------------------------------------------------------- población
+    // Red de seguridad contra TODA fuga de asteroides, presente y futura: trozos que
+    // caducan, estáticos soltados, asteroides que se comen un coloso al entrar. En vez de
+    // tapar cada caso, se cuenta lo que hay vivo y se repone hasta la cantidad del nivel.
+    void Update()
+    {
+        if (!keepPopulation || pool == null || targetPopulation <= 0) return;
+        if (Time.time < nextTopUp) return;
+        nextTopUp = Time.time + Mathf.Max(0.1f, topUpInterval);
+
+        int live = 0;
+        var active = pool.Active;
+        for (int i = 0; i < active.Count; i++)
+        {
+            var a = active[i];
+            if (a == null || a.Type == null) continue;
+            if (a.Type.behavior == AsteroidBehavior.Debris) continue;
+            if (a.Type.behavior == AsteroidBehavior.Colossus) continue;
+            live++;
+        }
+
+        int missing = Mathf.Min(targetPopulation - live, Mathf.Max(1, topUpPerCheck));
+        for (int i = 0; i < missing; i++) SpawnAtBorder(PickAnyMoving());
     }
 
     // Un asteroide salió del área: entra otro por el lado de entrada
     void HandleExit(Asteroid a)
     {
         bool wasColossus = a.Type.behavior == AsteroidBehavior.Colossus;
+        bool wasStatic = a.Type.behavior == AsteroidBehavior.Static;
         var oldType = a.Type;
         pool.Release(a);
 
         if (wasColossus && colossus != null) colossus.NotifyGone();
         if (FlowField.Instance == null) return;
 
-        // ¿Toca un coloso en lugar de un asteroide normal?
+        // ¿Toca un coloso? Entra ADEMÁS, no en lugar del asteroide: si lo sustituyera,
+        // cada aparición le quitaría un cuerpo al cinturón para siempre.
         if (!wasColossus && colossus != null && colossus.ShouldSpawn(currentLevel))
-        {
             colossus.Spawn(currentLevel);
-            return;
-        }
 
-        // Un coloso que sale se sustituye por uno normal; los demás, por otro del mismo comportamiento
-        var type = wasColossus ? PickAnyMoving() : PickReplacement(oldType);
-        if (type == null) return;
+        // Un estático que sale es uno que el coloso soltó: ya no es terreno, así que se
+        // repone con uno en movimiento. Colocar un estático nuevo en mitad del nivel
+        // lo haría aparecer de la nada encima del jugador.
+        var type = (wasColossus || wasStatic) ? PickAnyMoving() : PickReplacement(oldType);
+        SpawnAtBorder(type);
+    }
 
+    void SpawnAtBorder(AsteroidTypeData type)
+    {
+        if (type == null || FlowField.Instance == null) return;
         Vector2 avoid = player != null ? (Vector2)player.position : Vector2.zero;
         Vector2 p = FlowField.Instance.RandomEntryPoint(avoid, playerSafeRadius);
         pool.Spawn(type, p);
@@ -142,7 +194,7 @@ public class LevelPopulator : MonoBehaviour
         float total = 0f;
         foreach (var t in unlocked)
             if (t.behavior == old.behavior) total += Mathf.Max(0f, t.spawnWeight);
-        if (total <= 0f) return old;
+        if (total <= 0f) return PickAnyMoving();
 
         float pick = Random.value * total;
         foreach (var t in unlocked)

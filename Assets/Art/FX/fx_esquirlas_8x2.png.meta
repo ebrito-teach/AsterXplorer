@@ -1,0 +1,767 @@
+fileFormatVersion: 2
+guid: 970278c35081be8458325b4154dee488
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7455447827826209918
+    second: fx_esquirlas_8x2_0
+  - first:
+      213: 8939253109670933991
+    second: fx_esquirlas_8x2_1
+  - first:
+      213: -1760569453224575198
+    second: fx_esquirlas_8x2_2
+  - first:
+      213: -3835364592146386876
+    second: fx_esquirlas_8x2_3
+  - first:
+      213: 2635926121189340531
+    second: fx_esquirlas_8x2_4
+  - first:
+      213: -2496468262841072912
+    second: fx_esquirlas_8x2_5
+  - first:
+      213: 3820745300012915377
+    second: fx_esquirlas_8x2_6
+  - first:
+      213: -6103591072232043114
+    second: fx_esquirlas_8x2_7
+  - first:
+      213: 1340512573785318012
+    second: fx_esquirlas_8x2_8
+  - first:
+      213: 7168779644011700587
+    second: fx_esquirlas_8x2_9
+  - first:
+      213: 1679056639480485764
+    second: fx_esquirlas_8x2_10
+  - first:
+      213: 1527243617025329046
+    second: fx_esquirlas_8x2_11
+  - first:
+      213: -7605512489148843456
+    second: fx_esquirlas_8x2_12
+  - first:
+      213: -6284507624585796884
+    second: fx_esquirlas_8x2_13
+  - first:
+      213: -5852485898627830504
+    second: fx_esquirlas_8x2_14
+  - first:
+      213: 1682750039280733703
+    second: fx_esquirlas_8x2_15
+  - first:
+      213: 342263159522515282
+    second: fx_esquirlas_8x2_16
+  - first:
+      213: 3003679489947168260
+    second: fx_esquirlas_8x2_17
+  - first:
+      213: -2870019104672677631
+    second: fx_esquirlas_8x2_18
+  - first:
+      213: 6576020205184801402
+    second: fx_esquirlas_8x2_19
+  - first:
+      213: 5790401316069908701
+    second: fx_esquirlas_8x2_20
+  - first:
+      213: -2562445643381255023
+    second: fx_esquirlas_8x2_21
+  - first:
+      213: 8460091013618195739
+    second: fx_esquirlas_8x2_22
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 0
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: 50
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 1
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: fx_esquirlas_8x2_0
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 363
+        width: 227
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e74f90b7c42177760800000000000000
+      internalID: 7455447827826209918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_esquirlas_8x2_1
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 363
+        width: 69
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e5fd3f475b9e0c70800000000000000
+      internalID: 8939253109670933991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_esquirlas_8x2_2
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 358
+        width: 129
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22f352209633197e0800000000000000
+      internalID: -1760569453224575198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_esquirlas_8x2_3
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 358
+        width: 43
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 440f00d593c06cac0800000000000000
+      internalID: -3835364592146386876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_esquirlas_8x2_4
+      rect:
+        serializedVersion: 2
+        x: 598
+        y: 352
+        width: 155
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 375f9ab67d0b49420800000000000000
+      internalID: 2635926121189340531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_esquirlas_8x2_5
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 363
+        width: 29
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f242508753ca5dd0800000000000000
+      internalID: -2496468262841072912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_esquirlas_8x2_6
+      rect:
+        serializedVersion: 2
+        x: 841
+        y: 372
+        width: 168
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ba53807b93060530800000000000000
+      internalID: 3820745300012915377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_esquirlas_8x2_7
+      rect:
+        serializedVersion: 2
+        x: 1038
+        y: 375
+        width: 22
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69d0d5d0240bb4ba0800000000000000
+      internalID: -6103591072232043114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_esquirlas_8x2_8
+      rect:
+        serializedVersion: 2
+        x: 1093
+        y: 356
+        width: 172
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c722b6165157a9210800000000000000
+      internalID: 1340512573785318012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_esquirlas_8x2_9
+      rect:
+        serializedVersion: 2
+        x: 1294
+        y: 368
+        width: 42
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b616e5aba1f9c7360800000000000000
+      internalID: 7168779644011700587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_esquirlas_8x2_10
+      rect:
+        serializedVersion: 2
+        x: 1356
+        y: 363
+        width: 165
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 487def91e153d4710800000000000000
+      internalID: 1679056639480485764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_esquirlas_8x2_11
+      rect:
+        serializedVersion: 2
+        x: 1550
+        y: 376
+        width: 13
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 697074e5afbd13510800000000000000
+      internalID: 1527243617025329046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_esquirlas_8x2_12
+      rect:
+        serializedVersion: 2
+        x: 1596
+        y: 359
+        width: 181
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04a7c75dfaac37690800000000000000
+      internalID: -7605512489148843456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_esquirlas_8x2_13
+      rect:
+        serializedVersion: 2
+        x: 1806
+        y: 364
+        width: 30
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce26458bc91f8c8a0800000000000000
+      internalID: -6284507624585796884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_esquirlas_8x2_14
+      rect:
+        serializedVersion: 2
+        x: 1913
+        y: 360
+        width: 120
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81d2e4f351bc7cea0800000000000000
+      internalID: -5852485898627830504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_esquirlas_8x2_15
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 73
+        width: 227
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70e4a11ce345a5710800000000000000
+      internalID: 1682750039280733703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_esquirlas_8x2_16
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 73
+        width: 227
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 259da0bb786ffb400800000000000000
+      internalID: 342263159522515282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_esquirlas_8x2_17
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 73
+        width: 227
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40e6d69f4963fa920800000000000000
+      internalID: 3003679489947168260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_esquirlas_8x2_18
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 73
+        width: 227
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 101866f84d4ab28d0800000000000000
+      internalID: -2870019104672677631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_esquirlas_8x2_19
+      rect:
+        serializedVersion: 2
+        x: 1038
+        y: 73
+        width: 227
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7ad4dd0987b24b50800000000000000
+      internalID: 6576020205184801402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_esquirlas_8x2_20
+      rect:
+        serializedVersion: 2
+        x: 1294
+        y: 73
+        width: 227
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd02d4f6153ab5050800000000000000
+      internalID: 5790401316069908701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_esquirlas_8x2_21
+      rect:
+        serializedVersion: 2
+        x: 1550
+        y: 73
+        width: 227
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1945306834d507cd0800000000000000
+      internalID: -2562445643381255023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx_esquirlas_8x2_22
+      rect:
+        serializedVersion: 2
+        x: 1806
+        y: 73
+        width: 227
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1ddf2214f7486570800000000000000
+      internalID: 8460091013618195739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      fx_esquirlas_8x2_0: 7455447827826209918
+      fx_esquirlas_8x2_1: 8939253109670933991
+      fx_esquirlas_8x2_10: 1679056639480485764
+      fx_esquirlas_8x2_11: 1527243617025329046
+      fx_esquirlas_8x2_12: -7605512489148843456
+      fx_esquirlas_8x2_13: -6284507624585796884
+      fx_esquirlas_8x2_14: -5852485898627830504
+      fx_esquirlas_8x2_15: 1682750039280733703
+      fx_esquirlas_8x2_16: 342263159522515282
+      fx_esquirlas_8x2_17: 3003679489947168260
+      fx_esquirlas_8x2_18: -2870019104672677631
+      fx_esquirlas_8x2_19: 6576020205184801402
+      fx_esquirlas_8x2_2: -1760569453224575198
+      fx_esquirlas_8x2_20: 5790401316069908701
+      fx_esquirlas_8x2_21: -2562445643381255023
+      fx_esquirlas_8x2_22: 8460091013618195739
+      fx_esquirlas_8x2_3: -3835364592146386876
+      fx_esquirlas_8x2_4: 2635926121189340531
+      fx_esquirlas_8x2_5: -2496468262841072912
+      fx_esquirlas_8x2_6: 3820745300012915377
+      fx_esquirlas_8x2_7: -6103591072232043114
+      fx_esquirlas_8x2_8: 1340512573785318012
+      fx_esquirlas_8x2_9: 7168779644011700587
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
