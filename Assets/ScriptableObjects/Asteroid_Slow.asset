@@ -82,9 +82,9 @@ MonoBehaviour:
   unstoppable: 0
   canBeCaptured: 1
   captureChance: 0.08
-  captureMaxRadius: 0.32
+  captureMaxRadius: 38
   captureMinSpeed: 0.6
-  captureMaxSpeed: 3.5
+  captureMaxSpeed: 7
   acceptsMoons: 0
   maxMoons: 4
   moonCaptureMultiplier: 1
@@ -92,6 +92,11 @@ MonoBehaviour:
   moonOrbitSpeed: {x: 30, y: 75}
   moonTrail: 0
   moonsAreLethal: 0
+  wakeType: {fileID: 0}
+  wakeEvery: 3.5
+  wakeChance: 0.85
+  wakeSpread: 3.5
+  wakeSizeScale: {x: 0.5, y: 1}
   pullRadius: 0
   pullForce: 9
   pullMaxTargetRadius: 0.45

@@ -91,6 +91,11 @@ MonoBehaviour:
   moonOrbitSpeed: {x: 20, y: 45}
   moonTrail: 0.5
   moonsAreLethal: 1
+  wakeType: {fileID: 11400000, guid: 25d36f9cb73b59f4296f4f5cffcc9469, type: 2}
+  wakeEvery: 3.5
+  wakeChance: 0.85
+  wakeSpread: 3.5
+  wakeSizeScale: {x: 0.5, y: 1}
   pullRadius: 5
   pullForce: 14
   pullMaxTargetRadius: 0.5
