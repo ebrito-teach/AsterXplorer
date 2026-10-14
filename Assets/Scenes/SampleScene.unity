@@ -329,7 +329,7 @@ MonoBehaviour:
   guaranteeUntilLevel: 1
   guaranteeAfterSeconds: 45
   minSecondsAfterStart: 6
-  maxAlive: 2
+  maxAlive: 1
   cooldownSeconds: 1
   cooldownReductionPerTier: 3
   minCooldown: 12
@@ -337,6 +337,9 @@ MonoBehaviour:
   avoidPlayerRadius: 4
   extraPush: 1
   visibleInset: 1.2
+  safeCorridor: 2.8
+  approxRadiusPerUnit: 0.45
+  hugFarEdge: 1
 --- !u!4 &348605427
 Transform:
   m_ObjectHideFlags: 0

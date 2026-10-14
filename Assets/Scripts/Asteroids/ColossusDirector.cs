@@ -37,6 +37,18 @@ public class ColossusDirector : MonoBehaviour
              "margen de spawn y atravesar el nivel entero por fuera de cámara")]
     [SerializeField] private float visibleInset = 1.2f;
 
+    [Header("Paso justo")]
+    [Tooltip("Unidades libres que el coloso DEBE dejar siempre al otro lado, para que el " +
+             "jugador tenga por dónde pasar. Si el tamaño sorteado no cabe, se recorta. " +
+             "Un coloso que ocupa toda la pantalla no es difícil: es imposible")]
+    [SerializeField] private float safeCorridor = 2.8f;
+    [Tooltip("Radio del collider por unidad de escala, para calcular el tamaño máximo sin " +
+             "haberlo creado aún. 0.45 vale para un sprite de roca normal")]
+    [SerializeField] private float approxRadiusPerUnit = 0.45f;
+    [Tooltip("Se pega al borde más lejano del jugador en vez de cruzar por el centro, " +
+             "de modo que el pasillo libre queda siempre del lado del jugador")]
+    [SerializeField] private bool hugFarEdge = true;
+
     /// Posición de entrada y tipo. Aquí se conectarán la alerta del HUD y el sonido.
     public event System.Action<Vector2, AsteroidTypeData> ColossusSpawned;
     public int AliveCount => alive;
@@ -80,44 +92,73 @@ public class ColossusDirector : MonoBehaviour
         var flow = FlowField.Instance;
         if (type == null || flow == null || pool == null) return null;
 
-        Vector2 p = EntryPoint(flow);
+        // Tamaño recortado para que SIEMPRE quede un pasillo transitable al otro lado
+        Rect camRect = GameBounds.Instance != null ? GameBounds.Instance.CameraRect : flow.SpawnRect;
+        float size = type.RandomSize();
+        float r = Mathf.Max(0.05f, approxRadiusPerUnit);
+        float maxSize = Mathf.Max(type.sizeRange.x * 0.5f,
+                                  (camRect.height - Mathf.Max(0f, safeCorridor)) / (2f * r));
+        if (size > maxSize) size = maxSize;
 
-        var a = pool.Spawn(type, p);
+        Vector2 p = EntryPoint(flow, size * r);
+
+        var a = pool.Spawn(type, p, size);
         alive++;
         spawnedThisLevel++;
         lastSpawnTime = Time.time;
 
-        Debug.Log($"ColossusDirector: entra '{type.id}' en {p}. Probabilidad actual por asteroide: {ChanceAt(level):P2}");
+        float corridor = camRect.height - (a != null ? a.WorldRadius * 2f : size * 2f * r);
+        Debug.Log($"ColossusDirector: entra '{type.id}' tamaño {size:0.00} en {p}. " +
+                  $"Pasillo libre: {corridor:0.0} u. Probabilidad: {ChanceAt(level):P2}");
         ColossusSpawned?.Invoke(p, type);
         return a;
     }
 
     /// Nace fuera de pantalla pero SIEMPRE a una altura (o anchura) visible, para que su
     /// trayectoria cruce el campo de juego y el jugador lo vea venir.
-    Vector2 EntryPoint(FlowField flow)
+    Vector2 EntryPoint(FlowField flow, float worldRadius)
     {
         Rect spawn = flow.SpawnRect;
         Rect cam = GameBounds.Instance != null ? GameBounds.Instance.CameraRect : spawn;
-        Vector2 avoid = player != null ? (Vector2)player.position : Vector2.zero;
+        Vector2 avoid = player != null ? (Vector2)player.position : cam.center;
 
         Vector2 p = flow.RandomEntryPoint(avoid, avoidPlayerRadius);
         const float eps = 0.05f;
         bool fromSide = p.x <= spawn.xMin + eps || p.x >= spawn.xMax - eps;
 
-        // Banda visible, con un margen por dentro para que no entre rozando la esquina
         float inset = Mathf.Max(0f, visibleInset);
         if (fromSide)
         {
-            float min = cam.yMin + inset, max = cam.yMax - inset;
-            if (min > max) { min = max = cam.center.y; }
-            p.y = PickAway(min, max, avoid.y, avoidPlayerRadius);
+            if (hugFarEdge)
+            {
+                // Se pega al borde contrario al jugador: así el pasillo libre queda
+                // entero del lado del jugador, en vez de partido en dos por el centro.
+                p.y = avoid.y > cam.center.y
+                    ? cam.yMin + worldRadius * 0.9f
+                    : cam.yMax - worldRadius * 0.9f;
+            }
+            else
+            {
+                float min = cam.yMin + inset, max = cam.yMax - inset;
+                if (min > max) min = max = cam.center.y;
+                p.y = PickAway(min, max, avoid.y, avoidPlayerRadius);
+            }
             p.x += p.x <= spawn.xMin + eps ? -extraPush : extraPush;
         }
         else
         {
-            float min = cam.xMin + inset, max = cam.xMax - inset;
-            if (min > max) { min = max = cam.center.x; }
-            p.x = PickAway(min, max, avoid.x, avoidPlayerRadius);
+            if (hugFarEdge)
+            {
+                p.x = avoid.x > cam.center.x
+                    ? cam.xMin + worldRadius * 0.9f
+                    : cam.xMax - worldRadius * 0.9f;
+            }
+            else
+            {
+                float min = cam.xMin + inset, max = cam.xMax - inset;
+                if (min > max) min = max = cam.center.x;
+                p.x = PickAway(min, max, avoid.x, avoidPlayerRadius);
+            }
             p.y += p.y <= spawn.yMin + eps ? -extraPush : extraPush;
         }
         return p;

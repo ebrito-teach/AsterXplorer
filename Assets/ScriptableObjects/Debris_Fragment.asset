@@ -15,7 +15,7 @@ MonoBehaviour:
   id: debris_fragment
   behavior: 5
   sprites: []
-  sizeRange: {x: 0.35, y: 0.7}
+  sizeRange: {x: 0.12, y: 0.35}
   sizeSkew: 1.4
   minWorldRadius: 0.1
   prefabOverride: {fileID: 0}
@@ -39,13 +39,14 @@ MonoBehaviour:
   impactSpeedCap: 0
   keepsImpulse: 0.9
   reboundDamping: 0.8
-  impactEnergyLoss: 0.6
+  impactEnergyLoss: 0.25
   impactSpinLoss: 0.15
   impactSpeedFloor: 0.55
   noRestoreSeconds: 0.3
   canBeDislodged: 0
   dislodgeMassRatio: 4
   dislodgesStatics: 0
+  unstoppable: 0
   canBeCaptured: 1
   captureChance: 0.12
   captureMaxRadius: 0.32

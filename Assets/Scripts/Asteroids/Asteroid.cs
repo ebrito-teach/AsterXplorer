@@ -29,6 +29,8 @@ public class Asteroid : MonoBehaviour
         get
         {
             if (Type == null) return false;
+            // Un trozo por debajo del radio mínimo empuja, pero no mata
+            if (Type.lethalMinRadius > 0f && WorldRadius < Type.lethalMinRadius) return false;
             if (orbitHost != null)
                 return orbitHost.Type != null && orbitHost.Type.moonsAreLethal;
             return Type.killsPlayer || dislodged;
@@ -42,6 +44,8 @@ public class Asteroid : MonoBehaviour
     public Sprite CurrentSprite => sr != null ? sr.sprite : null;
     /// Cuerpo físico (lo usan el campo magnético y las órbitas)
     public Rigidbody2D Body => rb;
+    /// Imparable: cinemático a propósito, nada lo desvía
+    public bool Unstoppable => unstoppable;
 
     Rigidbody2D rb;
     CircleCollider2D col;
@@ -682,7 +686,18 @@ public class Asteroid : MonoBehaviour
             float boost = Mathf.Lerp(1f, Mathf.Max(1f, Type.launchBoost), share);
             Vector2 v = after * boost;
 
-            if (Type.impactSpeedCap > 0f && targetSpeed > 0.01f)
+            // Tope físico del empujón de un imparable. En un choque de frente contra una masa
+            // infinita que viaja a v, el cuerpo ligero sale como mucho a 2v: más que eso no
+            // existe. Sin este tope el motor resuelve la penetración de un cinemático enorme
+            // disparando los guijarros a velocidades absurdas, y el jugador muere sí o sí.
+            if (other.Unstoppable)
+            {
+                float cap = other.Body.linearVelocity.magnitude *
+                            Mathf.Max(0.1f, other.Type.shoveSpeedMultiplier);
+                float sp = v.magnitude;
+                if (cap > 0.01f && sp > cap) v *= cap / sp;
+            }
+            else if (Type.impactSpeedCap > 0f && targetSpeed > 0.01f)
             {
                 float cap = targetSpeed * Type.impactSpeedCap;
                 float sp = v.magnitude;

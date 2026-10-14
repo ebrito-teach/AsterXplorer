@@ -6,6 +6,13 @@ public class AsteroidBreaker : MonoBehaviour
     /// posición, tamaño y variante (índice del sprite = color de la roca)
     public static event System.Action<Vector2, float, int> Broken;
 
+    /// Segundos mínimos entre dos roturas de todo el nivel, para que no se encadenen
+    const float BreakSpacing = 0.45f;
+    static float lastBreakTime = -99f;
+
+    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
+    static void ResetStatics() { lastBreakTime = -99f; }
+
     Asteroid asteroid;
     Rigidbody2D rb;
     float bornTime;
@@ -51,7 +58,13 @@ public class AsteroidBreaker : MonoBehaviour
         if (Asteroid.DebrisAlive >= type.maxFragmentsAlive)
         { Why(type, $"ya hay {Asteroid.DebrisAlive} fragmentos vivos (tope {type.maxFragmentsAlive})"); return; }
 
-        Break();
+        // Freno a las reacciones en cadena: dos roturas no pueden ocurrir en el mismo instante.
+        // Sin esto, una rotura lanza trozos que rompen a otros y la pantalla se llena de golpe.
+        if (Time.time - lastBreakTime < BreakSpacing)
+        { Why(type, "otra roca acaba de romperse hace un instante"); return; }
+        lastBreakTime = Time.time;
+
+        Break(c, other);
     }
 
     void Why(AsteroidTypeData type, string reason)
@@ -69,7 +82,16 @@ public class AsteroidBreaker : MonoBehaviour
                rb.position.y > r.yMin - m && rb.position.y < r.yMax + m;
     }
 
-    void Break()
+    /// Rotura con CONO DE EYECCIÓN, como un cráter real:
+    ///
+    ///  - El material sale hacia el lado del impacto, en un cono, no en círculo. La pluma de
+    ///    eyecta de DART salió justo por donde entró la nave.
+    ///  - Las velocidades siguen una ley de potencias de exponente 1.22, medida en cráteres:
+    ///    casi todo el material sale lento y uno o dos trozos salen disparados.
+    ///  - La velocidad máxima de eyección es el 4-20 % de la del choque. La roca se parte y
+    ///    sus pedazos siguen el camino de la madre; no se dispersan como confeti.
+    ///  - Los tamaños decaen: un pedazo grande y los demás cada vez menores.
+    void Break(Collision2D c, Asteroid other)
     {
         broken = true;
         var type = asteroid.Type;
@@ -77,6 +99,7 @@ public class AsteroidBreaker : MonoBehaviour
         Vector2 pos = rb.position;
         Vector2 vel = rb.linearVelocity;
         float size = asteroid.Size;
+        float impactSpeed = c.relativeVelocity.magnitude;
         int variant = System.Array.IndexOf(type.sprites, asteroid.CurrentSprite);
         if (variant < 0) variant = 0;
 
@@ -85,24 +108,38 @@ public class AsteroidBreaker : MonoBehaviour
         {
             Sprite[] group = type.FragmentsFor(variant);
             int count = Random.Range(type.fragmentCount.x, type.fragmentCount.y + 1);
-            float start = Random.Range(0f, 360f);
+
+            // Eje del cono: del centro de la roca hacia quien la golpeó. Ahí está el cráter.
+            Vector2 axis = other != null ? (other.Body.position - pos) : Random.insideUnitCircle;
+            if (axis.sqrMagnitude < 0.0001f) axis = Vector2.right;
+            axis.Normalize();
+            float axisDeg = Mathf.Atan2(axis.y, axis.x) * Mathf.Rad2Deg;
+
+            float vMax = Mathf.Max(0.8f, impactSpeed * Mathf.Max(0.01f, type.ejectaSpeedFraction));
+            float vMin = vMax * 0.18f;
+            float alpha = Mathf.Max(0.3f, type.ejectaSpeedExponent);
+            float frac = Mathf.Clamp(type.largestFragment, 0.2f, 0.9f);
 
             for (int i = 0; i < count; i++)
             {
-                float ang = (start + i * 360f / count + Random.Range(-25f, 25f)) * Mathf.Deg2Rad;
+                float ang = (axisDeg + Random.Range(-type.ejectaConeAngle, type.ejectaConeAngle))
+                            * Mathf.Deg2Rad;
                 Vector2 dir = new Vector2(Mathf.Cos(ang), Mathf.Sin(ang));
 
+                // Ley de potencias: v = vMin · u^(-1/alpha). La mayoría sale cerca de vMin.
+                float u = Mathf.Max(0.02f, Random.value);
+                float speed = Mathf.Min(vMax, vMin * Mathf.Pow(u, -1f / alpha));
+
                 Sprite sp = (group != null && group.Length > 0) ? group[Random.Range(0, group.Length)] : null;
-                // Los trozos ya son recortes de la roca a su escala real: mismo tamaño que el padre
-                float fSize = size * Random.Range(0.85f, 1.15f);
-                Vector2 p = pos + dir * (asteroid.WorldRadius * 0.45f);
+                float fSize = size * frac * Mathf.Pow(Mathf.Clamp(type.fragmentSizeFalloff, 0.4f, 0.95f), i)
+                              * Random.Range(0.9f, 1.1f);
+                Vector2 p = pos + dir * (asteroid.WorldRadius * 0.5f);
 
                 var f = pool.Spawn(fType, sp, p, fSize);
                 if (f == null) continue;
 
-                float boost = Random.Range(type.fragmentBoost.x, type.fragmentBoost.y);
-                Vector2 v = (vel + dir * Random.Range(0.6f, 1.4f)) * boost;
-                f.SetMotion(v, Random.Range(-180f, 180f));
+                // Heredan el movimiento de la roca madre: se separan de ella, no salen de cero
+                f.SetMotion(vel + dir * speed, Random.Range(-200f, 200f));
             }
         }
 

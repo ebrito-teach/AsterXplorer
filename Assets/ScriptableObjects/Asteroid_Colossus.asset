@@ -47,7 +47,7 @@ MonoBehaviour:
   - {fileID: 7069850586183909704, guid: 15d7f5c2861f3b045938b7549dc1c37b, type: 3}
   - {fileID: -3311441006315851228, guid: 15d7f5c2861f3b045938b7549dc1c37b, type: 3}
   - {fileID: -7755180952027138153, guid: 15d7f5c2861f3b045938b7549dc1c37b, type: 3}
-  sizeRange: {x: 4.5, y: 7}
+  sizeRange: {x: 3.2, y: 5}
   sizeSkew: 1
   minWorldRadius: 0.2
   prefabOverride: {fileID: 0}
@@ -75,9 +75,10 @@ MonoBehaviour:
   impactSpinLoss: 0.03
   impactSpeedFloor: 0.9
   noRestoreSeconds: 0.2
-  canBeDislodged: 1
+  canBeDislodged: 0
   dislodgeMassRatio: 4
   dislodgesStatics: 1
+  unstoppable: 1
   canBeCaptured: 0
   captureChance: 0.12
   captureMaxRadius: 0.32
@@ -86,7 +87,7 @@ MonoBehaviour:
   acceptsMoons: 1
   maxMoons: 6
   moonCaptureMultiplier: 5
-  moonGap: 0.6
+  moonGap: 3.5
   moonOrbitSpeed: {x: 20, y: 45}
   moonTrail: 0.5
   moonsAreLethal: 1
@@ -95,10 +96,17 @@ MonoBehaviour:
   pullMaxTargetRadius: 0.5
   pullMaxTargetMassFraction: 0.03
   killsPlayer: 1
+  lethalMinRadius: 0
+  shoveSpeedMultiplier: 2
   canBreak: 0
   fragmentType: {fileID: 0}
   fragmentGroups: []
   fragmentCount: {x: 3, y: 5}
+  largestFragment: 0.55
+  fragmentSizeFalloff: 0.72
+  ejectaConeAngle: 35
+  ejectaSpeedFraction: 0.25
+  ejectaSpeedExponent: 1.22
   fragmentBoost: {x: 1.3, y: 1.6}
   breakMinSpeed: 0.5
   breakShield: 0.4

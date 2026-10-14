@@ -142,6 +142,15 @@ public class AsteroidTypeData : ScriptableObject
 
     [Header("Reglas")]
     public bool killsPlayer = true;
+    [Tooltip("Radio por debajo del cual NO mata: te empuja y te desvía, pero no te mata. " +
+             "Es lo que permite que una rotura llene la pantalla de trozos sin que el nivel " +
+             "se vuelva una trampa mortal. 0 = todo mata")]
+    public float lethalMinRadius = 0f;
+    [Tooltip("Velocidad máxima que puede imprimir a lo que empuja, en múltiplos de su propia " +
+             "velocidad. 2 es el LÍMITE FÍSICO REAL: en un choque de frente contra una masa " +
+             "infinita que va a v, el cuerpo ligero sale como mucho a 2v. Sin este tope, el " +
+             "motor resuelve la penetración y dispara los guijarros a velocidades imposibles")]
+    public float shoveSpeedMultiplier = 2f;
     public bool canBreak = false;
 
     [Header("Rotura (solo tipos que se rompen)")]
@@ -149,8 +158,26 @@ public class AsteroidTypeData : ScriptableObject
     public AsteroidTypeData fragmentType;
     [Tooltip("Un grupo de fragmentos por cada sprite del asteroide, en el mismo orden")]
     public SpriteGroup[] fragmentGroups;
-    public Vector2Int fragmentCount = new Vector2Int(3, 5);
-    [Tooltip("Los fragmentos salen más rápidos que el asteroide original")]
+    [Tooltip("2-3. Cada fragmento es un cuerpo con masa que vive varios segundos: con 5 por " +
+             "rotura y varias roturas seguidas, la pantalla se vuelve intransitable")]
+    public Vector2Int fragmentCount = new Vector2Int(2, 3);
+    [Tooltip("Tamaño del mayor fragmento respecto a la roca madre. En una disrupción real el " +
+             "mayor pedazo ronda la mitad del cuerpo, no su mismo tamaño")]
+    [Range(0.2f, 0.9f)] public float largestFragment = 0.55f;
+    [Tooltip("Cada fragmento siguiente mide esta fracción del anterior. Da la distribución " +
+             "real: un pedazo grande y varios cada vez menores")]
+    [Range(0.4f, 0.95f)] public float fragmentSizeFalloff = 0.72f;
+    [Tooltip("Apertura del CONO de eyección, en grados a cada lado. La eyecta de un cráter " +
+             "sale en cono hacia el lado del impacto, no en círculo. Esto es lo que evita que " +
+             "parezca que se tiran piedras a lo loco")]
+    public float ejectaConeAngle = 35f;
+    [Tooltip("Velocidad máxima de eyección como fracción de la velocidad del choque. En la " +
+             "realidad es del 4 al 20 por ciento: la roca se parte, no se dispara")]
+    public float ejectaSpeedFraction = 0.25f;
+    [Tooltip("Exponente de la ley de potencias de velocidades. 1.22 es el valor medido en " +
+             "cráteres reales: muchísimo material lento y poquísimo rápido")]
+    public float ejectaSpeedExponent = 1.22f;
+    [Tooltip("Los fragmentos salen más rápidos que el asteroide original (compatibilidad)")]
     public Vector2 fragmentBoost = new Vector2(1.3f, 1.6f);
     [Tooltip("Velocidad de choque mínima para que se rompa")]
     public float breakMinSpeed = 0.5f;
