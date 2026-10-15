@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 26e66810fecba0042b2fa67f9683e02d
+guid: 5369225a9d4261d4bba749db41bae43a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1566448104561251862
-    second: ui_btn_brake_0
+      213: -6491254548024587967
+    second: ui_btn_focus_on_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -72,10 +72,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 512
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -152,13 +152,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ui_btn_brake_0
+      name: ui_btn_focus_on_0
       rect:
         serializedVersion: 2
-        x: 66
-        y: 61
-        width: 892
-        height: 902
+        x: 31
+        y: 31
+        width: 450
+        height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -167,8 +167,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ae9ea809fbbd24ae0800000000000000
-      internalID: -1566448104561251862
+      spriteID: 1490b56716e6ae5a0800000000000000
+      internalID: -6491254548024587967
       vertices: []
       indices: 
       edges: []
@@ -187,7 +187,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ui_btn_brake_0: -1566448104561251862
+      ui_btn_focus_on_0: -6491254548024587967
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

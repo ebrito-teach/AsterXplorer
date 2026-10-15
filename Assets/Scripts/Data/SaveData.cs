@@ -112,13 +112,29 @@ public class Settings
     public bool sound = true;
     public bool music = true;
     public bool vibration = true;
-    public bool screenEffects = true;        // sacudida, hitstop, destellos
-    public ControlScheme control = ControlScheme.Lever;
+    public bool screenEffects = true;        // sacudida y destellos
+    public ControlScheme control = ControlScheme.Joystick;
+    /// De qué lado de la pantalla van los mandos. Zurdos y diestros sujetan el móvil
+    /// distinto; es un booleano y evita que media base de jugadores juegue incómoda.
+    public bool controlsOnLeft = true;
+    /// Sensibilidad del control por inclinación, 0..1 (se mapea a grados en TiltInput)
+    public float tiltSensitivity = 0.5f;
+    public bool tiltInvert = false;
     public string language = "";             // vacío = el del sistema
     public string playerName = "";
 }
 
-public enum ControlScheme { Lever = 0, Tilt = 1 }
+/// Los valores tienen que coincidir con ShipInput.Scheme: se convierte uno en otro
+/// directamente, sin tabla de equivalencias.
+public enum ControlScheme
+{
+    /// Stick de dos ejes, movimiento directo. Un solo mando en pantalla.
+    Joystick = 0,
+    /// Inclinar el móvil para girar + botón de empuje.
+    TiltShip = 1,
+    /// Dos botones para girar + botón de empuje.
+    ButtonsShip = 2,
+}
 
 /// Lo que alimenta el ajuste invisible de dificultad del Hito 3. Sin estos datos, la
 /// dificultad se calibra a ojo.

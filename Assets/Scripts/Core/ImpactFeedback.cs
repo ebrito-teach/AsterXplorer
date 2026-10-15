@@ -1,12 +1,31 @@
 using UnityEngine;
 
-/// Lo que convierte un choque en un GOLPE. La física ya calcula bien la transferencia de
-/// energía; lo que faltaba es que el jugador la sienta. Tres recursos, en orden de potencia:
+/// Lo que convierte un choque en un GOLPE: sacudida de cámara y un retroceso mínimo de zoom,
+/// los dos proporcionales a la energía real del choque y a lo cerca que haya pasado de ti.
 ///
-///   1. Hitstop: el tiempo se congela 40-80 ms en el momento del impacto. Es el truco más
-///      eficaz que existe para transmitir masa, y lo usa todo el género desde Street Fighter.
-///   2. Sacudida de cámara proporcional a la energía real del choque.
-///   3. Zoom mínimo hacia fuera en los golpes bestiales.
+/// AQUÍ HABÍA UN HITSTOP Y SE QUITÓ. CONVIENE SABER POR QUÉ.
+///
+/// Congelaba el tiempo unos milisegundos en cada golpe fuerte. Es el mejor truco que existe
+/// para transmitir masa... en un juego de pelea, donde no estás navegando. Aquí tenía dos
+/// problemas, y el segundo es el grave:
+///
+///   1. Te quita el mando justo cuando estás enhebrando un hueco. En un esquivador, moverse
+///      ES el verbo del juego; congelarlo trabaja contra todo lo demás.
+///
+///   2. **Nunca tuvo nada que ver contigo.** El evento que lo disparaba, Asteroid.HeavyImpact,
+///      solo se emite cuando chocan dos asteroides ENTRE SÍ — el jugador no entra en esa
+///      ecuación. Tus propios golpes van por otro camino. O sea: el juego te congelaba por
+///      sucesos ajenos, en cualquier punto de la pantalla, decenas de veces por nivel.
+///
+/// De propina, deja de tocar Time.timeScale y Time.fixedDeltaTime en caliente, que metía
+/// jitter en la física y alargaba las transiciones de nivel (van en tiempo escalado).
+///
+/// Si alguna vez quieres recuperarlo, el sitio correcto es el aturdimiento del
+/// PlayerController: tu propio golpe, que es raro y sí merece una pausa.
+///
+/// La sacudida y el zoom se quedan porque son ESPACIALES: te dicen dónde pasó algo sin
+/// quitarte el control. Y ahora se atenúan con la distancia, así que un choque al otro lado
+/// de la pantalla ya no sacude igual que uno que te pasó rozando.
 ///
 /// Ponlo en un GameObject vacío de la escena y arrástrale la cámara.
 [DefaultExecutionOrder(100)]
@@ -28,14 +47,17 @@ public class ImpactFeedback : MonoBehaviour
     [Tooltip("Velocidad del temblor. Alto = seco y nervioso, bajo = bamboleo")]
     [SerializeField] private float shakeFrequency = 26f;
 
-    [Header("Congelación (hitstop)")]
-    [Tooltip("Segundos reales que se congela el tiempo en el golpe más fuerte")]
-    [SerializeField] private float maxHitstop = 0.07f;
-    [Tooltip("A cuánto baja la escala de tiempo durante la congelación")]
-    [Range(0.01f, 1f)] [SerializeField] private float hitstopScale = 0.08f;
-    [Tooltip("Fracción de la energía máxima a partir de la cual se congela. Por debajo solo " +
-             "hay sacudida: si cada choque congelara el juego, sería injugable")]
-    [Range(0f, 1f)] [SerializeField] private float hitstopThreshold = 0.45f;
+    [Header("Distancia al jugador")]
+    [Tooltip("Dentro de este radio el golpe se siente entero. Es tu burbuja: lo que pasa aquí " +
+             "te concierne")]
+    [SerializeField] private float fullEffectRadius = 3f;
+    [Tooltip("A partir de aquí no se nota nada. Un choque entre dos rocas a doce unidades no " +
+             "tiene por qué moverte la cámara")]
+    [SerializeField] private float noEffectRadius = 11f;
+    [Tooltip("Sacudida mínima que conservan los golpes lejanos, para que el cinturón siga " +
+             "sintiéndose vivo en vez de muerto más allá del radio")]
+    [Range(0f, 1f)] [SerializeField] private float distantFloor = 0.15f;
+    [SerializeField] private Transform player;
 
     [Header("Retroceso de zoom")]
     [SerializeField] private float maxZoomOut = 0.25f;      // unidades de tamaño ortográfico
@@ -70,12 +92,15 @@ public class ImpactFeedback : MonoBehaviour
     float shakeAmount, shakeEnds;
     float seedX, seedY;
     float zoomOffset;
-    float hitstopEnds;
-    bool frozen;
 
     void Awake()
     {
         if (cam == null) cam = Camera.main;
+        if (player == null)
+        {
+            var pc = FindFirstObjectByType<PlayerController>();
+            if (pc != null) player = pc.transform;
+        }
         seedX = Random.value * 100f;
         seedY = Random.value * 100f;
     }
@@ -95,7 +120,6 @@ public class ImpactFeedback : MonoBehaviour
     void OnDisable()
     {
         Asteroid.HeavyImpact -= OnImpact;
-        Unfreeze();
         if (cam != null)
         {
             cam.transform.localPosition = camBase;
@@ -107,8 +131,24 @@ public class ImpactFeedback : MonoBehaviour
     {
         if (energy < minEnergy) return;
 
-        // Raíz cuadrada: así los golpes medianos también se notan y no solo los extremos
-        float t = Mathf.Clamp01(Mathf.Sqrt(Mathf.InverseLerp(minEnergy, fullEnergy, energy)));
+        // Fuerza del golpe en sí. Raíz cuadrada: así los golpes medianos también se notan y
+        // no solo los extremos. Esta es la que manda en las PARTÍCULAS, porque el polvo que
+        // levanta un choque es el mismo lo lejos que esté: lo que cambia con la distancia es
+        // cuánto te afecta a TI, no lo que ocurre allí.
+        float fx = Mathf.Clamp01(Mathf.Sqrt(Mathf.InverseLerp(minEnergy, fullEnergy, energy)));
+
+        // Lo cerca que te pasó. La cámara reacciona a lo que te concierne, no a todo lo que
+        // ocurre: con el cinturón lleno, sin esto la pantalla tiembla sin parar y el temblor
+        // deja de significar nada.
+        float near = 1f;
+        if (player != null)
+        {
+            float d = Vector2.Distance(point, player.position);
+            near = 1f - Mathf.Clamp01((d - fullEffectRadius)
+                                      / Mathf.Max(0.01f, noEffectRadius - fullEffectRadius));
+            near = Mathf.Lerp(distantFloor, 1f, near);
+        }
+        float t = fx * near;        // la que mueve la cámara
 
         float amount = maxShake * t;
         if (amount > shakeAmount || Time.unscaledTime > shakeEnds)
@@ -121,32 +161,24 @@ public class ImpactFeedback : MonoBehaviour
 
         zoomOffset = Mathf.Max(zoomOffset, maxZoomOut * t);
 
-        if (t >= hitstopThreshold && !frozen)
-        {
-            frozen = true;
-            hitstopEnds = Time.unscaledTime + maxHitstop * t;
-            Time.timeScale = hitstopScale;
-            Time.fixedDeltaTime = 0.02f * Time.timeScale;
-        }
-
         if (impactFx != null && energy >= fxMinEnergy)
         {
             impactFx.transform.position = point;
-            impactFx.transform.localScale = Vector3.one * Mathf.Lerp(fxScale.x, fxScale.y, t);
-            impactFx.Emit(Mathf.RoundToInt(Mathf.Lerp(fxBurst.x, fxBurst.y, t)));
+            impactFx.transform.localScale = Vector3.one * Mathf.Lerp(fxScale.x, fxScale.y, fx);
+            impactFx.Emit(Mathf.RoundToInt(Mathf.Lerp(fxBurst.x, fxBurst.y, fx)));
         }
 
         if (flashFx != null && energy >= flashMinEnergy)
         {
             flashFx.transform.position = point;
-            flashFx.transform.localScale = Vector3.one * Mathf.Lerp(0.6f, 1.5f, t);
+            flashFx.transform.localScale = Vector3.one * Mathf.Lerp(0.6f, 1.5f, fx);
             flashFx.Emit(1);
         }
 
         if (ringFx != null && energy >= ringMinEnergy)
         {
             ringFx.transform.position = point;
-            ringFx.transform.localScale = Vector3.one * Mathf.Lerp(0.8f, 1.8f, t);
+            ringFx.transform.localScale = Vector3.one * Mathf.Lerp(0.8f, 1.8f, fx);
             ringFx.Emit(1);
         }
 
@@ -157,25 +189,25 @@ public class ImpactFeedback : MonoBehaviour
             // da por defecto al sistema, el cono mira a +Y del mundo; esto lo lleva a 'dir'.
             sparksFx.transform.rotation = Quaternion.FromToRotation(Vector3.up, (Vector3)dir)
                                         * Quaternion.Euler(-90f, 0f, 0f);
-            sparksFx.Emit(Mathf.RoundToInt(Mathf.Lerp(sparksBurst.x, sparksBurst.y, t)));
+            sparksFx.Emit(Mathf.RoundToInt(Mathf.Lerp(sparksBurst.x, sparksBurst.y, fx)));
         }
     }
 
     void LateUpdate()
     {
-        if (frozen && Time.unscaledTime >= hitstopEnds) Unfreeze();
         if (cam == null || !baseReady) return;
 
-        // El temblor va en tiempo real: durante el hitstop el tiempo del juego está parado
+        // El temblor va en tiempo real, no en tiempo de juego: así una pausa o un cambio de
+        // escala de tiempo no lo deja a medias ni lo alarga
         float dt = Time.unscaledDeltaTime;
 
         if (Time.unscaledTime < shakeEnds && shakeAmount > 0.0001f)
         {
             float left = (shakeEnds - Time.unscaledTime) / Mathf.Max(0.01f, shakeDuration);
             float a = shakeAmount * left * left;
-            float t = Time.unscaledTime * shakeFrequency;
-            Vector3 offset = new Vector3((Mathf.PerlinNoise(seedX, t) - 0.5f) * 2f * a,
-                                         (Mathf.PerlinNoise(seedY, t) - 0.5f) * 2f * a, 0f);
+            float fx = Time.unscaledTime * shakeFrequency;
+            Vector3 offset = new Vector3((Mathf.PerlinNoise(seedX, fx) - 0.5f) * 2f * a,
+                                         (Mathf.PerlinNoise(seedY, fx) - 0.5f) * 2f * a, 0f);
             cam.transform.localPosition = camBase + offset;
         }
         else
@@ -193,14 +225,6 @@ public class ImpactFeedback : MonoBehaviour
         {
             cam.orthographicSize = baseSize;
         }
-    }
-
-    void Unfreeze()
-    {
-        if (!frozen) return;
-        frozen = false;
-        Time.timeScale = 1f;
-        Time.fixedDeltaTime = 0.02f;
     }
 
     /// Si CameraAspectFitter cambia el tamaño de la cámara, avísale con esto.

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 3ff625af68acdec45bcabd0efff3f3c1
+guid: 9ecae2d919b2a7a4b9baca059ac8df32
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7781133836549148651
-    second: ui_btn_brake_pressed_0
+      213: 8891390878306624872
+    second: ui_stick_ring_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -72,10 +72,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 1024
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -152,13 +152,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ui_btn_brake_pressed_0
+      name: ui_stick_ring_0
       rect:
         serializedVersion: 2
-        x: 16
-        y: 43
-        width: 988
-        height: 969
+        x: 130
+        y: 130
+        width: 764
+        height: 764
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -167,8 +167,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: befc8458ff32cfb60800000000000000
-      internalID: 7781133836549148651
+      spriteID: 8656d9c25e0946b70800000000000000
+      internalID: 8891390878306624872
       vertices: []
       indices: 
       edges: []
@@ -187,7 +187,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ui_btn_brake_pressed_0: 7781133836549148651
+      ui_stick_ring_0: 8891390878306624872
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

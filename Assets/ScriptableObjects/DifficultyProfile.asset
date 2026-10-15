@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f676111781b116c4aab39f31c71698b4, type: 3}
   m_Name: DifficultyProfile
   m_EditorClassIdentifier: Assembly-CSharp::DifficultyProfile
-  intensity: 1
+  intensity: 1.5
   tierLength: 20
   budgetStart: 32
   budgetGrowth: 19.6
