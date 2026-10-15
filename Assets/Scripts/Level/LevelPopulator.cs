@@ -19,6 +19,17 @@ public class LevelPopulator : MonoBehaviour
 
     [Header("Colocación")]
     [SerializeField] private float playerSafeRadius = 2.5f;
+    [Header("Medidas del jugador (se leen solas)")]
+    [Tooltip("Las lee del jugador en cada nivel: el radio de su collider y el Max Speed de " +
+             "su PlayerController. Déjalo marcado — así el día que cambies cómo se mueve el " +
+             "jugador, el verificador se entera solo. Desmárcalo únicamente para probar")]
+    [SerializeField] private bool readPlayerMetrics = true;
+    [Tooltip("Radio del jugador en unidades. Por dónde cabe")]
+    [SerializeField] private float playerRadius = 0.3f;
+    [Tooltip("Velocidad del jugador en unidades por segundo. De esto depende que el " +
+             "verificador sepa si un hueco da tiempo a aprovecharlo. Poner aquí más de lo " +
+             "real hace que apruebe niveles que NO se pueden pasar")]
+    [SerializeField] private float playerSpeed = 2.6f;
     [SerializeField] private float staticEdgeMargin = 0.8f;
     [SerializeField] private float blockedMargin = 0.6f;
     [SerializeField] private float goalMargin = 1.5f;
@@ -134,12 +145,35 @@ public class LevelPopulator : MonoBehaviour
             }
         }
 
+        // Garantía de que el nivel se puede pasar. Va DESPUÉS de colocar: comprueba el
+        // reparto real, no el que pretendíamos. Si hay paso no toca nada.
+        string fairness = "verificación desactivada";
+        if (difficulty.enforceSolvable)
+        {
+            ReadPlayerMetrics();
+            var r = SolvabilityGate.Enforce(
+                pool.Active, playerPos, playerRadius, playerSpeed,
+                area, bounds.GoalCorner, difficulty,
+                a => { pool.Release(a); count--; });
+
+            fairness = $"{r.Describe()} [jugador r{playerRadius:0.00} v{playerSpeed:0.0}, " +
+                       $"{r.steps} pasos, {r.millis:0.#} ms]";
+            if (!r.solvable)
+                Debug.LogWarning($"LevelPopulator: nivel {currentLevel} sigue sin paso después " +
+                                 $"de retirar {r.removed}. Si se repite, baja budgetCap o budgetK.");
+            else if (r.removed >= Mathf.Max(1, difficulty.solveMaxRemovals - 2))
+                Debug.LogWarning($"LevelPopulator: nivel {currentLevel} necesitó retirar {r.removed} " +
+                                 "asteroides. El verificador está tapando un problema de la curva.");
+        }
+
         targetPopulation = count;
         nextTopUp = Time.time + 2f;
 
-        Debug.Log($"LevelPopulator: nivel {currentLevel} (etapa {difficulty.Tier(currentLevel)}), semilla {newSeed}: " +
+        string mood = difficulty.IsCalm(currentLevel) ? ", respiro"
+                    : difficulty.IsSurge(currentLevel) ? ", APRETÓN" : "";
+        Debug.Log($"LevelPopulator: nivel {currentLevel} (etapa {difficulty.Tier(currentLevel)}{mood}), semilla {newSeed}: " +
                   $"{count}/{shopping.Count} asteroides, presupuesto {difficulty.Budget(currentLevel):0.#}, " +
-                  $"velocidad x{Asteroid.SpeedMultiplier:0.00}, corriente {(FlowField.Instance != null ? FlowField.Instance.BaseAngle : 0f):0}°");
+                  $"velocidad x{Asteroid.SpeedMultiplier:0.00}, corriente {(FlowField.Instance != null ? FlowField.Instance.BaseAngle : 0f):0}° — {fairness}");
     }
 
     // ------------------------------------------------------------- población
@@ -163,8 +197,51 @@ public class LevelPopulator : MonoBehaviour
             live++;
         }
 
+        // Tope de densidad local: si el jugador ya está rodeado, la reposición espera.
+        // No quita nada de lo que hay — eso sí sería regalar el nivel — solo evita que el
+        // repoblador siga echando leña a una situación que ya está mal. Es la diferencia
+        // entre un momento difícil y un momento imposible.
+        if (difficulty != null && difficulty.crowdCap > 0 && player != null
+            && CrowdAroundPlayer() >= difficulty.crowdCap) return;
+
         int missing = Mathf.Min(targetPopulation - live, Mathf.Max(1, topUpPerCheck));
         for (int i = 0; i < missing; i++) SpawnAtBorder(PickAnyMoving());
+    }
+
+    /// Toma el radio y la velocidad del jugador de verdad, en vez de fiarse de dos números
+    /// escritos a mano que se quedan viejos en cuanto se retoca cómo se mueve.
+    ///
+    /// Esto importa más de lo que parece: el verificador decide si un hueco se puede
+    /// aprovechar comparando el tamaño del hueco con lo que el jugador recorre en ese tiempo.
+    /// Si aquí pone 5 y el jugador va a 2.6, aprobará como pasables niveles que no lo son —
+    /// y lo hará en silencio, que es lo peor que puede hacer un sistema de justicia.
+    void ReadPlayerMetrics()
+    {
+        if (!readPlayerMetrics || player == null) return;
+
+        var col = player.GetComponentInChildren<Collider2D>();
+        if (col != null)
+            playerRadius = Mathf.Max(0.05f, Mathf.Min(col.bounds.extents.x, col.bounds.extents.y));
+
+        var pc = player.GetComponentInParent<PlayerController>();
+        if (pc != null) playerSpeed = Mathf.Max(0.2f, pc.MaxSpeed);
+    }
+
+    int CrowdAroundPlayer()
+    {
+        float r = difficulty.crowdRadius;
+        float r2 = r * r;
+        Vector2 p = player.position;
+        int n = 0;
+
+        var active = pool.Active;
+        for (int i = 0; i < active.Count; i++)
+        {
+            var a = active[i];
+            if (a == null || a.Type == null || !a.Lethal) continue;
+            if (((Vector2)a.transform.position - p).sqrMagnitude <= r2) n++;
+        }
+        return n;
     }
 
     // Un asteroide salió del área: entra otro por el lado de entrada
@@ -194,8 +271,44 @@ public class LevelPopulator : MonoBehaviour
     {
         if (type == null || FlowField.Instance == null) return;
         Vector2 avoid = player != null ? (Vector2)player.position : Vector2.zero;
-        Vector2 p = FlowField.Instance.RandomEntryPoint(avoid, playerSafeRadius);
+
+        // Ventana de reacción: un asteroide que entra ya apuntado al jugador y le llega
+        // antes de que le dé tiempo a verlo no es dificultad, es una emboscada. Se prueban
+        // varios puntos de entrada y se descarta el que no deje margen.
+        //
+        // Ojo a lo que NO hace: no impide que te alcance. Solo garantiza que, cuando entra,
+        // tienes tiempo de verlo y decidir. Lo que pase después es tuyo.
+        Vector2 p = Vector2.zero;
+        for (int attempt = 0; attempt < 6; attempt++)
+        {
+            p = FlowField.Instance.RandomEntryPoint(avoid, playerSafeRadius);
+            if (player == null || difficulty == null || GivesTimeToReact(p, type, avoid)) break;
+        }
+
         pool.Spawn(type, p);
+    }
+
+    /// ¿Deja este punto de entrada tiempo de reacción? Calcula el momento de máxima
+    /// aproximación entre el asteroide y el jugador quieto: si va a pasarle por encima y lo
+    /// hace antes de la ventana, no vale.
+    bool GivesTimeToReact(Vector2 entry, AsteroidTypeData type, Vector2 playerPos)
+    {
+        float window = difficulty.reactionWindow;
+        if (window <= 0f) return true;
+
+        float speed = Mathf.Max(0.1f,
+            (type.speedRange.x + type.speedRange.y) * 0.5f * Asteroid.SpeedMultiplier);
+        Vector2 v = FlowField.FromAngle(FlowField.Instance.AngleAt(entry)) * speed;
+
+        Vector2 rel = playerPos - entry;
+        float tClosest = Vector2.Dot(rel, v) / Mathf.Max(0.0001f, v.sqrMagnitude);
+        if (tClosest <= 0f) return true;                 // se aleja: no es amenaza
+
+        float missBy = (rel - v * tClosest).magnitude;
+        float hitRadius = playerRadius + type.sizeRange.y * 0.7f;
+        if (missBy > hitRadius) return true;             // no le pasa por encima
+
+        return tClosest >= window;
     }
 
     AsteroidTypeData PickReplacement(AsteroidTypeData old)

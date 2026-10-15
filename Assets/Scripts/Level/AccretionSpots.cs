@@ -17,12 +17,14 @@ public class AccretionSpots : MonoBehaviour
     [Tooltip("Los PNG spot_01 a spot_04. Cada grumo coge uno al azar")]
     [SerializeField] private Sprite[] sprites;
     [SerializeField] private int count = 4;
-    [Tooltip("Tamaño en unidades del grumo cuando pasa por delante")]
-    [SerializeField] private Vector2 sizeRange = new Vector2(0.18f, 0.34f);
+    [Tooltip("Diámetro del grumo en unidades de mundo cuando pasa por delante. Es un tamaño " +
+             "real: no depende de la PPU con la que importes los PNG. Como referencia, debería " +
+             "rondar un quinto del Radius X")]
+    [SerializeField] private Vector2 sizeRange = new Vector2(0.35f, 0.65f);
     [Tooltip("Si está vacío, hereda el color del disco. Así combina con cualquier pareja")]
     [SerializeField] private SpriteRenderer tintFrom;
     [SerializeField] private Color tint = Color.white;
-    [Range(0f, 1f)] [SerializeField] private float brightness = 0.85f;
+    [Range(0f, 2f)] [SerializeField] private float brightness = 1f;
 
     [Header("Órbita")]
     [Tooltip("Semiejes de la elipse, en unidades. El vertical pequeño es lo que da la " +
@@ -55,7 +57,7 @@ public class AccretionSpots : MonoBehaviour
         public SpriteRenderer sr;
         public float angle;      // grados
         public float speed;      // multiplicador
-        public float size;
+        public float size;       // ya convertido a escala local
         public float phase;
     }
 
@@ -84,6 +86,13 @@ public class AccretionSpots : MonoBehaviour
             sr.sprite = sprites[Random.Range(0, sprites.Length)];
             sr.sortingLayerName = sortingLayer;
 
+            // Cuánto mide el sprite a escala 1. Dividir por esto es lo que hace que sizeRange
+            // sea un tamaño REAL en unidades y no dependa de la PPU con la que se importó:
+            // un PNG de 256 px a PPU 512 mide media unidad, y a PPU 128 mide dos. Sin esta
+            // división, cambiar la PPU cambia el tamaño en pantalla sin tocar nada más — que
+            // es justo como se acaba con grumos microscópicos.
+            float unit = Mathf.Max(0.0001f, sr.sprite.bounds.size.x);
+
             spots[i] = new Spot
             {
                 t = go.transform,
@@ -91,7 +100,7 @@ public class AccretionSpots : MonoBehaviour
                 // Repartidos por la órbita, pero no en formación perfecta
                 angle = (360f / n) * i + Random.Range(-25f, 25f),
                 speed = Random.Range(speedSpread.x, speedSpread.y),
-                size = Random.Range(sizeRange.x, sizeRange.y),
+                size = Random.Range(sizeRange.x, sizeRange.y) / unit,
                 phase = Random.value * 10f
             };
         }
@@ -135,19 +144,35 @@ public class AccretionSpots : MonoBehaviour
         }
     }
 
+    /// Dibuja en el editor la órbita Y el tamaño de los grumos, para poder afinar las dos cosas
+    /// mirando en vez de calculando. Usa TransformPoint, así que respeta la escala y el giro
+    /// del objeto: lo que ves es donde van a estar de verdad.
     void OnDrawGizmosSelected()
     {
-        Gizmos.color = new Color(1f, 0.8f, 0.3f, 0.6f);
         float tilt = tiltDegrees * Mathf.Deg2Rad;
         float ct = Mathf.Cos(tilt), st = Mathf.Sin(tilt);
-        Vector3 prev = Vector3.zero;
-        for (int i = 0; i <= 48; i++)
+
+        Vector3 At(float a)
         {
-            float a = i / 48f * Mathf.PI * 2f;
             float ex = Mathf.Cos(a) * radius.x, ey = Mathf.Sin(a) * radius.y;
-            Vector3 p = transform.position + new Vector3(ex * ct - ey * st, ex * st + ey * ct, 0f);
-            if (i > 0) Gizmos.DrawLine(prev, p);
+            return transform.TransformPoint(new Vector3(ex * ct - ey * st, ex * st + ey * ct, 0f));
+        }
+
+        Gizmos.color = new Color(1f, 0.8f, 0.3f, 0.6f);
+        Vector3 prev = At(0f);
+        for (int i = 1; i <= 48; i++)
+        {
+            Vector3 p = At(i / 48f * Mathf.PI * 2f);
+            Gizmos.DrawLine(prev, p);
             prev = p;
         }
+
+        // El tamaño real de los grumos, delante (grande) y detrás (encogido)
+        float world = transform.lossyScale.x;
+        Gizmos.color = new Color(1f, 0.55f, 0.2f, 0.9f);
+        Gizmos.DrawWireSphere(At(-Mathf.PI * 0.5f), sizeRange.y * 0.5f * world);
+        Gizmos.DrawWireSphere(At(0f), sizeRange.x * 0.5f * world);
+        Gizmos.color = new Color(1f, 0.55f, 0.2f, 0.4f);
+        Gizmos.DrawWireSphere(At(Mathf.PI * 0.5f), sizeRange.y * 0.5f * farScale * world);
     }
 }

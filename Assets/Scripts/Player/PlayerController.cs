@@ -53,7 +53,7 @@ public class PlayerController : MonoBehaviour
     /// El agujero negro se lo está tragando: ni control ni física
     public bool IsAbsorbed { get; private set; }
     public Rigidbody2D Body => rb;
-
+    public float MaxSpeed => maxSpeed;
     /// Golpe contra algo: velocidad del choque (para sacudida, vibración, sonido...)
     public event System.Action<float> OnImpact;
     /// El jugador ha muerto

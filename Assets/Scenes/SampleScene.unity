@@ -161,6 +161,9 @@ MonoBehaviour:
   randomSeed: 1
   seed: 12345
   playerSafeRadius: 2.5
+  readPlayerMetrics: 1
+  playerRadius: 0.3
+  playerSpeed: 2.6
   staticEdgeMargin: 0.8
   blockedMargin: 0.6
   goalMargin: 1.5
@@ -214,13 +217,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ImpactFeedback
   cam: {fileID: 519420031}
   minEnergy: 0.5
-  fullEnergy: 25
-  maxShake: 0.45
-  shakeDuration: 0.35
+  fullEnergy: 45
+  maxShake: 0.15
+  shakeDuration: 0.2
   shakeFrequency: 26
-  maxHitstop: 0.07
-  hitstopScale: 0.08
-  hitstopThreshold: 0.65
+  maxHitstop: 0.03
+  hitstopScale: 0.35
+  hitstopThreshold: 0.9
   maxZoomOut: 0.25
   zoomRecover: 1.5
   impactFx: {fileID: 330869117}
@@ -1223,7 +1226,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 1
+      value: 0.0001
       mode: 0
       spread: 0
       speed:
@@ -1838,8 +1841,8 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 1, g: 1, b: 1, a: 0.003921569}
-        key1: {r: 1, g: 1, b: 1, a: 0}
+        key0: {r: 1, g: 1, b: 1, a: 1}
+        key1: {r: 1, g: 1, b: 1, a: 0.7058824}
         key2: {r: 0, g: 0, b: 0, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
@@ -10833,10 +10836,10 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 6b9ce3d62d4a0db4486fc31419eb421e, type: 3}
   - {fileID: 21300000, guid: a9cc7835b221e434488ec0ab2411cdef, type: 3}
   count: 4
-  sizeRange: {x: 0.18, y: 0.34}
+  sizeRange: {x: 0.35, y: 0.65}
   tintFrom: {fileID: 1204878800}
   tint: {r: 1, g: 1, b: 1, a: 1}
-  brightness: 0.85
+  brightness: 1
   radius: {x: 1.5, y: 0.35}
   tiltDegrees: -8
   rpm: 14
@@ -13139,8 +13142,8 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 1, g: 1, b: 1, a: 0}
-        key1: {r: 1, g: 1, b: 1, a: 0.003921569}
+        key0: {r: 1, g: 1, b: 1, a: 1}
+        key1: {r: 1, g: 1, b: 1, a: 1}
         key2: {r: 0, g: 0, b: 0, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
@@ -17584,7 +17587,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 1
+      value: 0.0001
       mode: 0
       spread: 0
       speed:
@@ -18199,8 +18202,8 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 1, g: 1, b: 1, a: 0.003921569}
-        key1: {r: 1, g: 1, b: 1, a: 0.003921569}
+        key0: {r: 1, g: 1, b: 1, a: 1}
+        key1: {r: 1, g: 1, b: 1, a: 0.25490198}
         key2: {r: 0, g: 0, b: 0, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
@@ -18216,7 +18219,7 @@ ParticleSystem:
         ctime6: 0
         ctime7: 0
         atime0: 0
-        atime1: 22937
+        atime1: 23323
         atime2: 65535
         atime3: 0
         atime4: 0
@@ -21695,7 +21698,7 @@ MonoBehaviour:
   player: {fileID: 1679237101}
   playerStart: {fileID: 1679237105}
   goal: {fileID: 848801470}
-  startLevel: 1
+  startLevel: 800
   runSeed: 0
   sameLevelOnRetry: 1
   resumeFromSave: 1
