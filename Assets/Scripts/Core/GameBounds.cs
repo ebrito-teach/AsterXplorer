@@ -57,7 +57,17 @@ public class GameBounds : MonoBehaviour
 
         int n = blockedZones != null ? blockedZones.Length : 0;
         blockedColliders = new BoxCollider2D[n];
-        for (int i = 0; i < n; i++) blockedColliders[i] = CreateWall("Blocked_" + i);
+        for (int i = 0; i < n; i++)
+        {
+            blockedColliders[i] = CreateWall("Blocked_" + i);
+            // Nace APAGADO, y esto no es cautela de más. Un BoxCollider2D recién creado mide
+            // 1x1 y se queda en la posición del padre. Si la ranura del array está vacía
+            // (pasa en cuanto rehaces el Canvas: las referencias se rompen pero el hueco se
+            // queda), nadie lo coloca nunca y te deja un muro invisible de 1x1 plantado en
+            // mitad del campo, en la capa Walls, sin sprite que lo delate. Solo se enciende
+            // cuando hay una zona de verdad que medir.
+            blockedColliders[i].enabled = false;
+        }
     }
 
     // Start (y no Awake) para que CameraAspectFitter ya haya fijado el tamaño de la cámara
@@ -160,8 +170,19 @@ public class GameBounds : MonoBehaviour
         Canvas.ForceUpdateCanvases();
         for (int i = 0; i < blockedZones.Length; i++)
         {
+            var col = blockedColliders[i];
+            if (col == null) continue;
+
             var rt = blockedZones[i];
-            if (rt == null || blockedColliders[i] == null) continue;
+
+            // Ranura vacía, u oculta por el esquema de control: no hay nada que bloquear.
+            // Apagarlo, no dejarlo donde estaba — si no, el muro de los botones de giro
+            // sobrevive al cambio a joystick y el jugador choca con algo que ya no se ve.
+            if (rt == null || !rt.gameObject.activeInHierarchy)
+            {
+                col.enabled = false;
+                continue;
+            }
 
             // Con el Canvas en Screen Space - Overlay, las esquinas vienen en píxeles de pantalla
             rt.GetWorldCorners(corners);
@@ -170,8 +191,21 @@ public class GameBounds : MonoBehaviour
             var r = new Rect(Mathf.Min(a.x, b.x), Mathf.Min(a.y, b.y),
                              Mathf.Abs(b.x - a.x), Mathf.Abs(b.y - a.y));
 
+            // Una zona que ocupa casi todo el campo no es una zona de control: es la del
+            // joystick, que ahora es de pantalla completa. Bloquearla encerraría al jugador
+            // en una caja del tamaño del campo, sin salida y sin nada visible que lo explique.
+            if (r.width > Area.width * 0.6f && r.height > Area.height * 0.6f)
+            {
+                Debug.LogWarning("GameBounds: la zona bloqueada " + i + " (" + rt.name + ") cubre " +
+                                 "casi todo el campo. Se ignora — con el joystick flotante la " +
+                                 "zona táctil es la pantalla entera y no debe bloquear nada.", rt);
+                col.enabled = false;
+                continue;
+            }
+
+            col.enabled = true;
             blockedRects.Add(r);
-            Place(blockedColliders[i], r.center, r.size);
+            Place(col, r.center, r.size);
         }
     }
 

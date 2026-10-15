@@ -11,9 +11,9 @@ using UnityEngine.InputSystem;
 ///
 ///   Joystick    — stick de dos ejes y nada más. El movimiento es directo: vas a donde
 ///                 apuntas. Un solo mando en pantalla.
-///   TiltShip    — inclinas el móvil para girar y un botón para empujar. La palanca
+///   Inclinacion — inclinas el móvil para girar y un botón para empujar. La palanca
 ///                 desaparece, que en modo nave era lo incómodo.
-///   ButtonsShip — igual que el anterior pero girando con dos botones, para quien no
+///   Botones     — igual que el anterior pero girando con dos botones, para quien no
 ///                 quiera inclinar o juegue tumbado.
 ///
 /// El modo preciso va aparte en los tres y comparte botón con el freno mientras no tenga uno
@@ -28,9 +28,9 @@ public class ShipInput : MonoBehaviour
         /// Stick de dos ejes. Movimiento directo.
         Joystick = 0,
         /// Inclinar para girar + botón de empuje.
-        TiltShip = 1,
+        Inclinacion = 1,
         /// Dos botones para girar + botón de empuje.
-        ButtonsShip = 2,
+        Botones = 2,
     }
 
     [Header("Esquema")]
@@ -60,7 +60,7 @@ public class ShipInput : MonoBehaviour
     public float Steer => Turn;
 
     public Scheme CurrentScheme => scheme;
-    public bool UsesTilt => scheme == Scheme.TiltShip;
+    public bool UsesTilt => scheme == Scheme.Inclinacion;
     public bool UsesJoystick => scheme == Scheme.Joystick;
 
     Vector2 uiMove;
@@ -89,11 +89,11 @@ public class ShipInput : MonoBehaviour
             scheme = (Scheme)GameProgress.Instance.Data.settings.control;
 
         // Si pide inclinación y el aparato no tiene acelerómetro, no lo dejamos sin control
-        if (scheme == Scheme.TiltShip && tilt == null)
+        if (scheme == Scheme.Inclinacion && tilt == null)
         {
             Debug.LogWarning("ShipInput: esquema de inclinación pero no hay TiltInput en la " +
                              "escena. Se usan los botones de giro.");
-            scheme = Scheme.ButtonsShip;
+            scheme = Scheme.Botones;
         }
     }
 
@@ -137,14 +137,14 @@ public class ShipInput : MonoBehaviour
                 Turn = Move.x;
                 break;
 
-            case Scheme.TiltShip:
+            case Scheme.Inclinacion:
                 // Inclinar gira. El empuje es el botón, y así en pantalla solo quedan dos
                 Turn = tilt != null && tilt.Available ? tilt.Value : kbX;
                 if (Mathf.Abs(Turn) < 0.001f && Mathf.Abs(uiTurn) > 0.001f) Turn = uiTurn;
                 Move = new Vector2(Turn, 0f);
                 break;
 
-            default: // ButtonsShip
+            default: // Botones
                 float buttons = (uiTurnRight ? 1f : 0f) - (uiTurnLeft ? 1f : 0f);
                 Turn = Mathf.Abs(buttons) > 0.001f ? buttons
                      : Mathf.Abs(kbX) > 0.001f ? kbX

@@ -76,10 +76,30 @@ public class PlayerController : MonoBehaviour
              "Eso convierte el freno en la herramienta más importante del juego")]
     [SerializeField] private float focusDecelTime = 0.07f;
 
-    [Header("Giro (solo en modo nave)")]
-    [Tooltip("Grados por segundo. Con 90 tardabas 2 s en darte la vuelta, demasiado para " +
-             "esquivar; con 320 son 0.56 s y sigue sintiéndose un giro, no un teletransporte")]
-    [SerializeField] private float turnSpeed = 320f;
+    [Header("Giro con BOTONES")]
+    [Tooltip("Grados por segundo mientras mantienes un botón de giro. 320 daba una vuelta " +
+             "entera en 1.1 s: imposible parar el morro donde querías. Con 150 tardas 2.4 s " +
+             "en dar la vuelta, que suena lento hasta que ves que nunca necesitas darla")]
+    [SerializeField] private float turnSpeed = 150f;
+    [Tooltip("Lo que tarda el giro en coger su velocidad. Sin esto un toque de botón pega un " +
+             "tirón; con esto un toque es un empujoncito y mantener es un giro sostenido")]
+    [SerializeField] private float turnAccelTime = 0.09f;
+    [Tooltip("Cuánto se recorta el giro en modo preciso. Es lo que convierte el focus en " +
+             "puntería de verdad y no solo en ir más despacio")]
+    [Range(0.2f, 1f)] [SerializeField] private float focusTurnFactor = 0.45f;
+
+    [Header("Giro por INCLINACIÓN")]
+    [Tooltip("El ángulo del móvil ES el rumbo, no la velocidad de giro. Esto es el máximo " +
+             "que se separa del eje de avance con el móvil del todo inclinado. Con 70 llegas " +
+             "casi a vertical, y con el móvil plano el morro vuelve solo al frente")]
+    [Range(25f, 90f)] [SerializeField] private float maxTiltFacing = 70f;
+    [Tooltip("Tope de grados por segundo con que el morro persigue el ángulo que pides. " +
+             "Es un LÍMITE, no un suavizado: mientras no lo alcance va a velocidad plena y " +
+             "llega limpio. El temblor de la mano ya lo filtra TiltInput")]
+    [SerializeField] private float tiltFollowRate = 540f;
+    [Tooltip("En modo preciso el mismo gesto cubre menos ángulo: misma mano, más resolución")]
+    [Range(0.2f, 1f)] [SerializeField] private float focusTiltFactor = 0.55f;
+
     [Tooltip("Suavizado del giro del sprite hacia la dirección de avance (modo direccional)")]
     [SerializeField] private float visualTurnSmoothing = 14f;
 
@@ -127,6 +147,8 @@ public class PlayerController : MonoBehaviour
     Vector2 knock;             // lo que te hicieron; decae solo
     float facing = 90f;        // grados, hacia dónde mira el astronauta
     int facingSign = 1;        // 1 mira a la derecha, -1 a la izquierda
+    float baseFacing;          // el eje de avance: hacia la meta. La inclinación se mide desde aquí
+    float turnRate;            // grados/s actuales de los botones de giro, con su arranque
     float thrustLevel, brakeLevel, stunUntil, invulnerableUntil;
 
     public float ThrustLevel => thrustLevel;
@@ -271,12 +293,53 @@ public class PlayerController : MonoBehaviour
             return input.Move;
         }
 
-        // Modo nave: inclinar (o los botones) gira, el empuje manda hacia donde miras
-        facing += -input.Turn * turnSpeed * dt;
-        if (!input.ThrustHeld) return Vector2.zero;
+        // Modo nave: inclinar o los botones deciden el rumbo, el empuje manda hacia él
+        if (input.UsesTilt) AimByTilt(dt);
+        else TurnByButtons(dt);
+
+        // El modo preciso mantiene el avance. Antes esto era solo ThrustHeld, y soltar el
+        // empuje para afinar te dejaba clavado justo cuando más falta hacía moverse — el
+        // jugador pedía precisión y el juego le daba un frenazo.
+        if (!input.ThrustHeld && !IsFocusing) return Vector2.zero;
 
         float r = facing * Mathf.Deg2Rad;
         return new Vector2(Mathf.Cos(r), Mathf.Sin(r));
+    }
+
+    /// Inclinación: el ángulo del móvil ES el rumbo.
+    ///
+    /// Antes la inclinación alimentaba la VELOCIDAD de giro, así que mantener el móvil torcido
+    /// seguía girando sin parar y había que corregir a ojo adivinando cuándo soltar. Eso no se
+    /// puede calibrar: estás pilotando una derivada.
+    ///
+    /// Midiendo el rumbo directamente, la postura de la mano y la del morro son la misma cosa:
+    /// móvil plano, al frente; móvil torcido a tope, el máximo. Y vuelve solo al centro, que es
+    /// lo que hace que se pueda aprender.
+    void AimByTilt(float dt)
+    {
+        float span = maxTiltFacing * (IsFocusing ? focusTiltFactor : 1f);
+        float want = baseFacing - input.Turn * span;
+
+        // MoveTowardsAngle y NO Lerp. El lerp exponencial arranca rápido pero llega
+        // arrastrándose, y esa cola asintótica es justo lo que se siente como que el morro
+        // no termina de colocarse. Peor aún: encadenado detrás del suavizado de TiltInput
+        // daba una respuesta de segundo orden, que arranca con pendiente CERO — mueves el
+        // móvil y los primeros milisegundos no pasa nada.
+        //
+        // Con un tope de grados/s hay un solo filtro en toda la cadena (el de TiltInput, que
+        // es el que debe estar porque filtra ruido del sensor) y el morro va a velocidad
+        // plena hasta el ángulo pedido.
+        facing = Mathf.MoveTowardsAngle(facing, want, tiltFollowRate * dt);
+        turnRate = 0f;
+    }
+
+    /// Botones: aquí el giro por ritmo SÍ es lo natural — mantener es girar. Lo que faltaba
+    /// era arranque, para que un toque corto fuese un ajuste fino y no un volantazo.
+    void TurnByButtons(float dt)
+    {
+        float want = -input.Turn * turnSpeed * (IsFocusing ? focusTurnFactor : 1f);
+        turnRate = Mathf.Lerp(turnRate, want, Approach(dt, turnAccelTime));
+        facing += turnRate * dt;
     }
 
     /// En modo direccional el astronauta no gira por física: el cuerpo mira hacia donde avanza.
@@ -295,6 +358,10 @@ public class PlayerController : MonoBehaviour
     {
         facingSign = goalIsMirrored ? -1 : 1;
         facing = goalIsMirrored ? 180f : 0f;
+        // El eje desde el que la inclinación mide su ángulo. Si no se actualizara, en los
+        // niveles de corriente invertida el móvil plano apuntaría al lado contrario a la meta
+        baseFacing = facing;
+        turnRate = 0f;
         if (visualRenderer != null) visualRenderer.flipX = facingSign < 0;
         // Aquí se escribe la rotación directa, no MoveRotation: esto ocurre al reaparecer,
         // fuera del paso de física, y tiene que verse ya en el primer fotograma
@@ -343,6 +410,7 @@ public class PlayerController : MonoBehaviour
         IsDead = true;
 
         controlVel = Vector2.zero;
+        turnRate = 0f;
         knock = Vector2.zero;
         rb.linearVelocity = Vector2.zero;
         rb.angularVelocity = 0f;
@@ -359,6 +427,7 @@ public class PlayerController : MonoBehaviour
         if (IsAbsorbed || IsDead) return;
         IsAbsorbed = true;
         controlVel = Vector2.zero;
+        turnRate = 0f;
         knock = Vector2.zero;
         thrustLevel = 0f;
         brakeLevel = 0f;
@@ -385,6 +454,7 @@ public class PlayerController : MonoBehaviour
         rb.angularVelocity = 0f;
 
         controlVel = Vector2.zero;
+        turnRate = 0f;
         knock = Vector2.zero;
         thrustLevel = 0f;
 

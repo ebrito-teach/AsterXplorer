@@ -62,13 +62,38 @@ public class VirtualJoystick : MonoBehaviour,
     [SerializeField] private float fadeSpeed = 8f;
     [SerializeField] private Sprite handleNormal;
     [SerializeField] private Sprite handleActive;
-    [Tooltip("Oculta el stick del todo mientras no se usa. Para quien quiera la pantalla limpia")]
-    [SerializeField] private bool hideWhenIdle = false;
+    [Tooltip("El stick no existe hasta que pones el dedo. Siendo flotante, un dibujo en " +
+             "reposo no dice dónde hay que tocar (se toca en cualquier sitio): solo tapa " +
+             "asteroides y pide atención que hace falta en otro lado")]
+    [SerializeField] private bool hideWhenIdle = true;
 
     [SerializeField] private Vector2Event onValueChanged;
 
     public Vector2 Value { get; private set; }
     public bool Held { get; private set; }
+
+    /// Dónde está el anillo sobre la pantalla, 0..1. Lo usa el botón de focus flotante para
+    /// salir en el lado contrario al pulgar que pilota.
+    ///
+    /// Se mide contra el rect del Canvas y no contra Screen.width: así vale igual en Overlay
+    /// que en Screen Space - Camera, y en el Simulator, donde el recuadro del dispositivo no
+    /// ocupa toda la ventana y los píxeles de pantalla mentirían.
+    public Vector2 RingViewportPosition
+    {
+        get
+        {
+            if (ring == null) return new Vector2(0.5f, 0.5f);
+
+            var canvas = ring.GetComponentInParent<Canvas>();
+            var cr = canvas != null ? canvas.rootCanvas.transform as RectTransform : null;
+            if (cr == null) return new Vector2(0.5f, 0.5f);
+
+            Vector2 local = cr.InverseTransformPoint(ring.position);
+            Rect r = cr.rect;
+            return new Vector2(local.x / Mathf.Max(1f, r.width) + cr.pivot.x,
+                               local.y / Mathf.Max(1f, r.height) + cr.pivot.y);
+        }
+    }
 
     CanvasGroup group;
     Image handleImage;

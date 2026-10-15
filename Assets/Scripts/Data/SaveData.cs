@@ -131,9 +131,9 @@ public enum ControlScheme
     /// Stick de dos ejes, movimiento directo. Un solo mando en pantalla.
     Joystick = 0,
     /// Inclinar el móvil para girar + botón de empuje.
-    TiltShip = 1,
+    Inclinacion = 1,
     /// Dos botones para girar + botón de empuje.
-    ButtonsShip = 2,
+    Botones = 2,
 }
 
 /// Lo que alimenta el ajuste invisible de dificultad del Hito 3. Sin estos datos, la

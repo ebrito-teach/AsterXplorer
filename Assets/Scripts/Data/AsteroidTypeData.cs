@@ -22,6 +22,15 @@ public class AsteroidTypeData : ScriptableObject
     public float sizeSkew = 1.4f;
     [Tooltip("Radio mínimo en unidades. Evita trozos microscópicos que matan sin verse")]
     public float minWorldRadius = 0.13f;
+    [Header("Orientación")]
+    [Tooltip("El sprite gira para mirar hacia donde viaja, y deja de dar vueltas sobre sí " +
+             "mismo. Imprescindible cuando la estela va PINTADA en el sprite: si girase " +
+             "libremente, la cola apuntaría a cualquier parte menos hacia atrás")]
+    public bool faceVelocity = false;
+    [Tooltip("Grados que hay que sumar para que el dibujo mire a su marcha. 0 si el sprite " +
+             "apunta a la derecha (lo normal), 90 si apunta hacia arriba")]
+    public float spriteForwardOffset = 0f;
+
     [Tooltip("Prefab propio (por ejemplo, el cometa con estela). Vacío = el del AsteroidPool")]
     public Asteroid prefabOverride;
 

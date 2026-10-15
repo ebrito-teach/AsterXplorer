@@ -208,7 +208,9 @@ public class Asteroid : MonoBehaviour
 
     void Teleport(Vector2 position)
     {
-        float angle = Random.Range(0f, 360f);
+        // Un cuerpo con la estela pintada no puede nacer mirando a cualquier lado: se
+        // colocaría con la cola por delante hasta que FixedUpdate lo enderezara, y eso se ve
+        float angle = (Type != null && Type.faceVelocity) ? rb.rotation : Random.Range(0f, 360f);
         rb.interpolation = RigidbodyInterpolation2D.None;
         restoreInterpolation = true;
         transform.SetPositionAndRotation(position, Quaternion.Euler(0f, 0f, angle));
@@ -354,6 +356,15 @@ public class Asteroid : MonoBehaviour
             rb.AddForce(n * (Type.wander * rb.mass));
         }
 
+        // El restaurado va en su propio método porque tiene tres salidas tempranas, y
+        // orientar el sprite tiene que ocurrir en todas ellas: dejarlo dentro significaba
+        // que un cometa frenado o arrastrado por un imán se quedaba con la cola torcida.
+        RestoreSpeed(vel, sp, beingPulled);
+        FaceTravel();
+    }
+
+    void RestoreSpeed(Vector2 vel, float sp, bool beingPulled)
+    {
         if (!Type.restoreSpeed) return;
         if (beingPulled || Time.time < restoreBlockedUntil) return;
 
@@ -364,6 +375,28 @@ public class Asteroid : MonoBehaviour
         }
         float newSp = Mathf.MoveTowards(sp, targetSpeed, Type.restoreRate * Time.fixedDeltaTime);
         rb.linearVelocity = vel * (newSp / sp);
+    }
+
+    /// Alinea el sprite con su marcha, para los cuerpos que llevan la estela pintada.
+    ///
+    /// Va al FINAL del paso, con la velocidad ya resuelta por la corriente y el restaurado:
+    /// orientarlo antes lo dejaría mirando a la velocidad del fotograma anterior, que con un
+    /// cometa girando por la corriente se nota como un bandazo de la cola.
+    ///
+    /// También anula el giro propio cada paso. No basta con poner spinRange a cero: los
+    /// choques suman angularVelocity directamente, y un solo golpe dejaría al cometa dando
+    /// vueltas con la cola de bandera el resto del nivel.
+    void FaceTravel()
+    {
+        if (Type == null || !Type.faceVelocity) return;
+
+        rb.angularVelocity = 0f;
+
+        Vector2 v = rb.linearVelocity;
+        if (v.sqrMagnitude < 0.0004f) return;
+
+        float want = Mathf.Atan2(v.y, v.x) * Mathf.Rad2Deg + Type.spriteForwardOffset;
+        rb.MoveRotation(want);
     }
 
     /// ¿Se ha ido de verdad? Tres salvedades que antes no estaban:
