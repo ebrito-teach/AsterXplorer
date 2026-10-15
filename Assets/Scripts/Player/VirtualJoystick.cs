@@ -9,18 +9,21 @@ using UnityEngine.UI;
 /// de dirección, porque el stick ya da las cuatro (y las diagonales, que en un esquivador son
 /// la mitad de las jugadas).
 ///
-/// DOS DECISIONES QUE IMPORTAN MÁS DE LO QUE PARECE
+/// TRES DECISIONES QUE IMPORTAN MÁS DE LO QUE PARECE
 ///
-/// **Flotante.** El stick aparece donde pones el dedo, dentro de su zona. Un joystick clavado
-/// en un sitio obliga a mirar la pantalla para encontrarlo, y en un juego donde no puedes
-/// apartar la vista ni medio segundo eso es un problema de verdad. Con el flotante apoyas el
-/// pulgar donde te caiga y ya estás centrado.
+/// **Flotante.** El stick aparece donde pones el dedo. Un joystick clavado en un sitio obliga
+/// a mirar la pantalla para encontrarlo, y en un juego donde no puedes apartar la vista ni
+/// medio segundo eso es un problema de verdad.
 ///
-/// **Lado elegible.** Zurdos y diestros sujetan el móvil distinto. Es un booleano y evita que
-/// media base de jugadores juegue incómoda.
+/// **Toda la pantalla.** La zona sensible es la pantalla entera, no media. Que el pulgar
+/// tenga que caer en una mitad concreta es una regla que el jugador no ve y no entiende: solo
+/// nota que a veces no responde. Los botones siguen funcionando porque se dibujan por encima
+/// y el raycaster se queda con el de arriba.
 ///
-/// Va en un RectTransform que cubra la ZONA donde se puede apoyar el pulgar (media pantalla,
-/// no el dibujo del stick). El dibujo se mueve dentro.
+/// **Acotado.** El anillo nunca se sale de la pantalla, por cerca del borde que toques.
+///
+/// Va en un RectTransform que cubra la zona táctil, CON un Image de alfa 0 y Raycast Target
+/// marcado: sin un Graphic, el raycaster no puede verlo y no llega ni un evento.
 public class VirtualJoystick : MonoBehaviour,
     IPointerDownHandler, IDragHandler, IPointerUpHandler
 {
@@ -31,17 +34,23 @@ public class VirtualJoystick : MonoBehaviour,
     [SerializeField] private RectTransform ring;
     [Tooltip("La perilla, hija del anillo")]
     [SerializeField] private RectTransform handle;
-    [Tooltip("La zona donde se puede apoyar el pulgar. Vacío = este mismo objeto")]
+    [Tooltip("La zona táctil. Vacío = este mismo objeto. NECESITA un Image con alfa 0 y " +
+             "Raycast Target marcado, o el raycaster no puede verlo")]
     [SerializeField] private RectTransform zone;
 
     [Header("Comportamiento")]
     [Tooltip("El stick aparece donde pones el dedo. Recomendado: así no hay que mirar para " +
              "encontrarlo, y en este juego no puedes apartar la vista")]
     [SerializeField] private bool floating = true;
-    [Tooltip("Radio en píxeles para llegar al máximo. Con pantallas distintas conviene que " +
-             "sea proporcional, así que se escala con la altura de la zona")]
+    [Tooltip("La zona sensible es la pantalla ENTERA. Obligar al pulgar a caer en una mitad " +
+             "concreta es una regla invisible: el jugador no la entiende, solo nota que a " +
+             "veces no responde. Los botones siguen ganando porque se dibujan por encima")]
+    [SerializeField] private bool fullScreenZone = true;
+    [Tooltip("Impide que el anillo se salga por los bordes al tocar cerca de uno")]
+    [SerializeField] private bool keepRingOnScreen = true;
+    [Tooltip("Recorrido del dedo hasta el máximo, en unidades del Canvas. Como el Canvas " +
+             "Scaler ya escala con la pantalla, este número NO hay que volver a escalarlo")]
     [SerializeField] private float radius = 120f;
-    [SerializeField] private bool scaleRadiusWithScreen = true;
     [Range(0f, 0.4f)] [SerializeField] private float deadZone = 0.12f;
     [Tooltip("Lo rápido que vuelve al centro al soltar")]
     [SerializeField] private float returnSpeed = 10f;
@@ -82,18 +91,17 @@ public class VirtualJoystick : MonoBehaviour,
             if (handleImage != null) handleImage.preserveAspect = true;
         }
 
+        if (zone.GetComponent<Graphic>() == null)
+            Debug.LogWarning("VirtualJoystick: la zona no tiene ningún Image. Sin un Graphic " +
+                             "con Raycast Target, el raycaster no puede verla y el stick no " +
+                             "recibe ni un toque.", this);
+
         homePosition = ring.anchoredPosition;
         Apply(Vector2.zero);
         group.alpha = hideWhenIdle ? 0f : idleAlpha;
     }
 
-    float Radius()
-    {
-        if (!scaleRadiusWithScreen) return Mathf.Max(10f, radius);
-        // Proporcional a la pantalla: el mismo gesto en un móvil pequeño y en una tableta
-        float reference = 1080f;
-        return Mathf.Max(10f, radius * (Screen.height / reference));
-    }
+    float Radius() => Mathf.Max(10f, radius);
 
     public void OnPointerDown(PointerEventData e)
     {
@@ -101,9 +109,7 @@ public class VirtualJoystick : MonoBehaviour,
         Held = true;
         pointerId = e.pointerId;
 
-        if (floating && RectTransformUtility.ScreenPointToLocalPointInRectangle(
-                zone, e.position, e.pressEventCamera, out Vector2 local))
-            ring.anchoredPosition = local;
+        if (floating) MoveRingTo(e);
 
         SetActiveVisual(true);
         UpdateFrom(e);
@@ -122,6 +128,38 @@ public class VirtualJoystick : MonoBehaviour,
         pointerId = -1;
         SetActiveVisual(false);
         if (floating) ring.anchoredPosition = homePosition;
+    }
+
+    /// Lleva el anillo bajo el dedo, sin que se salga de la zona.
+    ///
+    /// Cuidado con los dos sistemas de coordenadas, que es donde esto fallaba: el punto que
+    /// devuelve ScreenPointToLocalPointInRectangle va medido desde el PIVOTE DE LA ZONA,
+    /// mientras que anchoredPosition se mide desde el ANCLA DEL ANILLO. Asignar uno al otro
+    /// directamente desplaza el anillo justo la distancia que separa esos dos puntos — por eso
+    /// aparecía corrido y a veces medio fuera de la pantalla.
+    void MoveRingTo(PointerEventData e)
+    {
+        if (!RectTransformUtility.ScreenPointToLocalPointInRectangle(
+                zone, e.position, e.pressEventCamera, out Vector2 local)) return;
+
+        Rect zr = zone.rect;
+
+        if (keepRingOnScreen)
+        {
+            // El centro del anillo se queda a media anchura de cada borde, así que el dibujo
+            // entero cabe. Si la zona fuera más pequeña que el anillo, se centra y ya.
+            float hw = ring.rect.width * 0.5f;
+            float hh = ring.rect.height * 0.5f;
+            local.x = (zr.width >= ring.rect.width)
+                    ? Mathf.Clamp(local.x, zr.xMin + hw, zr.xMax - hw) : zr.center.x;
+            local.y = (zr.height >= ring.rect.height)
+                    ? Mathf.Clamp(local.y, zr.yMin + hh, zr.yMax - hh) : zr.center.y;
+        }
+
+        // Dónde cae el ancla del anillo dentro de la zona, en ese mismo espacio local
+        Vector2 anchorPos = new Vector2(zr.xMin + ring.anchorMin.x * zr.width,
+                                        zr.yMin + ring.anchorMin.y * zr.height);
+        ring.anchoredPosition = local - anchorPos;
     }
 
     void UpdateFrom(PointerEventData e)
@@ -167,22 +205,35 @@ public class VirtualJoystick : MonoBehaviour,
     }
 
     /// Lo llama el gestor de controles cuando el jugador cambia el lado en Ajustes.
+    ///
+    /// Con la zona a pantalla completa, el lado ya no decide dónde se puede tocar — se toca
+    /// en cualquier parte — sino dónde DESCANSA el anillo cuando nadie lo usa.
     public void SetSide(bool left, float marginFromEdge = 0.22f)
     {
-        var rt = zone;
-        if (rt == null) return;
-        // Media pantalla del lado elegido
-        rt.anchorMin = left ? new Vector2(0f, 0f) : new Vector2(0.5f, 0f);
-        rt.anchorMax = left ? new Vector2(0.5f, 1f) : new Vector2(1f, 1f);
-        rt.offsetMin = Vector2.zero;
-        rt.offsetMax = Vector2.zero;
+        if (zone == null) return;
 
-        if (ring != null && ring != zone)
+        if (fullScreenZone)
         {
-            ring.anchorMin = ring.anchorMax = new Vector2(left ? marginFromEdge : 1f - marginFromEdge, 0.34f);
-            ring.anchoredPosition = Vector2.zero;
-            homePosition = Vector2.zero;
+            zone.anchorMin = Vector2.zero;
+            zone.anchorMax = Vector2.one;
         }
+        else
+        {
+            zone.anchorMin = left ? new Vector2(0f, 0f) : new Vector2(0.5f, 0f);
+            zone.anchorMax = left ? new Vector2(0.5f, 1f) : new Vector2(1f, 1f);
+        }
+        zone.offsetMin = zone.offsetMax = Vector2.zero;
+
+        if (ring == null || ring == zone) return;
+
+        // El margen se mide sobre la mitad que le toca, vaya la zona a media pantalla o entera
+        float x = fullScreenZone
+                ? (left ? marginFromEdge * 0.5f : 1f - marginFromEdge * 0.5f)
+                : (left ? marginFromEdge : 1f - marginFromEdge);
+
+        ring.anchorMin = ring.anchorMax = new Vector2(x, 0.34f);
+        ring.anchoredPosition = Vector2.zero;
+        homePosition = Vector2.zero;
     }
 
     void OnDisable()

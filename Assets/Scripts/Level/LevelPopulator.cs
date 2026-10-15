@@ -225,6 +225,7 @@ public class LevelPopulator : MonoBehaviour
 
         var pc = player.GetComponentInParent<PlayerController>();
         if (pc != null) playerSpeed = Mathf.Max(0.2f, pc.MaxSpeed);
+        
     }
 
     int CrowdAroundPlayer()
