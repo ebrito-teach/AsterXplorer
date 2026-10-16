@@ -263,7 +263,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 011a11caccb20d14d9f7c29bf2662b17, type: 2}
   - {fileID: 11400000, guid: 25d36f9cb73b59f4296f4f5cffcc9469, type: 2}
   - {fileID: 11400000, guid: 66d97ad6c1ff961458113c3336d237f9, type: 2}
-  level: 6
+  - {fileID: 11400000, guid: 5b7d4fa6fecb56c4292d7c2e96c34596, type: 2}
+  - {fileID: 11400000, guid: 47624e75ad8b2bb4caa74b11e82b1d47, type: 2}
+  level: 10
   randomSeed: 0
   seed: 12345
   playerSafeRadius: 2.5
@@ -10878,20 +10880,34 @@ MonoBehaviour:
   halo: {fileID: 1878382495}
   haloSpin: 34
   discSprites:
-  - {fileID: -6087740131698630459, guid: f02167b71def7b84eb0ce6474f17c053, type: 3}
-  - {fileID: 1431231697973978100, guid: f02167b71def7b84eb0ce6474f17c053, type: 3}
-  - {fileID: -962988805560164380, guid: f02167b71def7b84eb0ce6474f17c053, type: 3}
-  - {fileID: -3054053550571349785, guid: f02167b71def7b84eb0ce6474f17c053, type: 3}
-  - {fileID: 7514573503140590322, guid: f02167b71def7b84eb0ce6474f17c053, type: 3}
-  - {fileID: -299912667209987920, guid: f02167b71def7b84eb0ce6474f17c053, type: 3}
+  - {fileID: 21300000, guid: 95221c8994afe9240aee3909b1a04bb3, type: 3}
+  - {fileID: 21300000, guid: 0ba307e0fd27b214a8a95ac2eab4e2dc, type: 3}
+  - {fileID: 21300000, guid: 5d869bcf2bb522c468d3ddd8d48b0a0a, type: 3}
+  - {fileID: 21300000, guid: 71d99074cb3d85b47bec8ee2af1defc7, type: 3}
+  - {fileID: 21300000, guid: ff65146a20edfd346a4646f902d7bb14, type: 3}
+  - {fileID: 21300000, guid: 7e0f76a8af652114f954af004a39fecd, type: 3}
+  - {fileID: 21300000, guid: 49cf3ca3e155fde47820a9b00cf1e574, type: 3}
+  - {fileID: 21300000, guid: 3b08c4e6325f9214b8923f3f8d493296, type: 3}
   haloSprites:
-  - {fileID: 21300000, guid: 60a09f10c30cf0e468c928eb60ce1b13, type: 3}
-  - {fileID: 21300000, guid: 125031eae6745c446831869bd089ce01, type: 3}
-  - {fileID: 21300000, guid: b7fbd53c861440c479585c558eb0325d, type: 3}
-  - {fileID: 21300000, guid: 00f688231f578f0408da223823c91dc9, type: 3}
-  - {fileID: 21300000, guid: 7299c3797f2b2294281d985034bf183a, type: 3}
-  - {fileID: 21300000, guid: 54a84fe91c4e1d04280f75252b9c094a, type: 3}
+  - {fileID: 21300000, guid: 68fbb8dd0cba1db44af466cd4126674b, type: 3}
+  - {fileID: 21300000, guid: a7c2cee7fb6fcbb428249352a3ceed98, type: 3}
+  - {fileID: 21300000, guid: a2042e563bb322a43a352133c0129656, type: 3}
+  - {fileID: 21300000, guid: c9961db70cb24a0439a1ec0f565904aa, type: 3}
+  - {fileID: 21300000, guid: 59918a26cb34e12418bc05bc8c358d77, type: 3}
+  - {fileID: 21300000, guid: 39868ad9bd24d444d9a4b680ca8fc9f7, type: 3}
+  - {fileID: 21300000, guid: 08d96de5261303445a423883644363aa, type: 3}
+  - {fileID: 21300000, guid: 5c6e8d2e49d2f614ab92814fbbe6e3e5, type: 3}
   tintHaloLikeDisc: 0
+  palette:
+  - {r: 1, g: 0.72, b: 0.3, a: 1}
+  - {r: 0.4, g: 0.85, b: 1, a: 1}
+  - {r: 0.72, g: 0.45, b: 1, a: 1}
+  - {r: 0.4, g: 1, b: 0.65, a: 1}
+  - {r: 1, g: 0.4, b: 0.45, a: 1}
+  - {r: 0.85, g: 0.88, b: 1, a: 1}
+  - {r: 1, g: 0.5, b: 0.2, a: 1}
+  - {r: 0.45, g: 0.6, b: 1, a: 1}
+  haloDesaturate: 0.35
   pullRadius: 4.5
   pullForce: 7
   eventHorizon: 0.6
@@ -11366,7 +11382,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 848801469}
@@ -11420,7 +11436,7 @@ SpriteRenderer:
   m_SortingLayer: 5
   m_SortingOrder: -2
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -6087740131698630459, guid: f02167b71def7b84eb0ce6474f17c053, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 95221c8994afe9240aee3909b1a04bb3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -17269,7 +17285,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 848801469}
@@ -17323,7 +17339,7 @@ SpriteRenderer:
   m_SortingLayer: 5
   m_SortingOrder: -3
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 60a09f10c30cf0e468c928eb60ce1b13, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 68fbb8dd0cba1db44af466cd4126674b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.4509804}
   m_FlipX: 0
   m_FlipY: 0

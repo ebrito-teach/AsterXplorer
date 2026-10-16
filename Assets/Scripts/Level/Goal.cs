@@ -32,6 +32,24 @@ public class Goal : MonoBehaviour
     [Tooltip("El halo hereda el tinte del disco, para que la pareja no desentone")]
     [SerializeField] private bool tintHaloLikeDisc = false;
 
+    [Tooltip("Un color por nivel, sorteado de aquí y aplicado al disco Y al halo. Los sprites " +
+             "están dibujados en blanco a propósito: el blanco multiplicado por un color da ese " +
+             "color exacto, así que 16 dibujos y 8 tintes dan 512 metas distintas sin gastar " +
+             "una textura más. Vacío = se queda el color que tengan puesto")]
+    [SerializeField] private Color[] palette = {
+        new Color(1.00f, 0.72f, 0.30f),   // ámbar
+        new Color(0.40f, 0.85f, 1.00f),   // cian
+        new Color(0.72f, 0.45f, 1.00f),   // violeta
+        new Color(0.40f, 1.00f, 0.65f),   // esmeralda
+        new Color(1.00f, 0.40f, 0.45f),   // carmesí
+        new Color(0.85f, 0.88f, 1.00f),   // plata
+        new Color(1.00f, 0.50f, 0.20f),   // naranja
+        new Color(0.45f, 0.60f, 1.00f),   // azul frío
+    };
+    [Tooltip("Cuánto se aclara el halo respecto al disco. El halo es gas tenue y el disco " +
+             "plasma: con el mismo tinte exacto el halo se come al disco")]
+    [Range(0f, 1f)] [SerializeField] private float haloDesaturate = 0.35f;
+
     SpriteRenderer discRenderer, haloRenderer;
     Vector3 discBaseScale = Vector3.one;
 
@@ -91,6 +109,28 @@ public class Goal : MonoBehaviour
 
         if (haloRenderer != null && haloSprites != null && haloSprites.Length > 0)
             haloRenderer.sprite = haloSprites[Random.Range(0, haloSprites.Length)];
+
+        // El color va aparte de la forma a propósito: si cada dibujo trajera el suyo, tendrías
+        // que generar una textura por combinación. Sorteándolo aquí, 8 discos x 8 halos x 8
+        // tintes son 512 metas distintas con 16 archivos.
+        if (palette != null && palette.Length > 0)
+        {
+            Color c = palette[Random.Range(0, palette.Length)];
+
+            if (discRenderer != null)
+            {
+                float a = discRenderer.color.a;
+                discRenderer.color = new Color(c.r, c.g, c.b, a);
+            }
+            if (haloRenderer != null)
+            {
+                // El halo, más lavado: mismo tinte tirando a blanco. Gas tenue alrededor de
+                // plasma, no dos capas del mismo color peleándose
+                Color h = Color.Lerp(c, Color.white, haloDesaturate);
+                haloRenderer.color = new Color(h.r, h.g, h.b, haloRenderer.color.a);
+            }
+            return;   // la paleta manda sobre el tinte heredado de abajo
+        }
 
         if (tintHaloLikeDisc && haloRenderer != null && discRenderer != null)
         {

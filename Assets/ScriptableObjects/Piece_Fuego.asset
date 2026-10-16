@@ -15,12 +15,12 @@ MonoBehaviour:
   id: piece_fuego
   behavior: 5
   sprites:
-  - {fileID: -4267437925383555068, guid: 6a8a18d65d60d014e9fbcd3ed04dfb2e, type: 3}
-  - {fileID: -4505390566244665489, guid: a09e90fc07eb08a4eb5b25a2867d3774, type: 3}
-  - {fileID: 576266314121683703, guid: d128e7a1127c77641972e83ca8cf043b, type: 3}
-  - {fileID: -316959453954867627, guid: 30cb0a66decc06f4391fc074124fd134, type: 3}
-  - {fileID: 7249406291423084481, guid: b66f7fa63de74424d8ed9cc3479d1f2b, type: 3}
-  - {fileID: -3195463668897749185, guid: d01acee6ed8a3464cadf3d32209b7137, type: 3}
+  - {fileID: 21300000, guid: 6a8a18d65d60d014e9fbcd3ed04dfb2e, type: 3}
+  - {fileID: 21300000, guid: a09e90fc07eb08a4eb5b25a2867d3774, type: 3}
+  - {fileID: 21300000, guid: d128e7a1127c77641972e83ca8cf043b, type: 3}
+  - {fileID: 21300000, guid: 30cb0a66decc06f4391fc074124fd134, type: 3}
+  - {fileID: 21300000, guid: b66f7fa63de74424d8ed9cc3479d1f2b, type: 3}
+  - {fileID: 21300000, guid: d01acee6ed8a3464cadf3d32209b7137, type: 3}
   sizeRange: {x: 0.3, y: 0.7}
   sizeSkew: 1.4
   minWorldRadius: 0.09

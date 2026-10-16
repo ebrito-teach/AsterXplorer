@@ -1,0 +1,110 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3385fcd6f37f044496ad136341eb108, type: 3}
+  m_Name: piece_inof_poison
+  m_EditorClassIdentifier: Assembly-CSharp::AsteroidTypeData
+  id: piece_inof_poison
+  behavior: 5
+  sprites:
+  - {fileID: 21300000, guid: 4edb5d35ddeb95743b63e96e781f044a, type: 3}
+  - {fileID: 21300000, guid: 5636ee23f01413547acc65847f89ea65, type: 3}
+  - {fileID: 21300000, guid: aba6f9a21b2843e46bb79e1b8384ba34, type: 3}
+  - {fileID: 21300000, guid: 04b54ea163b5161428b411ec4ecddcd5, type: 3}
+  - {fileID: 21300000, guid: 8b91d334aea0d974ca3fedb93988fe7b, type: 3}
+  - {fileID: 21300000, guid: 84f781beac5df84428cd01fc8ceae9f4, type: 3}
+  - {fileID: 21300000, guid: 2587e23ef3d39464c84b3be8597f654e, type: 3}
+  - {fileID: 21300000, guid: 93584e1949e9e8444b10010e9d5510c7, type: 3}
+  - {fileID: 21300000, guid: 7244fd145e875f94da67cc47c533108e, type: 3}
+  - {fileID: 21300000, guid: 9bf9902b541cacf47b93493513b052c2, type: 3}
+  - {fileID: 21300000, guid: fe908bbfdc0ac4b4f92207c6a04a094e, type: 3}
+  - {fileID: 21300000, guid: bae262c0f148c044f874950964182195, type: 3}
+  sizeRange: {x: 0.4, y: 0.9}
+  sizeSkew: 1.4
+  minWorldRadius: 0.09
+  faceVelocity: 0
+  spriteForwardOffset: 0
+  prefabOverride: {fileID: 0}
+  speedRange: {x: 1, y: 2}
+  spinRange: {x: -120, y: 120}
+  sizeAffectsSpeed: 1
+  speedScaling: 1
+  followFlow: 0
+  flowSpread: 25
+  turnRate: 40
+  wander: 0.08
+  restoreSpeed: 0
+  restoreRate: 0.9
+  recycle: 0
+  material: {fileID: 0}
+  massPerArea: 1
+  massExponent: 3
+  densityRange: {x: 0.8, y: 1.3}
+  colliderFactor: 0.9
+  launchBoost: 1.25
+  impactSpeedCap: 0
+  keepsImpulse: 0.85
+  reboundDamping: 0.85
+  impactEnergyLoss: 0.2
+  impactSpinLoss: 0.3
+  impactSpeedFloor: 0.55
+  noRestoreSeconds: 0.5
+  canBeDislodged: 1
+  dislodgeMassRatio: 4
+  dislodgesStatics: 0
+  unstoppable: 0
+  canBeCaptured: 0
+  captureChance: 0.12
+  captureMaxRadius: 0.32
+  captureMinSpeed: 0.6
+  captureMaxSpeed: 3
+  acceptsMoons: 0
+  maxMoons: 3
+  moonCaptureMultiplier: 1
+  moonGap: 0.3
+  moonOrbitSpeed: {x: 30, y: 75}
+  moonTrail: 0
+  moonsAreLethal: 0
+  wakeType: {fileID: 0}
+  wakeEvery: 3.5
+  wakeChance: 0.85
+  wakeSpread: 3.5
+  wakeSizeScale: {x: 0.5, y: 1}
+  wakeSpinScale: 3.5
+  pullRadius: 0
+  pullForce: 9
+  pullMaxTargetRadius: 0.45
+  pullMaxTargetMassFraction: 0.08
+  pullTangential: 0.65
+  killsPlayer: 0
+  lethalMinRadius: 0.08
+  shoveSpeedMultiplier: 2
+  shoveSideways: 0.6
+  canBreak: 0
+  fragmentType: {fileID: 0}
+  fragmentGroups: []
+  fragmentCount: {x: 2, y: 3}
+  largestFragment: 0.55
+  fragmentSizeFalloff: 0.72
+  ejectaConeAngle: 35
+  ejectaSpeedFraction: 0.25
+  ejectaSpeedExponent: 1.22
+  fragmentBoost: {x: 1.3, y: 1.6}
+  breakMinSpeed: 0.5
+  breakShield: 0.4
+  maxFragmentsAlive: 40
+  breakOnlyOnScreen: 1
+  logBreakRejections: 0
+  lifetime: 0
+  comet: {fileID: 0}
+  cost: 1
+  minLevel: 0
+  spawnWeight: 1

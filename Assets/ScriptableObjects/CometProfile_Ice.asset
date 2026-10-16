@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44df1da2a383d244ca42f5c7fde1ca33, type: 3}
+  m_Name: CometProfile_Ice
+  m_EditorClassIdentifier: Assembly-CSharp::CometProfile
+  shedInterval: 0.6
+  shedChance: 0.5
+  piecesPerShed: {x: 1, y: 2}
+  maxDebrisAlive: 30
+  pieces:
+  - type: {fileID: 11400000, guid: a781a4deb62fd9b4fb35fefb8077adff, type: 2}
+    weight: 3
+  - type: {fileID: 11400000, guid: 776e76b09a4c2aa4da73e1b4f735a4d3, type: 2}
+    weight: 2
+  stayChance: 0.25
+  driftChance: 0.25
+  inheritVelocity: 0.6
+  velocityJitter: 0.35
+  directionJitter: 35
+  ejectSpeed: {x: 0.2, y: 0.9}
+  inheritSpin: 0.5
+  driftSpeed: {x: 0.25, y: 1.1}
+  staySpeed: {x: 0, y: 0.12}

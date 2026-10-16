@@ -1,0 +1,104 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3385fcd6f37f044496ad136341eb108, type: 3}
+  m_Name: Piece_Ice
+  m_EditorClassIdentifier: Assembly-CSharp::AsteroidTypeData
+  id: piece_ice
+  behavior: 5
+  sprites:
+  - {fileID: 21300000, guid: 83ac42dca8207bf40beccd27accd831b, type: 3}
+  - {fileID: 21300000, guid: 4e7c820322ab3974e9f03279a901a337, type: 3}
+  - {fileID: 21300000, guid: c17db15c971491542bd3c6311439ad8d, type: 3}
+  - {fileID: 21300000, guid: b033728a1d7832546ba31c2bda4c60a5, type: 3}
+  - {fileID: 21300000, guid: 0c0572ef3781f804096c9679c80413b2, type: 3}
+  - {fileID: 21300000, guid: cd3bd78b164694b45a7e9149480d136b, type: 3}
+  sizeRange: {x: 0.3, y: 0.7}
+  sizeSkew: 1.4
+  minWorldRadius: 0.09
+  faceVelocity: 0
+  spriteForwardOffset: 0
+  prefabOverride: {fileID: 0}
+  speedRange: {x: 1, y: 2}
+  spinRange: {x: -120, y: 120}
+  sizeAffectsSpeed: 1
+  speedScaling: 1
+  followFlow: 0
+  flowSpread: 25
+  turnRate: 40
+  wander: 0.08
+  restoreSpeed: 0
+  restoreRate: 0.9
+  recycle: 0
+  material: {fileID: 0}
+  massPerArea: 1
+  massExponent: 3
+  densityRange: {x: 0.8, y: 1.3}
+  colliderFactor: 0.9
+  launchBoost: 1.25
+  impactSpeedCap: 0
+  keepsImpulse: 0.85
+  reboundDamping: 0.85
+  impactEnergyLoss: 0.2
+  impactSpinLoss: 0.3
+  impactSpeedFloor: 0.55
+  noRestoreSeconds: 0.5
+  canBeDislodged: 1
+  dislodgeMassRatio: 4
+  dislodgesStatics: 0
+  unstoppable: 0
+  canBeCaptured: 0
+  captureChance: 0.12
+  captureMaxRadius: 0.32
+  captureMinSpeed: 0.6
+  captureMaxSpeed: 3
+  acceptsMoons: 0
+  maxMoons: 3
+  moonCaptureMultiplier: 1
+  moonGap: 0.3
+  moonOrbitSpeed: {x: 30, y: 75}
+  moonTrail: 0
+  moonsAreLethal: 0
+  wakeType: {fileID: 0}
+  wakeEvery: 3.5
+  wakeChance: 0.85
+  wakeSpread: 3.5
+  wakeSizeScale: {x: 0.5, y: 1}
+  wakeSpinScale: 3.5
+  pullRadius: 0
+  pullForce: 9
+  pullMaxTargetRadius: 0.45
+  pullMaxTargetMassFraction: 0.08
+  pullTangential: 0.65
+  killsPlayer: 1
+  lethalMinRadius: 0.08
+  shoveSpeedMultiplier: 2
+  shoveSideways: 0.6
+  canBreak: 0
+  fragmentType: {fileID: 0}
+  fragmentGroups: []
+  fragmentCount: {x: 2, y: 3}
+  largestFragment: 0.55
+  fragmentSizeFalloff: 0.72
+  ejectaConeAngle: 35
+  ejectaSpeedFraction: 0.25
+  ejectaSpeedExponent: 1.22
+  fragmentBoost: {x: 1.3, y: 1.6}
+  breakMinSpeed: 0.5
+  breakShield: 0.4
+  maxFragmentsAlive: 40
+  breakOnlyOnScreen: 1
+  logBreakRejections: 0
+  lifetime: 0
+  comet: {fileID: 0}
+  cost: 1
+  minLevel: 0
+  spawnWeight: 1
