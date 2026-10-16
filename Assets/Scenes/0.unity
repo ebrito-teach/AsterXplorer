@@ -262,8 +262,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 98a5bce8083d35544921bbf59f3115dc, type: 2}
   - {fileID: 11400000, guid: 011a11caccb20d14d9f7c29bf2662b17, type: 2}
   - {fileID: 11400000, guid: 25d36f9cb73b59f4296f4f5cffcc9469, type: 2}
-  level: 1
-  randomSeed: 1
+  - {fileID: 11400000, guid: 66d97ad6c1ff961458113c3336d237f9, type: 2}
+  level: 6
+  randomSeed: 0
   seed: 12345
   playerSafeRadius: 2.5
   readPlayerMetrics: 1
@@ -22296,7 +22297,7 @@ MonoBehaviour:
   player: {fileID: 1679237101}
   playerStart: {fileID: 1679237105}
   goal: {fileID: 848801470}
-  startLevel: 1
+  startLevel: 6
   runSeed: 0
   sameLevelOnRetry: 1
   resumeFromSave: 1

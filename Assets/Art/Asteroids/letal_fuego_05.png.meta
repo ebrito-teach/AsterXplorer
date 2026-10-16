@@ -1,37 +1,19 @@
 fileFormatVersion: 2
-guid: d5e3a3936b70b0242a35ee78b89a8504
+guid: b66f7fa63de74424d8ed9cc3479d1f2b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 313289136823611116
-    second: letales_fuego_0
+      213: 7249406291423084481
+    second: letal_fuego_05_0
   - first:
-      213: 4274440171538405823
-    second: letales_fuego_1
+      213: -6053966781629857623
+    second: letal_fuego_05_1
   - first:
-      213: -7415653149519833344
-    second: letales_fuego_2
+      213: 6963106613364928074
+    second: letal_fuego_05_2
   - first:
-      213: -7942515901350809190
-    second: letales_fuego_3
-  - first:
-      213: 5559807823012024825
-    second: letales_fuego_4
-  - first:
-      213: -9029580261681835596
-    second: letales_fuego_5
-  - first:
-      213: 8733428962736084748
-    second: letales_fuego_6
-  - first:
-      213: 7385604298404769866
-    second: letales_fuego_7
-  - first:
-      213: -3565336446751384753
-    second: letales_fuego_8
-  - first:
-      213: 3822771930729662355
-    second: letales_fuego_9
+      213: 5592022688922729502
+    second: letal_fuego_05_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -64,7 +46,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -73,12 +55,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 310
+  spritePixelsToUnits: 145
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -99,7 +81,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 4096
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -179,13 +161,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: letales_fuego_0
+      name: letal_fuego_05_0
       rect:
         serializedVersion: 2
-        x: 37
-        y: 28
-        width: 374
-        height: 392
+        x: 46
+        y: 64
+        width: 107
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,20 +176,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cee2c506fc6095400800000000000000
-      internalID: 313289136823611116
+      spriteID: 1cf31c0fc901b9460800000000000000
+      internalID: 7249406291423084481
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: letales_fuego_1
+      name: letal_fuego_05_1
       rect:
         serializedVersion: 2
-        x: 486
-        y: 38
-        width: 371
-        height: 372
+        x: 153
+        y: 155
+        width: 44
+        height: 63
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -216,20 +198,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fb9d43660bcd15b30800000000000000
-      internalID: 4274440171538405823
+      spriteID: 9a000f2994dfbfba0800000000000000
+      internalID: -6053966781629857623
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: letales_fuego_2
+      name: letal_fuego_05_2
       rect:
         serializedVersion: 2
-        x: 984
-        y: 80
-        width: 272
-        height: 288
+        x: 17
+        y: 30
+        width: 83
+        height: 78
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -238,20 +220,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0071d5510ce461990800000000000000
-      internalID: -7415653149519833344
+      spriteID: a4e2ace929ce1a060800000000000000
+      internalID: 6963106613364928074
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: letales_fuego_3
+      name: letal_fuego_05_3
       rect:
         serializedVersion: 2
-        x: 1440
-        y: 77
-        width: 255
-        height: 294
+        x: 121
+        y: 0
+        width: 118
+        height: 147
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -260,140 +242,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a91f7157ed386c190800000000000000
-      internalID: -7942515901350809190
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: letales_fuego_4
-      rect:
-        serializedVersion: 2
-        x: 1866
-        y: 56
-        width: 300
-        height: 336
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9f1d11602c7682d40800000000000000
-      internalID: 5559807823012024825
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: letales_fuego_5
-      rect:
-        serializedVersion: 2
-        x: 2358
-        y: 282
-        width: 37
-        height: 60
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4b1539fb79c70b280800000000000000
-      internalID: -9029580261681835596
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: letales_fuego_6
-      rect:
-        serializedVersion: 2
-        x: 2449
-        y: 220
-        width: 142
-        height: 170
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c071ef2be5f533970800000000000000
-      internalID: 8733428962736084748
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: letales_fuego_7
-      rect:
-        serializedVersion: 2
-        x: 2335
-        y: 59
-        width: 124
-        height: 138
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a40b3029affee7660800000000000000
-      internalID: 7385604298404769866
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: letales_fuego_8
-      rect:
-        serializedVersion: 2
-        x: 2510
-        y: 184
-        width: 30
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f4b51a24461658ec0800000000000000
-      internalID: -3565336446751384753
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: letales_fuego_9
-      rect:
-        serializedVersion: 2
-        x: 2535
-        y: 129
-        width: 57
-        height: 69
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 397c97c21d63d0530800000000000000
-      internalID: 3822771930729662355
+      spriteID: e1cf92df10bda9d40800000000000000
+      internalID: 5592022688922729502
       vertices: []
       indices: 
       edges: []
@@ -402,7 +252,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -412,16 +262,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      letales_fuego_0: 313289136823611116
-      letales_fuego_1: 4274440171538405823
-      letales_fuego_2: -7415653149519833344
-      letales_fuego_3: -7942515901350809190
-      letales_fuego_4: 5559807823012024825
-      letales_fuego_5: -9029580261681835596
-      letales_fuego_6: 8733428962736084748
-      letales_fuego_7: 7385604298404769866
-      letales_fuego_8: -3565336446751384753
-      letales_fuego_9: 3822771930729662355
+      letal_fuego_05_0: 7249406291423084481
+      letal_fuego_05_1: -6053966781629857623
+      letal_fuego_05_2: 6963106613364928074
+      letal_fuego_05_3: 5592022688922729502
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
