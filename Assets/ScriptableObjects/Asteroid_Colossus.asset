@@ -50,6 +50,8 @@ MonoBehaviour:
   sizeRange: {x: 3.2, y: 5}
   sizeSkew: 1
   minWorldRadius: 0.2
+  faceVelocity: 0
+  spriteForwardOffset: 0
   prefabOverride: {fileID: 0}
   speedRange: {x: 2.2, y: 3}
   spinRange: {x: -15, y: 15}
@@ -88,14 +90,19 @@ MonoBehaviour:
   maxMoons: 6
   moonCaptureMultiplier: 5
   moonGap: 3.5
+  moonOrbitExtra: {x: 0.4, y: 1.6}
   moonOrbitSpeed: {x: 20, y: 45}
-  moonTrail: 0.5
+  moonTrail: 0.35
   moonsAreLethal: 1
+  escortChance: 0.55
+  escortCount: {x: 0, y: 3}
+  escortType: {fileID: 0}
   wakeType: {fileID: 11400000, guid: 25d36f9cb73b59f4296f4f5cffcc9469, type: 2}
   wakeEvery: 3.5
   wakeChance: 0.85
   wakeSpread: 3.5
   wakeSizeScale: {x: 0.5, y: 1}
+  wakeEjectSpeed: {x: 0.8, y: 2.2}
   wakeSpinScale: 3.5
   pullRadius: 5
   pullForce: 8

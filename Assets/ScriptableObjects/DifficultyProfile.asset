@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DifficultyProfile
   intensity: 1.5
   tierLength: 20
-  budgetStart: 32
+  budgetStart: 42
   budgetGrowth: 19.6
   budgetKnee: 19
   speedStart: 1
@@ -25,7 +25,7 @@ MonoBehaviour:
   flowKnee: 22
   flowHardLimit: 88
   maxMovingAsteroids: 55
-  calmEvery: 7
+  calmEvery: 10
   surgeEvery: 5
   calmFactor: 0.65
   surgeFactor: 1.45

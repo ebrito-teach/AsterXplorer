@@ -105,8 +105,25 @@ public class PlayerController : MonoBehaviour
 
     [Header("Impactos")]
     [SerializeField] private float minImpactSpeed = 0.8f;
-    [Tooltip("Cuánta velocidad del choque se convierte en empujón")]
-    [Range(0f, 2f)] [SerializeField] private float knockScale = 0.9f;
+    [Tooltip("Multiplicador general del empujón, DESPUÉS de repartirlo por masas. Súbelo si " +
+             "los golpes se sienten blandos; el reparto entre roca grande y pequeña no cambia")]
+    [Range(0f, 3f)] [SerializeField] private float knockScale = 1.6f;
+    [Tooltip("Cuánto rebotas. 0 = el golpe te empuja y ya; 1 = saltas como una pelota. " +
+             "Bajo a propósito: en el espacio los choques son secos, no elásticos")]
+    [Range(0f, 1f)] [SerializeField] private float restitution = 0.15f;
+    [Tooltip("Cuánto te empuja chocar con una pared. Las paredes no tienen masa (son el " +
+             "borde del mapa), así que su reparto se fija aquí. Bajo = topas y te paras, " +
+             "que es lo que pediste: choque seco, sin rebote de goma")]
+    [Range(0f, 1f)] [SerializeField] private float wallShare = 0.25f;
+
+    [Header("Velocidad letal")]
+    [Tooltip("Chocar con una roca QUIETA a esta velocidad o más te mata. Las que se mueven ya " +
+             "matan siempre por su cuenta; esto le da dientes a las estáticas, que hasta ahora " +
+             "eran decorado. Al estar en la velocidad de crucero, pasar rozando deja de ser " +
+             "gratis: o frenas, o entras en preciso, o no tocas nada")]
+    [SerializeField] private float lethalImpactSpeed = 5f;
+    [Tooltip("Desmárcalo para volver al comportamiento anterior, en el que lo estático nunca mata")]
+    [SerializeField] private bool staticsCanKill = true;
     [Tooltip("Tope del empujón en unidades/s, para que una roca enorme no te mande a órbita")]
     [SerializeField] private float maxKnock = 7f;
     [Tooltip("Constante de tiempo con la que se te pasa el empujón. ANTES eran 4 segundos, " +
@@ -147,6 +164,8 @@ public class PlayerController : MonoBehaviour
     Vector2 knock;             // lo que te hicieron; decae solo
     float facing = 90f;        // grados, hacia dónde mira el astronauta
     int facingSign = 1;        // 1 mira a la derecha, -1 a la izquierda
+    Vector3 baseScale = Vector3.one;        // la escala que pusiste en la escena
+    Vector3 baseVisualScale = Vector3.one;
     float baseFacing;          // el eje de avance: hacia la meta. La inclinación se mide desde aquí
     float turnRate;            // grados/s actuales de los botones de giro, con su arranque
     float thrustLevel, brakeLevel, stunUntil, invulnerableUntil;
@@ -163,6 +182,10 @@ public class PlayerController : MonoBehaviour
     public Rigidbody2D Body => rb;
     /// La usa el verificador de niveles para saber si un hueco da tiempo a aprovecharlo
     public float MaxSpeed => cruiseSpeed;
+    /// Velocidad real ahora mismo, empujones incluidos. La lee el velocímetro.
+    public float Speed => rb != null ? rb.linearVelocity.magnitude : 0f;
+    /// Por debajo de esto se puede rozar una roca quieta sin morir.
+    public float LethalSpeed => lethalImpactSpeed;
     /// Golpe contra algo: velocidad del choque (para sacudida, vibración, sonido...)
     public event System.Action<float> OnImpact;
     /// El jugador ha muerto
@@ -170,6 +193,11 @@ public class PlayerController : MonoBehaviour
 
     void Awake()
     {
+        // Se guardan ANTES de que nada las toque: son el tamaño que decidiste en la escena,
+        // y es a ese al que vuelve Respawn()
+        baseScale = transform.localScale;
+        if (visual != null) baseVisualScale = visual.localScale;
+
         rb = GetComponent<Rigidbody2D>();
         if (input == null) input = FindFirstObjectByType<ShipInput>();
         if (input == null)
@@ -391,7 +419,33 @@ public class PlayerController : MonoBehaviour
             dir = Vector2.Dot(n, dir) >= 0f ? n : -n;
         }
 
-        knock += dir * Mathf.Min(impact * knockScale, maxKnock);
+        // TERCERA LEY. Un choque reparte el MISMO impulso a los dos cuerpos, así que el
+        // cambio de velocidad que se lleva cada uno depende de la masa del otro frente a la
+        // propia:
+        //
+        //     Δv = (1 + rebote) · m_otro / (m_mía + m_otro) · velocidad relativa
+        //
+        // Una gravilla (m_otro casi cero) no te mueve: su impulso se lo come tu inercia.
+        // Un coloso (m_otro enorme) te arrastra con él, porque el reparto tiende a 1 y el
+        // que apenas cambia de velocidad es él. Y entre medias, todo lo demás en proporción.
+        //
+        // Esto importa más de lo que parece: FixedUpdate escribe rb.linearVelocity cada paso,
+        // así que lo que resuelve el motor de física se descarta. Este `knock` ES toda la
+        // respuesta del jugador al golpe — si no mira la masa aquí, la masa no existe para él
+        // por mucho que los asteroides sí la respeten entre ellos.
+        // Un choque a velocidad de crucero contra algo que no se mueve es letal. Esto es lo
+        // que convierte el modo preciso en una herramienta de verdad: frenar antes de rozar
+        // una roca deja de ser una comodidad y pasa a ser la diferencia entre pasar y morir.
+        if (staticsCanKill && impact >= lethalImpactSpeed && EsTerrenoQuieto(c))
+        {
+            Kill();
+            return;
+        }
+
+        float share = ImpactShare(c);
+        float dv = impact * (1f + restitution) * share * knockScale;
+
+        knock += dir * Mathf.Min(dv, maxKnock);
         knock = Vector2.ClampMagnitude(knock, maxKnock);
 
         if (impact >= hardImpactSpeed)
@@ -401,6 +455,38 @@ public class PlayerController : MonoBehaviour
         }
 
         OnImpact?.Invoke(impact);
+    }
+
+    /// ¿Es una roca quieta? Solo esas matan por velocidad: las que se mueven ya matan al
+    /// tocarlas, y las paredes son el borde del mapa, no un obstáculo que debas esquivar.
+    static bool EsTerrenoQuieto(Collision2D c)
+    {
+        int quieto = LayerMask.NameToLayer("AsteroidStatic");
+        return quieto >= 0 && c.collider != null && c.collider.gameObject.layer == quieto;
+    }
+
+    /// Qué fracción de la velocidad del choque se te queda, según quién te golpeó.
+    ///
+    /// Tres casos, y los tres son el mismo reparto visto de distinta manera:
+    ///   cuerpo con masa  -> m_otro / (m_mía + m_otro), el reparto newtoniano
+    ///   pared            -> wallShare, un valor fijo: el borde del mapa no tiene masa y
+    ///                       tratarlo como infinita te haría rebotar como una pelota
+    ///   estático sin masa -> 1, es inamovible y te devuelve el choque entero
+    float ImpactShare(Collision2D c)
+    {
+        var otherRb = c.rigidbody;
+        if (otherRb != null && otherRb.bodyType == RigidbodyType2D.Dynamic)
+        {
+            float mMine = Mathf.Max(0.0001f, rb.mass);
+            float mOther = Mathf.Max(0.0001f, otherRb.mass);
+            return mOther / (mMine + mOther);
+        }
+
+        int walls = LayerMask.NameToLayer("Walls");
+        if (walls >= 0 && c.collider != null && c.collider.gameObject.layer == walls)
+            return wallShare;
+
+        return 1f;
     }
 
     /// Mata al jugador (se ignora si es invulnerable o ya está muerto).
@@ -446,7 +532,10 @@ public class PlayerController : MonoBehaviour
         IsFocusing = false;
         enabled = true;
 
-        transform.localScale = Vector3.one;
+        // La escala de la ESCENA, no 1. La absorción del agujero negro encoge al astronauta,
+        // y al reaparecer hay que deshacer ese encogimiento — pero antes se devolvía a 1 fijo,
+        // así que cualquier tamaño que le pusieras se perdía en el primer nivel.
+        transform.localScale = baseScale;
         transform.rotation = Quaternion.identity;
 
         rb.simulated = true;
@@ -468,7 +557,7 @@ public class PlayerController : MonoBehaviour
         if (visual != null)
         {
             visual.gameObject.SetActive(true);
-            visual.localScale = Vector3.one;
+            visual.localScale = baseVisualScale;
             visual.localPosition = Vector3.zero;
         }
         if (visualRenderer != null) visualRenderer.color = Color.white;

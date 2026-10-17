@@ -130,6 +130,14 @@ public class AsteroidTypeData : ScriptableObject
     public float moonCaptureMultiplier = 1f;
     [Tooltip("Hueco entre mi superficie y la suya: ORBITAN, no se pegan")]
     public float moonGap = 0.3f;
+    [Tooltip("Distancia EXTRA sobre el hueco mínimo, sorteada por luna. Con 0 todas orbitan " +
+             "pegadas a la superficie y parecen adheridas; con un rango las lunas se reparten " +
+             "en varias alturas y se lee como un séquito suelto, no como una costra")]
+    public Vector2 moonOrbitExtra = new Vector2(0.4f, 1.6f);
+    [Tooltip("Cuánto frena el séquito en la cola. Con 0 las lunas dan vueltas a ritmo constante " +
+             "y las de delante parecen pegadas al morro; subiéndolo pasan deprisa por delante y " +
+             "se demoran detrás, así que se amontonan en la cola ellas solas")]
+    [Range(0f, 0.9f)] public float moonTailBias = 0.65f;
     [Tooltip("Velocidad angular de la órbita (grados/s)")]
     public Vector2 moonOrbitSpeed = new Vector2(30f, 75f);
     [Tooltip("Cuánto se estira la órbita hacia atrás cuando me muevo. 0 = anillo, " +
@@ -138,6 +146,17 @@ public class AsteroidTypeData : ScriptableObject
     [Tooltip("Mis lunas matan al jugador. Falso en un estático (campo seguro), " +
              "verdadero en un coloso o un cometa (enjambre mortal que viaja con él)")]
     public bool moonsAreLethal = false;
+
+    [Header("Séquito de nacimiento (colosos y cometas)")]
+    [Tooltip("Probabilidad de que este cuerpo ENTRE al mapa ya acompañado. A 0 solo consigue " +
+             "lunas chocando durante la partida, que es lo que pasaba antes: llegaba siempre " +
+             "desnudo y el séquito era un accidente, no parte de lo que es")]
+    [Range(0f, 1f)] public float escortChance = 0f;
+    [Tooltip("Cuántas lunas trae si le toca. El mínimo puede ser 0: así unos llegan solos y " +
+             "otros con corte, y no sabes cuál te toca hasta que lo ves")]
+    public Vector2Int escortCount = new Vector2Int(1, 3);
+    [Tooltip("De qué tipo son esas lunas. Vacío = usa el mismo tipo que deja en su estela")]
+    public AsteroidTypeData escortType;
 
     [Header("Estela de escombro: lo que DEJA al pasar")]
     [Tooltip("Tipo que va depositando a su paso, normalmente Asteroid_Static. Un cuerpo que " +
@@ -153,6 +172,10 @@ public class AsteroidTypeData : ScriptableObject
     public float wakeSpread = 3.5f;
     [Tooltip("Tamaño del depósito respecto al normal de su tipo")]
     public Vector2 wakeSizeScale = new Vector2(0.5f, 1f);
+    [Tooltip("Con qué velocidad sale despedido lo que arranca a su paso. Antes aparecía " +
+             "quieto en su sitio y se veía colocado a mano; ahora sale con impulso y se va " +
+             "frenando solo hasta pararse, que es lo que hace un escombro de verdad")]
+    public Vector2 wakeEjectSpeed = new Vector2(0.8f, 2.2f);
     [Tooltip("Multiplica el giro de lo que deja. Escombro recién arrancado tumbea mucho más " +
              "rápido que el terreno asentado, y así se distingue a simple vista")]
     public float wakeSpinScale = 3.5f;

@@ -99,5 +99,5 @@ MonoBehaviour:
   lifetime: 0
   comet: {fileID: 11400000, guid: 065eb3470ab5f7d4ea306161d7ba2e82, type: 2}
   cost: 9
-  minLevel: 6
-  spawnWeight: 5
+  minLevel: 1
+  spawnWeight: 0.8

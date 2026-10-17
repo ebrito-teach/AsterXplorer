@@ -206,6 +206,22 @@ public class Asteroid : MonoBehaviour
         followsFlow = false;
     }
 
+    /// Sale despedido y se va frenando solo hasta quedarse quieto.
+    ///
+    /// La diferencia con SetMotion está en targetSpeed: allí se guarda la velocidad que se le
+    /// da, así que el cuerpo la mantiene para siempre. Aquí se pone a CERO, y el restaurado
+    /// —que ya existía— tira de la velocidad hacia abajo a razón de restoreRate hasta pararla.
+    /// Esa deceleración es justo lo que faltaba: antes el escombro aparecía quieto en su sitio
+    /// y se veía colocado a mano, en vez de arrancado.
+    public void Eject(Vector2 velocity, float spin)
+    {
+        rb.linearVelocity = velocity;
+        rb.angularVelocity = spin;
+        targetSpeed = 0f;
+        lastVelocity = velocity;
+        followsFlow = false;
+    }
+
     void Teleport(Vector2 position)
     {
         // Un cuerpo con la estela pintada no puede nacer mirando a cualquier lado: se
@@ -253,6 +269,44 @@ public class Asteroid : MonoBehaviour
         rb.linearVelocity = dir * targetSpeed;
         rb.angularVelocity = spin;
         lastVelocity = rb.linearVelocity;
+
+        TrySpawnEscort();
+    }
+
+    /// Un cuerpo grande puede ENTRAR al mapa ya acompañado.
+    ///
+    /// Antes el séquito solo se formaba chocando durante la partida, así que el coloso llegaba
+    /// siempre desnudo y las lunas eran un accidente. Naciendo con ellas, el séquito pasa a ser
+    /// parte de lo que el cuerpo ES — y como el número puede empezar en cero, unos llegan solos
+    /// y otros con corte, que es lo que hace que verlo aparecer tenga suspense.
+    void TrySpawnEscort()
+    {
+        if (pool == null || Type == null || !Type.acceptsMoons) return;
+        if (Type.escortChance <= 0f || Random.value > Type.escortChance) return;
+
+        var lunaTipo = Type.escortType != null ? Type.escortType : Type.wakeType;
+        if (lunaTipo == null || lunaTipo.sprites == null || lunaTipo.sprites.Length == 0) return;
+
+        // Sin esto, un tipo que se escoltara a sí mismo se llamaría en cadena sin fin: cada
+        // luna nacería con su propio séquito.
+        if (lunaTipo == Type) return;
+
+        int n = Random.Range(Type.escortCount.x, Type.escortCount.y + 1);
+        n = Mathf.Min(n, Mathf.Max(0, Type.maxMoons - moons.Count));
+        if (n <= 0) return;
+
+        // Repartidas en el círculo con una desviación, no clavadas a intervalos exactos:
+        // una formación perfecta se lee como un adorno, no como cuerpos atrapados
+        float paso = 360f / n;
+        float base0 = Random.Range(0f, 360f);
+
+        for (int i = 0; i < n; i++)
+        {
+            float size = lunaTipo.RandomSize();
+            var luna = pool.Spawn(lunaTipo, rb.position, size);
+            if (luna == null) continue;
+            luna.EnterOrbit(this, base0 + paso * i + Random.Range(-paso * 0.3f, paso * 0.3f));
+        }
     }
 
     void FitCollider(Sprite s, float factor)
@@ -432,12 +486,29 @@ public class Asteroid : MonoBehaviour
             return;
         }
 
-        orbitAngle += orbitSpeed * Time.fixedDeltaTime;
+        Vector2 hv = orbitHost.Body.linearVelocity;
+
+        // Barrido desigual: rápido por delante, lento por detrás.
+        //
+        // Una órbita uniforme reparte las lunas por igual alrededor del cuerpo, y entonces las
+        // que quedan delante parecen pegadas al morro. Frenándolas en la cola se amontonan ahí
+        // solas — sin teletransportar nada, solo por el tiempo que pasan en cada tramo. Es el
+        // mismo principio que la segunda ley de Kepler: barrer áreas iguales obliga a ir rápido
+        // cerca y lento lejos, y aquí el "lejos" es la cola.
+        float barrido = orbitSpeed;
+        float sesgo = orbitHost.Type.moonTailBias;
+        if (sesgo > 0f && hv.sqrMagnitude > 0.01f)
+        {
+            float rumbo = Mathf.Atan2(hv.y, hv.x) * Mathf.Rad2Deg;
+            float delante = Mathf.Cos((orbitAngle - rumbo) * Mathf.Deg2Rad);   // +1 morro, -1 cola
+            barrido *= 1f + sesgo * delante;
+        }
+
+        orbitAngle += barrido * Time.fixedDeltaTime;
         Vector2 center = orbitHost.Body.position;
         Vector2 offset = FlowField.FromAngle(orbitAngle) * orbitRadius;
 
         // Si el anfitrión se mueve, el cortejo se arrastra DETRÁS: eso es la estela
-        Vector2 hv = orbitHost.Body.linearVelocity;
         float trail = orbitHost.Type.moonTrail;
         if (trail > 0f && hv.sqrMagnitude > 0.01f)
             offset -= hv.normalized * (orbitRadius * trail);
@@ -463,13 +534,30 @@ public class Asteroid : MonoBehaviour
         captureRollUsed = true;                            // una sola tirada en toda su vida
         if (Random.value > Type.captureChance * Mathf.Max(0f, host.Type.moonCaptureMultiplier)) return false;
 
+        Vector2 d = rb.position - host.Body.position;
+        if (d.sqrMagnitude < 0.0001f) d = Random.insideUnitCircle.normalized;
+        EnterOrbit(host, Mathf.Atan2(d.y, d.x) * Mathf.Rad2Deg);
+        return true;
+    }
+
+    /// Entra en la órbita de un anfitrión. Lo usan la captura por choque y el séquito de
+    /// nacimiento, para que una luna capturada y una que llegó con el cuerpo se comporten
+    /// exactamente igual.
+    public void EnterOrbit(Asteroid host, float angleDeg)
+    {
         orbitHost = host;
         host.moons.Add(this);
 
-        Vector2 d = rb.position - host.Body.position;
-        if (d.sqrMagnitude < 0.0001f) d = Random.insideUnitCircle.normalized;
-        orbitAngle = Mathf.Atan2(d.y, d.x) * Mathf.Rad2Deg;
-        orbitRadius = host.WorldRadius + WorldRadius + Mathf.Max(0.05f, host.Type.moonGap);
+        orbitAngle = angleDeg;
+
+        // El hueco extra es lo que convierte una costra en un séquito. Con solo moonGap todas
+        // las lunas orbitaban pegadas a la superficie y el conjunto se leía como un solo
+        // cuerpo con bultos; repartiéndolas en varias alturas se ve lo que son — cuerpos
+        // sueltos que viajan con él, no adheridos a él.
+        float extra = Random.Range(host.Type.moonOrbitExtra.x, host.Type.moonOrbitExtra.y);
+        orbitRadius = host.WorldRadius + WorldRadius
+                    + Mathf.Max(0.05f, host.Type.moonGap) + Mathf.Max(0f, extra);
+
         orbitSpeed = Random.Range(host.Type.moonOrbitSpeed.x, host.Type.moonOrbitSpeed.y)
                      * (Random.value < 0.5f ? -1f : 1f);
         orbitSpin = Random.Range(-90f, 90f);
@@ -490,7 +578,6 @@ public class Asteroid : MonoBehaviour
         }
         lifetimeEnd = -1f;
         sr.color = Color.white;
-        return true;
     }
 
     /// Sale de la órbita por la tangente, sumando la velocidad del anfitrión. Es lo que
@@ -582,9 +669,27 @@ public class Asteroid : MonoBehaviour
         rb.linearDamping = 0f;
         rb.angularDamping = 0f;
 
-        rb.linearVelocity = byVel * 0.5f;
+        // Lo aparta hacia SU COSTADO y lo deja frenando, no lo arrastra consigo.
+        //
+        // Antes esto era `rb.linearVelocity = byVel * 0.5f` con `targetSpeed = byVel.magnitude`:
+        // el escombro salía en la misma dirección que el coloso y a velocidad constante, así
+        // que viajaba con él indefinidamente y acababa escoltándolo por delante. Empujado al
+        // lado y con targetSpeed a cero, frena solo, el coloso lo adelanta, y queda en su cola.
+        // La estela se forma sola con lo que va barriendo, que es la idea.
+        //
+        // shoveSideways ya existía y decía exactamente esto —"que resbale por el costado en vez
+        // de quedarse delante siendo arrastrado"— pero aquí no se usaba.
+        Vector2 fwd = byVel.sqrMagnitude > 0.01f ? byVel.normalized : Vector2.right;
+        Vector2 lado = new Vector2(-fwd.y, fwd.x);
+        float haciaDonde = Vector2.Dot(rb.position - by.Body.position, lado) >= 0f ? 1f : -1f;
+
+        float lateral = Mathf.Clamp01(by.Type.shoveSideways);
+        Vector2 empuje = (lado * (haciaDonde * lateral) + fwd * (1f - lateral)).normalized
+                       * (byVel.magnitude * Mathf.Max(0.1f, by.Type.shoveSpeedMultiplier) * 0.5f);
+
+        rb.linearVelocity = empuje;
         rb.angularVelocity += Random.Range(-60f, 60f);
-        targetSpeed = byVel.magnitude;
+        targetSpeed = 0f;
         followsFlow = false;
         restoreBlockedUntil = Time.time + Type.noRestoreSeconds;
         return true;
@@ -686,9 +791,19 @@ public class Asteroid : MonoBehaviour
 
             float size = w.RandomSize() * Random.Range(Type.wakeSizeScale.x, Type.wakeSizeScale.y);
             var left = pool.Spawn(w, p, size);
+            if (left == null) return;
+
+            // Sale despedido hacia atrás y hacia fuera, y se frena solo. La dirección se
+            // mezcla entre "hacia atrás" y "de lado" para que el reguero se abra en abanico
+            // en vez de quedar en fila india detrás del coloso.
+            Vector2 fuera = (back * Random.Range(0.4f, 1f)
+                           + side * Random.Range(-0.8f, 0.8f)).normalized;
+            float vel = Random.Range(Type.wakeEjectSpeed.x, Type.wakeEjectSpeed.y);
+
             // Escombro recién arrancado: tumbea mucho más rápido que el terreno asentado.
             // Y de paso se distingue a simple vista de un estático de toda la vida.
-            if (left != null) left.Body.angularVelocity *= Mathf.Max(0.1f, Type.wakeSpinScale);
+            float giro = Random.Range(-120f, 120f) * Mathf.Max(0.1f, Type.wakeSpinScale);
+            left.Eject(fuera * vel, giro);
             return;
         }
     }

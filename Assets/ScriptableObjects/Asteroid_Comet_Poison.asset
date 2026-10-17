@@ -98,6 +98,6 @@ MonoBehaviour:
   logBreakRejections: 0
   lifetime: 0
   comet: {fileID: 11400000, guid: b292b7bc0eb53224d97784209eb4697f, type: 2}
-  cost: 9
-  minLevel: 6
-  spawnWeight: 5
+  cost: 10
+  minLevel: 1
+  spawnWeight: 0.5
