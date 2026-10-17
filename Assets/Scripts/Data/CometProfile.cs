@@ -10,11 +10,40 @@ public class CometProfile : ScriptableObject
         public float weight = 1f;
     }
 
+    public enum ShedPattern { Line, Scatter, None }
+
+    [Header("Patrón de cada desprendimiento")]
+    [Tooltip("Piezas quietas sobre la trayectoria. Se quedan todo el nivel y dibujan el " +
+             "camino que siguió el cometa. Los huecos entre tramos salen solos, cuando un " +
+             "desprendimiento cae en otro patrón")]
+    public float lineWeight = 55f;
+    [Tooltip("Abanico detrás del cometa: unas se quedan, otras derivan, otras lo siguen. " +
+             "Duran un tiempo limitado")]
+    public float scatterWeight = 30f;
+    [Tooltip("No suelta nada")]
+    public float noneWeight = 15f;
+
+    [Header("Línea (rastro permanente)")]
+    [Tooltip("Piezas por tramo de línea")]
+    public Vector2Int linePieces = new Vector2Int(2, 3);
+    [Tooltip("Separación mínima entre piezas del mismo tramo (unidades)")]
+    public float lineMinSpacing = 0.35f;
+    [Tooltip("Desviación lateral máxima respecto a la trayectoria, en radios del cometa. " +
+             "0 = línea perfecta")]
+    [Range(0f, 1f)] public float lineJitter = 0.12f;
+    [Tooltip("Tope de piezas de rastro en todo el nivel, sumando todos los cometas. Al " +
+             "llegar, la más antigua se desvanece para dejar sitio a la nueva")]
+    public int maxTrailPieces = 60;
+    [Tooltip("Segundos que tarda en desvanecerse la pieza de rastro más antigua")]
+    public float trailFadeSeconds = 2f;
+
+    [Header("Disperso")]
+    [Tooltip("Segundos de vida de cada pieza dispersa. 0 = la vida que diga su tipo")]
+    public float scatterLifetime = 12f;
+
     [Header("Cuándo se desprenden piezas")]
-    [Tooltip("Cada cuántos segundos se tira el dado")]
+    [Tooltip("Cada cuántos segundos se tira el dado del patrón")]
     public float shedInterval = 0.7f;
-    [Tooltip("Probabilidad en cada tirada. No siempre se desprende")]
-    [Range(0f, 1f)] public float shedChance = 0.4f;
     public Vector2Int piecesPerShed = new Vector2Int(1, 3);
     [Tooltip("Tope de piezas vivas a la vez (rendimiento en móvil)")]
     public int maxDebrisAlive = 40;
@@ -43,6 +72,17 @@ public class CometProfile : ScriptableObject
     public Vector2 staySpeed = new Vector2(0f, 0.12f);
 
     public bool HasPieces => pieces != null && pieces.Length > 0;
+
+    public ShedPattern PickPattern()
+    {
+        float l = Mathf.Max(0f, lineWeight), s = Mathf.Max(0f, scatterWeight), n = Mathf.Max(0f, noneWeight);
+        float total = l + s + n;
+        if (total <= 0f) return ShedPattern.Scatter;
+        float r = Random.value * total;
+        if (r < l) return ShedPattern.Line;
+        if (r < l + s) return ShedPattern.Scatter;
+        return ShedPattern.None;
+    }
 
     public AsteroidTypeData PickPiece()
     {

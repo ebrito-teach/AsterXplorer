@@ -10,6 +10,9 @@ public class LevelPopulator : MonoBehaviour
     [SerializeField] private Transform player;
     [SerializeField] private DifficultyProfile difficulty;
     [SerializeField] private ColossusDirector colossus;     // opcional
+    [Tooltip("Los cometas van por su cuenta, fuera del presupuesto. Si un tipo de la lista " +
+             "Types tiene perfil de cometa, aquí se ignora: lo pone el CometDirector")]
+    [SerializeField] private CometDirector comets;          // opcional
     [SerializeField] private AsteroidTypeData[] types;
 
     [Header("Nivel (para probar)")]
@@ -82,6 +85,7 @@ public class LevelPopulator : MonoBehaviour
         pool.OnExited += HandleExit;
         pool.ReleaseAll();
         if (colossus != null) colossus.BeginLevel(currentLevel);
+        if (comets != null) comets.BeginLevel(currentLevel);
 
         Asteroid.SpeedMultiplier = difficulty.SpeedMultiplier(currentLevel);
         if (FlowField.Instance != null)
@@ -96,6 +100,7 @@ public class LevelPopulator : MonoBehaviour
         foreach (var t in types)
         {
             if (t == null || t.behavior == AsteroidBehavior.Colossus || t.behavior == AsteroidBehavior.Debris) continue;
+            if (t.comet != null) continue;   // los cometas los pone el CometDirector
             if (t.sprites == null || t.sprites.Length == 0 || t.minLevel > currentLevel) continue;
             unlocked.Add(t);
         }
@@ -194,6 +199,7 @@ public class LevelPopulator : MonoBehaviour
             if (a == null || a.Type == null) continue;
             if (a.Type.behavior == AsteroidBehavior.Debris) continue;
             if (a.Type.behavior == AsteroidBehavior.Colossus) continue;
+            if (a.Type.comet != null) continue;
             live++;
         }
 
@@ -252,6 +258,10 @@ public class LevelPopulator : MonoBehaviour
         bool wasStatic = a.Type.behavior == AsteroidBehavior.Static;
         var oldType = a.Type;
         pool.Release(a);
+
+        // Un cometa que se va no se sustituye aquí: el CometDirector decide cuándo entra el
+        // siguiente, y siempre del tipo sorteado para el nivel
+        if (oldType.comet != null) return;
 
         if (wasColossus && colossus != null) colossus.NotifyGone();
         if (FlowField.Instance == null) return;

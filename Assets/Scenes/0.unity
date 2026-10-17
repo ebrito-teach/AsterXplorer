@@ -11321,6 +11321,7 @@ GameObject:
   - component: {fileID: 1064121982}
   - component: {fileID: 1064121984}
   - component: {fileID: 1064121983}
+  - component: {fileID: 1064121985}
   m_Layer: 5
   m_Name: SpeedReadout
   m_TagString: Untagged
@@ -11342,11 +11343,11 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1003076641}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -40, y: -30}
-  m_SizeDelta: {x: 220, y: 40}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 40, y: -40}
+  m_SizeDelta: {x: 220, y: 50}
+  m_Pivot: {x: 0, y: 1}
 --- !u!114 &1064121983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11361,7 +11362,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -11394,8 +11395,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 22
-  m_fontSizeBase: 22
+  m_fontSize: 38
+  m_fontSizeBase: 38
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -11447,6 +11448,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1064121981}
   m_CullTransparentMesh: 1
+--- !u!114 &1064121985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1064121981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f59aa6b517c79641bba27f589e61da5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpeedReadout
+  player: {fileID: 0}
+  label: {fileID: 0}
+  metersPerUnit: 100
+  suffix: ' m/s'
+  roundTo: 10
+  fastColor: {r: 1, g: 1, b: 1, a: 0.45}
+  safeColor: {r: 0.45, g: 1, b: 0.75, a: 0.95}
+  fadeSpeed: 8
+  safeMargin: 0.3
 --- !u!1 &1161059798
 GameObject:
   m_ObjectHideFlags: 0
@@ -12157,6 +12179,8 @@ MonoBehaviour:
   knockScale: 0.9
   restitution: 0.15
   wallShare: 0.25
+  lethalImpactSpeed: 5
+  staticsCanKill: 1
   maxKnock: 7
   knockDecayTime: 0.35
   hardImpactSpeed: 2

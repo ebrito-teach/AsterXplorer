@@ -8,6 +8,10 @@ public class Asteroid : MonoBehaviour
     public static float SpeedMultiplier = 1f;
     /// Desprendimientos y fragmentos vivos en este momento
     public static int DebrisAlive { get; private set; }
+    /// Cambia cada vez que el pool reutiliza este objeto. Sirve para saber si una
+    /// referencia guardada sigue apuntando al mismo asteroide o ya es otro.
+    public int Serial { get; private set; }
+    static int serialCounter;
 
     /// Choque fuerte entre dos cuerpos: punto, dirección de salida de la eyecta, energía
     /// del impacto y masa del mayor. Lo escucha ImpactFeedback.
@@ -105,6 +109,7 @@ public class Asteroid : MonoBehaviour
         Type = type;
         pool = owner;
         gameObject.name = type.id;
+        Serial = ++serialCounter;
 
         dislodged = false;
         orbitHost = null;
@@ -220,6 +225,30 @@ public class Asteroid : MonoBehaviour
         targetSpeed = 0f;
         lastVelocity = velocity;
         followsFlow = false;
+    }
+
+    /// Cambia la vida restante. 0 o menos = no caduca nunca.
+    public void SetLifetime(float seconds)
+    {
+        lifetimeEnd = seconds > 0f ? Time.time + seconds : -1f;
+        if (seconds <= 0f && sr != null)
+        {
+            Color c = sr.color;
+            c.a = 1f;
+            sr.color = c;
+        }
+    }
+
+    /// Pasa a ser rastro de cometa: deja de contar como fragmento suelto (lo limita
+    /// CometTrail con su propio tope) y no caduca solo.
+    public void MakeTrail()
+    {
+        if (countedAsDebris)
+        {
+            DebrisAlive = Mathf.Max(0, DebrisAlive - 1);
+            countedAsDebris = false;
+        }
+        SetLifetime(0f);
     }
 
     void Teleport(Vector2 position)
@@ -816,16 +845,55 @@ public class Asteroid : MonoBehaviour
 
         shedTimer -= Time.fixedDeltaTime;
         if (shedTimer > 0f) return;
-        shedTimer = prof.shedInterval * Random.Range(0.7f, 1.3f);
-
-        if (Random.value > prof.shedChance) return;
-        if (DebrisAlive >= prof.maxDebrisAlive) return;
+        float interval = prof.shedInterval * Random.Range(0.7f, 1.3f);
+        shedTimer = interval;
 
         Vector2 vel = rb.linearVelocity;
         Vector2 fwd = vel.sqrMagnitude > 0.0001f ? vel.normalized : Vector2.right;
         Vector2 side = new Vector2(-fwd.y, fwd.x);
-        int count = Random.Range(prof.piecesPerShed.x, prof.piecesPerShed.y + 1);
 
+        switch (prof.PickPattern())
+        {
+            case CometProfile.ShedPattern.Line:    ShedLine(prof, vel, fwd, side, interval); break;
+            case CometProfile.ShedPattern.Scatter: ShedScatter(prof, vel, fwd, side); break;
+        }
+    }
+
+    // Un tramo de rastro: piezas quietas repartidas sobre el camino que el cometa acaba de
+    // recorrer. Cubren lo avanzado desde el desprendimiento anterior, así que dos tramos
+    // seguidos forman una línea continua y un patrón distinto en medio deja el hueco.
+    void ShedLine(CometProfile prof, Vector2 vel, Vector2 fwd, Vector2 side, float interval)
+    {
+        int count = Random.Range(prof.linePieces.x, prof.linePieces.y + 1);
+        if (count <= 0) return;
+
+        float covered = vel.magnitude * interval;
+        float spacing = Mathf.Max(prof.lineMinSpacing, covered / count);
+        float jitter = prof.lineJitter * WorldRadius;
+
+        for (int i = 0; i < count; i++)
+        {
+            var pieceType = prof.PickPiece();
+            if (pieceType == null) continue;
+
+            float size = pieceType.RandomSize();
+            float behind = WorldRadius + 0.3f + size * 0.6f + i * spacing;
+            Vector2 pos = rb.position - fwd * behind + side * Random.Range(-jitter, jitter);
+
+            var piece = pool.Spawn(pieceType, pos, size);
+            if (piece == null) continue;
+            piece.SetMotion(Vector2.zero, Random.Range(-20f, 20f));
+            piece.MakeTrail();
+            CometTrail.Register(piece, prof.maxTrailPieces, prof.trailFadeSeconds);
+        }
+    }
+
+    // Lo de siempre: abanico detrás, y cada pieza decide si se queda, deriva o lo sigue.
+    void ShedScatter(CometProfile prof, Vector2 vel, Vector2 fwd, Vector2 side)
+    {
+        if (DebrisAlive >= prof.maxDebrisAlive) return;
+
+        int count = Random.Range(prof.piecesPerShed.x, prof.piecesPerShed.y + 1);
         for (int i = 0; i < count; i++)
         {
             var pieceType = prof.PickPiece();
@@ -838,6 +906,8 @@ public class Asteroid : MonoBehaviour
             var piece = pool.Spawn(pieceType, pos, size);
             if (piece == null) continue;
             piece.SetMotion(prof.RollVelocity(vel, rb.angularVelocity, fwd, side, out float spin), spin);
+            if (prof.scatterLifetime > 0f)
+                piece.SetLifetime(prof.scatterLifetime * Random.Range(0.85f, 1.15f));
         }
     }
 
