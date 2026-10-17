@@ -257,6 +257,7 @@ MonoBehaviour:
   player: {fileID: 1679237104}
   difficulty: {fileID: 11400000, guid: 47216442ed2dabd45bf3075c927fcda3, type: 2}
   colossus: {fileID: 348605426}
+  comets: {fileID: 1527855972}
   types:
   - {fileID: 11400000, guid: db196e8af79059544a2ce4ba8d446a0d, type: 2}
   - {fileID: 11400000, guid: 98a5bce8083d35544921bbf59f3115dc, type: 2}
@@ -12050,6 +12051,60 @@ MonoBehaviour:
         m_CallState: 2
   normalSprite: {fileID: 21300000, guid: e424c68d26573ef429f954554dc247f9, type: 3}
   pressedSprite: {fileID: 21300000, guid: 7b10151b58bb9f344bee0f3a3fac0059, type: 3}
+--- !u!1 &1527855971
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1527855973}
+  - component: {fileID: 1527855972}
+  m_Layer: 0
+  m_Name: CometDirector
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1527855972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1527855971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e1852e2ddd88a648a34e8b828861761, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CometDirector
+  pool: {fileID: 1161059799}
+  player: {fileID: 1679237104}
+  cometTypes:
+  - {fileID: 11400000, guid: 66d97ad6c1ff961458113c3336d237f9, type: 2}
+  - {fileID: 11400000, guid: 5b7d4fa6fecb56c4292d7c2e96c34596, type: 2}
+  - {fileID: 11400000, guid: 47624e75ad8b2bb4caa74b11e82b1d47, type: 2}
+  aliveRange: {x: 1, y: 2}
+  firstDelay: {x: 3, y: 6}
+  respawnDelay: {x: 4, y: 9}
+  avoidPlayerRadius: 4
+--- !u!4 &1527855973
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1527855971}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1634304031
 GameObject:
   m_ObjectHideFlags: 0
@@ -22517,6 +22572,7 @@ SceneRoots:
   - {fileID: 1045389859}
   - {fileID: 104327159}
   - {fileID: 348605427}
+  - {fileID: 1527855973}
   - {fileID: 190589638}
   - {fileID: 330869118}
   - {fileID: 1979207758}

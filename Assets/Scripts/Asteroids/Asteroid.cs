@@ -68,7 +68,7 @@ public class Asteroid : MonoBehaviour
     float pulledUntil;
     float wakeAccum;
     Vector2 lastVelocity;      // velocidad con la que entró en el paso de física
-    bool followsFlow, restoreInterpolation, dislodged, countedAsDebris;
+    bool followsFlow, restoreInterpolation, dislodged, countedAsDebris, isTrail;
     bool captureRollUsed;
     bool unstoppable;          // cinemático a propósito: nada puede desviarlo
     bool hasEnteredView;       // ya se ha dejado ver al menos una vez
@@ -112,6 +112,7 @@ public class Asteroid : MonoBehaviour
         Serial = ++serialCounter;
 
         dislodged = false;
+        isTrail = false;
         orbitHost = null;
         moons.Clear();
         restoreBlockedUntil = 0f;
@@ -248,6 +249,7 @@ public class Asteroid : MonoBehaviour
             DebrisAlive = Mathf.Max(0, DebrisAlive - 1);
             countedAsDebris = false;
         }
+        isTrail = true;
         SetLifetime(0f);
     }
 
@@ -493,6 +495,11 @@ public class Asteroid : MonoBehaviour
         var gb = GameBounds.Instance;
         if (gb != null && !hasEnteredView && gb.CameraRect.Contains(rb.position))
             hasEnteredView = true;
+
+        // El rastro de un cometa forma parte del mapa: dura todo el nivel aunque la cámara
+        // se aleje. Solo se va si algo lo empuja fuera del mundo.
+        if (isTrail)
+            return gb != null && !gb.Contains(rb.position, -Mathf.Max(1f, WorldRadius));
 
         Rect d = flow.DespawnRect;
         float m = Mathf.Max(0f, WorldRadius);

@@ -153,7 +153,11 @@ public class LevelPopulator : MonoBehaviour
         // Garantía de que el nivel se puede pasar. Va DESPUÉS de colocar: comprueba el
         // reparto real, no el que pretendíamos. Si hay paso no toca nada.
         string fairness = "verificación desactivada";
-        if (difficulty.enforceSolvable)
+        // Con el mundo grande, el verificador de camino completo deja de tener sentido (la
+        // meta está escondida y lo que fluye aún no existe). Se sustituye por dos
+        // comprobaciones locales en un paso posterior del Hito 3.5; hasta entonces, apagado.
+        if (bounds.IsExpanded) fairness = "verificación de camino apagada (mundo amplio)";
+        else if (difficulty.enforceSolvable)
         {
             ReadPlayerMetrics();
             var r = SolvabilityGate.Enforce(

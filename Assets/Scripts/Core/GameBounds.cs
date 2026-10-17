@@ -18,6 +18,11 @@ public class GameBounds : MonoBehaviour
     [Tooltip("Evita que el jugador entre bajo el notch o las barras del sistema")]
     [SerializeField] private bool respectSafeArea = true;
 
+    [Header("Tamaño del mundo")]
+    [Tooltip("Cuántas pantallas mide el mundo a lo ancho (x) y a lo alto (y). 1 × 1 = el " +
+             "juego de antes, con cámara fija. 2 × 2 = cuatro pantallas de área")]
+    [SerializeField] private Vector2 worldScreens = new Vector2(2f, 2f);
+
     [Header("Paredes")]
     [SerializeField] private float wallThickness = 2f;
     [SerializeField] private float padding = 0f;
@@ -26,8 +31,13 @@ public class GameBounds : MonoBehaviour
     [Tooltip("x, y = esquina inferior izquierda de la zona; w, h = tamaño. Valores entre 0 y 1")]
     [SerializeField] private Rect goalCornerNormalized = new Rect(0.80f, 0.55f, 0.15f, 0.35f);
 
-    /// Área jugable en unidades de mundo (dentro de las paredes).
+    /// Área jugable en unidades de mundo (dentro de las paredes). Es el MUNDO entero, no
+    /// lo que se ve: con un mundo de 2 × 2 pantallas, mide cuatro pantallas.
     public Rect Area { get; private set; }
+    /// ¿El mundo es más grande que la pantalla? Entonces la cámara se mueve.
+    public bool IsExpanded => worldScreens.x > 1.01f || worldScreens.y > 1.01f;
+    /// Tamaño de una pantalla en unidades, sin el zoom de los impactos.
+    public Vector2 ScreenSize { get; private set; }
     /// Todo lo que ve la cámara.
     public Rect CameraRect { get; private set; }
     /// Esquina donde aparecerá el agujero negro.
@@ -41,9 +51,10 @@ public class GameBounds : MonoBehaviour
     BoxCollider2D[] blockedColliders;
     readonly List<Rect> blockedRects = new List<Rect>();
     readonly Vector3[] corners = new Vector3[4];
-    float lastSize, lastAspect;
     int lastW, lastH;
     Rect lastSafe;
+    Vector2 worldCenter;
+    bool centerCaptured;
 
     void Awake()
     {
@@ -83,13 +94,27 @@ public class GameBounds : MonoBehaviour
         Rebuild();
     }
 
+    // El mundo solo se rehace si cambia la PANTALLA (rotar, otra resolución). Antes también
+    // se rehacía al cambiar el tamaño de la cámara, y el zoom de los impactos lo cambia: con
+    // un mundo grande, cada golpe habría movido las paredes.
     void LateUpdate()
     {
-        if (!Mathf.Approximately(cam.orthographicSize, lastSize) ||
-            !Mathf.Approximately(cam.aspect, lastAspect) ||
-            Screen.width != lastW || Screen.height != lastH ||
-            Screen.safeArea != lastSafe)
+        if (Screen.width != lastW || Screen.height != lastH || Screen.safeArea != lastSafe)
             Rebuild();
+        else
+            RefreshCamera();
+    }
+
+    /// Vuelve a medir lo que ve la cámara. La llama CameraFollow cada vez que se mueve, para
+    /// que quien pregunte en el mismo frame (los que nacen, los que se reciclan) no lea la
+    /// posición del frame anterior.
+    public void RefreshCamera()
+    {
+        if (cam == null) return;
+        float h = cam.orthographicSize * 2f;
+        float w = h * cam.aspect;
+        Vector2 c = cam.transform.position;
+        CameraRect = new Rect(c.x - w / 2f, c.y - h / 2f, w, h);
     }
 
     BoxCollider2D CreateWall(string wallName)
@@ -106,16 +131,22 @@ public class GameBounds : MonoBehaviour
 
     void Rebuild()
     {
-        lastSize = cam.orthographicSize;
-        lastAspect = cam.aspect;
         lastW = Screen.width;
         lastH = Screen.height;
         lastSafe = Screen.safeArea;
 
-        float h = cam.orthographicSize * 2f;
-        float w = h * cam.aspect;
-        Vector2 c = cam.transform.position;
-        CameraRect = new Rect(c.x - w / 2f, c.y - h / 2f, w, h);
+        RefreshCamera();
+        float h = CameraRect.height;
+        float w = CameraRect.width;
+        ScreenSize = new Vector2(w, h);
+
+        // El centro del mundo es donde está la cámara la primera vez, y ya no se mueve. Si
+        // siguiera a la cámara, el mundo viajaría con el jugador.
+        if (!centerCaptured)
+        {
+            worldCenter = CameraRect.center;
+            centerCaptured = true;
+        }
 
         // Márgenes del sistema (notch, esquinas redondeadas, barra de gestos), en unidades de mundo
         float insetL = 0f, insetR = 0f, insetT = 0f, insetB = 0f;
@@ -129,10 +160,16 @@ public class GameBounds : MonoBehaviour
             insetT = (Screen.height - sa.yMax) * uy;
         }
 
-        Area = new Rect(CameraRect.xMin + insetL + padding,
-                        CameraRect.yMin + insetB + padding,
-                        Mathf.Max(1f, w - insetL - insetR - 2f * padding),
-                        Mathf.Max(1f, h - insetT - insetB - 2f * padding));
+        float sx = Mathf.Max(1f, worldScreens.x), sy = Mathf.Max(1f, worldScreens.y);
+        float ww = w * sx, wh = h * sy;
+        Rect world = new Rect(worldCenter.x - ww / 2f, worldCenter.y - wh / 2f, ww, wh);
+
+        // Los márgenes del sistema solo importan en el borde del mundo, que es donde la
+        // cámara se detiene y el borde de la pantalla coincide con la pared
+        Area = new Rect(world.xMin + insetL + padding,
+                        world.yMin + insetB + padding,
+                        Mathf.Max(1f, ww - insetL - insetR - 2f * padding),
+                        Mathf.Max(1f, wh - insetT - insetB - 2f * padding));
 
         float t = wallThickness;
         Place(top,    new Vector2(Area.center.x, Area.yMax + t / 2f), new Vector2(Area.width + 2f * t, t));
@@ -166,6 +203,15 @@ public class GameBounds : MonoBehaviour
     {
         blockedRects.Clear();
         if (blockedZones == null) return;
+
+        // Con la cámara siguiendo al jugador, las zonas bajo los botones ya no están en un
+        // sitio fijo del mundo: el jugador nunca se queda debajo de un botón porque la cámara
+        // lo lleva consigo. Se apagan para no dejar muros invisibles por el mapa.
+        if (IsExpanded)
+        {
+            foreach (var c in blockedColliders) if (c != null) c.enabled = false;
+            return;
+        }
 
         Canvas.ForceUpdateCanvases();
         for (int i = 0; i < blockedZones.Length; i++)

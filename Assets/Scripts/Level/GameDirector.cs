@@ -150,6 +150,10 @@ public class GameDirector : MonoBehaviour
         if (playerStart != null) playerStart.Place(GoalMirrored);
         if (player != null) player.Respawn();
 
+        // La cámara salta al jugador ANTES de poblar: los asteroides que se mueven nacen
+        // alrededor de lo que se ve, y tiene que ser la vista del nivel nuevo
+        if (CameraFollow.Instance != null) CameraFollow.Instance.Snap();
+
         // 4. A poblar. Vuelve a sortear la corriente con la misma semilla, así que sale igual
         if (populator != null) populator.StartLevel(CurrentLevel, seed);
 
