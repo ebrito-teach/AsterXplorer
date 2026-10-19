@@ -47,6 +47,7 @@ public class GameBounds : MonoBehaviour
     /// La meta está en el lado contrario al habitual (nivel espejado)
     public bool GoalMirrored { get; private set; }
 
+    bool goalZoneSet;
     BoxCollider2D top, bottom, left, right;
     BoxCollider2D[] blockedColliders;
     readonly List<Rect> blockedRects = new List<Rect>();
@@ -191,8 +192,17 @@ public class GameBounds : MonoBehaviour
         if (IsReady || Area.width > 0f) ApplyGoalCorner();
     }
 
+    /// La meta ya eligió su sitio (mundo amplio): esta es la zona que el generador debe dejar
+    /// libre de estáticos para que no quede encerrada.
+    public void SetGoalZone(Rect zone)
+    {
+        GoalCorner = zone;
+        goalZoneSet = true;
+    }
+
     void ApplyGoalCorner()
     {
+        if (goalZoneSet) return;
         var g = goalCornerNormalized;
         float x = GoalMirrored ? 1f - g.x - g.width : g.x;
         GoalCorner = new Rect(Area.xMin + x * Area.width, Area.yMin + g.y * Area.height,

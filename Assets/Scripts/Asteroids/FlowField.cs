@@ -25,6 +25,15 @@ public class FlowField : MonoBehaviour
     [Tooltip("Al salir de este borde se reciclan")]
     [SerializeField] private float despawnMargin = 3.5f;
 
+    [Header("Entrada por el lado del viaje (mundo amplio)")]
+    [Tooltip("Con la cámara en movimiento, cuánto pesa el borde HACIA el que viaja frente al " +
+             "borde de donde viene la corriente. Sin esto, al moverte en contra o en " +
+             "perpendicular a la corriente la zona que se descubre llega vacía. 0 = solo la " +
+             "corriente, como antes")]
+    [SerializeField] private float travelEntryWeight = 1f;
+    [Tooltip("Velocidad de cámara a la que el peso del viaje llega a su máximo")]
+    [SerializeField] private float travelFullSpeed = 5f;
+
     float seedX, seedY;
 
     public float BaseAngle => baseAngle;
@@ -85,6 +94,23 @@ public class FlowField : MonoBehaviour
         float wR = Mathf.Max(0f, Vector2.Dot(Vector2.left,  d)) * r.height;
         float wB = Mathf.Max(0f, Vector2.Dot(Vector2.up,    d)) * r.width;
         float wT = Mathf.Max(0f, Vector2.Dot(Vector2.down,  d)) * r.width;
+        // El borde hacia el que viaja la cámara también recibe asteroides, en proporción a
+        // lo rápido que va: la zona que se descubre no aparece vacía
+        var follow = CameraFollow.Instance;
+        if (follow != null && travelEntryWeight > 0f)
+        {
+            Vector2 tv = follow.Velocity;
+            float k = travelEntryWeight * Mathf.Clamp01(tv.magnitude / Mathf.Max(0.1f, travelFullSpeed));
+            if (k > 0f)
+            {
+                Vector2 t = tv.normalized;
+                wL += k * Mathf.Max(0f, Vector2.Dot(Vector2.left,  t)) * r.height;
+                wR += k * Mathf.Max(0f, Vector2.Dot(Vector2.right, t)) * r.height;
+                wB += k * Mathf.Max(0f, Vector2.Dot(Vector2.down,  t)) * r.width;
+                wT += k * Mathf.Max(0f, Vector2.Dot(Vector2.up,    t)) * r.width;
+            }
+        }
+
         float total = wL + wR + wB + wT;
         if (total <= 0.0001f) { wR = 1f; total = 1f; }
 

@@ -119,12 +119,42 @@ public class LevelPopulator : MonoBehaviour
             if (t.behavior != AsteroidBehavior.Static) moving++;
         }
 
+        // Mundo amplio: el presupuesto está pensado para UNA pantalla. Los que se mueven
+        // nacen alrededor de la cámara, así que con eso basta. Los estáticos se reparten por
+        // todo el mundo y son persistentes: hay que comprar los suyos para cada pantalla de
+        // área, o el mundo quedaría con la cuarta parte de densidad de terreno.
+        int extraStatics = 0;
+        if (bounds.IsExpanded)
+        {
+            float screenArea = Mathf.Max(1f, bounds.ScreenSize.x * bounds.ScreenSize.y);
+            float ratio = (bounds.Area.width * bounds.Area.height) / screenArea;
+            float staticSpent = 0f;
+            foreach (var t in shopping)
+                if (t.behavior == AsteroidBehavior.Static) staticSpent += Cost(t);
+
+            float extra = staticSpent * Mathf.Max(0f, ratio - 1f);
+            for (int guard = 0; guard < 2000 && extra > 0f; guard++)
+            {
+                var t = PickWeighted(unlocked, extra, true);
+                if (t == null) break;
+                shopping.Add(t);
+                extra -= Cost(t);
+                extraStatics++;
+            }
+        }
+
         // Colócalos
         Rect area = bounds.Area;
         Rect staticRect = Shrink(area, staticEdgeMargin);
         Rect movingRect = FlowField.Instance != null ? FlowField.Instance.SpawnRect : area;
         Rect goal = Expand(bounds.GoalCorner, goalMargin);
-        Vector2 playerPos = player != null ? (Vector2)player.position : area.center;
+        // El punto donde se PARA, no donde está: durante la expulsión aún viene de camino
+        Vector2 playerPos = area.center;
+        if (player != null)
+        {
+            var pc = player.GetComponentInParent<PlayerController>();
+            playerPos = pc != null ? pc.SpawnPoint : (Vector2)player.position;
+        }
         var placed = new List<(Vector2 pos, float r)>();
         int count = 0;
 
@@ -180,6 +210,7 @@ public class LevelPopulator : MonoBehaviour
 
         string mood = difficulty.IsCalm(currentLevel) ? ", respiro"
                     : difficulty.IsSurge(currentLevel) ? ", APRETÓN" : "";
+        if (extraStatics > 0) fairness += $", +{extraStatics} estáticos por el mundo amplio";
         Debug.Log($"LevelPopulator: nivel {currentLevel} (etapa {difficulty.Tier(currentLevel)}{mood}), semilla {newSeed}: " +
                   $"{count}/{shopping.Count} asteroides, presupuesto {difficulty.Budget(currentLevel):0.#}, " +
                   $"velocidad x{Asteroid.SpeedMultiplier:0.00}, corriente {(FlowField.Instance != null ? FlowField.Instance.BaseAngle : 0f):0}° — {fairness}");

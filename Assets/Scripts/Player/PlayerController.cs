@@ -139,6 +139,19 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float startInvulnerability = 2f;
     [SerializeField] private float blinkRate = 4f;
 
+    [Header("Aparición: expulsión (mundo amplio)")]
+    [Tooltip("Al empezar o reaparecer en el mundo amplio, sale despedido desde la nada y se " +
+             "frena hasta pararse en su punto de aparición. Intangible e ininterrumpible")]
+    [SerializeField] private bool expelOnSpawn = true;
+    [Tooltip("Segundos que dura la expulsión")]
+    [SerializeField] private float expelTime = 0.9f;
+    [Tooltip("Distancia que recorre desde donde sale hasta su punto de aparición")]
+    [SerializeField] private float expelDistance = 3f;
+    [Tooltip("Escala con la que sale (crece hasta la normal mientras frena)")]
+    [Range(0.05f, 1f)] [SerializeField] private float expelStartScale = 0.25f;
+    [Tooltip("Vueltas por segundo al salir; se frenan con él")]
+    [SerializeField] private float expelSpin = 2.5f;
+
     [Header("Orientación del sprite")]
     [Tooltip("Voltea el sprite según hacia dónde avanzas. Es lo que faltaba: el astronauta " +
              "miraba siempre a la derecha aunque la salida estuviera al otro lado")]
@@ -175,6 +188,12 @@ public class PlayerController : MonoBehaviour
     public bool IsStunned => Time.time < stunUntil;
     public bool IsInvulnerable => Time.time < invulnerableUntil;
     public bool IsDead { get; private set; }
+    /// Saliendo despedido al aparecer: intangible y sin control
+    public bool IsExpelling { get; private set; }
+    /// Donde se detiene al terminar la expulsión. El generador deja libre esa zona
+    public Vector2 SpawnPoint { get; private set; }
+    /// Se acaba la expulsión y el jugador ya tiene el control
+    public event System.Action OnSpawned;
     /// El agujero negro se lo está tragando: ni control ni física
     public bool IsAbsorbed { get; private set; }
     /// Mantiene pulsado el modo preciso
@@ -229,7 +248,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (IsDead) return;
+        if (IsDead || IsExpelling) return;
 
         bool thrustPose = debugForceThrustPose || thrustLevel > 0.05f;
         if (animator != null) animator.SetBool("Thrusting", thrustPose);
@@ -270,7 +289,7 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (IsDead || input == null) return;
+        if (IsDead || IsExpelling || input == null) return;
         float dt = Time.fixedDeltaTime;
 
         IsFocusing = input.FocusHeld && !IsStunned;
@@ -527,6 +546,8 @@ public class PlayerController : MonoBehaviour
     /// pierden los pools ni hay parón de carga entre nivel y nivel.
     public void Respawn()
     {
+        StopAllCoroutines();
+        IsExpelling = false;
         IsDead = false;
         IsAbsorbed = false;
         IsFocusing = false;
@@ -561,5 +582,71 @@ public class PlayerController : MonoBehaviour
             visual.localPosition = Vector3.zero;
         }
         if (visualRenderer != null) visualRenderer.color = Color.white;
+
+        SpawnPoint = transform.position;
+        var gb = GameBounds.Instance;
+        if (expelOnSpawn && gb != null && gb.IsExpanded && expelTime > 0.01f)
+            StartCoroutine(Expel(SpawnPoint));
+        else
+            OnSpawned?.Invoke();
+    }
+
+    // Sale de la nada a toda velocidad y se frena hasta su punto de aparición. Sin física
+    // (intangible: lo que pase lo atraviesa) y sin control: no se puede cortar. El universo
+    // sigue a lo suyo mientras tanto
+    System.Collections.IEnumerator Expel(Vector2 end)
+    {
+        IsExpelling = true;
+        rb.simulated = false;
+        rb.linearVelocity = Vector2.zero;
+
+        // Dirección al azar, pero el punto de salida tiene que caer dentro del mundo
+        var gb = GameBounds.Instance;
+        Vector2 dir = Random.insideUnitCircle.normalized;
+        if (dir.sqrMagnitude < 0.01f) dir = Vector2.right;
+        Vector2 start = end - dir * expelDistance;
+        for (int i = 0; i < 8 && gb != null && !gb.Contains(start, 0.5f); i++)
+        {
+            dir = Quaternion.Euler(0f, 0f, 45f) * dir;
+            start = end - dir * expelDistance;
+        }
+
+        float spinDir = Random.value < 0.5f ? -1f : 1f;
+        float angle = 0f;
+        float t = 0f;
+        if (visualRenderer != null) visualRenderer.color = Color.white;
+
+        while (t < expelTime)
+        {
+            t += Time.deltaTime;
+            float u = Mathf.Clamp01(t / expelTime);
+            // Frenada: rapidísimo al salir, se posa suave al final
+            float e = 1f - (1f - u) * (1f - u) * (1f - u);
+
+            transform.position = Vector2.Lerp(start, end, e);
+            transform.localScale = baseScale * Mathf.Lerp(expelStartScale, 1f, e);
+
+            angle += expelSpin * 360f * (1f - e) * spinDir * Time.deltaTime;
+            if (visual != null) visual.localRotation = Quaternion.Euler(0f, 0f, angle);
+            yield return null;
+        }
+
+        transform.position = end;
+        transform.localScale = baseScale;
+        if (visual != null) visual.localRotation = Quaternion.identity;
+
+        rb.position = end;
+        rb.linearVelocity = Vector2.zero;
+        rb.angularVelocity = 0f;
+        rb.simulated = true;
+        controlVel = Vector2.zero;
+        knock = Vector2.zero;
+
+        // La comprobación de "tiene salida": la invulnerabilidad de siempre empieza AHORA,
+        // al tomar el control, y no al principio de la expulsión. Así nunca se aparece con
+        // algo encima sin margen para apartarse
+        invulnerableUntil = Time.time + startInvulnerability;
+        IsExpelling = false;
+        OnSpawned?.Invoke();
     }
 }

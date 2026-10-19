@@ -42,6 +42,10 @@ public class CameraFollow : MonoBehaviour
     [Tooltip("La cámara nunca enseña lo que hay fuera del mundo")]
     [SerializeField] private bool clampToWorld = true;
 
+    /// Velocidad real de la cámara (unidades/s). La usa el FlowField para meter asteroides
+    /// también por el lado hacia el que viaja la vista.
+    public Vector2 Velocity { get; private set; }
+
     Rigidbody2D targetRb;
     Vector2 lookAhead, lookAheadVel, posVel;
 
@@ -85,6 +89,7 @@ public class CameraFollow : MonoBehaviour
         Vector2 pos = Vector2.SmoothDamp(transform.position, goal, ref posVel, followSmooth, Mathf.Infinity, dt);
         pos = Clamp(pos);
 
+        Velocity = (pos - (Vector2)transform.position) / dt;
         transform.position = new Vector3(pos.x, pos.y, transform.position.z);
         gb.RefreshCamera();
     }
@@ -97,7 +102,7 @@ public class CameraFollow : MonoBehaviour
         if (target == null) FindTarget();
         if (target == null || gb == null) return;
 
-        lookAhead = lookAheadVel = posVel = Vector2.zero;
+        lookAhead = lookAheadVel = posVel = Velocity = Vector2.zero;
         Vector2 pos = gb.IsExpanded ? Clamp(target.position) : (Vector2)transform.position;
         transform.position = new Vector3(pos.x, pos.y, transform.position.z);
         gb.RefreshCamera();

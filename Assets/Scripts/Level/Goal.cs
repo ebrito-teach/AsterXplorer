@@ -53,6 +53,22 @@ public class Goal : MonoBehaviour
     SpriteRenderer discRenderer, haloRenderer;
     Vector3 discBaseScale = Vector3.one;
 
+    [Header("Tamaño y sitio (mundo amplio)")]
+    [Tooltip("Escala del agujero negro en cada nivel. Disco y halo crecen juntos, en " +
+             "proporción. 1 = el tamaño con el que está montado en la escena")]
+    [SerializeField] private Vector2 sizeRange = new Vector2(0.7f, 1.5f);
+    [Tooltip("El alcance del tirón y los horizontes crecen con el tamaño. Si no, un agujero " +
+             "grande atraparía desde dentro de su propio dibujo")]
+    [SerializeField] private bool reachScalesWithSize = true;
+    [Tooltip("Distancia mínima al punto de aparición del jugador, en anchos de pantalla")]
+    [SerializeField] private float minDistanceScreens = 1f;
+    [Tooltip("0 = siempre en el punto más lejano posible del jugador. Por encima de 0 se elige " +
+             "al azar entre esa fracción de los sitios más lejanos (0.2 = entre el 20 % más " +
+             "lejano), para que no caiga siempre en la misma esquina")]
+    [Range(0f, 1f)] [SerializeField] private float farthestSpread = 0f;
+    [Tooltip("Margen con el borde del mundo, en unidades, además del propio tamaño del dibujo")]
+    [SerializeField] private float edgeMargin = 1f;
+
     [Header("Atracción sobre el jugador")]
     [Tooltip("Distancia a la que empieza a notarse el tirón")]
     [SerializeField] private float pullRadius = 4.5f;
@@ -83,8 +99,13 @@ public class Goal : MonoBehaviour
     public event System.Action Reached;
     public bool Active { get; private set; }
 
+    /// Escala de este nivel (1 = la de la escena). La leerá la gravitación del paso F.
+    public float SizeScale { get; private set; } = 1f;
+
     PlayerController player;
     Rigidbody2D playerBody;
+    Vector3 rootBaseScale;
+    float basePull, baseHorizon, baseAstHorizon, baseMaxSwallow;
     static readonly Collider2D[] buffer = new Collider2D[24];
     static ContactFilter2D filter;
     static bool filterReady;
@@ -94,6 +115,11 @@ public class Goal : MonoBehaviour
         if (disc == null) disc = transform;
         discRenderer = disc.GetComponent<SpriteRenderer>();
         discBaseScale = disc.localScale;
+        rootBaseScale = transform.localScale;
+        basePull = pullRadius;
+        baseHorizon = eventHorizon;
+        baseAstHorizon = asteroidHorizon;
+        baseMaxSwallow = maxSwallowRadius;
         if (halo != null) haloRenderer = halo.GetComponent<SpriteRenderer>();
 
         player = FindFirstObjectByType<PlayerController>();
@@ -140,9 +166,86 @@ public class Goal : MonoBehaviour
         }
     }
 
+    /// Mundo amplio: tamaño al azar y sitio al azar, a una pantalla como mínimo del jugador.
+    /// Con la cámara fija (mundo de 1 pantalla) hace lo de siempre: la esquina reservada.
+    public void Place(Vector2 playerPos)
+    {
+        var gb = GameBounds.Instance;
+        if (gb == null || !gb.IsReady) { Debug.LogWarning("Goal: GameBounds no está listo."); return; }
+        if (!gb.IsExpanded) { Place(); return; }
+
+        // Activo y con su dibujo de este nivel ANTES de medirlo: un objeto apagado mide cero
+        gameObject.SetActive(true);
+        PickLook();
+        ApplySize(Random.Range(Mathf.Min(sizeRange.x, sizeRange.y), Mathf.Max(sizeRange.x, sizeRange.y)));
+
+        // Lo que ocupa el dibujo, ya escalado: el halo es lo más grande
+        float drawn = 0.5f;
+        if (haloRenderer != null && haloRenderer.sprite != null)
+            drawn = Mathf.Max(drawn, haloRenderer.bounds.extents.x, haloRenderer.bounds.extents.y);
+        else if (discRenderer != null && discRenderer.sprite != null)
+            drawn = Mathf.Max(drawn, discRenderer.bounds.extents.x, discRenderer.bounds.extents.y);
+
+        float m = edgeMargin + drawn;
+        Rect a = gb.Area;
+        Rect inner = new Rect(a.xMin + m, a.yMin + m, Mathf.Max(0.1f, a.width - 2f * m), Mathf.Max(0.1f, a.height - 2f * m));
+        float minDist = Mathf.Max(0f, minDistanceScreens) * gb.ScreenSize.x;
+
+        // Se prueban muchos sitios repartidos por todo el mundo y se ordenan por distancia al
+        // jugador. Se queda con el más lejano, o con uno al azar entre los más lejanos si
+        // Farthest Spread es mayor que 0. Siempre por encima de la distancia mínima si existe
+        const int samples = 120;
+        var cand = new System.Collections.Generic.List<(Vector2 p, float d)>(samples + 4);
+        for (int i = 0; i < samples; i++)
+        {
+            var p = new Vector2(Random.Range(inner.xMin, inner.xMax), Random.Range(inner.yMin, inner.yMax));
+            cand.Add((p, Vector2.Distance(p, playerPos)));
+        }
+        // Las cuatro esquinas del área válida: el punto más lejano siempre está en una de ellas
+        cand.Add((new Vector2(inner.xMin, inner.yMin), Vector2.Distance(new Vector2(inner.xMin, inner.yMin), playerPos)));
+        cand.Add((new Vector2(inner.xMax, inner.yMin), Vector2.Distance(new Vector2(inner.xMax, inner.yMin), playerPos)));
+        cand.Add((new Vector2(inner.xMin, inner.yMax), Vector2.Distance(new Vector2(inner.xMin, inner.yMax), playerPos)));
+        cand.Add((new Vector2(inner.xMax, inner.yMax), Vector2.Distance(new Vector2(inner.xMax, inner.yMax), playerPos)));
+        cand.Sort((x, y) => y.d.CompareTo(x.d));
+
+        int top = Mathf.Max(1, Mathf.RoundToInt(cand.Count * farthestSpread));
+        int valid = 0;
+        while (valid < top && cand[valid].d >= minDist) valid++;
+        int pick = valid > 0 ? Random.Range(0, valid) : 0;
+        Vector2 best = cand[pick].p;
+        float bestDist = cand[pick].d;
+
+        transform.position = new Vector3(best.x, best.y, transform.position.z);
+
+        // Zona que el generador deja libre de estáticos: todo el alcance del tirón. Así la
+        // meta nunca queda encerrada por terreno (la comprobación local que sustituye al
+        // verificador de camino completo)
+        float r = Mathf.Max(pullRadius, drawn);
+        gb.SetGoalZone(new Rect(best.x - r, best.y - r, 2f * r, 2f * r));
+        Active = true;
+
+        Debug.Log($"Goal: escala {SizeScale:0.00}, en {best} a {bestDist:0.0} u del jugador " +
+                  $"(mínimo {minDist:0.0}).");
+    }
+
+    void ApplySize(float s)
+    {
+        SizeScale = Mathf.Max(0.05f, s);
+        transform.localScale = rootBaseScale * SizeScale;
+        // Si el disco ES este objeto, el latido escribe su escala: tiene que latir sobre la nueva
+        if (disc == transform) discBaseScale = rootBaseScale * SizeScale;
+
+        float k = reachScalesWithSize ? SizeScale : 1f;
+        pullRadius = basePull * k;
+        eventHorizon = baseHorizon * k;
+        asteroidHorizon = baseAstHorizon * k;
+        maxSwallowRadius = baseMaxSwallow * k;
+    }
+
     /// Lo coloca en la esquina que GameBounds tenga reservada y lo reactiva.
     public void Place()
     {
+        ApplySize(1f);
         var gb = GameBounds.Instance;
         if (gb == null || !gb.IsReady) { Debug.LogWarning("Goal: GameBounds no está listo."); return; }
 

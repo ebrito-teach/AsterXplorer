@@ -145,10 +145,15 @@ public class GameDirector : MonoBehaviour
         }
         if (GameBounds.Instance != null) GameBounds.Instance.SetGoalMirrored(GoalMirrored);
 
-        // 3. Meta y jugador, antes de poblar: el generador evita la zona del jugador
-        if (goal != null) goal.Place();
+        // 3. Jugador y meta, antes de poblar: el generador evita la zona de los dos. El
+        //    jugador va primero porque la meta se aleja de él al menos una pantalla
         if (playerStart != null) playerStart.Place(GoalMirrored);
         if (player != null) player.Respawn();
+        if (goal != null)
+        {
+            if (player != null) goal.Place(player.transform.position);
+            else goal.Place();
+        }
 
         // La cámara salta al jugador ANTES de poblar: los asteroides que se mueven nacen
         // alrededor de lo que se ve, y tiene que ser la vista del nivel nuevo

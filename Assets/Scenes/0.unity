@@ -266,7 +266,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 66d97ad6c1ff961458113c3336d237f9, type: 2}
   - {fileID: 11400000, guid: 5b7d4fa6fecb56c4292d7c2e96c34596, type: 2}
   - {fileID: 11400000, guid: 47624e75ad8b2bb4caa74b11e82b1d47, type: 2}
-  level: 10
+  level: 1
   randomSeed: 0
   seed: 12345
   playerSafeRadius: 2.5
@@ -459,6 +459,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   respectSafeArea: 1
+  worldScreens: {x: 2.57, y: 2.57}
   wallThickness: 2
   padding: 0
   goalCornerNormalized:
@@ -10618,12 +10619,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1856481662}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &519420033
 MonoBehaviour:
@@ -10639,7 +10640,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CameraAspectFitter
   fitMode: 1
   targetWidth: 6
-  targetHeight: 9
+  targetHeight: 7
 --- !u!1 &534132922
 GameObject:
   m_ObjectHideFlags: 0
@@ -11296,6 +11297,8 @@ MonoBehaviour:
   drift: 0.05
   spawnMargin: 2
   despawnMargin: 3.5
+  travelEntryWeight: 1
+  travelFullSpeed: 5
 --- !u!4 &1045389859
 Transform:
   m_ObjectHideFlags: 0
@@ -17478,6 +17481,58 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &1856481661
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1856481662}
+  - component: {fileID: 1856481663}
+  m_Layer: 0
+  m_Name: CameraRig
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1856481662
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1856481661}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 519420032}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1856481663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1856481661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 679042f115cac6249855afeae289746d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CameraFollow
+  target: {fileID: 0}
+  cam: {fileID: 0}
+  lookAheadTime: 0.35
+  maxLookAhead: {x: 2.5, y: 1.5}
+  lookAheadSmooth: 0.35
+  followSmooth: 0.12
+  clampToWorld: 1
 --- !u!1 &1878382494
 GameObject:
   m_ObjectHideFlags: 0
@@ -22533,7 +22588,7 @@ MonoBehaviour:
   player: {fileID: 1679237101}
   playerStart: {fileID: 1679237105}
   goal: {fileID: 848801470}
-  startLevel: 6
+  startLevel: 1
   runSeed: 0
   sameLevelOnRetry: 1
   resumeFromSave: 1
@@ -22561,7 +22616,7 @@ Transform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 519420032}
+  - {fileID: 1856481662}
   - {fileID: 619394802}
   - {fileID: 1373791966}
   - {fileID: 203573230}
