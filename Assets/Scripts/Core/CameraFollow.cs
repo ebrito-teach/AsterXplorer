@@ -103,7 +103,11 @@ public class CameraFollow : MonoBehaviour
         if (target == null || gb == null) return;
 
         lookAhead = lookAheadVel = posVel = Velocity = Vector2.zero;
-        Vector2 pos = gb.IsExpanded ? Clamp(target.position) : (Vector2)transform.position;
+        // Durante la llegada el jugador aún está fuera: la vista se coloca donde se va a parar
+        Vector2 at = target.position;
+        var pc = target.GetComponent<PlayerController>();
+        if (pc != null && pc.IsExpelling) at = pc.SpawnPoint;
+        Vector2 pos = gb.IsExpanded ? Clamp(at) : (Vector2)transform.position;
         transform.position = new Vector3(pos.x, pos.y, transform.position.z);
         gb.RefreshCamera();
     }

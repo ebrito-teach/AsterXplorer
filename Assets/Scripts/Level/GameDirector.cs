@@ -146,12 +146,14 @@ public class GameDirector : MonoBehaviour
         if (GameBounds.Instance != null) GameBounds.Instance.SetGoalMirrored(GoalMirrored);
 
         // 3. Jugador y meta, antes de poblar: el generador evita la zona de los dos. El
-        //    jugador va primero porque la meta se aleja de él al menos una pantalla
+        //    jugador aparece cerca de un borde; la meta, en el lado contrario, pegada al
+        //    borde más lejano y a una altura al azar
         if (playerStart != null) playerStart.Place(GoalMirrored);
         if (player != null) player.Respawn();
         if (goal != null)
         {
-            if (player != null) goal.Place(player.transform.position);
+            // Su punto de aparición, no donde está: durante la llegada aún viene de fuera
+            if (player != null) goal.PlaceOpposite(player.SpawnPoint);
             else goal.Place();
         }
 

@@ -57,15 +57,13 @@ public class Goal : MonoBehaviour
     [Tooltip("Escala del agujero negro en cada nivel. Disco y halo crecen juntos, en " +
              "proporción. 1 = el tamaño con el que está montado en la escena")]
     [SerializeField] private Vector2 sizeRange = new Vector2(0.7f, 1.5f);
+    [Tooltip("Tamaño del DIBUJO respecto al montado en la escena, sin tocar su comportamiento. " +
+             "Más bajo = se ve como un objeto lejano en el cosmos, aunque su tirón, sus " +
+             "horizontes y su masa sigan siendo los de un agujero negro enorme")]
+    [Range(0.1f, 1f)] [SerializeField] private float drawScale = 0.45f;
     [Tooltip("El alcance del tirón y los horizontes crecen con el tamaño. Si no, un agujero " +
              "grande atraparía desde dentro de su propio dibujo")]
     [SerializeField] private bool reachScalesWithSize = true;
-    [Tooltip("Distancia mínima al punto de aparición del jugador, en anchos de pantalla")]
-    [SerializeField] private float minDistanceScreens = 1f;
-    [Tooltip("0 = siempre en el punto más lejano posible del jugador. Por encima de 0 se elige " +
-             "al azar entre esa fracción de los sitios más lejanos (0.2 = entre el 20 % más " +
-             "lejano), para que no caiga siempre en la misma esquina")]
-    [Range(0f, 1f)] [SerializeField] private float farthestSpread = 0f;
     [Tooltip("Margen con el borde del mundo, en unidades, además del propio tamaño del dibujo")]
     [SerializeField] private float edgeMargin = 1f;
 
@@ -166,9 +164,9 @@ public class Goal : MonoBehaviour
         }
     }
 
-    /// Mundo amplio: tamaño al azar y sitio al azar, a una pantalla como mínimo del jugador.
-    /// Con la cámara fija (mundo de 1 pantalla) hace lo de siempre: la esquina reservada.
-    public void Place(Vector2 playerPos)
+    /// Mundo amplio: en el lado contrario al jugador, pegada al borde más lejano y a una
+    /// altura al azar. Tamaño al azar. Con la cámara fija hace lo de siempre: la esquina.
+    public void PlaceOpposite(Vector2 playerSpawn)
     {
         var gb = GameBounds.Instance;
         if (gb == null || !gb.IsReady) { Debug.LogWarning("Goal: GameBounds no está listo."); return; }
@@ -188,52 +186,42 @@ public class Goal : MonoBehaviour
 
         float m = edgeMargin + drawn;
         Rect a = gb.Area;
-        Rect inner = new Rect(a.xMin + m, a.yMin + m, Mathf.Max(0.1f, a.width - 2f * m), Mathf.Max(0.1f, a.height - 2f * m));
-        float minDist = Mathf.Max(0f, minDistanceScreens) * gb.ScreenSize.x;
+        float mx = Mathf.Min(m, a.width * 0.45f), my = Mathf.Min(m, a.height * 0.45f);
+        float x0 = a.xMin + mx, x1 = a.xMax - mx, y0 = a.yMin + my, y1 = a.yMax - my;
 
-        // Se prueban muchos sitios repartidos por todo el mundo y se ordenan por distancia al
-        // jugador. Se queda con el más lejano, o con uno al azar entre los más lejanos si
-        // Farthest Spread es mayor que 0. Siempre por encima de la distancia mínima si existe
-        const int samples = 120;
-        var cand = new System.Collections.Generic.List<(Vector2 p, float d)>(samples + 4);
-        for (int i = 0; i < samples; i++)
-        {
-            var p = new Vector2(Random.Range(inner.xMin, inner.xMax), Random.Range(inner.yMin, inner.yMax));
-            cand.Add((p, Vector2.Distance(p, playerPos)));
-        }
-        // Las cuatro esquinas del área válida: el punto más lejano siempre está en una de ellas
-        cand.Add((new Vector2(inner.xMin, inner.yMin), Vector2.Distance(new Vector2(inner.xMin, inner.yMin), playerPos)));
-        cand.Add((new Vector2(inner.xMax, inner.yMin), Vector2.Distance(new Vector2(inner.xMax, inner.yMin), playerPos)));
-        cand.Add((new Vector2(inner.xMin, inner.yMax), Vector2.Distance(new Vector2(inner.xMin, inner.yMax), playerPos)));
-        cand.Add((new Vector2(inner.xMax, inner.yMax), Vector2.Distance(new Vector2(inner.xMax, inner.yMax), playerPos)));
-        cand.Sort((x, y) => y.d.CompareTo(x.d));
+        // El lado contrario es el del eje en el que el jugador está más pegado a una pared:
+        // si entra por la izquierda, la meta va a la derecha del todo, y al revés. La otra
+        // coordenada, al azar
+        float dx = Mathf.Min(playerSpawn.x - a.xMin, a.xMax - playerSpawn.x) / Mathf.Max(0.01f, a.width);
+        float dy = Mathf.Min(playerSpawn.y - a.yMin, a.yMax - playerSpawn.y) / Mathf.Max(0.01f, a.height);
+        Vector2 p;
+        if (dx <= dy)
+            p = new Vector2(playerSpawn.x < a.center.x ? x1 : x0, Random.Range(y0, y1));
+        else
+            p = new Vector2(Random.Range(x0, x1), playerSpawn.y < a.center.y ? y1 : y0);
 
-        int top = Mathf.Max(1, Mathf.RoundToInt(cand.Count * farthestSpread));
-        int valid = 0;
-        while (valid < top && cand[valid].d >= minDist) valid++;
-        int pick = valid > 0 ? Random.Range(0, valid) : 0;
-        Vector2 best = cand[pick].p;
-        float bestDist = cand[pick].d;
-
-        transform.position = new Vector3(best.x, best.y, transform.position.z);
+        transform.position = new Vector3(p.x, p.y, transform.position.z);
 
         // Zona que el generador deja libre de estáticos: todo el alcance del tirón. Así la
-        // meta nunca queda encerrada por terreno (la comprobación local que sustituye al
-        // verificador de camino completo)
+        // meta nunca queda encerrada por terreno
         float r = Mathf.Max(pullRadius, drawn);
-        gb.SetGoalZone(new Rect(best.x - r, best.y - r, 2f * r, 2f * r));
+        gb.SetGoalZone(new Rect(p.x - r, p.y - r, 2f * r, 2f * r));
         Active = true;
 
-        Debug.Log($"Goal: escala {SizeScale:0.00}, en {best} a {bestDist:0.0} u del jugador " +
-                  $"(mínimo {minDist:0.0}).");
+        Debug.Log($"Goal: escala {SizeScale:0.00} (dibujo x{drawScale:0.00}), en {p}, " +
+                  $"a {Vector2.Distance(p, playerSpawn):0.0} u del jugador.");
     }
+
+    static bool gbExpanded => GameBounds.Instance != null && GameBounds.Instance.IsExpanded;
 
     void ApplySize(float s)
     {
         SizeScale = Mathf.Max(0.05f, s);
-        transform.localScale = rootBaseScale * SizeScale;
+        // El dibujo se encoge con Draw Scale; el comportamiento (más abajo) no
+        float drawn = SizeScale * (gbExpanded ? drawScale : 1f);
+        transform.localScale = rootBaseScale * drawn;
         // Si el disco ES este objeto, el latido escribe su escala: tiene que latir sobre la nueva
-        if (disc == transform) discBaseScale = rootBaseScale * SizeScale;
+        if (disc == transform) discBaseScale = rootBaseScale * drawn;
 
         float k = reachScalesWithSize ? SizeScale : 1f;
         pullRadius = basePull * k;

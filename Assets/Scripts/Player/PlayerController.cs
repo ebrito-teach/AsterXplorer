@@ -139,18 +139,19 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float startInvulnerability = 2f;
     [SerializeField] private float blinkRate = 4f;
 
-    [Header("Aparición: expulsión (mundo amplio)")]
-    [Tooltip("Al empezar o reaparecer en el mundo amplio, sale despedido desde la nada y se " +
-             "frena hasta pararse en su punto de aparición. Intangible e ininterrumpible")]
+    [Header("Aparición: llegada por el hiperespacio (mundo amplio)")]
+    [Tooltip("Al empezar o reaparecer en el mundo amplio, entra volando desde fuera del borde " +
+             "del mundo, frena y se para cerca de ese borde. Intangible e ininterrumpible")]
     [SerializeField] private bool expelOnSpawn = true;
-    [Tooltip("Segundos que dura la expulsión")]
-    [SerializeField] private float expelTime = 0.9f;
-    [Tooltip("Distancia que recorre desde donde sale hasta su punto de aparición")]
-    [SerializeField] private float expelDistance = 3f;
-    [Tooltip("Escala con la que sale (crece hasta la normal mientras frena)")]
-    [Range(0.05f, 1f)] [SerializeField] private float expelStartScale = 0.25f;
-    [Tooltip("Vueltas por segundo al salir; se frenan con él")]
-    [SerializeField] private float expelSpin = 2.5f;
+    [Tooltip("Segundos que dura la llegada")]
+    [SerializeField] private float arrivalTime = 1.4f;
+    [Tooltip("Distancia que recorre desde fuera del mundo hasta su punto de aparición")]
+    [SerializeField] private float arrivalDistance = 9f;
+    [Tooltip("Estiramiento del astronauta en la dirección del viaje a toda velocidad " +
+             "(0 = ninguno). Vuelve a su forma al frenar")]
+    [Range(0f, 1f)] [SerializeField] private float expelStretch = 0.35f;
+    [Tooltip("Las estrellas se estiran en rayas durante la llegada")]
+    [SerializeField] private bool warpStreaks = true;
 
     [Header("Orientación del sprite")]
     [Tooltip("Voltea el sprite según hacia dónde avanzas. Es lo que faltaba: el astronauta " +
@@ -585,56 +586,80 @@ public class PlayerController : MonoBehaviour
 
         SpawnPoint = transform.position;
         var gb = GameBounds.Instance;
-        if (expelOnSpawn && gb != null && gb.IsExpanded && expelTime > 0.01f)
+        if (expelOnSpawn && gb != null && gb.IsExpanded && arrivalTime > 0.01f)
             StartCoroutine(Expel(SpawnPoint));
         else
             OnSpawned?.Invoke();
     }
 
-    // Sale de la nada a toda velocidad y se frena hasta su punto de aparición. Sin física
-    // (intangible: lo que pase lo atraviesa) y sin control: no se puede cortar. El universo
-    // sigue a lo suyo mientras tanto
+    // Llega del hiperespacio: entra desde fuera del borde del mundo más cercano, a toda
+    // velocidad, y frena hasta pararse en su punto de aparición, que está cerca de ese borde.
+    // Sin física (intangible) y sin control: no se puede cortar. El universo sigue a lo suyo.
     System.Collections.IEnumerator Expel(Vector2 end)
     {
         IsExpelling = true;
         rb.simulated = false;
         rb.linearVelocity = Vector2.zero;
 
-        // Dirección al azar, pero el punto de salida tiene que caer dentro del mundo
+        // Hacia dentro desde la pared más cercana: por ahí entra
+        Vector2 inward = Vector2.right;
         var gb = GameBounds.Instance;
-        Vector2 dir = Random.insideUnitCircle.normalized;
-        if (dir.sqrMagnitude < 0.01f) dir = Vector2.right;
-        Vector2 start = end - dir * expelDistance;
-        for (int i = 0; i < 8 && gb != null && !gb.Contains(start, 0.5f); i++)
+        if (gb != null)
         {
-            dir = Quaternion.Euler(0f, 0f, 45f) * dir;
-            start = end - dir * expelDistance;
+            Rect a = gb.Area;
+            float dl = end.x - a.xMin, dr = a.xMax - end.x, db = end.y - a.yMin, dt = a.yMax - end.y;
+            float m = Mathf.Min(Mathf.Min(dl, dr), Mathf.Min(db, dt));
+            inward = m == dl ? Vector2.right : m == dr ? Vector2.left : m == db ? Vector2.up : Vector2.down;
         }
+        Vector2 start = end - inward * arrivalDistance;
 
-        float spinDir = Random.value < 0.5f ? -1f : 1f;
-        float angle = 0f;
-        float t = 0f;
+        // Mira hacia donde va
+        if (inward.x != 0f)
+        {
+            facingSign = inward.x > 0f ? 1 : -1;
+            if (visualRenderer != null) visualRenderer.flipX = facingSign < 0;
+        }
+        if (visual != null)
+        {
+            visual.localRotation = Quaternion.identity;
+            visual.localPosition = Vector3.zero;
+        }
         if (visualRenderer != null) visualRenderer.color = Color.white;
+        if (animator != null) animator.SetBool("Thrusting", true);
 
-        while (t < expelTime)
+        transform.position = start;
+        transform.localScale = baseScale;
+        if (warpStreaks) WarpStreaks.Begin(inward);
+
+        float t = 0f;
+        while (t < arrivalTime)
         {
             t += Time.deltaTime;
-            float u = Mathf.Clamp01(t / expelTime);
-            // Frenada: rapidísimo al salir, se posa suave al final
+            float u = Mathf.Clamp01(t / arrivalTime);
+            // Frenada: rapidísimo al llegar, se posa suave al final
             float e = 1f - (1f - u) * (1f - u) * (1f - u);
+            float speed01 = (1f - u) * (1f - u);           // velocidad relativa: 1 al entrar, 0 al parar
 
             transform.position = Vector2.Lerp(start, end, e);
-            transform.localScale = baseScale * Mathf.Lerp(expelStartScale, 1f, e);
 
-            angle += expelSpin * 360f * (1f - e) * spinDir * Time.deltaTime;
-            if (visual != null) visual.localRotation = Quaternion.Euler(0f, 0f, angle);
+            // Se estira en la dirección del viaje mientras va rápido
+            if (visual != null && expelStretch > 0f)
+            {
+                float k = expelStretch * speed01;
+                bool horizontal = Mathf.Abs(inward.x) > 0.5f;
+                visual.localScale = horizontal
+                    ? new Vector3(baseVisualScale.x * (1f + k), baseVisualScale.y * (1f - k * 0.4f), baseVisualScale.z)
+                    : new Vector3(baseVisualScale.x * (1f - k * 0.4f), baseVisualScale.y * (1f + k), baseVisualScale.z);
+            }
+            if (warpStreaks) WarpStreaks.SetStrength(speed01);
             yield return null;
         }
 
-        transform.position = end;
-        transform.localScale = baseScale;
-        if (visual != null) visual.localRotation = Quaternion.identity;
+        if (warpStreaks) WarpStreaks.End();
+        if (visual != null) visual.localScale = baseVisualScale;
+        if (animator != null) animator.SetBool("Thrusting", false);
 
+        transform.position = end;
         rb.position = end;
         rb.linearVelocity = Vector2.zero;
         rb.angularVelocity = 0f;
@@ -642,9 +667,8 @@ public class PlayerController : MonoBehaviour
         controlVel = Vector2.zero;
         knock = Vector2.zero;
 
-        // La comprobación de "tiene salida": la invulnerabilidad de siempre empieza AHORA,
-        // al tomar el control, y no al principio de la expulsión. Así nunca se aparece con
-        // algo encima sin margen para apartarse
+        // La invulnerabilidad de siempre (Start Invulnerability) empieza al tomar el control,
+        // no al empezar la llegada: si no, casi toda se gastaría volando
         invulnerableUntil = Time.time + startInvulnerability;
         IsExpelling = false;
         OnSpawned?.Invoke();

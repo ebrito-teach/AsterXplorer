@@ -4,9 +4,15 @@ public class PlayerStart : MonoBehaviour
 {
     [Range(0f, 1f)] [SerializeField] private float normalizedX = 0.5f;
     [Range(0f, 1f)] [SerializeField] private float normalizedY = 0.12f;
-    [Tooltip("Mundo amplio: margen con las paredes al sortear el punto de aparición. Tiene " +
-             "que dejar sitio para la expulsión, que llega desde unas unidades más allá")]
-    [SerializeField] private float edgeMargin = 4f;
+    [Tooltip("Mundo amplio: a qué distancia de la pared se para el jugador. Aparece cerca de " +
+             "un borde, entrando desde fuera de él")]
+    [SerializeField] private float edgeInset = 2.5f;
+    [Tooltip("Margen con las esquinas a lo largo del borde")]
+    [SerializeField] private float cornerMargin = 3f;
+    [Tooltip("Apagado: solo aparece en los bordes izquierdo y derecho, y la meta va al lado " +
+             "contrario. En horizontal es la distancia más larga posible. Encendido: también " +
+             "arriba y abajo, donde el lado contrario queda mucho más cerca")]
+    [SerializeField] private bool useTopBottomEdges = false;
 
     bool placedByDirector;
 
@@ -30,9 +36,18 @@ public class PlayerStart : MonoBehaviour
         Vector2 p;
         if (bounds.IsExpanded)
         {
+            // Un borde al azar, con más probabilidad para los largos, y un punto a lo largo de
+            // él. La cámara se detiene en el borde del mundo, así que el jugador queda cerca
+            // del borde de la pantalla y no en el centro
             Rect a = bounds.Area;
-            float mx = Mathf.Min(edgeMargin, a.width * 0.45f), my = Mathf.Min(edgeMargin, a.height * 0.45f);
-            p = new Vector2(Random.Range(a.xMin + mx, a.xMax - mx), Random.Range(a.yMin + my, a.yMax - my));
+            float ix = Mathf.Min(edgeInset, a.width * 0.45f), iy = Mathf.Min(edgeInset, a.height * 0.45f);
+            float cx = Mathf.Min(cornerMargin, a.width * 0.45f), cy = Mathf.Min(cornerMargin, a.height * 0.45f);
+            float pick = useTopBottomEdges ? Random.value * 2f * (a.width + a.height)
+                                           : Random.value * 2f * a.height;
+            if (pick < a.height)                      p = new Vector2(a.xMin + ix, Random.Range(a.yMin + cy, a.yMax - cy));
+            else if (pick < 2f * a.height)            p = new Vector2(a.xMax - ix, Random.Range(a.yMin + cy, a.yMax - cy));
+            else if (pick < 2f * a.height + a.width)  p = new Vector2(Random.Range(a.xMin + cx, a.xMax - cx), a.yMin + iy);
+            else                                      p = new Vector2(Random.Range(a.xMin + cx, a.xMax - cx), a.yMax - iy);
         }
         else p = bounds.PointInArea(nx, normalizedY);
         transform.position = new Vector3(p.x, p.y, transform.position.z);
