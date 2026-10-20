@@ -10911,6 +10911,10 @@ MonoBehaviour:
   - {r: 1, g: 0.5, b: 0.2, a: 1}
   - {r: 0.45, g: 0.6, b: 1, a: 1}
   haloDesaturate: 0.35
+  sizeRange: {x: 0.7, y: 1.5}
+  drawScale: 0.45
+  reachScalesWithSize: 1
+  edgeMargin: 1
   pullRadius: 4.5
   pullForce: 7
   eventHorizon: 0.6
@@ -11786,6 +11790,126 @@ MonoBehaviour:
   touchPadding: 1.8
   fadeSpeed: 12
   shownAlpha: 0.8
+--- !u!1 &1313492285
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1313492287}
+  - component: {fileID: 1313492286}
+  - component: {fileID: 1313492288}
+  m_Layer: 0
+  m_Name: Sky
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1313492286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1313492285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6ad7317c8088e9438e2001fd563e967, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SkyDirector
+  farFollow: 0.96
+  midFollow: 0.9
+  dustFollow: 0.6
+  farDensity: 1.6
+  midDensity: 0.3
+  farSize: {x: 0.025, y: 0.06}
+  midSize: {x: 0.05, y: 0.11}
+  maxStarsPerLayer: 400
+  twinkleSpeed: {x: 0.6, y: 2.8}
+  twinkleAmount: 0.55
+  constellationChance: 0.6
+  constellationCount: {x: 1, y: 2}
+  constellationSize: {x: 3, y: 8}
+  constellationMaxTilt: 35
+  constellationStarSize: {x: 0.09, y: 0.22}
+  drawLines: 1
+  lineAlpha: 0.05
+  lineWidth: 0.014
+  easterEggChance: 0.02
+  easterEggUnit: 0.5
+  shootingInterval: {x: 5, y: 14}
+  shootingSpeed: {x: 16, y: 26}
+  shootingLife: {x: 0.45, y: 0.85}
+  shootingLength: 2.2
+  dustClouds: 14
+  dustSpecks: 80
+  cloudSize: {x: 3, y: 7}
+  cloudAlpha: {x: 0.02, y: 0.06}
+  speckSize: {x: 0.02, y: 0.05}
+  speckAlpha: {x: 0.06, y: 0.22}
+  dustDrift: 0.12
+--- !u!4 &1313492287
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1313492285}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 35.60429, y: 3.80757, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1313492288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1313492285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bf3ef96cba7bc84b9a8804343e15abf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Backdropdirector
+  nebulaFolder: Nebulas
+  nebulaPrefix: bg_nebula_
+  nebulaCount: 23
+  nebulasPerMap: {x: 1, y: 2}
+  nebulaFollow: 0.93
+  nebulaScale: {x: 0.8, y: 1.5}
+  nebulaAlpha: {x: 0.5, y: 0.85}
+  objects:
+  - {fileID: -7462321982266188585, guid: 4b01555137f1d1140bc6040ac31a8f39, type: 3}
+  - {fileID: 5997032438584349777, guid: 6f764dabe221eb64384eb4caa3833160, type: 3}
+  - {fileID: -7404515345929732276, guid: 651d0322c65a9454bb03fefa809d205e, type: 3}
+  - {fileID: 1657446729009727243, guid: b10d2108c577f064383628da8adad226, type: 3}
+  - {fileID: -2960542457089990290, guid: ca34c8d6d57776646bd2527e5eb7a4fc, type: 3}
+  - {fileID: 114231799077811874, guid: 2c62cd71c4d55274290014995f0816f9, type: 3}
+  - {fileID: -3639732747767026988, guid: 20f24591a5b38d341a7fbda37e18ae0e, type: 3}
+  - {fileID: 7383419131552976649, guid: 635813f88c0fb4c4f97785dbee08624c, type: 3}
+  - {fileID: -3099566028839732975, guid: a3c07455826b63d47b90cfface7fe0e3, type: 3}
+  - {fileID: 1865773975059828927, guid: 8cedfa0c6dcd98e49b25542dad3c488e, type: 3}
+  - {fileID: 448178183819352168, guid: 9f73346c0a7e9304f8f4b3e22f328a04, type: 3}
+  - {fileID: -4740967603726585255, guid: fffdb70196541314e98f6d28908c6048, type: 3}
+  - {fileID: -1912228396481724809, guid: 9564196be00d2f748aad1d953a7d3dbe, type: 3}
+  - {fileID: -81178862258869724, guid: fb8563deb384a1744adcc449c9747b7c, type: 3}
+  - {fileID: 4937833293975325254, guid: eab2e594a9eae214ca40e2fc31b10c20, type: 3}
+  - {fileID: 8844331581246341988, guid: a887c37713a9ef040a6b5a89326f512a, type: 3}
+  - {fileID: 3102964094127570727, guid: 249ba72f06ba98845b15fc24c4be4953, type: 3}
+  - {fileID: -7286024111928772929, guid: 169055feff17ecb45a82f9e6d12560bd, type: 3}
+  - {fileID: -6000141666421614957, guid: dc1ff3601ea76f244b0bb34fb9864b4e, type: 3}
+  objectsPerMap: {x: 1, y: 2}
+  objectFollow: {x: 0.92, y: 0.8}
+  objectScale: {x: 0.3, y: 1}
+  objectBrightness: {x: 0.5, y: 1}
+  objectSpacing: 4
 --- !u!1 &1373791964
 GameObject:
   m_ObjectHideFlags: 0
@@ -12245,6 +12369,11 @@ MonoBehaviour:
   stunTime: 0.15
   startInvulnerability: 2
   blinkRate: 4
+  expelOnSpawn: 1
+  arrivalTime: 1.4
+  arrivalDistance: 9
+  expelStretch: 0.35
+  warpStreaks: 1
   flipSpriteWithDirection: 1
   flipDeadzone: 0.35
   rotateBodyToFacing: 1
@@ -12347,6 +12476,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerStart
   normalizedX: 0.03
   normalizedY: 0.45
+  edgeInset: 2.5
+  cornerMargin: 3
+  useTopBottomEdges: 0
 --- !u!114 &1679237106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22639,3 +22771,4 @@ SceneRoots:
   - {fileID: 199610770}
   - {fileID: 1692858521}
   - {fileID: 536096425}
+  - {fileID: 1313492287}
