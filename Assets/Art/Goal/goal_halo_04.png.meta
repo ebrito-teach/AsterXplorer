@@ -155,10 +155,10 @@ TextureImporter:
       name: goal_halo_04_0
       rect:
         serializedVersion: 2
-        x: 32
-        y: 30
-        width: 463
-        height: 463
+        x: 6
+        y: 4
+        width: 500
+        height: 501
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

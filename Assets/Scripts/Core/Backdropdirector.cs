@@ -33,6 +33,9 @@ public class BackdropDirector : MonoBehaviour
     [SerializeField] private Vector2 nebulaScale = new Vector2(0.8f, 1.5f);
     [Tooltip("Opacidad. Por debajo de 1 dejan ver las estrellas a través")]
     [SerializeField] private Vector2 nebulaAlpha = new Vector2(0.5f, 0.85f);
+    [Tooltip("Brillo de la nebulosa (multiplica su color). Una nebulosa enorme y apagada se lee " +
+             "como lejanísima; una pequeña y brillante, como cercana")]
+    [SerializeField] private Vector2 nebulaBrightness = new Vector2(0.45f, 0.7f);
 
     [Header("Objetos lejanos")]
     [Tooltip("Los PNG de Art/Backgrounds/objects")]
@@ -44,6 +47,9 @@ public class BackdropDirector : MonoBehaviour
     [SerializeField] private Vector2 objectScale = new Vector2(0.3f, 1f);
     [Tooltip("Brillo del más lejano y del más cercano")]
     [SerializeField] private Vector2 objectBrightness = new Vector2(0.5f, 1f);
+    [Tooltip("Color hacia el que se apagan los objetos lejanos: la luz que llega de muy lejos " +
+             "llega más débil y más fría. Los cercanos conservan su color")]
+    [SerializeField] private Color depthHaze = new Color(0.32f, 0.36f, 0.5f, 1f);
     [Tooltip("Separación mínima entre objetos, en unidades")]
     [SerializeField] private float objectSpacing = 4f;
 
@@ -115,7 +121,8 @@ public class BackdropDirector : MonoBehaviour
             t.localRotation = Quaternion.Euler(0f, 0f, Range(0f, 360f));
             piece.sr.flipX = rng.NextDouble() < 0.5;
             piece.sr.flipY = rng.NextDouble() < 0.5;
-            piece.sr.color = new Color(1f, 1f, 1f, Range(nebulaAlpha.x, nebulaAlpha.y));
+            float nb = Range(nebulaBrightness.x, nebulaBrightness.y);
+            piece.sr.color = new Color(nb, nb, nb, Range(nebulaAlpha.x, nebulaAlpha.y));
             report.Append(nebulaPrefix).Append(id.ToString("00")).Append(' ');
         }
 
@@ -157,7 +164,9 @@ public class BackdropDirector : MonoBehaviour
             piece.sr.transform.localRotation = Quaternion.identity;   // la luz del dibujo no se gira
             piece.sr.flipX = rng.NextDouble() < 0.5;
             float b = Mathf.Lerp(objectBrightness.x, objectBrightness.y, near);
-            piece.sr.color = new Color(b, b, b, 1f);
+            Color c = Color.Lerp(depthHaze, Color.white, near) * b;
+            c.a = 1f;
+            piece.sr.color = c;
             report.Append(sprite.name).Append(' ');
         }
 
@@ -247,4 +256,4 @@ public class BackdropDirector : MonoBehaviour
         for (int i = n - 1; i > 0; i--) { int j = rng.Next(i + 1); (a[i], a[j]) = (a[j], a[i]); }
         return a;
     }
-}   
+}

@@ -10890,6 +10890,11 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 7e0f76a8af652114f954af004a39fecd, type: 3}
   - {fileID: 21300000, guid: 49cf3ca3e155fde47820a9b00cf1e574, type: 3}
   - {fileID: 21300000, guid: 3b08c4e6325f9214b8923f3f8d493296, type: 3}
+  - {fileID: 21300000, guid: 371e224f55830ad42b730d8742bb2930, type: 3}
+  - {fileID: 21300000, guid: 176c70daca03bf343b0ec9b075f2a0d4, type: 3}
+  - {fileID: 21300000, guid: 97010f855f2912b4d9648b33dead4ec7, type: 3}
+  - {fileID: 21300000, guid: eeddade4a6754134dac5b922b204e189, type: 3}
+  - {fileID: 21300000, guid: a57550d4cda3c45458b16361b600fbc7, type: 3}
   haloSprites:
   - {fileID: 21300000, guid: 68fbb8dd0cba1db44af466cd4126674b, type: 3}
   - {fileID: 21300000, guid: a7c2cee7fb6fcbb428249352a3ceed98, type: 3}
@@ -10897,9 +10902,10 @@ MonoBehaviour:
   - {fileID: 21300000, guid: c9961db70cb24a0439a1ec0f565904aa, type: 3}
   - {fileID: 21300000, guid: 59918a26cb34e12418bc05bc8c358d77, type: 3}
   - {fileID: 21300000, guid: 39868ad9bd24d444d9a4b680ca8fc9f7, type: 3}
-  - {fileID: -8093765186143607218, guid: 08d96de5261303445a423883644363aa, type: 3}
-  - {fileID: 3012650192034345175, guid: 5c6e8d2e49d2f614ab92814fbbe6e3e5, type: 3}
-  - {fileID: 6707557364664536975, guid: 7f402bfe20202484e831b3ce62162fc9, type: 3}
+  - {fileID: 21300000, guid: 08d96de5261303445a423883644363aa, type: 3}
+  - {fileID: 21300000, guid: 5c6e8d2e49d2f614ab92814fbbe6e3e5, type: 3}
+  - {fileID: 21300000, guid: 7f402bfe20202484e831b3ce62162fc9, type: 3}
+  - {fileID: 21300000, guid: 907fdad8c49667047b5809c392d541dc, type: 3}
   tintHaloLikeDisc: 0
   palette:
   - {r: 1, g: 0.72, b: 0.3, a: 1}
@@ -11820,8 +11826,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6ad7317c8088e9438e2001fd563e967, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SkyDirector
-  farFollow: 0.96
-  midFollow: 0.9
+  farFollow: 0.985
+  midFollow: 0.96
   dustFollow: 0.6
   farDensity: 1.6
   midDensity: 0.3
@@ -11882,9 +11888,10 @@ MonoBehaviour:
   nebulaPrefix: bg_nebula_
   nebulaCount: 23
   nebulasPerMap: {x: 1, y: 2}
-  nebulaFollow: 0.93
-  nebulaScale: {x: 0.8, y: 1.5}
-  nebulaAlpha: {x: 0.5, y: 0.85}
+  nebulaFollow: 0.975
+  nebulaScale: {x: 1.6, y: 2.6}
+  nebulaAlpha: {x: 0.4, y: 0.7}
+  nebulaBrightness: {x: 0.45, y: 0.7}
   objects:
   - {fileID: -7462321982266188585, guid: 4b01555137f1d1140bc6040ac31a8f39, type: 3}
   - {fileID: 5997032438584349777, guid: 6f764dabe221eb64384eb4caa3833160, type: 3}
@@ -11905,10 +11912,19 @@ MonoBehaviour:
   - {fileID: 3102964094127570727, guid: 249ba72f06ba98845b15fc24c4be4953, type: 3}
   - {fileID: -7286024111928772929, guid: 169055feff17ecb45a82f9e6d12560bd, type: 3}
   - {fileID: -6000141666421614957, guid: dc1ff3601ea76f244b0bb34fb9864b4e, type: 3}
+  - {fileID: 2828427900849721618, guid: 72b0c5efa08d66344ba6c02be59e0866, type: 3}
+  - {fileID: -2142683276545139249, guid: 7ef9f75de49524546904a7d42f2b3238, type: 3}
+  - {fileID: 255138004359078841, guid: b1aef95c8bcec4543ab03fb968be7e9e, type: 3}
+  - {fileID: -937202320281371098, guid: 9757db1b7ab3bbf40b1b11165ef49de3, type: 3}
+  - {fileID: 4162193342709565350, guid: 0c8faf79a23b9f440994b2a98c9cbd65, type: 3}
+  - {fileID: -7492405246635898885, guid: bcaec7d6728dabf479c9a84b0f90b590, type: 3}
+  - {fileID: -580126174674677818, guid: 8255cb060735e0c4087e489edacf1afb, type: 3}
+  - {fileID: 3208853116711324963, guid: 66a1da23386f0824caac34768245ea80, type: 3}
   objectsPerMap: {x: 1, y: 2}
-  objectFollow: {x: 0.92, y: 0.8}
-  objectScale: {x: 0.3, y: 1}
-  objectBrightness: {x: 0.5, y: 1}
+  objectFollow: {x: 0.975, y: 0.9}
+  objectScale: {x: 0.15, y: 0.55}
+  objectBrightness: {x: 0.35, y: 0.8}
+  depthHaze: {r: 0.32, g: 0.36, b: 0.5, a: 1}
   objectSpacing: 4
 --- !u!1 &1373791964
 GameObject:
