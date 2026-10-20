@@ -120,8 +120,11 @@ public class WarpStreaks : MonoBehaviour
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
         float s = strength;
 
+        int shown = Mathf.Min(Count, PerformanceManager.WarpLines);
         for (int i = 0; i < Count; i++)
         {
+            if (i >= shown) { if (lines[i].enabled) lines[i].enabled = false; continue; }
+            if (!lines[i].enabled) lines[i].enabled = true;
             // El espacio pasa en contra del viaje
             pos[i] -= dir * (60f * speedMul[i] * s * s * dt);
 

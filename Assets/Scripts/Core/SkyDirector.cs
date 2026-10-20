@@ -77,6 +77,18 @@ public class SkyDirector : MonoBehaviour
     [SerializeField] private Vector2 shootingLife = new Vector2(0.45f, 0.85f);
     [SerializeField] private float shootingLength = 2.2f;
 
+    [Header("Lente gravitacional (agujero negro)")]
+    [Tooltip("Las estrellas de detrás del agujero negro se desvían hacia fuera y se estiran en " +
+             "arcos alrededor de él, como hace la gravedad con la luz. Solo el fondo: no cambia " +
+             "nada del juego")]
+    [SerializeField] private bool lensing = true;
+    [Tooltip("Hasta dónde llega la distorsión, en radios del dibujo del agujero negro")]
+    [SerializeField] private float lensReach = 2.4f;
+    [Tooltip("Radio del anillo de Einstein, en radios del dibujo. Más alto = la luz se curva más")]
+    [Range(0.05f, 1.5f)] [SerializeField] private float einsteinRadius = 0.55f;
+    [Tooltip("Estiramiento máximo de una estrella en arco")]
+    [SerializeField] private float maxLensStretch = 4f;
+
     [Header("Polvo")]
     [Tooltip("Nubes grandes y muy tenues")]
     [SerializeField] private int dustClouds = 14;
@@ -98,6 +110,9 @@ public class SkyDirector : MonoBehaviour
         public SpriteRenderer sr;
         public Color color;
         public float speed, phase, amount;
+        // Para la lente: dónde y cómo estaba antes de deformarla
+        public Vector3 baseLocal, baseScale;
+        public bool lensable, lensed;
     }
 
     class Mote
@@ -167,8 +182,10 @@ public class SkyDirector : MonoBehaviour
         lastCam = cam;
         PlaceLayers(cam);
 
-        int farUsed = Scatter(farPool, farRoot, LayerRect(farFollow), farDensity, farSize, 0, 0.35f, 0.85f);
-        int midUsed = Scatter(midPool, midRoot, LayerRect(midFollow), midDensity, midSize, 1, 0.55f, 1f);
+        // Menos estrellas y polvo en los móviles débiles (PerformanceManager)
+        float pd = PerformanceManager.StarDensity;
+        int farUsed = Scatter(farPool, farRoot, LayerRect(farFollow), farDensity * pd, farSize, 0, 0.35f, 0.85f);
+        int midUsed = Scatter(midPool, midRoot, LayerRect(midFollow), midDensity * pd, midSize, 1, 0.55f, 1f);
 
         int bright = 0, lines = 0;
         Rect mid = LayerRect(midFollow);
@@ -199,6 +216,7 @@ public class SkyDirector : MonoBehaviour
         if (shooting != null) shooting.enabled = false;
         nextShoot = Time.time + Range(shootingInterval.x, shootingInterval.y);
 
+        FindGoal();
         LastReport = report.Length > 0 ? report.ToString(0, report.Length - 2) : "ninguna";
         Debug.Log($"SkyDirector: {farUsed} estrellas lejanas, {midUsed} medias. Constelaciones: {LastReport}.");
     }
@@ -237,7 +255,7 @@ public class SkyDirector : MonoBehaviour
             // Las pocas grandes, más grandes: el cielo real tiene muchas débiles y pocas brillantes
             if (rng.NextDouble() < 0.06) s *= 1.7f;
             sr.transform.localScale = Vector3.one * s;
-            Twinkle(sr, StarColor(), Range(minAlpha, maxAlpha), 1f);
+            Twinkle(sr, StarColor(), Range(minAlpha, maxAlpha), 1f, true);
         }
         return count;
     }
@@ -314,7 +332,8 @@ public class SkyDirector : MonoBehaviour
                 float t = Mathf.InverseLerp(4.8f, -0.5f, mags[i]);       // 1 = la más brillante
                 sr.transform.localScale = Vector3.one * Mathf.Lerp(constellationStarSize.x, constellationStarSize.y, t);
                 // Constelaciones reales: el color de verdad de cada estrella. Palabras: al azar
-                Twinkle(sr, colors != null ? colors[i] : StarColor(), Mathf.Lerp(0.6f, 1f, t), 0.5f);
+                // Las de las figuras no se deforman: sus líneas dejarían de unirlas
+                Twinkle(sr, colors != null ? colors[i] : StarColor(), Mathf.Lerp(0.6f, 1f, t), 0.5f, false);
                 bright++;
             }
 
@@ -341,7 +360,9 @@ public class SkyDirector : MonoBehaviour
     void ScatterDust(Vector2 cam)
     {
         Vector2 half = ViewHalf() + Vector2.one * 3f;
-        int total = dustClouds + dustSpecks;
+        int clouds = Mathf.RoundToInt(dustClouds * PerformanceManager.DustAmount);
+        int specks = Mathf.RoundToInt(dustSpecks * PerformanceManager.DustAmount);
+        int total = clouds + specks;
         while (motes.Count < total)
         {
             var go = new GameObject("Dust");
@@ -361,7 +382,7 @@ public class SkyDirector : MonoBehaviour
             m.sr.gameObject.SetActive(active);
             if (!active) continue;
 
-            bool cloud = i < dustClouds;
+            bool cloud = i < clouds;
             m.sr.sprite = cloud ? cloudSprite : dotSprite;
             m.sr.sortingOrder = cloud ? 0 : 1;
             m.rel = new Vector2(Range(-half.x, half.x), Range(-half.y, half.y));
@@ -415,6 +436,74 @@ public class SkyDirector : MonoBehaviour
         }
 
         TickShootingStar(cam, dt);
+        ApplyLens();
+    }
+
+    // ------------------------------------------------------------------ lente gravitacional
+    Goal goal;
+    Transform goalT;
+    float goalRadius;
+
+    // Se mide al generar cada cielo: el agujero negro de cada nivel tiene su tamaño
+    void FindGoal()
+    {
+        if (goal == null) goal = FindFirstObjectByType<Goal>();
+        goalT = goal != null ? goal.transform : null;
+        goalRadius = 0f;
+        if (goal == null) return;
+        foreach (var r in goal.GetComponentsInChildren<SpriteRenderer>())
+            if (r.sprite != null) goalRadius = Mathf.Max(goalRadius, r.bounds.extents.x, r.bounds.extents.y);
+    }
+
+    // Ecuación de una lente puntual: una estrella a distancia r del centro se ve en
+    // r' = (r + raíz(r² + 4·θE²)) / 2, siempre más lejos, y estirada a lo largo del círculo en
+    // la proporción r'/r. Cerca del anillo de Einstein se convierte en un arco. Se mezcla con
+    // la posición real hacia el borde del alcance, para que no haya un salto
+    void ApplyLens()
+    {
+        bool on = lensing && PerformanceManager.Lensing && goalT != null && goalT.gameObject.activeInHierarchy && goalRadius > 0.01f;
+        Vector2 g = on ? (Vector2)goalT.position : Vector2.zero;
+        float reach = goalRadius * lensReach;
+        float reach2 = reach * reach;
+        float te = goalRadius * einsteinRadius;
+        float te4 = 4f * te * te;
+
+        for (int i = 0; i < twinklers.Count; i++)
+        {
+            var w = twinklers[i];
+            if (!w.lensable) continue;
+            var tr = w.sr.transform;
+            Vector2 p = (Vector2)tr.parent.position + (Vector2)w.baseLocal;
+            Vector2 d = p - g;
+            float r2 = d.sqrMagnitude;
+
+            if (!on || r2 >= reach2)
+            {
+                if (w.lensed)
+                {
+                    tr.localPosition = w.baseLocal;
+                    tr.localScale = w.baseScale;
+                    tr.localRotation = Quaternion.identity;
+                    w.lensed = false;
+                }
+                continue;
+            }
+
+            float r = Mathf.Max(0.001f, Mathf.Sqrt(r2));
+            float rl = (r + Mathf.Sqrt(r2 + te4)) * 0.5f;
+            float k = 1f - r / reach;                    // 1 en el centro, 0 en el borde del alcance
+            k = k * k * (3f - 2f * k);
+            float rf = Mathf.Lerp(r, rl, k);
+            float stretch = Mathf.Lerp(1f, Mathf.Min(maxLensStretch, rl / r), k);
+
+            Vector2 dir = d / r;
+            tr.position = g + dir * rf;
+            // Estirada a lo largo del círculo (perpendicular a la dirección al centro)
+            float ang = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg + 90f;
+            tr.localRotation = Quaternion.Euler(0f, 0f, ang);
+            tr.localScale = new Vector3(w.baseScale.x * stretch, w.baseScale.y / Mathf.Sqrt(stretch), 1f);
+            w.lensed = true;
+        }
     }
 
     void TickShootingStar(Vector2 cam, float dt)
@@ -422,6 +511,7 @@ public class SkyDirector : MonoBehaviour
         if (shootLife < 0f)
         {
             if (Time.time < nextShoot) return;
+            if (!PerformanceManager.ShootingStars) { nextShoot = Time.time + 5f; return; }
             Vector2 half = ViewHalf();
             shootRel = new Vector2(Range(-half.x, half.x), Range(0f, half.y));
             // Siempre cayendo un poco, hacia un lado u otro
@@ -472,12 +562,14 @@ public class SkyDirector : MonoBehaviour
         return new Vector2(c.orthographicSize * c.aspect, c.orthographicSize);
     }
 
-    void Twinkle(SpriteRenderer sr, Color c, float alpha, float amountScale)
+    void Twinkle(SpriteRenderer sr, Color c, float alpha, float amountScale, bool lensable)
     {
         c.a = alpha;
         sr.color = c;
         twinklers.Add(new Twinkler {
             sr = sr, color = c,
+            baseLocal = sr.transform.localPosition, baseScale = sr.transform.localScale,
+            lensable = lensable,
             speed = Range(twinkleSpeed.x, twinkleSpeed.y),
             phase = Range(0f, 20f),
             amount = Range(0.3f, 1f) * amountScale });

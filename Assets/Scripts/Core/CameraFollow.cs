@@ -41,12 +41,21 @@ public class CameraFollow : MonoBehaviour
     [Header("Límites")]
     [Tooltip("La cámara nunca enseña lo que hay fuera del mundo")]
     [SerializeField] private bool clampToWorld = true;
+    [Tooltip("Cuánto puede asomarse la cámara más allá del límite del mundo, en unidades. Así " +
+             "el jugador ve hasta dónde puede llegar, con algo de espacio detrás, y nunca queda " +
+             "medio fuera de la pantalla junto a la pared")]
+    [SerializeField] private float edgeReveal = 1.5f;
+    [Tooltip("Distancia mínima del jugador a los bordes de la pantalla, en unidades. Si un " +
+             "empujón o la gravedad lo lanzan más rápido de lo que la cámara le sigue, la " +
+             "cámara se corrige al momento para no perderlo de vista")]
+    [SerializeField] private float keepInView = 1.2f;
 
     /// Velocidad real de la cámara (unidades/s). La usa el FlowField para meter asteroides
     /// también por el lado hacia el que viaja la vista.
     public Vector2 Velocity { get; private set; }
 
     Rigidbody2D targetRb;
+    PlayerController targetPc;
     Vector2 lookAhead, lookAheadVel, posVel;
 
     void Awake()
@@ -67,7 +76,11 @@ public class CameraFollow : MonoBehaviour
             var p = FindFirstObjectByType<PlayerController>();
             if (p != null) target = p.transform;
         }
-        if (target != null) targetRb = target.GetComponent<Rigidbody2D>();
+        if (target != null)
+        {
+            targetRb = target.GetComponent<Rigidbody2D>();
+            targetPc = target.GetComponent<PlayerController>();
+        }
     }
 
     void LateUpdate()
@@ -87,7 +100,9 @@ public class CameraFollow : MonoBehaviour
 
         Vector2 goal = Clamp((Vector2)target.position + lookAhead);
         Vector2 pos = Vector2.SmoothDamp(transform.position, goal, ref posVel, followSmooth, Mathf.Infinity, dt);
-        pos = Clamp(pos);
+        // Durante la llegada el jugador viene de fuera del mundo: ahí la vista no lo persigue
+        bool arriving = targetPc != null && targetPc.IsExpelling;
+        pos = arriving ? Clamp(pos) : Clamp(KeepInView(Clamp(pos), target.position));
 
         Velocity = (pos - (Vector2)transform.position) / dt;
         transform.position = new Vector3(pos.x, pos.y, transform.position.z);
@@ -112,13 +127,27 @@ public class CameraFollow : MonoBehaviour
         gb.RefreshCamera();
     }
 
-    // El centro de la cámara, metido para que el borde de la vista no pase de la pared
+    // El jugador nunca a menos de Keep In View del borde de la pantalla
+    Vector2 KeepInView(Vector2 camPos, Vector2 player)
+    {
+        if (cam == null || keepInView <= 0f) return camPos;
+        float halfH = cam.orthographicSize;
+        float halfW = halfH * cam.aspect;
+        float mx = Mathf.Max(0f, halfW - keepInView), my = Mathf.Max(0f, halfH - keepInView);
+        camPos.x = Mathf.Clamp(camPos.x, player.x - mx, player.x + mx);
+        camPos.y = Mathf.Clamp(camPos.y, player.y - my, player.y + my);
+        return camPos;
+    }
+
+    // El centro de la cámara, metido para que el borde de la vista no pase de la pared más
+    // Edge Reveal: se ve el límite y un poco de lo que hay detrás
     Vector2 Clamp(Vector2 p)
     {
         var gb = GameBounds.Instance;
         if (!clampToWorld || gb == null || cam == null) return p;
 
-        Rect w = gb.Area;
+        float rv = Mathf.Max(0f, edgeReveal);
+        Rect w = new Rect(gb.Area.xMin - rv, gb.Area.yMin - rv, gb.Area.width + 2f * rv, gb.Area.height + 2f * rv);
         float halfH = gb.ScreenSize.y * 0.5f;
         float halfW = gb.ScreenSize.x * 0.5f;
 

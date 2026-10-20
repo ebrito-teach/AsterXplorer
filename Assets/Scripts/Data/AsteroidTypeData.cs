@@ -143,6 +143,9 @@ public class AsteroidTypeData : ScriptableObject
     [Tooltip("Cuánto se estira la órbita hacia atrás cuando me muevo. 0 = anillo, " +
              "0.6 = cortejo arrastrado detrás, como la cola de un cometa")]
     [Range(0f, 1f)] public float moonTrail = 0f;
+    [Tooltip("Embudo de la cola: cuánto se estrecha el séquito detrás de mí cuando me muevo. " +
+             "0 = la cola es tan ancha como el anillo; 0.6 = se cierra en cono hacia atrás")]
+    [Range(0f, 0.9f)] public float moonFunnel = 0.6f;
     [Tooltip("Mis lunas matan al jugador. Falso en un estático (campo seguro), " +
              "verdadero en un coloso o un cometa (enjambre mortal que viaja con él)")]
     public bool moonsAreLethal = false;
@@ -193,6 +196,12 @@ public class AsteroidTypeData : ScriptableObject
              "casco y se amontonan. 0.65 = espiralan y forman un enjambre girando alrededor, " +
              "que es como se comporta un cuerpo en un campo gravitatorio real")]
     [Range(0f, 1f)] public float pullTangential = 0.65f;
+    [Tooltip("Altura sobre mi superficie a la que el tirón se convierte en empuje. Lo que atraigo " +
+             "se queda girando a esa distancia en vez de pegarse a mí")]
+    public float pullShell = 2.5f;
+    [Tooltip("Cuánto arrastra el tirón hacia mi cola cuando me muevo: lo atraído se va quedando " +
+             "detrás, formando la estela, en vez de amontonarse delante")]
+    [Range(0f, 1f)] public float pullTailDrift = 0.5f;
 
     [Header("Reglas")]
     public bool killsPlayer = true;

@@ -62,7 +62,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private bool followInputScheme = true;
     [Tooltip("Velocidad de crucero en unidades/s. La pantalla mide 19.4 x 9: a 5 u/s cruzas " +
              "en 3.9 s y subes de abajo arriba en 1.8")]
-    [SerializeField] private float cruiseSpeed = 5f;
+    [SerializeField] private float cruiseSpeed = 6f;
     [Tooltip("Constante de tiempo para ARRANCAR. Bajo = precisión de bullet-hell")]
     [SerializeField] private float accelTime = 0.05f;
     [Tooltip("Constante de tiempo para PARAR al soltar. Aquí vive la inercia que querías " +
@@ -116,14 +116,19 @@ public class PlayerController : MonoBehaviour
              "que es lo que pediste: choque seco, sin rebote de goma")]
     [Range(0f, 1f)] [SerializeField] private float wallShare = 0.25f;
 
-    [Header("Velocidad letal")]
-    [Tooltip("Chocar con una roca QUIETA a esta velocidad o más te mata. Las que se mueven ya " +
-             "matan siempre por su cuenta; esto le da dientes a las estáticas, que hasta ahora " +
-             "eran decorado. Al estar en la velocidad de crucero, pasar rozando deja de ser " +
-             "gratis: o frenas, o entras en preciso, o no tocas nada")]
-    [SerializeField] private float lethalImpactSpeed = 5f;
-    [Tooltip("Desmárcalo para volver al comportamiento anterior, en el que lo estático nunca mata")]
-    [SerializeField] private bool staticsCanKill = true;
+    [Header("Gravedad de la meta")]
+    [Tooltip("Memoria del tirón en segundos: la velocidad que te da la gravedad se va " +
+             "acumulando y se pierde con esta constante. Lejos apenas se nota; cerca del " +
+             "agujero negro supera a tu propio impulso y ya no hay escapatoria")]
+    [SerializeField] private float gravityMemory = 0.8f;
+
+    [Header("Campo gravitatorio de los estáticos")]
+    [Tooltip("Cerca de un estático vas más lento: su campo te frena. Esto es cuánto en su " +
+             "superficie (0.25 = un 25 % más lento). Los estáticos ya no matan al chocar")]
+    [Range(0f, 0.8f)] [SerializeField] private float staticDrag = 0.25f;
+    [Tooltip("Hasta dónde llega su campo, en unidades desde su superficie. El efecto se apaga " +
+             "suavemente hacia el borde y es mayor cuanto más masivo es el estático")]
+    [SerializeField] private float staticFieldReach = 4f;
     [Tooltip("Tope del empujón en unidades/s, para que una roca enorme no te mande a órbita")]
     [SerializeField] private float maxKnock = 7f;
     [Tooltip("Constante de tiempo con la que se te pasa el empujón. ANTES eran 4 segundos, " +
@@ -147,9 +152,13 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float arrivalTime = 1.4f;
     [Tooltip("Distancia que recorre desde fuera del mundo hasta su punto de aparición")]
     [SerializeField] private float arrivalDistance = 9f;
-    [Tooltip("Estiramiento del astronauta en la dirección del viaje a toda velocidad " +
-             "(0 = ninguno). Vuelve a su forma al frenar")]
-    [Range(0f, 1f)] [SerializeField] private float expelStretch = 0.35f;
+    [Tooltip("Cuánto más largo llega: sale del agujero negro anterior aún estirado y se va " +
+             "recomponiendo mientras frena. 2 = tres veces su largo al entrar")]
+    [Range(0f, 4f)] [SerializeField] private float recomposeStretch = 2.2f;
+    [Tooltip("Rebote al terminar de recomponerse, como si el cuerpo se asentara")]
+    [Range(0f, 0.3f)] [SerializeField] private float recomposeWobble = 0.1f;
+    [Tooltip("Llega con la luz corrida al rojo y apagada, y recupera su color al recomponerse")]
+    [SerializeField] private bool arrivalRedshift = true;
     [Tooltip("Las estrellas se estiran en rayas durante la llegada")]
     [SerializeField] private bool warpStreaks = true;
 
@@ -176,6 +185,8 @@ public class PlayerController : MonoBehaviour
     SpriteRenderer visualRenderer;
     Vector2 controlVel;        // lo que tú pides
     Vector2 knock;             // lo que te hicieron; decae solo
+    Vector2 gravityVel;        // lo que te da la gravedad de la meta, acumulado
+    Vector2 gravityAccel;      // lo que pidió la meta en este paso
     float facing = 90f;        // grados, hacia dónde mira el astronauta
     int facingSign = 1;        // 1 mira a la derecha, -1 a la izquierda
     Vector3 baseScale = Vector3.one;        // la escala que pusiste en la escena
@@ -189,6 +200,8 @@ public class PlayerController : MonoBehaviour
     public bool IsStunned => Time.time < stunUntil;
     public bool IsInvulnerable => Time.time < invulnerableUntil;
     public bool IsDead { get; private set; }
+    /// El hijo con el sprite: el agujero negro lo deforma al tragárselo
+    public Transform Visual => visual;
     /// Saliendo despedido al aparecer: intangible y sin control
     public bool IsExpelling { get; private set; }
     /// Donde se detiene al terminar la expulsión. El generador deja libre esa zona
@@ -204,8 +217,8 @@ public class PlayerController : MonoBehaviour
     public float MaxSpeed => cruiseSpeed;
     /// Velocidad real ahora mismo, empujones incluidos. La lee el velocímetro.
     public float Speed => rb != null ? rb.linearVelocity.magnitude : 0f;
-    /// Por debajo de esto se puede rozar una roca quieta sin morir.
-    public float LethalSpeed => lethalImpactSpeed;
+    /// Cuánto te está frenando ahora el campo de los estáticos (0 = nada)
+    public float FieldSlowdown { get; private set; }
     /// Golpe contra algo: velocidad del choque (para sacudida, vibración, sonido...)
     public event System.Action<float> OnImpact;
     /// El jugador ha muerto
@@ -301,7 +314,8 @@ public class PlayerController : MonoBehaviour
         brakeLevel = Mathf.MoveTowards(brakeLevel, IsFocusing ? 1f : 0f, dt / 0.12f);
 
         // --- lo que pides ---
-        float speed = cruiseSpeed * (IsFocusing ? focusSpeedFactor : 1f);
+        FieldSlowdown = StaticField();
+        float speed = cruiseSpeed * (IsFocusing ? focusSpeedFactor : 1f) * (1f - FieldSlowdown);
         Vector2 target = IsStunned ? Vector2.zero : Vector2.ClampMagnitude(intent, 1f) * speed;
 
         // Arrancar es rápido (precisión), parar es lento (inercia). Ahí está el híbrido.
@@ -313,7 +327,13 @@ public class PlayerController : MonoBehaviour
         knock = Vector2.Lerp(knock, Vector2.zero, Approach(dt, knockDecayTime));
         if (knock.sqrMagnitude < 0.0004f) knock = Vector2.zero;
 
-        rb.linearVelocity = controlVel + knock;
+        // --- lo que te hace la gravedad ---
+        gravityVel += gravityAccel * dt;
+        gravityAccel = Vector2.zero;
+        gravityVel = Vector2.Lerp(gravityVel, Vector2.zero, Approach(dt, gravityMemory));
+        if (gravityVel.sqrMagnitude < 0.0004f) gravityVel = Vector2.zero;
+
+        rb.linearVelocity = controlVel + knock + gravityVel;
         rb.angularVelocity = 0f;   // los choques no nos hacen girar; la rotación la llevamos aquí
 
         if (!rotateBodyToFacing) return;
@@ -453,15 +473,6 @@ public class PlayerController : MonoBehaviour
         // así que lo que resuelve el motor de física se descarta. Este `knock` ES toda la
         // respuesta del jugador al golpe — si no mira la masa aquí, la masa no existe para él
         // por mucho que los asteroides sí la respeten entre ellos.
-        // Un choque a velocidad de crucero contra algo que no se mueve es letal. Esto es lo
-        // que convierte el modo preciso en una herramienta de verdad: frenar antes de rozar
-        // una roca deja de ser una comodidad y pasa a ser la diferencia entre pasar y morir.
-        if (staticsCanKill && impact >= lethalImpactSpeed && EsTerrenoQuieto(c))
-        {
-            Kill();
-            return;
-        }
-
         float share = ImpactShare(c);
         float dv = impact * (1f + restitution) * share * knockScale;
 
@@ -477,12 +488,36 @@ public class PlayerController : MonoBehaviour
         OnImpact?.Invoke(impact);
     }
 
-    /// ¿Es una roca quieta? Solo esas matan por velocidad: las que se mueven ya matan al
-    /// tocarlas, y las paredes son el borde del mapa, no un obstáculo que debas esquivar.
-    static bool EsTerrenoQuieto(Collision2D c)
+    // El frenado del estático más influyente a tu alrededor. Crece al acercarte (suave hacia el
+    // borde del campo) y con la masa del estático respecto a la media del nivel
+    static readonly Collider2D[] fieldHits = new Collider2D[24];
+    static ContactFilter2D fieldFilter;
+    static bool fieldFilterReady;
+
+    float StaticField()
     {
-        int quieto = LayerMask.NameToLayer("AsteroidStatic");
-        return quieto >= 0 && c.collider != null && c.collider.gameObject.layer == quieto;
+        if (staticDrag <= 0f || staticFieldReach <= 0f) return 0f;
+        if (!fieldFilterReady)
+        {
+            fieldFilter = new ContactFilter2D();
+            fieldFilter.SetLayerMask(LayerMask.GetMask("AsteroidStatic"));
+            fieldFilter.useTriggers = false;
+            fieldFilterReady = true;
+        }
+        Vector2 me = rb.position;
+        int n = Physics2D.OverlapCircle(me, staticFieldReach + 3f, fieldFilter, fieldHits);
+        float best = 0f;
+        for (int i = 0; i < n; i++)
+        {
+            var a = fieldHits[i].GetComponentInParent<Asteroid>();
+            if (a == null || a.Type == null || a.Type.behavior != AsteroidBehavior.Static || a.IsOrbiting) continue;
+            float d = Vector2.Distance(me, a.Body.position) - a.WorldRadius;
+            if (d >= staticFieldReach) continue;
+            float k = 1f - Mathf.Max(0f, d) / staticFieldReach;
+            float mass = Mathf.Clamp(Mathf.Sqrt(a.Mass / Mathf.Max(0.001f, Asteroid.StaticMassRef)), 0.5f, 1.5f);
+            best = Mathf.Max(best, k * k * mass);
+        }
+        return Mathf.Clamp01(best * staticDrag);
     }
 
     /// Qué fracción de la velocidad del choque se te queda, según quién te golpeó.
@@ -508,6 +543,9 @@ public class PlayerController : MonoBehaviour
 
         return 1f;
     }
+
+    /// La meta tira de ti: aceleración (no fuerza) de este paso de física.
+    public void AddGravity(Vector2 acceleration) => gravityAccel += acceleration;
 
     /// Mata al jugador (se ignora si es invulnerable o ya está muerto).
     public void Kill()
@@ -567,6 +605,7 @@ public class PlayerController : MonoBehaviour
         controlVel = Vector2.zero;
         turnRate = 0f;
         knock = Vector2.zero;
+        gravityVel = gravityAccel = Vector2.zero;
         thrustLevel = 0f;
 
         // Mirando a la meta, que cambia de lado cuando la corriente se invierte
@@ -642,21 +681,36 @@ public class PlayerController : MonoBehaviour
 
             transform.position = Vector2.Lerp(start, end, e);
 
-            // Se estira en la dirección del viaje mientras va rápido
-            if (visual != null && expelStretch > 0f)
+            // Llega estirado (viene de caer en un agujero negro) y se recompone mientras frena:
+            // largo y fino al entrar, su forma al parar, con un pequeño rebote al asentarse
+            if (visual != null)
             {
-                float k = expelStretch * speed01;
+                float k = recomposeStretch * speed01;
+                float len = 1f + k;
+                float thin = 1f / Mathf.Sqrt(len);
+                if (u > 0.7f && recomposeWobble > 0f)
+                {
+                    float w = (u - 0.7f) / 0.3f;
+                    float bounce = Mathf.Sin(w * Mathf.PI * 2f) * recomposeWobble * (1f - w);
+                    len *= 1f - bounce;
+                    thin *= 1f + bounce;
+                }
                 bool horizontal = Mathf.Abs(inward.x) > 0.5f;
                 visual.localScale = horizontal
-                    ? new Vector3(baseVisualScale.x * (1f + k), baseVisualScale.y * (1f - k * 0.4f), baseVisualScale.z)
-                    : new Vector3(baseVisualScale.x * (1f - k * 0.4f), baseVisualScale.y * (1f + k), baseVisualScale.z);
+                    ? new Vector3(baseVisualScale.x * len, baseVisualScale.y * thin, baseVisualScale.z)
+                    : new Vector3(baseVisualScale.x * thin, baseVisualScale.y * len, baseVisualScale.z);
             }
+            // Sale del pozo al revés de como cayó: su luz llega corrida al rojo y apagada, y
+            // recupera el color a medida que se recompone
+            if (visualRenderer != null && arrivalRedshift)
+                visualRenderer.color = Goal.Redshift(Color.white, Mathf.Lerp(0.22f, 1f, 1f - speed01));
             if (warpStreaks) WarpStreaks.SetStrength(speed01);
             yield return null;
         }
 
         if (warpStreaks) WarpStreaks.End();
         if (visual != null) visual.localScale = baseVisualScale;
+        if (visualRenderer != null) visualRenderer.color = Color.white;
         if (animator != null) animator.SetBool("Thrusting", false);
 
         transform.position = end;

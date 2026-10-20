@@ -37,6 +37,21 @@ public class LevelPopulator : MonoBehaviour
     [SerializeField] private float blockedMargin = 0.6f;
     [SerializeField] private float goalMargin = 1.5f;
 
+    [Header("Campos de satélites (los estáticos más grandes)")]
+    [Tooltip("Fracción de los estáticos, empezando por los más grandes, que nacen con un campo " +
+             "de satélites en órbita")]
+    [Range(0f, 1f)] [SerializeField] private float fieldShare = 0.25f;
+    [SerializeField] private Vector2Int fieldCount = new Vector2Int(2, 5);
+    [Tooltip("Distancia de cada satélite a la superficie del estático, en unidades")]
+    [SerializeField] private Vector2 fieldDistance = new Vector2(1f, 3.5f);
+    [Tooltip("De qué están hechos los satélites (por ejemplo Debris_Gravel y Debris_Fragment)")]
+    [SerializeField] private AsteroidTypeData[] satelliteTypes;
+    [Tooltip("Velocidad angular (grados/s) de un satélite a la distancia de referencia de un " +
+             "estático de masa media. Con Kepler, el resto sale solo")]
+    [SerializeField] private float keplerSpeed = 55f;
+    [Tooltip("Radio de órbita (unidades) al que corresponde esa velocidad")]
+    [SerializeField] private float keplerRefRadius = 2.5f;
+
     [Header("Mantenimiento de la población")]
     [Tooltip("Repone asteroides hasta volver a la cantidad del nivel. Sin esto, cada paso " +
              "del coloso vacía la pantalla para siempre y el nivel se regala")]
@@ -156,6 +171,7 @@ public class LevelPopulator : MonoBehaviour
             playerPos = pc != null ? pc.SpawnPoint : (Vector2)player.position;
         }
         var placed = new List<(Vector2 pos, float r)>();
+        var statics = new List<Asteroid>();
         int count = 0;
 
         foreach (var t in shopping)
@@ -173,7 +189,8 @@ public class LevelPopulator : MonoBehaviour
                 if (isStatic && (goal.Contains(p) || bounds.IsBlocked(p, blockedMargin + approxR))) continue;
                 if (Overlaps(placed, p, approxR)) continue;
 
-                pool.Spawn(t, p, size);
+                var spawned = pool.Spawn(t, p, size);
+                if (isStatic && spawned != null) statics.Add(spawned);
                 placed.Add((p, approxR));
                 count++;
                 break;
@@ -204,6 +221,9 @@ public class LevelPopulator : MonoBehaviour
                 Debug.LogWarning($"LevelPopulator: nivel {currentLevel} necesitó retirar {r.removed} " +
                                  "asteroides. El verificador está tapando un problema de la curva.");
         }
+
+        int fields = BuildFields(statics, playerPos);
+        if (fields > 0) fairness += $", {fields} campos de satélites";
 
         targetPopulation = count;
         nextTopUp = Time.time + 2f;
@@ -391,6 +411,53 @@ public class LevelPopulator : MonoBehaviour
             if (pick <= 0f) return t;
         }
         return null;
+    }
+
+    // Los estáticos más grandes se convierten en centros de masa con satélites. Nunca uno
+    // cuyo campo alcance el punto de aparición del jugador: los satélites matan
+    int BuildFields(List<Asteroid> statics, Vector2 playerPos)
+    {
+        statics.RemoveAll(a => a == null || !a.isActiveAndEnabled);
+        if (statics.Count == 0) return 0;
+
+        var masses = new List<float>();
+        foreach (var a in statics) masses.Add(a.Mass);
+        masses.Sort();
+        Asteroid.StaticMassRef = Mathf.Max(0.001f, masses[masses.Count / 2]);
+
+        if (fieldShare <= 0f || satelliteTypes == null || satelliteTypes.Length == 0) return 0;
+        statics.Sort((x, y) => y.WorldRadius.CompareTo(x.WorldRadius));
+        int want = Mathf.CeilToInt(statics.Count * fieldShare);
+        int made = 0;
+        const float margin = 0.7f;      // hueco entre un satélite y lo que tenga al lado
+        var hosts = new List<(Asteroid a, float outer)>();
+        foreach (var a in statics)
+        {
+            if (made >= want) break;
+            Vector2 p = a.Body.position;
+
+            // Cuánto sitio hay alrededor: el campo no puede llegar a otro estático ni al campo
+            // de otro anfitrión, así dos sistemas vecinos no se cruzan
+            float room = fieldDistance.y;
+            foreach (var b in statics)
+            {
+                if (b == a) continue;
+                float gap = Vector2.Distance(p, b.Body.position) - a.WorldRadius - b.WorldRadius - margin;
+                foreach (var h in hosts) if (h.a == b) gap -= h.outer;
+                room = Mathf.Min(room, gap);
+            }
+            if (room < fieldDistance.x + 0.4f) continue;
+
+            float dist = Vector2.Distance(p, playerPos);
+            if (dist < a.WorldRadius + room + 1f + playerSafeRadius) continue;
+
+            var range = new Vector2(fieldDistance.x, room);
+            a.SpawnField(satelliteTypes, Random.Range(fieldCount.x, fieldCount.y + 1),
+                         range, keplerSpeed, keplerRefRadius);
+            hosts.Add((a, room + 0.5f));
+            made++;
+        }
+        return made;
     }
 
     static float Cost(AsteroidTypeData t) => Mathf.Max(0.5f, t.cost);

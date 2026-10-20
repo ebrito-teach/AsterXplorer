@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Collections;
 using UnityEngine;
 
@@ -66,18 +67,52 @@ public class Goal : MonoBehaviour
     [SerializeField] private bool reachScalesWithSize = true;
     [Tooltip("Margen con el borde del mundo, en unidades, además del propio tamaño del dibujo")]
     [SerializeField] private float edgeMargin = 1f;
+    [Tooltip("Puede quedar pegado al límite del mundo con parte del dibujo fuera de la vista: " +
+             "ver solo un trozo del disco y del halo lo hace sentir aún más enorme. Siempre se " +
+             "puede llegar a su horizonte")]
+    [SerializeField] private bool allowPartiallyHidden = true;
+
+    [Header("Gravitación universal (F)")]
+    [Tooltip("G·M de un agujero negro de tamaño 1: la aceleración (u/s²) a 1 unidad del centro. " +
+             "A distancia d tira con G·M / d², la ley de Newton")]
+    [SerializeField] private float gravityGM = 12f;
+    [Tooltip("La masa crece con el tamaño elevado a esto. 2 = un agujero el doble de grande " +
+             "pesa cuatro veces más; 3 = ocho veces")]
+    [SerializeField] private float massExponent = 2f;
+    [Tooltip("Tope de la aceleración, para que pegado al horizonte no salga un número absurdo")]
+    [SerializeField] private float maxPullAccel = 18f;
 
     [Header("Atracción sobre el jugador")]
     [Tooltip("Distancia a la que empieza a notarse el tirón")]
     [SerializeField] private float pullRadius = 4.5f;
-    [Tooltip("Aceleración junto al horizonte (unidades/s²)")]
-    [SerializeField] private float pullForce = 7f;
     [Tooltip("Dentro de este radio ya no hay vuelta atrás: empieza la absorción")]
     [SerializeField] private float eventHorizon = 0.6f;
 
-    [Header("Absorción")]
+    [Header("Caída: física de agujero negro")]
+    [Tooltip("Tamaño de la sombra negra del disco, en fracción de su ancho. Es el horizonte " +
+             "visible: lo que cae se congela y se apaga al llegar ahí")]
+    [Range(0.05f, 0.6f)] [SerializeField] private float shadowFraction = 0.27f;
+    [Tooltip("Empezar a absorber como poco a esta distancia de la sombra (en radios de sombra). " +
+             "Así la caída siempre se ve, aunque el dibujo del agujero sea grande")]
+    [SerializeField] private bool horizonFromShadow = true;
+    [SerializeField] private float horizonOverShadow = 1.8f;
+    [Tooltip("Escala de tiempo de la caída del jugador, en segundos")]
     [SerializeField] private float absorbTime = 1.1f;
-    [SerializeField] private float absorbSpin = 900f;
+    [Tooltip("Escala de tiempo de la caída de un asteroide (los grandes tardan algo más)")]
+    [SerializeField] private float swallowTime = 0.8f;
+    [Tooltip("Estiramiento de marea al llegar a la sombra: el jugador mide 1 + esto de largo. " +
+             "Crece con (sombra/distancia)³, como la fuerza de marea real")]
+    [SerializeField] private float playerStretch = 3.5f;
+    [SerializeField] private float asteroidStretch = 3f;
+    [Tooltip("Giro en espiral inicial. Se acelera al acercarse (momento angular) y se frena " +
+             "junto a la sombra (dilatación del tiempo)")]
+    [SerializeField] private float spiralDegrees = 70f;
+    [Tooltip("Tope de duración de la caída, en múltiplos de su escala de tiempo")]
+    [SerializeField] private float maxFallFactor = 2.2f;
+    [Tooltip("Copias que se quedan atrás un instante y dibujan el hilo curvo de la caída")]
+    [SerializeField] private bool ghostTrail = true;
+    [SerializeField] private float ghostEvery = 0.035f;
+    [SerializeField] private float ghostLife = 0.35f;
 
     [Header("Asteroides")]
     [Tooltip("Desvía las rocas que pasan cerca. Un pozo gravitatorio NO vacía su entorno: lo " +
@@ -184,7 +219,9 @@ public class Goal : MonoBehaviour
         else if (discRenderer != null && discRenderer.sprite != null)
             drawn = Mathf.Max(drawn, discRenderer.bounds.extents.x, discRenderer.bounds.extents.y);
 
-        float m = edgeMargin + drawn;
+        // Si puede quedar medio oculto, solo hace falta que su horizonte quede dentro del mundo
+        // con sitio para el jugador; el resto del dibujo puede salirse de lo que se ve
+        float m = allowPartiallyHidden ? EffectiveHorizon() + 0.8f : edgeMargin + drawn;
         Rect a = gb.Area;
         float mx = Mathf.Min(m, a.width * 0.45f), my = Mathf.Min(m, a.height * 0.45f);
         float x0 = a.xMin + mx, x1 = a.xMax - mx, y0 = a.yMin + my, y1 = a.yMax - my;
@@ -275,12 +312,11 @@ public class Goal : MonoBehaviour
         float dist = d.magnitude;
         if (dist > pullRadius) return;
 
-        if (dist <= eventHorizon) { StartCoroutine(Absorb()); return; }
+        if (dist <= EffectiveHorizon()) { StartCoroutine(Absorb()); return; }
 
-        // Cae con el cuadrado: lejos apenas se nota, cerca ya no puedes escapar
-        float k = 1f - (dist - eventHorizon) / Mathf.Max(0.01f, pullRadius - eventHorizon);
-        k = Mathf.Clamp01(k);
-        playerBody.AddForce(d.normalized * (pullForce * k * k * playerBody.mass));
+        // Newton: G·M / d². La velocidad que da se acumula en el jugador, así que lejos apenas
+        // se nota y cerca supera a tu propio impulso: el punto sin retorno sale solo
+        player.AddGravity(d / Mathf.Max(0.01f, dist) * Gravity(dist));
     }
 
     void PullAndSwallowAsteroids(Vector2 center)
@@ -303,40 +339,177 @@ public class Goal : MonoBehaviour
             float dist = d.magnitude;
 
             bool devourable = !a.Unstoppable && a.WorldRadius <= maxSwallowRadius;
-            if (devourable && dist <= asteroidHorizon + a.WorldRadius * 0.5f) { a.Release(); continue; }
+            float ah = horizonFromShadow ? Mathf.Max(asteroidHorizon, ShadowRadius() * 1.2f) : asteroidHorizon;
+            if (devourable && dist <= ah + a.WorldRadius * 0.5f) { StartCoroutine(Spaghettify(a)); continue; }
             if (a.Body.bodyType != RigidbodyType2D.Dynamic) continue;
 
-            float k = Mathf.Clamp01(1f - dist / pullRadius);
-            a.ReceivePull(d / Mathf.Max(0.01f, dist) * (pullForce * asteroidPullFactor * k * k));
+            a.ReceivePull(d / Mathf.Max(0.01f, dist) * (Gravity(dist) * asteroidPullFactor));
         }
+    }
+
+    /// G·M del agujero de este nivel: la masa sale de su tamaño
+    public float GM => gravityGM * Mathf.Pow(SizeScale, massExponent);
+
+    // Aceleración a distancia d. Se apaga suave en el último 20 % del alcance (Pull Radius),
+    // para que no haya un borde donde el tirón empiece de golpe
+    float Gravity(float d)
+    {
+        float a = Mathf.Min(maxPullAccel, GM / Mathf.Max(0.05f, d * d));
+        float edge = Mathf.Clamp01((pullRadius - d) / Mathf.Max(0.01f, pullRadius * 0.2f));
+        return a * edge;
+    }
+
+    // ------------------------------------------------------------------ caída
+    // Radio de la sombra negra del dibujo: el horizonte de sucesos que se ve
+    float ShadowRadius() =>
+        discRenderer != null && discRenderer.sprite != null ? discRenderer.bounds.extents.x * shadowFraction : eventHorizon;
+
+    float EffectiveHorizon() =>
+        horizonFromShadow ? Mathf.Max(eventHorizon, ShadowRadius() * horizonOverShadow) : eventHorizon;
+
+    /// Desplazamiento al rojo gravitacional. f = raíz(1 − Rs/r): 1 lejos, 0 en el horizonte.
+    /// La luz pierde energía al salir del pozo: el color se corre al rojo y se apaga hasta
+    /// volverse invisible antes de cruzar. La usa también la llegada del jugador, al revés.
+    public static Color Redshift(Color c, float f)
+    {
+        f = Mathf.Clamp01(f);
+        float bright = Mathf.Pow(f, 0.6f);
+        var o = new Color(c.r * bright, c.g * Mathf.Pow(f, 1.5f) * bright, c.b * Mathf.Pow(f, 2.5f) * bright, c.a);
+        o.a = c.a * Mathf.SmoothStep(0f, 1f, Mathf.InverseLerp(0.12f, 0.35f, f));
+        return o;
     }
 
     IEnumerator Absorb()
     {
         Active = false;
         player.BeginAbsorb();
+        var vis = player.Visual;
+        var sr = vis != null ? vis.GetComponent<SpriteRenderer>() : null;
+        yield return FallIn(player.transform, vis, sr, absorbTime, playerStretch, () => true);
 
-        Transform t = player.transform;
-        Vector3 from = t.position;
-        Vector3 to = transform.position;
-        Vector3 scale0 = t.localScale;
-        float e = 0f;
+        player.transform.localScale = Vector3.zero;
+        if (vis != null) vis.localRotation = Quaternion.identity;
+        Reached?.Invoke();
+    }
 
-        while (e < absorbTime)
+    IEnumerator Spaghettify(Asteroid a)
+    {
+        int serial = a.Serial;
+        a.BeginSwallow();
+        float t = swallowTime * Mathf.Lerp(0.8f, 1.4f, Mathf.Clamp01(a.WorldRadius / Mathf.Max(0.01f, maxSwallowRadius)));
+        bool alive() => a != null && a.isActiveAndEnabled && a.Serial == serial;
+        yield return FallIn(a.transform, null, a.Renderer, t, asteroidStretch, alive);
+        if (alive()) a.Release();
+    }
+
+    // La caída, con las cuatro cosas que hace un agujero negro de verdad:
+    //  1. Marea: la parte cercana cae más deprisa que la lejana. El estiramiento radial crece con
+    //     (Rs/r)³ y el ancho se comprime para conservar el área. A primer orden la marea es una
+    //     deformación lineal, así que estirar y comprimir el sprite es la física correcta; la
+    //     parte delantera va adelantada al centro, y las copias que se quedan atrás dibujan el
+    //     hilo curvo.
+    //  2. Espiral: el giro se acelera al bajar (momento angular, ~1/r²).
+    //  3. Dilatación del tiempo: visto desde fuera, todo se frena con (1 − Rs/r) al llegar al
+    //     horizonte. Nunca lo cruza: se queda congelado en el borde.
+    //  4. Corrimiento al rojo: mientras se congela, su luz se enrojece y se apaga hasta
+    //     desaparecer. Ahí termina.
+    IEnumerator FallIn(Transform t, Transform vis, SpriteRenderer sr, float timeScale, float tidal, System.Func<bool> alive)
+    {
+        Vector2 c = transform.position;
+        Vector2 d0 = (Vector2)t.position - c;
+        float r0 = Mathf.Max(0.05f, d0.magnitude);
+        float rs = Mathf.Min(ShadowRadius(), r0 * 0.7f);
+        float theta = Mathf.Atan2(d0.y, d0.x);
+        float ts = Mathf.Max(0.05f, timeScale);
+        float v0 = r0 / ts;
+        float w0 = spiralDegrees * Mathf.Deg2Rad / ts * (Random.value < 0.5f ? -1f : 1f);
+        Vector3 s0 = t.localScale;
+        Color c0 = sr != null ? sr.color : Color.white;
+        float halfLen = sr != null ? Mathf.Max(sr.bounds.extents.x, sr.bounds.extents.y) : 0.2f;
+        float r = r0, e = 0f, nextGhost = 0f;
+
+        while (true)
         {
-            e += Time.deltaTime;
-            float u = Mathf.Clamp01(e / absorbTime);
-            // Acelera al final: la caída se precipita, no es un deslizamiento uniforme
-            float a = u * u * u;
-            t.position = Vector3.Lerp(from, to, a);
-            t.localScale = scale0 * (1f - a);
-            t.Rotate(0f, 0f, absorbSpin * Time.deltaTime);
+            if (!alive()) yield break;
+            float dt = Time.deltaTime;
+            e += dt;
+
+            float f = Mathf.Sqrt(Mathf.Max(0f, 1f - rs / r));
+            float slow = f * f;                                    // dilatación del tiempo
+            r = Mathf.Max(rs * 1.0005f, r - v0 * Mathf.Sqrt(r0 / r) * slow * dt);
+            theta += w0 * Mathf.Min(8f, (r0 / r) * (r0 / r)) * slow * dt;
+
+            float x = rs / r;
+            float stretch = 1f + tidal * x * x * x;               // marea ~ 1/r³
+            float tang = 1f / Mathf.Sqrt(stretch);
+            Vector2 dir = new Vector2(Mathf.Cos(theta), Mathf.Sin(theta));
+            float ang = Mathf.Atan2(-dir.y, -dir.x) * Mathf.Rad2Deg;
+            float lead = Mathf.Min((stretch - 1f) * 0.3f * halfLen, (r - rs) * 0.5f);
+            Vector2 pos = c + dir * (r - lead);
+
+            t.position = pos;
+            t.rotation = Quaternion.Euler(0f, 0f, ang);
+            t.localScale = new Vector3(s0.x * stretch, s0.y * tang, s0.z);
+            if (vis != null) vis.localRotation = Quaternion.Euler(0f, 0f, -ang);
+            Color col = Redshift(c0, f);
+            if (sr != null) sr.color = col;
+
+            if (ghostTrail && PerformanceManager.FallGhosts && sr != null && sr.sprite != null && e >= nextGhost)
+            {
+                nextGhost = e + ghostEvery;
+                SpawnGhost(sr, pos, ang, new Vector2(s0.x * stretch, s0.y * tang), vis != null ? -ang : 0f,
+                           vis != null ? vis.localScale : Vector3.one, col);
+            }
+
+            if (f < 0.12f || e > ts * maxFallFactor) break;
             yield return null;
         }
+    }
 
-        t.position = to;
-        t.localScale = Vector3.zero;
-        Reached?.Invoke();
+    // ------------------------------------------------------------------ hilo de copias
+    class Ghost { public Transform root; public SpriteRenderer sr; public float age; public Color color; }
+    readonly List<Ghost> ghosts = new List<Ghost>();
+
+    void SpawnGhost(SpriteRenderer src, Vector2 pos, float ang, Vector2 rootScale, float childRot, Vector3 childScale, Color col)
+    {
+        Ghost g = null;
+        foreach (var x in ghosts) if (!x.root.gameObject.activeSelf) { g = x; break; }
+        if (g == null)
+        {
+            var root = new GameObject("FallGhost").transform;
+            var child = new GameObject("Sprite").transform;
+            child.SetParent(root, false);
+            g = new Ghost { root = root, sr = child.gameObject.AddComponent<SpriteRenderer>() };
+            ghosts.Add(g);
+        }
+        g.root.gameObject.SetActive(true);
+        g.root.SetPositionAndRotation(pos, Quaternion.Euler(0f, 0f, ang));
+        g.root.localScale = new Vector3(rootScale.x, rootScale.y, 1f);
+        g.sr.transform.localRotation = Quaternion.Euler(0f, 0f, childRot);
+        g.sr.transform.localScale = childScale;
+        g.sr.sprite = src.sprite;
+        g.sr.flipX = src.flipX;
+        g.sr.flipY = src.flipY;
+        g.sr.sortingLayerID = src.sortingLayerID;
+        g.sr.sortingOrder = src.sortingOrder - 1;
+        g.color = col;
+        g.age = 0f;
+        g.sr.color = col;
+    }
+
+    void LateUpdate()
+    {
+        float dt = Time.deltaTime;
+        foreach (var g in ghosts)
+        {
+            if (!g.root.gameObject.activeSelf) continue;
+            g.age += dt;
+            float k = 1f - g.age / Mathf.Max(0.01f, ghostLife);
+            if (k <= 0f) { g.root.gameObject.SetActive(false); continue; }
+            var col = g.color;
+            col.a *= 0.45f * k * k;
+            g.sr.color = col;
+        }
     }
 
     void OnDrawGizmosSelected()
@@ -344,6 +517,6 @@ public class Goal : MonoBehaviour
         Gizmos.color = new Color(0.6f, 0.4f, 1f, 0.5f);
         Gizmos.DrawWireSphere(transform.position, pullRadius);
         Gizmos.color = new Color(1f, 0.3f, 0.3f, 0.8f);
-        Gizmos.DrawWireSphere(transform.position, eventHorizon);
+        Gizmos.DrawWireSphere(transform.position, Application.isPlaying ? EffectiveHorizon() : eventHorizon);
     }
 }

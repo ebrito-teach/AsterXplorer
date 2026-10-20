@@ -8,6 +8,9 @@ public class Asteroid : MonoBehaviour
     public static float SpeedMultiplier = 1f;
     /// Desprendimientos y fragmentos vivos en este momento
     public static int DebrisAlive { get; private set; }
+    /// Masa típica de un estático en este nivel (la mediana). Contra ella se mide si un
+    /// estático es "masivo": sus satélites giran más rápido y su campo frena más
+    public static float StaticMassRef = 1f;
     /// Cambia cada vez que el pool reutiliza este objeto. Sirve para saber si una
     /// referencia guardada sigue apuntando al mismo asteroide o ya es otro.
     public int Serial { get; private set; }
@@ -32,11 +35,13 @@ public class Asteroid : MonoBehaviour
     {
         get
         {
-            if (Type == null) return false;
-            // Un trozo por debajo del radio mínimo empuja, pero no mata
-            if (Type.lethalMinRadius > 0f && WorldRadius < Type.lethalMinRadius) return false;
+            if (Type == null || swallowed) return false;
+            // Lo que orbita mata según su anfitrión, sea del tamaño que sea: los satélites de
+            // un campo son peligrosos aunque sean pequeños
             if (orbitHost != null)
                 return orbitHost.Type != null && orbitHost.Type.moonsAreLethal;
+            // Un trozo por debajo del radio mínimo empuja, pero no mata
+            if (Type.lethalMinRadius > 0f && WorldRadius < Type.lethalMinRadius) return false;
             return Type.killsPlayer || dislodged;
         }
     }
@@ -68,7 +73,7 @@ public class Asteroid : MonoBehaviour
     float pulledUntil;
     float wakeAccum;
     Vector2 lastVelocity;      // velocidad con la que entró en el paso de física
-    bool followsFlow, restoreInterpolation, dislodged, countedAsDebris, isTrail;
+    bool followsFlow, restoreInterpolation, dislodged, countedAsDebris, isTrail, swallowed;
     bool captureRollUsed;
     bool unstoppable;          // cinemático a propósito: nada puede desviarlo
     bool hasEnteredView;       // ya se ha dejado ver al menos una vez
@@ -77,6 +82,7 @@ public class Asteroid : MonoBehaviour
     // Órbita
     Asteroid orbitHost;
     float orbitRadius, orbitAngle, orbitSpeed, orbitSpin;
+    float orbitRadiusNow;      // se acerca a orbitRadius poco a poco: una luna capturada no salta
     readonly List<Asteroid> moons = new List<Asteroid>();
 
     static readonly Collider2D[] overlapBuffer = new Collider2D[16];
@@ -112,6 +118,9 @@ public class Asteroid : MonoBehaviour
         Serial = ++serialCounter;
 
         dislodged = false;
+        swallowed = false;
+        if (rb != null) rb.simulated = true;
+        if (col != null) col.enabled = true;
         isTrail = false;
         orbitHost = null;
         moons.Clear();
@@ -304,6 +313,34 @@ public class Asteroid : MonoBehaviour
         TrySpawnEscort();
     }
 
+    /// Campo de satélites de un estático: nace ya rodeado de cuerpos en órbita a varias alturas.
+    ///
+    /// Tercera ley de Kepler: el periodo al cuadrado va con el radio al cubo, o sea, la velocidad
+    /// angular cae con r^1.5. Los cercanos giran deprisa y los lejanos despacio, y un anfitrión
+    /// más masivo los hace girar a todos más rápido (raíz de la masa). Todos en el mismo
+    /// sentido, como en un sistema real: el material de un disco gira junto.
+    public void SpawnField(AsteroidTypeData[] types, int count, Vector2 distance, float degPerSecAtRef, float refRadius)
+    {
+        if (pool == null || types == null || types.Length == 0 || count <= 0) return;
+        float massK = Mathf.Sqrt(Mathf.Max(0.001f, Mass) / Mathf.Max(0.001f, StaticMassRef));
+        float sense = Random.value < 0.5f ? -1f : 1f;
+        float step = 360f / count;
+        float a0 = Random.Range(0f, 360f);
+
+        for (int i = 0; i < count; i++)
+        {
+            var type = types[Random.Range(0, types.Length)];
+            if (type == null || type.sprites == null || type.sprites.Length == 0) continue;
+            var m = pool.Spawn(type, rb.position, type.RandomSize());
+            if (m == null) continue;
+
+            float r = WorldRadius + m.WorldRadius + Random.Range(distance.x, distance.y);
+            float w = degPerSecAtRef * massK * Mathf.Pow(Mathf.Max(0.1f, refRadius) / r, 1.5f);
+            w = Mathf.Clamp(w, 6f, 240f) * sense;
+            m.EnterOrbit(this, a0 + step * i + Random.Range(-step * 0.35f, step * 0.35f), r, w);
+        }
+    }
+
     /// Un cuerpo grande puede ENTRAR al mapa ya acompañado.
     ///
     /// Antes el séquito solo se formaba chocando durante la partida, así que el coloso llegaba
@@ -373,6 +410,7 @@ public class Asteroid : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (swallowed) return;
         Simulate();
         // Con qué velocidad entra al paso de física: al resolverse el choque, comparar
         // con la de salida nos dice si me empujaron a mí o si choqué yo.
@@ -541,13 +579,32 @@ public class Asteroid : MonoBehaviour
         }
 
         orbitAngle += barrido * Time.fixedDeltaTime;
+        orbitRadiusNow = Mathf.MoveTowards(orbitRadiusNow, orbitRadius, 2.5f * Time.fixedDeltaTime);
         Vector2 center = orbitHost.Body.position;
-        Vector2 offset = FlowField.FromAngle(orbitAngle) * orbitRadius;
+        float rNow = orbitRadiusNow;
+        Vector2 offset = FlowField.FromAngle(orbitAngle) * rNow;
 
-        // Si el anfitrión se mueve, el cortejo se arrastra DETRÁS: eso es la estela
+        // Si el anfitrión se mueve, el séquito se estira detrás y se cierra en embudo. Antes
+        // se desplazaba el anillo entero hacia atrás, y las lunas de delante acababan pegadas
+        // al casco: por eso parecía que se le adherían. Ahora lo de delante se queda en su
+        // radio y solo lo de detrás se alarga y se estrecha
         float trail = orbitHost.Type.moonTrail;
         if (trail > 0f && hv.sqrMagnitude > 0.01f)
-            offset -= hv.normalized * (orbitRadius * trail);
+        {
+            Vector2 f = hv.normalized;
+            Vector2 s = new Vector2(-f.y, f.x);
+            float rel = (orbitAngle - Mathf.Atan2(f.y, f.x) * Mathf.Rad2Deg) * Mathf.Deg2Rad;
+            float c = Mathf.Cos(rel), sn = Mathf.Sin(rel);
+            float back = Mathf.Max(0f, -c);                          // 0 delante y a los lados, 1 en la cola
+            float along = c * rNow * (1f + back * trail * 2.5f);
+            float lateral = sn * rNow * (1f - orbitHost.Type.moonFunnel * back);
+            offset = f * along + s * lateral;
+        }
+
+        // Nunca más cerca del casco que su hueco mínimo
+        float minR = orbitHost.WorldRadius + WorldRadius + Mathf.Max(0.05f, orbitHost.Type.moonGap) * 0.8f;
+        if (offset.sqrMagnitude < minR * minR && rNow >= minR)
+            offset = (offset.sqrMagnitude > 0.0001f ? offset.normalized : FlowField.FromAngle(orbitAngle)) * minR;
 
         rb.MovePosition(center + offset);
         rb.MoveRotation(rb.rotation + orbitSpin * Time.fixedDeltaTime);
@@ -572,31 +629,48 @@ public class Asteroid : MonoBehaviour
 
         Vector2 d = rb.position - host.Body.position;
         if (d.sqrMagnitude < 0.0001f) d = Random.insideUnitCircle.normalized;
-        EnterOrbit(host, Mathf.Atan2(d.y, d.x) * Mathf.Rad2Deg);
+        // Capturado tras un choque: se aleja hasta su órbita desde donde está, sin saltar
+        EnterOrbit(host, Mathf.Atan2(d.y, d.x) * Mathf.Rad2Deg, false);
         return true;
     }
 
     /// Entra en la órbita de un anfitrión. Lo usan la captura por choque y el séquito de
     /// nacimiento, para que una luna capturada y una que llegó con el cuerpo se comporten
     /// exactamente igual.
-    public void EnterOrbit(Asteroid host, float angleDeg)
+    public void EnterOrbit(Asteroid host, float angleDeg, bool placeNow = true)
     {
-        orbitHost = host;
-        host.moons.Add(this);
-
-        orbitAngle = angleDeg;
-
         // El hueco extra es lo que convierte una costra en un séquito. Con solo moonGap todas
         // las lunas orbitaban pegadas a la superficie y el conjunto se leía como un solo
         // cuerpo con bultos; repartiéndolas en varias alturas se ve lo que son — cuerpos
         // sueltos que viajan con él, no adheridos a él.
         float extra = Random.Range(host.Type.moonOrbitExtra.x, host.Type.moonOrbitExtra.y);
-        orbitRadius = host.WorldRadius + WorldRadius
-                    + Mathf.Max(0.05f, host.Type.moonGap) + Mathf.Max(0f, extra);
+        float radius = host.WorldRadius + WorldRadius
+                     + Mathf.Max(0.05f, host.Type.moonGap) + Mathf.Max(0f, extra);
+        float speed = Random.Range(host.Type.moonOrbitSpeed.x, host.Type.moonOrbitSpeed.y)
+                      * (Random.value < 0.5f ? -1f : 1f);
+        EnterOrbit(host, angleDeg, radius, speed, placeNow);
+    }
 
-        orbitSpeed = Random.Range(host.Type.moonOrbitSpeed.x, host.Type.moonOrbitSpeed.y)
-                     * (Random.value < 0.5f ? -1f : 1f);
+    /// Con radio y velocidad angular (grados/s) concretos. Lo usa el campo de satélites, que
+    /// los calcula con Kepler.
+    public void EnterOrbit(Asteroid host, float angleDeg, float radius, float speedDeg, bool placeNow = true)
+    {
+        orbitHost = host;
+        host.moons.Add(this);
+        orbitAngle = angleDeg;
+        orbitRadius = radius;
+        orbitSpeed = speedDeg;
         orbitSpin = Random.Range(-90f, 90f);
+
+        if (placeNow)
+        {
+            // Ya en su sitio: si naciera en el centro del anfitrión, un fotograma estaría dentro de él
+            Vector2 at = host.Body.position + FlowField.FromAngle(angleDeg) * radius;
+            rb.position = at;
+            transform.position = new Vector3(at.x, at.y, transform.position.z);
+            orbitRadiusNow = radius;
+        }
+        else orbitRadiusNow = Vector2.Distance(rb.position, host.Body.position);
 
         rb.linearVelocity = Vector2.zero;
         rb.angularVelocity = 0f;
@@ -762,6 +836,22 @@ public class Asteroid : MonoBehaviour
             float k = Mathf.Clamp01(1f - (dist - WorldRadius) / span);
             Vector2 toCenter = d / dist;
 
+            // Capa de equilibrio: por dentro de Pull Shell el tirón se vuelve empuje. Sin esto
+            // todo lo atraído acababa apretado contra el casco, viajando pegado a él
+            float surface = dist - WorldRadius - t.WorldRadius;
+            float shell = Mathf.Max(0f, Type.pullShell);
+            if (shell > 0f && surface < shell)
+            {
+                float push = 1f - Mathf.Max(0f, surface) / shell;
+                Vector2 away = -toCenter * (Type.pullForce * 1.6f * push);
+                // y hacia la cola, para que el enjambre se quede detrás
+                Vector2 hv0 = rb.linearVelocity;
+                if (Type.pullTailDrift > 0f && hv0.sqrMagnitude > 0.01f)
+                    away += -hv0.normalized * (Type.pullForce * Type.pullTailDrift * push);
+                t.ReceivePull(away);
+                continue;
+            }
+
             // Un tirón puramente radial hace que todo caiga en picado contra el casco y se
             // quede ahí amontonado. En un campo gravitatorio real los cuerpos NO caen en línea
             // recta: espiralan. La componente tangencial es lo que convierte el amontonamiento
@@ -778,7 +868,12 @@ public class Asteroid : MonoBehaviour
                 accel = Vector2.Lerp(toCenter, side, tg).normalized;
             }
 
-            t.ReceivePull(accel * (Type.pullForce * k * k));
+            Vector2 pull = accel * (Type.pullForce * k * k);
+            // Lo que atrae se va quedando en la cola si el coloso viaja
+            Vector2 hv = rb.linearVelocity;
+            if (Type.pullTailDrift > 0f && hv.sqrMagnitude > 0.01f)
+                pull += -hv.normalized * (Type.pullForce * Type.pullTailDrift * k);
+            t.ReceivePull(pull);
         }
     }
 
@@ -891,14 +986,14 @@ public class Asteroid : MonoBehaviour
             if (piece == null) continue;
             piece.SetMotion(Vector2.zero, Random.Range(-20f, 20f));
             piece.MakeTrail();
-            CometTrail.Register(piece, prof.maxTrailPieces, prof.trailFadeSeconds);
+            CometTrail.Register(piece, Mathf.Max(8, Mathf.RoundToInt(prof.maxTrailPieces * PerformanceManager.DebrisAmount)), prof.trailFadeSeconds);
         }
     }
 
     // Lo de siempre: abanico detrás, y cada pieza decide si se queda, deriva o lo sigue.
     void ShedScatter(CometProfile prof, Vector2 vel, Vector2 fwd, Vector2 side)
     {
-        if (DebrisAlive >= prof.maxDebrisAlive) return;
+        if (DebrisAlive >= Mathf.RoundToInt(prof.maxDebrisAlive * PerformanceManager.DebrisAmount)) return;
 
         int count = Random.Range(prof.piecesPerShed.x, prof.piecesPerShed.y + 1);
         for (int i = 0; i < count; i++)
@@ -1069,6 +1164,25 @@ public class Asteroid : MonoBehaviour
         // Devolverlas a dinámicas: si solo les quitara el anfitrión se quedarían
         // cinemáticas y congeladas para siempre en mitad del nivel.
         ReleaseMoons(Vector2.zero);
+    }
+
+    /// Está cayendo en el agujero negro: sin física, sin choques y sin matar. La animación la
+    /// lleva el Goal; al terminar llama a Release.
+    public bool IsSwallowed => swallowed;
+    public SpriteRenderer Renderer => sr;
+
+    public void BeginSwallow()
+    {
+        swallowed = true;
+        lifetimeEnd = -1f;
+        ReleaseMoons(rb != null ? rb.linearVelocity : Vector2.zero);
+        if (rb != null)
+        {
+            rb.linearVelocity = Vector2.zero;
+            rb.angularVelocity = 0f;
+            rb.simulated = false;
+        }
+        if (col != null) col.enabled = false;
     }
 
     public void Release()

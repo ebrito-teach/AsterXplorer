@@ -113,6 +113,8 @@ public class Settings
     public bool music = true;
     public bool vibration = true;
     public bool screenEffects = true;        // sacudida y destellos
+    /// Calidad de gráficos: -1 = Auto (la decide PerformanceManager midiendo), 0 Bajo, 1 Medio, 2 Alto
+    public int graphicsQuality = -1;
     public ControlScheme control = ControlScheme.Joystick;
     /// De qué lado de la pantalla van los mandos. Zurdos y diestros sujetan el móvil
     /// distinto; es un booleano y evita que media base de jugadores juegue incómoda.

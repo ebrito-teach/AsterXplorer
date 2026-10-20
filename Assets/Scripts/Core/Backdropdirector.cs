@@ -93,7 +93,7 @@ public class BackdropDirector : MonoBehaviour
         var report = new System.Text.StringBuilder();
 
         // ---- nebulosas: elegir, cargar las nuevas y soltar las que ya no hacen falta
-        int nNeb = nebulaCount > 0 ? Range(nebulasPerMap.x, nebulasPerMap.y) : 0;
+        int nNeb = nebulaCount > 0 ? Mathf.Min(PerformanceManager.MaxNebulas, Range(nebulasPerMap.x, nebulasPerMap.y)) : 0;
         var pick = new List<int>();
         var order = Shuffled(Mathf.Max(0, nebulaCount));
         for (int i = 0; i < order.Length && pick.Count < nNeb; i++) pick.Add(order[i] + 1);
@@ -131,7 +131,7 @@ public class BackdropDirector : MonoBehaviour
 
         // ---- objetos lejanos
         foreach (var p in things) p.sr.gameObject.SetActive(false);
-        int nObj = objects != null && objects.Length > 0 ? Range(objectsPerMap.x, objectsPerMap.y) : 0;
+        int nObj = objects != null && objects.Length > 0 ? Mathf.Min(PerformanceManager.MaxFarObjects, Range(objectsPerMap.x, objectsPerMap.y)) : 0;
         var objOrder = Shuffled(objects != null ? objects.Length : 0);
         var placed = new List<Vector2>();
         int count = 0;
