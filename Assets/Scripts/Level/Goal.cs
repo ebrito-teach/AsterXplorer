@@ -67,10 +67,15 @@ public class Goal : MonoBehaviour
     [SerializeField] private bool reachScalesWithSize = true;
     [Tooltip("Margen con el borde del mundo, en unidades, además del propio tamaño del dibujo")]
     [SerializeField] private float edgeMargin = 1f;
-    [Tooltip("Puede quedar pegado al límite del mundo con parte del dibujo fuera de la vista: " +
-             "ver solo un trozo del disco y del halo lo hace sentir aún más enorme. Siempre se " +
-             "puede llegar a su horizonte")]
+    [Tooltip("Su centro queda justo sobre el límite del mundo: se ve la mitad de dentro y la de " +
+             "fuera no. Ver solo una parte del disco y del halo lo hace sentir aún más enorme. " +
+             "Medio horizonte queda dentro, así que siempre se puede llegar")]
     [SerializeField] private bool allowPartiallyHidden = true;
+    [Tooltip("A lo largo del borde contrario: peso de caer en el centro, en una esquina y en " +
+             "cualquier punto. En una esquina solo se ve un cuarto")]
+    [SerializeField] private float centerWeight = 0.35f;
+    [SerializeField] private float cornerWeight = 0.35f;
+    [SerializeField] private float anyWeight = 0.3f;
 
     [Header("Gravitación universal (F)")]
     [Tooltip("G·M de un agujero negro de tamaño 1: la aceleración (u/s²) a 1 unidad del centro. " +
@@ -231,11 +236,23 @@ public class Goal : MonoBehaviour
         // coordenada, al azar
         float dx = Mathf.Min(playerSpawn.x - a.xMin, a.xMax - playerSpawn.x) / Mathf.Max(0.01f, a.width);
         float dy = Mathf.Min(playerSpawn.y - a.yMin, a.yMax - playerSpawn.y) / Mathf.Max(0.01f, a.height);
+        // Medio oculto: el centro, justo sobre el límite del mundo en el lado contrario; la mitad
+        // de fuera queda sin ver. Medio horizonte sigue dentro, así que se puede llegar a él.
+        // En el otro eje, con margen para que no caiga en una esquina
+        float ex0 = allowPartiallyHidden ? a.xMin : x0, ex1 = allowPartiallyHidden ? a.xMax : x1;
+        float ey0 = allowPartiallyHidden ? a.yMin : y0, ey1 = allowPartiallyHidden ? a.yMax : y1;
+        // Centro, esquina o cualquier punto del borde. Medio oculto, puede llegar hasta la
+        // esquina misma; el siguiente nivel recuerda el tipo para que el jugador salga igual
+        var slot = PlayerStart.PickSlot(centerWeight, cornerWeight, anyWeight);
+        PlayerStart.LastGoalSlot = slot;
+        float t = PlayerStart.SlotT(slot);
+        float ay0 = allowPartiallyHidden ? a.yMin : y0, ay1 = allowPartiallyHidden ? a.yMax : y1;
+        float ax0 = allowPartiallyHidden ? a.xMin : x0, ax1 = allowPartiallyHidden ? a.xMax : x1;
         Vector2 p;
         if (dx <= dy)
-            p = new Vector2(playerSpawn.x < a.center.x ? x1 : x0, Random.Range(y0, y1));
+            p = new Vector2(playerSpawn.x < a.center.x ? ex1 : ex0, Mathf.Lerp(ay0, ay1, t));
         else
-            p = new Vector2(Random.Range(x0, x1), playerSpawn.y < a.center.y ? y1 : y0);
+            p = new Vector2(Mathf.Lerp(ax0, ax1, t), playerSpawn.y < a.center.y ? ey1 : ey0);
 
         transform.position = new Vector3(p.x, p.y, transform.position.z);
 
@@ -245,7 +262,7 @@ public class Goal : MonoBehaviour
         gb.SetGoalZone(new Rect(p.x - r, p.y - r, 2f * r, 2f * r));
         Active = true;
 
-        Debug.Log($"Goal: escala {SizeScale:0.00} (dibujo x{drawScale:0.00}), en {p}, " +
+        Debug.Log($"Goal: {slot}, escala {SizeScale:0.00} (dibujo x{drawScale:0.00}), en {p}, " +
                   $"a {Vector2.Distance(p, playerSpawn):0.0} u del jugador.");
     }
 
@@ -363,6 +380,9 @@ public class Goal : MonoBehaviour
     // Radio de la sombra negra del dibujo: el horizonte de sucesos que se ve
     float ShadowRadius() =>
         discRenderer != null && discRenderer.sprite != null ? discRenderer.bounds.extents.x * shadowFraction : eventHorizon;
+
+    /// Radio de la sombra negra (el centro que se ve). Lo usa la cámara para encuadrar la meta
+    public float CoreRadius => ShadowRadius();
 
     float EffectiveHorizon() =>
         horizonFromShadow ? Mathf.Max(eventHorizon, ShadowRadius() * horizonOverShadow) : eventHorizon;

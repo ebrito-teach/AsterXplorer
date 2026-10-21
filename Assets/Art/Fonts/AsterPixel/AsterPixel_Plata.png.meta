@@ -1,0 +1,5343 @@
+fileFormatVersion: 2
+guid: 3e595c2a46501b6498aff9641e7e3b5d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3615976069032342707
+    second: AsterPixel_Plata_0
+  - first:
+      213: -2794854979944774781
+    second: AsterPixel_Plata_1
+  - first:
+      213: -3588866112281636086
+    second: AsterPixel_Plata_2
+  - first:
+      213: -2378096380768461244
+    second: AsterPixel_Plata_3
+  - first:
+      213: 1462435160545063937
+    second: AsterPixel_Plata_4
+  - first:
+      213: -9157639111927142938
+    second: AsterPixel_Plata_5
+  - first:
+      213: 2311505786438768765
+    second: AsterPixel_Plata_6
+  - first:
+      213: -3945161940796240220
+    second: AsterPixel_Plata_7
+  - first:
+      213: 7696864624496436670
+    second: AsterPixel_Plata_8
+  - first:
+      213: -834754078778199552
+    second: AsterPixel_Plata_9
+  - first:
+      213: -2167721656443363258
+    second: AsterPixel_Plata_10
+  - first:
+      213: 8392555438148352940
+    second: AsterPixel_Plata_11
+  - first:
+      213: -699130173320629141
+    second: AsterPixel_Plata_12
+  - first:
+      213: -1513433132939926017
+    second: AsterPixel_Plata_13
+  - first:
+      213: 208194819923348023
+    second: AsterPixel_Plata_14
+  - first:
+      213: -2376666815641471881
+    second: AsterPixel_Plata_15
+  - first:
+      213: -575544110849588052
+    second: AsterPixel_Plata_16
+  - first:
+      213: -2130255919061462543
+    second: AsterPixel_Plata_17
+  - first:
+      213: -7543396818714671460
+    second: AsterPixel_Plata_18
+  - first:
+      213: -2781744105453668642
+    second: AsterPixel_Plata_19
+  - first:
+      213: -5500879088201760425
+    second: AsterPixel_Plata_20
+  - first:
+      213: -5510653959404375355
+    second: AsterPixel_Plata_21
+  - first:
+      213: -1918523751357461250
+    second: AsterPixel_Plata_22
+  - first:
+      213: 7322463380911589803
+    second: AsterPixel_Plata_23
+  - first:
+      213: -2590604896766888049
+    second: AsterPixel_Plata_24
+  - first:
+      213: -2308913932035097940
+    second: AsterPixel_Plata_25
+  - first:
+      213: -124305787544884449
+    second: AsterPixel_Plata_26
+  - first:
+      213: -3280335992827582268
+    second: AsterPixel_Plata_27
+  - first:
+      213: 7961659849722106614
+    second: AsterPixel_Plata_28
+  - first:
+      213: 6031095003518747409
+    second: AsterPixel_Plata_29
+  - first:
+      213: 5955081022774506066
+    second: AsterPixel_Plata_30
+  - first:
+      213: -1759774615943867938
+    second: AsterPixel_Plata_31
+  - first:
+      213: 7749232701913276087
+    second: AsterPixel_Plata_32
+  - first:
+      213: -1975744966561671767
+    second: AsterPixel_Plata_33
+  - first:
+      213: 6017526634803025089
+    second: AsterPixel_Plata_34
+  - first:
+      213: -3401769520938912684
+    second: AsterPixel_Plata_35
+  - first:
+      213: 97911503522616358
+    second: AsterPixel_Plata_36
+  - first:
+      213: 4395515646181074589
+    second: AsterPixel_Plata_37
+  - first:
+      213: 5186499541182857961
+    second: AsterPixel_Plata_38
+  - first:
+      213: -3762955982502277725
+    second: AsterPixel_Plata_39
+  - first:
+      213: 2767754146570234444
+    second: AsterPixel_Plata_40
+  - first:
+      213: -3473234853232749327
+    second: AsterPixel_Plata_41
+  - first:
+      213: 6517136281612000569
+    second: AsterPixel_Plata_42
+  - first:
+      213: -8804667755322066796
+    second: AsterPixel_Plata_43
+  - first:
+      213: -9002404459458142314
+    second: AsterPixel_Plata_44
+  - first:
+      213: 8832473476521469551
+    second: AsterPixel_Plata_45
+  - first:
+      213: -6025251973553559597
+    second: AsterPixel_Plata_46
+  - first:
+      213: 1069821839234450801
+    second: AsterPixel_Plata_47
+  - first:
+      213: 2687780294577011975
+    second: AsterPixel_Plata_48
+  - first:
+      213: 1120837931710332292
+    second: AsterPixel_Plata_49
+  - first:
+      213: 6247954762454416739
+    second: AsterPixel_Plata_50
+  - first:
+      213: -915241393248635263
+    second: AsterPixel_Plata_51
+  - first:
+      213: 4732085402748654237
+    second: AsterPixel_Plata_52
+  - first:
+      213: -8586384370838380598
+    second: AsterPixel_Plata_53
+  - first:
+      213: 1165507722072561555
+    second: AsterPixel_Plata_54
+  - first:
+      213: -927996913068526262
+    second: AsterPixel_Plata_55
+  - first:
+      213: -6598770526370973442
+    second: AsterPixel_Plata_56
+  - first:
+      213: -306965123744423903
+    second: AsterPixel_Plata_57
+  - first:
+      213: 1502181537634328064
+    second: AsterPixel_Plata_58
+  - first:
+      213: -4924388268401418959
+    second: AsterPixel_Plata_59
+  - first:
+      213: -3172383116745967213
+    second: AsterPixel_Plata_60
+  - first:
+      213: -2599861255802818340
+    second: AsterPixel_Plata_61
+  - first:
+      213: 1927403745157739422
+    second: AsterPixel_Plata_62
+  - first:
+      213: -5752555227580951306
+    second: AsterPixel_Plata_63
+  - first:
+      213: 7506013229823468033
+    second: AsterPixel_Plata_64
+  - first:
+      213: 5405404801683438706
+    second: AsterPixel_Plata_65
+  - first:
+      213: 5629956064658772199
+    second: AsterPixel_Plata_66
+  - first:
+      213: -1761497371411805331
+    second: AsterPixel_Plata_67
+  - first:
+      213: 6746633178070030703
+    second: AsterPixel_Plata_68
+  - first:
+      213: 7544904850998637764
+    second: AsterPixel_Plata_69
+  - first:
+      213: 5840572690199098984
+    second: AsterPixel_Plata_70
+  - first:
+      213: 1370014914356303767
+    second: AsterPixel_Plata_71
+  - first:
+      213: 4864715249543721141
+    second: AsterPixel_Plata_72
+  - first:
+      213: -6889541911943134456
+    second: AsterPixel_Plata_73
+  - first:
+      213: -1671909542000277651
+    second: AsterPixel_Plata_74
+  - first:
+      213: -565655909414613775
+    second: AsterPixel_Plata_75
+  - first:
+      213: -6564451427787342952
+    second: AsterPixel_Plata_76
+  - first:
+      213: 6443764656746816997
+    second: AsterPixel_Plata_77
+  - first:
+      213: 2017589390296413648
+    second: AsterPixel_Plata_78
+  - first:
+      213: -2850125240707628991
+    second: AsterPixel_Plata_79
+  - first:
+      213: 1903602867183364247
+    second: AsterPixel_Plata_80
+  - first:
+      213: 405246732995923896
+    second: AsterPixel_Plata_81
+  - first:
+      213: 2992733148162840292
+    second: AsterPixel_Plata_82
+  - first:
+      213: -2134550515243763049
+    second: AsterPixel_Plata_83
+  - first:
+      213: -3196891215510994892
+    second: AsterPixel_Plata_84
+  - first:
+      213: -4678932657600125322
+    second: AsterPixel_Plata_85
+  - first:
+      213: -361086090317825337
+    second: AsterPixel_Plata_86
+  - first:
+      213: 1661231712623940124
+    second: AsterPixel_Plata_87
+  - first:
+      213: 2781870345530079052
+    second: AsterPixel_Plata_88
+  - first:
+      213: -6602337479680030523
+    second: AsterPixel_Plata_89
+  - first:
+      213: 5432176908430370270
+    second: AsterPixel_Plata_90
+  - first:
+      213: -368920162470515985
+    second: AsterPixel_Plata_91
+  - first:
+      213: -8331301736931702153
+    second: AsterPixel_Plata_92
+  - first:
+      213: -4441933070118334637
+    second: AsterPixel_Plata_93
+  - first:
+      213: 6566239150184878333
+    second: AsterPixel_Plata_94
+  - first:
+      213: 8091851665537365447
+    second: AsterPixel_Plata_95
+  - first:
+      213: -3686606808797339258
+    second: AsterPixel_Plata_96
+  - first:
+      213: -2536644656506673451
+    second: AsterPixel_Plata_97
+  - first:
+      213: 3715047657391847125
+    second: AsterPixel_Plata_98
+  - first:
+      213: 8812900367764595338
+    second: AsterPixel_Plata_99
+  - first:
+      213: -7160884953690719157
+    second: AsterPixel_Plata_100
+  - first:
+      213: 342412977629537447
+    second: AsterPixel_Plata_101
+  - first:
+      213: -5596605116070212441
+    second: AsterPixel_Plata_102
+  - first:
+      213: -7798567156382296928
+    second: AsterPixel_Plata_103
+  - first:
+      213: 9068656025997931592
+    second: AsterPixel_Plata_104
+  - first:
+      213: 6521519163768086382
+    second: AsterPixel_Plata_105
+  - first:
+      213: 3747489175540439569
+    second: AsterPixel_Plata_106
+  - first:
+      213: 384245223864680502
+    second: AsterPixel_Plata_107
+  - first:
+      213: -230371849619402949
+    second: AsterPixel_Plata_108
+  - first:
+      213: 8046459770622353903
+    second: AsterPixel_Plata_109
+  - first:
+      213: 4216209614355865815
+    second: AsterPixel_Plata_110
+  - first:
+      213: 2827641810124911196
+    second: AsterPixel_Plata_111
+  - first:
+      213: -7028390617497125604
+    second: AsterPixel_Plata_112
+  - first:
+      213: -3900508237697900045
+    second: AsterPixel_Plata_113
+  - first:
+      213: 4837296236262902410
+    second: AsterPixel_Plata_114
+  - first:
+      213: 4749597142661715090
+    second: AsterPixel_Plata_115
+  - first:
+      213: -7223848826910337947
+    second: AsterPixel_Plata_116
+  - first:
+      213: 5685903931166206062
+    second: AsterPixel_Plata_117
+  - first:
+      213: 5006002645797241770
+    second: AsterPixel_Plata_118
+  - first:
+      213: 6879469543592437671
+    second: AsterPixel_Plata_119
+  - first:
+      213: 1535367913496035198
+    second: AsterPixel_Plata_120
+  - first:
+      213: -5908103699908864448
+    second: AsterPixel_Plata_121
+  - first:
+      213: -8734751965586313575
+    second: AsterPixel_Plata_122
+  - first:
+      213: 6257843551336069959
+    second: AsterPixel_Plata_123
+  - first:
+      213: -3876360295866191820
+    second: AsterPixel_Plata_124
+  - first:
+      213: 2301282488159771710
+    second: AsterPixel_Plata_125
+  - first:
+      213: -5012739665545087956
+    second: AsterPixel_Plata_126
+  - first:
+      213: -6179503403635246081
+    second: AsterPixel_Plata_127
+  - first:
+      213: 8233088035332639459
+    second: AsterPixel_Plata_128
+  - first:
+      213: -4532931067101864890
+    second: AsterPixel_Plata_129
+  - first:
+      213: 5908278037950691565
+    second: AsterPixel_Plata_130
+  - first:
+      213: -1100062278942942363
+    second: AsterPixel_Plata_131
+  - first:
+      213: -5484259799045639535
+    second: AsterPixel_Plata_132
+  - first:
+      213: -5625383571975593095
+    second: AsterPixel_Plata_133
+  - first:
+      213: 7312731399995115105
+    second: AsterPixel_Plata_134
+  - first:
+      213: -4852108118308983275
+    second: AsterPixel_Plata_135
+  - first:
+      213: 6797007707320171298
+    second: AsterPixel_Plata_136
+  - first:
+      213: 5761236296193657948
+    second: AsterPixel_Plata_137
+  - first:
+      213: -7894139746141358108
+    second: AsterPixel_Plata_138
+  - first:
+      213: 3199029927200668559
+    second: AsterPixel_Plata_139
+  - first:
+      213: 6436618498775999342
+    second: AsterPixel_Plata_140
+  - first:
+      213: -6827430742334647520
+    second: AsterPixel_Plata_141
+  - first:
+      213: 7507818448993311797
+    second: AsterPixel_Plata_142
+  - first:
+      213: -7718434940093937430
+    second: AsterPixel_Plata_143
+  - first:
+      213: 6154000040192338329
+    second: AsterPixel_Plata_144
+  - first:
+      213: 5325321062069082904
+    second: AsterPixel_Plata_145
+  - first:
+      213: -5078013077027772719
+    second: AsterPixel_Plata_146
+  - first:
+      213: 3009793349361500346
+    second: AsterPixel_Plata_147
+  - first:
+      213: -158222142992661115
+    second: AsterPixel_Plata_148
+  - first:
+      213: 1944123058466322025
+    second: AsterPixel_Plata_149
+  - first:
+      213: -5311415590503171587
+    second: AsterPixel_Plata_150
+  - first:
+      213: -103048137354998500
+    second: AsterPixel_Plata_151
+  - first:
+      213: 5785986756012394201
+    second: AsterPixel_Plata_152
+  - first:
+      213: 8689800142924907741
+    second: AsterPixel_Plata_153
+  - first:
+      213: -2458656705910711608
+    second: AsterPixel_Plata_154
+  - first:
+      213: -8583222980894929347
+    second: AsterPixel_Plata_155
+  - first:
+      213: -6888991077310418586
+    second: AsterPixel_Plata_156
+  - first:
+      213: -4522845904635028219
+    second: AsterPixel_Plata_157
+  - first:
+      213: -8108048763185370339
+    second: AsterPixel_Plata_158
+  - first:
+      213: -6720444070532039144
+    second: AsterPixel_Plata_159
+  - first:
+      213: 3904860845615583476
+    second: AsterPixel_Plata_160
+  - first:
+      213: 4777666680423505208
+    second: AsterPixel_Plata_161
+  - first:
+      213: -460417758688505289
+    second: AsterPixel_Plata_162
+  - first:
+      213: 8270274897011367260
+    second: AsterPixel_Plata_163
+  - first:
+      213: 6912424215148845809
+    second: AsterPixel_Plata_164
+  - first:
+      213: -2075071004852519615
+    second: AsterPixel_Plata_165
+  - first:
+      213: -4161922471070263306
+    second: AsterPixel_Plata_166
+  - first:
+      213: 2960762577302639335
+    second: AsterPixel_Plata_167
+  - first:
+      213: -1443144004826611932
+    second: AsterPixel_Plata_168
+  - first:
+      213: 5961330171213904573
+    second: AsterPixel_Plata_169
+  - first:
+      213: -7520949704423447128
+    second: AsterPixel_Plata_170
+  - first:
+      213: -5842124360711678148
+    second: AsterPixel_Plata_171
+  - first:
+      213: 1391134479476612671
+    second: AsterPixel_Plata_172
+  - first:
+      213: -4849458860230454077
+    second: AsterPixel_Plata_173
+  - first:
+      213: -5728457490918389318
+    second: AsterPixel_Plata_174
+  - first:
+      213: -4290348836033350955
+    second: AsterPixel_Plata_175
+  - first:
+      213: 3266044917643228180
+    second: AsterPixel_Plata_176
+  - first:
+      213: -1719261422985399515
+    second: AsterPixel_Plata_177
+  - first:
+      213: 5823864806453067998
+    second: AsterPixel_Plata_178
+  - first:
+      213: 5624944919837919105
+    second: AsterPixel_Plata_179
+  - first:
+      213: 8870941353697742461
+    second: AsterPixel_Plata_180
+  - first:
+      213: 3336338712850197812
+    second: AsterPixel_Plata_181
+  - first:
+      213: -7260855914477702141
+    second: AsterPixel_Plata_182
+  - first:
+      213: 2028272913926471206
+    second: AsterPixel_Plata_183
+  - first:
+      213: -4458225249300745841
+    second: AsterPixel_Plata_184
+  - first:
+      213: -2284068619229471758
+    second: AsterPixel_Plata_185
+  - first:
+      213: -918948360395540455
+    second: AsterPixel_Plata_186
+  - first:
+      213: 3942408879513043720
+    second: AsterPixel_Plata_187
+  - first:
+      213: -1372373229419557902
+    second: AsterPixel_Plata_188
+  - first:
+      213: -6154638799000905963
+    second: AsterPixel_Plata_189
+  - first:
+      213: -2487767585648531709
+    second: AsterPixel_Plata_190
+  - first:
+      213: 8386172103098836294
+    second: AsterPixel_Plata_191
+  - first:
+      213: -5280715325199873002
+    second: AsterPixel_Plata_192
+  - first:
+      213: -8603865091612209046
+    second: AsterPixel_Plata_193
+  - first:
+      213: 5435996725543199582
+    second: AsterPixel_Plata_194
+  - first:
+      213: 8737889356816220095
+    second: AsterPixel_Plata_195
+  - first:
+      213: 1516515380505849453
+    second: AsterPixel_Plata_196
+  - first:
+      213: 6011533144215219263
+    second: AsterPixel_Plata_197
+  - first:
+      213: 4792720256366630576
+    second: AsterPixel_Plata_198
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: AsterPixel_Plata_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 923
+        width: 55
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b47cf693178e2230800000000000000
+      internalID: 3615976069032342707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_1
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 923
+        width: 55
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38309a9143ea639d0800000000000000
+      internalID: -2794854979944774781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_2
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 923
+        width: 39
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0314071949c13ec0800000000000000
+      internalID: -3588866112281636086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_3
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 923
+        width: 55
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44e57aef0fd4ffed0800000000000000
+      internalID: -2378096380768461244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_4
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 923
+        width: 55
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 104745bb70d9b4410800000000000000
+      internalID: 1462435160545063937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_5
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 923
+        width: 55
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e5eb583fb789e080800000000000000
+      internalID: -9157639111927142938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_6
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 931
+        width: 47
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7851f0144e141020800000000000000
+      internalID: 2311505786438768765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_7
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 931
+        width: 55
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ae03710e18ff39c0800000000000000
+      internalID: -3945161940796240220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_8
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 999
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb56163a891c0da60800000000000000
+      internalID: 7696864624496436670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_9
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 999
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 002fd9b869b5a64f0800000000000000
+      internalID: -834754078778199552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_10
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 999
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 640a5c773a4bae1e0800000000000000
+      internalID: -2167721656443363258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_11
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 999
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cabfa9094b8587470800000000000000
+      internalID: 8392555438148352940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_12
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 999
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b64777fbfc03c46f0800000000000000
+      internalID: -699130173320629141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_13
+      rect:
+        serializedVersion: 2
+        x: 659
+        y: 999
+        width: 46
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff52fc785943ffae0800000000000000
+      internalID: -1513433132939926017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_14
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 1007
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73a8b9de518a3e200800000000000000
+      internalID: 208194819923348023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_15
+      rect:
+        serializedVersion: 2
+        x: 755
+        y: 1007
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7743b309f12640fd0800000000000000
+      internalID: -2376666815641471881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_16
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 1007
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca40e383ea14308f0800000000000000
+      internalID: -575544110849588052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_17
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 947
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f11ba7378fcf62e0800000000000000
+      internalID: -2130255919061462543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_18
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 947
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9643bc5f88705790800000000000000
+      internalID: -7543396818714671460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_19
+      rect:
+        serializedVersion: 2
+        x: 909
+        y: 947
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed6b56279724569d0800000000000000
+      internalID: -2781744105453668642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_20
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 947
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7510c5b3d93f8a3b0800000000000000
+      internalID: -5500879088201760425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_21
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 935
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c23a9dab693683b0800000000000000
+      internalID: -5510653959404375355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_22
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 935
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efc403b10d80065e0800000000000000
+      internalID: -1918523751357461250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_23
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 935
+        width: 30
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba98a0c16ad9e9560800000000000000
+      internalID: 7322463380911589803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_24
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 935
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8772de62925c0cd0800000000000000
+      internalID: -2590604896766888049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_25
+      rect:
+        serializedVersion: 2
+        x: 611
+        y: 935
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: caaf810130715ffd0800000000000000
+      internalID: -2308913932035097940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_26
+      rect:
+        serializedVersion: 2
+        x: 659
+        y: 935
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1bacd97b80664ef0800000000000000
+      internalID: -124305787544884449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_27
+      rect:
+        serializedVersion: 2
+        x: 707
+        y: 943
+        width: 38
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c865936bc7e972d0800000000000000
+      internalID: -3280335992827582268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_28
+      rect:
+        serializedVersion: 2
+        x: 747
+        y: 943
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f21d2d537f7d7e60800000000000000
+      internalID: 7961659849722106614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_29
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 847
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1134e5b93f0c2b350800000000000000
+      internalID: 6031095003518747409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_30
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 847
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 252f42b83a2b4a250800000000000000
+      internalID: 5955081022774506066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_31
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 847
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed19aeb7f460497e0800000000000000
+      internalID: -1759774615943867938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_32
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 847
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7be916fc51eca8b60800000000000000
+      internalID: 7749232701913276087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_33
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 847
+        width: 39
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a5535dbb6eb494e0800000000000000
+      internalID: -1975744966561671767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_34
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 847
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c4d2e5979c828350800000000000000
+      internalID: 6017526634803025089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_35
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 847
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4547fa0e4ac7ac0d0800000000000000
+      internalID: -3401769520938912684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_36
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 847
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 624d3e26ef9db5100800000000000000
+      internalID: 97911503522616358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_37
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 847
+        width: 71
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d966b471132000d30800000000000000
+      internalID: 4395515646181074589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_38
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 847
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e24eeb7ad52af740800000000000000
+      internalID: 5186499541182857961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_39
+      rect:
+        serializedVersion: 2
+        x: 573
+        y: 847
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ad458d887b47cbc0800000000000000
+      internalID: -3762955982502277725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_40
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 847
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4aeeeb6bb9096620800000000000000
+      internalID: 2767754146570234444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_41
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 847
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f45e8f8d479ccfc0800000000000000
+      internalID: -3473234853232749327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_42
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 847
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93d1b4a3be4817a50800000000000000
+      internalID: 6517136281612000569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_43
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 847
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49831be53598fc580800000000000000
+      internalID: -8804667755322066796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_44
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 847
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69fda9547d8011380800000000000000
+      internalID: -9002404459458142314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_45
+      rect:
+        serializedVersion: 2
+        x: 915
+        y: 847
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f662f1894df339a70800000000000000
+      internalID: 8832473476521469551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_46
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 771
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d76e12d041026ca0800000000000000
+      internalID: -6025251973553559597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_47
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 771
+        width: 71
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 175468c6b45c8de00800000000000000
+      internalID: 1069821839234450801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_48
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 771
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70dbe8cffe9ec4520800000000000000
+      internalID: 2687780294577011975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_49
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 771
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48db06219240e8f00800000000000000
+      internalID: 1120837931710332292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_50
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 771
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36d3eccd0c135b650800000000000000
+      internalID: 6247954762454416739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_51
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 771
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1867eaf4dc86c43f0800000000000000
+      internalID: -915241393248635263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_52
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 771
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9215a52a9ebba140800000000000000
+      internalID: 4732085402748654237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_53
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 771
+        width: 47
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acf563748e807d880800000000000000
+      internalID: -8586384370838380598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_54
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 771
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3971c1d1917bc2010800000000000000
+      internalID: 1165507722072561555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_55
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 771
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4534eb69b71f13f0800000000000000
+      internalID: -927996913068526262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_56
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 771
+        width: 39
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef837550b257c64a0800000000000000
+      internalID: -6598770526370973442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_57
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 771
+        width: 47
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 120a7c8a8d07dbbf0800000000000000
+      internalID: -306965123744423903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_58
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 771
+        width: 39
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00e18da4622d8d410800000000000000
+      internalID: 1502181537634328064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_59
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 771
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13d15ddd5fe09abb0800000000000000
+      internalID: -4924388268401418959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_60
+      rect:
+        serializedVersion: 2
+        x: 769
+        y: 771
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 399f8e20d5e69f3d0800000000000000
+      internalID: -3172383116745967213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_61
+      rect:
+        serializedVersion: 2
+        x: 826
+        y: 771
+        width: 47
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd0729666ff6bebd0800000000000000
+      internalID: -2599861255802818340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_62
+      rect:
+        serializedVersion: 2
+        x: 875
+        y: 771
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9372e09e738fba10800000000000000
+      internalID: 1927403745157739422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_63
+      rect:
+        serializedVersion: 2
+        x: 932
+        y: 771
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f49835bf71da20b0800000000000000
+      internalID: -5752555227580951306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_64
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 695
+        width: 39
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 102a2039347ba2860800000000000000
+      internalID: 7506013229823468033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_65
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 695
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27c388f270bd30b40800000000000000
+      internalID: 5405404801683438706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_66
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 695
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e0da07463f912e40800000000000000
+      internalID: 5629956064658772199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_67
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 695
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6b07383977ed87e0800000000000000
+      internalID: -1761497371411805331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_68
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 695
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f699ab8512bd0ad50800000000000000
+      internalID: 6746633178070030703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_69
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 695
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c435e3ccf2e4b860800000000000000
+      internalID: 7544904850998637764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_70
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 695
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8663a24cae1ed0150800000000000000
+      internalID: 5840572690199098984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_71
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 695
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 797d1335e45430310800000000000000
+      internalID: 1370014914356303767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_72
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 695
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b0ba7ebeb0f28340800000000000000
+      internalID: 4864715249543721141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_73
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 695
+        width: 47
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 803c679222e6360a0800000000000000
+      internalID: -6889541911943134456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_74
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 695
+        width: 23
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d67cc74312f2cc8e0800000000000000
+      internalID: -1671909542000277651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_75
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 695
+        width: 23
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fccd3682f26628f0800000000000000
+      internalID: -565655909414613775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_76
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 695
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89bfd65d43266e4a0800000000000000
+      internalID: -6564451427787342952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_77
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 695
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e56c9590d9dc6950800000000000000
+      internalID: 6443764656746816997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_78
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 695
+        width: 39
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d5f63f5cdaeffb10800000000000000
+      internalID: 2017589390296413648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_79
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 695
+        width: 39
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1404f36b1325278d0800000000000000
+      internalID: -2850125240707628991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_80
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 695
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79821e3d8b4fa6a10800000000000000
+      internalID: 1903602867183364247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_81
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 695
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bf0c9ea1c9bf9500800000000000000
+      internalID: 405246732995923896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_82
+      rect:
+        serializedVersion: 2
+        x: 909
+        y: 695
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e658cb21f2588920800000000000000
+      internalID: 2992733148162840292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_83
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 695
+        width: 39
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79ab4cf9d9d8062e0800000000000000
+      internalID: -2134550515243763049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_84
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 619
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43086e9906c52a3d0800000000000000
+      internalID: -3196891215510994892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_85
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 619
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67625c7b987111fb0800000000000000
+      internalID: -4678932657600125322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_86
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 619
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ca754d2d1a2dfaf0800000000000000
+      internalID: -361086090317825337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_87
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 627
+        width: 55
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c125098e071ed0710800000000000000
+      internalID: 1661231712623940124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_88
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 631
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c47738c17503b9620800000000000000
+      internalID: 2781870345530079052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_89
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 631
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c88c6cfa09cf54a0800000000000000
+      internalID: -6602337479680030523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_90
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 631
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed562180e18f26b40800000000000000
+      internalID: 5432176908430370270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_91
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 631
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fea277d111551eaf0800000000000000
+      internalID: -368920162470515985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_92
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 631
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77a479d1635416c80800000000000000
+      internalID: -8331301736931702153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_93
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 631
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35f498738651b52c0800000000000000
+      internalID: -4441933070118334637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_94
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 631
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df05809b7b7ff1b50800000000000000
+      internalID: 6566239150184878333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_95
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 631
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c5f183a7380c4070800000000000000
+      internalID: 8091851665537365447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_96
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 631
+        width: 30
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 681291fc3aa86dcc0800000000000000
+      internalID: -3686606808797339258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_97
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 631
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d6e687ef170cccd0800000000000000
+      internalID: -2536644656506673451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_98
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 631
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d6fc7649208e8330800000000000000
+      internalID: 3715047657391847125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_99
+      rect:
+        serializedVersion: 2
+        x: 743
+        y: 631
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a82a4851136bd4a70800000000000000
+      internalID: 8812900367764595338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_100
+      rect:
+        serializedVersion: 2
+        x: 791
+        y: 631
+        width: 62
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4c33d9131d6f9c90800000000000000
+      internalID: -7160884953690719157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_101
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 631
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a4a71af9ce70c400800000000000000
+      internalID: 342412977629537447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_102
+      rect:
+        serializedVersion: 2
+        x: 903
+        y: 631
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ac408c8c4dd452b0800000000000000
+      internalID: -5596605116070212441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_103
+      rect:
+        serializedVersion: 2
+        x: 951
+        y: 631
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a41ec66d7ce5c390800000000000000
+      internalID: -7798567156382296928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_104
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 555
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 844ffcb9b965add70800000000000000
+      internalID: 9068656025997931592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_105
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 555
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6f9c408027118a50800000000000000
+      internalID: 6521519163768086382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_106
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 555
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11a95b3dc81c10430800000000000000
+      internalID: 3747489175540439569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_107
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 555
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 630481bcefc155500800000000000000
+      internalID: 384245223864680502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_108
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 555
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3f8f29f50e8dccf0800000000000000
+      internalID: -230371849619402949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_109
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 555
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe1aa678784caaf60800000000000000
+      internalID: 8046459770622353903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_110
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 555
+        width: 62
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d0a44a4e4cf28a30800000000000000
+      internalID: 4216209614355865815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_111
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 555
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c52b98cae3dcd3720800000000000000
+      internalID: 2827641810124911196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_112
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 555
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1d356da8f3267e90800000000000000
+      internalID: -7028390617497125604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_113
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 555
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f128807c6c9ed9c0800000000000000
+      internalID: -3900508237697900045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_114
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 555
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8ac8cb3c47812340800000000000000
+      internalID: 4837296236262902410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_115
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 555
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 294df82df65f9e140800000000000000
+      internalID: 4749597142661715090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_116
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 555
+        width: 38
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56413e8f3cbbfbb90800000000000000
+      internalID: -7223848826910337947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_117
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 555
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e68a82c008368ee40800000000000000
+      internalID: 5685903931166206062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_118
+      rect:
+        serializedVersion: 2
+        x: 683
+        y: 555
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa3096722e4e87540800000000000000
+      internalID: 5006002645797241770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_119
+      rect:
+        serializedVersion: 2
+        x: 739
+        y: 603
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a722f4d919c87f50800000000000000
+      internalID: 6879469543592437671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_120
+      rect:
+        serializedVersion: 2
+        x: 763
+        y: 555
+        width: 38
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7fb67b8bf8be4510800000000000000
+      internalID: 1535367913496035198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_121
+      rect:
+        serializedVersion: 2
+        x: 803
+        y: 555
+        width: 30
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 046d2c6ccf2320ea0800000000000000
+      internalID: -5908103699908864448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_122
+      rect:
+        serializedVersion: 2
+        x: 835
+        y: 555
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99e2512bd5de7c680800000000000000
+      internalID: -8734751965586313575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_123
+      rect:
+        serializedVersion: 2
+        x: 883
+        y: 555
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74bfa51fd8358d650800000000000000
+      internalID: 6257843551336069959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_124
+      rect:
+        serializedVersion: 2
+        x: 931
+        y: 555
+        width: 38
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 430b77749d6643ac0800000000000000
+      internalID: -3876360295866191820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_125
+      rect:
+        serializedVersion: 2
+        x: 971
+        y: 555
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3c1792fa3ccfef10800000000000000
+      internalID: 2301282488159771710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_126
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 555
+        width: 30
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c24bca335db2f6ab0800000000000000
+      internalID: -5012739665545087956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_127
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 491
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffbf002156efd3aa0800000000000000
+      internalID: -6179503403635246081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_128
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 491
+        width: 30
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ea458682fdc14270800000000000000
+      internalID: 8233088035332639459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_129
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 491
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64c9f02063bc711c0800000000000000
+      internalID: -4532931067101864890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_130
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 491
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de8fa46729b6ef150800000000000000
+      internalID: 5908278037950691565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_131
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 491
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56b9cc88f2bcbb0f0800000000000000
+      internalID: -1100062278942942363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_132
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 491
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 192fde505cef3e3b0800000000000000
+      internalID: -5484259799045639535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_133
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 491
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 973a313227f9ee1b0800000000000000
+      internalID: -5625383571975593095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_134
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 491
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 166cd8ab67a0c7560800000000000000
+      internalID: 7312731399995115105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_135
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 491
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51e676cbf59d9acb0800000000000000
+      internalID: -4852108118308983275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_136
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 491
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22b396a6f72d35e50800000000000000
+      internalID: 6797007707320171298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_137
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 491
+        width: 38
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5cc5b513e504ff40800000000000000
+      internalID: 5761236296193657948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_138
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 507
+        width: 14
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e7b3ffc9b1627290800000000000000
+      internalID: -7894139746141358108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_139
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 539
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8bb3a405cc356c20800000000000000
+      internalID: 3199029927200668559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_140
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 507
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6360460c66735950800000000000000
+      internalID: 6436618498775999342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_141
+      rect:
+        serializedVersion: 2
+        x: 603
+        y: 539
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 023df82c9e71041a0800000000000000
+      internalID: -6827430742334647520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_142
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 491
+        width: 30
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53cde5ae911213860800000000000000
+      internalID: 7507818448993311797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_143
+      rect:
+        serializedVersion: 2
+        x: 667
+        y: 491
+        width: 30
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae8ccb5e05c92e490800000000000000
+      internalID: -7718434940093937430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_144
+      rect:
+        serializedVersion: 2
+        x: 699
+        y: 491
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99967676e66676550800000000000000
+      internalID: 6154000040192338329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_145
+      rect:
+        serializedVersion: 2
+        x: 747
+        y: 491
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81b988b8a4757e940800000000000000
+      internalID: 5325321062069082904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_146
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 491
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d6a8fac2064789b0800000000000000
+      internalID: -5078013077027772719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_147
+      rect:
+        serializedVersion: 2
+        x: 843
+        y: 491
+        width: 30
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab0860cca1fe4c920800000000000000
+      internalID: 3009793349361500346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_148
+      rect:
+        serializedVersion: 2
+        x: 875
+        y: 491
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 585425b9cc1edcdf0800000000000000
+      internalID: -158222142992661115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_149
+      rect:
+        serializedVersion: 2
+        x: 939
+        y: 531
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 966f78b0f99eafa10800000000000000
+      internalID: 1944123058466322025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_150
+      rect:
+        serializedVersion: 2
+        x: 971
+        y: 491
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df9369959af0a46b0800000000000000
+      internalID: -5311415590503171587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_151
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 491
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1d803ad346e19ef0800000000000000
+      internalID: -103048137354998500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_152
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 491
+        width: 14
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d6cb339c44fb4050800000000000000
+      internalID: 5785986756012394201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_153
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 491
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd48d20803f589870800000000000000
+      internalID: 8689800142924907741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_154
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 491
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ca5f83a0c811edd0800000000000000
+      internalID: -2458656705910711608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_155
+      rect:
+        serializedVersion: 2
+        x: 923
+        y: 491
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3ec9cbbc2442e880800000000000000
+      internalID: -8583222980894929347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_156
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 431
+        width: 55
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 661b3185d136560a0800000000000000
+      internalID: -6888991077310418586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_157
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 431
+        width: 55
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50d1660ec9f9b31c0800000000000000
+      internalID: -4522845904635028219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_158
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 431
+        width: 55
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1b6ac0bb9c6a7f80800000000000000
+      internalID: -8108048763185370339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_159
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 431
+        width: 71
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81ebe0b69bf2cb2a0800000000000000
+      internalID: -6720444070532039144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_160
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 431
+        width: 55
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f09f30104ad03630800000000000000
+      internalID: 3904860845615583476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_161
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 431
+        width: 55
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83ddcdd588ead4240800000000000000
+      internalID: 4777666680423505208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_162
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 431
+        width: 47
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7321715ec744c99f0800000000000000
+      internalID: -460417758688505289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_163
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 431
+        width: 55
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5d5137733be5c270800000000000000
+      internalID: 8270274897011367260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_164
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 431
+        width: 55
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fa51c8333dddef50800000000000000
+      internalID: 6912424215148845809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_165
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 431
+        width: 55
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14d7d005aedd333e0800000000000000
+      internalID: -2075071004852519615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_166
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 431
+        width: 71
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f714293091ed36c0800000000000000
+      internalID: -4161922471070263306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_167
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 431
+        width: 55
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e2d46490edb61920800000000000000
+      internalID: 2960762577302639335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_168
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 431
+        width: 55
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42f33987c2ce8fbe0800000000000000
+      internalID: -1443144004826611932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_169
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 431
+        width: 55
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbaf50cc436eab250800000000000000
+      internalID: 5961330171213904573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_170
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 435
+        width: 46
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a5e24e671830a790800000000000000
+      internalID: -7520949704423447128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_171
+      rect:
+        serializedVersion: 2
+        x: 873
+        y: 439
+        width: 23
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c37df1ac8da9ceea0800000000000000
+      internalID: -5842124360711678148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_172
+      rect:
+        serializedVersion: 2
+        x: 898
+        y: 443
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3e5004407d4e4310800000000000000
+      internalID: 1391134479476612671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_173
+      rect:
+        serializedVersion: 2
+        x: 946
+        y: 443
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c4d7133cd243bcb0800000000000000
+      internalID: -4849458860230454077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_174
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 383
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab942ee334e6080b0800000000000000
+      internalID: -5728457490918389318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_175
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 383
+        width: 62
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d2b8b1077e9574c0800000000000000
+      internalID: -4290348836033350955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_176
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 383
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41438906c82535d20800000000000000
+      internalID: 3266044917643228180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_177
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 383
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5233ce648d4f328e0800000000000000
+      internalID: -1719261422985399515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_178
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 383
+        width: 38
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed0c8807f2682d050800000000000000
+      internalID: 5823864806453067998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_179
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 383
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 187c3143a91df0e40800000000000000
+      internalID: 5624944919837919105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_180
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 383
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7e0a72392aeb1b70800000000000000
+      internalID: 8870941353697742461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_181
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 383
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43de1d5f16e0d4e20800000000000000
+      internalID: 3336338712850197812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_182
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 383
+        width: 62
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3043344f3024c3b90800000000000000
+      internalID: -7260855914477702141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_183
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 383
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62e322e087fd52c10800000000000000
+      internalID: 2028272913926471206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_184
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 383
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8170c6a1c33122c0800000000000000
+      internalID: -4458225249300745841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_185
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 383
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fbd53c31bb5d40e0800000000000000
+      internalID: -2284068619229471758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_186
+      rect:
+        serializedVersion: 2
+        x: 603
+        y: 415
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91832b3c55d3f33f0800000000000000
+      internalID: -918948360395540455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_187
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 395
+        width: 31
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80388b6fcff36b630800000000000000
+      internalID: 3942408879513043720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_188
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 395
+        width: 23
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fb0139a1d954fce0800000000000000
+      internalID: -1372373229419557902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_189
+      rect:
+        serializedVersion: 2
+        x: 677
+        y: 395
+        width: 39
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 517d6b8fe94569aa0800000000000000
+      internalID: -6154638799000905963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_190
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 403
+        width: 23
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30720b5cf8ca97dd0800000000000000
+      internalID: -2487767585648531709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_191
+      rect:
+        serializedVersion: 2
+        x: 743
+        y: 403
+        width: 47
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6452f7e881ba16470800000000000000
+      internalID: 8386172103098836294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_192
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 407
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61c0081e36127b6b0800000000000000
+      internalID: -5280715325199873002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_193
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 407
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a60121fc84ee89880800000000000000
+      internalID: -8603865091612209046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_194
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 407
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e536032883a807b40800000000000000
+      internalID: 5435996725543199582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_195
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 407
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbf72bf1318334970800000000000000
+      internalID: 8737889356816220095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_196
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 415
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6ea77724bebb0510800000000000000
+      internalID: 1516515380505849453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_197
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 415
+        width: 38
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3c6f605b814d6350800000000000000
+      internalID: 6011533144215219263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Plata_198
+      rect:
+        serializedVersion: 2
+        x: 603
+        y: 391
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b65d842ea9238240800000000000000
+      internalID: 4792720256366630576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      AsterPixel_Plata_0: 3615976069032342707
+      AsterPixel_Plata_1: -2794854979944774781
+      AsterPixel_Plata_10: -2167721656443363258
+      AsterPixel_Plata_100: -7160884953690719157
+      AsterPixel_Plata_101: 342412977629537447
+      AsterPixel_Plata_102: -5596605116070212441
+      AsterPixel_Plata_103: -7798567156382296928
+      AsterPixel_Plata_104: 9068656025997931592
+      AsterPixel_Plata_105: 6521519163768086382
+      AsterPixel_Plata_106: 3747489175540439569
+      AsterPixel_Plata_107: 384245223864680502
+      AsterPixel_Plata_108: -230371849619402949
+      AsterPixel_Plata_109: 8046459770622353903
+      AsterPixel_Plata_11: 8392555438148352940
+      AsterPixel_Plata_110: 4216209614355865815
+      AsterPixel_Plata_111: 2827641810124911196
+      AsterPixel_Plata_112: -7028390617497125604
+      AsterPixel_Plata_113: -3900508237697900045
+      AsterPixel_Plata_114: 4837296236262902410
+      AsterPixel_Plata_115: 4749597142661715090
+      AsterPixel_Plata_116: -7223848826910337947
+      AsterPixel_Plata_117: 5685903931166206062
+      AsterPixel_Plata_118: 5006002645797241770
+      AsterPixel_Plata_119: 6879469543592437671
+      AsterPixel_Plata_12: -699130173320629141
+      AsterPixel_Plata_120: 1535367913496035198
+      AsterPixel_Plata_121: -5908103699908864448
+      AsterPixel_Plata_122: -8734751965586313575
+      AsterPixel_Plata_123: 6257843551336069959
+      AsterPixel_Plata_124: -3876360295866191820
+      AsterPixel_Plata_125: 2301282488159771710
+      AsterPixel_Plata_126: -5012739665545087956
+      AsterPixel_Plata_127: -6179503403635246081
+      AsterPixel_Plata_128: 8233088035332639459
+      AsterPixel_Plata_129: -4532931067101864890
+      AsterPixel_Plata_13: -1513433132939926017
+      AsterPixel_Plata_130: 5908278037950691565
+      AsterPixel_Plata_131: -1100062278942942363
+      AsterPixel_Plata_132: -5484259799045639535
+      AsterPixel_Plata_133: -5625383571975593095
+      AsterPixel_Plata_134: 7312731399995115105
+      AsterPixel_Plata_135: -4852108118308983275
+      AsterPixel_Plata_136: 6797007707320171298
+      AsterPixel_Plata_137: 5761236296193657948
+      AsterPixel_Plata_138: -7894139746141358108
+      AsterPixel_Plata_139: 3199029927200668559
+      AsterPixel_Plata_14: 208194819923348023
+      AsterPixel_Plata_140: 6436618498775999342
+      AsterPixel_Plata_141: -6827430742334647520
+      AsterPixel_Plata_142: 7507818448993311797
+      AsterPixel_Plata_143: -7718434940093937430
+      AsterPixel_Plata_144: 6154000040192338329
+      AsterPixel_Plata_145: 5325321062069082904
+      AsterPixel_Plata_146: -5078013077027772719
+      AsterPixel_Plata_147: 3009793349361500346
+      AsterPixel_Plata_148: -158222142992661115
+      AsterPixel_Plata_149: 1944123058466322025
+      AsterPixel_Plata_15: -2376666815641471881
+      AsterPixel_Plata_150: -5311415590503171587
+      AsterPixel_Plata_151: -103048137354998500
+      AsterPixel_Plata_152: 5785986756012394201
+      AsterPixel_Plata_153: 8689800142924907741
+      AsterPixel_Plata_154: -2458656705910711608
+      AsterPixel_Plata_155: -8583222980894929347
+      AsterPixel_Plata_156: -6888991077310418586
+      AsterPixel_Plata_157: -4522845904635028219
+      AsterPixel_Plata_158: -8108048763185370339
+      AsterPixel_Plata_159: -6720444070532039144
+      AsterPixel_Plata_16: -575544110849588052
+      AsterPixel_Plata_160: 3904860845615583476
+      AsterPixel_Plata_161: 4777666680423505208
+      AsterPixel_Plata_162: -460417758688505289
+      AsterPixel_Plata_163: 8270274897011367260
+      AsterPixel_Plata_164: 6912424215148845809
+      AsterPixel_Plata_165: -2075071004852519615
+      AsterPixel_Plata_166: -4161922471070263306
+      AsterPixel_Plata_167: 2960762577302639335
+      AsterPixel_Plata_168: -1443144004826611932
+      AsterPixel_Plata_169: 5961330171213904573
+      AsterPixel_Plata_17: -2130255919061462543
+      AsterPixel_Plata_170: -7520949704423447128
+      AsterPixel_Plata_171: -5842124360711678148
+      AsterPixel_Plata_172: 1391134479476612671
+      AsterPixel_Plata_173: -4849458860230454077
+      AsterPixel_Plata_174: -5728457490918389318
+      AsterPixel_Plata_175: -4290348836033350955
+      AsterPixel_Plata_176: 3266044917643228180
+      AsterPixel_Plata_177: -1719261422985399515
+      AsterPixel_Plata_178: 5823864806453067998
+      AsterPixel_Plata_179: 5624944919837919105
+      AsterPixel_Plata_18: -7543396818714671460
+      AsterPixel_Plata_180: 8870941353697742461
+      AsterPixel_Plata_181: 3336338712850197812
+      AsterPixel_Plata_182: -7260855914477702141
+      AsterPixel_Plata_183: 2028272913926471206
+      AsterPixel_Plata_184: -4458225249300745841
+      AsterPixel_Plata_185: -2284068619229471758
+      AsterPixel_Plata_186: -918948360395540455
+      AsterPixel_Plata_187: 3942408879513043720
+      AsterPixel_Plata_188: -1372373229419557902
+      AsterPixel_Plata_189: -6154638799000905963
+      AsterPixel_Plata_19: -2781744105453668642
+      AsterPixel_Plata_190: -2487767585648531709
+      AsterPixel_Plata_191: 8386172103098836294
+      AsterPixel_Plata_192: -5280715325199873002
+      AsterPixel_Plata_193: -8603865091612209046
+      AsterPixel_Plata_194: 5435996725543199582
+      AsterPixel_Plata_195: 8737889356816220095
+      AsterPixel_Plata_196: 1516515380505849453
+      AsterPixel_Plata_197: 6011533144215219263
+      AsterPixel_Plata_198: 4792720256366630576
+      AsterPixel_Plata_2: -3588866112281636086
+      AsterPixel_Plata_20: -5500879088201760425
+      AsterPixel_Plata_21: -5510653959404375355
+      AsterPixel_Plata_22: -1918523751357461250
+      AsterPixel_Plata_23: 7322463380911589803
+      AsterPixel_Plata_24: -2590604896766888049
+      AsterPixel_Plata_25: -2308913932035097940
+      AsterPixel_Plata_26: -124305787544884449
+      AsterPixel_Plata_27: -3280335992827582268
+      AsterPixel_Plata_28: 7961659849722106614
+      AsterPixel_Plata_29: 6031095003518747409
+      AsterPixel_Plata_3: -2378096380768461244
+      AsterPixel_Plata_30: 5955081022774506066
+      AsterPixel_Plata_31: -1759774615943867938
+      AsterPixel_Plata_32: 7749232701913276087
+      AsterPixel_Plata_33: -1975744966561671767
+      AsterPixel_Plata_34: 6017526634803025089
+      AsterPixel_Plata_35: -3401769520938912684
+      AsterPixel_Plata_36: 97911503522616358
+      AsterPixel_Plata_37: 4395515646181074589
+      AsterPixel_Plata_38: 5186499541182857961
+      AsterPixel_Plata_39: -3762955982502277725
+      AsterPixel_Plata_4: 1462435160545063937
+      AsterPixel_Plata_40: 2767754146570234444
+      AsterPixel_Plata_41: -3473234853232749327
+      AsterPixel_Plata_42: 6517136281612000569
+      AsterPixel_Plata_43: -8804667755322066796
+      AsterPixel_Plata_44: -9002404459458142314
+      AsterPixel_Plata_45: 8832473476521469551
+      AsterPixel_Plata_46: -6025251973553559597
+      AsterPixel_Plata_47: 1069821839234450801
+      AsterPixel_Plata_48: 2687780294577011975
+      AsterPixel_Plata_49: 1120837931710332292
+      AsterPixel_Plata_5: -9157639111927142938
+      AsterPixel_Plata_50: 6247954762454416739
+      AsterPixel_Plata_51: -915241393248635263
+      AsterPixel_Plata_52: 4732085402748654237
+      AsterPixel_Plata_53: -8586384370838380598
+      AsterPixel_Plata_54: 1165507722072561555
+      AsterPixel_Plata_55: -927996913068526262
+      AsterPixel_Plata_56: -6598770526370973442
+      AsterPixel_Plata_57: -306965123744423903
+      AsterPixel_Plata_58: 1502181537634328064
+      AsterPixel_Plata_59: -4924388268401418959
+      AsterPixel_Plata_6: 2311505786438768765
+      AsterPixel_Plata_60: -3172383116745967213
+      AsterPixel_Plata_61: -2599861255802818340
+      AsterPixel_Plata_62: 1927403745157739422
+      AsterPixel_Plata_63: -5752555227580951306
+      AsterPixel_Plata_64: 7506013229823468033
+      AsterPixel_Plata_65: 5405404801683438706
+      AsterPixel_Plata_66: 5629956064658772199
+      AsterPixel_Plata_67: -1761497371411805331
+      AsterPixel_Plata_68: 6746633178070030703
+      AsterPixel_Plata_69: 7544904850998637764
+      AsterPixel_Plata_7: -3945161940796240220
+      AsterPixel_Plata_70: 5840572690199098984
+      AsterPixel_Plata_71: 1370014914356303767
+      AsterPixel_Plata_72: 4864715249543721141
+      AsterPixel_Plata_73: -6889541911943134456
+      AsterPixel_Plata_74: -1671909542000277651
+      AsterPixel_Plata_75: -565655909414613775
+      AsterPixel_Plata_76: -6564451427787342952
+      AsterPixel_Plata_77: 6443764656746816997
+      AsterPixel_Plata_78: 2017589390296413648
+      AsterPixel_Plata_79: -2850125240707628991
+      AsterPixel_Plata_8: 7696864624496436670
+      AsterPixel_Plata_80: 1903602867183364247
+      AsterPixel_Plata_81: 405246732995923896
+      AsterPixel_Plata_82: 2992733148162840292
+      AsterPixel_Plata_83: -2134550515243763049
+      AsterPixel_Plata_84: -3196891215510994892
+      AsterPixel_Plata_85: -4678932657600125322
+      AsterPixel_Plata_86: -361086090317825337
+      AsterPixel_Plata_87: 1661231712623940124
+      AsterPixel_Plata_88: 2781870345530079052
+      AsterPixel_Plata_89: -6602337479680030523
+      AsterPixel_Plata_9: -834754078778199552
+      AsterPixel_Plata_90: 5432176908430370270
+      AsterPixel_Plata_91: -368920162470515985
+      AsterPixel_Plata_92: -8331301736931702153
+      AsterPixel_Plata_93: -4441933070118334637
+      AsterPixel_Plata_94: 6566239150184878333
+      AsterPixel_Plata_95: 8091851665537365447
+      AsterPixel_Plata_96: -3686606808797339258
+      AsterPixel_Plata_97: -2536644656506673451
+      AsterPixel_Plata_98: 3715047657391847125
+      AsterPixel_Plata_99: 8812900367764595338
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

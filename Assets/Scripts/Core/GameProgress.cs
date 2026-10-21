@@ -67,6 +67,8 @@ public class GameProgress : MonoBehaviour
         Data.run.deaths = 0;
         Data.run.seconds = 0f;
         Data.run.pendingCrystals = 0;
+        Data.run.levelDeaths = 0;
+        Data.run.levelSeconds = 0f;
         if (autoSave) Save();
     }
 
@@ -79,8 +81,10 @@ public class GameProgress : MonoBehaviour
 
     /// Nivel superado. Pasar un nivel NO paga cristales — lo único que se ingresa es la geoda
     /// que llevaras encima. Lo que da el nivel es el nivel: el ranking y los hitos.
-    public void LevelCleared(int level, float seconds)
+    /// Devuelve los cristales que se ingresaron al superarlo (para la pantalla de transición).
+    public int LevelCleared(int level, float seconds)
     {
+        int gained = 0;
         var stat = Data.telemetry.For(level);
         stat.attempts++;
         stat.totalSeconds += seconds;
@@ -93,7 +97,7 @@ public class GameProgress : MonoBehaviour
         // La geoda se cobra aquí, no al recogerla
         if (Data.run.pendingCrystals > 0)
         {
-            int gained = Data.run.pendingCrystals;
+            gained = Data.run.pendingCrystals;
             Data.run.pendingCrystals = 0;
             AddCrystals(gained);
         }
@@ -106,12 +110,18 @@ public class GameProgress : MonoBehaviour
         }
 
         Data.run.level = level + 1;
+        Data.run.levelDeaths = 0;
+        Data.run.levelSeconds = 0f;
         if (autoSave) Save();
+        return gained;
     }
 
     /// Muerte: se pierde lo recogido y no ingresado. Esa es toda la tensión de la geoda.
-    public void PlayerDied(int level)
+    /// `seconds` es lo que duró el intento: se suma al tiempo total del nivel.
+    public void PlayerDied(int level, float seconds = 0f)
     {
+        Data.run.levelDeaths++;
+        Data.run.levelSeconds += seconds;
         var stat = Data.telemetry.For(level);
         stat.attempts++;
         stat.deaths++;

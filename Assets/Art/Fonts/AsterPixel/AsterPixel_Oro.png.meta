@@ -1,0 +1,5343 @@
+fileFormatVersion: 2
+guid: e60325ae9271c9749a7e59f4ba47aeeb
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1908087085630648953
+    second: AsterPixel_Oro_0
+  - first:
+      213: -2683385029181731234
+    second: AsterPixel_Oro_1
+  - first:
+      213: 5104571652401910395
+    second: AsterPixel_Oro_2
+  - first:
+      213: 4978758156115566837
+    second: AsterPixel_Oro_3
+  - first:
+      213: -2106454763874826566
+    second: AsterPixel_Oro_4
+  - first:
+      213: 7708125159729606961
+    second: AsterPixel_Oro_5
+  - first:
+      213: -3188650125264621032
+    second: AsterPixel_Oro_6
+  - first:
+      213: 2189835896998031699
+    second: AsterPixel_Oro_7
+  - first:
+      213: 642389310300065296
+    second: AsterPixel_Oro_8
+  - first:
+      213: -8553403937498277676
+    second: AsterPixel_Oro_9
+  - first:
+      213: 8988982237229613864
+    second: AsterPixel_Oro_10
+  - first:
+      213: 1133259546341565700
+    second: AsterPixel_Oro_11
+  - first:
+      213: -1622393037522391281
+    second: AsterPixel_Oro_12
+  - first:
+      213: -3412643971637839904
+    second: AsterPixel_Oro_13
+  - first:
+      213: 2072436403484727434
+    second: AsterPixel_Oro_14
+  - first:
+      213: 3290509468712761531
+    second: AsterPixel_Oro_15
+  - first:
+      213: -4235985361315944068
+    second: AsterPixel_Oro_16
+  - first:
+      213: -2395799263990653544
+    second: AsterPixel_Oro_17
+  - first:
+      213: -4929428366274171967
+    second: AsterPixel_Oro_18
+  - first:
+      213: -4499380172690175526
+    second: AsterPixel_Oro_19
+  - first:
+      213: -6417186109252889808
+    second: AsterPixel_Oro_20
+  - first:
+      213: -8631821648188281897
+    second: AsterPixel_Oro_21
+  - first:
+      213: 619716212081788894
+    second: AsterPixel_Oro_22
+  - first:
+      213: 7038442002299917238
+    second: AsterPixel_Oro_23
+  - first:
+      213: -7386286848195225029
+    second: AsterPixel_Oro_24
+  - first:
+      213: 8380661312828753269
+    second: AsterPixel_Oro_25
+  - first:
+      213: 7279175961917933396
+    second: AsterPixel_Oro_26
+  - first:
+      213: 7699291556787869694
+    second: AsterPixel_Oro_27
+  - first:
+      213: 43580955538029662
+    second: AsterPixel_Oro_28
+  - first:
+      213: -2085165819524546459
+    second: AsterPixel_Oro_29
+  - first:
+      213: -5280019402482522937
+    second: AsterPixel_Oro_30
+  - first:
+      213: 2085431100766798524
+    second: AsterPixel_Oro_31
+  - first:
+      213: -6167421800915072958
+    second: AsterPixel_Oro_32
+  - first:
+      213: -499180905932613050
+    second: AsterPixel_Oro_33
+  - first:
+      213: -2384744590919139814
+    second: AsterPixel_Oro_34
+  - first:
+      213: 7325224775665292923
+    second: AsterPixel_Oro_35
+  - first:
+      213: -8677004849237401481
+    second: AsterPixel_Oro_36
+  - first:
+      213: 1567820630600729798
+    second: AsterPixel_Oro_37
+  - first:
+      213: -5248093352576236653
+    second: AsterPixel_Oro_38
+  - first:
+      213: 3229792983319558910
+    second: AsterPixel_Oro_39
+  - first:
+      213: -3145506036592326533
+    second: AsterPixel_Oro_40
+  - first:
+      213: 260674445182311751
+    second: AsterPixel_Oro_41
+  - first:
+      213: -13603240782993671
+    second: AsterPixel_Oro_42
+  - first:
+      213: -1350031846200521901
+    second: AsterPixel_Oro_43
+  - first:
+      213: 8037495890201768578
+    second: AsterPixel_Oro_44
+  - first:
+      213: -5460276682782155132
+    second: AsterPixel_Oro_45
+  - first:
+      213: 7436092882549493766
+    second: AsterPixel_Oro_46
+  - first:
+      213: 9116464283796680921
+    second: AsterPixel_Oro_47
+  - first:
+      213: -6117781678949451203
+    second: AsterPixel_Oro_48
+  - first:
+      213: -1861681643334581138
+    second: AsterPixel_Oro_49
+  - first:
+      213: 8862464982200114364
+    second: AsterPixel_Oro_50
+  - first:
+      213: -2206222397541951467
+    second: AsterPixel_Oro_51
+  - first:
+      213: -6496291864334630975
+    second: AsterPixel_Oro_52
+  - first:
+      213: -2149885790654007904
+    second: AsterPixel_Oro_53
+  - first:
+      213: 6398616425448457289
+    second: AsterPixel_Oro_54
+  - first:
+      213: 6597522623883542370
+    second: AsterPixel_Oro_55
+  - first:
+      213: 2104748948395285249
+    second: AsterPixel_Oro_56
+  - first:
+      213: -7068992692999140432
+    second: AsterPixel_Oro_57
+  - first:
+      213: -7947029678119837694
+    second: AsterPixel_Oro_58
+  - first:
+      213: -127172956505260353
+    second: AsterPixel_Oro_59
+  - first:
+      213: 3920580719632812150
+    second: AsterPixel_Oro_60
+  - first:
+      213: 3727473047498856267
+    second: AsterPixel_Oro_61
+  - first:
+      213: 7545364411221471887
+    second: AsterPixel_Oro_62
+  - first:
+      213: 8418995674611308448
+    second: AsterPixel_Oro_63
+  - first:
+      213: -5137856686718792637
+    second: AsterPixel_Oro_64
+  - first:
+      213: 513335419780968352
+    second: AsterPixel_Oro_65
+  - first:
+      213: -4653871531751173121
+    second: AsterPixel_Oro_66
+  - first:
+      213: 8569699067097193262
+    second: AsterPixel_Oro_67
+  - first:
+      213: 1596051942160142031
+    second: AsterPixel_Oro_68
+  - first:
+      213: -2034332026076459685
+    second: AsterPixel_Oro_69
+  - first:
+      213: -3849130859220283526
+    second: AsterPixel_Oro_70
+  - first:
+      213: 6030226425729663080
+    second: AsterPixel_Oro_71
+  - first:
+      213: 6022295799384777820
+    second: AsterPixel_Oro_72
+  - first:
+      213: 7561075694045543171
+    second: AsterPixel_Oro_73
+  - first:
+      213: 563247274823581052
+    second: AsterPixel_Oro_74
+  - first:
+      213: 1556113477625328714
+    second: AsterPixel_Oro_75
+  - first:
+      213: 3504963190913200012
+    second: AsterPixel_Oro_76
+  - first:
+      213: -1926513290132822124
+    second: AsterPixel_Oro_77
+  - first:
+      213: -7248391606433211711
+    second: AsterPixel_Oro_78
+  - first:
+      213: -8781192158526072483
+    second: AsterPixel_Oro_79
+  - first:
+      213: 6395856068609954651
+    second: AsterPixel_Oro_80
+  - first:
+      213: -6889266784013184796
+    second: AsterPixel_Oro_81
+  - first:
+      213: 3837578995721166349
+    second: AsterPixel_Oro_82
+  - first:
+      213: 3067092513994078053
+    second: AsterPixel_Oro_83
+  - first:
+      213: 9111655628318524635
+    second: AsterPixel_Oro_84
+  - first:
+      213: 5915837522665385704
+    second: AsterPixel_Oro_85
+  - first:
+      213: -2960527381322482672
+    second: AsterPixel_Oro_86
+  - first:
+      213: -5322924463535511313
+    second: AsterPixel_Oro_87
+  - first:
+      213: 4080010331671248822
+    second: AsterPixel_Oro_88
+  - first:
+      213: 3642732426236596443
+    second: AsterPixel_Oro_89
+  - first:
+      213: -4441214635221878357
+    second: AsterPixel_Oro_90
+  - first:
+      213: -684711176474298631
+    second: AsterPixel_Oro_91
+  - first:
+      213: -4285584725448844055
+    second: AsterPixel_Oro_92
+  - first:
+      213: 6733241561327747390
+    second: AsterPixel_Oro_93
+  - first:
+      213: 1539923354083349008
+    second: AsterPixel_Oro_94
+  - first:
+      213: 1963188527072557035
+    second: AsterPixel_Oro_95
+  - first:
+      213: -7847783513731004863
+    second: AsterPixel_Oro_96
+  - first:
+      213: 4924491118586065973
+    second: AsterPixel_Oro_97
+  - first:
+      213: -4882967701732718037
+    second: AsterPixel_Oro_98
+  - first:
+      213: 4164590058511385379
+    second: AsterPixel_Oro_99
+  - first:
+      213: 2255489481408980348
+    second: AsterPixel_Oro_100
+  - first:
+      213: 773104521328363632
+    second: AsterPixel_Oro_101
+  - first:
+      213: 6151694501908502639
+    second: AsterPixel_Oro_102
+  - first:
+      213: -4534170699968436371
+    second: AsterPixel_Oro_103
+  - first:
+      213: 3099651298431528613
+    second: AsterPixel_Oro_104
+  - first:
+      213: 3163158095596379771
+    second: AsterPixel_Oro_105
+  - first:
+      213: -3459528346410367210
+    second: AsterPixel_Oro_106
+  - first:
+      213: 7008581842146273721
+    second: AsterPixel_Oro_107
+  - first:
+      213: 2253635462614397277
+    second: AsterPixel_Oro_108
+  - first:
+      213: 8677885049831377441
+    second: AsterPixel_Oro_109
+  - first:
+      213: -8469624568972063729
+    second: AsterPixel_Oro_110
+  - first:
+      213: -2730420387680583562
+    second: AsterPixel_Oro_111
+  - first:
+      213: 5177317009421712323
+    second: AsterPixel_Oro_112
+  - first:
+      213: -5475810913797258155
+    second: AsterPixel_Oro_113
+  - first:
+      213: 1960226221033374674
+    second: AsterPixel_Oro_114
+  - first:
+      213: 5273348356802186595
+    second: AsterPixel_Oro_115
+  - first:
+      213: -708316484932003534
+    second: AsterPixel_Oro_116
+  - first:
+      213: -7369447005489924974
+    second: AsterPixel_Oro_117
+  - first:
+      213: 6884300592813964461
+    second: AsterPixel_Oro_118
+  - first:
+      213: 8181303422585667551
+    second: AsterPixel_Oro_119
+  - first:
+      213: -3810077875329293949
+    second: AsterPixel_Oro_120
+  - first:
+      213: 8490560751419222885
+    second: AsterPixel_Oro_121
+  - first:
+      213: 2804834711536378016
+    second: AsterPixel_Oro_122
+  - first:
+      213: -318825194484387677
+    second: AsterPixel_Oro_123
+  - first:
+      213: 7712172729183269357
+    second: AsterPixel_Oro_124
+  - first:
+      213: 1461183709371855757
+    second: AsterPixel_Oro_125
+  - first:
+      213: -3468231001440720773
+    second: AsterPixel_Oro_126
+  - first:
+      213: -8625995639393892298
+    second: AsterPixel_Oro_127
+  - first:
+      213: 3827929171196915262
+    second: AsterPixel_Oro_128
+  - first:
+      213: -4453762015842611204
+    second: AsterPixel_Oro_129
+  - first:
+      213: -1427202271245043253
+    second: AsterPixel_Oro_130
+  - first:
+      213: 6804568099060716187
+    second: AsterPixel_Oro_131
+  - first:
+      213: 2338580705292100813
+    second: AsterPixel_Oro_132
+  - first:
+      213: -2890144637973619926
+    second: AsterPixel_Oro_133
+  - first:
+      213: -3361931976688035657
+    second: AsterPixel_Oro_134
+  - first:
+      213: -5276594860196542857
+    second: AsterPixel_Oro_135
+  - first:
+      213: -3682558198893560924
+    second: AsterPixel_Oro_136
+  - first:
+      213: -8594963496616524340
+    second: AsterPixel_Oro_137
+  - first:
+      213: -209454732783980441
+    second: AsterPixel_Oro_138
+  - first:
+      213: -7234605113914969863
+    second: AsterPixel_Oro_139
+  - first:
+      213: 8778022480441331825
+    second: AsterPixel_Oro_140
+  - first:
+      213: -6434627133644000552
+    second: AsterPixel_Oro_141
+  - first:
+      213: 892311582000342475
+    second: AsterPixel_Oro_142
+  - first:
+      213: -1944959308444165564
+    second: AsterPixel_Oro_143
+  - first:
+      213: -8144817786755088326
+    second: AsterPixel_Oro_144
+  - first:
+      213: -6474553723128094086
+    second: AsterPixel_Oro_145
+  - first:
+      213: 8105108256108853505
+    second: AsterPixel_Oro_146
+  - first:
+      213: 8123338465985674376
+    second: AsterPixel_Oro_147
+  - first:
+      213: -5078276958147285382
+    second: AsterPixel_Oro_148
+  - first:
+      213: 3466545982593989980
+    second: AsterPixel_Oro_149
+  - first:
+      213: -6972182965741395
+    second: AsterPixel_Oro_150
+  - first:
+      213: 5188094488907698885
+    second: AsterPixel_Oro_151
+  - first:
+      213: 3175386736766116893
+    second: AsterPixel_Oro_152
+  - first:
+      213: 2088443136917063470
+    second: AsterPixel_Oro_153
+  - first:
+      213: -7088794656596116161
+    second: AsterPixel_Oro_154
+  - first:
+      213: 348426959551992156
+    second: AsterPixel_Oro_155
+  - first:
+      213: 8391664365400270010
+    second: AsterPixel_Oro_156
+  - first:
+      213: 8239422006878382410
+    second: AsterPixel_Oro_157
+  - first:
+      213: -2774202841289544645
+    second: AsterPixel_Oro_158
+  - first:
+      213: 7204075634275879657
+    second: AsterPixel_Oro_159
+  - first:
+      213: -8417988393983901333
+    second: AsterPixel_Oro_160
+  - first:
+      213: 6571921825738932693
+    second: AsterPixel_Oro_161
+  - first:
+      213: -3849944948674859026
+    second: AsterPixel_Oro_162
+  - first:
+      213: 2583584135743356732
+    second: AsterPixel_Oro_163
+  - first:
+      213: -4180232068180064966
+    second: AsterPixel_Oro_164
+  - first:
+      213: 2729352369146394459
+    second: AsterPixel_Oro_165
+  - first:
+      213: -7897643672497577866
+    second: AsterPixel_Oro_166
+  - first:
+      213: -1969994906013137969
+    second: AsterPixel_Oro_167
+  - first:
+      213: -5066073786329466359
+    second: AsterPixel_Oro_168
+  - first:
+      213: -3900830116412386608
+    second: AsterPixel_Oro_169
+  - first:
+      213: -4217326031613498111
+    second: AsterPixel_Oro_170
+  - first:
+      213: -6110529730620148719
+    second: AsterPixel_Oro_171
+  - first:
+      213: 1919970329946587457
+    second: AsterPixel_Oro_172
+  - first:
+      213: -3039269865673354513
+    second: AsterPixel_Oro_173
+  - first:
+      213: 1995065535563969121
+    second: AsterPixel_Oro_174
+  - first:
+      213: 9016514200595531399
+    second: AsterPixel_Oro_175
+  - first:
+      213: -2208983007708652346
+    second: AsterPixel_Oro_176
+  - first:
+      213: 1343017870433172306
+    second: AsterPixel_Oro_177
+  - first:
+      213: -5363662930813259561
+    second: AsterPixel_Oro_178
+  - first:
+      213: 7059114677526351885
+    second: AsterPixel_Oro_179
+  - first:
+      213: -1232087872402882980
+    second: AsterPixel_Oro_180
+  - first:
+      213: -6071978524099583831
+    second: AsterPixel_Oro_181
+  - first:
+      213: -2595765336866624989
+    second: AsterPixel_Oro_182
+  - first:
+      213: -6276859051319997211
+    second: AsterPixel_Oro_183
+  - first:
+      213: -5131109055957188750
+    second: AsterPixel_Oro_184
+  - first:
+      213: -6579358618027248987
+    second: AsterPixel_Oro_185
+  - first:
+      213: 3153740530294170943
+    second: AsterPixel_Oro_186
+  - first:
+      213: -494924894080392935
+    second: AsterPixel_Oro_187
+  - first:
+      213: 2551184910757835785
+    second: AsterPixel_Oro_188
+  - first:
+      213: 5765773935320317214
+    second: AsterPixel_Oro_189
+  - first:
+      213: -4581148642381270313
+    second: AsterPixel_Oro_190
+  - first:
+      213: 5057305116867132351
+    second: AsterPixel_Oro_191
+  - first:
+      213: -2438875783347187216
+    second: AsterPixel_Oro_192
+  - first:
+      213: 6852181379199541359
+    second: AsterPixel_Oro_193
+  - first:
+      213: -182675003282476860
+    second: AsterPixel_Oro_194
+  - first:
+      213: 1220675002474677096
+    second: AsterPixel_Oro_195
+  - first:
+      213: -5111905578245885523
+    second: AsterPixel_Oro_196
+  - first:
+      213: -4420379612959289498
+    second: AsterPixel_Oro_197
+  - first:
+      213: -8101032571830951586
+    second: AsterPixel_Oro_198
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: AsterPixel_Oro_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 923
+        width: 55
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 972768b4813ea7a10800000000000000
+      internalID: 1908087085630648953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_1
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 923
+        width: 55
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5e850c7883b2cad0800000000000000
+      internalID: -2683385029181731234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_2
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 923
+        width: 39
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b72d1f76fd417d640800000000000000
+      internalID: 5104571652401910395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_3
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 923
+        width: 55
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f0e8d51a2a181540800000000000000
+      internalID: 4978758156115566837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_4
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 923
+        width: 55
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab6cfcf7d8e54c2e0800000000000000
+      internalID: -2106454763874826566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_5
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 923
+        width: 55
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1313fed4ef2c8fa60800000000000000
+      internalID: 7708125159729606961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_6
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 931
+        width: 47
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 812f892fa93afb3d0800000000000000
+      internalID: -3188650125264621032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_7
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 931
+        width: 55
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35177f4652cd36e10800000000000000
+      internalID: 2189835896998031699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_8
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 999
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01e81f79ca93ae800800000000000000
+      internalID: 642389310300065296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_9
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 999
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d8dcfccf643c4980800000000000000
+      internalID: -8553403937498277676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_10
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 999
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8230e5618b74fbc70800000000000000
+      internalID: 8988982237229613864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_11
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 999
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 405620a9d852abf00800000000000000
+      internalID: 1133259546341565700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_12
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 999
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0f2960d02a1c79e0800000000000000
+      internalID: -1622393037522391281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_13
+      rect:
+        serializedVersion: 2
+        x: 659
+        y: 999
+        width: 46
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e7f5a5836ad3a0d0800000000000000
+      internalID: -3412643971637839904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_14
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 1007
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a889b41cde5c2cc10800000000000000
+      internalID: 2072436403484727434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_15
+      rect:
+        serializedVersion: 2
+        x: 755
+        y: 1007
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb8feac8dec3aad20800000000000000
+      internalID: 3290509468712761531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_16
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 1007
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c792201d1c1c635c0800000000000000
+      internalID: -4235985361315944068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_17
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 947
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89dd1bc434960ced0800000000000000
+      internalID: -2395799263990653544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_18
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 947
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cb6e72a407279bb0800000000000000
+      internalID: -4929428366274171967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_19
+      rect:
+        serializedVersion: 2
+        x: 909
+        y: 947
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad9cd59529dfe81c0800000000000000
+      internalID: -4499380172690175526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_20
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 947
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 033196cbb3391f6a0800000000000000
+      internalID: -6417186109252889808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_21
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 935
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7dbe53fb1fb953880800000000000000
+      internalID: -8631821648188281897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_22
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 935
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed78faa8c9ca99800800000000000000
+      internalID: 619716212081788894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_23
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 935
+        width: 30
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b39647b5b19da160800000000000000
+      internalID: 7038442002299917238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_24
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 935
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3a1f2cee33ae7990800000000000000
+      internalID: -7386286848195225029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_25
+      rect:
+        serializedVersion: 2
+        x: 611
+        y: 935
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5754406bf071e4470800000000000000
+      internalID: 8380661312828753269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_26
+      rect:
+        serializedVersion: 2
+        x: 659
+        y: 935
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4574eab78f3d40560800000000000000
+      internalID: 7279175961917933396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_27
+      rect:
+        serializedVersion: 2
+        x: 707
+        y: 943
+        width: 38
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef75188d0e069da60800000000000000
+      internalID: 7699291556787869694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_28
+      rect:
+        serializedVersion: 2
+        x: 747
+        y: 943
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5cf0dde5a4da9000800000000000000
+      internalID: 43580955538029662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_29
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 847
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 560047d1cb00013e0800000000000000
+      internalID: -2085165819524546459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_30
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 847
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c4ebd3045a99b6b0800000000000000
+      internalID: -5280019402482522937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_31
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 847
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb2c1cc7980f0fc10800000000000000
+      internalID: 2085431100766798524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_32
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 847
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24805786c8ae86aa0800000000000000
+      internalID: -6167421800915072958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_33
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 847
+        width: 39
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64a9a3f5c9d8219f0800000000000000
+      internalID: -499180905932613050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_34
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 847
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1efa32fd6fa7eed0800000000000000
+      internalID: -2384744590919139814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_35
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 847
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b769b6d6f1d68a560800000000000000
+      internalID: 7325224775665292923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_36
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 847
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 770ecd6ff06159780800000000000000
+      internalID: -8677004849237401481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_37
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 847
+        width: 71
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c44c7e8e8402c510800000000000000
+      internalID: 1567820630600729798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_38
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 847
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 393ca93c6e60b27b0800000000000000
+      internalID: -5248093352576236653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_39
+      rect:
+        serializedVersion: 2
+        x: 573
+        y: 847
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efabfcc2b9782dc20800000000000000
+      internalID: 3229792983319558910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_40
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 847
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b784112eceae854d0800000000000000
+      internalID: -3145506036592326533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_41
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 847
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74d1d1bd60a1e9300800000000000000
+      internalID: 260674445182311751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_42
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 847
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f6e551bcebafcff0800000000000000
+      internalID: -13603240782993671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_43
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 847
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35bc0cb4039b34de0800000000000000
+      internalID: -1350031846200521901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_44
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 847
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 282732b7debea8f60800000000000000
+      internalID: 8037495890201768578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_45
+      rect:
+        serializedVersion: 2
+        x: 915
+        y: 847
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48edb6b69433934b0800000000000000
+      internalID: -5460276682782155132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_46
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 771
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6005c2d141f423760800000000000000
+      internalID: 7436092882549493766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_47
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 771
+        width: 71
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d0bc3b07ff248e70800000000000000
+      internalID: 9116464283796680921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_48
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 771
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3a33d4f9f5491ba0800000000000000
+      internalID: -6117781678949451203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_49
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 771
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e644d24b86af926e0800000000000000
+      internalID: -1861681643334581138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_50
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 771
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbc506a22fccdfa70800000000000000
+      internalID: 8862464982200114364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_51
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 771
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51850032b6ce161e0800000000000000
+      internalID: -2206222397541951467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_52
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 771
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cff21dd7f888d5a0800000000000000
+      internalID: -6496291864334630975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_53
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 771
+        width: 47
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a5786493421a22e0800000000000000
+      internalID: -2149885790654007904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_54
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 771
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 944c5d4dcb37cc850800000000000000
+      internalID: 6398616425448457289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_55
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 771
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26f7e2a0fdb1f8b50800000000000000
+      internalID: 6597522623883542370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_56
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 771
+        width: 39
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10b5a726402953d10800000000000000
+      internalID: 2104748948395285249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_57
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 771
+        width: 47
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bb44fd4994e5ed90800000000000000
+      internalID: -7068992692999140432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_58
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 771
+        width: 39
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2002e28ec9a76b190800000000000000
+      internalID: -7947029678119837694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_59
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 771
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbeb77eaed03c3ef0800000000000000
+      internalID: -127172956505260353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_60
+      rect:
+        serializedVersion: 2
+        x: 769
+        y: 771
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67885f27463b86630800000000000000
+      internalID: 3920580719632812150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_61
+      rect:
+        serializedVersion: 2
+        x: 826
+        y: 771
+        width: 47
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b47130adcf4aab330800000000000000
+      internalID: 3727473047498856267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_62
+      rect:
+        serializedVersion: 2
+        x: 875
+        y: 771
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f82fab774f486b860800000000000000
+      internalID: 7545364411221471887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_63
+      rect:
+        serializedVersion: 2
+        x: 932
+        y: 771
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a7d1c6d5f746d470800000000000000
+      internalID: 8418995674611308448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_64
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 695
+        width: 39
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34cc241a09aa2b8b0800000000000000
+      internalID: -5137856686718792637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_65
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 695
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0afaba238dbbf1700800000000000000
+      internalID: 513335419780968352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_66
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 695
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff31ba7cf702a6fb0800000000000000
+      internalID: -4653871531751173121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_67
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 695
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2b1356b5efade670800000000000000
+      internalID: 8569699067097193262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_68
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 695
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fce078ff8c0562610800000000000000
+      internalID: 1596051942160142031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_69
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 695
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5d0386fcc994c3e0800000000000000
+      internalID: -2034332026076459685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_70
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 695
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7f4e2a80e3259ac0800000000000000
+      internalID: -3849130859220283526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_71
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 695
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8604ac41cfaafa350800000000000000
+      internalID: 6030226425729663080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_72
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 695
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5428ae3f1e739350800000000000000
+      internalID: 6022295799384777820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_73
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 695
+        width: 47
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30bbc6f88465ee860800000000000000
+      internalID: 7561075694045543171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_74
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 695
+        width: 23
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7df098896e01d700800000000000000
+      internalID: 563247274823581052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_75
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 695
+        width: 23
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a443e0896fc689510800000000000000
+      internalID: 1556113477625328714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_76
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 695
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8f6339b37124a030800000000000000
+      internalID: 3504963190913200012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_77
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 695
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4976096ae56a345e0800000000000000
+      internalID: -1926513290132822124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_78
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 695
+        width: 39
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ca10a1dc3a886b90800000000000000
+      internalID: -7248391606433211711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_79
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 695
+        width: 39
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d599b9ea140f22680800000000000000
+      internalID: -8781192158526072483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_80
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 695
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b53d50c2535a2c850800000000000000
+      internalID: 6395856068609954651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_81
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 695
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e01fff5c586460a0800000000000000
+      internalID: -6889266784013184796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_82
+      rect:
+        serializedVersion: 2
+        x: 909
+        y: 695
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0ed575a3c1d14530800000000000000
+      internalID: 3837578995721166349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_83
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 695
+        width: 39
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56770ed2460809a20800000000000000
+      internalID: 3067092513994078053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_84
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 619
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd44d91b48a137e70800000000000000
+      internalID: 9111655628318524635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_85
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 619
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8eea56722e6491250800000000000000
+      internalID: 5915837522665385704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_86
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 619
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01cb47048081ae6d0800000000000000
+      internalID: -2960527381322482672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_87
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 627
+        width: 55
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe8aab8076c2126b0800000000000000
+      internalID: -5322924463535511313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_88
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 631
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bf3033a7cb1f9830800000000000000
+      internalID: 4080010331671248822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_89
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 631
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd011a577d59d8230800000000000000
+      internalID: 3642732426236596443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_90
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 631
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba97550e1d2ad52c0800000000000000
+      internalID: -4441214635221878357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_91
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 631
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f6728010da6f76f0800000000000000
+      internalID: -684711176474298631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_92
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 631
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ec18c0f56b8684c0800000000000000
+      internalID: -4285584725448844055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_93
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 631
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3146d99687417d50800000000000000
+      internalID: 6733241561327747390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_94
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 631
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0125775b128ee5510800000000000000
+      internalID: 1539923354083349008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_95
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 631
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be7384f5095ae3b10800000000000000
+      internalID: 1963188527072557035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_96
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 631
+        width: 30
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14685ed3972171390800000000000000
+      internalID: -7847783513731004863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_97
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 631
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53473eec49e475440800000000000000
+      internalID: 4924491118586065973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_98
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 631
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2a04801fb63c3cb0800000000000000
+      internalID: -4882967701732718037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_99
+      rect:
+        serializedVersion: 2
+        x: 743
+        y: 631
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 323c1b0e7989bc930800000000000000
+      internalID: 4164590058511385379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_100
+      rect:
+        serializedVersion: 2
+        x: 791
+        y: 631
+        width: 62
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c752306bbbb1d4f10800000000000000
+      internalID: 2255489481408980348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_101
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 631
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0788600577e9aba00800000000000000
+      internalID: 773104521328363632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_102
+      rect:
+        serializedVersion: 2
+        x: 903
+        y: 631
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f68daf07e853f5550800000000000000
+      internalID: 6151694501908502639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_103
+      rect:
+        serializedVersion: 2
+        x: 951
+        y: 631
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d67a56d75c36311c0800000000000000
+      internalID: -4534170699968436371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_104
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 555
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5aee69aee6c240b20800000000000000
+      internalID: 3099651298431528613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_105
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 555
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7e5c60678bc5eb20800000000000000
+      internalID: 3163158095596379771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_106
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 555
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 617c0dd5c494dffc0800000000000000
+      internalID: -3459528346410367210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_107
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 555
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b9a1686d0c734160800000000000000
+      internalID: 7008581842146273721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_108
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 555
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d51ba525385864f10800000000000000
+      internalID: 2253635462614397277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_109
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 555
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12a4fd4b97a0e6870800000000000000
+      internalID: 8677885049831377441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_110
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 555
+        width: 62
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0ccf791459d57a80800000000000000
+      internalID: -8469624568972063729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_111
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 555
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67080d0bf199b1ad0800000000000000
+      internalID: -2730420387680583562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_112
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 555
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3cb3b24b36689d740800000000000000
+      internalID: 5177317009421712323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_113
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 555
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55448e96cf20204b0800000000000000
+      internalID: -5475810913797258155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_114
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 555
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d3c910cc5f143b10800000000000000
+      internalID: 1960226221033374674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_115
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 555
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36d85102462be2940800000000000000
+      internalID: 5273348356802186595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_116
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 555
+        width: 38
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2391317e8ed8b26f0800000000000000
+      internalID: -708316484932003534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_117
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 555
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 294f4b65ef67ab990800000000000000
+      internalID: -7369447005489924974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_118
+      rect:
+        serializedVersion: 2
+        x: 683
+        y: 555
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dacffa12ae2f98f50800000000000000
+      internalID: 6884300592813964461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_119
+      rect:
+        serializedVersion: 2
+        x: 739
+        y: 603
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdff7eecd14d98170800000000000000
+      internalID: 8181303422585667551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_120
+      rect:
+        serializedVersion: 2
+        x: 763
+        y: 555
+        width: 38
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3812c6aeb52ef1bc0800000000000000
+      internalID: -3810077875329293949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_121
+      rect:
+        serializedVersion: 2
+        x: 803
+        y: 555
+        width: 30
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56b673cb40884d570800000000000000
+      internalID: 8490560751419222885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_122
+      rect:
+        serializedVersion: 2
+        x: 835
+        y: 555
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a0afca3f46cce620800000000000000
+      internalID: 2804834711536378016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_123
+      rect:
+        serializedVersion: 2
+        x: 883
+        y: 555
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a03051cc2e439bf0800000000000000
+      internalID: -318825194484387677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_124
+      rect:
+        serializedVersion: 2
+        x: 931
+        y: 555
+        width: 38
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de17c618c34270b60800000000000000
+      internalID: 7712172729183269357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_125
+      rect:
+        serializedVersion: 2
+        x: 971
+        y: 555
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8372bc87da274410800000000000000
+      internalID: 1461183709371855757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_126
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 555
+        width: 30
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b78e028974e5edfc0800000000000000
+      internalID: -3468231001440720773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_127
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 491
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 638cbdf1bae4a4880800000000000000
+      internalID: -8625995639393892298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_128
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 491
+        width: 30
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3e2c8acc498f1530800000000000000
+      internalID: 3827929171196915262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_129
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 491
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cffc29b2b0f0132c0800000000000000
+      internalID: -4453762015842611204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_130
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 491
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc9fecf881f813ce0800000000000000
+      internalID: -1427202271245043253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_131
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 491
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b92187a42aeae6e50800000000000000
+      internalID: 6804568099060716187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_132
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 491
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc4a489d2ce447020800000000000000
+      internalID: 2338580705292100813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_133
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 491
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2b1510b3c424e7d0800000000000000
+      internalID: -2890144637973619926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_134
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 491
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b89b72fda40851d0800000000000000
+      internalID: -3361931976688035657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_135
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 491
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77645566ee4c5c6b0800000000000000
+      internalID: -5276594860196542857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_136
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 491
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ab3f3244dce4ecc0800000000000000
+      internalID: -3682558198893560924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_137
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 491
+        width: 38
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc509b6ec3e88b880800000000000000
+      internalID: -8594963496616524340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_138
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 507
+        width: 14
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 760f2efb70ed71df0800000000000000
+      internalID: -209454732783980441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_139
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 539
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f0bfdebaf4899b90800000000000000
+      internalID: -7234605113914969863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_140
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 507
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 170591120fcc1d970800000000000000
+      internalID: 8778022480441331825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_141
+      rect:
+        serializedVersion: 2
+        x: 603
+        y: 539
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d23f0dc6bc93b6a0800000000000000
+      internalID: -6434627133644000552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_142
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 491
+        width: 30
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc5e81af7a0226c00800000000000000
+      internalID: 892311582000342475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_143
+      rect:
+        serializedVersion: 2
+        x: 667
+        y: 491
+        width: 30
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44a989550dd1205e0800000000000000
+      internalID: -1944959308444165564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_144
+      rect:
+        serializedVersion: 2
+        x: 699
+        y: 491
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a300e24406bc7fe80800000000000000
+      internalID: -8144817786755088326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_145
+      rect:
+        serializedVersion: 2
+        x: 747
+        y: 491
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7264c541b3c526a0800000000000000
+      internalID: -6474553723128094086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_146
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 491
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 109347724012b7070800000000000000
+      internalID: 8105108256108853505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_147
+      rect:
+        serializedVersion: 2
+        x: 843
+        y: 491
+        width: 30
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88cb757ab45ebb070800000000000000
+      internalID: 8123338465985674376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_148
+      rect:
+        serializedVersion: 2
+        x: 875
+        y: 491
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7e649e23065689b0800000000000000
+      internalID: -5078276958147285382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_149
+      rect:
+        serializedVersion: 2
+        x: 939
+        y: 531
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5d72126435ab1030800000000000000
+      internalID: 3466545982593989980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_150
+      rect:
+        serializedVersion: 2
+        x: 971
+        y: 491
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da8940726da37eff0800000000000000
+      internalID: -6972182965741395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_151
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 491
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c251803370dff740800000000000000
+      internalID: 5188094488907698885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_152
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 491
+        width: 14
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d146e65c96d311c20800000000000000
+      internalID: 3175386736766116893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_153
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 491
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e274b8dc7f3abfc10800000000000000
+      internalID: 2088443136917063470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_154
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 491
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3db6ef51da8f9d90800000000000000
+      internalID: -7088794656596116161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_155
+      rect:
+        serializedVersion: 2
+        x: 923
+        y: 491
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c511442497cd5d400800000000000000
+      internalID: 348426959551992156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_156
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 431
+        width: 55
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab4acf5874e257470800000000000000
+      internalID: 8391664365400270010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_157
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 431
+        width: 55
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a49a58239ae485270800000000000000
+      internalID: 8239422006878382410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_158
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 431
+        width: 55
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3cae06d63d0089d0800000000000000
+      internalID: -2774202841289544645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_159
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 431
+        width: 71
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ea8f0cde940af360800000000000000
+      internalID: 7204075634275879657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_160
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 431
+        width: 55
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b618a35f72c4d2b80800000000000000
+      internalID: -8417988393983901333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_161
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 431
+        width: 55
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d14ecab418243b50800000000000000
+      internalID: 6571921825738932693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_162
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 431
+        width: 47
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eefec61977f329ac0800000000000000
+      internalID: -3849944948674859026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_163
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 431
+        width: 55
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3f3152451cbad320800000000000000
+      internalID: 2583584135743356732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_164
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 431
+        width: 55
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a354e61f415dcf5c0800000000000000
+      internalID: -4180232068180064966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_165
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 431
+        width: 55
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5777ddd48b90e520800000000000000
+      internalID: 2729352369146394459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_166
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 431
+        width: 71
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 670ab226ceee56290800000000000000
+      internalID: -7897643672497577866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_167
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 431
+        width: 55
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc302c9021c29a4e0800000000000000
+      internalID: -1969994906013137969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_168
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 431
+        width: 55
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90af9e78bb0b1b9b0800000000000000
+      internalID: -5066073786329466359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_169
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 431
+        width: 55
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d218163da77dd9c0800000000000000
+      internalID: -3900830116412386608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_170
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 435
+        width: 46
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10d6baf815c0975c0800000000000000
+      internalID: -4217326031613498111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_171
+      rect:
+        serializedVersion: 2
+        x: 873
+        y: 439
+        width: 23
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1143ce0c599033ba0800000000000000
+      internalID: -6110529730620148719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_172
+      rect:
+        serializedVersion: 2
+        x: 898
+        y: 443
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14181c7b7da15aa10800000000000000
+      internalID: 1919970329946587457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_173
+      rect:
+        serializedVersion: 2
+        x: 946
+        y: 443
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe29dffe82852d5d0800000000000000
+      internalID: -3039269865673354513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_174
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 383
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1623ae6c885efab10800000000000000
+      internalID: 1995065535563969121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_175
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 383
+        width: 62
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78603c6d4e7112d70800000000000000
+      internalID: 9016514200595531399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_176
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 383
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ccd6ae78ad1851e0800000000000000
+      internalID: -2208983007708652346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_177
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 383
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25bbb2633ab53a210800000000000000
+      internalID: 1343017870433172306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_178
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 383
+        width: 38
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d0f1f97bf07095b0800000000000000
+      internalID: -5363662930813259561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_179
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 383
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0054bef56307f160800000000000000
+      internalID: 7059114677526351885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_180
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 383
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5efb51ab9eb6eee0800000000000000
+      internalID: -1232087872402882980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_181
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 383
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a06e3bf3bffbbba0800000000000000
+      internalID: -6071978524099583831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_182
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 383
+        width: 62
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32aeac7dd2df9fbd0800000000000000
+      internalID: -2595765336866624989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_183
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 383
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ec40e4f2fd14e8a0800000000000000
+      internalID: -6276859051319997211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_184
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 383
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27fb1e7df73aac8b0800000000000000
+      internalID: -5131109055957188750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_185
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 383
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a2b492223c61b4a0800000000000000
+      internalID: -6579358618027248987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_186
+      rect:
+        serializedVersion: 2
+        x: 603
+        y: 415
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f35afe59d4654cb20800000000000000
+      internalID: 3153740530294170943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_187
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 395
+        width: 31
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91127d95e6ca129f0800000000000000
+      internalID: -494924894080392935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_188
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 395
+        width: 23
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 904be0ad821a76320800000000000000
+      internalID: 2551184910757835785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_189
+      rect:
+        serializedVersion: 2
+        x: 677
+        y: 395
+        width: 39
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1d39f588d4240050800000000000000
+      internalID: 5765773935320317214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_190
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 403
+        width: 23
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d2f99be49d7c60c0800000000000000
+      internalID: -4581148642381270313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_191
+      rect:
+        serializedVersion: 2
+        x: 743
+        y: 403
+        width: 47
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbb71a385382f2640800000000000000
+      internalID: 5057305116867132351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_192
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 407
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f1d942956f572ed0800000000000000
+      internalID: -2438875783347187216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_193
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 407
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f602cb3f8a6d71f50800000000000000
+      internalID: 6852181379199541359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_194
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 407
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c031086d02077df0800000000000000
+      internalID: -182675003282476860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_195
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 407
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 863c3b48275b0f010800000000000000
+      internalID: 1220675002474677096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_196
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 415
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da1f05be5fcde09b0800000000000000
+      internalID: -5111905578245885523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_197
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 415
+        width: 38
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66fce258928a7a2c0800000000000000
+      internalID: -4420379612959289498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Oro_198
+      rect:
+        serializedVersion: 2
+        x: 603
+        y: 391
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e51a52a0cc9539f80800000000000000
+      internalID: -8101032571830951586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      AsterPixel_Oro_0: 1908087085630648953
+      AsterPixel_Oro_1: -2683385029181731234
+      AsterPixel_Oro_10: 8988982237229613864
+      AsterPixel_Oro_100: 2255489481408980348
+      AsterPixel_Oro_101: 773104521328363632
+      AsterPixel_Oro_102: 6151694501908502639
+      AsterPixel_Oro_103: -4534170699968436371
+      AsterPixel_Oro_104: 3099651298431528613
+      AsterPixel_Oro_105: 3163158095596379771
+      AsterPixel_Oro_106: -3459528346410367210
+      AsterPixel_Oro_107: 7008581842146273721
+      AsterPixel_Oro_108: 2253635462614397277
+      AsterPixel_Oro_109: 8677885049831377441
+      AsterPixel_Oro_11: 1133259546341565700
+      AsterPixel_Oro_110: -8469624568972063729
+      AsterPixel_Oro_111: -2730420387680583562
+      AsterPixel_Oro_112: 5177317009421712323
+      AsterPixel_Oro_113: -5475810913797258155
+      AsterPixel_Oro_114: 1960226221033374674
+      AsterPixel_Oro_115: 5273348356802186595
+      AsterPixel_Oro_116: -708316484932003534
+      AsterPixel_Oro_117: -7369447005489924974
+      AsterPixel_Oro_118: 6884300592813964461
+      AsterPixel_Oro_119: 8181303422585667551
+      AsterPixel_Oro_12: -1622393037522391281
+      AsterPixel_Oro_120: -3810077875329293949
+      AsterPixel_Oro_121: 8490560751419222885
+      AsterPixel_Oro_122: 2804834711536378016
+      AsterPixel_Oro_123: -318825194484387677
+      AsterPixel_Oro_124: 7712172729183269357
+      AsterPixel_Oro_125: 1461183709371855757
+      AsterPixel_Oro_126: -3468231001440720773
+      AsterPixel_Oro_127: -8625995639393892298
+      AsterPixel_Oro_128: 3827929171196915262
+      AsterPixel_Oro_129: -4453762015842611204
+      AsterPixel_Oro_13: -3412643971637839904
+      AsterPixel_Oro_130: -1427202271245043253
+      AsterPixel_Oro_131: 6804568099060716187
+      AsterPixel_Oro_132: 2338580705292100813
+      AsterPixel_Oro_133: -2890144637973619926
+      AsterPixel_Oro_134: -3361931976688035657
+      AsterPixel_Oro_135: -5276594860196542857
+      AsterPixel_Oro_136: -3682558198893560924
+      AsterPixel_Oro_137: -8594963496616524340
+      AsterPixel_Oro_138: -209454732783980441
+      AsterPixel_Oro_139: -7234605113914969863
+      AsterPixel_Oro_14: 2072436403484727434
+      AsterPixel_Oro_140: 8778022480441331825
+      AsterPixel_Oro_141: -6434627133644000552
+      AsterPixel_Oro_142: 892311582000342475
+      AsterPixel_Oro_143: -1944959308444165564
+      AsterPixel_Oro_144: -8144817786755088326
+      AsterPixel_Oro_145: -6474553723128094086
+      AsterPixel_Oro_146: 8105108256108853505
+      AsterPixel_Oro_147: 8123338465985674376
+      AsterPixel_Oro_148: -5078276958147285382
+      AsterPixel_Oro_149: 3466545982593989980
+      AsterPixel_Oro_15: 3290509468712761531
+      AsterPixel_Oro_150: -6972182965741395
+      AsterPixel_Oro_151: 5188094488907698885
+      AsterPixel_Oro_152: 3175386736766116893
+      AsterPixel_Oro_153: 2088443136917063470
+      AsterPixel_Oro_154: -7088794656596116161
+      AsterPixel_Oro_155: 348426959551992156
+      AsterPixel_Oro_156: 8391664365400270010
+      AsterPixel_Oro_157: 8239422006878382410
+      AsterPixel_Oro_158: -2774202841289544645
+      AsterPixel_Oro_159: 7204075634275879657
+      AsterPixel_Oro_16: -4235985361315944068
+      AsterPixel_Oro_160: -8417988393983901333
+      AsterPixel_Oro_161: 6571921825738932693
+      AsterPixel_Oro_162: -3849944948674859026
+      AsterPixel_Oro_163: 2583584135743356732
+      AsterPixel_Oro_164: -4180232068180064966
+      AsterPixel_Oro_165: 2729352369146394459
+      AsterPixel_Oro_166: -7897643672497577866
+      AsterPixel_Oro_167: -1969994906013137969
+      AsterPixel_Oro_168: -5066073786329466359
+      AsterPixel_Oro_169: -3900830116412386608
+      AsterPixel_Oro_17: -2395799263990653544
+      AsterPixel_Oro_170: -4217326031613498111
+      AsterPixel_Oro_171: -6110529730620148719
+      AsterPixel_Oro_172: 1919970329946587457
+      AsterPixel_Oro_173: -3039269865673354513
+      AsterPixel_Oro_174: 1995065535563969121
+      AsterPixel_Oro_175: 9016514200595531399
+      AsterPixel_Oro_176: -2208983007708652346
+      AsterPixel_Oro_177: 1343017870433172306
+      AsterPixel_Oro_178: -5363662930813259561
+      AsterPixel_Oro_179: 7059114677526351885
+      AsterPixel_Oro_18: -4929428366274171967
+      AsterPixel_Oro_180: -1232087872402882980
+      AsterPixel_Oro_181: -6071978524099583831
+      AsterPixel_Oro_182: -2595765336866624989
+      AsterPixel_Oro_183: -6276859051319997211
+      AsterPixel_Oro_184: -5131109055957188750
+      AsterPixel_Oro_185: -6579358618027248987
+      AsterPixel_Oro_186: 3153740530294170943
+      AsterPixel_Oro_187: -494924894080392935
+      AsterPixel_Oro_188: 2551184910757835785
+      AsterPixel_Oro_189: 5765773935320317214
+      AsterPixel_Oro_19: -4499380172690175526
+      AsterPixel_Oro_190: -4581148642381270313
+      AsterPixel_Oro_191: 5057305116867132351
+      AsterPixel_Oro_192: -2438875783347187216
+      AsterPixel_Oro_193: 6852181379199541359
+      AsterPixel_Oro_194: -182675003282476860
+      AsterPixel_Oro_195: 1220675002474677096
+      AsterPixel_Oro_196: -5111905578245885523
+      AsterPixel_Oro_197: -4420379612959289498
+      AsterPixel_Oro_198: -8101032571830951586
+      AsterPixel_Oro_2: 5104571652401910395
+      AsterPixel_Oro_20: -6417186109252889808
+      AsterPixel_Oro_21: -8631821648188281897
+      AsterPixel_Oro_22: 619716212081788894
+      AsterPixel_Oro_23: 7038442002299917238
+      AsterPixel_Oro_24: -7386286848195225029
+      AsterPixel_Oro_25: 8380661312828753269
+      AsterPixel_Oro_26: 7279175961917933396
+      AsterPixel_Oro_27: 7699291556787869694
+      AsterPixel_Oro_28: 43580955538029662
+      AsterPixel_Oro_29: -2085165819524546459
+      AsterPixel_Oro_3: 4978758156115566837
+      AsterPixel_Oro_30: -5280019402482522937
+      AsterPixel_Oro_31: 2085431100766798524
+      AsterPixel_Oro_32: -6167421800915072958
+      AsterPixel_Oro_33: -499180905932613050
+      AsterPixel_Oro_34: -2384744590919139814
+      AsterPixel_Oro_35: 7325224775665292923
+      AsterPixel_Oro_36: -8677004849237401481
+      AsterPixel_Oro_37: 1567820630600729798
+      AsterPixel_Oro_38: -5248093352576236653
+      AsterPixel_Oro_39: 3229792983319558910
+      AsterPixel_Oro_4: -2106454763874826566
+      AsterPixel_Oro_40: -3145506036592326533
+      AsterPixel_Oro_41: 260674445182311751
+      AsterPixel_Oro_42: -13603240782993671
+      AsterPixel_Oro_43: -1350031846200521901
+      AsterPixel_Oro_44: 8037495890201768578
+      AsterPixel_Oro_45: -5460276682782155132
+      AsterPixel_Oro_46: 7436092882549493766
+      AsterPixel_Oro_47: 9116464283796680921
+      AsterPixel_Oro_48: -6117781678949451203
+      AsterPixel_Oro_49: -1861681643334581138
+      AsterPixel_Oro_5: 7708125159729606961
+      AsterPixel_Oro_50: 8862464982200114364
+      AsterPixel_Oro_51: -2206222397541951467
+      AsterPixel_Oro_52: -6496291864334630975
+      AsterPixel_Oro_53: -2149885790654007904
+      AsterPixel_Oro_54: 6398616425448457289
+      AsterPixel_Oro_55: 6597522623883542370
+      AsterPixel_Oro_56: 2104748948395285249
+      AsterPixel_Oro_57: -7068992692999140432
+      AsterPixel_Oro_58: -7947029678119837694
+      AsterPixel_Oro_59: -127172956505260353
+      AsterPixel_Oro_6: -3188650125264621032
+      AsterPixel_Oro_60: 3920580719632812150
+      AsterPixel_Oro_61: 3727473047498856267
+      AsterPixel_Oro_62: 7545364411221471887
+      AsterPixel_Oro_63: 8418995674611308448
+      AsterPixel_Oro_64: -5137856686718792637
+      AsterPixel_Oro_65: 513335419780968352
+      AsterPixel_Oro_66: -4653871531751173121
+      AsterPixel_Oro_67: 8569699067097193262
+      AsterPixel_Oro_68: 1596051942160142031
+      AsterPixel_Oro_69: -2034332026076459685
+      AsterPixel_Oro_7: 2189835896998031699
+      AsterPixel_Oro_70: -3849130859220283526
+      AsterPixel_Oro_71: 6030226425729663080
+      AsterPixel_Oro_72: 6022295799384777820
+      AsterPixel_Oro_73: 7561075694045543171
+      AsterPixel_Oro_74: 563247274823581052
+      AsterPixel_Oro_75: 1556113477625328714
+      AsterPixel_Oro_76: 3504963190913200012
+      AsterPixel_Oro_77: -1926513290132822124
+      AsterPixel_Oro_78: -7248391606433211711
+      AsterPixel_Oro_79: -8781192158526072483
+      AsterPixel_Oro_8: 642389310300065296
+      AsterPixel_Oro_80: 6395856068609954651
+      AsterPixel_Oro_81: -6889266784013184796
+      AsterPixel_Oro_82: 3837578995721166349
+      AsterPixel_Oro_83: 3067092513994078053
+      AsterPixel_Oro_84: 9111655628318524635
+      AsterPixel_Oro_85: 5915837522665385704
+      AsterPixel_Oro_86: -2960527381322482672
+      AsterPixel_Oro_87: -5322924463535511313
+      AsterPixel_Oro_88: 4080010331671248822
+      AsterPixel_Oro_89: 3642732426236596443
+      AsterPixel_Oro_9: -8553403937498277676
+      AsterPixel_Oro_90: -4441214635221878357
+      AsterPixel_Oro_91: -684711176474298631
+      AsterPixel_Oro_92: -4285584725448844055
+      AsterPixel_Oro_93: 6733241561327747390
+      AsterPixel_Oro_94: 1539923354083349008
+      AsterPixel_Oro_95: 1963188527072557035
+      AsterPixel_Oro_96: -7847783513731004863
+      AsterPixel_Oro_97: 4924491118586065973
+      AsterPixel_Oro_98: -4882967701732718037
+      AsterPixel_Oro_99: 4164590058511385379
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -7,9 +7,9 @@ using UnityEngine;
 /// Lleva el nivel actual y su semilla, coloca la meta y al jugador, manda poblar, y reacciona
 /// a las dos únicas cosas que pueden pasar: lo superas o mueres.
 ///
-/// La semilla de cada nivel sale del número de nivel y de la partida, así que el nivel 7
-/// siempre es el mismo nivel 7 dentro de una partida. Reintentar te devuelve EXACTAMENTE el
-/// mismo reparto: puedes aprendértelo, que es lo que hace que fallar no sea frustrante.
+/// La semilla de cada nivel sale del número de nivel, de la partida y del número de intento:
+/// cada intento es un mapa distinto (decisión del 20 oct). La pantalla de transición lo cuenta
+/// como "variaciones del mundo". Con Same Level On Retry se vuelve al reparto fijo.
 ///
 /// Desde el Hito 2 habla con GameProgress: de ahí saca la partida a continuar y ahí avisa de
 /// cada nivel superado y de cada muerte. Si GameProgress no está en la escena, el director
@@ -28,9 +28,9 @@ public class GameDirector : MonoBehaviour
     [SerializeField] private int startLevel = 1;
     [Tooltip("0 = se sortea al empezar. Con un valor fijo, toda la partida es reproducible")]
     [SerializeField] private int runSeed = 0;
-    [Tooltip("Al reintentar, el nivel se genera otra vez igual. Desactívalo solo si prefieres " +
-             "que cada intento sea distinto")]
-    [SerializeField] private bool sameLevelOnRetry = true;
+    [Tooltip("Al reintentar, el nivel se genera otra vez igual. Apagado (lo decidido): cada " +
+             "intento es un mapa distinto")]
+    [SerializeField] private bool sameLevelOnRetry = false;
     [Tooltip("Si hay una partida guardada a medias, continúa por donde iba. Desactívalo para " +
              "probar siempre desde Nivel Inicial sin tocar el guardado")]
     [SerializeField] private bool resumeFromSave = true;
@@ -40,7 +40,13 @@ public class GameDirector : MonoBehaviour
 
     [Header("Ritmo")]
     [SerializeField] private float startDelay = 0.4f;
+    [Tooltip("Tras caer al agujero, espera antes de la pantalla de transición (o del nivel " +
+             "siguiente si no hay pantalla)")]
     [SerializeField] private float nextLevelDelay = 1.1f;
+
+    [Header("Pantalla de transición")]
+    [Tooltip("Vacío = la busca en la escena. Si no hay ninguna, se pasa al nivel siguiente sin ella")]
+    [SerializeField] private TransitionScreen transition;
     [SerializeField] private float respawnDelay = 1.4f;
 
     [Header("Meta y orientación")]
@@ -64,6 +70,9 @@ public class GameDirector : MonoBehaviour
 
     int retries;
     float levelStartTime;
+    // Lo del nivel en curso sumando los intentos fallidos. Sin GameProgress vive solo aquí
+    int levelDeaths;
+    float levelSeconds;
 
     GameProgress Progress => recordProgress ? GameProgress.Instance : null;
 
@@ -74,6 +83,7 @@ public class GameDirector : MonoBehaviour
         if (player == null) player = FindFirstObjectByType<PlayerController>();
         if (playerStart == null) playerStart = FindFirstObjectByType<PlayerStart>();
         if (goal == null) goal = FindFirstObjectByType<Goal>();
+        if (transition == null) transition = FindFirstObjectByType<TransitionScreen>(FindObjectsInactive.Include);
         if (runSeed == 0) runSeed = Random.Range(1, int.MaxValue);
     }
 
@@ -102,6 +112,9 @@ public class GameDirector : MonoBehaviour
                 runSeed = p.Data.run.runSeed;
                 level = Mathf.Max(1, p.Data.run.level);
                 Deaths = p.Data.run.deaths;
+                // El intento por el que iba: así el mapa sigue la misma serie de variaciones
+                levelDeaths = retries = p.Data.run.levelDeaths;
+                levelSeconds = p.Data.run.levelSeconds;
                 Debug.Log($"GameDirector: se continúa la partida guardada en el nivel {level}.");
             }
             else
@@ -178,11 +191,22 @@ public class GameDirector : MonoBehaviour
         retries = 0;
 
         float seconds = Time.time - levelStartTime;
+        var stats = new TransitionScreen.Stats
+        {
+            level = CurrentLevel,
+            attemptSeconds = seconds,
+            totalSeconds = levelSeconds + seconds,
+            deaths = levelDeaths,
+            variations = levelDeaths + 1,
+        };
+        levelDeaths = 0;
+        levelSeconds = 0f;
+
         var p = Progress;
-        if (p != null) p.LevelCleared(CurrentLevel, seconds);
+        if (p != null) stats.crystals = p.LevelCleared(CurrentLevel, seconds);
 
         LevelCleared?.Invoke(CurrentLevel);
-        StartCoroutine(Advance(CurrentLevel + 1, nextLevelDelay));
+        StartCoroutine(ClearSequence(stats));
     }
 
     void HandleDied()
@@ -191,9 +215,12 @@ public class GameDirector : MonoBehaviour
         Running = false;
         Deaths++;
         retries++;
+        float seconds = Time.time - levelStartTime;
+        levelDeaths++;
+        levelSeconds += seconds;
 
         var p = Progress;
-        if (p != null) p.PlayerDied(CurrentLevel);
+        if (p != null) p.PlayerDied(CurrentLevel, seconds);
 
         PlayerDied?.Invoke(CurrentLevel);
         // Mismo nivel: no se pierde el progreso por morir
@@ -210,6 +237,20 @@ public class GameDirector : MonoBehaviour
         if (p != null) p.SubmitRun();
     }
 
+    // Superado: la pantalla de transición espera un toque; al tocar, el nivel siguiente
+    // arranca debajo mientras la pantalla se desvanece y empieza la llegada
+    IEnumerator ClearSequence(TransitionScreen.Stats stats)
+    {
+        if (goal != null) goal.Deactivate();
+        yield return new WaitForSeconds(nextLevelDelay);
+        if (transition != null)
+        {
+            transition.Show(stats);
+            while (!transition.Continued) yield return null;
+        }
+        StartLevel(stats.level + 1);
+    }
+
     IEnumerator Advance(int level, float delay)
     {
         if (goal != null) goal.Deactivate();
@@ -219,7 +260,7 @@ public class GameDirector : MonoBehaviour
 
     // Para probar sin jugar: clic derecho en el componente
     [ContextMenu("Siguiente nivel")]
-    void NextFromMenu() { StopAllCoroutines(); retries = 0; StartLevel(CurrentLevel + 1); }
+    void NextFromMenu() { StopAllCoroutines(); retries = levelDeaths = 0; levelSeconds = 0f; StartLevel(CurrentLevel + 1); }
 
     [ContextMenu("Repetir nivel")]
     void RepeatFromMenu() { StopAllCoroutines(); StartLevel(CurrentLevel); }

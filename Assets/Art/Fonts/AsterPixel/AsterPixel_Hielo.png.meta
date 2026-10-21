@@ -1,0 +1,5343 @@
+fileFormatVersion: 2
+guid: 363d6dc96966d504f92a17b11dd38284
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7101766380572755266
+    second: AsterPixel_Hielo_0
+  - first:
+      213: 3576849527848479077
+    second: AsterPixel_Hielo_1
+  - first:
+      213: -3167164750478502529
+    second: AsterPixel_Hielo_2
+  - first:
+      213: -714665431769525732
+    second: AsterPixel_Hielo_3
+  - first:
+      213: 1052023973695427261
+    second: AsterPixel_Hielo_4
+  - first:
+      213: -3395133444396978928
+    second: AsterPixel_Hielo_5
+  - first:
+      213: -2599656353306083895
+    second: AsterPixel_Hielo_6
+  - first:
+      213: -2130133180046818069
+    second: AsterPixel_Hielo_7
+  - first:
+      213: -2186055312896513849
+    second: AsterPixel_Hielo_8
+  - first:
+      213: 2455299145712256887
+    second: AsterPixel_Hielo_9
+  - first:
+      213: -4042196598998680710
+    second: AsterPixel_Hielo_10
+  - first:
+      213: 5704251337446788605
+    second: AsterPixel_Hielo_11
+  - first:
+      213: 3394430822158179312
+    second: AsterPixel_Hielo_12
+  - first:
+      213: -940424979959670686
+    second: AsterPixel_Hielo_13
+  - first:
+      213: -1631555505457633593
+    second: AsterPixel_Hielo_14
+  - first:
+      213: -621689669756811429
+    second: AsterPixel_Hielo_15
+  - first:
+      213: -6535614714085375293
+    second: AsterPixel_Hielo_16
+  - first:
+      213: -651057886890658276
+    second: AsterPixel_Hielo_17
+  - first:
+      213: 1565889030691566423
+    second: AsterPixel_Hielo_18
+  - first:
+      213: 7003820112314149023
+    second: AsterPixel_Hielo_19
+  - first:
+      213: -5517107574148322921
+    second: AsterPixel_Hielo_20
+  - first:
+      213: -5931409481258234553
+    second: AsterPixel_Hielo_21
+  - first:
+      213: 9048387934984577725
+    second: AsterPixel_Hielo_22
+  - first:
+      213: 2134323714160047319
+    second: AsterPixel_Hielo_23
+  - first:
+      213: -656903658724793860
+    second: AsterPixel_Hielo_24
+  - first:
+      213: -1433613472561755547
+    second: AsterPixel_Hielo_25
+  - first:
+      213: 1276066272607646757
+    second: AsterPixel_Hielo_26
+  - first:
+      213: -8995701622842874814
+    second: AsterPixel_Hielo_27
+  - first:
+      213: 2058643764476028130
+    second: AsterPixel_Hielo_28
+  - first:
+      213: -3221685143034617322
+    second: AsterPixel_Hielo_29
+  - first:
+      213: 1208150899012041667
+    second: AsterPixel_Hielo_30
+  - first:
+      213: 5683957987011007803
+    second: AsterPixel_Hielo_31
+  - first:
+      213: 7297659139527558654
+    second: AsterPixel_Hielo_32
+  - first:
+      213: 1809553563211317925
+    second: AsterPixel_Hielo_33
+  - first:
+      213: -8841690142665607569
+    second: AsterPixel_Hielo_34
+  - first:
+      213: -6700045884826742333
+    second: AsterPixel_Hielo_35
+  - first:
+      213: -7671688298051161377
+    second: AsterPixel_Hielo_36
+  - first:
+      213: -6379745268502063378
+    second: AsterPixel_Hielo_37
+  - first:
+      213: 3169082332910184441
+    second: AsterPixel_Hielo_38
+  - first:
+      213: 7538787434089379317
+    second: AsterPixel_Hielo_39
+  - first:
+      213: -817671688157591261
+    second: AsterPixel_Hielo_40
+  - first:
+      213: 4226791731590774322
+    second: AsterPixel_Hielo_41
+  - first:
+      213: -6060863187343705533
+    second: AsterPixel_Hielo_42
+  - first:
+      213: 4695888000411627188
+    second: AsterPixel_Hielo_43
+  - first:
+      213: -3322950463249949352
+    second: AsterPixel_Hielo_44
+  - first:
+      213: -106508505229599679
+    second: AsterPixel_Hielo_45
+  - first:
+      213: 9114381632406315375
+    second: AsterPixel_Hielo_46
+  - first:
+      213: 4144661565301039457
+    second: AsterPixel_Hielo_47
+  - first:
+      213: -6026544481869146939
+    second: AsterPixel_Hielo_48
+  - first:
+      213: 5727157902365331555
+    second: AsterPixel_Hielo_49
+  - first:
+      213: -1596942527261795196
+    second: AsterPixel_Hielo_50
+  - first:
+      213: 6695155189596848885
+    second: AsterPixel_Hielo_51
+  - first:
+      213: -2619138514494350724
+    second: AsterPixel_Hielo_52
+  - first:
+      213: -9185094441178042988
+    second: AsterPixel_Hielo_53
+  - first:
+      213: 2925799507278358375
+    second: AsterPixel_Hielo_54
+  - first:
+      213: -8648385393262213079
+    second: AsterPixel_Hielo_55
+  - first:
+      213: -2226202020003867423
+    second: AsterPixel_Hielo_56
+  - first:
+      213: 4423777030953759641
+    second: AsterPixel_Hielo_57
+  - first:
+      213: -9028779026871600574
+    second: AsterPixel_Hielo_58
+  - first:
+      213: 9199634041102118512
+    second: AsterPixel_Hielo_59
+  - first:
+      213: 7463347219339427586
+    second: AsterPixel_Hielo_60
+  - first:
+      213: -700752468629415892
+    second: AsterPixel_Hielo_61
+  - first:
+      213: 2613799696620848699
+    second: AsterPixel_Hielo_62
+  - first:
+      213: 8404308693202676511
+    second: AsterPixel_Hielo_63
+  - first:
+      213: 4563869573107946464
+    second: AsterPixel_Hielo_64
+  - first:
+      213: 263609626044423989
+    second: AsterPixel_Hielo_65
+  - first:
+      213: 6490542245751050194
+    second: AsterPixel_Hielo_66
+  - first:
+      213: 1388796594870276450
+    second: AsterPixel_Hielo_67
+  - first:
+      213: -866504768355522210
+    second: AsterPixel_Hielo_68
+  - first:
+      213: -393464209162550929
+    second: AsterPixel_Hielo_69
+  - first:
+      213: 2881859262905545443
+    second: AsterPixel_Hielo_70
+  - first:
+      213: 7774623309190748168
+    second: AsterPixel_Hielo_71
+  - first:
+      213: -4679183626893162910
+    second: AsterPixel_Hielo_72
+  - first:
+      213: 6654800652678793406
+    second: AsterPixel_Hielo_73
+  - first:
+      213: -2008845823329606860
+    second: AsterPixel_Hielo_74
+  - first:
+      213: 755027799493764625
+    second: AsterPixel_Hielo_75
+  - first:
+      213: -4880903472553085806
+    second: AsterPixel_Hielo_76
+  - first:
+      213: 9001292396499352043
+    second: AsterPixel_Hielo_77
+  - first:
+      213: -1556869742413123842
+    second: AsterPixel_Hielo_78
+  - first:
+      213: -6879512307793003535
+    second: AsterPixel_Hielo_79
+  - first:
+      213: -2063260945910111398
+    second: AsterPixel_Hielo_80
+  - first:
+      213: 3309862212220172409
+    second: AsterPixel_Hielo_81
+  - first:
+      213: -2591769739638981741
+    second: AsterPixel_Hielo_82
+  - first:
+      213: -4227631661009725827
+    second: AsterPixel_Hielo_83
+  - first:
+      213: 1551830841264404604
+    second: AsterPixel_Hielo_84
+  - first:
+      213: -2757806695914981794
+    second: AsterPixel_Hielo_85
+  - first:
+      213: 167075573999556308
+    second: AsterPixel_Hielo_86
+  - first:
+      213: 5506764084002327922
+    second: AsterPixel_Hielo_87
+  - first:
+      213: -2333053147024592247
+    second: AsterPixel_Hielo_88
+  - first:
+      213: 2585954451791158550
+    second: AsterPixel_Hielo_89
+  - first:
+      213: -6343118145101828399
+    second: AsterPixel_Hielo_90
+  - first:
+      213: -3525732835151262601
+    second: AsterPixel_Hielo_91
+  - first:
+      213: 5430567244511591245
+    second: AsterPixel_Hielo_92
+  - first:
+      213: 5540013161194468094
+    second: AsterPixel_Hielo_93
+  - first:
+      213: -7504720486258518692
+    second: AsterPixel_Hielo_94
+  - first:
+      213: 7207766937904217010
+    second: AsterPixel_Hielo_95
+  - first:
+      213: 3936516063918868747
+    second: AsterPixel_Hielo_96
+  - first:
+      213: 9021654783566453504
+    second: AsterPixel_Hielo_97
+  - first:
+      213: -4329234283009049955
+    second: AsterPixel_Hielo_98
+  - first:
+      213: -529126852364727157
+    second: AsterPixel_Hielo_99
+  - first:
+      213: -7262337781662703240
+    second: AsterPixel_Hielo_100
+  - first:
+      213: -2854666933365968636
+    second: AsterPixel_Hielo_101
+  - first:
+      213: 3966222603397146550
+    second: AsterPixel_Hielo_102
+  - first:
+      213: -7768263309720281609
+    second: AsterPixel_Hielo_103
+  - first:
+      213: -1372738337800629327
+    second: AsterPixel_Hielo_104
+  - first:
+      213: -1157142387152530199
+    second: AsterPixel_Hielo_105
+  - first:
+      213: 6974878377274624776
+    second: AsterPixel_Hielo_106
+  - first:
+      213: -8143659008520914661
+    second: AsterPixel_Hielo_107
+  - first:
+      213: 825748059452652366
+    second: AsterPixel_Hielo_108
+  - first:
+      213: 7073848450678701130
+    second: AsterPixel_Hielo_109
+  - first:
+      213: 7288320368575668252
+    second: AsterPixel_Hielo_110
+  - first:
+      213: 6197191481708415180
+    second: AsterPixel_Hielo_111
+  - first:
+      213: 2702634864556740229
+    second: AsterPixel_Hielo_112
+  - first:
+      213: -171408130516212658
+    second: AsterPixel_Hielo_113
+  - first:
+      213: -4082467242828756024
+    second: AsterPixel_Hielo_114
+  - first:
+      213: -8430622044535565712
+    second: AsterPixel_Hielo_115
+  - first:
+      213: 500890686132107294
+    second: AsterPixel_Hielo_116
+  - first:
+      213: -3981906720002768099
+    second: AsterPixel_Hielo_117
+  - first:
+      213: 2419366403292781630
+    second: AsterPixel_Hielo_118
+  - first:
+      213: -4384022418240866912
+    second: AsterPixel_Hielo_119
+  - first:
+      213: 1952957687924827790
+    second: AsterPixel_Hielo_120
+  - first:
+      213: -7273585382294374052
+    second: AsterPixel_Hielo_121
+  - first:
+      213: 838692880165709308
+    second: AsterPixel_Hielo_122
+  - first:
+      213: -5286860577446963841
+    second: AsterPixel_Hielo_123
+  - first:
+      213: 7354537109904653445
+    second: AsterPixel_Hielo_124
+  - first:
+      213: 2776341211404135022
+    second: AsterPixel_Hielo_125
+  - first:
+      213: 6514672330019080153
+    second: AsterPixel_Hielo_126
+  - first:
+      213: -70204660490246951
+    second: AsterPixel_Hielo_127
+  - first:
+      213: -6390855514478103877
+    second: AsterPixel_Hielo_128
+  - first:
+      213: -2103686747295009603
+    second: AsterPixel_Hielo_129
+  - first:
+      213: 6348538860598293396
+    second: AsterPixel_Hielo_130
+  - first:
+      213: -5118055415013381043
+    second: AsterPixel_Hielo_131
+  - first:
+      213: -311844424037170007
+    second: AsterPixel_Hielo_132
+  - first:
+      213: -2680939418123041077
+    second: AsterPixel_Hielo_133
+  - first:
+      213: -618358308723409378
+    second: AsterPixel_Hielo_134
+  - first:
+      213: -3195945076775605964
+    second: AsterPixel_Hielo_135
+  - first:
+      213: 3540266116948621088
+    second: AsterPixel_Hielo_136
+  - first:
+      213: -1634752472291713586
+    second: AsterPixel_Hielo_137
+  - first:
+      213: -3110875784414135771
+    second: AsterPixel_Hielo_138
+  - first:
+      213: -5726715711871714641
+    second: AsterPixel_Hielo_139
+  - first:
+      213: -3160326599208949252
+    second: AsterPixel_Hielo_140
+  - first:
+      213: 8314156762147286135
+    second: AsterPixel_Hielo_141
+  - first:
+      213: -2675764667542377551
+    second: AsterPixel_Hielo_142
+  - first:
+      213: 8648341355620969580
+    second: AsterPixel_Hielo_143
+  - first:
+      213: 7449173056424390506
+    second: AsterPixel_Hielo_144
+  - first:
+      213: -7800848592575207436
+    second: AsterPixel_Hielo_145
+  - first:
+      213: 1511813866399850659
+    second: AsterPixel_Hielo_146
+  - first:
+      213: 2283711816993587285
+    second: AsterPixel_Hielo_147
+  - first:
+      213: -6989876883733325748
+    second: AsterPixel_Hielo_148
+  - first:
+      213: -6659797164263229248
+    second: AsterPixel_Hielo_149
+  - first:
+      213: 404421973307351816
+    second: AsterPixel_Hielo_150
+  - first:
+      213: 333372971637746702
+    second: AsterPixel_Hielo_151
+  - first:
+      213: -7977113208660637455
+    second: AsterPixel_Hielo_152
+  - first:
+      213: -1441377643354735192
+    second: AsterPixel_Hielo_153
+  - first:
+      213: 4048535359826807920
+    second: AsterPixel_Hielo_154
+  - first:
+      213: 7361841844395576321
+    second: AsterPixel_Hielo_155
+  - first:
+      213: -6914597405230073681
+    second: AsterPixel_Hielo_156
+  - first:
+      213: -2189249054471812352
+    second: AsterPixel_Hielo_157
+  - first:
+      213: 7188732109664501019
+    second: AsterPixel_Hielo_158
+  - first:
+      213: 3927023818801941099
+    second: AsterPixel_Hielo_159
+  - first:
+      213: -3540968797752531728
+    second: AsterPixel_Hielo_160
+  - first:
+      213: -2315063548402145410
+    second: AsterPixel_Hielo_161
+  - first:
+      213: -6004312182201663853
+    second: AsterPixel_Hielo_162
+  - first:
+      213: -8997905351803087263
+    second: AsterPixel_Hielo_163
+  - first:
+      213: -6518101137907022719
+    second: AsterPixel_Hielo_164
+  - first:
+      213: -2487730122947444604
+    second: AsterPixel_Hielo_165
+  - first:
+      213: -1351791698142400778
+    second: AsterPixel_Hielo_166
+  - first:
+      213: -8134048346093497097
+    second: AsterPixel_Hielo_167
+  - first:
+      213: 682085032132941735
+    second: AsterPixel_Hielo_168
+  - first:
+      213: -3941971595898095318
+    second: AsterPixel_Hielo_169
+  - first:
+      213: 8149321777241898927
+    second: AsterPixel_Hielo_170
+  - first:
+      213: 3115368157802749337
+    second: AsterPixel_Hielo_171
+  - first:
+      213: 7911470948759861443
+    second: AsterPixel_Hielo_172
+  - first:
+      213: -1683334014141365911
+    second: AsterPixel_Hielo_173
+  - first:
+      213: -8814659279024280314
+    second: AsterPixel_Hielo_174
+  - first:
+      213: -7051491147465385102
+    second: AsterPixel_Hielo_175
+  - first:
+      213: 8398711112418467972
+    second: AsterPixel_Hielo_176
+  - first:
+      213: -4471498152323252812
+    second: AsterPixel_Hielo_177
+  - first:
+      213: 5134871774802538132
+    second: AsterPixel_Hielo_178
+  - first:
+      213: -5210853944763863159
+    second: AsterPixel_Hielo_179
+  - first:
+      213: -917888177380645277
+    second: AsterPixel_Hielo_180
+  - first:
+      213: -7556328970642727842
+    second: AsterPixel_Hielo_181
+  - first:
+      213: 4892323201777252362
+    second: AsterPixel_Hielo_182
+  - first:
+      213: 8507989441313934171
+    second: AsterPixel_Hielo_183
+  - first:
+      213: -4589117928236814958
+    second: AsterPixel_Hielo_184
+  - first:
+      213: 4917633965811938234
+    second: AsterPixel_Hielo_185
+  - first:
+      213: 7210895484996306063
+    second: AsterPixel_Hielo_186
+  - first:
+      213: -977126697881920074
+    second: AsterPixel_Hielo_187
+  - first:
+      213: -4478779541195147377
+    second: AsterPixel_Hielo_188
+  - first:
+      213: -8468967681650164924
+    second: AsterPixel_Hielo_189
+  - first:
+      213: 4183899438823919682
+    second: AsterPixel_Hielo_190
+  - first:
+      213: 4318672924983666189
+    second: AsterPixel_Hielo_191
+  - first:
+      213: -2764491869370445521
+    second: AsterPixel_Hielo_192
+  - first:
+      213: 2091808720363276660
+    second: AsterPixel_Hielo_193
+  - first:
+      213: 7434201927163210035
+    second: AsterPixel_Hielo_194
+  - first:
+      213: 3381115984787192261
+    second: AsterPixel_Hielo_195
+  - first:
+      213: -4162186608106347263
+    second: AsterPixel_Hielo_196
+  - first:
+      213: -6233539429324845679
+    second: AsterPixel_Hielo_197
+  - first:
+      213: 3547979478993217307
+    second: AsterPixel_Hielo_198
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 923
+        width: 55
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 245c9d775ea8e8260800000000000000
+      internalID: 7101766380572755266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_1
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 923
+        width: 55
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 569ae62d1b583a130800000000000000
+      internalID: 3576849527848479077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_2
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 923
+        width: 39
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7517969078fb04d0800000000000000
+      internalID: -3167164750478502529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_3
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 923
+        width: 55
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c125026839ff416f0800000000000000
+      internalID: -714665431769525732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_4
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 923
+        width: 55
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db29f4fea3a899e00800000000000000
+      internalID: 1052023973695427261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_5
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 923
+        width: 55
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01d6ba9de1012e0d0800000000000000
+      internalID: -3395133444396978928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_6
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 931
+        width: 47
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9cd7a1bf15a2cebd0800000000000000
+      internalID: -2599656353306083895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_7
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 931
+        width: 55
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be4490f982f3072e0800000000000000
+      internalID: -2130133180046818069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_8
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 999
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c8a27f664299a1e0800000000000000
+      internalID: -2186055312896513849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_9
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 999
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 777cf757099f21220800000000000000
+      internalID: 2455299145712256887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_10
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 999
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7b34641c9b37e7c0800000000000000
+      internalID: -4042196598998680710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_11
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 999
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfd00167e52992f40800000000000000
+      internalID: 5704251337446788605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_12
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 999
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fb106929d07b1f20800000000000000
+      internalID: 3394430822158179312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_13
+      rect:
+        serializedVersion: 2
+        x: 659
+        y: 999
+        width: 46
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 268999b9670f2f2f0800000000000000
+      internalID: -940424979959670686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_14
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 1007
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c66dd189ec8b59e0800000000000000
+      internalID: -1631555505457633593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_15
+      rect:
+        serializedVersion: 2
+        x: 755
+        y: 1007
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b578d990a805f57f0800000000000000
+      internalID: -621689669756811429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_16
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 1007
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c200227b05dc45a0800000000000000
+      internalID: -6535614714085375293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_17
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 947
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c167aa32d4af6f6f0800000000000000
+      internalID: -651057886890658276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_18
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 947
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7533d08e6c72bb510800000000000000
+      internalID: 1565889030691566423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_19
+      rect:
+        serializedVersion: 2
+        x: 909
+        y: 947
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f98a839c841923160800000000000000
+      internalID: 7003820112314149023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_20
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 947
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 799a54764eb4f63b0800000000000000
+      internalID: -5517107574148322921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_21
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 935
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74d0834b0866fada0800000000000000
+      internalID: -5931409481258234553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_22
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 935
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db2afaee2e4529d70800000000000000
+      internalID: 9048387934984577725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_23
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 935
+        width: 30
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d4b3322c14ae9d10800000000000000
+      internalID: 2134323714160047319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_24
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 935
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf1ed025a9532e6f0800000000000000
+      internalID: -656903658724793860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_25
+      rect:
+        serializedVersion: 2
+        x: 611
+        y: 935
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56a0ebe6428ca1ce0800000000000000
+      internalID: -1433613472561755547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_26
+      rect:
+        serializedVersion: 2
+        x: 659
+        y: 935
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 524b2a8938f75b110800000000000000
+      internalID: 1276066272607646757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_27
+      rect:
+        serializedVersion: 2
+        x: 707
+        y: 943
+        width: 38
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 244ab090909d82380800000000000000
+      internalID: -8995701622842874814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_28
+      rect:
+        serializedVersion: 2
+        x: 747
+        y: 943
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e4aaacb895c19c10800000000000000
+      internalID: 2058643764476028130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_29
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 847
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 612a44f7e664a43d0800000000000000
+      internalID: -3221685143034617322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_30
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 847
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3cb7ea277d634c010800000000000000
+      internalID: 1208150899012041667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_31
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 847
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b35190e9ca971ee40800000000000000
+      internalID: 5683957987011007803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_32
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 847
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef54c6f925e764560800000000000000
+      internalID: 7297659139527558654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_33
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 847
+        width: 39
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a2c049d063dc1910800000000000000
+      internalID: 1809553563211317925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_34
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 847
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f66f75819a10c4580800000000000000
+      internalID: -8841690142665607569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_35
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 847
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c1951024c7a403a0800000000000000
+      internalID: -6700045884826742333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_36
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 847
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd2b327a320b88590800000000000000
+      internalID: -7671688298051161377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_37
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 847
+        width: 71
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee69479ca779677a0800000000000000
+      internalID: -6379745268502063378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_38
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 847
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f7e31d5797dafb20800000000000000
+      internalID: 3169082332910184441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_39
+      rect:
+        serializedVersion: 2
+        x: 573
+        y: 847
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f57316aa372f9860800000000000000
+      internalID: 7538787434089379317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_40
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 847
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 329097c8eeb07a4f0800000000000000
+      internalID: -817671688157591261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_41
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 847
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23eb6057fa498aa30800000000000000
+      internalID: 4226791731590774322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_42
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 847
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34af22efa0d73eba0800000000000000
+      internalID: -6060863187343705533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_43
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 847
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4beed89a1452b2140800000000000000
+      internalID: 4695888000411627188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_44
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 847
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85d54cfc82282e1d0800000000000000
+      internalID: -3322950463249949352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_45
+      rect:
+        serializedVersion: 2
+        x: 915
+        y: 847
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14c5b3c241b958ef0800000000000000
+      internalID: -106508505229599679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_46
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 771
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f616ceafdc9cc7e70800000000000000
+      internalID: 9114381632406315375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_47
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 771
+        width: 71
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 161abf9fbbbc48930800000000000000
+      internalID: 4144661565301039457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_48
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 771
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c4591749b96d5ca0800000000000000
+      internalID: -6026544481869146939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_49
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 771
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3609e07b4c3fa7f40800000000000000
+      internalID: 5727157902365331555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_50
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 771
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48c98df7b3586d9e0800000000000000
+      internalID: -1596942527261795196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_51
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 771
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f288082c28f9ec50800000000000000
+      internalID: 6695155189596848885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_52
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 771
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7a150ad563f6abd0800000000000000
+      internalID: -2619138514494350724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_53
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 771
+        width: 47
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49dea2d354df78080800000000000000
+      internalID: -9185094441178042988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_54
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 771
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 767e65b76278a9820800000000000000
+      internalID: 2925799507278358375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_55
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 771
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 928cde15e43caf780800000000000000
+      internalID: -8648385393262213079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_56
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 771
+        width: 39
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e49967ce01fa11e0800000000000000
+      internalID: -2226202020003867423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_57
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 771
+        width: 47
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 993f78f75c9646d30800000000000000
+      internalID: 4423777030953759641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_58
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 771
+        width: 39
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24a32d3cf4553b280800000000000000
+      internalID: -9028779026871600574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_59
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 771
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07eab7b2b6aabaf70800000000000000
+      internalID: 9199634041102118512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_60
+      rect:
+        serializedVersion: 2
+        x: 769
+        y: 771
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20f3024e0c2239760800000000000000
+      internalID: 7463347219339427586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_61
+      rect:
+        serializedVersion: 2
+        x: 826
+        y: 771
+        width: 47
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c289ddfa75d6646f0800000000000000
+      internalID: -700752468629415892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_62
+      rect:
+        serializedVersion: 2
+        x: 875
+        y: 771
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b360c1fb9f4164420800000000000000
+      internalID: 2613799696620848699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_63
+      rect:
+        serializedVersion: 2
+        x: 932
+        y: 771
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1ba2118a3a12a470800000000000000
+      internalID: 8404308693202676511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_64
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 695
+        width: 39
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e31052423f165f30800000000000000
+      internalID: 4563869573107946464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_65
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 695
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53f50c7ee8788a300800000000000000
+      internalID: 263609626044423989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_66
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 695
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2df48adb8c9031a50800000000000000
+      internalID: 6490542245751050194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_67
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 695
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 261d386152ff54310800000000000000
+      internalID: 1388796594870276450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_68
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 695
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e59acfd018e89f3f0800000000000000
+      internalID: -866504768355522210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_69
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 695
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f61490de2622a8af0800000000000000
+      internalID: -393464209162550929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_70
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 695
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e2772a1bbb6ef720800000000000000
+      internalID: 2881859262905545443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_71
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 695
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80859ce35b205eb60800000000000000
+      internalID: 7774623309190748168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_72
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 695
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26685306843301fb0800000000000000
+      internalID: -4679183626893162910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_73
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 695
+        width: 47
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb805f95fe99a5c50800000000000000
+      internalID: 6654800652678793406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_74
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 695
+        width: 23
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43369e3fd552f14e0800000000000000
+      internalID: -2008845823329606860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_75
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 695
+        width: 23
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 116ee5888c56a7a00800000000000000
+      internalID: 755027799493764625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_76
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 695
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 294b08fd62c834cb0800000000000000
+      internalID: -4880903472553085806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_77
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 695
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be9b4c46eb30bec70800000000000000
+      internalID: 9001292396499352043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_78
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 695
+        width: 39
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efe69e9c733e46ae0800000000000000
+      internalID: -1556869742413123842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_79
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 695
+        width: 39
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fbf11a51001780a0800000000000000
+      internalID: -6879512307793003535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_80
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 695
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a536710f913dd53e0800000000000000
+      internalID: -2063260945910111398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_81
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 695
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9783fd6452efeed20800000000000000
+      internalID: 3309862212220172409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_82
+      rect:
+        serializedVersion: 2
+        x: 909
+        y: 695
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39b3631572f280cd0800000000000000
+      internalID: -2591769739638981741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_83
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 695
+        width: 39
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d76125c376f6455c0800000000000000
+      internalID: -4227631661009725827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_84
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 619
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c787f0d9de5398510800000000000000
+      internalID: 1551830841264404604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_85
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 619
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e563bcaeb6d4ab9d0800000000000000
+      internalID: -2757806695914981794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_86
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 619
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d653ee6952915200800000000000000
+      internalID: 167075573999556308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_87
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 627
+        width: 55
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27d86d022c4fb6c40800000000000000
+      internalID: 5506764084002327922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_88
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 631
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 982fd7916845f9fd0800000000000000
+      internalID: -2333053147024592247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_89
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 631
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61d1a587fd723e320800000000000000
+      internalID: 2585954451791158550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_90
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 631
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1deeed087a7b8f7a0800000000000000
+      internalID: -6343118145101828399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_91
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 631
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77cc0e3aaa4121fc0800000000000000
+      internalID: -3525732835151262601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_92
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 631
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4b3cf1f2204d5b40800000000000000
+      internalID: 5430567244511591245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_93
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 631
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef23cfb2e9412ec40800000000000000
+      internalID: 5540013161194468094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_94
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 631
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c55d6fdba70e9d790800000000000000
+      internalID: -7504720486258518692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_95
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 631
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bbf59577d1270460800000000000000
+      internalID: 7207766937904217010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_96
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 631
+        width: 30
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b09c08ae08051a630800000000000000
+      internalID: 3936516063918868747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_97
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 631
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00b9ea41a3b533d70800000000000000
+      internalID: 9021654783566453504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_98
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 631
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9a7dcb5b587be3c0800000000000000
+      internalID: -4329234283009049955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_99
+      rect:
+        serializedVersion: 2
+        x: 743
+        y: 631
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8c0ea36ee928a8f0800000000000000
+      internalID: -529126852364727157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_100
+      rect:
+        serializedVersion: 2
+        x: 791
+        y: 631
+        width: 62
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 871a81dd34ef63b90800000000000000
+      internalID: -7262337781662703240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_101
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 631
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 401faac7c8f2268d0800000000000000
+      internalID: -2854666933365968636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_102
+      rect:
+        serializedVersion: 2
+        x: 903
+        y: 631
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b7ac9f917ada0730800000000000000
+      internalID: 3966222603397146550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_103
+      rect:
+        serializedVersion: 2
+        x: 951
+        y: 631
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fd1c668da5913490800000000000000
+      internalID: -7768263309720281609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_104
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 555
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b355dd31cd03fce0800000000000000
+      internalID: -1372738337800629327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_105
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 555
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e4d933312101ffe0800000000000000
+      internalID: -1157142387152530199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_106
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 555
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80bc10dfdeebbc060800000000000000
+      internalID: 6974878377274624776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_107
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 555
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1973395749ebfe80800000000000000
+      internalID: -8143659008520914661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_108
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 555
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4bb4ad2c75a57b00800000000000000
+      internalID: 825748059452652366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_109
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 555
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4cb6a1efab5b2260800000000000000
+      internalID: 7073848450678701130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_110
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 555
+        width: 62
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c10623292c0552560800000000000000
+      internalID: 7288320368575668252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_111
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 555
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc88e4881d8d00650800000000000000
+      internalID: 6197191481708415180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_112
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 555
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58e8d731710b18520800000000000000
+      internalID: 2702634864556740229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_113
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 555
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e44a7f4a6390f9df0800000000000000
+      internalID: -171408130516212658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_114
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 555
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cb06082ca92857c0800000000000000
+      internalID: -4082467242828756024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_115
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 555
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07251e7fae9600b80800000000000000
+      internalID: -8430622044535565712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_116
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 555
+        width: 38
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e18b43adc6583f600800000000000000
+      internalID: 500890686132107294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_117
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 555
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d138e796fec6db8c0800000000000000
+      internalID: -3981906720002768099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_118
+      rect:
+        serializedVersion: 2
+        x: 683
+        y: 555
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3cd7c9ece0539120800000000000000
+      internalID: 2419366403292781630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_119
+      rect:
+        serializedVersion: 2
+        x: 739
+        y: 603
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a5776196d2d823c0800000000000000
+      internalID: -4384022418240866912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_120
+      rect:
+        serializedVersion: 2
+        x: 763
+        y: 555
+        width: 38
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e86a0228bac4a1b10800000000000000
+      internalID: 1952957687924827790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_121
+      rect:
+        serializedVersion: 2
+        x: 803
+        y: 555
+        width: 30
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c59bed4c1a80f0b90800000000000000
+      internalID: -7273585382294374052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_122
+      rect:
+        serializedVersion: 2
+        x: 835
+        y: 555
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf52ded1bb2a3ab00800000000000000
+      internalID: 838692880165709308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_123
+      rect:
+        serializedVersion: 2
+        x: 883
+        y: 555
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f75d148d05c41a6b0800000000000000
+      internalID: -5286860577446963841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_124
+      rect:
+        serializedVersion: 2
+        x: 931
+        y: 555
+        width: 38
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58c7b431980901660800000000000000
+      internalID: 7354537109904653445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_125
+      rect:
+        serializedVersion: 2
+        x: 971
+        y: 555
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6a65014f9b878620800000000000000
+      internalID: 2776341211404135022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_126
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 555
+        width: 30
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d78adac7f3c86a50800000000000000
+      internalID: 6514672330019080153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_127
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 491
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d4e6e5bb35960ff0800000000000000
+      internalID: -70204660490246951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_128
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 491
+        width: 30
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb2bfa015ce1f47a0800000000000000
+      internalID: -6390855514478103877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_129
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 491
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db4b8c49c043ec2e0800000000000000
+      internalID: -2103686747295009603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_130
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 491
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49379bc257a8a1850800000000000000
+      internalID: 6348538860598293396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_131
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 491
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4cec5777b309f8b0800000000000000
+      internalID: -5118055415013381043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_132
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 491
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a40418062b1cabf0800000000000000
+      internalID: -311844424037170007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_133
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 491
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc60f6eadc36bcad0800000000000000
+      internalID: -2680939418123041077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_134
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 491
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1e31a8f4662b67f0800000000000000
+      internalID: -618358308723409378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_135
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 491
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 439a121b2e8b5a3d0800000000000000
+      internalID: -3195945076775605964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_136
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 491
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 027f217b64d812130800000000000000
+      internalID: 3540266116948621088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_137
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 491
+        width: 38
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecd5c59a9413059e0800000000000000
+      internalID: -1634752472291713586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_138
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 507
+        width: 14
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52a71a9c4f2f3d4d0800000000000000
+      internalID: -3110875784414135771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_139
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 539
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: faafc38c66e9680b0800000000000000
+      internalID: -5726715711871714641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_140
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 507
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf9aeefb3b34424d0800000000000000
+      internalID: -3160326599208949252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_141
+      rect:
+        serializedVersion: 2
+        x: 603
+        y: 539
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77c63be5681d16370800000000000000
+      internalID: 8314156762147286135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_142
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 491
+        width: 30
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bb68903636cddad0800000000000000
+      internalID: -2675764667542377551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_143
+      rect:
+        serializedVersion: 2
+        x: 667
+        y: 491
+        width: 30
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6cab1e54a4150870800000000000000
+      internalID: 8648341355620969580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_144
+      rect:
+        serializedVersion: 2
+        x: 699
+        y: 491
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6f269a6d67c06760800000000000000
+      internalID: 7449173056424390506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_145
+      rect:
+        serializedVersion: 2
+        x: 747
+        y: 491
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f7e2f42981ddb390800000000000000
+      internalID: -7800848592575207436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_146
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 491
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a0e54993ba0bf410800000000000000
+      internalID: 1511813866399850659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_147
+      rect:
+        serializedVersion: 2
+        x: 843
+        y: 491
+        width: 30
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 550c3454ccf51bf10800000000000000
+      internalID: 2283711816993587285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_148
+      rect:
+        serializedVersion: 2
+        x: 875
+        y: 491
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c485c591208fefe90800000000000000
+      internalID: -6989876883733325748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_149
+      rect:
+        serializedVersion: 2
+        x: 939
+        y: 531
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c8bfe3a3c5a393a0800000000000000
+      internalID: -6659797164263229248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_150
+      rect:
+        serializedVersion: 2
+        x: 971
+        y: 491
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 803e85a54abcc9500800000000000000
+      internalID: 404421973307351816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_151
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 491
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0c2f2093f060a400800000000000000
+      internalID: 333372971637746702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_152
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 491
+        width: 14
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f8c4b02dc99b4190800000000000000
+      internalID: -7977113208660637455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_153
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 491
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8adb6ac8ba23ffbe0800000000000000
+      internalID: -1441377643354735192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_154
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 491
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07cc51fa5794f2830800000000000000
+      internalID: 4048535359826807920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_155
+      rect:
+        serializedVersion: 2
+        x: 923
+        y: 491
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10c0ecb17248a2660800000000000000
+      internalID: 7361841844395576321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_156
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 431
+        width: 55
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa87c688b4a6a00a0800000000000000
+      internalID: -6914597405230073681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_157
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 431
+        width: 55
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00b095785993e91e0800000000000000
+      internalID: -2189249054471812352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_158
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 431
+        width: 55
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1d3ff524c183c360800000000000000
+      internalID: 7188732109664501019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_159
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 431
+        width: 71
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6a00306b579f7630800000000000000
+      internalID: 3927023818801941099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_160
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 431
+        width: 55
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f4e739a3a3fbdec0800000000000000
+      internalID: -3540968797752531728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_161
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 431
+        width: 55
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e77e80de7fd3fdfd0800000000000000
+      internalID: -2315063548402145410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_162
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 431
+        width: 47
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39eb15be1e56caca0800000000000000
+      internalID: -6004312182201663853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_163
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 431
+        width: 55
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 166d03761c4012380800000000000000
+      internalID: -8997905351803087263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_164
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 431
+        width: 55
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1848bf8ac8d0b85a0800000000000000
+      internalID: -6518101137907022719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_165
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 431
+        width: 55
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 480cdac32aec97dd0800000000000000
+      internalID: -2487730122947444604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_166
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 431
+        width: 71
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fe66e5dc987d3de0800000000000000
+      internalID: -1351791698142400778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_167
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 431
+        width: 55
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f45e31102e0e1f80800000000000000
+      internalID: -8134048346093497097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_168
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 431
+        width: 55
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a715ee09b0477900800000000000000
+      internalID: 682085032132941735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_169
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 431
+        width: 55
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2970df08bd4b49c0800000000000000
+      internalID: -3941971595898095318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_170
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 435
+        width: 46
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fafbbdcbaf4381170800000000000000
+      internalID: 8149321777241898927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_171
+      rect:
+        serializedVersion: 2
+        x: 873
+        y: 439
+        width: 23
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99d556665d20c3b20800000000000000
+      internalID: 3115368157802749337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_172
+      rect:
+        serializedVersion: 2
+        x: 898
+        y: 443
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c877af39e03bcd60800000000000000
+      internalID: 7911470948759861443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_173
+      rect:
+        serializedVersion: 2
+        x: 946
+        y: 443
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96185c002a893a8e0800000000000000
+      internalID: -1683334014141365911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_174
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 383
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60d28a9761a0ca580800000000000000
+      internalID: -8814659279024280314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_175
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 383
+        width: 62
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27b938a6922142e90800000000000000
+      internalID: -7051491147465385102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_176
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 383
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48024da22473e8470800000000000000
+      internalID: 8398711112418467972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_177
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 383
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bdf4f81f1c02f1c0800000000000000
+      internalID: -4471498152323252812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_178
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 383
+        width: 38
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49ee8486caab24740800000000000000
+      internalID: 5134871774802538132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_179
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 383
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98f28ed02f35fa7b0800000000000000
+      internalID: -5210853944763863159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_180
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 383
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36622bbd0910343f0800000000000000
+      internalID: -917888177380645277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_181
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 383
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5cd8da16d6822790800000000000000
+      internalID: -7556328970642727842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_182
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 383
+        width: 62
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a08b558080605e340800000000000000
+      internalID: 4892323201777252362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_183
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 383
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5b8a42d153721670800000000000000
+      internalID: 8507989441313934171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_184
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 383
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29d6117fe8d2050c0800000000000000
+      internalID: -4589117928236814958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_185
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 383
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab3bd938902fe3440800000000000000
+      internalID: 4917633965811938234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_186
+      rect:
+        serializedVersion: 2
+        x: 603
+        y: 415
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f844ca71d3f321460800000000000000
+      internalID: 7210895484996306063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_187
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 395
+        width: 31
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bd9230027c8072f0800000000000000
+      internalID: -977126697881920074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_188
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 395
+        width: 23
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f87b6c3acbd28d1c0800000000000000
+      internalID: -4478779541195147377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_189
+      rect:
+        serializedVersion: 2
+        x: 677
+        y: 395
+        width: 39
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44b7af893ce287a80800000000000000
+      internalID: -8468967681650164924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_190
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 403
+        width: 23
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2405e035f52301a30800000000000000
+      internalID: 4183899438823919682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_191
+      rect:
+        serializedVersion: 2
+        x: 743
+        y: 403
+        width: 47
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d06afbad4220feb30800000000000000
+      internalID: 4318672924983666189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_192
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 407
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2118bdaa4d82a9d0800000000000000
+      internalID: -2764491869370445521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_193
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 407
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4794153c2f8970d10800000000000000
+      internalID: 2091808720363276660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_194
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 407
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3396611c3479b2760800000000000000
+      internalID: 7434201927163210035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_195
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 407
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c9b2a103132cee20800000000000000
+      internalID: 3381115984787192261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_196
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 415
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 105eee60551fc36c0800000000000000
+      internalID: -4162186608106347263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_197
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 415
+        width: 38
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19d83bd6ae40e79a0800000000000000
+      internalID: -6233539429324845679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Hielo_198
+      rect:
+        serializedVersion: 2
+        x: 603
+        y: 391
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1724c3c984fc3130800000000000000
+      internalID: 3547979478993217307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      AsterPixel_Hielo_0: 7101766380572755266
+      AsterPixel_Hielo_1: 3576849527848479077
+      AsterPixel_Hielo_10: -4042196598998680710
+      AsterPixel_Hielo_100: -7262337781662703240
+      AsterPixel_Hielo_101: -2854666933365968636
+      AsterPixel_Hielo_102: 3966222603397146550
+      AsterPixel_Hielo_103: -7768263309720281609
+      AsterPixel_Hielo_104: -1372738337800629327
+      AsterPixel_Hielo_105: -1157142387152530199
+      AsterPixel_Hielo_106: 6974878377274624776
+      AsterPixel_Hielo_107: -8143659008520914661
+      AsterPixel_Hielo_108: 825748059452652366
+      AsterPixel_Hielo_109: 7073848450678701130
+      AsterPixel_Hielo_11: 5704251337446788605
+      AsterPixel_Hielo_110: 7288320368575668252
+      AsterPixel_Hielo_111: 6197191481708415180
+      AsterPixel_Hielo_112: 2702634864556740229
+      AsterPixel_Hielo_113: -171408130516212658
+      AsterPixel_Hielo_114: -4082467242828756024
+      AsterPixel_Hielo_115: -8430622044535565712
+      AsterPixel_Hielo_116: 500890686132107294
+      AsterPixel_Hielo_117: -3981906720002768099
+      AsterPixel_Hielo_118: 2419366403292781630
+      AsterPixel_Hielo_119: -4384022418240866912
+      AsterPixel_Hielo_12: 3394430822158179312
+      AsterPixel_Hielo_120: 1952957687924827790
+      AsterPixel_Hielo_121: -7273585382294374052
+      AsterPixel_Hielo_122: 838692880165709308
+      AsterPixel_Hielo_123: -5286860577446963841
+      AsterPixel_Hielo_124: 7354537109904653445
+      AsterPixel_Hielo_125: 2776341211404135022
+      AsterPixel_Hielo_126: 6514672330019080153
+      AsterPixel_Hielo_127: -70204660490246951
+      AsterPixel_Hielo_128: -6390855514478103877
+      AsterPixel_Hielo_129: -2103686747295009603
+      AsterPixel_Hielo_13: -940424979959670686
+      AsterPixel_Hielo_130: 6348538860598293396
+      AsterPixel_Hielo_131: -5118055415013381043
+      AsterPixel_Hielo_132: -311844424037170007
+      AsterPixel_Hielo_133: -2680939418123041077
+      AsterPixel_Hielo_134: -618358308723409378
+      AsterPixel_Hielo_135: -3195945076775605964
+      AsterPixel_Hielo_136: 3540266116948621088
+      AsterPixel_Hielo_137: -1634752472291713586
+      AsterPixel_Hielo_138: -3110875784414135771
+      AsterPixel_Hielo_139: -5726715711871714641
+      AsterPixel_Hielo_14: -1631555505457633593
+      AsterPixel_Hielo_140: -3160326599208949252
+      AsterPixel_Hielo_141: 8314156762147286135
+      AsterPixel_Hielo_142: -2675764667542377551
+      AsterPixel_Hielo_143: 8648341355620969580
+      AsterPixel_Hielo_144: 7449173056424390506
+      AsterPixel_Hielo_145: -7800848592575207436
+      AsterPixel_Hielo_146: 1511813866399850659
+      AsterPixel_Hielo_147: 2283711816993587285
+      AsterPixel_Hielo_148: -6989876883733325748
+      AsterPixel_Hielo_149: -6659797164263229248
+      AsterPixel_Hielo_15: -621689669756811429
+      AsterPixel_Hielo_150: 404421973307351816
+      AsterPixel_Hielo_151: 333372971637746702
+      AsterPixel_Hielo_152: -7977113208660637455
+      AsterPixel_Hielo_153: -1441377643354735192
+      AsterPixel_Hielo_154: 4048535359826807920
+      AsterPixel_Hielo_155: 7361841844395576321
+      AsterPixel_Hielo_156: -6914597405230073681
+      AsterPixel_Hielo_157: -2189249054471812352
+      AsterPixel_Hielo_158: 7188732109664501019
+      AsterPixel_Hielo_159: 3927023818801941099
+      AsterPixel_Hielo_16: -6535614714085375293
+      AsterPixel_Hielo_160: -3540968797752531728
+      AsterPixel_Hielo_161: -2315063548402145410
+      AsterPixel_Hielo_162: -6004312182201663853
+      AsterPixel_Hielo_163: -8997905351803087263
+      AsterPixel_Hielo_164: -6518101137907022719
+      AsterPixel_Hielo_165: -2487730122947444604
+      AsterPixel_Hielo_166: -1351791698142400778
+      AsterPixel_Hielo_167: -8134048346093497097
+      AsterPixel_Hielo_168: 682085032132941735
+      AsterPixel_Hielo_169: -3941971595898095318
+      AsterPixel_Hielo_17: -651057886890658276
+      AsterPixel_Hielo_170: 8149321777241898927
+      AsterPixel_Hielo_171: 3115368157802749337
+      AsterPixel_Hielo_172: 7911470948759861443
+      AsterPixel_Hielo_173: -1683334014141365911
+      AsterPixel_Hielo_174: -8814659279024280314
+      AsterPixel_Hielo_175: -7051491147465385102
+      AsterPixel_Hielo_176: 8398711112418467972
+      AsterPixel_Hielo_177: -4471498152323252812
+      AsterPixel_Hielo_178: 5134871774802538132
+      AsterPixel_Hielo_179: -5210853944763863159
+      AsterPixel_Hielo_18: 1565889030691566423
+      AsterPixel_Hielo_180: -917888177380645277
+      AsterPixel_Hielo_181: -7556328970642727842
+      AsterPixel_Hielo_182: 4892323201777252362
+      AsterPixel_Hielo_183: 8507989441313934171
+      AsterPixel_Hielo_184: -4589117928236814958
+      AsterPixel_Hielo_185: 4917633965811938234
+      AsterPixel_Hielo_186: 7210895484996306063
+      AsterPixel_Hielo_187: -977126697881920074
+      AsterPixel_Hielo_188: -4478779541195147377
+      AsterPixel_Hielo_189: -8468967681650164924
+      AsterPixel_Hielo_19: 7003820112314149023
+      AsterPixel_Hielo_190: 4183899438823919682
+      AsterPixel_Hielo_191: 4318672924983666189
+      AsterPixel_Hielo_192: -2764491869370445521
+      AsterPixel_Hielo_193: 2091808720363276660
+      AsterPixel_Hielo_194: 7434201927163210035
+      AsterPixel_Hielo_195: 3381115984787192261
+      AsterPixel_Hielo_196: -4162186608106347263
+      AsterPixel_Hielo_197: -6233539429324845679
+      AsterPixel_Hielo_198: 3547979478993217307
+      AsterPixel_Hielo_2: -3167164750478502529
+      AsterPixel_Hielo_20: -5517107574148322921
+      AsterPixel_Hielo_21: -5931409481258234553
+      AsterPixel_Hielo_22: 9048387934984577725
+      AsterPixel_Hielo_23: 2134323714160047319
+      AsterPixel_Hielo_24: -656903658724793860
+      AsterPixel_Hielo_25: -1433613472561755547
+      AsterPixel_Hielo_26: 1276066272607646757
+      AsterPixel_Hielo_27: -8995701622842874814
+      AsterPixel_Hielo_28: 2058643764476028130
+      AsterPixel_Hielo_29: -3221685143034617322
+      AsterPixel_Hielo_3: -714665431769525732
+      AsterPixel_Hielo_30: 1208150899012041667
+      AsterPixel_Hielo_31: 5683957987011007803
+      AsterPixel_Hielo_32: 7297659139527558654
+      AsterPixel_Hielo_33: 1809553563211317925
+      AsterPixel_Hielo_34: -8841690142665607569
+      AsterPixel_Hielo_35: -6700045884826742333
+      AsterPixel_Hielo_36: -7671688298051161377
+      AsterPixel_Hielo_37: -6379745268502063378
+      AsterPixel_Hielo_38: 3169082332910184441
+      AsterPixel_Hielo_39: 7538787434089379317
+      AsterPixel_Hielo_4: 1052023973695427261
+      AsterPixel_Hielo_40: -817671688157591261
+      AsterPixel_Hielo_41: 4226791731590774322
+      AsterPixel_Hielo_42: -6060863187343705533
+      AsterPixel_Hielo_43: 4695888000411627188
+      AsterPixel_Hielo_44: -3322950463249949352
+      AsterPixel_Hielo_45: -106508505229599679
+      AsterPixel_Hielo_46: 9114381632406315375
+      AsterPixel_Hielo_47: 4144661565301039457
+      AsterPixel_Hielo_48: -6026544481869146939
+      AsterPixel_Hielo_49: 5727157902365331555
+      AsterPixel_Hielo_5: -3395133444396978928
+      AsterPixel_Hielo_50: -1596942527261795196
+      AsterPixel_Hielo_51: 6695155189596848885
+      AsterPixel_Hielo_52: -2619138514494350724
+      AsterPixel_Hielo_53: -9185094441178042988
+      AsterPixel_Hielo_54: 2925799507278358375
+      AsterPixel_Hielo_55: -8648385393262213079
+      AsterPixel_Hielo_56: -2226202020003867423
+      AsterPixel_Hielo_57: 4423777030953759641
+      AsterPixel_Hielo_58: -9028779026871600574
+      AsterPixel_Hielo_59: 9199634041102118512
+      AsterPixel_Hielo_6: -2599656353306083895
+      AsterPixel_Hielo_60: 7463347219339427586
+      AsterPixel_Hielo_61: -700752468629415892
+      AsterPixel_Hielo_62: 2613799696620848699
+      AsterPixel_Hielo_63: 8404308693202676511
+      AsterPixel_Hielo_64: 4563869573107946464
+      AsterPixel_Hielo_65: 263609626044423989
+      AsterPixel_Hielo_66: 6490542245751050194
+      AsterPixel_Hielo_67: 1388796594870276450
+      AsterPixel_Hielo_68: -866504768355522210
+      AsterPixel_Hielo_69: -393464209162550929
+      AsterPixel_Hielo_7: -2130133180046818069
+      AsterPixel_Hielo_70: 2881859262905545443
+      AsterPixel_Hielo_71: 7774623309190748168
+      AsterPixel_Hielo_72: -4679183626893162910
+      AsterPixel_Hielo_73: 6654800652678793406
+      AsterPixel_Hielo_74: -2008845823329606860
+      AsterPixel_Hielo_75: 755027799493764625
+      AsterPixel_Hielo_76: -4880903472553085806
+      AsterPixel_Hielo_77: 9001292396499352043
+      AsterPixel_Hielo_78: -1556869742413123842
+      AsterPixel_Hielo_79: -6879512307793003535
+      AsterPixel_Hielo_8: -2186055312896513849
+      AsterPixel_Hielo_80: -2063260945910111398
+      AsterPixel_Hielo_81: 3309862212220172409
+      AsterPixel_Hielo_82: -2591769739638981741
+      AsterPixel_Hielo_83: -4227631661009725827
+      AsterPixel_Hielo_84: 1551830841264404604
+      AsterPixel_Hielo_85: -2757806695914981794
+      AsterPixel_Hielo_86: 167075573999556308
+      AsterPixel_Hielo_87: 5506764084002327922
+      AsterPixel_Hielo_88: -2333053147024592247
+      AsterPixel_Hielo_89: 2585954451791158550
+      AsterPixel_Hielo_9: 2455299145712256887
+      AsterPixel_Hielo_90: -6343118145101828399
+      AsterPixel_Hielo_91: -3525732835151262601
+      AsterPixel_Hielo_92: 5430567244511591245
+      AsterPixel_Hielo_93: 5540013161194468094
+      AsterPixel_Hielo_94: -7504720486258518692
+      AsterPixel_Hielo_95: 7207766937904217010
+      AsterPixel_Hielo_96: 3936516063918868747
+      AsterPixel_Hielo_97: 9021654783566453504
+      AsterPixel_Hielo_98: -4329234283009049955
+      AsterPixel_Hielo_99: -529126852364727157
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -46,6 +46,11 @@ public class RunState
     /// Cristales recogidos en esta partida y aún NO ingresados. Se pierden al morir y se
     /// abonan al superar el nivel. Es lo que da tensión al tramo final.
     public int pendingCrystals = 0;
+    /// Muertes en el nivel en curso. Se ponen a cero al superarlo. Las enseña la pantalla de
+    /// transición y deciden cómo cambia el mapa en cada intento
+    public int levelDeaths = 0;
+    /// Segundos jugados en el nivel en curso sumando todos los intentos fallidos
+    public float levelSeconds = 0f;
 }
 
 [Serializable]

@@ -334,6 +334,7 @@ public class PlayerController : MonoBehaviour
         if (gravityVel.sqrMagnitude < 0.0004f) gravityVel = Vector2.zero;
 
         rb.linearVelocity = controlVel + knock + gravityVel;
+        KeepInsideWorld();
         rb.angularVelocity = 0f;   // los choques no nos hacen girar; la rotación la llevamos aquí
 
         if (!rotateBodyToFacing) return;
@@ -542,6 +543,33 @@ public class PlayerController : MonoBehaviour
             return wallShare;
 
         return 1f;
+    }
+
+    // Límite duro del mundo, independiente de las paredes: si por lo que sea el jugador queda
+    // fuera (un empujón, la gravedad, una pared que no chocó), se le devuelve al borde y se le
+    // quita la velocidad hacia fuera. Avisa una vez para poder encontrar la causa
+    bool warnedOutside;
+    void KeepInsideWorld()
+    {
+        var gb = GameBounds.Instance;
+        if (gb == null || !gb.IsReady) return;
+        Rect a = gb.Area;
+        Vector2 p = rb.position;
+        Vector2 q = new Vector2(Mathf.Clamp(p.x, a.xMin, a.xMax), Mathf.Clamp(p.y, a.yMin, a.yMax));
+        if (q == p) return;
+
+        if (!warnedOutside)
+        {
+            warnedOutside = true;
+            Debug.LogWarning($"PlayerController: el jugador salió del mundo en {p} (mundo {a}), con " +
+                             $"velocidad {rb.linearVelocity} (control {controlVel}, empujón {knock}, " +
+                             $"gravedad {gravityVel}). Devuelto al borde.", this);
+        }
+        rb.position = q;
+        Vector2 v = rb.linearVelocity;
+        if ((p.x < a.xMin && v.x < 0f) || (p.x > a.xMax && v.x > 0f)) { v.x = 0f; knock.x = 0f; gravityVel.x = 0f; controlVel.x = 0f; }
+        if ((p.y < a.yMin && v.y < 0f) || (p.y > a.yMax && v.y > 0f)) { v.y = 0f; knock.y = 0f; gravityVel.y = 0f; controlVel.y = 0f; }
+        rb.linearVelocity = v;
     }
 
     /// La meta tira de ti: aceleración (no fuerza) de este paso de física.
