@@ -42,6 +42,9 @@ public class CometDirector : MonoBehaviour
         rng = new System.Random(System.Environment.TickCount ^ GetInstanceID());
     }
 
+    /// Mundo oscuro: no entra ningún cometa. Lo pone GameDirector en cada nivel
+    public bool Suppressed { get; set; }
+
     public void BeginLevel(int level)
     {
         CometTrail.Clear();
@@ -59,6 +62,7 @@ public class CometDirector : MonoBehaviour
     void Update()
     {
         if (CurrentType == null || pool == null || TargetAlive <= 0) return;
+        if (Asteroid.WorldFrozen || Suppressed) return;   // TimeFreeze: no entra nada nuevo
         if (Time.time < nextCount) return;
         nextCount = Time.time + 0.25f;
 

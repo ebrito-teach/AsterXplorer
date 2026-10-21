@@ -44,6 +44,16 @@ public class GameDirector : MonoBehaviour
              "siguiente si no hay pantalla)")]
     [SerializeField] private float nextLevelDelay = 1.1f;
 
+    [Header("Mundos oscuros")]
+    [Tooltip("Probabilidad de que un nivel sea un mundo vacío y oscuro. Se sortea por nivel: " +
+             "si salió oscuro, sigue oscuro al reintentar")]
+    [Range(0f, 1f)] [SerializeField] private float darkWorldChance = 0.01f;
+    [Tooltip("Multiplica el tamaño (y con él la masa y el alcance) del agujero negro en un mundo oscuro")]
+    [SerializeField] private float darkGoalBoost = 1.35f;
+    [Tooltip("Solo para probar: todos los niveles son oscuros")]
+    [SerializeField] private bool alwaysDark = false;
+    [SerializeField] private CometDirector comets;
+
     [Header("Pantalla de transición")]
     [Tooltip("Vacío = la busca en la escena. Si no hay ninguna, se pasa al nivel siguiente sin ella")]
     [SerializeField] private TransitionScreen transition;
@@ -62,6 +72,9 @@ public class GameDirector : MonoBehaviour
     /// Semilla del nivel en curso. La necesita quien tenga que sortear algo con el nivel
     /// (la geoda, por ejemplo) y salir igual en cada intento.
     public int CurrentSeed { get; private set; }
+    /// Este nivel es un mundo vacío y oscuro
+    public bool IsDarkWorld { get; private set; }
+    int forcedDarkLevel = -1;
 
     /// Para el HUD y el guardado
     public event System.Action<int> LevelStarted;
@@ -84,6 +97,7 @@ public class GameDirector : MonoBehaviour
         if (playerStart == null) playerStart = FindFirstObjectByType<PlayerStart>();
         if (goal == null) goal = FindFirstObjectByType<Goal>();
         if (transition == null) transition = FindFirstObjectByType<TransitionScreen>(FindObjectsInactive.Include);
+        if (comets == null) comets = FindFirstObjectByType<CometDirector>();
         if (runSeed == 0) runSeed = Random.Range(1, int.MaxValue);
     }
 
@@ -127,6 +141,16 @@ public class GameDirector : MonoBehaviour
         StartLevel(level);
     }
 
+    bool DarkFor(int level)
+    {
+        if (darkWorldChance <= 0f) return false;
+        unchecked
+        {
+            int h = runSeed * 73856093 ^ level * 19349663 ^ 0x5bd1e995;
+            return new System.Random(h).NextDouble() < darkWorldChance;
+        }
+    }
+
     /// Semilla de un nivel: depende de la partida y del número, nunca del momento.
     int SeedFor(int level)
     {
@@ -158,6 +182,12 @@ public class GameDirector : MonoBehaviour
         }
         if (GameBounds.Instance != null) GameBounds.Instance.SetGoalMirrored(GoalMirrored);
 
+        // ¿Mundo oscuro? Sale del nivel y la partida, no del intento: reintentar no lo cambia
+        IsDarkWorld = alwaysDark || CurrentLevel == forcedDarkLevel || DarkFor(CurrentLevel);
+        if (goal != null) goal.SizeBoost = IsDarkWorld ? darkGoalBoost : 1f;
+        if (populator != null) populator.DarkWorld = IsDarkWorld;
+        if (comets != null) comets.Suppressed = IsDarkWorld;
+
         // 3. Jugador y meta, antes de poblar: el generador evita la zona de los dos. El
         //    jugador aparece cerca de un borde; la meta, en el lado contrario, pegada al
         //    borde más lejano y a una altura al azar
@@ -180,6 +210,7 @@ public class GameDirector : MonoBehaviour
         Running = true;
         levelStartTime = Time.time;
         LevelStarted?.Invoke(CurrentLevel);
+        if (IsDarkWorld) Debug.Log($"GameDirector: el nivel {CurrentLevel} es un MUNDO OSCURO.");
         Debug.Log($"GameDirector: nivel {CurrentLevel} (semilla {seed}, meta " +
                   $"{(GoalMirrored ? "izquierda" : "derecha")}, intentos previos {retries})");
     }
@@ -261,6 +292,9 @@ public class GameDirector : MonoBehaviour
     // Para probar sin jugar: clic derecho en el componente
     [ContextMenu("Siguiente nivel")]
     void NextFromMenu() { StopAllCoroutines(); retries = levelDeaths = 0; levelSeconds = 0f; StartLevel(CurrentLevel + 1); }
+
+    [ContextMenu("Mundo oscuro en el siguiente nivel")]
+    void DarkNext() { forcedDarkLevel = CurrentLevel + 1; Debug.Log($"GameDirector: el nivel {forcedDarkLevel} será oscuro."); }
 
     [ContextMenu("Repetir nivel")]
     void RepeatFromMenu() { StopAllCoroutines(); StartLevel(CurrentLevel); }

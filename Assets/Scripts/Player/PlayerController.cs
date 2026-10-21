@@ -224,6 +224,25 @@ public class PlayerController : MonoBehaviour
     /// El jugador ha muerto
     public event System.Action OnDied;
 
+    // ---- lo que tocan los buffs (BuffSystem) ----
+    /// Multiplica la velocidad de crucero (XLR8D: 2)
+    public float SpeedFactor { get; set; } = 1f;
+    /// 0 = manejo normal, 1 = cuesta maniobrar: arranca, para y gira más torpe (XLR8D)
+    public float Clumsiness { get; set; }
+    /// Tope de giro de la dirección de avance, en grados por segundo (0 = sin tope). Con
+    /// XLR8D cambiar de rumbo cuesta: la velocidad gira poco a poco hacia donde pides
+    public float MaxTurnRate { get; set; }
+    /// Se mueve en tiempo real aunque el mundo vaya a cámara lenta (Slow)
+    public bool RealTime { get; set; }
+    /// Transparencia del dibujo (Ghost)
+    public float VisualAlpha { get; set; } = 1f;
+    /// Si devuelve true, el golpe lo ha parado un escudo: ni muerte ni cuenta (LightShield)
+    public System.Func<bool> HitAbsorber;
+
+    /// Invulnerable unos segundos más (al acabar Ghost, o tras un golpe parado por el escudo)
+    public void GrantInvulnerability(float seconds) =>
+        invulnerableUntil = Mathf.Max(invulnerableUntil, Time.time + seconds);
+
     void Awake()
     {
         // Se guardan ANTES de que nada las toque: son el tamaño que decidiste en la escena,
@@ -265,7 +284,12 @@ public class PlayerController : MonoBehaviour
         if (IsDead || IsExpelling) return;
 
         bool thrustPose = debugForceThrustPose || thrustLevel > 0.05f;
-        if (animator != null) animator.SetBool("Thrusting", thrustPose);
+        if (animator != null)
+        {
+            animator.SetBool("Thrusting", thrustPose);
+            var mode = RealTime ? AnimatorUpdateMode.UnscaledTime : AnimatorUpdateMode.Normal;
+            if (animator.updateMode != mode) animator.updateMode = mode;
+        }
 
         // ¿Hacia qué lado mira? Lo decide por dónde avanza de verdad, con zona muerta para
         // que no parpadee al ir en vertical o estando quieto.
@@ -296,7 +320,7 @@ public class PlayerController : MonoBehaviour
         if (visualRenderer != null)
         {
             Color c = visualRenderer.color;
-            c.a = IsInvulnerable ? (Mathf.Repeat(Time.time * blinkRate, 1f) < 0.5f ? 1f : 0.3f) : 1f;
+            c.a = (IsInvulnerable ? (Mathf.Repeat(Time.time * blinkRate, 1f) < 0.5f ? 1f : 0.3f) : 1f) * VisualAlpha;
             visualRenderer.color = c;
         }
     }
@@ -304,7 +328,10 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         if (IsDead || IsExpelling || input == null) return;
-        float dt = Time.fixedDeltaTime;
+        // Con Slow el mundo va más lento; el jugador no: sus pasos se miden en tiempo real
+        // y su velocidad se multiplica por lo mismo que se frena el mundo
+        float k = RealTime && Time.timeScale > 0.01f ? 1f / Time.timeScale : 1f;
+        float dt = Time.fixedDeltaTime * k;
 
         IsFocusing = input.FocusHeld && !IsStunned;
         Vector2 intent = ReadIntent(dt);
@@ -315,13 +342,24 @@ public class PlayerController : MonoBehaviour
 
         // --- lo que pides ---
         FieldSlowdown = StaticField();
-        float speed = cruiseSpeed * (IsFocusing ? focusSpeedFactor : 1f) * (1f - FieldSlowdown);
+        float speed = cruiseSpeed * SpeedFactor * (IsFocusing ? focusSpeedFactor : 1f) * (1f - FieldSlowdown);
         Vector2 target = IsStunned ? Vector2.zero : Vector2.ClampMagnitude(intent, 1f) * speed;
 
         // Arrancar es rápido (precisión), parar es lento (inercia). Ahí está el híbrido.
         bool speedingUp = target.sqrMagnitude > controlVel.sqrMagnitude;
-        float tau = speedingUp ? accelTime : (IsFocusing ? focusDecelTime : decelTime);
-        controlVel = Vector2.Lerp(controlVel, target, Approach(dt, tau));
+        float tau = speedingUp ? accelTime * (1f + 2.5f * Clumsiness)
+                               : (IsFocusing ? focusDecelTime : decelTime) * (1f + 1.5f * Clumsiness);
+        if (MaxTurnRate > 0f && controlVel.sqrMagnitude > 0.25f && target.sqrMagnitude > 0.01f)
+        {
+            // Rumbo limitado: la dirección gira como mucho MaxTurnRate grados por segundo y
+            // la rapidez se acerca a la pedida como siempre
+            float cur = Mathf.Atan2(controlVel.y, controlVel.x) * Mathf.Rad2Deg;
+            float want = Mathf.Atan2(target.y, target.x) * Mathf.Rad2Deg;
+            float ang = Mathf.MoveTowardsAngle(cur, want, MaxTurnRate * dt) * Mathf.Deg2Rad;
+            float mag = Mathf.Lerp(controlVel.magnitude, target.magnitude, Approach(dt, tau));
+            controlVel = new Vector2(Mathf.Cos(ang), Mathf.Sin(ang)) * mag;
+        }
+        else controlVel = Vector2.Lerp(controlVel, target, Approach(dt, tau));
 
         // --- lo que te hicieron ---
         knock = Vector2.Lerp(knock, Vector2.zero, Approach(dt, knockDecayTime));
@@ -333,7 +371,7 @@ public class PlayerController : MonoBehaviour
         gravityVel = Vector2.Lerp(gravityVel, Vector2.zero, Approach(dt, gravityMemory));
         if (gravityVel.sqrMagnitude < 0.0004f) gravityVel = Vector2.zero;
 
-        rb.linearVelocity = controlVel + knock + gravityVel;
+        rb.linearVelocity = (controlVel + knock + gravityVel) * k;
         KeepInsideWorld();
         rb.angularVelocity = 0f;   // los choques no nos hacen girar; la rotación la llevamos aquí
 
@@ -398,7 +436,9 @@ public class PlayerController : MonoBehaviour
         // Con un tope de grados/s hay un solo filtro en toda la cadena (el de TiltInput, que
         // es el que debe estar porque filtra ruido del sensor) y el morro va a velocidad
         // plena hasta el ángulo pedido.
-        facing = Mathf.MoveTowardsAngle(facing, want, tiltFollowRate * dt);
+        float rate = tiltFollowRate * (1f - 0.5f * Clumsiness);
+        if (MaxTurnRate > 0f) rate = Mathf.Min(rate, MaxTurnRate);
+        facing = Mathf.MoveTowardsAngle(facing, want, rate * dt);
         turnRate = 0f;
     }
 
@@ -406,8 +446,9 @@ public class PlayerController : MonoBehaviour
     /// era arranque, para que un toque corto fuese un ajuste fino y no un volantazo.
     void TurnByButtons(float dt)
     {
-        float want = -input.Turn * turnSpeed * (IsFocusing ? focusTurnFactor : 1f);
-        turnRate = Mathf.Lerp(turnRate, want, Approach(dt, turnAccelTime));
+        float want = -input.Turn * turnSpeed * (1f - 0.4f * Clumsiness) * (IsFocusing ? focusTurnFactor : 1f);
+        if (MaxTurnRate > 0f) want = Mathf.Clamp(want, -MaxTurnRate, MaxTurnRate);
+        turnRate = Mathf.Lerp(turnRate, want, Approach(dt, turnAccelTime * (1f + 2f * Clumsiness)));
         facing += turnRate * dt;
     }
 
@@ -446,6 +487,8 @@ public class PlayerController : MonoBehaviour
     void OnCollisionEnter2D(Collision2D c)
     {
         if (IsDead) return;
+        // Con escudo, cualquier choque con una roca cuenta como golpe parado
+        if (HitAbsorber != null && c.collider.GetComponentInParent<Asteroid>() != null) HitAbsorber();
         float impact = c.relativeVelocity.magnitude;
         if (impact < minImpactSpeed) return;
 
@@ -579,6 +622,7 @@ public class PlayerController : MonoBehaviour
     public void Kill()
     {
         if (IsDead || IsInvulnerable) return;
+        if (HitAbsorber != null && HitAbsorber()) return;
         IsDead = true;
 
         controlVel = Vector2.zero;

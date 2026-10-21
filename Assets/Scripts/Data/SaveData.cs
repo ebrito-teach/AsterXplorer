@@ -51,6 +51,10 @@ public class RunState
     public int levelDeaths = 0;
     /// Segundos jugados en el nivel en curso sumando todos los intentos fallidos
     public float levelSeconds = 0f;
+    /// Buffs guardados (sin usar), del más antiguo al más nuevo. Valen solo para esta partida
+    /// y con este personaje
+    public List<int> buffs = new List<int>();
+    public string buffsCharacter = "";
 }
 
 [Serializable]

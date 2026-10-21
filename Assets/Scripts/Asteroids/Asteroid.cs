@@ -19,6 +19,22 @@ public class Asteroid : MonoBehaviour
     /// Choque fuerte entre dos cuerpos: punto, dirección de salida de la eyecta, energía
     /// del impacto y masa del mayor. Lo escucha ImpactFeedback.
     public static event System.Action<Vector2, Vector2, float, float> HeavyImpact;
+    /// Un cometa acaba de soltar piezas: dónde y con qué velocidad. Lo usa el BuffSpawner
+    /// para que uno de esos fragmentos pueda ser un buff
+    public static event System.Action<Vector2, Vector2> CometShed;
+
+    /// Mundo oscuro: esta pieza empuja pero no mata. Lo pone LevelPopulator al crearla y lo
+    /// heredan sus fragmentos y su estela
+    public bool Harmless { get; set; }
+
+    /// Detenido por TimeFreeze
+    public bool IsFrozen => frozenUntil > 0f || WorldFrozen;
+    float frozenUntil;
+    bool[] tailsPlaying;
+    Vector2 frozenVel;
+    float frozenSpin;
+    RigidbodyType2D frozenBody;
+    Color frozenColor;
 
     public AsteroidTypeData Type { get; private set; }
     public float Size { get; private set; }
@@ -36,6 +52,9 @@ public class Asteroid : MonoBehaviour
         get
         {
             if (Type == null || swallowed) return false;
+            // Mundo oscuro: lo que fluye es inofensivo salvo los raros que sí matan. Las lunas
+            // (satélites de un campo) se rigen por su anfitrión, como siempre
+            if (Harmless && orbitHost == null) return false;
             // Lo que orbita mata según su anfitrión, sea del tamaño que sea: los satélites de
             // un campo son peligrosos aunque sean pequeños
             if (orbitHost != null)
@@ -100,6 +119,8 @@ public class Asteroid : MonoBehaviour
         movingFilterReady = false;
         playerTransform = null;
         HeavyImpact = null;
+        CometShed = null;
+        WorldFrozen = false;
     }
 
     void Awake()
@@ -116,8 +137,10 @@ public class Asteroid : MonoBehaviour
         pool = owner;
         gameObject.name = type.id;
         Serial = ++serialCounter;
+        frozenUntil = 0f;
 
         dislodged = false;
+        Harmless = false;
         swallowed = false;
         if (rb != null) rb.simulated = true;
         if (col != null) col.enabled = true;
@@ -398,6 +421,8 @@ public class Asteroid : MonoBehaviour
     void Update()
     {
         if (lifetimeEnd <= 0f) return;
+        // Congelado, el tiempo no corre para él: su vida restante se queda igual
+        if (WorldFrozen) { lifetimeEnd += Time.deltaTime; return; }
         float left = lifetimeEnd - Time.time;
         if (left <= 0f) { Release(); return; }
         if (left < 2f)
@@ -408,9 +433,60 @@ public class Asteroid : MonoBehaviour
         }
     }
 
+    /// TimeFreeze: todo el universo se detiene. Mientras esté a true, cada roca (las que ya
+    /// hay y las que pudieran nacer) se queda quieta, sin que nada la mueva, con su estela en
+    /// pausa y su cuenta de vida parada. Lo pone BuffSystem
+    public static bool WorldFrozen;
+    /// Color que toman las rocas congeladas
+    public static Color FreezeTint = new Color(0.65f, 0.85f, 1f);
+
+    void EnterFreeze()
+    {
+        frozenUntil = 1f;
+        frozenVel = rb.linearVelocity;
+        frozenSpin = rb.angularVelocity;
+        frozenBody = rb.bodyType;
+        frozenColor = sr.color;
+        rb.linearVelocity = Vector2.zero;
+        rb.angularVelocity = 0f;
+        rb.bodyType = RigidbodyType2D.Kinematic;
+        sr.color = new Color(frozenColor.r * FreezeTint.r, frozenColor.g * FreezeTint.g, frozenColor.b * FreezeTint.b, frozenColor.a);
+        if (tails != null)
+        {
+            if (tailsPlaying == null || tailsPlaying.Length != tails.Length) tailsPlaying = new bool[tails.Length];
+            for (int i = 0; i < tails.Length; i++)
+            {
+                tailsPlaying[i] = tails[i] != null && tails[i].isPlaying;
+                if (tailsPlaying[i]) tails[i].Pause(true);
+            }
+        }
+    }
+
+    void Unfreeze()
+    {
+        frozenUntil = 0f;
+        if (rb == null) return;
+        rb.bodyType = frozenBody;
+        rb.linearVelocity = frozenVel;
+        rb.angularVelocity = frozenSpin;
+        lastVelocity = frozenVel;
+        sr.color = new Color(frozenColor.r, frozenColor.g, frozenColor.b, sr.color.a);
+        if (tails != null && tailsPlaying != null)
+            for (int i = 0; i < tails.Length && i < tailsPlaying.Length; i++)
+                if (tailsPlaying[i] && tails[i] != null && tails[i].gameObject.activeInHierarchy) tails[i].Play(true);
+    }
+
     void FixedUpdate()
     {
         if (swallowed) return;
+        if (WorldFrozen && Type != null && rb != null)
+        {
+            if (frozenUntil <= 0f) EnterFreeze();
+            rb.linearVelocity = Vector2.zero;
+            rb.angularVelocity = 0f;
+            return;
+        }
+        if (frozenUntil > 0f) Unfreeze();
         Simulate();
         // Con qué velocidad entra al paso de física: al resolverse el choque, comparar
         // con la de salida nos dice si me empujaron a mí o si choqué yo.
@@ -923,6 +999,7 @@ public class Asteroid : MonoBehaviour
             float size = w.RandomSize() * Random.Range(Type.wakeSizeScale.x, Type.wakeSizeScale.y);
             var left = pool.Spawn(w, p, size);
             if (left == null) return;
+            left.Harmless = Harmless;
 
             // Sale despedido hacia atrás y hacia fuera, y se frena solo. La dirección se
             // mezcla entre "hacia atrás" y "de lado" para que el reguero se abra en abanico
@@ -954,6 +1031,7 @@ public class Asteroid : MonoBehaviour
         Vector2 fwd = vel.sqrMagnitude > 0.0001f ? vel.normalized : Vector2.right;
         Vector2 side = new Vector2(-fwd.y, fwd.x);
 
+        CometShed?.Invoke(rb.position - fwd * (WorldRadius + 0.6f), vel * 0.15f);
         switch (prof.PickPattern())
         {
             case CometProfile.ShedPattern.Line:    ShedLine(prof, vel, fwd, side, interval); break;

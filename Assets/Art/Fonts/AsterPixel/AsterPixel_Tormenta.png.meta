@@ -1,0 +1,5343 @@
+fileFormatVersion: 2
+guid: ea7154594172e0e43a9a0f2ce5d68178
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6229700506772578867
+    second: AsterPixel_Tormenta_0
+  - first:
+      213: -1659889412249978522
+    second: AsterPixel_Tormenta_1
+  - first:
+      213: -7316232942146669623
+    second: AsterPixel_Tormenta_2
+  - first:
+      213: 160331331802556830
+    second: AsterPixel_Tormenta_3
+  - first:
+      213: 6934186153708868250
+    second: AsterPixel_Tormenta_4
+  - first:
+      213: -625791711080524934
+    second: AsterPixel_Tormenta_5
+  - first:
+      213: -3243673796718376751
+    second: AsterPixel_Tormenta_6
+  - first:
+      213: 8427749181064429345
+    second: AsterPixel_Tormenta_7
+  - first:
+      213: 2583134734559257780
+    second: AsterPixel_Tormenta_8
+  - first:
+      213: 8875868328941990304
+    second: AsterPixel_Tormenta_9
+  - first:
+      213: 5450818601319243139
+    second: AsterPixel_Tormenta_10
+  - first:
+      213: 4218160170173280095
+    second: AsterPixel_Tormenta_11
+  - first:
+      213: 1555630004403560921
+    second: AsterPixel_Tormenta_12
+  - first:
+      213: -2704456979662663845
+    second: AsterPixel_Tormenta_13
+  - first:
+      213: 7829556839087210853
+    second: AsterPixel_Tormenta_14
+  - first:
+      213: -5694503471640876717
+    second: AsterPixel_Tormenta_15
+  - first:
+      213: 5581534988444230622
+    second: AsterPixel_Tormenta_16
+  - first:
+      213: 991911513278659903
+    second: AsterPixel_Tormenta_17
+  - first:
+      213: -6071964691923074463
+    second: AsterPixel_Tormenta_18
+  - first:
+      213: 3688578986354652489
+    second: AsterPixel_Tormenta_19
+  - first:
+      213: -2548731721409335022
+    second: AsterPixel_Tormenta_20
+  - first:
+      213: 7610689397049055727
+    second: AsterPixel_Tormenta_21
+  - first:
+      213: 3157739047840053376
+    second: AsterPixel_Tormenta_22
+  - first:
+      213: -6515268557147469323
+    second: AsterPixel_Tormenta_23
+  - first:
+      213: 2446305344780795718
+    second: AsterPixel_Tormenta_24
+  - first:
+      213: -6820176893876931361
+    second: AsterPixel_Tormenta_25
+  - first:
+      213: 2777625923964311436
+    second: AsterPixel_Tormenta_26
+  - first:
+      213: 824714004176379603
+    second: AsterPixel_Tormenta_27
+  - first:
+      213: 5486200737900095585
+    second: AsterPixel_Tormenta_28
+  - first:
+      213: -5441931826564567392
+    second: AsterPixel_Tormenta_29
+  - first:
+      213: 860213161393066757
+    second: AsterPixel_Tormenta_30
+  - first:
+      213: 7172313436217776649
+    second: AsterPixel_Tormenta_31
+  - first:
+      213: -8978863660244639211
+    second: AsterPixel_Tormenta_32
+  - first:
+      213: -6540795768455762904
+    second: AsterPixel_Tormenta_33
+  - first:
+      213: 6692624092900259914
+    second: AsterPixel_Tormenta_34
+  - first:
+      213: -3656150782448899051
+    second: AsterPixel_Tormenta_35
+  - first:
+      213: 374078558245077775
+    second: AsterPixel_Tormenta_36
+  - first:
+      213: -1567561760169004017
+    second: AsterPixel_Tormenta_37
+  - first:
+      213: -1689102462231165330
+    second: AsterPixel_Tormenta_38
+  - first:
+      213: -947200510670839270
+    second: AsterPixel_Tormenta_39
+  - first:
+      213: 4420871742549258904
+    second: AsterPixel_Tormenta_40
+  - first:
+      213: -3193195004424019550
+    second: AsterPixel_Tormenta_41
+  - first:
+      213: 7247052874630636766
+    second: AsterPixel_Tormenta_42
+  - first:
+      213: 8990397925390528643
+    second: AsterPixel_Tormenta_43
+  - first:
+      213: -1157769286037029523
+    second: AsterPixel_Tormenta_44
+  - first:
+      213: 1614604371029344014
+    second: AsterPixel_Tormenta_45
+  - first:
+      213: 2250915519514039227
+    second: AsterPixel_Tormenta_46
+  - first:
+      213: -6437510580874336209
+    second: AsterPixel_Tormenta_47
+  - first:
+      213: -2257394185893096440
+    second: AsterPixel_Tormenta_48
+  - first:
+      213: -4826407629091102240
+    second: AsterPixel_Tormenta_49
+  - first:
+      213: -8579786462992126375
+    second: AsterPixel_Tormenta_50
+  - first:
+      213: 8995751796909844886
+    second: AsterPixel_Tormenta_51
+  - first:
+      213: -1551874663542623413
+    second: AsterPixel_Tormenta_52
+  - first:
+      213: 6042200610618041565
+    second: AsterPixel_Tormenta_53
+  - first:
+      213: -611542241661655000
+    second: AsterPixel_Tormenta_54
+  - first:
+      213: -5040569577275615461
+    second: AsterPixel_Tormenta_55
+  - first:
+      213: 5398595464838164786
+    second: AsterPixel_Tormenta_56
+  - first:
+      213: -329889179801519699
+    second: AsterPixel_Tormenta_57
+  - first:
+      213: 3645316342058188609
+    second: AsterPixel_Tormenta_58
+  - first:
+      213: -2964611987830368761
+    second: AsterPixel_Tormenta_59
+  - first:
+      213: 2741620923229969616
+    second: AsterPixel_Tormenta_60
+  - first:
+      213: -3632687983755813683
+    second: AsterPixel_Tormenta_61
+  - first:
+      213: 829513060902024503
+    second: AsterPixel_Tormenta_62
+  - first:
+      213: 1010604551856999139
+    second: AsterPixel_Tormenta_63
+  - first:
+      213: 8552786571071378948
+    second: AsterPixel_Tormenta_64
+  - first:
+      213: -6125932106471223740
+    second: AsterPixel_Tormenta_65
+  - first:
+      213: 7701165088589547077
+    second: AsterPixel_Tormenta_66
+  - first:
+      213: -922015351805808599
+    second: AsterPixel_Tormenta_67
+  - first:
+      213: -3061423845495967550
+    second: AsterPixel_Tormenta_68
+  - first:
+      213: -3661135257922278904
+    second: AsterPixel_Tormenta_69
+  - first:
+      213: 4826792291576917595
+    second: AsterPixel_Tormenta_70
+  - first:
+      213: 154392551878980557
+    second: AsterPixel_Tormenta_71
+  - first:
+      213: 6825932926247878380
+    second: AsterPixel_Tormenta_72
+  - first:
+      213: 3155565929729277862
+    second: AsterPixel_Tormenta_73
+  - first:
+      213: 373037118022146622
+    second: AsterPixel_Tormenta_74
+  - first:
+      213: 8221328722343418233
+    second: AsterPixel_Tormenta_75
+  - first:
+      213: 1176199593941035221
+    second: AsterPixel_Tormenta_76
+  - first:
+      213: -6687164042304057319
+    second: AsterPixel_Tormenta_77
+  - first:
+      213: 3783450883112320819
+    second: AsterPixel_Tormenta_78
+  - first:
+      213: -2128539044644202417
+    second: AsterPixel_Tormenta_79
+  - first:
+      213: 7236873134406895305
+    second: AsterPixel_Tormenta_80
+  - first:
+      213: 1575055374053178342
+    second: AsterPixel_Tormenta_81
+  - first:
+      213: -3061589384215778951
+    second: AsterPixel_Tormenta_82
+  - first:
+      213: -9148541384324714355
+    second: AsterPixel_Tormenta_83
+  - first:
+      213: 1766542828070076190
+    second: AsterPixel_Tormenta_84
+  - first:
+      213: -8156838508729518958
+    second: AsterPixel_Tormenta_85
+  - first:
+      213: -1491005934491253113
+    second: AsterPixel_Tormenta_86
+  - first:
+      213: -2583925475238222756
+    second: AsterPixel_Tormenta_87
+  - first:
+      213: 4270635369514850836
+    second: AsterPixel_Tormenta_88
+  - first:
+      213: 6125333736020745604
+    second: AsterPixel_Tormenta_89
+  - first:
+      213: 949032425280685996
+    second: AsterPixel_Tormenta_90
+  - first:
+      213: -8101275745027492097
+    second: AsterPixel_Tormenta_91
+  - first:
+      213: -6395847635160259540
+    second: AsterPixel_Tormenta_92
+  - first:
+      213: -8252250489738916931
+    second: AsterPixel_Tormenta_93
+  - first:
+      213: -2119478180008020068
+    second: AsterPixel_Tormenta_94
+  - first:
+      213: -3673337642574401003
+    second: AsterPixel_Tormenta_95
+  - first:
+      213: -8600471984111926149
+    second: AsterPixel_Tormenta_96
+  - first:
+      213: 8938627709471234571
+    second: AsterPixel_Tormenta_97
+  - first:
+      213: -8430428850928837136
+    second: AsterPixel_Tormenta_98
+  - first:
+      213: 6909848958364492987
+    second: AsterPixel_Tormenta_99
+  - first:
+      213: 929414847978228296
+    second: AsterPixel_Tormenta_100
+  - first:
+      213: 8424911665433112995
+    second: AsterPixel_Tormenta_101
+  - first:
+      213: -2046809322990885509
+    second: AsterPixel_Tormenta_102
+  - first:
+      213: -2679560472509917558
+    second: AsterPixel_Tormenta_103
+  - first:
+      213: -8231611874730541718
+    second: AsterPixel_Tormenta_104
+  - first:
+      213: -8758117278914622146
+    second: AsterPixel_Tormenta_105
+  - first:
+      213: -4144432777966578168
+    second: AsterPixel_Tormenta_106
+  - first:
+      213: 647655523824834403
+    second: AsterPixel_Tormenta_107
+  - first:
+      213: 1327699203774089022
+    second: AsterPixel_Tormenta_108
+  - first:
+      213: -5340517038352241856
+    second: AsterPixel_Tormenta_109
+  - first:
+      213: -8015372948825782039
+    second: AsterPixel_Tormenta_110
+  - first:
+      213: -509516747571672197
+    second: AsterPixel_Tormenta_111
+  - first:
+      213: 6252091519087501930
+    second: AsterPixel_Tormenta_112
+  - first:
+      213: -273019425691400452
+    second: AsterPixel_Tormenta_113
+  - first:
+      213: 3251006201719225308
+    second: AsterPixel_Tormenta_114
+  - first:
+      213: -6591710153576599077
+    second: AsterPixel_Tormenta_115
+  - first:
+      213: -4487294427440742889
+    second: AsterPixel_Tormenta_116
+  - first:
+      213: 8554518901289385416
+    second: AsterPixel_Tormenta_117
+  - first:
+      213: 5687182786704904012
+    second: AsterPixel_Tormenta_118
+  - first:
+      213: 6667739853160437813
+    second: AsterPixel_Tormenta_119
+  - first:
+      213: -6498173967763731048
+    second: AsterPixel_Tormenta_120
+  - first:
+      213: -5222652902139734545
+    second: AsterPixel_Tormenta_121
+  - first:
+      213: 7996181181694716821
+    second: AsterPixel_Tormenta_122
+  - first:
+      213: -3902058100495297302
+    second: AsterPixel_Tormenta_123
+  - first:
+      213: 8193821938609100148
+    second: AsterPixel_Tormenta_124
+  - first:
+      213: 3754314738020529511
+    second: AsterPixel_Tormenta_125
+  - first:
+      213: 4697482502238581316
+    second: AsterPixel_Tormenta_126
+  - first:
+      213: 4133370087863056579
+    second: AsterPixel_Tormenta_127
+  - first:
+      213: 944579687163889745
+    second: AsterPixel_Tormenta_128
+  - first:
+      213: 287122792202425593
+    second: AsterPixel_Tormenta_129
+  - first:
+      213: 5642113170622295934
+    second: AsterPixel_Tormenta_130
+  - first:
+      213: 2934920475572489140
+    second: AsterPixel_Tormenta_131
+  - first:
+      213: -656344122317788385
+    second: AsterPixel_Tormenta_132
+  - first:
+      213: 4693416808612285420
+    second: AsterPixel_Tormenta_133
+  - first:
+      213: 3856035793644978946
+    second: AsterPixel_Tormenta_134
+  - first:
+      213: 1352226589416811426
+    second: AsterPixel_Tormenta_135
+  - first:
+      213: 3906288883068629012
+    second: AsterPixel_Tormenta_136
+  - first:
+      213: -6637735872062322348
+    second: AsterPixel_Tormenta_137
+  - first:
+      213: 8385392392394024005
+    second: AsterPixel_Tormenta_138
+  - first:
+      213: 8508610453632336715
+    second: AsterPixel_Tormenta_139
+  - first:
+      213: -1019974948283579680
+    second: AsterPixel_Tormenta_140
+  - first:
+      213: -5884830992290032263
+    second: AsterPixel_Tormenta_141
+  - first:
+      213: 8706577478341689495
+    second: AsterPixel_Tormenta_142
+  - first:
+      213: 982290138604372462
+    second: AsterPixel_Tormenta_143
+  - first:
+      213: -201208699241591416
+    second: AsterPixel_Tormenta_144
+  - first:
+      213: 5385732817822273856
+    second: AsterPixel_Tormenta_145
+  - first:
+      213: -5822860182644389469
+    second: AsterPixel_Tormenta_146
+  - first:
+      213: -7369547422384151582
+    second: AsterPixel_Tormenta_147
+  - first:
+      213: -5241642656612721896
+    second: AsterPixel_Tormenta_148
+  - first:
+      213: -6657156447993042178
+    second: AsterPixel_Tormenta_149
+  - first:
+      213: -6452501848567031588
+    second: AsterPixel_Tormenta_150
+  - first:
+      213: 1436573177163674578
+    second: AsterPixel_Tormenta_151
+  - first:
+      213: 7905526545833698379
+    second: AsterPixel_Tormenta_152
+  - first:
+      213: -4175987123722736926
+    second: AsterPixel_Tormenta_153
+  - first:
+      213: -482570077434784694
+    second: AsterPixel_Tormenta_154
+  - first:
+      213: 4395780233000210141
+    second: AsterPixel_Tormenta_155
+  - first:
+      213: 588178159386927732
+    second: AsterPixel_Tormenta_156
+  - first:
+      213: 5919354706635381628
+    second: AsterPixel_Tormenta_157
+  - first:
+      213: -7340110142175329435
+    second: AsterPixel_Tormenta_158
+  - first:
+      213: -6860629273856715996
+    second: AsterPixel_Tormenta_159
+  - first:
+      213: -6419857993393148721
+    second: AsterPixel_Tormenta_160
+  - first:
+      213: -4934650271413783287
+    second: AsterPixel_Tormenta_161
+  - first:
+      213: 2549926827586106439
+    second: AsterPixel_Tormenta_162
+  - first:
+      213: -1644858432018420680
+    second: AsterPixel_Tormenta_163
+  - first:
+      213: -7495170984983351958
+    second: AsterPixel_Tormenta_164
+  - first:
+      213: 8259110768145748040
+    second: AsterPixel_Tormenta_165
+  - first:
+      213: 7706230423890284231
+    second: AsterPixel_Tormenta_166
+  - first:
+      213: 50087984782470421
+    second: AsterPixel_Tormenta_167
+  - first:
+      213: -8730981068841751678
+    second: AsterPixel_Tormenta_168
+  - first:
+      213: -7083059554750701858
+    second: AsterPixel_Tormenta_169
+  - first:
+      213: -6510654067900497691
+    second: AsterPixel_Tormenta_170
+  - first:
+      213: -8823480858778196462
+    second: AsterPixel_Tormenta_171
+  - first:
+      213: 667481854982634917
+    second: AsterPixel_Tormenta_172
+  - first:
+      213: 7405675482549166179
+    second: AsterPixel_Tormenta_173
+  - first:
+      213: -1460583852564508067
+    second: AsterPixel_Tormenta_174
+  - first:
+      213: 8564267548308108708
+    second: AsterPixel_Tormenta_175
+  - first:
+      213: -2745871587428876138
+    second: AsterPixel_Tormenta_176
+  - first:
+      213: 2920414230475754569
+    second: AsterPixel_Tormenta_177
+  - first:
+      213: 6635232901557811378
+    second: AsterPixel_Tormenta_178
+  - first:
+      213: 3210478146032911028
+    second: AsterPixel_Tormenta_179
+  - first:
+      213: -6685400888493088651
+    second: AsterPixel_Tormenta_180
+  - first:
+      213: 2839154067302807255
+    second: AsterPixel_Tormenta_181
+  - first:
+      213: 7182254007821846982
+    second: AsterPixel_Tormenta_182
+  - first:
+      213: -8664330137678231173
+    second: AsterPixel_Tormenta_183
+  - first:
+      213: 2053508393360745214
+    second: AsterPixel_Tormenta_184
+  - first:
+      213: -260558991492850016
+    second: AsterPixel_Tormenta_185
+  - first:
+      213: -8038951032788906177
+    second: AsterPixel_Tormenta_186
+  - first:
+      213: -5070968077592120119
+    second: AsterPixel_Tormenta_187
+  - first:
+      213: 148750720698040127
+    second: AsterPixel_Tormenta_188
+  - first:
+      213: 5864781929529482803
+    second: AsterPixel_Tormenta_189
+  - first:
+      213: -4806179780414344543
+    second: AsterPixel_Tormenta_190
+  - first:
+      213: 8986643170842311127
+    second: AsterPixel_Tormenta_191
+  - first:
+      213: -7852225435577045379
+    second: AsterPixel_Tormenta_192
+  - first:
+      213: -3453524278589599824
+    second: AsterPixel_Tormenta_193
+  - first:
+      213: 231861861024956066
+    second: AsterPixel_Tormenta_194
+  - first:
+      213: 2204980864073384524
+    second: AsterPixel_Tormenta_195
+  - first:
+      213: -3997322118888285364
+    second: AsterPixel_Tormenta_196
+  - first:
+      213: 1250748838252217200
+    second: AsterPixel_Tormenta_197
+  - first:
+      213: -7822578673534808407
+    second: AsterPixel_Tormenta_198
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 923
+        width: 55
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcddfbc3568ab89a0800000000000000
+      internalID: -6229700506772578867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_1
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 923
+        width: 55
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6697860cf53e6f8e0800000000000000
+      internalID: -1659889412249978522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_2
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 923
+        width: 39
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c33655f6e4877a90800000000000000
+      internalID: -7316232942146669623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_3
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 923
+        width: 55
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e99e47e2f7c993200800000000000000
+      internalID: 160331331802556830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_4
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 923
+        width: 55
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a92df32619d2b3060800000000000000
+      internalID: 6934186153708868250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_5
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 923
+        width: 55
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7359ad11cdb057f0800000000000000
+      internalID: -625791711080524934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_6
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 931
+        width: 47
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d8cb5b1ed72cf2d0800000000000000
+      internalID: -3243673796718376751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_7
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 931
+        width: 55
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12f3f616a3165f470800000000000000
+      internalID: 8427749181064429345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_8
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 999
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b4a064ea5329d320800000000000000
+      internalID: 2583134734559257780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_9
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 999
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a13ab3083b6d2b70800000000000000
+      internalID: 8875868328941990304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_10
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 999
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38d99b263a235ab40800000000000000
+      internalID: 5450818601319243139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_11
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 999
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5f21e4735ae98a30800000000000000
+      internalID: 4218160170173280095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_12
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 999
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d1e9663f35b69510800000000000000
+      internalID: 1555630004403560921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_13
+      rect:
+        serializedVersion: 2
+        x: 659
+        y: 999
+        width: 46
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5f81e0b4b6d77ad0800000000000000
+      internalID: -2704456979662663845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_14
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 1007
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 561068e567c28ac60800000000000000
+      internalID: 7829556839087210853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_15
+      rect:
+        serializedVersion: 2
+        x: 755
+        y: 1007
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 359ed98634f09f0b0800000000000000
+      internalID: -5694503471640876717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_16
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 1007
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed3e1afef78957d40800000000000000
+      internalID: 5581534988444230622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_17
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 947
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3d3895144af3cd00800000000000000
+      internalID: 991911513278659903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_18
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 947
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1620639884c0cbba0800000000000000
+      internalID: -6071964691923074463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_19
+      rect:
+        serializedVersion: 2
+        x: 909
+        y: 947
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 945b3af8b07703330800000000000000
+      internalID: 3688578986354652489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_20
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 947
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21170adc00611acd0800000000000000
+      internalID: -2548731721409335022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_21
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 935
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe9d0f6fea99e9960800000000000000
+      internalID: 7610689397049055727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_22
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 935
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 088f2effeea82db20800000000000000
+      internalID: 3157739047840053376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_23
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 935
+        width: 30
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f904f244cd1595a0800000000000000
+      internalID: -6515268557147469323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_24
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 935
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64f7ccfffb503f120800000000000000
+      internalID: 2446305344780795718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_25
+      rect:
+        serializedVersion: 2
+        x: 611
+        y: 935
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd47327ff3dd951a0800000000000000
+      internalID: -6820176893876931361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_26
+      rect:
+        serializedVersion: 2
+        x: 659
+        y: 935
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c871fc4bf0c1c8620800000000000000
+      internalID: 2777625923964311436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_27
+      rect:
+        serializedVersion: 2
+        x: 707
+        y: 943
+        width: 38
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3de193c6409f17b00800000000000000
+      internalID: 824714004176379603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_28
+      rect:
+        serializedVersion: 2
+        x: 747
+        y: 943
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16865050186e22c40800000000000000
+      internalID: 5486200737900095585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_29
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 847
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0aee9b916df5a74b0800000000000000
+      internalID: -5441931826564567392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_30
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 847
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50313fb005710fb00800000000000000
+      internalID: 860213161393066757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_31
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 847
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90a9587d11d298360800000000000000
+      internalID: 7172313436217776649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_32
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 847
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5126474b21ba46380800000000000000
+      internalID: -8978863660244639211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_33
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 847
+        width: 39
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82ce0d837ec6a35a0800000000000000
+      internalID: -6540795768455762904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_34
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 847
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a487a88472af0ec50800000000000000
+      internalID: 6692624092900259914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_35
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 847
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51cedd60c3eb24dc0800000000000000
+      internalID: -3656150782448899051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_36
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 847
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f03c94e777ef03500800000000000000
+      internalID: 374078558245077775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_37
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 847
+        width: 71
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f04f3a962e6ee3ae0800000000000000
+      internalID: -1567561760169004017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_38
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 847
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e664975824a1f88e0800000000000000
+      internalID: -1689102462231165330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_39
+      rect:
+        serializedVersion: 2
+        x: 573
+        y: 847
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a12656e672edad2f0800000000000000
+      internalID: -947200510670839270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_40
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 847
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 892f5345d671a5d30800000000000000
+      internalID: 4420871742549258904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_41
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 847
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a121cecf0e7fa3d0800000000000000
+      internalID: -3193195004424019550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_42
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 847
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed425d46134b29460800000000000000
+      internalID: 7247052874630636766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_43
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 847
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 380bf4ca74f44cc70800000000000000
+      internalID: 8990397925390528643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_44
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 847
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6db7ede7f6ceefe0800000000000000
+      internalID: -1157769286037029523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_45
+      rect:
+        serializedVersion: 2
+        x: 915
+        y: 847
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0f3ff3fe1a386610800000000000000
+      internalID: 1614604371029344014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_46
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 771
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb35c083dbbdc3f10800000000000000
+      internalID: 2250915519514039227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_47
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 771
+        width: 71
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f28aa2deb3e59a6a0800000000000000
+      internalID: -6437510580874336209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_48
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 771
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8045fc7b2ff1ca0e0800000000000000
+      internalID: -2257394185893096440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_49
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 771
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e12ace25d7250db0800000000000000
+      internalID: -4826407629091102240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_50
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 771
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95e26a86ba97ee880800000000000000
+      internalID: -8579786462992126375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_51
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 771
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 699a466099457dc70800000000000000
+      internalID: 8995751796909844886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_52
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 771
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b43fc973732a67ae0800000000000000
+      internalID: -1551874663542623413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_53
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 771
+        width: 47
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd4698141753ad350800000000000000
+      internalID: 6042200610618041565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_54
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 771
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8286c90429d5387f0800000000000000
+      internalID: -611542241661655000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_55
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 771
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1798d0fcac4c0ab0800000000000000
+      internalID: -5040569577275615461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_56
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 771
+        width: 39
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 231b6b7e8f9abea40800000000000000
+      internalID: 5398595464838164786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_57
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 771
+        width: 47
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da97faee98ffb6bf0800000000000000
+      internalID: -329889179801519699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_58
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 771
+        width: 39
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14ffd4e36e3c69230800000000000000
+      internalID: 3645316342058188609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_59
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 771
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7069180ba159bd6d0800000000000000
+      internalID: -2964611987830368761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_60
+      rect:
+        serializedVersion: 2
+        x: 769
+        y: 771
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0dc96e534b13c0620800000000000000
+      internalID: 2741620923229969616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_61
+      rect:
+        serializedVersion: 2
+        x: 826
+        y: 771
+        width: 47
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcc976c8689169dc0800000000000000
+      internalID: -3632687983755813683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_62
+      rect:
+        serializedVersion: 2
+        x: 875
+        y: 771
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 735bc93ebb5038b00800000000000000
+      internalID: 829513060902024503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_63
+      rect:
+        serializedVersion: 2
+        x: 932
+        y: 771
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ea44d94c73660e00800000000000000
+      internalID: 1010604551856999139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_64
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 695
+        width: 39
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 406d070621a91b670800000000000000
+      internalID: 8552786571071378948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_65
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 695
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44e4f9ba4315cfaa0800000000000000
+      internalID: -6125932106471223740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_66
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 695
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 546050678d800ea60800000000000000
+      internalID: 7701165088589547077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_67
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 695
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 920782e2ce75433f0800000000000000
+      internalID: -922015351805808599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_68
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 695
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c07d4e8b33a385d0800000000000000
+      internalID: -3061423845495967550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_69
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 695
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80a62e461e8013dc0800000000000000
+      internalID: -3661135257922278904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_70
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 695
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5e290804063cf240800000000000000
+      internalID: 4826792291576917595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_71
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 695
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc376ba3533842200800000000000000
+      internalID: 154392551878980557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_72
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 695
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ceeb5a1c4d59abe50800000000000000
+      internalID: 6825932926247878380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_73
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 695
+        width: 47
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6afb6d28e72dacb20800000000000000
+      internalID: 3155565929729277862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_74
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 695
+        width: 23
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3adebb484b4d2500800000000000000
+      internalID: 373037118022146622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_75
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 695
+        width: 23
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 979defc1ae6081270800000000000000
+      internalID: 8221328722343418233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_76
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 695
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d860d58c43b25010800000000000000
+      internalID: 1176199593941035221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_77
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 695
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91093bfcbbb6233a0800000000000000
+      internalID: -6687164042304057319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_78
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 695
+        width: 39
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33f3c095884818430800000000000000
+      internalID: 3783450883112320819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_79
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 695
+        width: 39
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f48de613409e572e0800000000000000
+      internalID: -2128539044644202417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_80
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 695
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c604ece5c98e6460800000000000000
+      internalID: 7236873134406895305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_81
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 695
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6eb72088488bbd510800000000000000
+      internalID: 1575055374053178342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_82
+      rect:
+        serializedVersion: 2
+        x: 909
+        y: 695
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97926b11dac0385d0800000000000000
+      internalID: -3061589384215778951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_83
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 695
+        width: 39
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d807d5ef41ad90180800000000000000
+      internalID: -9148541384324714355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_84
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 619
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1f71a3b755048810800000000000000
+      internalID: 1766542828070076190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_85
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 619
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29433f4d7961dce80800000000000000
+      internalID: -8156838508729518958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_86
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 619
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78646a49002ee4be0800000000000000
+      internalID: -1491005934491253113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_87
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 627
+        width: 55
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c54e752787d042cd0800000000000000
+      internalID: -2583925475238222756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_88
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 631
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41ad625ed38544b30800000000000000
+      internalID: 4270635369514850836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_89
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 631
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48d9b3a549e810550800000000000000
+      internalID: 6125333736020745604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_90
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 631
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca7ce2d66f3ab2d00800000000000000
+      internalID: 949032425280685996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_91
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 631
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff6f52ed1ac729f80800000000000000
+      internalID: -8101275745027492097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_92
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 631
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2420c466726d37a0800000000000000
+      internalID: -6395847635160259540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_93
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 631
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbb8191e6ed1a7d80800000000000000
+      internalID: -8252250489738916931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_94
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 631
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c973e6323d91692e0800000000000000
+      internalID: -2119478180008020068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_95
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 631
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 512384250eea50dc0800000000000000
+      internalID: -3673337642574401003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_96
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 631
+        width: 30
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b744f463c4cf4a880800000000000000
+      internalID: -8600471984111926149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_97
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 631
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0a1f7afa826c0c70800000000000000
+      internalID: 8938627709471234571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_98
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 631
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fd9e2c50a9110b80800000000000000
+      internalID: -8430428850928837136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_99
+      rect:
+        serializedVersion: 2
+        x: 743
+        y: 631
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb42be68407b4ef50800000000000000
+      internalID: 6909848958364492987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_100
+      rect:
+        serializedVersion: 2
+        x: 791
+        y: 631
+        width: 62
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84a47b641e1f5ec00800000000000000
+      internalID: 929414847978228296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_101
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 631
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a17f2ac58c4be470800000000000000
+      internalID: 8424911665433112995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_102
+      rect:
+        serializedVersion: 2
+        x: 903
+        y: 631
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b75ab24e3c54893e0800000000000000
+      internalID: -2046809322990885509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_103
+      rect:
+        serializedVersion: 2
+        x: 951
+        y: 631
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a865ed972f940dad0800000000000000
+      internalID: -2679560472509917558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_104
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 555
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6d7cc5ec9073cd80800000000000000
+      internalID: -8231611874730541718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_105
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 555
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3d4511ccbae47680800000000000000
+      internalID: -8758117278914622146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_106
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 555
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80611d9b8540c76c0800000000000000
+      internalID: -4144432777966578168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_107
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 555
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 367166a744fecf800800000000000000
+      internalID: 647655523824834403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_108
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 555
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e370681346fec6210800000000000000
+      internalID: 1327699203774089022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_109
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 555
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04be7148c0ca2e5b0800000000000000
+      internalID: -5340517038352241856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_110
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 555
+        width: 62
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e8c6f235cca3c090800000000000000
+      internalID: -8015372948825782039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_111
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 555
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7bc0e5b735dde8f0800000000000000
+      internalID: -509516747571672197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_112
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 555
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6261729c14e3c650800000000000000
+      internalID: 6252091519087501930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_113
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 555
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf602e2674a063cf0800000000000000
+      internalID: -273019425691400452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_114
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 555
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdbf0187ae4ed1d20800000000000000
+      internalID: 3251006201719225308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_115
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 555
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd13bb92a8a8584a0800000000000000
+      internalID: -6591710153576599077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_116
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 555
+        width: 38
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71efdc13e7de9b1c0800000000000000
+      internalID: -4487294427440742889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_117
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 555
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cdf7bfed91c7b670800000000000000
+      internalID: 8554518901289385416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_118
+      rect:
+        serializedVersion: 2
+        x: 683
+        y: 555
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4f034ecc9eecee40800000000000000
+      internalID: 5687182786704904012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_119
+      rect:
+        serializedVersion: 2
+        x: 739
+        y: 603
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 538d75ab112988c50800000000000000
+      internalID: 6667739853160437813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_120
+      rect:
+        serializedVersion: 2
+        x: 763
+        y: 555
+        width: 38
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89d80c28439d1d5a0800000000000000
+      internalID: -6498173967763731048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_121
+      rect:
+        serializedVersion: 2
+        x: 803
+        y: 555
+        width: 30
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe55cc63bd86587b0800000000000000
+      internalID: -5222652902139734545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_122
+      rect:
+        serializedVersion: 2
+        x: 835
+        y: 555
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59ba39e4b6428fe60800000000000000
+      internalID: 7996181181694716821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_123
+      rect:
+        serializedVersion: 2
+        x: 883
+        y: 555
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae4da03e4da19d9c0800000000000000
+      internalID: -3902058100495297302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_124
+      rect:
+        serializedVersion: 2
+        x: 931
+        y: 555
+        width: 38
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4751993f3ad46b170800000000000000
+      internalID: 8193821938609100148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_125
+      rect:
+        serializedVersion: 2
+        x: 971
+        y: 555
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7653abeec510a1430800000000000000
+      internalID: 3754314738020529511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_126
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 555
+        width: 30
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4423b8c827fc03140800000000000000
+      internalID: 4697482502238581316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_127
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 491
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c87d44023eac5930800000000000000
+      internalID: 4133370087863056579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_128
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 491
+        width: 30
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 158047b8832db1d00800000000000000
+      internalID: 944579687163889745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_129
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 491
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f4d42488a01cf300800000000000000
+      internalID: 287122792202425593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_130
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 491
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7fae751900dc4e40800000000000000
+      internalID: 5642113170622295934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_131
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 491
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bbc4866f9eeab820800000000000000
+      internalID: 2934920475572489140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_132
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 491
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1b25da8f7234e6f0800000000000000
+      internalID: -656344122317788385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_133
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 491
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cebce2c78bd522140800000000000000
+      internalID: 4693416808612285420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_134
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 491
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2038669cf14638530800000000000000
+      internalID: 3856035793644978946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_135
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 491
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2abe60e2be214c210800000000000000
+      internalID: 1352226589416811426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_136
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 491
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 410fc51fa0de53630800000000000000
+      internalID: 3906288883068629012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_137
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 491
+        width: 38
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4598bd0846602e3a0800000000000000
+      internalID: -6637735872062322348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_138
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 507
+        width: 14
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 544a8e204f5ee5470800000000000000
+      internalID: 8385392392394024005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_139
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 539
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b434ee48028a41670800000000000000
+      internalID: 8508610453632336715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_140
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 507
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e282c7403258d1f0800000000000000
+      internalID: -1019974948283579680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_141
+      rect:
+        serializedVersion: 2
+        x: 603
+        y: 539
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 975d7554461e45ea0800000000000000
+      internalID: -5884830992290032263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_142
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 491
+        width: 30
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79009fd461af3d870800000000000000
+      internalID: 8706577478341689495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_143
+      rect:
+        serializedVersion: 2
+        x: 667
+        y: 491
+        width: 30
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee102e93dabc1ad00800000000000000
+      internalID: 982290138604372462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_144
+      rect:
+        serializedVersion: 2
+        x: 699
+        y: 491
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88d8cfb01c9253df0800000000000000
+      internalID: -201208699241591416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_145
+      rect:
+        serializedVersion: 2
+        x: 747
+        y: 491
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 041d5758677fdba40800000000000000
+      internalID: 5385732817822273856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_146
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 491
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a907b4c38b013fa0800000000000000
+      internalID: -5822860182644389469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_147
+      rect:
+        serializedVersion: 2
+        x: 843
+        y: 491
+        width: 30
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e3a5653aab1ab990800000000000000
+      internalID: -7369547422384151582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_148
+      rect:
+        serializedVersion: 2
+        x: 875
+        y: 491
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81b501576c1f147b0800000000000000
+      internalID: -5241642656612721896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_149
+      rect:
+        serializedVersion: 2
+        x: 939
+        y: 531
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efa6c2f4b770d93a0800000000000000
+      internalID: -6657156447993042178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_150
+      rect:
+        serializedVersion: 2
+        x: 971
+        y: 491
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd85c9b61cb1476a0800000000000000
+      internalID: -6452501848567031588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_151
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 491
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d3f1be71bbbfe310800000000000000
+      internalID: 1436573177163674578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_152
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 491
+        width: 14
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b44a6d6128216bd60800000000000000
+      internalID: 7905526545833698379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_153
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 491
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2eaa6e716d9eb06c0800000000000000
+      internalID: -4175987123722736926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_154
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 491
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a44544342119d49f0800000000000000
+      internalID: -482570077434784694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_155
+      rect:
+        serializedVersion: 2
+        x: 923
+        y: 491
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dde49a205d2f00d30800000000000000
+      internalID: 4395780233000210141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_156
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 431
+        width: 55
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 472a6ee6be0a92800800000000000000
+      internalID: 588178159386927732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_157
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 431
+        width: 55
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7bd98c5eb5c52250800000000000000
+      internalID: 5919354706635381628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_158
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 431
+        width: 55
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 563c56b17b0b22a90800000000000000
+      internalID: -7340110142175329435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_159
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 431
+        width: 71
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 423df1c46062ac0a0800000000000000
+      internalID: -6860629273856715996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_160
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 431
+        width: 55
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcc695b3b2518e6a0800000000000000
+      internalID: -6419857993393148721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_161
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 431
+        width: 55
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 905b89919b9948bb0800000000000000
+      internalID: -4934650271413783287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_162
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 431
+        width: 47
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 744328980f8236320800000000000000
+      internalID: 2549926827586106439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_163
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 431
+        width: 55
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83c6cbd88f94c29e0800000000000000
+      internalID: -1644858432018420680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_164
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 431
+        width: 55
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6da04543bdcbf790800000000000000
+      internalID: -7495170984983351958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_165
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 431
+        width: 55
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8405ee72c714e9270800000000000000
+      internalID: 8259110768145748040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_166
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 431
+        width: 71
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cec94dbdb702fa60800000000000000
+      internalID: 7706230423890284231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_167
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 431
+        width: 55
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51d697cb1c2f1b000800000000000000
+      internalID: 50087984782470421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_168
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 431
+        width: 55
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28be6030af255d680800000000000000
+      internalID: -8730981068841751678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_169
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 431
+        width: 55
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eded524dcdae3bd90800000000000000
+      internalID: -7083059554750701858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_170
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 435
+        width: 46
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e0c653ce9285a5a0800000000000000
+      internalID: -6510654067900497691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_171
+      rect:
+        serializedVersion: 2
+        x: 873
+        y: 439
+        width: 23
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 216211268e2bc8580800000000000000
+      internalID: -8823480858778196462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_172
+      rect:
+        serializedVersion: 2
+        x: 898
+        y: 443
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ad324ce53f534900800000000000000
+      internalID: 667481854982634917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_173
+      rect:
+        serializedVersion: 2
+        x: 946
+        y: 443
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 360a92b4d9e36c660800000000000000
+      internalID: 7405675482549166179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_174
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 383
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d52983f79b6fabbe0800000000000000
+      internalID: -1460583852564508067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_175
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 383
+        width: 62
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a57f42b5f36ad670800000000000000
+      internalID: 8564267548308108708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_176
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 383
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 690c678e654b4e9d0800000000000000
+      internalID: -2745871587428876138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_177
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 383
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94cc0840545678820800000000000000
+      internalID: 2920414230475754569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_178
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 383
+        width: 38
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b876534b25151c50800000000000000
+      internalID: 6635232901557811378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_179
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 383
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b2427d2dd8ed8c20800000000000000
+      internalID: 3210478146032911028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_180
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 383
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 570e94c005fa833a0800000000000000
+      internalID: -6685400888493088651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_181
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 383
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d6703ce493b66720800000000000000
+      internalID: 2839154067302807255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_182
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 383
+        width: 62
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c9c8d687fd7ca360800000000000000
+      internalID: 7182254007821846982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_183
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 383
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b794af635ad12c780800000000000000
+      internalID: -8664330137678231173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_184
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 383
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef2ec89f0078f7c10800000000000000
+      internalID: 2053508393360745214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_185
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 383
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0aed80d4afe426cf0800000000000000
+      internalID: -260558991492850016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_186
+      rect:
+        serializedVersion: 2
+        x: 603
+        y: 415
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3f8bdbb0a8ef6090800000000000000
+      internalID: -8038951032788906177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_187
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 395
+        width: 31
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c4b6cb866d40a9b0800000000000000
+      internalID: -5070968077592120119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_188
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 395
+        width: 23
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3f3a4b0ef7701200800000000000000
+      internalID: 148750720698040127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_189
+      rect:
+        serializedVersion: 2
+        x: 677
+        y: 395
+        width: 39
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33e1cba8714e36150800000000000000
+      internalID: 5864781929529482803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_190
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 403
+        width: 23
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a2fcb534f40d4db0800000000000000
+      internalID: -4806179780414344543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_191
+      rect:
+        serializedVersion: 2
+        x: 743
+        y: 403
+        width: 47
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d9fe31c958f6bc70800000000000000
+      internalID: 8986643170842311127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_192
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 407
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7ea428b19a470390800000000000000
+      internalID: -7852225435577045379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_193
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 407
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bfca7757fd9210d0800000000000000
+      internalID: -3453524278589599824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_194
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 407
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ae7a57522db73300800000000000000
+      internalID: 231861861024956066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_195
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 407
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c42c0a3d96aa99e10800000000000000
+      internalID: 2204980864073384524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_196
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 415
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4b1ada26b8a688c0800000000000000
+      internalID: -3997322118888285364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_197
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 415
+        width: 38
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 073814f017d8b5110800000000000000
+      internalID: 1250748838252217200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsterPixel_Tormenta_198
+      rect:
+        serializedVersion: 2
+        x: 603
+        y: 391
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ae4968642e907390800000000000000
+      internalID: -7822578673534808407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      AsterPixel_Tormenta_0: -6229700506772578867
+      AsterPixel_Tormenta_1: -1659889412249978522
+      AsterPixel_Tormenta_10: 5450818601319243139
+      AsterPixel_Tormenta_100: 929414847978228296
+      AsterPixel_Tormenta_101: 8424911665433112995
+      AsterPixel_Tormenta_102: -2046809322990885509
+      AsterPixel_Tormenta_103: -2679560472509917558
+      AsterPixel_Tormenta_104: -8231611874730541718
+      AsterPixel_Tormenta_105: -8758117278914622146
+      AsterPixel_Tormenta_106: -4144432777966578168
+      AsterPixel_Tormenta_107: 647655523824834403
+      AsterPixel_Tormenta_108: 1327699203774089022
+      AsterPixel_Tormenta_109: -5340517038352241856
+      AsterPixel_Tormenta_11: 4218160170173280095
+      AsterPixel_Tormenta_110: -8015372948825782039
+      AsterPixel_Tormenta_111: -509516747571672197
+      AsterPixel_Tormenta_112: 6252091519087501930
+      AsterPixel_Tormenta_113: -273019425691400452
+      AsterPixel_Tormenta_114: 3251006201719225308
+      AsterPixel_Tormenta_115: -6591710153576599077
+      AsterPixel_Tormenta_116: -4487294427440742889
+      AsterPixel_Tormenta_117: 8554518901289385416
+      AsterPixel_Tormenta_118: 5687182786704904012
+      AsterPixel_Tormenta_119: 6667739853160437813
+      AsterPixel_Tormenta_12: 1555630004403560921
+      AsterPixel_Tormenta_120: -6498173967763731048
+      AsterPixel_Tormenta_121: -5222652902139734545
+      AsterPixel_Tormenta_122: 7996181181694716821
+      AsterPixel_Tormenta_123: -3902058100495297302
+      AsterPixel_Tormenta_124: 8193821938609100148
+      AsterPixel_Tormenta_125: 3754314738020529511
+      AsterPixel_Tormenta_126: 4697482502238581316
+      AsterPixel_Tormenta_127: 4133370087863056579
+      AsterPixel_Tormenta_128: 944579687163889745
+      AsterPixel_Tormenta_129: 287122792202425593
+      AsterPixel_Tormenta_13: -2704456979662663845
+      AsterPixel_Tormenta_130: 5642113170622295934
+      AsterPixel_Tormenta_131: 2934920475572489140
+      AsterPixel_Tormenta_132: -656344122317788385
+      AsterPixel_Tormenta_133: 4693416808612285420
+      AsterPixel_Tormenta_134: 3856035793644978946
+      AsterPixel_Tormenta_135: 1352226589416811426
+      AsterPixel_Tormenta_136: 3906288883068629012
+      AsterPixel_Tormenta_137: -6637735872062322348
+      AsterPixel_Tormenta_138: 8385392392394024005
+      AsterPixel_Tormenta_139: 8508610453632336715
+      AsterPixel_Tormenta_14: 7829556839087210853
+      AsterPixel_Tormenta_140: -1019974948283579680
+      AsterPixel_Tormenta_141: -5884830992290032263
+      AsterPixel_Tormenta_142: 8706577478341689495
+      AsterPixel_Tormenta_143: 982290138604372462
+      AsterPixel_Tormenta_144: -201208699241591416
+      AsterPixel_Tormenta_145: 5385732817822273856
+      AsterPixel_Tormenta_146: -5822860182644389469
+      AsterPixel_Tormenta_147: -7369547422384151582
+      AsterPixel_Tormenta_148: -5241642656612721896
+      AsterPixel_Tormenta_149: -6657156447993042178
+      AsterPixel_Tormenta_15: -5694503471640876717
+      AsterPixel_Tormenta_150: -6452501848567031588
+      AsterPixel_Tormenta_151: 1436573177163674578
+      AsterPixel_Tormenta_152: 7905526545833698379
+      AsterPixel_Tormenta_153: -4175987123722736926
+      AsterPixel_Tormenta_154: -482570077434784694
+      AsterPixel_Tormenta_155: 4395780233000210141
+      AsterPixel_Tormenta_156: 588178159386927732
+      AsterPixel_Tormenta_157: 5919354706635381628
+      AsterPixel_Tormenta_158: -7340110142175329435
+      AsterPixel_Tormenta_159: -6860629273856715996
+      AsterPixel_Tormenta_16: 5581534988444230622
+      AsterPixel_Tormenta_160: -6419857993393148721
+      AsterPixel_Tormenta_161: -4934650271413783287
+      AsterPixel_Tormenta_162: 2549926827586106439
+      AsterPixel_Tormenta_163: -1644858432018420680
+      AsterPixel_Tormenta_164: -7495170984983351958
+      AsterPixel_Tormenta_165: 8259110768145748040
+      AsterPixel_Tormenta_166: 7706230423890284231
+      AsterPixel_Tormenta_167: 50087984782470421
+      AsterPixel_Tormenta_168: -8730981068841751678
+      AsterPixel_Tormenta_169: -7083059554750701858
+      AsterPixel_Tormenta_17: 991911513278659903
+      AsterPixel_Tormenta_170: -6510654067900497691
+      AsterPixel_Tormenta_171: -8823480858778196462
+      AsterPixel_Tormenta_172: 667481854982634917
+      AsterPixel_Tormenta_173: 7405675482549166179
+      AsterPixel_Tormenta_174: -1460583852564508067
+      AsterPixel_Tormenta_175: 8564267548308108708
+      AsterPixel_Tormenta_176: -2745871587428876138
+      AsterPixel_Tormenta_177: 2920414230475754569
+      AsterPixel_Tormenta_178: 6635232901557811378
+      AsterPixel_Tormenta_179: 3210478146032911028
+      AsterPixel_Tormenta_18: -6071964691923074463
+      AsterPixel_Tormenta_180: -6685400888493088651
+      AsterPixel_Tormenta_181: 2839154067302807255
+      AsterPixel_Tormenta_182: 7182254007821846982
+      AsterPixel_Tormenta_183: -8664330137678231173
+      AsterPixel_Tormenta_184: 2053508393360745214
+      AsterPixel_Tormenta_185: -260558991492850016
+      AsterPixel_Tormenta_186: -8038951032788906177
+      AsterPixel_Tormenta_187: -5070968077592120119
+      AsterPixel_Tormenta_188: 148750720698040127
+      AsterPixel_Tormenta_189: 5864781929529482803
+      AsterPixel_Tormenta_19: 3688578986354652489
+      AsterPixel_Tormenta_190: -4806179780414344543
+      AsterPixel_Tormenta_191: 8986643170842311127
+      AsterPixel_Tormenta_192: -7852225435577045379
+      AsterPixel_Tormenta_193: -3453524278589599824
+      AsterPixel_Tormenta_194: 231861861024956066
+      AsterPixel_Tormenta_195: 2204980864073384524
+      AsterPixel_Tormenta_196: -3997322118888285364
+      AsterPixel_Tormenta_197: 1250748838252217200
+      AsterPixel_Tormenta_198: -7822578673534808407
+      AsterPixel_Tormenta_2: -7316232942146669623
+      AsterPixel_Tormenta_20: -2548731721409335022
+      AsterPixel_Tormenta_21: 7610689397049055727
+      AsterPixel_Tormenta_22: 3157739047840053376
+      AsterPixel_Tormenta_23: -6515268557147469323
+      AsterPixel_Tormenta_24: 2446305344780795718
+      AsterPixel_Tormenta_25: -6820176893876931361
+      AsterPixel_Tormenta_26: 2777625923964311436
+      AsterPixel_Tormenta_27: 824714004176379603
+      AsterPixel_Tormenta_28: 5486200737900095585
+      AsterPixel_Tormenta_29: -5441931826564567392
+      AsterPixel_Tormenta_3: 160331331802556830
+      AsterPixel_Tormenta_30: 860213161393066757
+      AsterPixel_Tormenta_31: 7172313436217776649
+      AsterPixel_Tormenta_32: -8978863660244639211
+      AsterPixel_Tormenta_33: -6540795768455762904
+      AsterPixel_Tormenta_34: 6692624092900259914
+      AsterPixel_Tormenta_35: -3656150782448899051
+      AsterPixel_Tormenta_36: 374078558245077775
+      AsterPixel_Tormenta_37: -1567561760169004017
+      AsterPixel_Tormenta_38: -1689102462231165330
+      AsterPixel_Tormenta_39: -947200510670839270
+      AsterPixel_Tormenta_4: 6934186153708868250
+      AsterPixel_Tormenta_40: 4420871742549258904
+      AsterPixel_Tormenta_41: -3193195004424019550
+      AsterPixel_Tormenta_42: 7247052874630636766
+      AsterPixel_Tormenta_43: 8990397925390528643
+      AsterPixel_Tormenta_44: -1157769286037029523
+      AsterPixel_Tormenta_45: 1614604371029344014
+      AsterPixel_Tormenta_46: 2250915519514039227
+      AsterPixel_Tormenta_47: -6437510580874336209
+      AsterPixel_Tormenta_48: -2257394185893096440
+      AsterPixel_Tormenta_49: -4826407629091102240
+      AsterPixel_Tormenta_5: -625791711080524934
+      AsterPixel_Tormenta_50: -8579786462992126375
+      AsterPixel_Tormenta_51: 8995751796909844886
+      AsterPixel_Tormenta_52: -1551874663542623413
+      AsterPixel_Tormenta_53: 6042200610618041565
+      AsterPixel_Tormenta_54: -611542241661655000
+      AsterPixel_Tormenta_55: -5040569577275615461
+      AsterPixel_Tormenta_56: 5398595464838164786
+      AsterPixel_Tormenta_57: -329889179801519699
+      AsterPixel_Tormenta_58: 3645316342058188609
+      AsterPixel_Tormenta_59: -2964611987830368761
+      AsterPixel_Tormenta_6: -3243673796718376751
+      AsterPixel_Tormenta_60: 2741620923229969616
+      AsterPixel_Tormenta_61: -3632687983755813683
+      AsterPixel_Tormenta_62: 829513060902024503
+      AsterPixel_Tormenta_63: 1010604551856999139
+      AsterPixel_Tormenta_64: 8552786571071378948
+      AsterPixel_Tormenta_65: -6125932106471223740
+      AsterPixel_Tormenta_66: 7701165088589547077
+      AsterPixel_Tormenta_67: -922015351805808599
+      AsterPixel_Tormenta_68: -3061423845495967550
+      AsterPixel_Tormenta_69: -3661135257922278904
+      AsterPixel_Tormenta_7: 8427749181064429345
+      AsterPixel_Tormenta_70: 4826792291576917595
+      AsterPixel_Tormenta_71: 154392551878980557
+      AsterPixel_Tormenta_72: 6825932926247878380
+      AsterPixel_Tormenta_73: 3155565929729277862
+      AsterPixel_Tormenta_74: 373037118022146622
+      AsterPixel_Tormenta_75: 8221328722343418233
+      AsterPixel_Tormenta_76: 1176199593941035221
+      AsterPixel_Tormenta_77: -6687164042304057319
+      AsterPixel_Tormenta_78: 3783450883112320819
+      AsterPixel_Tormenta_79: -2128539044644202417
+      AsterPixel_Tormenta_8: 2583134734559257780
+      AsterPixel_Tormenta_80: 7236873134406895305
+      AsterPixel_Tormenta_81: 1575055374053178342
+      AsterPixel_Tormenta_82: -3061589384215778951
+      AsterPixel_Tormenta_83: -9148541384324714355
+      AsterPixel_Tormenta_84: 1766542828070076190
+      AsterPixel_Tormenta_85: -8156838508729518958
+      AsterPixel_Tormenta_86: -1491005934491253113
+      AsterPixel_Tormenta_87: -2583925475238222756
+      AsterPixel_Tormenta_88: 4270635369514850836
+      AsterPixel_Tormenta_89: 6125333736020745604
+      AsterPixel_Tormenta_9: 8875868328941990304
+      AsterPixel_Tormenta_90: 949032425280685996
+      AsterPixel_Tormenta_91: -8101275745027492097
+      AsterPixel_Tormenta_92: -6395847635160259540
+      AsterPixel_Tormenta_93: -8252250489738916931
+      AsterPixel_Tormenta_94: -2119478180008020068
+      AsterPixel_Tormenta_95: -3673337642574401003
+      AsterPixel_Tormenta_96: -8600471984111926149
+      AsterPixel_Tormenta_97: 8938627709471234571
+      AsterPixel_Tormenta_98: -8430428850928837136
+      AsterPixel_Tormenta_99: 6909848958364492987
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

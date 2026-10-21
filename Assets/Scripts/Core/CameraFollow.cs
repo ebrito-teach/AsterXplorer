@@ -107,7 +107,9 @@ public class CameraFollow : MonoBehaviour
         if (gb == null || !gb.IsExpanded) return;
         if (target == null) { FindTarget(); if (target == null) return; }
 
-        float dt = Time.deltaTime;
+        // Tiempo real: con Slow el mundo va a cámara lenta pero el jugador no, y la cámara
+        // tiene que seguirle a su ritmo. Con el juego en pausa (escala 0) no se mueve
+        float dt = Time.timeScale > 0f ? Time.unscaledDeltaTime : 0f;
         if (dt <= 0f) return;
 
         Vector2 vel = targetRb != null ? targetRb.linearVelocity : Vector2.zero;

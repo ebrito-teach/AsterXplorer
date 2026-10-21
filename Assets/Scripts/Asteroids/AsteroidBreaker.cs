@@ -137,6 +137,7 @@ public class AsteroidBreaker : MonoBehaviour
 
                 var f = pool.Spawn(fType, sp, p, fSize);
                 if (f == null) continue;
+                f.Harmless = asteroid.Harmless;   // mundo oscuro: de una pieza inofensiva, trozos inofensivos
 
                 // Heredan el movimiento de la roca madre: se separan de ella, no salen de cero
                 f.SetMotion(vel + dir * speed, Random.Range(-200f, 200f));

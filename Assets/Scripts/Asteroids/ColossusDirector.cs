@@ -51,6 +51,8 @@ public class ColossusDirector : MonoBehaviour
 
     /// Posición de entrada y tipo. Aquí se conectarán la alerta del HUD y el sonido.
     public event System.Action<Vector2, AsteroidTypeData> ColossusSpawned;
+    /// El coloso recién creado (lo usa el BuffSpawner para que uno traiga un buff)
+    public static event System.Action<Asteroid> ColossusBodySpawned;
     public int AliveCount => alive;
 
     float levelStart, lastSpawnTime = -999f;
@@ -111,6 +113,7 @@ public class ColossusDirector : MonoBehaviour
         Debug.Log($"ColossusDirector: entra '{type.id}' tamaño {size:0.00} en {p}. " +
                   $"Pasillo libre: {corridor:0.0} u. Probabilidad: {ChanceAt(level):P2}");
         ColossusSpawned?.Invoke(p, type);
+        if (a != null) ColossusBodySpawned?.Invoke(a);
         return a;
     }
 

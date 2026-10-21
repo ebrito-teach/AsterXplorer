@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50e7868377981844f90bedc6102ba559, type: 3}
+  m_Name: AsterPixel_Hielo
+  m_EditorClassIdentifier: Assembly-CSharp::PixelFont
+  atlas: {fileID: 2800000, guid: 363d6dc96966d504f92a17b11dd38284, type: 3}
+  metrics: {fileID: 4900000, guid: a2dc06d09b779d549bd304fb02d400f1, type: 3}

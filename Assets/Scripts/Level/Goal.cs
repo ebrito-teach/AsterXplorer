@@ -136,6 +136,11 @@ public class Goal : MonoBehaviour
     /// El jugador ha sido absorbido: nivel superado.
     public event System.Action Reached;
     public bool Active { get; private set; }
+    /// Alcance de su atracción, en unidades (lo usa el mundo oscuro para dejarla ver)
+    public float PullRadius => pullRadius;
+    /// Multiplica su tamaño al colocarse: los mundos oscuros tienen agujeros más masivos.
+    /// Lo pone GameDirector antes de colocarla
+    public float SizeBoost { get; set; } = 1f;
 
     /// Escala de este nivel (1 = la de la escena). La leerá la gravitación del paso F.
     public float SizeScale { get; private set; } = 1f;
@@ -215,7 +220,7 @@ public class Goal : MonoBehaviour
         // Activo y con su dibujo de este nivel ANTES de medirlo: un objeto apagado mide cero
         gameObject.SetActive(true);
         PickLook();
-        ApplySize(Random.Range(Mathf.Min(sizeRange.x, sizeRange.y), Mathf.Max(sizeRange.x, sizeRange.y)));
+        ApplySize(Random.Range(Mathf.Min(sizeRange.x, sizeRange.y), Mathf.Max(sizeRange.x, sizeRange.y)) * Mathf.Max(0.1f, SizeBoost));
 
         // Lo que ocupa el dibujo, ya escalado: el halo es lo más grande
         float drawn = 0.5f;
@@ -350,7 +355,7 @@ public class Goal : MonoBehaviour
         for (int i = 0; i < n; i++)
         {
             var a = buffer[i].GetComponentInParent<Asteroid>();
-            if (a == null) continue;
+            if (a == null || a.IsFrozen) continue;   // TimeFreeze: ni el agujero lo mueve
 
             Vector2 d = center - a.Body.position;
             float dist = d.magnitude;
@@ -489,6 +494,7 @@ public class Goal : MonoBehaviour
     // ------------------------------------------------------------------ hilo de copias
     class Ghost { public Transform root; public SpriteRenderer sr; public float age; public Color color; }
     readonly List<Ghost> ghosts = new List<Ghost>();
+    Transform ghostParent;   // todas juntas bajo un solo objeto, para no llenar la jerarquía
 
     void SpawnGhost(SpriteRenderer src, Vector2 pos, float ang, Vector2 rootScale, float childRot, Vector3 childScale, Color col)
     {
@@ -496,7 +502,9 @@ public class Goal : MonoBehaviour
         foreach (var x in ghosts) if (!x.root.gameObject.activeSelf) { g = x; break; }
         if (g == null)
         {
+            if (ghostParent == null) ghostParent = new GameObject("FallGhosts").transform;
             var root = new GameObject("FallGhost").transform;
+            root.SetParent(ghostParent, false);
             var child = new GameObject("Sprite").transform;
             child.SetParent(root, false);
             g = new Ghost { root = root, sr = child.gameObject.AddComponent<SpriteRenderer>() };

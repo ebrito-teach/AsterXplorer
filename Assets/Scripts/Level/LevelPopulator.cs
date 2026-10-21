@@ -52,6 +52,17 @@ public class LevelPopulator : MonoBehaviour
     [Tooltip("Radio de órbita (unidades) al que corresponde esa velocidad")]
     [SerializeField] private float keplerRefRadius = 2.5f;
 
+    [Header("Mundo oscuro")]
+    [Tooltip("Mundo vacío: fracción del presupuesto normal del nivel (estáticos y lo que fluye)")]
+    [Range(0.05f, 1f)] [SerializeField] private float darkBudgetFactor = 0.3f;
+    [Tooltip("Lo que fluye no mata. Cada este rango de segundos entra UNO que sí mata (lento o " +
+             "rápido), y nunca hay más de uno a la vez")]
+    [SerializeField] private Vector2 darkLethalEvery = new Vector2(20f, 40f);
+
+    /// Mundo oscuro en este nivel. Lo pone GameDirector antes de StartLevel: sin colosos,
+    /// lo que fluye inofensivo salvo raras excepciones; los estáticos y sus satélites, igual
+    public bool DarkWorld { get; set; }
+
     [Header("Mantenimiento de la población")]
     [Tooltip("Repone asteroides hasta volver a la cantidad del nivel. Sin esto, cada paso " +
              "del coloso vacía la pantalla para siempre y el nivel se regala")]
@@ -122,7 +133,9 @@ public class LevelPopulator : MonoBehaviour
         if (unlocked.Count == 0) { Debug.LogWarning("LevelPopulator: no hay tipos disponibles para este nivel."); return; }
 
         // Compra asteroides con el presupuesto del nivel
-        float budget = difficulty.Budget(currentLevel);
+        float budget = difficulty.Budget(currentLevel) * (DarkWorld ? darkBudgetFactor : 1f);
+        darkLethal = null;
+        nextDarkLethal = Time.time + Random.Range(darkLethalEvery.x, darkLethalEvery.y);
         var shopping = new List<AsteroidTypeData>();
         int moving = 0;
         for (int guard = 0; guard < 500; guard++)
@@ -191,6 +204,7 @@ public class LevelPopulator : MonoBehaviour
 
                 var spawned = pool.Spawn(t, p, size);
                 if (isStatic && spawned != null) statics.Add(spawned);
+                if (!isStatic) MarkDark(spawned);
                 placed.Add((p, approxR));
                 count++;
                 break;
@@ -224,6 +238,7 @@ public class LevelPopulator : MonoBehaviour
 
         int fields = BuildFields(statics, playerPos);
         if (fields > 0) fairness += $", {fields} campos de satélites";
+        if (DarkWorld) fairness += ", MUNDO OSCURO";
 
         targetPopulation = count;
         nextTopUp = Time.time + 2f;
@@ -242,7 +257,9 @@ public class LevelPopulator : MonoBehaviour
     // tapar cada caso, se cuenta lo que hay vivo y se repone hasta la cantidad del nivel.
     void Update()
     {
-        if (!keepPopulation || pool == null || targetPopulation <= 0) return;
+        if (pool == null || Asteroid.WorldFrozen) return;   // TimeFreeze: no entra nada nuevo
+        if (DarkWorld) TickDarkLethal();
+        if (!keepPopulation || targetPopulation <= 0) return;
         if (Time.time < nextTopUp) return;
         nextTopUp = Time.time + Mathf.Max(0.1f, topUpInterval);
 
@@ -323,7 +340,7 @@ public class LevelPopulator : MonoBehaviour
 
         // ¿Toca un coloso? Entra ADEMÁS, no en lugar del asteroide: si lo sustituyera,
         // cada aparición le quitaría un cuerpo al cinturón para siempre.
-        if (!wasColossus && colossus != null && colossus.ShouldSpawn(currentLevel))
+        if (!DarkWorld && !wasColossus && colossus != null && colossus.ShouldSpawn(currentLevel))
             colossus.Spawn(currentLevel);
 
         // Un estático que sale es uno que el coloso soltó: ya no es terreno, así que se
@@ -351,7 +368,35 @@ public class LevelPopulator : MonoBehaviour
             if (player == null || difficulty == null || GivesTimeToReact(p, type, avoid)) break;
         }
 
-        pool.Spawn(type, p);
+        MarkDark(pool.Spawn(type, p));
+    }
+
+    void MarkDark(Asteroid a)
+    {
+        if (a != null && DarkWorld) a.Harmless = true;
+    }
+
+    // Mundo vacío: de vez en cuando entra uno que sí mata, de uno en uno
+    Asteroid darkLethal;
+    int darkLethalSerial;
+    float nextDarkLethal;
+
+    void TickDarkLethal()
+    {
+        bool alive = darkLethal != null && darkLethal.isActiveAndEnabled && darkLethal.Serial == darkLethalSerial;
+        if (alive) return;
+        if (darkLethal != null) { darkLethal = null; nextDarkLethal = Time.time + Random.Range(darkLethalEvery.x, darkLethalEvery.y); return; }
+        if (Time.time < nextDarkLethal || FlowField.Instance == null) return;
+
+        var type = PickAnyMoving();
+        if (type == null) return;
+        Vector2 avoid = player != null ? (Vector2)player.position : Vector2.zero;
+        var a = pool.Spawn(type, FlowField.Instance.RandomEntryPoint(avoid, playerSafeRadius));
+        if (a == null) return;
+        a.Harmless = false;
+        darkLethal = a;
+        darkLethalSerial = a.Serial;
+        Debug.Log($"LevelPopulator: mundo oscuro, entra un '{type.id}' que SÍ mata.");
     }
 
     /// ¿Deja este punto de entrada tiempo de reacción? Calcula el momento de máxima

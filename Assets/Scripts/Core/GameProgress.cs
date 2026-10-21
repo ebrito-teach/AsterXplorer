@@ -69,6 +69,8 @@ public class GameProgress : MonoBehaviour
         Data.run.pendingCrystals = 0;
         Data.run.levelDeaths = 0;
         Data.run.levelSeconds = 0f;
+        Data.run.buffs.Clear();
+        Data.run.buffsCharacter = Data.collection.equipped;
         if (autoSave) Save();
     }
 

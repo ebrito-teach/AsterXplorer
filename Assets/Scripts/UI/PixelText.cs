@@ -54,6 +54,18 @@ public class PixelText : MaskableGraphic
         }
     }
 
+    /// Ancho de la línea más larga, en unidades del Canvas
+    public float PreferredWidth
+    {
+        get
+        {
+            if (font == null || !font.Ready || string.IsNullOrEmpty(text)) return 0f;
+            float s = capHeight / font.CapHeight, w = 0f;
+            foreach (var line in text.Split('\n')) w = Mathf.Max(w, Width(line, s));
+            return w;
+        }
+    }
+
     protected override void OnPopulateMesh(VertexHelper vh)
     {
         vh.Clear();
