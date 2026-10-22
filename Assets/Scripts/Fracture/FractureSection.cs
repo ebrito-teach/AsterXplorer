@@ -217,6 +217,9 @@ public class FractureSection : MonoBehaviour
     }
 
     public void SetWarning(float amount) => warn = Mathf.Clamp01(amount);
+    /// Aviso de un patrón: el eslabón se carga de luz amarilla antes de disparar (0..1)
+    public void SetCharge(float amount) => charge = Mathf.Clamp01(amount);
+    float charge;
 
     /// Recibe una onda. Devuelve true si con ella se cierra
     public bool TakeWave()
@@ -305,11 +308,13 @@ public class FractureSection : MonoBehaviour
         Color warnCol = FractureDirector.WarningColor;
         Color cc = Color.Lerp(coreTint, warnCol, warn * 0.6f);
         Color gc = Color.Lerp(glowTint, warnCol, warn);
+        gc = Color.Lerp(gc, FractureDirector.ChargeColor, charge);
+        cc = Color.Lerp(cc, FractureDirector.ChargeColor, charge * 0.5f);
         cc = Color.Lerp(cc, Color.white, flash * 0.7f);
         if (core != null) core.color = new Color(cc.r, cc.g, cc.b, coreTint.a * (1f - close));
         if (glow != null)
         {
-            float ga = glowTint.a * (0.45f + 0.55f * beat + flash) * (1f - close) * (1f + warn * 0.8f);
+            float ga = glowTint.a * (0.45f + 0.55f * beat + flash) * (1f - close) * (1f + warn * 0.8f + charge * 1.2f);
             glow.color = new Color(gc.r, gc.g, gc.b, Mathf.Clamp01(ga));
         }
         if (dust != null)

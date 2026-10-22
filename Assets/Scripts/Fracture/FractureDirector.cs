@@ -47,6 +47,33 @@ public class FractureDirector : MonoBehaviour
     /// caso se usa el de por defecto. Pasa al añadir diseños desde el Inspector
     // ---- panel de calibración (1 = sin cambio)
     public static float CalibFireRate = 1f, CalibShotSpeed = 1f;
+    /// Color con el que se carga un eslabón antes de lanzar un patrón (el aviso)
+    public static Color ChargeColor = new Color(1f, 0.95f, 0.45f);
+
+    [Header("Proyectiles normales (lenguaje de peligro)")]
+    [Tooltip("Los disparos normales de la grieta llevan núcleo blanco con borde amarillo neón, que " +
+             "ningún fondo usa. El orbe del QTE conserva el dibujo de antimateria: así se distinguen")]
+    [SerializeField] private bool neonBullets = true;
+    [SerializeField] private Color bulletRim = new Color(1f, 0.92f, 0.15f);
+    [SerializeField] private Color bulletHalo = new Color(1f, 0.85f, 0.2f, 0.75f);
+    [Tooltip("Halo del orbe del QTE: amarillo para que la antimateria oscura se vea bien")]
+    [SerializeField] private Color qteHalo = new Color(1f, 0.85f, 0.15f, 0.95f);
+    [Tooltip("Segundos mínimos entre dos rozamientos que dan carga (con muchos proyectiles, " +
+             "sin esto las cargas se llenarían solas)")]
+    [SerializeField] private float grazeCooldown = 0.4f;
+    Sprite bulletCore, bulletGlow;
+    float nextGrazeAt;
+
+    /// Disparos sueltos de cada eslabón. Los apaga FracturePatterns: con patrones, la grieta
+    /// solo dispara en patrones
+    public bool SingleShots { get; set; } = true;
+    public int Level => level;
+    /// 0 en el primer nivel con grieta, 1 cien niveles después
+    public float LevelProgress => LevelT;
+    /// Velocidad base de los proyectiles en este nivel (ya con el panel de calibración)
+    public float ShotSpeedNow => Mathf.Lerp(projectileSpeed.x, projectileSpeed.y, LevelT) * CalibShotSpeed;
+    public Vector3 CaliberRadius => caliberRadius;
+    public float FrontConeDeg => frontCone;
     /// Proyectiles de antimateria en vuelo
     public int ShotsAlive { get { int n = 0; foreach (var s in shots) if (s != null && s.Alive) n++; return n; } }
 
@@ -238,6 +265,8 @@ public class FractureDirector : MonoBehaviour
         BackDepth = backDepth; FrontDepth = Mathf.Clamp(frontDepth, 0f, 8f); FrontAlpha = frontAlpha;
         if (MarkerSprite == null) MarkerSprite = MakeMarker();
         fallbackCore = MakeOrb(64, true);
+        bulletCore = MakeBullet(64);
+        bulletGlow = MakeOrb(64, false);
         fallbackGlow = MakeOrb(64, false);
         ringSprite = MakeRing(128);
         bitSprite = MakeBit();
@@ -620,7 +649,7 @@ public class FractureDirector : MonoBehaviour
     /// Un eslabón dispara (lo llama el propio eslabón con su calibre)
     public void FireFrom(FractureSection from, float radius)
     {
-        if (!Active || done || player == null || player.IsDead) return;
+        if (!Active || done || player == null || player.IsDead || !SingleShots) return;
         Vector2 along = from.transform.right * (Random.Range(-0.4f, 0.4f) * from.Length);
         Vector2 front = from.Front;
         Vector2 pos = (Vector2)from.transform.position + along + front * (riftWidth * 0.3f);
@@ -649,9 +678,11 @@ public class FractureDirector : MonoBehaviour
         Antimatter a = null;
         foreach (var s in shots) if (s != null && !s.Alive) { a = s; break; }
         if (a == null) { a = Antimatter.Create(this, transform); shots.Add(a); }
-        a.Launch(pos, dir, speed, radius, antimatterCore != null ? antimatterCore : fallbackCore,
-                 antimatterGlow != null ? antimatterGlow : fallbackGlow, projectileLayer, projectileOrder,
-                 antimatterHalo, target, turn);
+        bool neon = neonBullets && target == null;
+        a.Launch(pos, dir, speed, radius,
+                 neon ? bulletCore : (antimatterCore != null ? antimatterCore : fallbackCore),
+                 neon ? bulletGlow : (antimatterGlow != null ? antimatterGlow : fallbackGlow),
+                 projectileLayer, projectileOrder, neon ? bulletHalo : (target != null ? qteHalo : antimatterHalo), target, turn);
         return a;
     }
 
@@ -760,7 +791,8 @@ public class FractureDirector : MonoBehaviour
 
     public void OnGraze(Antimatter a)
     {
-        if (!Active) return;
+        if (!Active || Time.time < nextGrazeAt) return;
+        nextGrazeAt = Time.time + grazeCooldown;
         float before = Charge;
         AddCharge(Random.Range(grazeGain.x, grazeGain.y));
         if (Charge > before) Burst(a.transform.position, 0.15f, 4);
@@ -901,6 +933,26 @@ public class FractureDirector : MonoBehaviour
             }
         tex.Apply();
         return Sprite.Create(tex, new Rect(0, 0, n, n), new Vector2(0.5f, 0.5f), 100f);
+    }
+
+    // Proyectil normal: núcleo blanco brillante, borde amarillo neón y un fino contorno oscuro
+    Sprite MakeBullet(int n)
+    {
+        var tex = new Texture2D(n, n, TextureFormat.RGBA32, false) { wrapMode = TextureWrapMode.Clamp };
+        for (int y = 0; y < n; y++)
+            for (int x = 0; x < n; x++)
+            {
+                float dx = (x + 0.5f) / n * 2f - 1f, dy = (y + 0.5f) / n * 2f - 1f;
+                float r = Mathf.Sqrt(dx * dx + dy * dy);
+                Color c;
+                if (r < 0.55f) c = Color.Lerp(Color.white, new Color(1f, 1f, 0.85f), r / 0.55f);
+                else if (r < 0.86f) c = Color.Lerp(new Color(1f, 1f, 0.7f), bulletRim, (r - 0.55f) / 0.31f);
+                else c = new Color(0.12f, 0.08f, 0f);
+                c.a = Mathf.Clamp01((1f - r) / 0.05f);
+                tex.SetPixel(x, y, c);
+            }
+        tex.Apply();
+        return Sprite.Create(tex, new Rect(0, 0, n, n), new Vector2(0.5f, 0.5f), n);
     }
 
     static Sprite MakeOrb(int n, bool core)

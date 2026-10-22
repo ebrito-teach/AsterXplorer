@@ -65,6 +65,10 @@ public class LevelPopulator : MonoBehaviour
     [Tooltip("Densidad de los mapas con grieta, al azar entre estos dos (sobre lo anterior): baja " +
              "para que los patrones de la grieta se lean bien")]
     [SerializeField] private Vector2 fractureDensity = new Vector2(0.8f, 0.95f);
+    [Tooltip("Además, en mapas con grieta: densidad de lo demás (0.85 = un 15 % menos, en todos los niveles)")]
+    [Range(0.3f, 1f)] [SerializeField] private float fractureDensityCut = 0.85f;
+    [Tooltip("Velocidad de lo demás en mapas con grieta, al azar entre estos dos (0.8–0.9 = un 10–20 % más lento)")]
+    [SerializeField] private Vector2 fractureSpeed = new Vector2(0.8f, 0.9f);
 
     [Header("Reparto por cobertura")]
     [Tooltip("Lo que se mueve se reparte por sectores de este tamaño (unidades): primero donde no " +
@@ -203,7 +207,8 @@ public class LevelPopulator : MonoBehaviour
         if (colossus != null) colossus.BeginLevel(currentLevel);
         if (comets != null) comets.BeginLevel(currentLevel);
 
-        baseSpeedMultiplier = difficulty.SpeedMultiplier(currentLevel);
+        baseSpeedMultiplier = difficulty.SpeedMultiplier(currentLevel)
+                              * (FractureWorld ? Random.Range(fractureSpeed.x, fractureSpeed.y) : 1f);
         Asteroid.SpeedMultiplier = baseSpeedMultiplier * CalibSpeed;
         levelCruise = difficulty.PlayerCruise(currentLevel);
         if (playerCtl == null && player != null) playerCtl = player.GetComponentInParent<PlayerController>();
@@ -229,7 +234,7 @@ public class LevelPopulator : MonoBehaviour
 
         // Compra asteroides con el presupuesto del nivel
         float budget = difficulty.Budget(currentLevel) * CalibDensity * (DarkWorld ? darkBudgetFactor : 1f) * (FractureWorld ? fractureBudgetFactor : 1f)
-                       * (FractureWorld ? Random.Range(fractureDensity.x, fractureDensity.y) : 1f);
+                       * (FractureWorld ? Random.Range(fractureDensity.x, fractureDensity.y) * fractureDensityCut : 1f);
         darkLethal = null;
         nextDarkLethal = Time.time + Random.Range(darkLethalEvery.x, darkLethalEvery.y);
         var shopping = new List<AsteroidTypeData>();

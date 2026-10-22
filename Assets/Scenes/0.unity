@@ -285,6 +285,9 @@ MonoBehaviour:
   darkLethalEvery: {x: 20, y: 40}
   fractureBudgetFactor: 0.6
   fractureLethalFactor: 0.8
+  fractureDensity: {x: 0.8, y: 0.95}
+  coverageCell: 4.5
+  coverageCandidates: 8
   staticClusters: 1
   clusterChance: 0.4
   clusterGap: {x: 0.3, y: 1.6}
@@ -10968,6 +10971,7 @@ GameObject:
   - component: {fileID: 848169112}
   - component: {fileID: 848169113}
   - component: {fileID: 848169114}
+  - component: {fileID: 848169115}
   m_Layer: 0
   m_Name: Fracture
   m_TagString: Untagged
@@ -11002,6 +11006,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af155ed9f2f9d2e489b1fac62d3a32d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FractureDirector
+  neonBullets: 1
+  bulletRim: {r: 1, g: 0.92, b: 0.15, a: 1}
+  bulletHalo: {r: 1, g: 0.85, b: 0.2, a: 0.75}
+  grazeCooldown: 0.4
   chance: 0.04
   minLevel: 10
   budgetAtMin: 4
@@ -11102,6 +11110,39 @@ MonoBehaviour:
   aboveHead: 1.1
   targetRadius: 0.42
   startRadius: 1.6
+  homingEveryHigh: {x: 4, y: 8}
+  mixWindow: 3
+--- !u!114 &848169115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 848169111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3fc0c45e42de7444a8f7c6c15109127, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FracturePatterns
+  aimedLevel: 16
+  wallLevel: 20
+  rowsLevel: 30
+  sweepLevel: 50
+  comboLevel: 60
+  comboChance: 0.35
+  interval: {x: 2.4, y: 1}
+  telegraph: {x: 0.8, y: 0.4}
+  speedFactor: 1.6
+  maxBullets: 120
+  fanCount: {x: 5, y: 15}
+  fanSpread: {x: 60, y: 100}
+  fanCarriesQte: 0.6
+  wallGap: {x: 3.2, y: 2}
+  wallSpeedFactor: 0.8
+  rowCount: {x: 3, y: 5}
+  rowLength: {x: 4, y: 7}
+  sweepAngle: 120
+  sweepTime: 1.2
 --- !u!1 &848801468
 GameObject:
   m_ObjectHideFlags: 0
@@ -12215,8 +12256,6 @@ MonoBehaviour:
   objectBrightness: {x: 0.35, y: 0.8}
   depthHaze: {r: 0.32, g: 0.36, b: 0.5, a: 1}
   objectSpacing: 4
-  planetFadeMargin: 2
-  planetFadeSpeed: 0.35
 --- !u!1 &1322686714
 GameObject:
   m_ObjectHideFlags: 0
@@ -23399,7 +23438,7 @@ MonoBehaviour:
   player: {fileID: 1679237101}
   playerStart: {fileID: 1679237105}
   goal: {fileID: 848801470}
-  startLevel: 1
+  startLevel: 50
   runSeed: 0
   sameLevelOnRetry: 0
   resumeFromSave: 0

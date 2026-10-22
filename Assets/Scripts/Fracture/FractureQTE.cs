@@ -68,6 +68,29 @@ public class FractureQTE : MonoBehaviour
     /// Panel de calibración: multiplica el tiempo entre perseguidores (menos = más a menudo)
     public static float CalibInterval = 1f;
 
+    [Tooltip("Tiempo entre perseguidores en niveles altos (cien niveles después de la primera grieta): " +
+             "se mezcla con Homing Every según el nivel. Más frecuentes cuanto más alto")]
+    [SerializeField] private Vector2 homingEveryHigh = new Vector2(4f, 8f);
+    [Tooltip("Un patrón puede llevar dentro el orbe del QTE si al QTE le faltan menos de estos segundos")]
+    [SerializeField] private float mixWindow = 3f;
+
+    float NextInterval()
+    {
+        float t = fd != null ? fd.LevelProgress : 0f;
+        return Random.Range(Mathf.Lerp(homingEvery.x, homingEveryHigh.x, t), Mathf.Lerp(homingEvery.y, homingEveryHigh.y, t)) * CalibInterval;
+    }
+
+    /// Lo llama un patrón (un abanico): si al QTE le toca pronto, su orbe sale ahora desde ese
+    /// eslabón, mezclado con el resto de proyectiles. Devuelve true si salió
+    public bool LaunchWith(FractureSection from)
+    {
+        if (shot != null || fd == null || !fd.Started || player == null || from == null || from.Closed) return false;
+        if (nextAt < 0f || Time.time < nextAt - mixWindow) return false;
+        launcher = from;
+        Launch();
+        return shot != null;
+    }
+
     /// Hay un QTE en marcha
     public bool Running => shot != null;
 
@@ -147,7 +170,7 @@ public class FractureQTE : MonoBehaviour
             ShipInput.FocusBlocked = false;
             return;
         }
-        if (nextAt < 0f) nextAt = Time.time + Random.Range(homingEvery.x, homingEvery.y) * CalibInterval;
+        if (nextAt < 0f) nextAt = Time.time + NextInterval();
         if (Asteroid.WorldFrozen) { nextAt += Time.deltaTime; warnUntil += Time.deltaTime; }
 
         // 1. Aviso y lanzamiento
@@ -295,7 +318,7 @@ public class FractureQTE : MonoBehaviour
         shot = null;
         HideRings();
         ShipInput.FocusBlocked = false;
-        nextAt = Time.time + Random.Range(homingEvery.x, homingEvery.y) * CalibInterval;
+        nextAt = Time.time + NextInterval();
     }
 
     void SetWarning(float k)
