@@ -54,6 +54,8 @@ public class ColossusDirector : MonoBehaviour
     /// El coloso recién creado (lo usa el BuffSpawner para que uno traiga un buff)
     public static event System.Action<Asteroid> ColossusBodySpawned;
     public int AliveCount => alive;
+    /// Mapas de fractura: más colosos. Lo pone GameDirector en cada nivel
+    public float ChanceMultiplier { get; set; } = 1f;
 
     float levelStart, lastSpawnTime = -999f;
     int alive, spawnedThisLevel, currentLevel = 1;
@@ -85,7 +87,7 @@ public class ColossusDirector : MonoBehaviour
 
         bool guaranteed = level <= guaranteeUntilLevel && guaranteeAfterSeconds > 0f &&
                           spawnedThisLevel == 0 && sinceStart >= guaranteeAfterSeconds;
-        return guaranteed || Random.value < ChanceAt(level);
+        return guaranteed || Random.value < Mathf.Min(1f, ChanceAt(level) * ChanceMultiplier);
     }
 
     public Asteroid Spawn(int level)

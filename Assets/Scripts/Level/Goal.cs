@@ -114,6 +114,11 @@ public class Goal : MonoBehaviour
     [SerializeField] private float spiralDegrees = 70f;
     [Tooltip("Tope de duración de la caída, en múltiplos de su escala de tiempo")]
     [SerializeField] private float maxFallFactor = 2.2f;
+    [Tooltip("Caída: largo máximo del cuerpo estirado, en radios de la sombra negra. Así nunca " +
+             "acaba más largo que el propio agujero")]
+    [SerializeField] private float fallMaxLength = 0.9f;
+    [Tooltip("Caída: cuántas más vueltas da en espiral antes de cruzar (1 = como antes)")]
+    [SerializeField] private float spiralBoost = 1.6f;
     [Tooltip("Copias que se quedan atrás un instante y dibujan el hilo curvo de la caída")]
     [SerializeField] private bool ghostTrail = true;
     [SerializeField] private float ghostEvery = 0.035f;
@@ -305,6 +310,25 @@ public class Goal : MonoBehaviour
 
     public void Deactivate() { Active = false; }
 
+    /// Mapas de fractura: la meta no existe hasta que se cierra la grieta
+    public void Hide()
+    {
+        Active = false;
+        gameObject.SetActive(false);
+    }
+
+    /// Aparece en un punto concreto (donde estaba la grieta). Tamaño al azar como siempre
+    public void PlaceAt(Vector2 p)
+    {
+        gameObject.SetActive(true);
+        PickLook();
+        ApplySize(Random.Range(Mathf.Min(sizeRange.x, sizeRange.y), Mathf.Max(sizeRange.x, sizeRange.y)) * Mathf.Max(0.1f, SizeBoost));
+        transform.position = new Vector3(p.x, p.y, transform.position.z);
+        PlayerStart.LastGoalSlot = null;
+        Active = true;
+        Debug.Log($"Goal: aparece donde estaba la grieta, en {p}, escala {SizeScale:0.00}.");
+    }
+
     void Update()
     {
         float dt = Time.deltaTime;
@@ -452,6 +476,11 @@ public class Goal : MonoBehaviour
         Color c0 = sr != null ? sr.color : Color.white;
         float halfLen = sr != null ? Mathf.Max(sr.bounds.extents.x, sr.bounds.extents.y) : 0.2f;
         float r = r0, e = 0f, nextGhost = 0f;
+        // Tope del estirado: el cuerpo nunca más largo que Fall Max Length radios de la sombra
+        float maxStretch = Mathf.Max(1f, ShadowRadius() * fallMaxLength / Mathf.Max(0.01f, 2f * halfLen));
+        w0 *= spiralBoost;
+        Vector2 prevPos = t.position;
+        float moveAng = Mathf.Atan2(-d0.y, -d0.x) * Mathf.Rad2Deg;
 
         while (true)
         {
@@ -465,12 +494,17 @@ public class Goal : MonoBehaviour
             theta += w0 * Mathf.Min(8f, (r0 / r) * (r0 / r)) * slow * dt;
 
             float x = rs / r;
-            float stretch = 1f + tidal * x * x * x;               // marea ~ 1/r³
+            float stretch = Mathf.Min(1f + tidal * x * x * x, maxStretch);   // marea ~ 1/r³, con tope
             float tang = 1f / Mathf.Sqrt(stretch);
             Vector2 dir = new Vector2(Mathf.Cos(theta), Mathf.Sin(theta));
-            float ang = Mathf.Atan2(-dir.y, -dir.x) * Mathf.Rad2Deg;
             float lead = Mathf.Min((stretch - 1f) * 0.3f * halfLen, (r - rs) * 0.5f);
             Vector2 pos = c + dir * (r - lead);
+            // Se estira a lo largo de su camino (la espiral), no en línea recta hacia el centro
+            Vector2 step = pos - prevPos;
+            prevPos = pos;
+            if (step.sqrMagnitude > 1e-8f)
+                moveAng = Mathf.LerpAngle(moveAng, Mathf.Atan2(step.y, step.x) * Mathf.Rad2Deg, 0.35f);
+            float ang = moveAng;
 
             t.position = pos;
             t.rotation = Quaternion.Euler(0f, 0f, ang);

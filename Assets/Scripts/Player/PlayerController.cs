@@ -122,13 +122,14 @@ public class PlayerController : MonoBehaviour
              "agujero negro supera a tu propio impulso y ya no hay escapatoria")]
     [SerializeField] private float gravityMemory = 0.8f;
 
-    [Header("Campo gravitatorio de los estáticos")]
-    [Tooltip("Cerca de un estático vas más lento: su campo te frena. Esto es cuánto en su " +
-             "superficie (0.25 = un 25 % más lento). Los estáticos ya no matan al chocar")]
-    [Range(0f, 0.8f)] [SerializeField] private float staticDrag = 0.25f;
-    [Tooltip("Hasta dónde llega su campo, en unidades desde su superficie. El efecto se apaga " +
-             "suavemente hacia el borde y es mayor cuanto más masivo es el estático")]
-    [SerializeField] private float staticFieldReach = 4f;
+    [Header("Campo gravitatorio de estáticos y colosos")]
+    [Tooltip("Cerca de un estático o un coloso vas más lento mientras sigas en su campo: " +
+             "x = en el borde del campo, y = pegado a su superficie (0.15 = un 15 % más lento)")]
+    [SerializeField] private Vector2 bodySlow = new Vector2(0.15f, 0.20f);
+    [Tooltip("Hasta dónde llega su campo, en unidades desde su superficie")]
+    [SerializeField] private float bodyFieldReach = 3f;
+    [Tooltip("Tirón hacia el cuerpo, en unidades/s², pegado a su superficie (se apaga hacia el borde)")]
+    [SerializeField] private float bodyPull = 1.6f;
     [Tooltip("Tope del empujón en unidades/s, para que una roca enorme no te mande a órbita")]
     [SerializeField] private float maxKnock = 7f;
     [Tooltip("Constante de tiempo con la que se te pasa el empujón. ANTES eran 4 segundos, " +
@@ -238,6 +239,30 @@ public class PlayerController : MonoBehaviour
     public float VisualAlpha { get; set; } = 1f;
     /// Si devuelve true, el golpe lo ha parado un escudo: ni muerte ni cuenta (LightShield)
     public System.Func<bool> HitAbsorber;
+
+    /// Empujón fuerte que manda sobre todo lo demás (la onda expansiva de la grieta). Sin
+    /// el tope de los golpes normales; se te pasa igual que ellos
+    public void Shove(Vector2 velocity, float stun)
+    {
+        if (IsDead || IsExpelling || IsAbsorbed) return;
+        knock = velocity;
+        controlVel = Vector2.zero;
+        stunUntil = Time.time + stun;
+        thrustLevel = 0f;
+    }
+
+    /// Pared extra que no se puede cruzar (la barrera de la grieta): un punto y la normal
+    /// hacia el lado permitido
+    public void SetWall(bool on, Vector2 point, Vector2 normal)
+    {
+        hasWall = on;
+        wallPoint = point;
+        wallNormal = normal.sqrMagnitude > 0.0001f ? normal.normalized : Vector2.left;
+    }
+    bool hasWall;
+    Vector2 wallPoint, wallNormal;
+    /// Tocó la barrera (para el destello)
+    public event System.Action<Vector2> HitWall;
 
     /// Invulnerable unos segundos más (al acabar Ghost, o tras un golpe parado por el escudo)
     public void GrantInvulnerability(float seconds) =>
@@ -538,30 +563,39 @@ public class PlayerController : MonoBehaviour
     static ContactFilter2D fieldFilter;
     static bool fieldFilterReady;
 
+    // Dentro del campo de un estático o un coloso: frenado estable (de 15 a 20 %) mientras no
+    // salgas, y un leve tirón hacia él. Manda el cuerpo más influyente que tengas cerca
     float StaticField()
     {
-        if (staticDrag <= 0f || staticFieldReach <= 0f) return 0f;
+        if (bodyFieldReach <= 0f) return 0f;
         if (!fieldFilterReady)
         {
             fieldFilter = new ContactFilter2D();
-            fieldFilter.SetLayerMask(LayerMask.GetMask("AsteroidStatic"));
+            fieldFilter.SetLayerMask(LayerMask.GetMask("AsteroidStatic", "AsteroidMoving"));
             fieldFilter.useTriggers = false;
             fieldFilterReady = true;
         }
         Vector2 me = rb.position;
-        int n = Physics2D.OverlapCircle(me, staticFieldReach + 3f, fieldFilter, fieldHits);
+        int n = Physics2D.OverlapCircle(me, bodyFieldReach + 6f, fieldFilter, fieldHits);
         float best = 0f;
+        Vector2 pull = Vector2.zero;
         for (int i = 0; i < n; i++)
         {
             var a = fieldHits[i].GetComponentInParent<Asteroid>();
-            if (a == null || a.Type == null || a.Type.behavior != AsteroidBehavior.Static || a.IsOrbiting) continue;
-            float d = Vector2.Distance(me, a.Body.position) - a.WorldRadius;
-            if (d >= staticFieldReach) continue;
-            float k = 1f - Mathf.Max(0f, d) / staticFieldReach;
-            float mass = Mathf.Clamp(Mathf.Sqrt(a.Mass / Mathf.Max(0.001f, Asteroid.StaticMassRef)), 0.5f, 1.5f);
-            best = Mathf.Max(best, k * k * mass);
+            if (a == null || a.Type == null || a.IsOrbiting) continue;
+            bool body = a.Type.behavior == AsteroidBehavior.Static || a.Type.behavior == AsteroidBehavior.Colossus;
+            if (!body) continue;
+            Vector2 to = a.Body.position - me;
+            float d = to.magnitude - a.WorldRadius;
+            if (d >= bodyFieldReach) continue;
+            float k = 1f - Mathf.Max(0f, d) / bodyFieldReach;             // 0 en el borde, 1 pegado
+            float edge = Mathf.Clamp01((bodyFieldReach - Mathf.Max(0f, d)) / 0.5f);   // entra suave
+            float slow = Mathf.Lerp(bodySlow.x, bodySlow.y, k) * edge;
+            if (slow > best) best = slow;
+            if (to.sqrMagnitude > 0.0001f) pull += to.normalized * (bodyPull * k * k);
         }
-        return Mathf.Clamp01(best * staticDrag);
+        if (pull != Vector2.zero) AddGravity(pull);
+        return Mathf.Clamp01(best);
     }
 
     /// Qué fracción de la velocidad del choque se te queda, según quién te golpeó.
@@ -594,6 +628,25 @@ public class PlayerController : MonoBehaviour
     bool warnedOutside;
     void KeepInsideWorld()
     {
+        if (hasWall)
+        {
+            float d = Vector2.Dot(rb.position - wallPoint, wallNormal);
+            if (d < 0f)
+            {
+                rb.position -= wallNormal * d;
+                Vector2 wv = rb.linearVelocity;
+                float into = Vector2.Dot(wv, wallNormal);
+                if (into < 0f)
+                {
+                    rb.linearVelocity = wv - wallNormal * into;
+                    controlVel -= wallNormal * Vector2.Dot(controlVel, wallNormal);
+                    knock -= wallNormal * Mathf.Min(0f, Vector2.Dot(knock, wallNormal));
+                    gravityVel -= wallNormal * Mathf.Min(0f, Vector2.Dot(gravityVel, wallNormal));
+                    HitWall?.Invoke(rb.position);
+                }
+            }
+        }
+
         var gb = GameBounds.Instance;
         if (gb == null || !gb.IsReady) return;
         Rect a = gb.Area;

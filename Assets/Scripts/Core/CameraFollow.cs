@@ -52,6 +52,17 @@ public class CameraFollow : MonoBehaviour
              "cámara se corrige al momento para no perderlo de vista")]
     [SerializeField] private float keepInView = 1.2f;
 
+    [Header("Encuadre de la grieta")]
+    [Tooltip("Cerca de una grieta la cámara se aleja para que se vea lo grande que es, y se " +
+             "inclina hacia la sección abierta para que se sepa cuál es la vulnerable")]
+    [SerializeField] private bool frameFracture = true;
+    [Tooltip("A cuántas unidades de la grieta empieza (x) y a cuántas es completo (y)")]
+    [SerializeField] private Vector2 fractureRange = new Vector2(16f, 7f);
+    [Tooltip("Alejamiento máximo (1 = nada). Tope: 1.6")]
+    [Range(1f, 1.6f)] [SerializeField] private float fractureZoom = 1.5f;
+    [Tooltip("Cuánto se desplaza la vista hacia la grieta en vertical (hacia la sección abierta si la hay)")]
+    [Range(0f, 1f)] [SerializeField] private float fracturePull = 0.6f;
+
     [Header("Encuadre de la meta")]
     [Tooltip("Al acercarse al agujero negro, la cámara se desplaza en vertical para dejarlo " +
              "contra el borde de arriba o de abajo de la pantalla: se ve solo una porción, no " +
@@ -118,7 +129,7 @@ public class CameraFollow : MonoBehaviour
             Mathf.Clamp(vel.y * lookAheadTime, -maxLookAhead.y, maxLookAhead.y));
         lookAhead = Vector2.SmoothDamp(lookAhead, want, ref lookAheadVel, lookAheadSmooth, Mathf.Infinity, dt);
 
-        Vector2 goal = Clamp(FrameGoal((Vector2)target.position + lookAhead));
+        Vector2 goal = Clamp(FrameFracture(FrameGoal((Vector2)target.position + lookAhead), dt));
         Vector2 pos = Vector2.SmoothDamp(transform.position, goal, ref posVel, followSmooth, Mathf.Infinity, dt);
         // Durante la llegada el jugador viene de fuera del mundo: ahí la vista no lo persigue
         bool arriving = targetPc != null && targetPc.IsExpelling;
@@ -179,10 +190,36 @@ public class CameraFollow : MonoBehaviour
 
     // Cerca de la meta, la vista baja o sube para que el agujero quede contra el borde de la
     // pantalla. Keep In View se aplica después: el jugador nunca sale de la vista por esto
+    float zoomNow = 1f;
+
+    // Cerca de la grieta: se aleja la cámara y la vista se inclina hacia ella (hacia la sección
+    // abierta, si la hay). Keep In View sigue mandando: el jugador nunca sale de la vista
+    Vector2 FrameFracture(Vector2 p, float dt)
+    {
+        var fd = FractureDirector.Instance;
+        float w = 0f;
+        Vector2 focus = p;
+        if (frameFracture && fd != null && fd.Active && target != null)
+        {
+            Vector2 me = target.position;
+            float dist = Mathf.Abs(Vector2.Dot(me - fd.Center, fd.Front));   // distancia al borde de la grieta
+            w = 1f - Mathf.InverseLerp(fractureRange.y, fractureRange.x, dist);
+            w = w * w * (3f - 2f * w);
+            var open = fd.OpenSection;
+            focus = open != null ? open.WeakPoint : fd.Center;
+        }
+        float want = Mathf.Lerp(1f, fractureZoom, w);
+        zoomNow = Mathf.MoveTowards(zoomNow, want, dt * 0.8f);
+        CameraAspectFitter.Zoom = zoomNow;
+        if (w > 0f) p.y = Mathf.Lerp(p.y, focus.y, fracturePull * w);
+        return p;
+    }
+
     Vector2 FrameGoal(Vector2 p)
     {
         if (!frameGoal || cam == null || target == null) return p;
-        if (hole == null || !hole.isActiveAndEnabled) { hole = FindFirstObjectByType<Goal>(); if (hole == null) return p; }
+        if (hole == null) { hole = FindFirstObjectByType<Goal>(FindObjectsInactive.Include); if (hole == null) return p; }
+        if (!hole.isActiveAndEnabled) return p;   // escondida: mapa de fractura sin cerrar
         var gb = GameBounds.Instance;
         if (gb == null) return p;
 

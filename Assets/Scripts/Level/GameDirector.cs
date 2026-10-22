@@ -54,6 +54,16 @@ public class GameDirector : MonoBehaviour
     [SerializeField] private bool alwaysDark = false;
     [SerializeField] private CometDirector comets;
 
+    [Header("Mapas de fractura")]
+    [Tooltip("Vacío = lo busca. La probabilidad y el nivel mínimo están en el propio FractureDirector")]
+    [SerializeField] private FractureDirector fracture;
+    [SerializeField] private ColossusDirector colossus;
+    [Tooltip("Más colosos y cometas en los mapas de fractura (son lo que llena el entorno de objetos)")]
+    [SerializeField] private float fractureColossusChance = 3f;
+    [SerializeField] private int fractureExtraComets = 1;
+    [Tooltip("Solo para probar: todos los niveles (que no sean oscuros) son de fractura")]
+    [SerializeField] private bool alwaysFracture = false;
+
     [Header("Pantalla de transición")]
     [Tooltip("Vacío = la busca en la escena. Si no hay ninguna, se pasa al nivel siguiente sin ella")]
     [SerializeField] private TransitionScreen transition;
@@ -74,6 +84,9 @@ public class GameDirector : MonoBehaviour
     public int CurrentSeed { get; private set; }
     /// Este nivel es un mundo vacío y oscuro
     public bool IsDarkWorld { get; private set; }
+    /// Este nivel es un mapa de fractura
+    public bool IsFractureWorld { get; private set; }
+    int forcedFractureLevel = -1;
     int forcedDarkLevel = -1;
 
     /// Para el HUD y el guardado
@@ -98,6 +111,8 @@ public class GameDirector : MonoBehaviour
         if (goal == null) goal = FindFirstObjectByType<Goal>();
         if (transition == null) transition = FindFirstObjectByType<TransitionScreen>(FindObjectsInactive.Include);
         if (comets == null) comets = FindFirstObjectByType<CometDirector>();
+        if (fracture == null) fracture = FindFirstObjectByType<FractureDirector>();
+        if (colossus == null) colossus = FindFirstObjectByType<ColossusDirector>();
         if (runSeed == 0) runSeed = Random.Range(1, int.MaxValue);
     }
 
@@ -105,12 +120,14 @@ public class GameDirector : MonoBehaviour
     {
         if (player != null) player.OnDied += HandleDied;
         if (goal != null) goal.Reached += HandleCleared;
+        if (fracture != null) fracture.Closed += OnFractureClosed;
     }
 
     void OnDisable()
     {
         if (player != null) player.OnDied -= HandleDied;
         if (goal != null) goal.Reached -= HandleCleared;
+        if (fracture != null) fracture.Closed -= OnFractureClosed;
     }
 
     IEnumerator Start()
@@ -139,6 +156,16 @@ public class GameDirector : MonoBehaviour
 
         yield return new WaitForSeconds(startDelay);
         StartLevel(level);
+    }
+
+    int LayoutSeed(int level)
+    {
+        unchecked { return (runSeed * 16777619 ^ level * 374761393) & 0x7FFFFFFF; }
+    }
+
+    void OnFractureClosed(Vector2 at)
+    {
+        if (goal != null && Running) goal.PlaceAt(at);
     }
 
     bool DarkFor(int level)
@@ -188,16 +215,34 @@ public class GameDirector : MonoBehaviour
         if (populator != null) populator.DarkWorld = IsDarkWorld;
         if (comets != null) comets.Suppressed = IsDarkWorld;
 
+        // ¿Fractura? Nunca a la vez que un mundo oscuro. Igual en cada intento
+        IsFractureWorld = !IsDarkWorld && fracture != null &&
+            (alwaysFracture || CurrentLevel == forcedFractureLevel || fracture.RollFor(CurrentLevel, runSeed));
+        if (populator != null) populator.FractureWorld = IsFractureWorld;
+        if (colossus != null) colossus.ChanceMultiplier = IsFractureWorld ? fractureColossusChance : 1f;
+        if (comets != null) comets.ExtraAlive = IsFractureWorld ? fractureExtraComets : 0;
+
         // 3. Jugador y meta, antes de poblar: el generador evita la zona de los dos. El
         //    jugador aparece cerca de un borde; la meta, en el lado contrario, pegada al
         //    borde más lejano y a una altura al azar
         if (playerStart != null) playerStart.Place(GoalMirrored);
         if (player != null) player.Respawn();
-        if (goal != null)
+        if (IsFractureWorld)
         {
-            // Su punto de aparición, no donde está: durante la llegada aún viene de fuera
-            if (player != null) goal.PlaceOpposite(player.SpawnPoint);
-            else goal.Place();
+            // La meta no existe hasta cerrar la grieta. La grieta se prepara antes de poblar:
+            // deja su zona libre de estáticos. Su semilla no depende del intento
+            if (goal != null) goal.Hide();
+            fracture.Prepare(true, LayoutSeed(CurrentLevel), player != null ? player.SpawnPoint : Vector2.zero, CurrentLevel);
+        }
+        else
+        {
+            if (fracture != null) fracture.Prepare(false, 0, Vector2.zero, CurrentLevel);
+            if (goal != null)
+            {
+                // Su punto de aparición, no donde está: durante la llegada aún viene de fuera
+                if (player != null) goal.PlaceOpposite(player.SpawnPoint);
+                else goal.Place();
+            }
         }
 
         // La cámara salta al jugador ANTES de poblar: los asteroides que se mueven nacen
@@ -211,6 +256,7 @@ public class GameDirector : MonoBehaviour
         levelStartTime = Time.time;
         LevelStarted?.Invoke(CurrentLevel);
         if (IsDarkWorld) Debug.Log($"GameDirector: el nivel {CurrentLevel} es un MUNDO OSCURO.");
+        if (IsFractureWorld) Debug.Log($"GameDirector: el nivel {CurrentLevel} es un MAPA DE FRACTURA.");
         Debug.Log($"GameDirector: nivel {CurrentLevel} (semilla {seed}, meta " +
                   $"{(GoalMirrored ? "izquierda" : "derecha")}, intentos previos {retries})");
     }
@@ -295,6 +341,9 @@ public class GameDirector : MonoBehaviour
 
     [ContextMenu("Mundo oscuro en el siguiente nivel")]
     void DarkNext() { forcedDarkLevel = CurrentLevel + 1; Debug.Log($"GameDirector: el nivel {forcedDarkLevel} será oscuro."); }
+
+    [ContextMenu("Fractura en el siguiente nivel")]
+    void FractureNext() { forcedFractureLevel = CurrentLevel + 1; Debug.Log($"GameDirector: el nivel {forcedFractureLevel} será de fractura."); }
 
     [ContextMenu("Repetir nivel")]
     void RepeatFromMenu() { StopAllCoroutines(); StartLevel(CurrentLevel); }

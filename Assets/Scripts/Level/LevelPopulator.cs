@@ -55,6 +55,8 @@ public class LevelPopulator : MonoBehaviour
     [Header("Mundo oscuro")]
     [Tooltip("Mundo vacío: fracción del presupuesto normal del nivel (estáticos y lo que fluye)")]
     [Range(0.05f, 1f)] [SerializeField] private float darkBudgetFactor = 0.3f;
+    [Tooltip("Mundo oscuro: multiplica la fracción de estáticos con campo de satélites")]
+    [SerializeField] private float darkFieldMultiplier = 2f;
     [Tooltip("Lo que fluye no mata. Cada este rango de segundos entra UNO que sí mata (lento o " +
              "rápido), y nunca hay más de uno a la vez")]
     [SerializeField] private Vector2 darkLethalEvery = new Vector2(20f, 40f);
@@ -62,6 +64,12 @@ public class LevelPopulator : MonoBehaviour
     /// Mundo oscuro en este nivel. Lo pone GameDirector antes de StartLevel: sin colosos,
     /// lo que fluye inofensivo salvo raras excepciones; los estáticos y sus satélites, igual
     public bool DarkWorld { get; set; }
+
+    [Header("Mapa de fractura")]
+    [Tooltip("Fracción del presupuesto normal: menos asteroides normales (cometas y colosos van aparte, y hay más)")]
+    [Range(0.1f, 1f)] [SerializeField] private float fractureBudgetFactor = 0.6f;
+    /// Mapa de fractura en este nivel. Lo pone GameDirector antes de StartLevel
+    public bool FractureWorld { get; set; }
 
     [Header("Mantenimiento de la población")]
     [Tooltip("Repone asteroides hasta volver a la cantidad del nivel. Sin esto, cada paso " +
@@ -133,7 +141,7 @@ public class LevelPopulator : MonoBehaviour
         if (unlocked.Count == 0) { Debug.LogWarning("LevelPopulator: no hay tipos disponibles para este nivel."); return; }
 
         // Compra asteroides con el presupuesto del nivel
-        float budget = difficulty.Budget(currentLevel) * (DarkWorld ? darkBudgetFactor : 1f);
+        float budget = difficulty.Budget(currentLevel) * (DarkWorld ? darkBudgetFactor : 1f) * (FractureWorld ? fractureBudgetFactor : 1f);
         darkLethal = null;
         nextDarkLethal = Time.time + Random.Range(darkLethalEvery.x, darkLethalEvery.y);
         var shopping = new List<AsteroidTypeData>();
@@ -239,6 +247,7 @@ public class LevelPopulator : MonoBehaviour
         int fields = BuildFields(statics, playerPos);
         if (fields > 0) fairness += $", {fields} campos de satélites";
         if (DarkWorld) fairness += ", MUNDO OSCURO";
+        if (FractureWorld) fairness += ", FRACTURA";
 
         targetPopulation = count;
         nextTopUp = Time.time + 2f;
@@ -472,7 +481,9 @@ public class LevelPopulator : MonoBehaviour
 
         if (fieldShare <= 0f || satelliteTypes == null || satelliteTypes.Length == 0) return 0;
         statics.Sort((x, y) => y.WorldRadius.CompareTo(x.WorldRadius));
-        int want = Mathf.CeilToInt(statics.Count * fieldShare);
+        // Mundo oscuro: el doble de probabilidad de que un estático traiga satélites
+        float share = Mathf.Clamp01(fieldShare * (DarkWorld ? darkFieldMultiplier : 1f));
+        int want = Mathf.CeilToInt(statics.Count * share);
         int made = 0;
         const float margin = 0.7f;      // hueco entre un satélite y lo que tenga al lado
         var hosts = new List<(Asteroid a, float outer)>();

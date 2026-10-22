@@ -285,7 +285,9 @@ MonoBehaviour:
   keplerSpeed: 55
   keplerRefRadius: 2.5
   darkBudgetFactor: 0.3
+  darkFieldMultiplier: 2
   darkLethalEvery: {x: 20, y: 40}
+  fractureBudgetFactor: 0.6
   keepPopulation: 1
   topUpInterval: 0.6
   topUpPerCheck: 2
@@ -10909,6 +10911,108 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &848169111
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 848169112}
+  - component: {fileID: 848169113}
+  m_Layer: 0
+  m_Name: Fracture
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &848169112
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 848169111}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &848169113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 848169111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af155ed9f2f9d2e489b1fac62d3a32d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FractureDirector
+  chance: 0.04
+  minLevel: 10
+  budgetAtMin: 4
+  budgetPerLevel: 0.18
+  budgetMax: 32
+  budgetJitter: {x: 0.7, y: 1.35}
+  bigSurprise: 0.15
+  wavesBySize: {x: 2, y: 3, z: 4}
+  lengthBySize: {x: 1.4, y: 2.2, z: 3.2}
+  maxSections: 16
+  farSideChance: 0.5
+  minDistanceFromSpawn: 16
+  edgeMargin: 3
+  firstDelay: 2.5
+  firingTime: {x: 6, y: 12}
+  cooldownTime: {x: 3, y: 9}
+  fireInterval: {x: 1.1, y: 0.45}
+  projectileSpeed: {x: 4.5, y: 7.5}
+  projectileRadius: {x: 0.18, y: 0.34}
+  aimAtPlayer: 0.5
+  aimSpread: 25
+  waveRange: 8
+  maxCharges: 2
+  grazeDistance: 0.6
+  grazeGain: {x: 0.1, y: 0.2}
+  pushSpeed: 15
+  pushStun: 0.35
+  looks:
+  - name: Vacio
+    dust: {fileID: 7103059944399396593, guid: 3e354d435d0eea248ad4e8b4af4cda73, type: 3}
+    core: {fileID: -4748858994290812049, guid: 48c15b3d18f61bf4cb027c3974205c09, type: 3}
+    dustTint: {r: 0, g: 0, b: 0, a: 0.8509804}
+    coreTint: {r: 0, g: 0, b: 0, a: 1}
+    glowTint: {r: 0, g: 0, b: 0, a: 0.5882353}
+  - name: Estrella
+    dust: {fileID: -3661895330407113972, guid: 5c320dbd0dd74cc4bb19e573470199df, type: 3}
+    core: {fileID: 7991314371597583792, guid: 981c1f02036d4594f955e36ed2f3e29a, type: 3}
+    dustTint: {r: 0, g: 0, b: 0, a: 0.8509804}
+    coreTint: {r: 0, g: 0, b: 0, a: 1}
+    glowTint: {r: 0, g: 0, b: 0, a: 0.5882353}
+  - name: Nebulosa
+    dust: {fileID: -1048249818481350741, guid: aab0d32e254ff09499fe0800f61532aa, type: 3}
+    core: {fileID: 0}
+    dustTint: {r: 0, g: 0, b: 0, a: 0.8509804}
+    coreTint: {r: 0, g: 0, b: 0, a: 1}
+    glowTint: {r: 0, g: 0, b: 0, a: 0.5882353}
+  antimatterCore: {fileID: 1129795986167866040, guid: fc37bfbfd4a10314a92d5adb7d516d86, type: 3}
+  antimatterGlow: {fileID: 1678209972965121518, guid: fec8e33897de7a041b2ac4ca2b0bddfc, type: 3}
+  antimatterHalo: {r: 0.85, g: 0.25, b: 1, a: 0.7}
+  burstA: {r: 1, g: 0.35, b: 0.95, a: 1}
+  burstB: {r: 0.45, g: 0.9, b: 1, a: 1}
+  openColor: {r: 0.45, g: 1, b: 0.55, a: 0.9}
+  warningColor: {r: 1, g: 0.25, b: 0.35, a: 1}
+  markerIdleAlpha: 0.12
+  sortingLayer: BG_Dust
+  sortingOrder: 200
+  projectileLayer: Asteroids
+  projectileOrder: 400
 --- !u!1 &848801468
 GameObject:
   m_ObjectHideFlags: 0
@@ -11020,6 +11124,8 @@ MonoBehaviour:
   asteroidStretch: 3
   spiralDegrees: 70
   maxFallFactor: 2.2
+  fallMaxLength: 0.9
+  spiralBoost: 1.6
   ghostTrail: 1
   ghostEvery: 0.035
   ghostLife: 0.35
@@ -12338,8 +12444,9 @@ MonoBehaviour:
   restitution: 0.15
   wallShare: 0.25
   gravityMemory: 0.8
-  staticDrag: 0.25
-  staticFieldReach: 4
+  bodySlow: {x: 0.15, y: 0.2}
+  bodyFieldReach: 3
+  bodyPull: 1.6
   maxKnock: 7
   knockDecayTime: 0.35
   hardImpactSpeed: 2
@@ -17905,6 +18012,56 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1 &1968779673
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1968779674}
+  - component: {fileID: 1968779675}
+  m_Layer: 0
+  m_Name: WaveButton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1968779674
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1968779673}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1968779675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1968779673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db47a1d403ce6be4c86712a6357d996d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WaveButton
+  size: 170
+  position: {x: 300, y: 105}
+  canvasOrder: 101
+  icon: {fileID: 0}
+  readyColor: {r: 0.45, g: 1, b: 0.55, a: 1}
+  idleColor: {r: 0.55, g: 0.6, b: 0.75, a: 0.7}
 --- !u!1 &1979207755
 GameObject:
   m_ObjectHideFlags: 0
@@ -22931,8 +23088,13 @@ MonoBehaviour:
   nextLevelDelay: 1.1
   darkWorldChance: 0.06
   darkGoalBoost: 1.35
-  alwaysDark: 1
+  alwaysDark: 0
   comets: {fileID: 0}
+  fracture: {fileID: 0}
+  colossus: {fileID: 0}
+  fractureColossusChance: 3
+  fractureExtraComets: 1
+  alwaysFracture: 1
   transition: {fileID: 0}
   respawnDelay: 1.4
   mirrorWithFlow: 1
@@ -22983,3 +23145,5 @@ SceneRoots:
   - {fileID: 1744813663}
   - {fileID: 1769813208}
   - {fileID: 2013440653}
+  - {fileID: 848169112}
+  - {fileID: 1968779674}

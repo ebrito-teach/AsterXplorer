@@ -8,10 +8,10 @@ public enum BuffType { LightShield = 0, XLR8D = 1, Slow = 2, Ghost = 3, TimeFree
 ///
 /// INVENTARIO
 ///
-/// Dos contenedores. Un buff recogido entra en el primero libre; con los dos llenos sustituye
-/// al más antiguo que no se esté usando (FIFO). Si los dos se están usando, no se puede
-/// recoger y se queda donde estaba. Al pulsar un contenedor el buff se activa y el contenedor
-/// se va aclarando mientras dura; al acabar, desaparece.
+/// Dos contenedores. Un buff recogido entra en el primero libre; con los dos llenos sale el más
+/// antiguo, el otro pasa a su sitio y el nuevo entra detrás (FIFO). Al pulsar un contenedor el
+/// buff se activa y sale de la caja: desde ese momento se sigue solo con el aura del jugador,
+/// y su efecto termina solo, nunca lo corta recoger otro.
 ///
 /// Al morir se pierde lo que se estaba usando y se conserva lo guardado. Lo guardado se
 /// conserva al continuar la misma partida, no en una nueva ni con otro personaje.
@@ -94,7 +94,8 @@ public class BuffSystem : MonoBehaviour
         public float Remaining01 => active ? Mathf.Clamp01((end - Time.unscaledTime) / Mathf.Max(0.01f, end - start)) : 1f;
     }
 
-    readonly List<Slot> slots = new List<Slot>();
+    readonly List<Slot> slots = new List<Slot>();     // guardados, del más antiguo al más nuevo
+    readonly List<Slot> actives = new List<Slot>();   // en uso: ya no están en la caja
     public IReadOnlyList<Slot> Contents => slots;
     /// Cambió el contenido (para la barra)
     public event Action Changed;
@@ -158,15 +159,10 @@ public class BuffSystem : MonoBehaviour
     }
 
     // ------------------------------------------------------------------ inventario
-    /// Recoger. False si no cabe (los dos contenedores en uso)
+    /// Recoger. Siempre cabe: con los dos llenos sale el más antiguo (FIFO)
     public bool TryAdd(BuffType t)
     {
-        if (slots.Count >= Slots)
-        {
-            int oldest = slots.FindIndex(s => !s.active);
-            if (oldest < 0) return false;
-            slots.RemoveAt(oldest);
-        }
+        while (slots.Count >= Slots) slots.RemoveAt(0);   // FIFO
         slots.Add(new Slot { type = t });
         Collected?.Invoke(t);
         Save();
@@ -180,9 +176,8 @@ public class BuffSystem : MonoBehaviour
         if (player == null || player.IsDead || player.IsExpelling || player.IsAbsorbed) return false;
         if (director != null && !director.Running) return false;
         var t = slots[index].type;
-        foreach (var s in slots)
+        foreach (var s in actives)
         {
-            if (!s.active) continue;
             if (s.type == BuffType.TimeFreeze || t == BuffType.TimeFreeze) return false;
             if (s.type == t) return false;
         }
@@ -198,6 +193,8 @@ public class BuffSystem : MonoBehaviour
         s.start = Time.unscaledTime;
         s.end = s.start + (info != null ? info.duration : 4f);
         s.hitsLeft = shieldHits;
+        slots.RemoveAt(index);
+        actives.Add(s);
         Begin(s);
         Save();
         Changed?.Invoke();
@@ -207,14 +204,13 @@ public class BuffSystem : MonoBehaviour
     void Update()
     {
         bool changed = false;
-        for (int i = slots.Count - 1; i >= 0; i--)
+        for (int i = actives.Count - 1; i >= 0; i--)
         {
-            var s = slots[i];
-            if (!s.active) continue;
+            var s = actives[i];
             if (Time.unscaledTime >= s.end || (s.type == BuffType.LightShield && s.hitsLeft <= 0))
             {
                 End(s);
-                slots.RemoveAt(i);
+                actives.RemoveAt(i);
                 changed = true;
             }
         }
@@ -228,14 +224,9 @@ public class BuffSystem : MonoBehaviour
     // Lo que se estaba usando se pierde; lo guardado se queda
     void DropActive()
     {
-        bool changed = false;
-        for (int i = slots.Count - 1; i >= 0; i--)
-        {
-            if (!slots[i].active) continue;
-            End(slots[i]);
-            slots.RemoveAt(i);
-            changed = true;
-        }
+        bool changed = actives.Count > 0;
+        foreach (var s in actives) End(s);
+        actives.Clear();
         ClearEffects();
         if (changed) { Save(); Changed?.Invoke(); }
     }
@@ -320,7 +311,7 @@ public class BuffSystem : MonoBehaviour
     bool AbsorbHit()
     {
         Slot shield = null;
-        foreach (var s in slots) if (s.active && s.type == BuffType.LightShield && s.hitsLeft > 0) { shield = s; break; }
+        foreach (var s in actives) if (s.type == BuffType.LightShield && s.hitsLeft > 0) { shield = s; break; }
         if (shield == null) return false;
         if (Time.unscaledTime < shieldWindowUntil) return true;
         shieldWindowUntil = Time.unscaledTime + 0.3f;
@@ -379,10 +370,10 @@ public class BuffSystem : MonoBehaviour
             sr.transform.rotation = Quaternion.identity;
 
             float left = 1f;
-            foreach (var s in slots) if (s.active && s.type == kv.Key) left = s.Remaining01;
+            foreach (var s in actives) if (s.type == kv.Key) left = s.Remaining01;
             if (kv.Key == BuffType.LightShield)
-                foreach (var s in slots)
-                    if (s.active && s.type == BuffType.LightShield) left = Mathf.Min(left, (float)s.hitsLeft / Mathf.Max(1, shieldHits) + 0.15f);
+                foreach (var s in actives)
+                    if (s.type == BuffType.LightShield) left = Mathf.Min(left, (float)s.hitsLeft / Mathf.Max(1, shieldHits) + 0.15f);
             sr.color = new Color(1f, 1f, 1f, auraAlpha * Mathf.Pow(Mathf.Clamp01(left), 0.8f));
         }
     }

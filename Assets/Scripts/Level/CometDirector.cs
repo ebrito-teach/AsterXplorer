@@ -44,12 +44,14 @@ public class CometDirector : MonoBehaviour
 
     /// Mundo oscuro: no entra ningún cometa. Lo pone GameDirector en cada nivel
     public bool Suppressed { get; set; }
+    /// Mapas de fractura: cometas de más a la vez. Lo pone GameDirector en cada nivel
+    public int ExtraAlive { get; set; }
 
     public void BeginLevel(int level)
     {
         CometTrail.Clear();
         CurrentType = PickType(level);
-        TargetAlive = CurrentType != null ? Range(aliveRange.x, aliveRange.y) : 0;
+        TargetAlive = CurrentType != null ? Range(aliveRange.x, aliveRange.y) + Mathf.Max(0, ExtraAlive) : 0;
         lastAlive = 0;
         nextCount = 0f;
         nextSpawn = Time.time + Range(firstDelay.x, firstDelay.y);

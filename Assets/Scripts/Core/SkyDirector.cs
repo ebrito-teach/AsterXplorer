@@ -238,7 +238,8 @@ public class SkyDirector : MonoBehaviour
 
         float k = 1f - follow;
         Vector2 travel = Vector2.Max(Vector2.zero, area.size - screen) * 0.5f * k;
-        Vector2 half = travel + screen * 0.5f + Vector2.one * 1.5f;
+        // Con margen para cuando la cámara se aleja (cerca de una grieta)
+        Vector2 half = travel + screen * 0.5f * CameraAspectFitter.MaxZoom + Vector2.one * 1.5f;
         Vector2 center = area.center * k;
         return new Rect(center - half, half * 2f);
     }
