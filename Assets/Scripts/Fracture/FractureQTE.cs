@@ -65,6 +65,9 @@ public class FractureQTE : MonoBehaviour
     [SerializeField] private float targetRadius = 0.42f;
     [SerializeField] private float startRadius = 1.6f;
 
+    /// Panel de calibración: multiplica el tiempo entre perseguidores (menos = más a menudo)
+    public static float CalibInterval = 1f;
+
     /// Hay un QTE en marcha
     public bool Running => shot != null;
 
@@ -144,7 +147,7 @@ public class FractureQTE : MonoBehaviour
             ShipInput.FocusBlocked = false;
             return;
         }
-        if (nextAt < 0f) nextAt = Time.time + Random.Range(homingEvery.x, homingEvery.y);
+        if (nextAt < 0f) nextAt = Time.time + Random.Range(homingEvery.x, homingEvery.y) * CalibInterval;
         if (Asteroid.WorldFrozen) { nextAt += Time.deltaTime; warnUntil += Time.deltaTime; }
 
         // 1. Aviso y lanzamiento
@@ -292,7 +295,7 @@ public class FractureQTE : MonoBehaviour
         shot = null;
         HideRings();
         ShipInput.FocusBlocked = false;
-        nextAt = Time.time + Random.Range(homingEvery.x, homingEvery.y);
+        nextAt = Time.time + Random.Range(homingEvery.x, homingEvery.y) * CalibInterval;
     }
 
     void SetWarning(float k)

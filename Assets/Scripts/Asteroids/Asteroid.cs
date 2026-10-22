@@ -1155,14 +1155,14 @@ public class Asteroid : MonoBehaviour
             if (piece == null) continue;
             piece.SetMotion(Vector2.zero, Random.Range(-20f, 20f));
             piece.MakeTrail();
-            CometTrail.Register(piece, Mathf.Max(8, Mathf.RoundToInt(prof.maxTrailPieces * PerformanceManager.DebrisAmount)), prof.trailFadeSeconds);
+            CometTrail.Register(piece, Mathf.Max(8, prof.maxTrailPieces), prof.trailFadeSeconds);
         }
     }
 
     // Lo de siempre: abanico detrás, y cada pieza decide si se queda, deriva o lo sigue.
     void ShedScatter(CometProfile prof, Vector2 vel, Vector2 fwd, Vector2 side)
     {
-        if (DebrisAlive >= Mathf.RoundToInt(prof.maxDebrisAlive * PerformanceManager.DebrisAmount)) return;
+        if (DebrisAlive >= prof.maxDebrisAlive) return;
 
         int count = Random.Range(prof.piecesPerShed.x, prof.piecesPerShed.y + 1);
         for (int i = 0; i < count; i++)

@@ -219,6 +219,8 @@ public class PlayerController : MonoBehaviour
     public Rigidbody2D Body => rb;
     /// La usa el verificador de niveles para saber si un hueco da tiempo a aprovecharlo
     public float MaxSpeed => cruiseSpeed;
+    /// Velocidad de crucero (la cambia el panel de calibración)
+    public float CruiseSpeed { get => cruiseSpeed; set => cruiseSpeed = Mathf.Max(0.5f, value); }
     /// Velocidad real ahora mismo, empujones incluidos. La lee el velocímetro.
     public float Speed => rb != null ? rb.linearVelocity.magnitude : 0f;
     /// Cuánto te está frenando ahora el campo de los estáticos (0 = nada)

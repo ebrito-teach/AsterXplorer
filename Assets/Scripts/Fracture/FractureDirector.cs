@@ -45,6 +45,11 @@ public class FractureDirector : MonoBehaviour
     /// lejos va el polvo de fondo y cuánto más cerca los jirones de delante, y su opacidad
     /// Un tinte vacío (transparente) o negro dejaría la grieta invisible sobre el espacio: en ese
     /// caso se usa el de por defecto. Pasa al añadir diseños desde el Inspector
+    // ---- panel de calibración (1 = sin cambio)
+    public static float CalibFireRate = 1f, CalibShotSpeed = 1f;
+    /// Proyectiles de antimateria en vuelo
+    public int ShotsAlive { get { int n = 0; foreach (var s in shots) if (s != null && s.Alive) n++; return n; } }
+
     public static Color UsableTint(Color c, Color fallback)
     {
         bool usable = c.a > 0.01f && Mathf.Max(c.r, Mathf.Max(c.g, c.b)) > 0.05f;
@@ -145,6 +150,8 @@ public class FractureDirector : MonoBehaviour
     [Tooltip("Solo te alcanza si estás cerca de la grieta: a menos de esta fracción del ancho de la " +
              "pantalla (0.4 = en una pantalla de -5 a 5 con la grieta en -5, tienes que estar en -1 o más cerca)")]
     [Range(0.1f, 1f)] [SerializeField] private float pushReachScreens = 0.4f;
+    [Tooltip("Segundos de invulnerabilidad desde que la onda te lanza: así un choque durante el viaje o justo al llegar no te mata")]
+    [SerializeField] private float pushIFrames = 1f;
     [Tooltip("Segundos sin control tras el empujón")]
     [SerializeField] private float pushStun = 0.45f;
 
@@ -633,7 +640,7 @@ public class FractureDirector : MonoBehaviour
         // Los grandes, algo más lentos
         float speed = Mathf.Lerp(projectileSpeed.x, projectileSpeed.y, LevelT) * Random.Range(0.85f, 1.15f)
                       * Mathf.Lerp(1f, 0.75f, Mathf.InverseLerp(caliberRadius.x, caliberRadius.z, radius));
-        Launch(pos, dir, speed, radius, null, 0f);
+        Launch(pos, dir, speed * CalibShotSpeed, radius, null, 0f);
     }
 
     /// Dispara una antimateria (la usa también el QTE, con objetivo)
@@ -735,6 +742,7 @@ public class FractureDirector : MonoBehaviour
         Vector2 to = gb.Area.center - pp;
         if (to.magnitude < 0.5f) return;
         player.Blast(to, to.magnitude, pushTime, pushStun);
+        player.GrantInvulnerability(Mathf.Max(pushIFrames, pushTime));
     }
 
     // ------------------------------------------------------------------ cargas y choques

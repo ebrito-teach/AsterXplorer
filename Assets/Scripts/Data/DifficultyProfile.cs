@@ -61,6 +61,42 @@ public class DifficultyProfile : ScriptableObject
     public float speedGrowth = 0.19f;
     public float speedKnee = 25f;
 
+    [Header("Curvas por tramos (calibración H)")]
+    [Tooltip("Marcado: velocidad, crucero del jugador y cantidad salen de las tablas de abajo " +
+             "(lo calibrado jugando). Desmarcado: las curvas logarítmicas de arriba")]
+    public bool useKeyCurves = true;
+    [Tooltip("Velocidad de las rocas por nivel (x = nivel, y = multiplicador). Entre puntos se " +
+             "interpola; pasado el último sigue la tendencia hasta Speed Cap")]
+    public Vector2[] speedKeys =
+    {
+        new Vector2(1, 1.5f), new Vector2(10, 1.8f), new Vector2(20, 2.1f), new Vector2(30, 2.4f),
+        new Vector2(50, 2.9f), new Vector2(100, 3.8f), new Vector2(200, 4.6f), new Vector2(500, 5.8f),
+        new Vector2(1000, 6.8f),
+    };
+    [Tooltip("Techo de la velocidad de las rocas. Más allá deja de poder verse a tiempo: la " +
+             "dificultad sigue subiendo por patrones, combinaciones y contenido nuevo")]
+    public float speedCap = 7f;
+    [Tooltip("La velocidad sube en escalones de tantos niveles (saltos cortos y frecuentes)")]
+    public int speedStep = 10;
+    [Tooltip("Velocidad de crucero del jugador (u/s), en escalones: desde el nivel x vale y, hasta " +
+             "el siguiente punto. Sube poco a propósito: moverse más rápido es ventaja")]
+    public Vector2[] cruiseKeys =
+    {
+        new Vector2(1, 6f), new Vector2(20, 6.5f), new Vector2(30, 6.8f), new Vector2(40, 7f),
+        new Vector2(60, 7.2f), new Vector2(80, 7.4f), new Vector2(100, 7.6f), new Vector2(150, 7.9f),
+        new Vector2(200, 8.2f), new Vector2(300, 8.6f), new Vector2(400, 8.9f), new Vector2(500, 9.2f),
+        new Vector2(700, 9.6f), new Vector2(1000, 10f),
+    };
+    [Tooltip("Techo del crucero: nunca pasa de aquí")]
+    public float cruiseCap = 10f;
+    [Tooltip("Cantidad (presupuesto) por nivel. Pasado el último punto se queda ahí: la " +
+             "dificultad la pone la velocidad, y el reparto por cobertura evita huecos")]
+    public Vector2[] budgetKeys =
+    {
+        new Vector2(1, 46f), new Vector2(10, 58f), new Vector2(20, 100f), new Vector2(30, 110f),
+        new Vector2(60, 115f), new Vector2(100, 120f),
+    };
+
     [Header("Corriente — grados de curvatura")]
     public float flowStart = 32f;
     public float flowGrowth = 13f;
@@ -145,12 +181,54 @@ public class DifficultyProfile : ScriptableObject
 
     /// Sin tope. El único límite real a la cantidad es maxMovingAsteroids, que es de
     /// rendimiento: cuando se alcanza, la dificultad sigue subiendo por los otros ejes.
-    public float Budget(int level) => Grow(level, budgetStart, budgetGrowth, budgetKnee) * Mood(level);
+    public float Budget(int level) =>
+        (useKeyCurves && budgetKeys != null && budgetKeys.Length > 0 ? Key(budgetKeys, level, false, float.MaxValue)
+                                                                      : Grow(level, budgetStart, budgetGrowth, budgetKnee)) * Mood(level);
 
     public float SpeedMultiplier(int level)
     {
         float mood = Mathf.Lerp(1f, Mood(level), Mathf.Clamp01(moodAffectsSpeed));
-        return Grow(level, speedStart, speedGrowth, speedKnee) * mood;
+        float v = useKeyCurves && speedKeys != null && speedKeys.Length > 0
+            ? Key(speedKeys, StepLevel(level), true, speedCap)
+            : Grow(level, speedStart, speedGrowth, speedKnee);
+        return v * mood;
+    }
+
+    /// Velocidad de crucero del jugador en este nivel (0 = no tocarla)
+    public float PlayerCruise(int level)
+    {
+        if (!useKeyCurves || cruiseKeys == null || cruiseKeys.Length == 0) return 0f;
+        float v = cruiseKeys[0].y;
+        foreach (var k in cruiseKeys) if (level >= k.x) v = k.y;
+        return Mathf.Min(cruiseCap, v);
+    }
+
+    // El nivel con el que se lee la tabla: el primero de su escalón (1, 10, 20, 30...)
+    int StepLevel(int level)
+    {
+        int st = Mathf.Max(1, speedStep);
+        return Mathf.Max(1, level / st * st);
+    }
+
+    // Interpola en la tabla según el logaritmo del nivel (los puntos lejanos no se notan como
+    // saltos). Pasado el último punto: sigue la tendencia del último tramo si extend, o se queda
+    static float Key(Vector2[] keys, int level, bool extend, float cap)
+    {
+        float lx = Mathf.Log(Mathf.Max(1, level));
+        if (level <= keys[0].x) return Mathf.Min(cap, keys[0].y);
+        for (int i = 1; i < keys.Length; i++)
+        {
+            if (level > keys[i].x) continue;
+            float a = Mathf.Log(Mathf.Max(1f, keys[i - 1].x)), b = Mathf.Log(Mathf.Max(1f, keys[i].x));
+            float t = b > a ? (lx - a) / (b - a) : 1f;
+            return Mathf.Min(cap, Mathf.Lerp(keys[i - 1].y, keys[i].y, t));
+        }
+        var last = keys[keys.Length - 1];
+        if (!extend || keys.Length < 2) return Mathf.Min(cap, last.y);
+        var prev = keys[keys.Length - 2];
+        float la = Mathf.Log(Mathf.Max(1f, prev.x)), lb = Mathf.Log(Mathf.Max(1f, last.x));
+        float slope = lb > la ? (last.y - prev.y) / (lb - la) : 0f;
+        return Mathf.Min(cap, last.y + slope * (lx - lb));
     }
 
     public float FlowAmplitude(int level) =>

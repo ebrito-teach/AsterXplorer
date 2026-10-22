@@ -254,7 +254,7 @@ public class FractureSection : MonoBehaviour
         for (int i = 0; i < calibers.Length; i++)
         {
             if (Time.time < calibers[i].next) continue;
-            calibers[i].next = Time.time + Random.Range(calibers[i].cooldown.x, calibers[i].cooldown.y) / fireRate;
+            calibers[i].next = Time.time + Random.Range(calibers[i].cooldown.x, calibers[i].cooldown.y) / (fireRate * Mathf.Max(0.05f, FractureDirector.CalibFireRate));
             owner.FireFrom(this, calibers[i].radius);
         }
     }

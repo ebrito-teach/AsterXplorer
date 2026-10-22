@@ -60,8 +60,33 @@ public class LevelPopulator : MonoBehaviour
     [Header("Mapa de fractura")]
     [Tooltip("Fracción del presupuesto normal: menos asteroides normales (cometas y colosos van aparte, y hay más)")]
     [Range(0.1f, 1f)] [SerializeField] private float fractureBudgetFactor = 0.6f;
+    [Tooltip("Además, de lo que se mueve y mata se queda solo esta parte (0.8 = un 20 % menos)")]
+    [Range(0.1f, 1f)] [SerializeField] private float fractureLethalFactor = 0.8f;
+    [Tooltip("Densidad de los mapas con grieta, al azar entre estos dos (sobre lo anterior): baja " +
+             "para que los patrones de la grieta se lean bien")]
+    [SerializeField] private Vector2 fractureDensity = new Vector2(0.8f, 0.95f);
+
+    [Header("Reparto por cobertura")]
+    [Tooltip("Lo que se mueve se reparte por sectores de este tamaño (unidades): primero donde no " +
+             "hay nada. Evita tramos vacíos y muros imposibles sin cambiar la cantidad")]
+    [SerializeField] private float coverageCell = 4.5f;
+    [Tooltip("Al reponer, cuántas entradas se comparan para elegir la que va a la zona más vacía")]
+    [SerializeField] private int coverageCandidates = 8;
     /// Mapa de fractura en este nivel. Lo pone GameDirector antes de StartLevel
     public bool FractureWorld { get; set; }
+
+    // ---- panel de calibración (multiplicadores en vivo; 1 = sin cambio)
+    public static float CalibSpeed = 1f, CalibDensity = 1f, CalibPlayer = 1f;
+    float levelCruise;
+    PlayerController playerCtl;
+    /// Crucero del jugador que marca la curva en este nivel
+    public float LevelCruise => levelCruise;
+    /// Recorte extra de lo que se mueve en mapas con grieta (lo pone GameDirector; 1 = nada)
+    public float FractureExtraCut { get; set; } = 1f;
+    float baseSpeedMultiplier = 1f;
+    public DifficultyProfile Difficulty => difficulty;
+    public int CurrentLevel => currentLevel;
+    public int TargetPopulation => targetPopulation;
 
     [Header("Estáticos agrupados")]
     [Tooltip("Los estáticos no se reparten uniformes: a veces nacen junto a otro, formando grupos con huecos entre ellos")]
@@ -178,7 +203,11 @@ public class LevelPopulator : MonoBehaviour
         if (colossus != null) colossus.BeginLevel(currentLevel);
         if (comets != null) comets.BeginLevel(currentLevel);
 
-        Asteroid.SpeedMultiplier = difficulty.SpeedMultiplier(currentLevel);
+        baseSpeedMultiplier = difficulty.SpeedMultiplier(currentLevel);
+        Asteroid.SpeedMultiplier = baseSpeedMultiplier * CalibSpeed;
+        levelCruise = difficulty.PlayerCruise(currentLevel);
+        if (playerCtl == null && player != null) playerCtl = player.GetComponentInParent<PlayerController>();
+        if (playerCtl != null && levelCruise > 0f) playerCtl.CruiseSpeed = levelCruise * CalibPlayer;
         if (FlowField.Instance != null)
         {
             // Cada nivel tiene su propia corriente, reproducible con la semilla
@@ -199,7 +228,8 @@ public class LevelPopulator : MonoBehaviour
         if (unlocked.Count == 0) { Debug.LogWarning("LevelPopulator: no hay tipos disponibles para este nivel."); return; }
 
         // Compra asteroides con el presupuesto del nivel
-        float budget = difficulty.Budget(currentLevel) * (DarkWorld ? darkBudgetFactor : 1f) * (FractureWorld ? fractureBudgetFactor : 1f);
+        float budget = difficulty.Budget(currentLevel) * CalibDensity * (DarkWorld ? darkBudgetFactor : 1f) * (FractureWorld ? fractureBudgetFactor : 1f)
+                       * (FractureWorld ? Random.Range(fractureDensity.x, fractureDensity.y) : 1f);
         darkLethal = null;
         nextDarkLethal = Time.time + Random.Range(darkLethalEvery.x, darkLethalEvery.y);
         var shopping = new List<AsteroidTypeData>();
@@ -211,6 +241,17 @@ public class LevelPopulator : MonoBehaviour
             shopping.Add(t);
             budget -= Cost(t);
             if (t.behavior != AsteroidBehavior.Static) moving++;
+        }
+
+        // Mapa de fractura: un 20 % menos de lo que se mueve (lo letal), además del recorte general
+        float keep = fractureLethalFactor * (FractureWorld ? FractureExtraCut : 1f);
+        if (FractureWorld && keep < 1f)
+        {
+            int movingNow = 0;
+            foreach (var t in shopping) if (t.behavior != AsteroidBehavior.Static) movingNow++;
+            int drop = Mathf.RoundToInt(movingNow * (1f - keep));
+            for (int i = shopping.Count - 1; i >= 0 && drop > 0; i--)
+                if (shopping[i].behavior != AsteroidBehavior.Static) { shopping.RemoveAt(i); drop--; }
         }
 
         // Mundo amplio: el presupuesto está pensado para UNA pantalla. Los que se mueven
@@ -275,9 +316,15 @@ public class LevelPopulator : MonoBehaviour
             }
         }
 
+        // Rejilla de cobertura para lo que se mueve: cada roca va al sector con menos
+        int gcols = Mathf.Max(1, Mathf.CeilToInt(movingRect.width / Mathf.Max(1f, coverageCell)));
+        int grows = Mathf.Max(1, Mathf.CeilToInt(movingRect.height / Mathf.Max(1f, coverageCell)));
+        var cover = new int[gcols * grows];
+
         foreach (var t in shopping)
         {
             bool isStatic = t.behavior == AsteroidBehavior.Static;
+            int cell = isStatic ? -1 : EmptiestCell(cover);
             float size = t.RandomSize();
             float approxR = size * 0.7f;
             Rect rect = isStatic ? staticRect : movingRect;
@@ -286,6 +333,13 @@ public class LevelPopulator : MonoBehaviour
             for (int attempt = 0; attempt < 40; attempt++)
             {
                 var p = new Vector2(Random.Range(rect.xMin, rect.xMax), Random.Range(rect.yMin, rect.yMax));
+                // Lo que se mueve: dentro del sector más vacío (los primeros intentos)
+                if (cell >= 0 && attempt < 25)
+                {
+                    float cw = movingRect.width / gcols, ch = movingRect.height / grows;
+                    int cx = cell % gcols, cy = cell / gcols;
+                    p = new Vector2(movingRect.xMin + (cx + Random.value) * cw, movingRect.yMin + (cy + Random.value) * ch);
+                }
                 // Estáticos agrupados: a veces junto a uno ya colocado (varios juntos y huecos)
                 if (isStatic && staticClusters && placedStatics.Count > 0 && Random.value < clusterChance)
                 {
@@ -295,7 +349,7 @@ public class LevelPopulator : MonoBehaviour
                     if (!rect.Contains(p)) continue;
                 }
                 // Lo que se mueve nace dentro de su carril (lentos y rápidos por caminos distintos)
-                if (lane >= 0 && attempt < 30 && !FlowField.Instance.InLane(p, lane)) continue;
+                if (lane >= 0 && attempt < 12 && !FlowField.Instance.InLane(p, lane)) continue;
 
                 if (Vector2.Distance(p, playerPos) < playerSafeRadius + approxR) continue;
                 if (isStatic && (goal.Contains(p) || bounds.IsBlocked(p, blockedMargin + approxR))) continue;
@@ -304,37 +358,21 @@ public class LevelPopulator : MonoBehaviour
 
                 var spawned = pool.Spawn(t, p, size);
                 if (isStatic && spawned != null) { statics.Add(spawned); placedStatics.Add((p, approxR)); }
-                if (!isStatic) MarkDark(spawned);
+                if (!isStatic)
+                {
+                    MarkDark(spawned);
+                    int cx = Mathf.Clamp(Mathf.FloorToInt((p.x - movingRect.xMin) / movingRect.width * gcols), 0, gcols - 1);
+                    int cy = Mathf.Clamp(Mathf.FloorToInt((p.y - movingRect.yMin) / movingRect.height * grows), 0, grows - 1);
+                    cover[cy * gcols + cx]++;
+                }
                 placed.Add((p, approxR));
                 count++;
                 break;
             }
         }
 
-        // Garantía de que el nivel se puede pasar. Va DESPUÉS de colocar: comprueba el
-        // reparto real, no el que pretendíamos. Si hay paso no toca nada.
-        string fairness = "verificación desactivada";
-        // Con el mundo grande, el verificador de camino completo deja de tener sentido (la
-        // meta está escondida y lo que fluye aún no existe). Se sustituye por dos
-        // comprobaciones locales en un paso posterior del Hito 3.5; hasta entonces, apagado.
-        if (bounds.IsExpanded) fairness = "verificación de camino apagada (mundo amplio)";
-        else if (difficulty.enforceSolvable)
-        {
-            ReadPlayerMetrics();
-            var r = SolvabilityGate.Enforce(
-                pool.Active, playerPos, playerRadius, playerSpeed,
-                area, bounds.GoalCorner, difficulty,
-                a => { pool.Release(a); count--; });
-
-            fairness = $"{r.Describe()} [jugador r{playerRadius:0.00} v{playerSpeed:0.0}, " +
-                       $"{r.steps} pasos, {r.millis:0.#} ms]";
-            if (!r.solvable)
-                Debug.LogWarning($"LevelPopulator: nivel {currentLevel} sigue sin paso después " +
-                                 $"de retirar {r.removed}. Si se repite, baja budgetCap o budgetK.");
-            else if (r.removed >= Mathf.Max(1, difficulty.solveMaxRemovals - 2))
-                Debug.LogWarning($"LevelPopulator: nivel {currentLevel} necesitó retirar {r.removed} " +
-                                 "asteroides. El verificador está tapando un problema de la curva.");
-        }
+        // Sin verificador de camino: el reparto lo decide el azar, con la cobertura repartiendo
+        string fairness = "reparto por cobertura";
 
         SetMassRef(statics);
         BuildPlanetSystems();
@@ -359,6 +397,8 @@ public class LevelPopulator : MonoBehaviour
     // tapar cada caso, se cuenta lo que hay vivo y se repone hasta la cantidad del nivel.
     void Update()
     {
+        Asteroid.SpeedMultiplier = baseSpeedMultiplier * CalibSpeed;
+        if (playerCtl != null && levelCruise > 0f) playerCtl.CruiseSpeed = levelCruise * CalibPlayer;
         if (pool == null || Asteroid.WorldFrozen) return;   // TimeFreeze: no entra nada nuevo
         if (DarkWorld) TickDarkLethal();
         if (!keepPopulation || targetPopulation <= 0) return;
@@ -465,14 +505,58 @@ public class LevelPopulator : MonoBehaviour
         //
         // Ojo a lo que NO hace: no impide que te alcance. Solo garantiza que, cuando entra,
         // tienes tiempo de verlo y decidir. Lo que pase después es tuyo.
-        Vector2 p = Vector2.zero;
-        for (int attempt = 0; attempt < 6; attempt++)
+        //
+        // Además, de las entradas que dejan tiempo, se queda con la que va hacia la zona más
+        // vacía: así no se forman bandas llenas y bandas sin nada
+        Vector2 p = Vector2.zero, best = Vector2.zero;
+        int bestScore = int.MaxValue;
+        bool any = false;
+        int tries = Mathf.Max(1, coverageCandidates);
+        for (int attempt = 0; attempt < tries + 4; attempt++)
         {
             p = FlowField.Instance.RandomEntryPoint(avoid, playerSafeRadius, type);
-            if (player == null || difficulty == null || GivesTimeToReact(p, type, avoid)) break;
+            bool fair = player == null || difficulty == null || GivesTimeToReact(p, type, avoid);
+            if (!fair && attempt < tries + 3) continue;
+            int score = CrowdAhead(p);
+            if (score < bestScore) { bestScore = score; best = p; any = true; }
+            if (attempt >= tries && any) break;
         }
+        if (any) p = best;
 
         MarkDark(pool.Spawn(type, p));
+    }
+
+    // Rocas que se mueven cerca del camino que seguirá una roca que entra por p
+    int CrowdAhead(Vector2 p)
+    {
+        Vector2 dir = FlowField.FromAngle(FlowField.Instance.AngleAt(p));
+        float r2 = coverageCell * coverageCell;
+        int n = 0;
+        var act = pool.Active;
+        for (int k = 1; k <= 3; k++)
+        {
+            Vector2 q = p + dir * (coverageCell * k);
+            for (int i = 0; i < act.Count; i++)
+            {
+                var a = act[i];
+                if (a == null || a.Type == null || a.IsOrbiting || a.Type.behavior == AsteroidBehavior.Static) continue;
+                if (((Vector2)a.transform.position - q).sqrMagnitude < r2) n++;
+            }
+        }
+        return n;
+    }
+
+    static int EmptiestCell(int[] cover)
+    {
+        int min = int.MaxValue;
+        for (int i = 0; i < cover.Length; i++) if (cover[i] < min) min = cover[i];
+        int pick = Random.Range(0, cover.Length);
+        for (int k = 0; k < cover.Length; k++)
+        {
+            int i = (pick + k) % cover.Length;
+            if (cover[i] == min) return i;
+        }
+        return 0;
     }
 
     void MarkDark(Asteroid a)

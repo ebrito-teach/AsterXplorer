@@ -284,6 +284,7 @@ MonoBehaviour:
   darkBudgetFactor: 0.3
   darkLethalEvery: {x: 20, y: 40}
   fractureBudgetFactor: 0.6
+  fractureLethalFactor: 0.8
   staticClusters: 1
   clusterChance: 0.4
   clusterGap: {x: 0.3, y: 1.6}
@@ -11037,6 +11038,7 @@ MonoBehaviour:
   grazeGain: {x: 0.1, y: 0.2}
   pushTime: 0.5
   pushReachScreens: 0.4
+  pushIFrames: 1
   pushStun: 0.35
   looks:
   - name: Vacio
@@ -11189,21 +11191,21 @@ MonoBehaviour:
   - {r: 1, g: 0.5, b: 0.2, a: 1}
   - {r: 0.45, g: 0.6, b: 1, a: 1}
   haloDesaturate: 0.35
-  sizeRange: {x: 1.5, y: 3}
-  drawScale: 1
+  sizeRange: {x: 0.8, y: 2}
+  drawScale: 0.7
   reachScalesWithSize: 1
-  edgeMargin: 1
-  allowPartiallyHidden: 0
-  centerGap: 0.12
-  hiddenChance: 0.35
+  edgeMargin: 0.5
+  allowPartiallyHidden: 1
+  centerGap: 0.2
+  hiddenChance: 0.4
   extraInset: 2
-  cornerWeight: 0.35
+  cornerWeight: 0.45
   anyWeight: 0.3
-  gravityGM: 12
-  massExponent: 2
-  maxPullAccel: 18
-  pullRadius: 4.5
-  eventHorizon: 0.6
+  gravityGM: 11
+  massExponent: 3
+  maxPullAccel: 16
+  pullRadius: 4.8
+  eventHorizon: 0.8
   shadowFraction: 0.27
   horizonFromShadow: 1
   horizonOverShadow: 1.8
@@ -11664,6 +11666,52 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1045389857}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1083712100
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1083712102}
+  - component: {fileID: 1083712101}
+  m_Layer: 0
+  m_Name: CalibrationPanel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1083712101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1083712100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 123ffb34bd8c37d4ab9852236ac0c5e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CalibrationPanel
+  onlyInDevelopment: 1
+  uiScale: 1
+--- !u!4 &1083712102
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1083712100}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -12167,10 +12215,8 @@ MonoBehaviour:
   objectBrightness: {x: 0.35, y: 0.8}
   depthHaze: {r: 0.32, g: 0.36, b: 0.5, a: 1}
   objectSpacing: 4
-  planetMapFollow: 0.96
-  planetMapScale: 0.55
-  planetMapBrightness: 0.6
   planetFadeMargin: 2
+  planetFadeSpeed: 0.35
 --- !u!1 &1322686714
 GameObject:
   m_ObjectHideFlags: 0
@@ -12763,7 +12809,7 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -23356,8 +23402,8 @@ MonoBehaviour:
   startLevel: 1
   runSeed: 0
   sameLevelOnRetry: 0
-  resumeFromSave: 1
-  recordProgress: 1
+  resumeFromSave: 0
+  recordProgress: 0
   startDelay: 0.4
   nextLevelDelay: 1.1
   darkWorldChance: 0.06
@@ -23368,7 +23414,8 @@ MonoBehaviour:
   colossus: {fileID: 0}
   fractureColossusChance: 3
   fractureExtraComets: 1
-  alwaysFracture: 0
+  fractureLethalCut: 0.9
+  alwaysFracture: 1
   transition: {fileID: 0}
   respawnDelay: 1.4
   mirrorWithFlow: 1
@@ -23424,3 +23471,4 @@ SceneRoots:
   - {fileID: 1208269385}
   - {fileID: 878006286}
   - {fileID: 1322686716}
+  - {fileID: 1083712102}

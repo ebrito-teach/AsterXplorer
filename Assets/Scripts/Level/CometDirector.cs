@@ -46,6 +46,8 @@ public class CometDirector : MonoBehaviour
     public bool Suppressed { get; set; }
     /// Mapas de fractura: cometas de más a la vez. Lo pone GameDirector en cada nivel
     public int ExtraAlive { get; set; }
+    /// Multiplica la espera entre cometas (más de 1 = menos cometas). Lo pone GameDirector
+    public float DelayMultiplier { get; set; } = 1f;
 
     public void BeginLevel(int level)
     {
@@ -54,7 +56,7 @@ public class CometDirector : MonoBehaviour
         TargetAlive = CurrentType != null ? Range(aliveRange.x, aliveRange.y) + Mathf.Max(0, ExtraAlive) : 0;
         lastAlive = 0;
         nextCount = 0f;
-        nextSpawn = Time.time + Range(firstDelay.x, firstDelay.y);
+        nextSpawn = Time.time + Range(firstDelay.x, firstDelay.y) * DelayMultiplier;
 
         Debug.Log(CurrentType != null
             ? $"CometDirector: nivel {level}, cometa '{CurrentType.id}', {TargetAlive} a la vez."
@@ -72,7 +74,7 @@ public class CometDirector : MonoBehaviour
 
         // Se fue uno: el siguiente espera su turno desde ahora, no entra de golpe
         if (alive < lastAlive)
-            nextSpawn = Mathf.Max(nextSpawn, Time.time + Range(respawnDelay.x, respawnDelay.y));
+            nextSpawn = Mathf.Max(nextSpawn, Time.time + Range(respawnDelay.x, respawnDelay.y) * DelayMultiplier);
         lastAlive = alive;
 
         if (alive >= TargetAlive || Time.time < nextSpawn) return;
@@ -85,7 +87,7 @@ public class CometDirector : MonoBehaviour
         if (pool.Spawn(CurrentType, p) != null)
         {
             lastAlive = alive + 1;
-            nextSpawn = Time.time + Range(respawnDelay.x, respawnDelay.y);
+            nextSpawn = Time.time + Range(respawnDelay.x, respawnDelay.y) * DelayMultiplier;
         }
     }
 
