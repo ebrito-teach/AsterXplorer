@@ -366,6 +366,44 @@ public class FractureDirector : MonoBehaviour
         return PointAt(Mathf.Clamp(y, bottom, top), totalLength).x;
     }
 
+    // Segunda red: si por lo que sea el jugador acaba detrás de la rasgadura, se le devuelve
+    // delante y se avisa una vez en la consola con los datos, para encontrar por dónde pasó
+    bool warnedBehind;
+    void GuardPlayer()
+    {
+        if (player == null || player.IsDead || player.IsExpelling || player.IsAbsorbed) return;
+        var body = player.Body;
+        if (body == null) return;
+        Vector2 p = body.position;
+        float wx = WallX(p.y);
+        float behind = (wx - p.x) * Front.x;
+        if (behind <= 0.05f) return;
+        if (!warnedBehind)
+        {
+            warnedBehind = true;
+            Debug.LogWarning($"FractureDirector: el jugador estaba DETRÁS de la rasgadura en {p} (pared x={wx:0.00} a esa " +
+                             $"altura, cara {Front}, eje en x={edgeX + Front.x * edgeDistance:0.00}). Devuelto delante.", this);
+        }
+        body.position = new Vector2(wx + Front.x * 0.1f, p.y);
+        body.linearVelocity = new Vector2(Front.x * Mathf.Abs(body.linearVelocity.x) * 0.2f, body.linearVelocity.y);
+    }
+
+    void OnDrawGizmos()
+    {
+        if (!Active || sections.Count == 0) return;
+        Gizmos.color = Color.magenta;
+        var gb = GameBounds.Instance;
+        if (gb == null) return;
+        Rect a = gb.Area;
+        Vector2 prev = new Vector2(WallX(a.yMin), a.yMin);
+        for (float y = a.yMin; y <= a.yMax; y += 0.5f)
+        {
+            var q = new Vector2(WallX(y), y);
+            Gizmos.DrawLine(prev, q);
+            prev = q;
+        }
+    }
+
     // Rocas al otro lado: no pueden estar ahí. Las que crucen por arriba o por abajo se deshacen
     AsteroidPool pool;
     float nextSweep;
@@ -428,6 +466,7 @@ public class FractureDirector : MonoBehaviour
             Presence = Mathf.MoveTowards(Presence, want, Time.deltaTime * 0.7f);
         }
         SweepBehind();
+        GuardPlayer();
         if (player.IsDead || player.IsExpelling) return;
 
         if (!started)

@@ -11019,6 +11019,9 @@ MonoBehaviour:
   sortingOrder: 200
   projectileLayer: Asteroids
   projectileOrder: 400
+  backDepth: 3
+  frontDepth: 2.5
+  frontAlpha: 0.22
 --- !u!1 &848801468
 GameObject:
   m_ObjectHideFlags: 0
@@ -11327,6 +11330,59 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 874463473}
   m_CullTransparentMesh: 1
+--- !u!1 &878006284
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 878006286}
+  - component: {fileID: 878006285}
+  m_Layer: 0
+  m_Name: ForegroundDust
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &878006285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 878006284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02680fc51f60585499d734eba11037bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ForegroundDust
+  clouds: 6
+  depth: {x: 2, y: 4.5}
+  size: {x: 4, y: 9}
+  alpha: {x: 0.05, y: 0.14}
+  tintA: {r: 0.7, g: 0.65, b: 0.9, a: 1}
+  tintB: {r: 0.9, g: 0.6, b: 0.65, a: 1}
+  drift: 0.25
+  sortingLayer: Player
+  sortingOrder: 700
+--- !u!4 &878006286
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 878006284}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &966644752
 GameObject:
   m_ObjectHideFlags: 0
@@ -11532,6 +11588,57 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1056400554
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1056400556}
+  - component: {fileID: 1056400555}
+  m_Layer: 0
+  m_Name: AsteroidScale
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1056400555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1056400554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3247f8584d5430c44a0906296cae0ddb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AsteroidScaleTuner
+  statics: 1
+  slow: 1
+  fast: 1
+  breakable: 1
+  colossus: 1
+  comets: 1
+  debris: 1
+--- !u!4 &1056400556
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1056400554}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1161059798
 GameObject:
   m_ObjectHideFlags: 0
@@ -11670,6 +11777,54 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1 &1208269383
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1208269385}
+  - component: {fileID: 1208269384}
+  m_Layer: 0
+  m_Name: Vignette
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1208269384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1208269383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa73e43e9f21255419a8ea5611062ea0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ScreenVignette
+  baseAmount: 0.12
+  fractureAmount: 0.45
+  color: {r: 0.03, g: 0, b: 0.06, a: 1}
+  canvasOrder: 40
+--- !u!4 &1208269385
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1208269383}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1262664681
 GameObject:
   m_ObjectHideFlags: 0
@@ -12548,7 +12703,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.038, y: -4.059, z: 0}
-  m_LocalScale: {x: 1.7, y: 1.7, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1762936118}
@@ -17926,7 +18081,9 @@ MonoBehaviour:
   frameFracture: 1
   fractureRange: {x: 16, y: 7}
   fractureZoom: 1
-  fracturePull: 0.6
+  fracturePull: 0.35
+  fractureFocusSmooth: 0.8
+  fractureRumble: 0.06
   frameGoal: 1
   frameRange: 6
   frameFullAt: 2.5
@@ -23104,7 +23261,7 @@ MonoBehaviour:
   colossus: {fileID: 0}
   fractureColossusChance: 3
   fractureExtraComets: 1
-  alwaysFracture: 1
+  alwaysFracture: 0
   transition: {fileID: 0}
   respawnDelay: 1.4
   mirrorWithFlow: 1
@@ -23157,3 +23314,6 @@ SceneRoots:
   - {fileID: 2013440653}
   - {fileID: 848169112}
   - {fileID: 1968779674}
+  - {fileID: 1208269385}
+  - {fileID: 878006286}
+  - {fileID: 1056400556}
