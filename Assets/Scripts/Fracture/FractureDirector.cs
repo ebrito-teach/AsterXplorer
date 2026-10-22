@@ -43,7 +43,22 @@ public class FractureDirector : MonoBehaviour
     public static Color WarningColor { get; private set; } = new Color(1f, 0.25f, 0.35f);
     /// Profundidad de las capas de la rasgadura (la cámara es en perspectiva): cuánto más
     /// lejos va el polvo de fondo y cuánto más cerca los jirones de delante, y su opacidad
-    public static float BackDepth = 3f, FrontDepth = 2.5f, FrontAlpha = 0.22f;
+    /// Un tinte vacío (transparente) o negro dejaría la grieta invisible sobre el espacio: en ese
+    /// caso se usa el de por defecto. Pasa al añadir diseños desde el Inspector
+    public static Color UsableTint(Color c, Color fallback)
+    {
+        bool usable = c.a > 0.01f && Mathf.Max(c.r, Mathf.Max(c.g, c.b)) > 0.05f;
+        if (!usable && !warnedTint)
+        {
+            warnedTint = true;
+            Debug.LogWarning("FractureDirector: un color de Looks (Dust/Core/Glow Tint) está en negro o transparente; " +
+                             "se usa el de por defecto. Ponlo en blanco en el Inspector.");
+        }
+        return usable ? c : fallback;
+    }
+    static bool warnedTint;
+
+    public static float BackDepth = 3f, FrontDepth = 2.5f, FrontAlpha = 0.22f, BackAlpha = 0.9f;
 
     [Serializable]
     public class Look
@@ -82,6 +97,13 @@ public class FractureDirector : MonoBehaviour
     [SerializeField] private float riftWidth = 2.4f;
     [Tooltip("Cuánto se curva la rasgadura (unidades), para que no sea una línea recta")]
     [SerializeField] private float curve = 1.2f;
+    [Tooltip("Inclinación máxima de los eslabones respecto a la vertical (grados)")]
+    [SerializeField] private float maxTilt = 12f;
+    [Tooltip("Por encima y por debajo de la rasgadura sigue una barrera tenue hasta el borde del " +
+             "mundo: marca hasta dónde llega y no deja cruzar por ahí")]
+    [Range(0f, 1f)] [SerializeField] private float extensionAlpha = 0.55f;
+    [Tooltip("Opacidad del polvo de fondo de la grieta (la capa lejana que marca su tamaño), respecto al polvo principal")]
+    [Range(0f, 1f)] [SerializeField] private float backAlpha = 0.9f;
     [Tooltip("Distancia del eje de la rasgadura al borde del mundo")]
     [SerializeField] private float edgeDistance = 3.5f;
     [Tooltip("Parte del ancho que es sólida para el jugador")]
@@ -116,9 +138,15 @@ public class FractureDirector : MonoBehaviour
     [SerializeField] private int maxCharges = 2;
     [SerializeField] private float grazeDistance = 0.6f;
     [SerializeField] private Vector2 grazeGain = new Vector2(0.1f, 0.2f);
-    [Tooltip("Velocidad del empujón de la onda expansiva de la grieta (unidades/s)")]
-    [SerializeField] private float pushSpeed = 15f;
-    [SerializeField] private float pushStun = 0.35f;
+    [Tooltip("La onda expansiva de la grieta te lanza hasta el centro del mapa. En cada ventana " +
+             "vulnerable de un eslabón empuja una vez: a la primera o a la segunda onda (50 %), y si " +
+             "no, al terminar la ventana. Segundos que dura el viaje: sale de golpe y frena al final")]
+    [SerializeField] private float pushTime = 0.5f;
+    [Tooltip("Solo te alcanza si estás cerca de la grieta: a menos de esta fracción del ancho de la " +
+             "pantalla (0.4 = en una pantalla de -5 a 5 con la grieta en -5, tienes que estar en -1 o más cerca)")]
+    [Range(0.1f, 1f)] [SerializeField] private float pushReachScreens = 0.4f;
+    [Tooltip("Segundos sin control tras el empujón")]
+    [SerializeField] private float pushStun = 0.45f;
 
     [Header("Aspecto")]
     [SerializeField] private Look[] looks;
@@ -170,6 +198,19 @@ public class FractureDirector : MonoBehaviour
     /// Grieta cerrada: dónde estaba (ahí va el agujero negro)
     public event Action<Vector2> Closed;
     public event Action WaveFired;
+    /// Se ha preparado un nivel (con o sin grieta)
+    public event Action Prepared;
+    /// Ya terminó la espera inicial y los eslabones están en su ciclo
+    public bool Started => Active && started && !done;
+    public float RiftWidth => riftWidth;
+
+    /// Un eslabón aún abierto al azar (null si no queda ninguno)
+    public FractureSection RandomAliveSection()
+    {
+        var alive = new List<FractureSection>();
+        foreach (var s in sections) if (s != null && s.gameObject.activeSelf && !s.Closed) alive.Add(s);
+        return alive.Count > 0 ? alive[Random.Range(0, alive.Count)] : null;
+    }
 
     readonly List<FractureSection> sections = new List<FractureSection>();
     readonly List<Antimatter> shots = new List<Antimatter>();
@@ -186,6 +227,7 @@ public class FractureDirector : MonoBehaviour
     {
         Instance = this;
         WarningColor = warningColor;
+        BackAlpha = backAlpha;
         BackDepth = backDepth; FrontDepth = Mathf.Clamp(frontDepth, 0f, 8f); FrontAlpha = frontAlpha;
         if (MarkerSprite == null) MarkerSprite = MakeMarker();
         fallbackCore = MakeOrb(64, true);
@@ -236,7 +278,7 @@ public class FractureDirector : MonoBehaviour
         done = !on;
         started = false;
         OpenSection = null;
-        if (!on) return;
+        if (!on) { Prepared?.Invoke(); return; }
         if (player != null)
         {
             var col = player.GetComponentInChildren<Collider2D>();
@@ -244,6 +286,7 @@ public class FractureDirector : MonoBehaviour
         }
         Build(new System.Random(layoutSeed), playerSpawn);
         startAt = Time.time + firstDelay + 1.5f;   // la llegada del jugador dura ~1.4 s
+        Prepared?.Invoke();
     }
 
     void Clear()
@@ -293,7 +336,10 @@ public class FractureDirector : MonoBehaviour
         axisY = Mathf.Lerp(area.yMin + 1f + total * 0.5f, area.yMax - 1f - total * 0.5f, (float)rng.NextDouble());
         Center = new Vector2(edgeX, axisY);   // ahí aparece el agujero al cerrarla, en el borde como siempre
         curvePhase = (float)rng.NextDouble() * Mathf.PI * 2f;
-        curveFreq = Mathf.Lerp(0.6f, 1.3f, (float)rng.NextDouble());
+        curveFreq = Mathf.Lerp(0.25f, 0.55f, (float)rng.NextDouble());
+        // Curva suave: los eslabones nunca se inclinan más de Max Tilt (antes llegaban a ~40° y
+        // el dibujo se salía de la línea que no se puede cruzar)
+        curveAmp = Mathf.Min(curve, Mathf.Tan(maxTilt * Mathf.Deg2Rad) * total / (2f * Mathf.PI * curveFreq));
 
         // 3. Eslabones a lo largo, cada uno según sus ondas
         int sum = 0; foreach (var k in kinds) sum += Waves(k);
@@ -329,6 +375,9 @@ public class FractureDirector : MonoBehaviour
                           float.MaxValue);   // empiezan al terminar la espera inicial
         }
 
+        BuildExtensions(look);
+        UpdateExtensions();
+
         // No se puede pasar por detrás: una pared que sigue el eje curvo de la rasgadura, y por
         // encima y por debajo de ella sigue a la altura de sus extremos. Los espacios de arriba
         // y de abajo tampoco llevan al otro lado
@@ -349,7 +398,75 @@ public class FractureDirector : MonoBehaviour
                   $"{waves} ondas, largo {total:0.0} u, diseño '{look?.name}'.");
     }
 
-    float curvePhase, curveFreq, totalLength;
+    float curvePhase, curveFreq, curveAmp, totalLength;
+    Transform extTop, extBottom;
+    SpriteRenderer extTopSr, extBottomSr;
+
+    // Las prolongaciones: desde cada extremo de la rasgadura hasta el borde del mundo, una
+    // barrera tenue y sólida en la misma línea
+    void BuildExtensions(Look look)
+    {
+        extTop = MakeExtension("ExtensionArriba", look, out extTopSr);
+        extBottom = MakeExtension("ExtensionAbajo", look, out extBottomSr);
+    }
+
+    Transform MakeExtension(string name, Look look, out SpriteRenderer sr)
+    {
+        var go = new GameObject(name);
+        go.transform.SetParent(root, false);
+        var body = go.AddComponent<Rigidbody2D>();
+        body.bodyType = RigidbodyType2D.Kinematic;
+        var v = new GameObject("Velo");
+        v.transform.SetParent(go.transform, false);
+        sr = v.AddComponent<SpriteRenderer>();
+        sr.sprite = look.dust != null ? look.dust : fallbackGlow;
+        sr.sortingLayerName = sortingLayer;
+        sr.sortingOrder = sortingOrder - 2;
+        var c = UsableTint(look.glowTint, new Color(0.75f, 0.45f, 1f, 1f));
+        sr.color = new Color(c.r, c.g, c.b, extensionAlpha);
+        var w = new GameObject("Solido");
+        w.transform.SetParent(go.transform, false);
+        int walls = LayerMask.NameToLayer("Walls");
+        if (walls >= 0) w.layer = walls;
+        w.AddComponent<BoxCollider2D>();
+        return go.transform;
+    }
+
+    void UpdateExtensions()
+    {
+        var gb = GameBounds.Instance;
+        if (gb == null || extTop == null) return;
+        Rect area = gb.Area;
+        float top = float.MinValue, bottom = float.MaxValue;
+        foreach (var s in sections)
+        {
+            if (s == null || s.Closed) continue;
+            top = Mathf.Max(top, s.Along + s.Length * 0.5f);
+            bottom = Mathf.Min(bottom, s.Along - s.Length * 0.5f);
+        }
+        if (top < bottom) { extTop.gameObject.SetActive(false); extBottom.gameObject.SetActive(false); return; }
+        PlaceExtension(extTop, extTopSr, top, area.yMax + 1f);
+        PlaceExtension(extBottom, extBottomSr, bottom, area.yMin - 1f);
+    }
+
+    void PlaceExtension(Transform t, SpriteRenderer sr, float fromY, float toY)
+    {
+        float len = Mathf.Abs(toY - fromY);
+        t.gameObject.SetActive(len > 0.3f);
+        if (len <= 0.3f) return;
+        float x = PointAt(fromY, totalLength).x;
+        t.position = new Vector3(x, (fromY + toY) * 0.5f, 0f);
+        t.rotation = Quaternion.identity;
+        var box = t.GetComponentInChildren<BoxCollider2D>();
+        if (box != null) box.size = new Vector2(riftWidth * solidFraction, len);
+        if (sr != null && sr.sprite != null)
+        {
+            // El dibujo del polvo va en horizontal: se gira para que vaya a lo largo
+            sr.transform.localRotation = Quaternion.Euler(0f, 0f, 90f);
+            sr.transform.localScale = new Vector3(len / Mathf.Max(0.01f, sr.sprite.bounds.size.x),
+                                                  riftWidth * 1.2f / Mathf.Max(0.01f, sr.sprite.bounds.size.y), 1f);
+        }
+    }
 
     /// La x que no se puede pasar a una altura dada: el eje de la rasgadura (o el de su
     /// extremo más cercano, por encima y por debajo de ella)
@@ -429,7 +546,7 @@ public class FractureDirector : MonoBehaviour
     Vector2 PointAt(float yAlong, float total)
     {
         float u = (yAlong - axisY) / Mathf.Max(0.01f, total);
-        float off = Mathf.Sin(u * Mathf.PI * 2f * curveFreq + curvePhase) * curve;
+        float off = Mathf.Sin(u * Mathf.PI * 2f * curveFreq + curvePhase) * curveAmp;
         return new Vector2(edgeX + Front.x * (edgeDistance + off), yAlong);
     }
 
@@ -542,13 +659,8 @@ public class FractureDirector : MonoBehaviour
         bool closed = s.TakeWave();
         Ring(weak, 0.5f, Mathf.Max(6f, waveRange), new Color(0.6f, 1f, 0.7f, 0.9f));
 
-        // La grieta responde con una onda expansiva que te manda lejos
-        if (player != null)
-        {
-            Vector2 away = (Vector2)player.transform.position - weak;
-            if (Vector2.Dot(away, Front) < 0.2f) away += Front * 2f;   // siempre hacia fuera de la grieta
-            player.Shove(away.normalized * pushSpeed, pushStun);
-        }
+        // La grieta decide si responde con su onda expansiva (una vez por ventana)
+        if (s.ConsumePush(closed)) PushToCenter(weak);
         WaveFired?.Invoke();
         Debug.Log($"FractureDirector: onda a un eslabón {s.Kind} ({s.WavesTaken}/{s.WavesRequired})" +
                   (closed ? " — CERRADO" : "") + $". Cargas: {Charge:0.00}");
@@ -557,12 +669,16 @@ public class FractureDirector : MonoBehaviour
         {
             Burst(s.transform.position, s.Length * 0.5f, 40);
             Rejoin(s);
+            UpdateExtensionsSoon();
             bool all = true;
             foreach (var x in sections) if (!x.Closed) { all = false; break; }
             if (all) Finish();
         }
         return true;
     }
+
+    // Tras juntarse los eslabones (tarda ~1.1 s), las prolongaciones se recolocan
+    void UpdateExtensionsSoon() { CancelInvoke(nameof(UpdateExtensions)); Invoke(nameof(UpdateExtensions), 1.2f); UpdateExtensions(); }
 
     // Se cerró un eslabón: si estaba en medio, los de arriba y los de abajo se juntan sobre el
     // hueco (cada lado la mitad); si estaba en un extremo, la rasgadura solo se acorta
@@ -598,6 +714,29 @@ public class FractureDirector : MonoBehaviour
         Closed?.Invoke(Center);
     }
 
+    /// Un eslabón sale de su enfriamiento sin haber empujado en esa ventana: empuja igualmente
+    public void OnWindowEnded(FractureSection s)
+    {
+        if (!Active || done || !started || s == null) return;
+        PushToCenter(s.WeakPoint);
+    }
+
+    // Onda expansiva que lanza al jugador hasta el centro del mapa
+    void PushToCenter(Vector2 from)
+    {
+        if (player == null || player.IsDead || player.IsExpelling || player.IsAbsorbed) return;
+        var gb = GameBounds.Instance;
+        if (gb == null || !gb.IsReady) return;
+        Ring(from, 1f, 16f, new Color(1f, 0.8f, 0.95f, 0.85f));
+        // Lejos de la grieta la onda no llega
+        Vector2 pp = player.transform.position;
+        float fromRift = Mathf.Abs(pp.x - WallX(pp.y));
+        if (fromRift > gb.ScreenSize.x * pushReachScreens) return;
+        Vector2 to = gb.Area.center - pp;
+        if (to.magnitude < 0.5f) return;
+        player.Blast(to, to.magnitude, pushTime, pushStun);
+    }
+
     // ------------------------------------------------------------------ cargas y choques
     public void AddCharge(float amount)
     {
@@ -621,8 +760,15 @@ public class FractureDirector : MonoBehaviour
 
     public void OnHitPlayer(Antimatter a, PlayerController pc)
     {
+        // El perseguidor lo resuelve el QTE (escudo, Ghost, fallo)
+        if (a.Homing)
+        {
+            if (qte == null) qte = GetComponent<FractureQTE>();
+            if (qte != null) { qte.OnHomingHit(a); return; }
+        }
         pc.Kill();
     }
+    FractureQTE qte;
 
     /// Lo que toca la antimateria o entra en la rasgadura se deshace en pedazos
     public void Disintegrate(Asteroid a)

@@ -80,9 +80,9 @@ public class FractureSection : MonoBehaviour
         s.Front = front;
         // Un elemento añadido desde el Inspector nace con los colores en negro transparente:
         // si un color no tiene alfa, se usa el de por defecto en vez de dejar la grieta invisible
-        s.dustTint = look.dustTint.a > 0.01f ? look.dustTint : new Color(1f, 1f, 1f, 0.85f);
-        s.coreTint = look.coreTint.a > 0.01f ? look.coreTint : Color.white;
-        s.glowTint = look.glowTint.a > 0.01f ? look.glowTint : new Color(0.75f, 0.45f, 1f, 0.6f);
+        s.dustTint = FractureDirector.UsableTint(look.dustTint, new Color(1f, 1f, 1f, 0.85f));
+        s.coreTint = FractureDirector.UsableTint(look.coreTint, Color.white);
+        s.glowTint = FractureDirector.UsableTint(look.glowTint, new Color(0.75f, 0.45f, 1f, 0.6f));
 
         // Se solapan un poco con los vecinos: así la rasgadura se ve continua
         s.dust = s.Layer("Polvo", look.dust, length * 1.35f, thickness * 2.6f, sortingLayer, order, s.dustTint, out s.dustScale);
@@ -92,7 +92,7 @@ public class FractureSection : MonoBehaviour
         // Profundidad (la cámara es en perspectiva): un polvo más lejano, detrás, que se mueve
         // más despacio, y unos jirones más cerca de la cámara que pasan por delante del
         // jugador, semitransparentes. Al moverse se ve como un volumen enorme, no un dibujo
-        s.backTint = new Color(s.dustTint.r * 0.7f, s.dustTint.g * 0.7f, s.dustTint.b * 0.8f, s.dustTint.a * 0.55f);
+        s.backTint = new Color(s.dustTint.r * 0.7f, s.dustTint.g * 0.7f, s.dustTint.b * 0.8f, s.dustTint.a * FractureDirector.BackAlpha);
         s.dustBack = s.Layer("PolvoFondo", look.dust, length * 1.7f, thickness * 3.4f, sortingLayer, order - 1, s.backTint, out s.backScale);
         s.dustBack.transform.localPosition = new Vector3(0f, 0f, FractureDirector.BackDepth);
         s.frontTint = new Color(s.dustTint.r, s.dustTint.g, s.dustTint.b, FractureDirector.FrontAlpha);
@@ -183,8 +183,29 @@ public class FractureSection : MonoBehaviour
     public void ForceOpen(float seconds)
     {
         if (Closed) return;
+        if (!IsOpen) BeginWindow();
         IsOpen = true;
         phaseEnd = Time.time + seconds;
+    }
+
+    // ---- empuje: en cada ventana vulnerable la grieta te empuja una vez, sí o sí
+    int windowWaves, pushOnWave = 1;
+    bool windowPushed;
+
+    void BeginWindow()
+    {
+        windowWaves = 0;
+        windowPushed = false;
+        pushOnWave = Random.value < 0.5f ? 1 : 2;   // 50 %: a la primera onda o a la segunda
+    }
+
+    /// Tras recibir una onda: ¿toca empujar ahora? (la primera o la segunda de la ventana,
+    /// según el sorteo; o la que lo cierra, si aún no empujó)
+    public bool ConsumePush(bool closedNow)
+    {
+        if (windowPushed) return false;
+        if (windowWaves >= pushOnWave || closedNow) { windowPushed = true; return true; }
+        return false;
     }
 
     /// Lo mueve hasta otro sitio (al juntarse con sus vecinos)
@@ -202,6 +223,7 @@ public class FractureSection : MonoBehaviour
     {
         if (Closed) return false;
         WavesTaken++;
+        windowWaves++;
         flash = 1f;
         if (Closed) { closing = 0f; IsOpen = false; }
         return Closed;
@@ -219,7 +241,10 @@ public class FractureSection : MonoBehaviour
         }
         if (Time.time >= phaseEnd)
         {
+            // Sale del enfriamiento: si en esta ventana aún no empujó, empuja ahora
+            if (IsOpen && !windowPushed && owner != null) { windowPushed = true; owner.OnWindowEnded(this); }
             IsOpen = !IsOpen;
+            if (IsOpen) BeginWindow();
             phaseEnd = Time.time + (IsOpen ? Random.Range(cooldownTime.x, cooldownTime.y) : Random.Range(firingTime.x, firingTime.y));
             if (!IsOpen && calibers != null)
                 for (int i = 0; i < calibers.Length; i++) calibers[i].next = Time.time + Random.Range(0.4f, 1.2f);

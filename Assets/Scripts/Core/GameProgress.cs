@@ -71,6 +71,9 @@ public class GameProgress : MonoBehaviour
         Data.run.levelSeconds = 0f;
         Data.run.buffs.Clear();
         Data.run.buffsCharacter = Data.collection.equipped;
+        Data.run.geodeTakenLevel = 0;
+        Data.run.geodeSprite = -1;
+        Data.run.geodeLostLevel = 0;
         if (autoSave) Save();
     }
 
@@ -143,9 +146,11 @@ public class GameProgress : MonoBehaviour
     /// le compensaría intentarlo.
     ///
     /// No se agota. El que sigue jugando sigue recibiendo.
-    public int CollectGeode(int level, int seed)
+    public int CollectGeode(int level, int seed, int sprite = -1)
     {
         Data.economy.geodesOpened++;
+        Data.run.geodeTakenLevel = level;
+        Data.run.geodeSprite = sprite;
 
         int amount = economy != null ? economy.GeodeRoll(level, seed) : 0;
         if (amount > 0)
@@ -155,7 +160,17 @@ public class GameProgress : MonoBehaviour
         }
 
         GeodeOpened?.Invoke(amount, Data.economy.geodesOpened);
+        if (autoSave) Save();
         return amount;
+    }
+
+    /// Moriste en un nivel que tenía geoda: ese nivel ya no la tendrá en los siguientes intentos
+    public void ForfeitGeode(int level)
+    {
+        Data.run.geodeLostLevel = level;
+        if (Data.run.geodeTakenLevel == level) { Data.run.geodeTakenLevel = 0; Data.run.geodeSprite = -1; }
+        Data.run.pendingCrystals = 0;
+        if (autoSave) Save();
     }
 
     // ---------------------------------------------------------------- hitos

@@ -45,6 +45,14 @@ public class Asteroid : MonoBehaviour
     public bool IsDislodged => dislodged;
     /// Está orbitando a otro cuerpo
     public bool IsOrbiting => orbitHost != null;
+    /// Lo que orbita mata según su anfitrión (-1), o según esto: 1 mata, 0 no (cinturón de planeta)
+    int orbitLethal = -1;
+
+    /// Decide si sus lunas actuales matan, sin mirar al anfitrión (el cinturón de un planeta sí, sus lunas no)
+    public void SetMoonsLethal(bool lethal)
+    {
+        foreach (var m in moons) if (m != null) m.orbitLethal = lethal ? 1 : 0;
+    }
     /// Lo que mata: lo que se mueve por su cuenta, un estático soltado, y las lunas
     /// de un cuerpo que las tenga declaradas mortales (coloso y cometa; el estático no).
     public bool Lethal
@@ -58,7 +66,7 @@ public class Asteroid : MonoBehaviour
             // Lo que orbita mata según su anfitrión, sea del tamaño que sea: los satélites de
             // un campo son peligrosos aunque sean pequeños
             if (orbitHost != null)
-                return orbitHost.Type != null && orbitHost.Type.moonsAreLethal;
+                return orbitLethal >= 0 ? orbitLethal == 1 : orbitHost.Type != null && orbitHost.Type.moonsAreLethal;
             // Un trozo por debajo del radio mínimo empuja, pero no mata
             if (Type.lethalMinRadius > 0f && WorldRadius < Type.lethalMinRadius) return false;
             return Type.killsPlayer || dislodged;
@@ -87,6 +95,7 @@ public class Asteroid : MonoBehaviour
     float personalOffset;
     float noiseSeedA, noiseSeedB;
     float lifetimeEnd = -1f;
+    int lane = -1;
     float shedTimer;
     float restoreBlockedUntil;
     float pulledUntil;
@@ -129,13 +138,20 @@ public class Asteroid : MonoBehaviour
         col = GetComponent<CircleCollider2D>();
         sr = GetComponent<SpriteRenderer>();
         tails = GetComponentsInChildren<ParticleSystem>(true);
+        baseOrder = sr != null ? sr.sortingOrder : 0;
     }
+
+    int baseOrder;
+    /// Los planetas se dibujan por debajo del resto de rocas (y su anillo con ellos): un coloso
+    /// o una roca que pase por encima se ve delante, nunca cortado por el anillo
+    public const int PlanetOrderOffset = -5;
 
     public void Init(AsteroidTypeData type, Sprite sprite, Vector2 position, float size, AsteroidPool owner)
     {
         Type = type;
         pool = owner;
         gameObject.name = type.id;
+        if (sr != null) sr.sortingOrder = baseOrder + (type.planet ? PlanetOrderOffset : 0);
         Serial = ++serialCounter;
         frozenUntil = 0f;
 
@@ -146,6 +162,7 @@ public class Asteroid : MonoBehaviour
         if (col != null) col.enabled = true;
         isTrail = false;
         orbitHost = null;
+        orbitLethal = -1;
         moons.Clear();
         restoreBlockedUntil = 0f;
         pulledUntil = 0f;
@@ -315,6 +332,14 @@ public class Asteroid : MonoBehaviour
 
         var flow = FlowField.Instance;
         followsFlow = flow != null && Random.value < Type.followFlow;
+        // Su carril: lentos y rápidos por bandas distintas (cometas y colosos, libres)
+        lane = -1;
+        if (followsFlow)
+        {
+            int kind = FlowField.KindOf(Type);
+            lane = flow.LaneAt(position, kind);
+            if (lane < 0) lane = flow.PickLane(kind);
+        }
 
         Vector2 dir = followsFlow
             ? FlowField.FromAngle(flow.AngleAt(position) + personalOffset)
@@ -362,6 +387,70 @@ public class Asteroid : MonoBehaviour
             w = Mathf.Clamp(w, 6f, 240f) * sense;
             m.EnterOrbit(this, a0 + step * i + Random.Range(-step * 0.35f, step * 0.35f), r, w);
         }
+    }
+
+    /// Anillos, como los de Saturno (solo en los estáticos grandes): a radios fijos, muchas
+    /// lunas pequeñas repartidas por igual y alguna mayor, todas en el mismo sentido. Cada
+    /// anillo gira a su velocidad de Kepler: los de dentro, más rápido. Devuelve cuántas creó
+    public int SpawnRings(AsteroidTypeData[] types, int rings, float firstGap, float spacing, float moonSpacing,
+                          float moonScale, float bigChance, int maxPerRing, float degPerSecAtRef, float refRadius)
+    {
+        if (pool == null || types == null || types.Length == 0 || rings <= 0) return 0;
+        float massK = Mathf.Sqrt(Mathf.Max(0.001f, Mass) / Mathf.Max(0.001f, StaticMassRef));
+        float sense = Random.value < 0.5f ? -1f : 1f;
+        int made = 0;
+        for (int k = 0; k < rings; k++)
+        {
+            float r = WorldRadius + firstGap + k * spacing;
+            int n = Mathf.Clamp(Mathf.RoundToInt(2f * Mathf.PI * r / Mathf.Max(0.2f, moonSpacing)), 4, maxPerRing);
+            float w = degPerSecAtRef * massK * Mathf.Pow(Mathf.Max(0.1f, refRadius) / r, 1.5f);
+            w = Mathf.Clamp(w, 4f, 200f) * sense;
+            float step = 360f / n, a0 = Random.Range(0f, 360f);
+            for (int i = 0; i < n; i++)
+            {
+                var type = types[Random.Range(0, types.Length)];
+                if (type == null || type.sprites == null || type.sprites.Length == 0) continue;
+                float size = type.RandomSize() * moonScale * (Random.value < bigChance ? 2f : 1f);
+                var m = pool.Spawn(type, rb.position, size);
+                if (m == null) continue;
+                m.EnterOrbit(this, a0 + step * i + Random.Range(-step * 0.12f, step * 0.12f),
+                             r + Random.Range(-0.08f, 0.08f), w);
+                made++;
+            }
+        }
+        return made;
+    }
+
+    /// Cinturón alrededor de un estático: una banda ancha de rocas agrupadas, con huecos,
+    /// girando en el mismo sentido; cada una a su velocidad de Kepler (rotación diferencial: la
+    /// banda se estira un poco con el tiempo, como un cinturón real). Devuelve cuántas creó
+    public int SpawnBelt(AsteroidTypeData[] types, float innerGap, float width, int count, int clusters,
+                         float clusterSpread, float degPerSecAtRef, float refRadius)
+    {
+        if (pool == null || types == null || types.Length == 0 || count <= 0) return 0;
+        float massK = Mathf.Sqrt(Mathf.Max(0.001f, Mass) / Mathf.Max(0.001f, StaticMassRef));
+        float sense = Random.value < 0.5f ? -1f : 1f;
+        clusters = Mathf.Max(1, clusters);
+        var centers = new float[clusters];
+        for (int c = 0; c < clusters; c++) centers[c] = Random.Range(0f, 360f);
+        int made = 0;
+        for (int i = 0; i < count; i++)
+        {
+            var type = types[Random.Range(0, types.Length)];
+            if (type == null || type.sprites == null || type.sprites.Length == 0) continue;
+            // La mayoría en grupos; unas pocas sueltas por toda la banda
+            float ang = Random.value < 0.8f
+                ? centers[Random.Range(0, clusters)] + (Random.value + Random.value - 1f) * clusterSpread
+                : Random.Range(0f, 360f);
+            var m = pool.Spawn(type, rb.position, type.RandomSize());
+            if (m == null) continue;
+            float r = WorldRadius + innerGap + m.WorldRadius + Random.Range(0f, width);
+            float w = degPerSecAtRef * massK * Mathf.Pow(Mathf.Max(0.1f, refRadius) / r, 1.5f);
+            w = Mathf.Clamp(w, 3f, 120f) * sense;
+            m.EnterOrbit(this, ang, r, w);
+            made++;
+        }
+        return made;
     }
 
     /// Un cuerpo grande puede ENTRAR al mapa ya acompañado.
@@ -523,7 +612,7 @@ public class Asteroid : MonoBehaviour
             if (replace)
             {
                 if (pool != null && pool.NotifyExited(this)) return;
-                Launch(flow.RandomEntryPoint(AvoidPoint(), 2.5f));
+                Launch(flow.RandomEntryPoint(AvoidPoint(), 2.5f, Type));
             }
             else Release();
             return;
@@ -541,7 +630,7 @@ public class Asteroid : MonoBehaviour
         if (followsFlow && !beingPulled && flow != null && sp > 0.01f)
         {
             float current = Mathf.Atan2(vel.y, vel.x) * Mathf.Rad2Deg;
-            float desired = flow.AngleAt(rb.position) + personalOffset;
+            float desired = flow.AngleAt(rb.position) + personalOffset + flow.LaneCorrection(lane, rb.position);
             float next = Mathf.MoveTowardsAngle(current, desired, turnRate * Time.fixedDeltaTime);
             vel = FlowField.FromAngle(next) * sp;
             rb.linearVelocity = vel;
@@ -776,6 +865,7 @@ public class Asteroid : MonoBehaviour
 
         if (host != null) host.moons.Remove(this);
         orbitHost = null;
+        orbitLethal = -1;
 
         SetLayer("AsteroidMoving");
         rb.bodyType = RigidbodyType2D.Dynamic;
@@ -831,6 +921,7 @@ public class Asteroid : MonoBehaviour
     public bool TryDislodge(Asteroid by)
     {
         if (dislodged || Type == null || by == null) return false;
+        if (Type.planet) return false;   // un planeta no se mueve de su sitio
 
         // Una luna se desprende siempre que la golpee algo bastante más pesado
         if (orbitHost != null)
@@ -1108,6 +1199,10 @@ public class Asteroid : MonoBehaviour
 
         if (other != null)
         {
+            // Colosos y planetas no se tocan: el coloso pasa por delante sin chocar ni capturar
+            if (Type != null && other.Type != null &&
+                ((Type.planet && other.Type.behavior == AsteroidBehavior.Colossus) ||
+                 (other.Type.planet && Type.behavior == AsteroidBehavior.Colossus))) return;
             float impact = c.relativeVelocity.magnitude;
             ReportEnergy(other, c, impact);
             AbsorbImpact(other, impact);

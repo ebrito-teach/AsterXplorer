@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AsteroidTypeData
   id: static
   behavior: 0
+  planet: 0
   sprites:
   - {fileID: -3882337124456607919, guid: 30e80e4a0e7310b4ba467914c8091753, type: 3}
   - {fileID: 931797853010917657, guid: 30e80e4a0e7310b4ba467914c8091753, type: 3}
@@ -32,7 +33,7 @@ MonoBehaviour:
   - {fileID: 7046686927702149388, guid: 30e80e4a0e7310b4ba467914c8091753, type: 3}
   - {fileID: 2188057645520588577, guid: 30e80e4a0e7310b4ba467914c8091753, type: 3}
   - {fileID: -6173148627814065244, guid: 30e80e4a0e7310b4ba467914c8091753, type: 3}
-  sizeRange: {x: 0.9, y: 2}
+  sizeRange: {x: 1, y: 2}
   sizeSkew: 1
   minWorldRadius: 0.2
   faceVelocity: 0
@@ -79,7 +80,8 @@ MonoBehaviour:
   moonTailBias: 0.65
   moonOrbitSpeed: {x: 25, y: 60}
   moonTrail: 0
-  moonsAreLethal: 1
+  moonFunnel: 0.6
+  moonsAreLethal: 0
   escortChance: 0
   escortCount: {x: 1, y: 3}
   escortType: {fileID: 0}
@@ -95,6 +97,8 @@ MonoBehaviour:
   pullMaxTargetRadius: 0.45
   pullMaxTargetMassFraction: 0.08
   pullTangential: 0.65
+  pullShell: 2.5
+  pullTailDrift: 0.5
   killsPlayer: 0
   lethalMinRadius: 0
   shoveSpeedMultiplier: 2

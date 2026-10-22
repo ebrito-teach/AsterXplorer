@@ -54,6 +54,22 @@ public class PixelText : MaskableGraphic
         }
     }
 
+    /// Centro vertical de la mayúscula de la línea li, en coordenadas locales del rect
+    public float LineCapCenterY(int li)
+    {
+        if (font == null || !font.Ready) return 0f;
+        float s = capHeight / font.CapHeight;
+        return GetPixelAdjustedRect().yMax - li * font.CellHeight * s * lineSpacing - capHeight * 0.5f;
+    }
+
+    /// Ancho de la línea li, en unidades del Canvas
+    public float LineWidth(int li)
+    {
+        if (font == null || !font.Ready || string.IsNullOrEmpty(text)) return 0f;
+        var lines = text.Split('\n');
+        return li >= 0 && li < lines.Length ? Width(lines[li], capHeight / font.CapHeight) : 0f;
+    }
+
     /// Ancho de la línea más larga, en unidades del Canvas
     public float PreferredWidth
     {

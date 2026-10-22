@@ -55,6 +55,8 @@ public class ShipInput : MonoBehaviour
     public bool BrakeHeld { get; private set; }
     /// Modo preciso: menos velocidad, casi nada de deriva, hitbox resaltado
     public bool FocusHeld { get; private set; }
+    /// Mientras sea true el modo preciso no funciona (lo usa el QTE de la grieta)
+    public static bool FocusBlocked;
 
     /// Compatibilidad con lo que ya estaba cableado
     public float Steer => Turn;
@@ -124,7 +126,7 @@ public class ShipInput : MonoBehaviour
 
         ThrustHeld = uiThrust || kbThrust;
         BrakeHeld = uiBrake || kbBrake;
-        FocusHeld = uiFocus || kbFocus || (brakeAlsoFocuses && BrakeHeld);
+        FocusHeld = !FocusBlocked && (uiFocus || kbFocus || (brakeAlsoFocuses && BrakeHeld));
 
         switch (scheme)
         {

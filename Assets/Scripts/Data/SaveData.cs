@@ -55,6 +55,11 @@ public class RunState
     /// y con este personaje
     public List<int> buffs = new List<int>();
     public string buffsCharacter = "";
+    /// Nivel en el que se recogió la geoda que llevas encima (0 = ninguna) y su dibujo
+    public int geodeTakenLevel = 0;
+    public int geodeSprite = -1;
+    /// Nivel en el que moriste habiendo geoda: ese nivel ya no la vuelve a tener
+    public int geodeLostLevel = 0;
 }
 
 [Serializable]

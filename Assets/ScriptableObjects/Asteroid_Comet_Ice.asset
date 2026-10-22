@@ -20,7 +20,7 @@ MonoBehaviour:
   - {fileID: 7951569754828844724, guid: 92fd80a97d6e1814e8c4e5ea2687f1b8, type: 3}
   - {fileID: -7997821919759534609, guid: fab40ff5c7159c54e857f33fe433b273, type: 3}
   - {fileID: 4319372629840468453, guid: fab40ff5c7159c54e857f33fe433b273, type: 3}
-  sizeRange: {x: 0.7, y: 1.3}
+  sizeRange: {x: 1.1, y: 2.2}
   sizeSkew: 1.4
   minWorldRadius: 0.13
   faceVelocity: 0
@@ -63,20 +63,29 @@ MonoBehaviour:
   maxMoons: 3
   moonCaptureMultiplier: 1
   moonGap: 0.3
+  moonOrbitExtra: {x: 0.4, y: 1.6}
+  moonTailBias: 0.65
   moonOrbitSpeed: {x: 30, y: 75}
   moonTrail: 0
+  moonFunnel: 0.6
   moonsAreLethal: 0
+  escortChance: 0
+  escortCount: {x: 1, y: 3}
+  escortType: {fileID: 0}
   wakeType: {fileID: 0}
   wakeEvery: 3.5
   wakeChance: 0.85
   wakeSpread: 3.5
   wakeSizeScale: {x: 0.5, y: 1}
+  wakeEjectSpeed: {x: 0.8, y: 2.2}
   wakeSpinScale: 3.5
   pullRadius: 0
   pullForce: 9
   pullMaxTargetRadius: 0.45
   pullMaxTargetMassFraction: 0.08
   pullTangential: 0.65
+  pullShell: 2.5
+  pullTailDrift: 0.5
   killsPlayer: 1
   lethalMinRadius: 0
   shoveSpeedMultiplier: 2

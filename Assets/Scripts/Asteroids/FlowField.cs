@@ -34,6 +34,20 @@ public class FlowField : MonoBehaviour
     [Tooltip("Velocidad de cámara a la que el peso del viaje llega a su máximo")]
     [SerializeField] private float travelFullSpeed = 5f;
 
+    [Header("Carriles (lentos y rápidos por caminos distintos)")]
+    [Tooltip("Los lentos y los rápidos van por bandas distintas a lo largo de la corriente, así " +
+             "se cruzan en pocos sitios y chocan mucho menos. Cometas y colosos van libres")]
+    [SerializeField] private bool lanes = true;
+    [SerializeField] private Vector2Int laneCount = new Vector2Int(2, 3);
+    [Tooltip("Ancho de cada carril, en fracción del ancho del mundo atravesado a la corriente")]
+    [SerializeField] private Vector2 laneWidth = new Vector2(0.16f, 0.3f);
+    [Tooltip("Cuánto se corrige el rumbo de una roca que se sale de su carril (grados)")]
+    [SerializeField] private float laneSteer = 25f;
+
+    public struct Lane { public float s0, s1; public int kind; }   // kind 0 = lentos, 1 = rápidos
+    readonly System.Collections.Generic.List<Lane> laneList = new System.Collections.Generic.List<Lane>();
+    public System.Collections.Generic.IReadOnlyList<Lane> Lanes => laneList;
+
     float seedX, seedY;
 
     public float BaseAngle => baseAngle;
@@ -67,6 +81,136 @@ public class FlowField : MonoBehaviour
         seedY = Random.Range(0f, 1000f);
 
         if (seed >= 0) Random.state = prev;
+        BuildLanes(seed);
+    }
+
+    // ------------------------------------------------------------------ carriles
+    Vector2 Perp => FromAngle(baseAngle + 90f);
+
+    /// Qué carril corresponde a un tipo: 0 lentos (y rompibles), 1 rápidos, -1 ninguno (libre)
+    public static int KindOf(AsteroidTypeData t)
+    {
+        if (t == null || t.comet != null) return -1;
+        switch (t.behavior)
+        {
+            case AsteroidBehavior.Slow:
+            case AsteroidBehavior.Breakable: return 0;
+            case AsteroidBehavior.Fast: return 1;
+            default: return -1;
+        }
+    }
+
+    void BuildLanes(int seed)
+    {
+        laneList.Clear();
+        var gb = GameBounds.Instance;
+        if (!lanes || gb == null || !gb.IsReady) return;
+        Rect a = gb.Area;
+        Vector2 pp = Perp;
+        float sMin = float.MaxValue, sMax = float.MinValue;
+        foreach (var c in new[] { new Vector2(a.xMin, a.yMin), new Vector2(a.xMax, a.yMin), new Vector2(a.xMin, a.yMax), new Vector2(a.xMax, a.yMax) })
+        {
+            float s = Vector2.Dot(c, pp);
+            sMin = Mathf.Min(sMin, s); sMax = Mathf.Max(sMax, s);
+        }
+        float span = sMax - sMin;
+        var rng = new System.Random(seed >= 0 ? seed * 7 + 13 : Random.Range(0, int.MaxValue));
+        int n = rng.Next(laneCount.x, laneCount.y + 1);
+        var widths = new float[n];
+        float sum = 0f;
+        for (int i = 0; i < n; i++) { widths[i] = span * Mathf.Lerp(laneWidth.x, laneWidth.y, (float)rng.NextDouble()); sum += widths[i]; }
+        if (sum > span * 0.85f) for (int i = 0; i < n; i++) widths[i] *= span * 0.85f / sum;
+        sum = 0f; foreach (var w in widths) sum += w;
+        // Huecos al azar entre carriles: ahí quedan zonas tranquilas
+        float free = span - sum;
+        var gaps = new float[n + 1];
+        float gsum = 0f;
+        for (int i = 0; i <= n; i++) { gaps[i] = 0.3f + (float)rng.NextDouble(); gsum += gaps[i]; }
+        // Al menos un carril de lentos y uno de rápidos
+        var kinds = new int[n];
+        for (int i = 0; i < n; i++) kinds[i] = i == 0 ? 0 : i == 1 ? 1 : rng.Next(2);
+        for (int i = n - 1; i > 0; i--) { int j = rng.Next(i + 1); (kinds[i], kinds[j]) = (kinds[j], kinds[i]); }
+        float s0 = sMin;
+        for (int i = 0; i < n; i++)
+        {
+            s0 += free * gaps[i] / gsum;
+            laneList.Add(new Lane { s0 = s0, s1 = s0 + widths[i], kind = kinds[i] });
+            s0 += widths[i];
+        }
+    }
+
+    /// Un carril al azar del tipo pedido (-1 si no hay)
+    public int PickLane(int kind)
+    {
+        if (kind < 0 || laneList.Count == 0) return -1;
+        int count = 0;
+        foreach (var l in laneList) if (l.kind == kind) count++;
+        if (count == 0) return -1;
+        int pick = Random.Range(0, count);
+        for (int i = 0; i < laneList.Count; i++)
+            if (laneList[i].kind == kind && pick-- == 0) return i;
+        return -1;
+    }
+
+    /// El carril del tipo pedido en el que está un punto (-1 si ninguno)
+    public int LaneAt(Vector2 p, int kind)
+    {
+        float s = Vector2.Dot(p, Perp);
+        for (int i = 0; i < laneList.Count; i++)
+            if (laneList[i].kind == kind && s >= laneList[i].s0 && s <= laneList[i].s1) return i;
+        return -1;
+    }
+
+    /// Corrección de rumbo (grados) para volver al centro de su carril si se aleja de él
+    public float LaneCorrection(int lane, Vector2 p)
+    {
+        if (lane < 0 || lane >= laneList.Count) return 0f;
+        var l = laneList[lane];
+        float s = Vector2.Dot(p, Perp);
+        float half = Mathf.Max(0.1f, (l.s1 - l.s0) * 0.5f);
+        float off = (s - (l.s0 + l.s1) * 0.5f) / half;
+        float k = Mathf.Clamp01((Mathf.Abs(off) - 0.6f) / 0.6f);
+        return -Mathf.Sign(off) * laneSteer * k;
+    }
+
+    /// Un punto dentro del carril (para colocar al empezar el nivel)
+    public bool InLane(Vector2 p, int lane)
+    {
+        if (lane < 0 || lane >= laneList.Count) return true;
+        float s = Vector2.Dot(p, Perp);
+        return s >= laneList[lane].s0 && s <= laneList[lane].s1;
+    }
+
+    /// Punto de entrada para un tipo: dentro de uno de sus carriles si los hay
+    public Vector2 RandomEntryPoint(Vector2 avoid, float avoidRadius, AsteroidTypeData type)
+    {
+        int lane = PickLane(KindOf(type));
+        if (lane < 0) return RandomEntryPoint(avoid, avoidRadius);
+        for (int i = 0; i < 14; i++)
+        {
+            var p = RandomEntryPoint(avoid, avoidRadius);
+            if (InLane(p, lane)) return p;
+        }
+        // Construido: en el borde de donde viene la corriente, a la altura del carril
+        Rect r = SpawnRect;
+        Vector2 d = FromAngle(baseAngle), pp = Perp;
+        var l = laneList[lane];
+        float s = Random.Range(l.s0, l.s1);
+        Vector2 e;
+        if (Mathf.Abs(d.x) >= Mathf.Abs(d.y))
+        {
+            float x = d.x > 0f ? r.xMin : r.xMax;
+            float y = Mathf.Abs(pp.y) > 0.2f ? (s - x * pp.x) / pp.y : Random.Range(r.yMin, r.yMax);
+            e = new Vector2(x, Mathf.Clamp(y, r.yMin, r.yMax));
+        }
+        else
+        {
+            float y = d.y > 0f ? r.yMin : r.yMax;
+            float x = Mathf.Abs(pp.x) > 0.2f ? (s - y * pp.y) / pp.x : Random.Range(r.xMin, r.xMax);
+            e = new Vector2(Mathf.Clamp(x, r.xMin, r.xMax), y);
+        }
+        if (HasBlockedSide && Vector2.Dot(e - BlockedPoint, BlockedNormal) < 0f) return RandomEntryPoint(avoid, avoidRadius);
+        return e;
     }
 
     /// Ángulo (en grados) de la corriente en un punto del mundo.

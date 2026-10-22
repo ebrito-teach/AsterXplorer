@@ -53,6 +53,16 @@ public class BackdropDirector : MonoBehaviour
     [Tooltip("Separación mínima entre objetos, en unidades")]
     [SerializeField] private float objectSpacing = 4f;
 
+    [Header("Mapas con planetas jugables")]
+    [Tooltip("En esos mapas los objetos de fondo van muy al fondo: profundidad mínima (1 = pegado a la cámara)")]
+    [Range(0.8f, 0.99f)] [SerializeField] private float planetMapFollow = 0.96f;
+    [Tooltip("Y algo más pequeños y más tenues (multiplica escala y brillo)")]
+    [SerializeField] private float planetMapScale = 0.85f;
+    [SerializeField] private float planetMapBrightness = 0.6f;
+    [Tooltip("Además, un objeto de fondo que pase por detrás del sistema de un planeta jugable se " +
+             "desvanece. Distancia (unidades) en la que se apaga del todo")]
+    [SerializeField] private float planetFadeMargin = 2f;
+
     const string LayerNebula = "BG_Nebula";
     const string LayerObjects = "BG_Objects";
 
@@ -61,6 +71,7 @@ public class BackdropDirector : MonoBehaviour
         public SpriteRenderer sr;
         public Vector2 local;
         public float follow;
+        public float alpha = 1f;
     }
 
     readonly List<Piece> nebulas = new List<Piece>();
@@ -135,12 +146,14 @@ public class BackdropDirector : MonoBehaviour
         var objOrder = Shuffled(objects != null ? objects.Length : 0);
         var placed = new List<Vector2>();
         int count = 0;
+        bool planetMap = LevelPopulator.PlanetZones.Count > 0;
         for (int i = 0; i < objOrder.Length && count < nObj; i++)
         {
             var sprite = objects[objOrder[i]];
             if (sprite == null) continue;
 
             float follow = Range(Mathf.Min(objectFollow.x, objectFollow.y), Mathf.Max(objectFollow.x, objectFollow.y));
+            if (planetMap) follow = Range(planetMapFollow, Mathf.Min(0.99f, planetMapFollow + 0.02f));
             Rect r = LayerRect(follow);
             Vector2 at = Vector2.zero;
             bool ok = false;
@@ -160,13 +173,15 @@ public class BackdropDirector : MonoBehaviour
             piece.sr.sortingOrder = Mathf.RoundToInt(near * 100f);
             piece.follow = follow;
             piece.local = at;
-            piece.sr.transform.localScale = Vector3.one * Mathf.Lerp(objectScale.x, objectScale.y, near) * Range(0.85f, 1.15f);
+            piece.sr.transform.localScale = Vector3.one * Mathf.Lerp(objectScale.x, objectScale.y, near) * Range(0.85f, 1.15f)
+                                            * (planetMap ? planetMapScale : 1f);
             piece.sr.transform.localRotation = Quaternion.identity;   // la luz del dibujo no se gira
             piece.sr.flipX = rng.NextDouble() < 0.5;
-            float b = Mathf.Lerp(objectBrightness.x, objectBrightness.y, near);
+            float b = Mathf.Lerp(objectBrightness.x, objectBrightness.y, near) * (planetMap ? planetMapBrightness : 1f);
             Color c = Color.Lerp(depthHaze, Color.white, near) * b;
             c.a = 1f;
             piece.sr.color = c;
+            piece.alpha = 1f;
             report.Append(sprite.name).Append(' ');
         }
 
@@ -202,7 +217,27 @@ public class BackdropDirector : MonoBehaviour
     void Place(Vector2 cam)
     {
         foreach (var p in nebulas) if (p.sr.gameObject.activeSelf) p.sr.transform.position = cam * p.follow + p.local;
-        foreach (var p in things)  if (p.sr.gameObject.activeSelf) p.sr.transform.position = cam * p.follow + p.local;
+        var zones = LevelPopulator.PlanetZones;
+        foreach (var p in things)
+        {
+            if (!p.sr.gameObject.activeSelf) continue;
+            Vector2 at = cam * p.follow + p.local;
+            p.sr.transform.position = at;
+
+            // Se apaga al pasar por detrás del sistema de un planeta jugable
+            float want = 1f;
+            if (zones.Count > 0)
+            {
+                float ext = p.sr.bounds.extents.x;
+                foreach (var z in zones)
+                {
+                    float gap = Vector2.Distance(at, new Vector2(z.x, z.y)) - z.z - ext;
+                    want = Mathf.Min(want, Mathf.Clamp01(gap / Mathf.Max(0.01f, planetFadeMargin)));
+                }
+            }
+            p.alpha = Mathf.MoveTowards(p.alpha, want, Time.deltaTime * 2f);
+            var c = p.sr.color; c.a = p.alpha; p.sr.color = c;
+        }
     }
 
     // Lo que la cámara puede llegar a ver de una capa recorriendo el mundo entero. Las piezas

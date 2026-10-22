@@ -267,27 +267,58 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5b7d4fa6fecb56c4292d7c2e96c34596, type: 2}
   - {fileID: 11400000, guid: 47624e75ad8b2bb4caa74b11e82b1d47, type: 2}
   level: 1
-  randomSeed: 0
+  randomSeed: 1
   seed: 12345
-  playerSafeRadius: 2.5
+  playerSafeRadius: 2
   readPlayerMetrics: 1
   playerRadius: 0.3
   playerSpeed: 2.6
   staticEdgeMargin: 0.8
   blockedMargin: 0.6
   goalMargin: 1.5
-  fieldShare: 0.25
-  fieldCount: {x: 2, y: 5}
-  fieldDistance: {x: 1, y: 3.5}
   satelliteTypes:
   - {fileID: 11400000, guid: 9fc9553795252224cba0ee2144907e02, type: 2}
   - {fileID: 11400000, guid: 2f967b436b5f5214f9b62ec7e0e33923, type: 2}
   keplerSpeed: 55
   keplerRefRadius: 2.5
   darkBudgetFactor: 0.3
-  darkFieldMultiplier: 2
   darkLethalEvery: {x: 20, y: 40}
   fractureBudgetFactor: 0.6
+  staticClusters: 1
+  clusterChance: 0.4
+  clusterGap: {x: 0.3, y: 1.6}
+  planetType: {fileID: 11400000, guid: f08a5e788b4a13f408ebed07a6569afb, type: 2}
+  planetMapChance: 1
+  planetCount: {x: 1, y: 4}
+  planetCorridor: 3
+  planetMaxWorldShare: 0.3
+  planetFractureClearance: 4
+  planetSystemWeights: {x: 0.25, y: 0.25, z: 0.25, w: 0.25}
+  ringLooks:
+  - sprite: {fileID: 21300000, guid: 574b9ac5e8edaac44825fb8e98d4b5bb, type: 3}
+    innerRatio: 0.505
+  - sprite: {fileID: 21300000, guid: 2d53b5a2d3ef75241966d98dc45ccc8d, type: 3}
+    innerRatio: 0.516
+  - sprite: {fileID: 21300000, guid: a9506982aea4c584fb3b3f9fb0599b36, type: 3}
+    innerRatio: 0.456
+  ringInner: {x: 1.25, y: 1.5}
+  ringTilt: 30
+  ringSlow: 0.5
+  beltTypes:
+  - {fileID: 11400000, guid: 2f967b436b5f5214f9b62ec7e0e33923, type: 2}
+  beltGap: 1.2
+  beltWidth: {x: 1.8, y: 3.2}
+  beltDensity: 0.35
+  beltMax: 30
+  beltClusters: {x: 2, y: 4}
+  beltClusterSpread: 35
+  beltSpeedFactor: 0.35
+  moonType: {fileID: 11400000, guid: 40298844f9635624280ec80acab173d8, type: 2}
+  moonCount: {x: 1, y: 4}
+  moonDistance: {x: 0.8, y: 2.6}
+  moonOrbitShare: 0.5
+  moonOrbitSpeed: {x: 8, y: 20}
+  maxOrbiters: 220
   keepPopulation: 1
   topUpInterval: 0.6
   topUpPerCheck: 2
@@ -448,7 +479,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.6, y: 1.6, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -471,7 +502,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   respectSafeArea: 1
-  worldScreens: {x: 2.57, y: 2.57}
+  worldScreens: {x: 2.3, y: 2.3}
   wallThickness: 2
   padding: 0
   goalCornerNormalized:
@@ -10896,6 +10927,20 @@ MonoBehaviour:
   trailColor: {r: 0.75, g: 0.92, b: 1, a: 0.8}
   exitTime: 0.6
   exitStretch: 2.2
+  crystalIcon: {fileID: -1837567759351898303, guid: 25c6e127999a33c4ba43b493572e4a52, type: 3}
+  crystalBits:
+  - {fileID: -1246346520254133372, guid: 2ac37e97eb28f9c4bba5edada7a5e6ef, type: 3}
+  - {fileID: 3362316515016473563, guid: 29cecfe781e5ffd488d64bb26e5ca442, type: 3}
+  - {fileID: -7157013243112601396, guid: d4ad86bc09afa4b489efc5a8cabf9e1a, type: 3}
+  - {fileID: -1837567759351898303, guid: 25c6e127999a33c4ba43b493572e4a52, type: 3}
+  - {fileID: 6899055282802186029, guid: 4599bd82579f66848a08bbd769105818, type: 3}
+  - {fileID: -8578041600515025233, guid: cc7a7c1c2f5bc7d44bae5568a24e2c85, type: 3}
+  - {fileID: -966819004036616635, guid: 194e5633aae40e648bb86507dbfb4a8c, type: 3}
+  - {fileID: 7699271291071873513, guid: 2f44c0a9df6223a43acd4c7efb24365b, type: 3}
+  geodeFallback: {fileID: -5818400451030599293, guid: 4cfea35107802084db7fe8fd520f3e57, type: 3}
+  geodeSize: 220
+  geodeGap: 22
+  crystalFinalSize: 2
 --- !u!4 &707176949
 Transform:
   m_ObjectHideFlags: 0
@@ -10921,6 +10966,7 @@ GameObject:
   m_Component:
   - component: {fileID: 848169112}
   - component: {fileID: 848169113}
+  - component: {fileID: 848169114}
   m_Layer: 0
   m_Name: Fracture
   m_TagString: Untagged
@@ -10967,6 +11013,9 @@ MonoBehaviour:
   riftHeight: {x: 0.62, y: 0.92}
   riftWidth: 2.4
   curve: 1.2
+  maxTilt: 12
+  extensionAlpha: 0.3
+  backAlpha: 0.9
   edgeDistance: 3.5
   solidFraction: 0.55
   firstDelay: 2.5
@@ -10986,27 +11035,28 @@ MonoBehaviour:
   maxCharges: 2
   grazeDistance: 0.6
   grazeGain: {x: 0.1, y: 0.2}
-  pushSpeed: 15
+  pushTime: 0.5
+  pushReachScreens: 0.4
   pushStun: 0.35
   looks:
   - name: Vacio
     dust: {fileID: 21300000, guid: 3e354d435d0eea248ad4e8b4af4cda73, type: 3}
     core: {fileID: 21300000, guid: 48c15b3d18f61bf4cb027c3974205c09, type: 3}
-    dustTint: {r: 0, g: 0, b: 0, a: 0.8509804}
-    coreTint: {r: 0, g: 0, b: 0, a: 1}
-    glowTint: {r: 0, g: 0, b: 0, a: 0.5882353}
+    dustTint: {r: 1, g: 1, b: 1, a: 0.78431374}
+    coreTint: {r: 1, g: 1, b: 1, a: 1}
+    glowTint: {r: 0.74509805, g: 0.4509804, b: 1, a: 0.5882353}
   - name: Estrella
     dust: {fileID: 21300000, guid: 5c320dbd0dd74cc4bb19e573470199df, type: 3}
     core: {fileID: 21300000, guid: 981c1f02036d4594f955e36ed2f3e29a, type: 3}
-    dustTint: {r: 0, g: 0, b: 0, a: 0.8509804}
-    coreTint: {r: 0, g: 0, b: 0, a: 1}
-    glowTint: {r: 0, g: 0, b: 0, a: 0.5882353}
+    dustTint: {r: 1, g: 1, b: 1, a: 0.78431374}
+    coreTint: {r: 1, g: 1, b: 1, a: 1}
+    glowTint: {r: 0.74509805, g: 0.4509804, b: 1, a: 0.5882353}
   - name: Nebulosa
     dust: {fileID: 21300000, guid: aab0d32e254ff09499fe0800f61532aa, type: 3}
     core: {fileID: 21300000, guid: ad05495cc95dd194c922606575ee46d5, type: 3}
-    dustTint: {r: 0, g: 0, b: 0, a: 0.8509804}
-    coreTint: {r: 0, g: 0, b: 0, a: 1}
-    glowTint: {r: 0, g: 0, b: 0, a: 0.5882353}
+    dustTint: {r: 1, g: 1, b: 1, a: 0.78431374}
+    coreTint: {r: 1, g: 1, b: 1, a: 1}
+    glowTint: {r: 0.74509805, g: 0.4509804, b: 1, a: 0.5882353}
   antimatterCore: {fileID: 21300000, guid: fc37bfbfd4a10314a92d5adb7d516d86, type: 3}
   antimatterGlow: {fileID: 21300000, guid: fec8e33897de7a041b2ac4ca2b0bddfc, type: 3}
   antimatterHalo: {r: 0.85, g: 0.25, b: 1, a: 0.7}
@@ -11022,6 +11072,34 @@ MonoBehaviour:
   backDepth: 3
   frontDepth: 2.5
   frontAlpha: 0.22
+--- !u!114 &848169114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 848169111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 818f9d6a00ad3164bb7c636355acd294, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FractureQTE
+  homingEvery: {x: 7, y: 17}
+  warningTime: 1
+  radii: {x: 0.3, y: 0.45, z: 0.65, w: 0.95}
+  speed: {x: 6.5, y: 4.5}
+  turnRate: 110
+  maxChase: 9
+  window: 0.25
+  idealBeforeContact: 0.18
+  slowWindowMultiplier: 2
+  successIFrames: 1.6
+  buffChance: 0.06
+  targetColor: {r: 0.45, g: 1, b: 0.6, a: 0.95}
+  closingColor: {r: 1, g: 0.92, b: 0.5, a: 1}
+  aboveHead: 1.1
+  targetRadius: 0.42
+  startRadius: 1.6
 --- !u!1 &848801468
 GameObject:
   m_ObjectHideFlags: 0
@@ -11111,12 +11189,14 @@ MonoBehaviour:
   - {r: 1, g: 0.5, b: 0.2, a: 1}
   - {r: 0.45, g: 0.6, b: 1, a: 1}
   haloDesaturate: 0.35
-  sizeRange: {x: 0.7, y: 1.5}
-  drawScale: 0.75
+  sizeRange: {x: 1.5, y: 3}
+  drawScale: 1
   reachScalesWithSize: 1
   edgeMargin: 1
-  allowPartiallyHidden: 1
-  centerWeight: 0.35
+  allowPartiallyHidden: 0
+  centerGap: 0.12
+  hiddenChance: 0.35
+  extraInset: 2
   cornerWeight: 0.35
   anyWeight: 0.3
   gravityGM: 12
@@ -11164,7 +11244,7 @@ MonoBehaviour:
   tintFrom: {fileID: 1204878800}
   tint: {r: 1, g: 1, b: 1, a: 1}
   brightness: 1
-  radius: {x: 1.5, y: 0.35}
+  radius: {x: 1.9, y: 0.9}
   tiltDegrees: -8
   rpm: 14
   speedSpread: {x: 0.75, y: 1.35}
@@ -11573,6 +11653,10 @@ MonoBehaviour:
   despawnMargin: 3.5
   travelEntryWeight: 1
   travelFullSpeed: 5
+  lanes: 1
+  laneCount: {x: 2, y: 3}
+  laneWidth: {x: 0.16, y: 0.3}
+  laneSteer: 25
 --- !u!4 &1045389859
 Transform:
   m_ObjectHideFlags: 0
@@ -11580,57 +11664,6 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1045389857}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1056400554
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1056400556}
-  - component: {fileID: 1056400555}
-  m_Layer: 0
-  m_Name: AsteroidScale
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1056400555
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1056400554}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3247f8584d5430c44a0906296cae0ddb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AsteroidScaleTuner
-  statics: 1
-  slow: 1
-  fast: 1
-  breakable: 1
-  colossus: 1
-  comets: 1
-  debris: 1
---- !u!4 &1056400556
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1056400554}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -12044,7 +12077,7 @@ MonoBehaviour:
   constellationCount: {x: 1, y: 2}
   constellationSize: {x: 3, y: 8}
   constellationMaxTilt: 35
-  constellationStarSize: {x: 0.09, y: 0.22}
+  constellationStarSize: {x: 0.12, y: 0.3}
   drawLines: 1
   lineAlpha: 0.05
   lineWidth: 0.014
@@ -12053,11 +12086,11 @@ MonoBehaviour:
   shootingInterval: {x: 5, y: 14}
   shootingSpeed: {x: 16, y: 26}
   shootingLife: {x: 0.45, y: 0.85}
-  shootingLength: 2.2
+  shootingLength: 2.5
   lensing: 1
   lensReach: 2.4
-  einsteinRadius: 0.55
-  maxLensStretch: 4
+  einsteinRadius: 0.8
+  maxLensStretch: 5
   dustClouds: 14
   dustSpecks: 80
   cloudSize: {x: 3, y: 7}
@@ -12134,6 +12167,76 @@ MonoBehaviour:
   objectBrightness: {x: 0.35, y: 0.8}
   depthHaze: {r: 0.32, g: 0.36, b: 0.5, a: 1}
   objectSpacing: 4
+  planetMapFollow: 0.96
+  planetMapScale: 0.55
+  planetMapBrightness: 0.6
+  planetFadeMargin: 2
+--- !u!1 &1322686714
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1322686716}
+  - component: {fileID: 1322686715}
+  m_Layer: 0
+  m_Name: GeodeDirector
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1322686715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1322686714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65bd7909724f4a94d867ced5f9c354ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GeodeDirector
+  geodeSprites:
+  - {fileID: 3779643214969513271, guid: 68b0667481f7fa4419681dcff5b852e2, type: 3}
+  - {fileID: 9014345252136005468, guid: e98f78f860ce0214f9f426127c7a8b05, type: 3}
+  - {fileID: -5818400451030599293, guid: 4cfea35107802084db7fe8fd520f3e57, type: 3}
+  - {fileID: -5395993605136779779, guid: 68f78f99946d0d049b151af4becfd3ef, type: 3}
+  - {fileID: -4802651094587989150, guid: 4c350716b301a454680412b0d1b5a00b, type: 3}
+  - {fileID: -6334961393775436267, guid: 0799e8f60fa4fc24bbea14d856449e2e, type: 3}
+  worldSize: 0.9
+  glowColor: {r: 0.75, g: 0.55, b: 1, a: 0.55}
+  sortingLayer: Player
+  sortingOrder: -4
+  physicsLayer: Goal
+  detour: {x: 4, y: 10}
+  minFromSpawn: 6
+  minFromGoal: 5
+  pathSpan: {x: 0.15, y: 0.75}
+  edgeMargin: 2
+  clearRadius: 1.3
+  hudPosition: {x: -400, y: -45}
+  hudSize: 100
+  canvasOrder: 102
+  alwaysGeode: 0
+--- !u!4 &1322686716
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1322686714}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1373791964
 GameObject:
   m_ObjectHideFlags: 0
@@ -12607,6 +12710,7 @@ MonoBehaviour:
   gravityMemory: 0.8
   bodySlow: {x: 0.15, y: 0.2}
   bodyFieldReach: 3
+  planetFieldReach: 5
   bodyPull: 1.6
   maxKnock: 7
   knockDecayTime: 0.35
@@ -18224,9 +18328,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WaveButton
   size: 170
-  position: {x: 300, y: 105}
+  position: {x: 300, y: 150}
   canvasOrder: 101
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 0ecbed064911ba74bbda781e1880fc2a, type: 3}
+  tintIcon: 0
+  iconScale: 0.8
+  showFrame: 1
   readyColor: {r: 0.45, g: 1, b: 0.55, a: 1}
   idleColor: {r: 0.55, g: 0.6, b: 0.75, a: 0.7}
 --- !u!1 &1979207755
@@ -23250,7 +23357,7 @@ MonoBehaviour:
   runSeed: 0
   sameLevelOnRetry: 0
   resumeFromSave: 1
-  recordProgress: 0
+  recordProgress: 1
   startDelay: 0.4
   nextLevelDelay: 1.1
   darkWorldChance: 0.06
@@ -23316,4 +23423,4 @@ SceneRoots:
   - {fileID: 1968779674}
   - {fileID: 1208269385}
   - {fileID: 878006286}
-  - {fileID: 1056400556}
+  - {fileID: 1322686716}

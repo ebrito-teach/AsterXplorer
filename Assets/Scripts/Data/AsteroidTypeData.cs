@@ -12,6 +12,10 @@ public class AsteroidTypeData : ScriptableObject
     [Header("Identidad")]
     public string id = "asteroid";
     public AsteroidBehavior behavior = AsteroidBehavior.Slow;
+    [Tooltip("Planeta: un estático grande que pone el LevelPopulator aparte (no se compra con " +
+             "el presupuesto). Solo los planetas tienen campo gravitatorio (frenan y atraen) y " +
+             "pueden llevar anillos, cinturón o lunas. Behavior tiene que ser Static")]
+    public bool planet = false;
 
     [Header("Apariencia")]
     public Sprite[] sprites;

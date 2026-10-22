@@ -122,12 +122,15 @@ public class PlayerController : MonoBehaviour
              "agujero negro supera a tu propio impulso y ya no hay escapatoria")]
     [SerializeField] private float gravityMemory = 0.8f;
 
-    [Header("Campo gravitatorio de estáticos y colosos")]
-    [Tooltip("Cerca de un estático o un coloso vas más lento mientras sigas en su campo: " +
-             "x = en el borde del campo, y = pegado a su superficie (0.15 = un 15 % más lento)")]
+    [Header("Campo gravitatorio de planetas y colosos")]
+    [Tooltip("Cerca de un planeta o un coloso vas más lento mientras sigas en su campo: " +
+             "x = en el borde del campo, y = pegado a su superficie (0.15 = un 15 % más lento). " +
+             "Los estáticos ya no tienen campo")]
     [SerializeField] private Vector2 bodySlow = new Vector2(0.15f, 0.20f);
-    [Tooltip("Hasta dónde llega su campo, en unidades desde su superficie")]
+    [Tooltip("Hasta dónde llega el campo de un coloso, en unidades desde su superficie")]
     [SerializeField] private float bodyFieldReach = 3f;
+    [Tooltip("Hasta dónde llega el campo de un planeta, en unidades desde su superficie")]
+    [SerializeField] private float planetFieldReach = 5f;
     [Tooltip("Tirón hacia el cuerpo, en unidades/s², pegado a su superficie (se apaga hacia el borde)")]
     [SerializeField] private float bodyPull = 1.6f;
     [Tooltip("Tope del empujón en unidades/s, para que una roca enorme no te mande a órbita")]
@@ -246,10 +249,25 @@ public class PlayerController : MonoBehaviour
     {
         if (IsDead || IsExpelling || IsAbsorbed) return;
         knock = velocity;
+        blastUntil = 0f;
         controlVel = Vector2.zero;
         stunUntil = Time.time + stun;
         thrustLevel = 0f;
     }
+
+    /// Empujón de un solo golpe que te lleva Distance unidades en unos Seconds segundos (la onda
+    /// expansiva de la grieta). Sale muy rápido y frena en seco al final
+    public void Blast(Vector2 direction, float distance, float seconds, float stun)
+    {
+        if (IsDead || IsExpelling || IsAbsorbed || direction.sqrMagnitude < 0.0001f) return;
+        blastTau = Mathf.Max(0.05f, seconds / 3f);          // a las 3 constantes ya recorrió el 95 %
+        knock = direction.normalized * (distance / blastTau);
+        blastUntil = Time.time + seconds;
+        controlVel = Vector2.zero;
+        stunUntil = Time.time + stun;
+        thrustLevel = 0f;
+    }
+    float blastUntil, blastTau;
 
     /// Pared extra que no se puede cruzar (la barrera de la grieta): un punto y la normal
     /// hacia el lado permitido
@@ -377,7 +395,7 @@ public class PlayerController : MonoBehaviour
         brakeLevel = Mathf.MoveTowards(brakeLevel, IsFocusing ? 1f : 0f, dt / 0.12f);
 
         // --- lo que pides ---
-        FieldSlowdown = StaticField();
+        FieldSlowdown = Mathf.Max(StaticField(), PlanetRing.SlowAt(rb.position));
         float speed = cruiseSpeed * SpeedFactor * (IsFocusing ? focusSpeedFactor : 1f) * (1f - FieldSlowdown);
         Vector2 target = IsStunned ? Vector2.zero : Vector2.ClampMagnitude(intent, 1f) * speed;
 
@@ -398,7 +416,7 @@ public class PlayerController : MonoBehaviour
         else controlVel = Vector2.Lerp(controlVel, target, Approach(dt, tau));
 
         // --- lo que te hicieron ---
-        knock = Vector2.Lerp(knock, Vector2.zero, Approach(dt, knockDecayTime));
+        knock = Vector2.Lerp(knock, Vector2.zero, Approach(dt, Time.time < blastUntil ? blastTau : knockDecayTime));
         if (knock.sqrMagnitude < 0.0004f) knock = Vector2.zero;
 
         // --- lo que te hace la gravedad ---
@@ -520,11 +538,40 @@ public class PlayerController : MonoBehaviour
     static float Approach(float dt, float tau) =>
         tau <= 0.0001f ? 1f : 1f - Mathf.Exp(-dt / tau);
 
+    void OnCollisionStay2D(Collision2D c)
+    {
+        if (IsDead) return;
+        StopAgainstTerrain(c, c.collider.GetComponentInParent<Asteroid>());
+    }
+
+    // Contra un estático o un planeta quieto: quita la parte de la velocidad que va hacia él
+    bool StopAgainstTerrain(Collision2D c, Asteroid rock)
+    {
+        if (rock == null || rock.Type == null || rock.Type.behavior != AsteroidBehavior.Static
+            || rock.IsOrbiting || rock.IsDislodged) return false;
+        Vector2 n = (Vector2)transform.position - rock.Body.position;
+        if (c.contactCount > 0) { var cn = c.GetContact(0).normal; n = Vector2.Dot(cn, n) >= 0f ? cn : -cn; }
+        if (n.sqrMagnitude > 0.0001f)
+        {
+            n.Normalize();
+            controlVel -= n * Mathf.Min(0f, Vector2.Dot(controlVel, n));
+            knock -= n * Mathf.Min(0f, Vector2.Dot(knock, n));
+            gravityVel -= n * Mathf.Min(0f, Vector2.Dot(gravityVel, n));
+        }
+        return true;
+    }
+
     void OnCollisionEnter2D(Collision2D c)
     {
         if (IsDead) return;
         // Con escudo, cualquier choque con una roca cuenta como golpe parado
-        if (HitAbsorber != null && c.collider.GetComponentInParent<Asteroid>() != null) HitAbsorber();
+        var hitRock = c.collider.GetComponentInParent<Asteroid>();
+        // El escudo solo se gasta con lo que mata (tocar un planeta o un estático no lo gasta)
+        if (HitAbsorber != null && hitRock != null && hitRock.Lethal) HitAbsorber();
+
+        // Estáticos y planetas: sin rebote. Topas y te quedas pegado a su superficie (pierdes
+        // solo la parte de la velocidad que iba hacia ellos), sin empujón ni aturdimiento
+        if (StopAgainstTerrain(c, hitRock)) return;
         float impact = c.relativeVelocity.magnitude;
         if (impact < minImpactSpeed) return;
 
@@ -578,7 +625,7 @@ public class PlayerController : MonoBehaviour
     // salgas, y un leve tirón hacia él. Manda el cuerpo más influyente que tengas cerca
     float StaticField()
     {
-        if (bodyFieldReach <= 0f) return 0f;
+        if (bodyFieldReach <= 0f && planetFieldReach <= 0f) return 0f;
         if (!fieldFilterReady)
         {
             fieldFilter = new ContactFilter2D();
@@ -587,20 +634,23 @@ public class PlayerController : MonoBehaviour
             fieldFilterReady = true;
         }
         Vector2 me = rb.position;
-        int n = Physics2D.OverlapCircle(me, bodyFieldReach + 6f, fieldFilter, fieldHits);
+        int n = Physics2D.OverlapCircle(me, Mathf.Max(bodyFieldReach, planetFieldReach) + 8f, fieldFilter, fieldHits);
         float best = 0f;
         Vector2 pull = Vector2.zero;
         for (int i = 0; i < n; i++)
         {
             var a = fieldHits[i].GetComponentInParent<Asteroid>();
             if (a == null || a.Type == null || a.IsOrbiting) continue;
-            bool body = a.Type.behavior == AsteroidBehavior.Static || a.Type.behavior == AsteroidBehavior.Colossus;
-            if (!body) continue;
+            bool planet = a.Type.planet && a.Type.behavior == AsteroidBehavior.Static && !a.IsDislodged;
+            bool colossus = a.Type.behavior == AsteroidBehavior.Colossus;
+            if (!planet && !colossus) continue;
+            float reach = planet ? planetFieldReach : bodyFieldReach;
+            if (reach <= 0f) continue;
             Vector2 to = a.Body.position - me;
             float d = to.magnitude - a.WorldRadius;
-            if (d >= bodyFieldReach) continue;
-            float k = 1f - Mathf.Max(0f, d) / bodyFieldReach;             // 0 en el borde, 1 pegado
-            float edge = Mathf.Clamp01((bodyFieldReach - Mathf.Max(0f, d)) / 0.5f);   // entra suave
+            if (d >= reach) continue;
+            float k = 1f - Mathf.Max(0f, d) / reach;             // 0 en el borde, 1 pegado
+            float edge = Mathf.Clamp01((reach - Mathf.Max(0f, d)) / 0.5f);   // entra suave
             float slow = Mathf.Lerp(bodySlow.x, bodySlow.y, k) * edge;
             if (slow > best) best = slow;
             if (to.sqrMagnitude > 0.0001f) pull += to.normalized * (bodyPull * k * k);

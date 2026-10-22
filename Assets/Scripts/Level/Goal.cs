@@ -71,9 +71,15 @@ public class Goal : MonoBehaviour
              "fuera no. Ver solo una parte del disco y del halo lo hace sentir aún más enorme. " +
              "Medio horizonte queda dentro, así que siempre se puede llegar")]
     [SerializeField] private bool allowPartiallyHidden = true;
-    [Tooltip("A lo largo del borde contrario: peso de caer en el centro, en una esquina y en " +
-             "cualquier punto. En una esquina solo se ve un cuarto")]
-    [SerializeField] private float centerWeight = 0.35f;
+    [Tooltip("Hueco alrededor del centro del borde que se evita (fracción del borde a cada lado)")]
+    [Range(0f, 0.3f)] [SerializeField] private float centerGap = 0.12f;
+    [Tooltip("Probabilidad de quedar medio oculta (su centro sobre el límite del mundo). Si no, " +
+             "sale más adentro, a una distancia al azar, hasta verse entera")]
+    [Range(0f, 1f)] [SerializeField] private float hiddenChance = 0.35f;
+    [Tooltip("Cuánto más adentro del borde puede llegar a salir, además de lo justo para verse entera")]
+    [SerializeField] private float extraInset = 2f;
+    [Tooltip("A lo largo del borde contrario: peso de caer en una esquina y en cualquier otro " +
+             "punto (nunca el centro). En una esquina medio oculta solo se ve un cuarto")]
     [SerializeField] private float cornerWeight = 0.35f;
     [SerializeField] private float anyWeight = 0.3f;
 
@@ -249,20 +255,34 @@ public class Goal : MonoBehaviour
         // Medio oculto: el centro, justo sobre el límite del mundo en el lado contrario; la mitad
         // de fuera queda sin ver. Medio horizonte sigue dentro, así que se puede llegar a él.
         // En el otro eje, con margen para que no caiga en una esquina
-        float ex0 = allowPartiallyHidden ? a.xMin : x0, ex1 = allowPartiallyHidden ? a.xMax : x1;
-        float ey0 = allowPartiallyHidden ? a.yMin : y0, ey1 = allowPartiallyHidden ? a.yMax : y1;
-        // Centro, esquina o cualquier punto del borde. Medio oculto, puede llegar hasta la
-        // esquina misma; el siguiente nivel recuerda el tipo para que el jugador salga igual
-        var slot = PlayerStart.PickSlot(centerWeight, cornerWeight, anyWeight);
+        // A lo largo del borde contrario: esquina o cualquier altura, NUNCA en el centro del borde.
+        // El siguiente nivel recuerda el tipo para que el jugador salga igual
+        var slot = PlayerStart.PickSlot(0f, cornerWeight, anyWeight);
         PlayerStart.LastGoalSlot = slot;
         float t = PlayerStart.SlotT(slot);
+        if (t > 0.5f - centerGap && t < 0.5f + centerGap)
+            t = Random.value < 0.5f ? Random.Range(0f, 0.5f - centerGap) : Random.Range(0.5f + centerGap, 1f);
         float ay0 = allowPartiallyHidden ? a.yMin : y0, ay1 = allowPartiallyHidden ? a.yMax : y1;
         float ax0 = allowPartiallyHidden ? a.xMin : x0, ax1 = allowPartiallyHidden ? a.xMax : x1;
+
+        // Profundidad respecto al borde, al azar: a veces con el centro justo en el límite (medio
+        // oculto), a veces más adentro hasta verse entero
+        float visibleInset = drawn + edgeMargin;
+        float inset = allowPartiallyHidden && Random.value < hiddenChance
+            ? 0f
+            : Random.Range(allowPartiallyHidden ? EffectiveHorizon() + 0.8f : visibleInset,
+                           visibleInset + extraInset);
+        inset = Mathf.Min(inset, (dx <= dy ? a.width : a.height) * 0.4f);
+        // Más adentro, también separada de las paredes de los lados (si no, en una esquina
+        // seguiría medio oculta por el otro lado)
+        float side = Mathf.Min(inset, visibleInset);
+        if (dx <= dy) { ay0 = Mathf.Max(ay0, a.yMin + side); ay1 = Mathf.Min(ay1, a.yMax - side); }
+        else { ax0 = Mathf.Max(ax0, a.xMin + side); ax1 = Mathf.Min(ax1, a.xMax - side); }
         Vector2 p;
         if (dx <= dy)
-            p = new Vector2(playerSpawn.x < a.center.x ? ex1 : ex0, Mathf.Lerp(ay0, ay1, t));
+            p = new Vector2(playerSpawn.x < a.center.x ? a.xMax - inset : a.xMin + inset, Mathf.Lerp(ay0, ay1, t));
         else
-            p = new Vector2(Mathf.Lerp(ax0, ax1, t), playerSpawn.y < a.center.y ? ey1 : ey0);
+            p = new Vector2(Mathf.Lerp(ax0, ax1, t), playerSpawn.y < a.center.y ? a.yMax - inset : a.yMin + inset);
 
         transform.position = new Vector3(p.x, p.y, transform.position.z);
 

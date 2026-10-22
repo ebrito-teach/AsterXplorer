@@ -144,6 +144,20 @@ public class BuffSystem : MonoBehaviour
         return null;
     }
 
+    /// ¿Está en uso ahora mismo?
+    public bool IsActive(BuffType t)
+    {
+        foreach (var s in actives) if (s.type == t) return true;
+        return false;
+    }
+
+    /// Gasta el LightShield entero de golpe (fallo del QTE de la grieta)
+    public void ConsumeShield()
+    {
+        foreach (var s in actives) if (s.type == BuffType.LightShield) s.hitsLeft = 0;
+        Changed?.Invoke();
+    }
+
     /// Sorteo por rareza
     public BuffType PickRandom()
     {

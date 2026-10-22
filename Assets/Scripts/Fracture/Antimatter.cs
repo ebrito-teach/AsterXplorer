@@ -13,6 +13,7 @@ public class Antimatter : MonoBehaviour
 {
     public float Radius { get; private set; }
     public bool Homing { get; private set; }
+    public float Speed => speed;
     public bool Alive => gameObject.activeSelf;
 
     FractureDirector owner;

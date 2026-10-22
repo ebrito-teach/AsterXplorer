@@ -85,6 +85,19 @@ public class TransitionScreen : MonoBehaviour, IPointerClickHandler
     [Tooltip("Cuánto se estira a lo largo al salir (y se adelgaza en proporción)")]
     [SerializeField] private float exitStretch = 2.2f;
 
+    [Header("Geoda (si la llevabas al superar el nivel)")]
+    [Tooltip("El cristal que se ve al abrirla (uno de Art/Economia/cristal_01..08)")]
+    [SerializeField] private Sprite crystalIcon;
+    [Tooltip("Cristales pequeños que saltan al romperse (pon los 8)")]
+    [SerializeField] private Sprite[] crystalBits;
+    [Tooltip("Dibujo de geoda a usar si no se sabe cuál recogiste")]
+    [SerializeField] private Sprite geodeFallback;
+    [Tooltip("La geoda se abre y el cristal se queda justo a la derecha del valor de \"Cristales obtenidos\". Tamaño del cristal y hueco con el número")]
+    [SerializeField] private float geodeSize = 70f;
+    [SerializeField] private float geodeGap = 22f;
+    [Tooltip("Tamaño final del cristal, en alturas del texto: tras abrirse se encoge hasta esto (1.4 = un poco más alto que las letras)")]
+    [SerializeField] private float crystalFinalSize = 1.4f;
+
     /// Se pone a true con el toque. GameDirector espera a esto para seguir
     public bool Continued { get; private set; }
 
@@ -143,9 +156,28 @@ public class TransitionScreen : MonoBehaviour, IPointerClickHandler
 
         title.Text = $"NIVEL {s.level} SUPERADO";
         labels.Text = "Tiempo del intento\nTiempo total del nivel\nMuertes\nVariaciones del mundo\nCristales obtenidos";
+        // Con Record Progress apagado en el GameDirector el nivel no cobra nada (s.crystals = 0),
+        // pero la geoda recogida se enseña igual para poder probarla
+        var gdir = GeodeDirector.Instance;
+        if (s.crystals <= 0 && gdir != null && gdir.TakenSprite != null && gdir.TakenAmount > 0) s.crystals = gdir.TakenAmount;
         values.Text = $"{Clock(s.attemptSeconds)}\n{Clock(s.totalSeconds)}\n{s.deaths}\n{s.variations}\n+{s.crystals}";
         hint.Text = "Toca para continuar";
         CenterColumns();
+
+        HideGeode();
+        if (s.crystals > 0)
+        {
+            var gd = GeodeDirector.Instance;
+            var gs = gd != null && gd.TakenSprite != null ? gd.TakenSprite : geodeFallback;
+            // Empieza en +0 y cuenta hasta la cantidad mientras se abre
+            valuePrefix = $"{Clock(s.attemptSeconds)}\n{Clock(s.totalSeconds)}\n{s.deaths}\n{s.variations}\n+";
+            geodePos = CrystalRowPoint(geodeSize);
+            float textH = values.px != null ? values.px.CapHeight : values.tmp.fontSize * 0.7f;
+            crystalFinal = textH * crystalFinalSize;
+            crystalFinalPos = CrystalRowPoint(crystalFinal);
+            values.Text = valuePrefix + "0";
+            geodeAnim = StartCoroutine(OpenGeode(gs, s.crystals));
+        }
 
         for (int i = 0; i < MaxStreaks; i++) Respawn(i, true);
         exiting = false;
@@ -178,6 +210,7 @@ public class TransitionScreen : MonoBehaviour, IPointerClickHandler
     IEnumerator Exit()
     {
         exiting = true;
+        if (geodeAnim != null) { StopCoroutine(geodeAnim); geodeAnim = null; }
         if (charRt != null && charImg.enabled)
         {
             Vector2 from = charRt.anchoredPosition;
@@ -509,6 +542,205 @@ public class TransitionScreen : MonoBehaviour, IPointerClickHandler
         Place(labels.Rect, new Vector2(-half - labelW * 0.5f, -45f), new Vector2(labelW, blockH));
         Place(values.Rect, new Vector2(half + valueW * 0.5f, -45f), new Vector2(valueW, blockH));
         Place(hint.Rect, new Vector2(0f, -290f), new Vector2(1200f, 70f));
+
+        // La geoda: dos mitades que se separan, el cristal, los trocitos y la cantidad
+        geodeLayer = NewRect("Geoda", root);
+        Stretch(geodeLayer);
+        halfL = NewImg("MitadIzq", new Vector2(1f, 0.5f));
+        halfR = NewImg("MitadDer", new Vector2(0f, 0.5f));
+        bits = new Image[BitCount];
+        bitVel = new Vector2[BitCount];
+        bitSpin = new float[BitCount];
+        for (int i = 0; i < BitCount; i++) bits[i] = NewImg("Trocito", new Vector2(0.5f, 0.5f));
+        crystal = NewImg("Cristal", new Vector2(0.5f, 0.5f));
+        crystal.preserveAspect = true;
+        flash = NewImg("Destello", new Vector2(0.5f, 0.5f));
+        flash.sprite = SoftSprite();
+        HideGeode();
+    }
+
+    // ------------------------------------------------------------------ geoda
+    const int BitCount = 18;
+    RectTransform geodeLayer;
+    Image halfL, halfR, crystal, flash;
+    Image[] bits;
+    Vector2[] bitVel;
+    float[] bitSpin;
+    Coroutine geodeAnim;
+    Vector2 geodePos, crystalFinalPos;
+    float crystalFinal;
+    string valuePrefix;
+
+    // Justo a la derecha del valor de la última línea (Cristales obtenidos), con el texto ya final
+    Vector2 CrystalRowPoint(float size)
+    {
+        var vr = values.Rect;
+        float lineY, lineW;
+        int last = 4;
+        if (values.px != null)
+        {
+            lineY = values.px.LineCapCenterY(last);
+            lineW = values.px.LineWidth(last);
+        }
+        else
+        {
+            values.tmp.ForceMeshUpdate();
+            var info = values.tmp.textInfo;
+            int li = Mathf.Min(last, info.lineCount - 1);
+            var ln = info.lineInfo[Mathf.Max(0, li)];
+            lineY = (ln.ascender + ln.descender) * 0.5f;
+            lineW = ln.length;
+        }
+        float left = -vr.sizeDelta.x * vr.pivot.x;
+        return vr.anchoredPosition + new Vector2(left + lineW + geodeGap + size * 0.5f, lineY);
+    }
+
+    Image NewImg(string name, Vector2 pivot)
+    {
+        var rt = NewRect(name, geodeLayer);
+        rt.anchorMin = rt.anchorMax = new Vector2(0.5f, 0.5f);
+        rt.pivot = pivot;
+        var img = rt.gameObject.AddComponent<Image>();
+        img.raycastTarget = false;
+        img.enabled = false;
+        return img;
+    }
+
+    void HideGeode()
+    {
+        if (geodeAnim != null) { StopCoroutine(geodeAnim); geodeAnim = null; }
+        if (halfL == null) return;
+        halfL.enabled = halfR.enabled = crystal.enabled = flash.enabled = false;
+        foreach (var b in bits) b.enabled = false;
+    }
+
+    // La roca entra, tiembla, se parte en dos y deja ver el cristal; la cantidad sube hasta +N
+    IEnumerator OpenGeode(Sprite geode, int value)
+    {
+        yield return Wait(0.45f);
+
+        // Las dos mitades del dibujo, juntas, forman la roca entera
+        float h = geodeSize, w = geodeSize;
+        if (geode != null)
+        {
+            Rect r = geode.rect;
+            float k = geodeSize / Mathf.Max(r.width, r.height);
+            w = r.width * k; h = r.height * k;
+            float ppu = geode.pixelsPerUnit;
+            halfL.sprite = Sprite.Create(geode.texture, new Rect(r.x, r.y, r.width * 0.5f, r.height), new Vector2(1f, 0.5f), ppu);
+            halfR.sprite = Sprite.Create(geode.texture, new Rect(r.x + r.width * 0.5f, r.y, r.width * 0.5f, r.height), new Vector2(0f, 0.5f), ppu);
+            halfL.rectTransform.sizeDelta = halfR.rectTransform.sizeDelta = new Vector2(w * 0.5f, h);
+            halfL.enabled = halfR.enabled = true;
+        }
+        halfL.color = halfR.color = Color.white;
+        halfL.rectTransform.localRotation = halfR.rectTransform.localRotation = Quaternion.identity;
+
+        // 1. Entra con un salto
+        for (float t = 0f; t < 0.3f; t += Time.unscaledDeltaTime)
+        {
+            float e = t / 0.3f;
+            float sc = e < 0.7f ? Mathf.Lerp(0f, 1.15f, e / 0.7f) : Mathf.Lerp(1.15f, 1f, (e - 0.7f) / 0.3f);
+            SetHalves(0f, 0f, sc, 0f);
+            yield return null;
+        }
+        // 2. Tiembla cada vez más
+        for (float t = 0f; t < 0.8f; t += Time.unscaledDeltaTime)
+        {
+            float e = t / 0.8f;
+            float ang = Mathf.Sin(t * 55f) * 9f * e * e;
+            SetHalves(0f, ang, 1f + 0.05f * e * Mathf.Sin(t * 30f), 0f);
+            yield return null;
+        }
+        // 3. Se parte: las mitades se separan, destello, cristal y trocitos
+        flash.enabled = true;
+        flash.rectTransform.anchoredPosition = geodePos;
+        crystal.sprite = crystalIcon != null ? crystalIcon : (crystalBits != null && crystalBits.Length > 0 ? crystalBits[0] : null);
+        crystal.enabled = crystal.sprite != null;
+        crystal.rectTransform.anchoredPosition = geodePos;
+        for (int i = 0; i < BitCount; i++)
+        {
+            var b = bits[i];
+            b.sprite = crystalBits != null && crystalBits.Length > 0 ? crystalBits[Random.Range(0, crystalBits.Length)] : crystal.sprite;
+            b.enabled = b.sprite != null;
+            b.preserveAspect = true;
+            float sz = Random.Range(0.25f, 0.45f) * geodeSize;
+            b.rectTransform.sizeDelta = Vector2.one * sz;
+            b.rectTransform.anchoredPosition = geodePos;
+            float a = Random.Range(0f, Mathf.PI * 2f);
+            bitVel[i] = new Vector2(Mathf.Cos(a), Mathf.Sin(a) * 0.8f + 0.5f) * Random.Range(160f, 360f);
+            bitSpin[i] = Random.Range(-400f, 400f);
+            b.color = Color.white;
+        }
+        for (float t = 0f; t < 1.1f; t += Time.unscaledDeltaTime)
+        {
+            float dt = Time.unscaledDeltaTime;
+            float e = Mathf.Clamp01(t / 0.5f);
+            float ease = 1f - (1f - e) * (1f - e);
+            SetHalves(ease * geodeSize * 0.55f, 0f, 1f, ease * 28f);
+            halfL.color = halfR.color = new Color(1f, 1f, 1f, 1f - Mathf.Clamp01((t - 0.35f) / 0.5f));
+
+            float fe = Mathf.Clamp01(t / 0.35f);
+            flash.rectTransform.sizeDelta = Vector2.one * Mathf.Lerp(geodeSize * 0.6f, geodeSize * 2.6f, fe);
+            flash.color = new Color(1f, 0.95f, 1f, (1f - fe) * 0.9f);
+
+            float ce = Mathf.Clamp01(t / 0.45f);
+            float cs = ce < 0.75f ? Mathf.Lerp(0f, 1.2f, ce / 0.75f) : Mathf.Lerp(1.2f, 1f, (ce - 0.75f) / 0.25f);
+            crystal.rectTransform.sizeDelta = Vector2.one * geodeSize * cs;
+
+            for (int i = 0; i < BitCount; i++)
+            {
+                var rt = bits[i].rectTransform;
+                bitVel[i] += Vector2.down * 600f * dt;
+                rt.anchoredPosition += bitVel[i] * dt;
+                rt.localRotation = Quaternion.Euler(0f, 0f, rt.localEulerAngles.z + bitSpin[i] * dt);
+                bits[i].color = new Color(1f, 1f, 1f, 1f - Mathf.Clamp01((t - 0.5f) / 0.6f));
+            }
+
+            float ae = Mathf.Clamp01((t - 0.15f) / 0.75f);
+            values.Text = valuePrefix + Mathf.RoundToInt(value * ae * (2f - ae));
+            yield return null;
+        }
+        values.Text = valuePrefix + value;
+        flash.enabled = false;
+        halfL.enabled = halfR.enabled = false;
+        foreach (var b in bits) b.enabled = false;
+
+        // 4. Se encoge hasta quedar del tamaño de las letras, pegado al número
+        float from = crystal.rectTransform.sizeDelta.x;
+        for (float t = 0f; t < 0.4f; t += Time.unscaledDeltaTime)
+        {
+            float e = t / 0.4f;
+            e = e * e * (3f - 2f * e);
+            float sz = Mathf.Lerp(from, crystalFinal, e);
+            // Un pequeño rebote al final
+            sz *= 1f + 0.12f * Mathf.Sin(Mathf.Clamp01((t - 0.25f) / 0.15f) * Mathf.PI);
+            crystal.rectTransform.sizeDelta = Vector2.one * sz;
+            crystal.rectTransform.anchoredPosition = Vector2.Lerp(geodePos, crystalFinalPos, e);
+            yield return null;
+        }
+        crystal.rectTransform.sizeDelta = Vector2.one * crystalFinal;
+
+        // 5. Se queda ahí, flotando muy poco
+        for (float t = 0f; ; t += Time.unscaledDeltaTime)
+        {
+            crystal.rectTransform.anchoredPosition = crystalFinalPos + Vector2.up * Mathf.Sin(t * 2f) * 1.5f;
+            crystal.rectTransform.localRotation = Quaternion.Euler(0f, 0f, Mathf.Sin(t * 1.3f) * 4f);
+            yield return null;
+        }
+    }
+
+    void SetHalves(float apart, float shakeDeg, float scale, float tilt)
+    {
+        halfL.rectTransform.anchoredPosition = geodePos + Vector2.left * apart;
+        halfR.rectTransform.anchoredPosition = geodePos + Vector2.right * apart;
+        halfL.rectTransform.localRotation = Quaternion.Euler(0f, 0f, shakeDeg + tilt);
+        halfR.rectTransform.localRotation = Quaternion.Euler(0f, 0f, shakeDeg - tilt);
+        halfL.rectTransform.localScale = halfR.rectTransform.localScale = Vector3.one * scale;
+    }
+
+    static IEnumerator Wait(float seconds)
+    {
+        for (float t = 0f; t < seconds; t += Time.unscaledDeltaTime) yield return null;
     }
 
     Txt NewPixel(string name, PixelFont f, float cap, PixelText.Align align, float spacing)

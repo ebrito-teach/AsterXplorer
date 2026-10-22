@@ -16,6 +16,13 @@ public class WaveButton : MonoBehaviour, IPointerDownHandler
     [SerializeField] private Vector2 position = new Vector2(300f, 105f);
     [SerializeField] private int canvasOrder = 101;
     [SerializeField] private Sprite icon;
+    [Tooltip("Marcado: el icono se tiñe con Ready/Idle Color (para un icono blanco). Desmarcado: el " +
+             "icono conserva sus colores; sin poder usarse se ve apagado y, listo, brillante y latiendo")]
+    [SerializeField] private bool tintIcon = false;
+    [Tooltip("Tamaño del icono respecto al botón")]
+    [Range(0.3f, 1.2f)] [SerializeField] private float iconScale = 0.8f;
+    [Tooltip("Dibuja el aro y el fondo oscuro del botón. Desmárcalo si el icono ya trae su propio marco")]
+    [SerializeField] private bool showFrame = true;
     [SerializeField] private Color readyColor = new Color(0.45f, 1f, 0.55f, 1f);
     [SerializeField] private Color idleColor = new Color(0.55f, 0.6f, 0.75f, 0.7f);
 
@@ -40,8 +47,15 @@ public class WaveButton : MonoBehaviour, IPointerDownHandler
         float beat = ready ? 0.5f + 0.5f * Mathf.Sin(Time.unscaledTime * 6f) : 0f;
         Color c = ready ? readyColor : idleColor;
         frame.color = Color.Lerp(c, Color.white, beat * 0.35f);
-        glyph.color = new Color(c.r, c.g, c.b, ready ? 1f : 0.55f);
+        if (tintIcon) glyph.color = new Color(c.r, c.g, c.b, ready ? 1f : 0.55f);
+        else
+        {
+            // Sus propios colores: apagado y medio transparente si no se puede; pleno si sí
+            float v = ready ? 1f : 0.45f;
+            glyph.color = new Color(v, v, v, ready ? 1f : 0.6f);
+        }
         fill.color = new Color(0.03f, 0.06f, 0.08f, ready ? 0.75f : 0.55f);
+        frame.enabled = fill.enabled = showFrame;
 
         float sh = shake > 0f ? Mathf.Sin(Time.unscaledTime * 60f) * 10f * shake : 0f;
         shake = Mathf.MoveTowards(shake, 0f, dt / 0.3f);
@@ -82,7 +96,7 @@ public class WaveButton : MonoBehaviour, IPointerDownHandler
 
         fill = NewImage("Fondo", button, Disc(128, 0f, 0.86f), 1f, true);
         frame = NewImage("Marco", button, Disc(128, 0.8f, 0.95f), 1f, false);
-        glyph = NewImage("Icono", button, icon != null ? icon : Burst(128), 0.62f, false);
+        glyph = NewImage("Icono", button, icon != null ? icon : Burst(128), iconScale, false);
         glyph.preserveAspect = true;
 
         // Las dos cargas: dos puntos debajo del botón que se van llenando
