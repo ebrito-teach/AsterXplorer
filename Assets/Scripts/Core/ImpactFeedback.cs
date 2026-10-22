@@ -123,7 +123,7 @@ public class ImpactFeedback : MonoBehaviour
         if (cam != null)
         {
             cam.transform.localPosition = camBase;
-            cam.orthographicSize = baseSize;
+            CameraAspectFitter.ExtraHalfHeight = 0f;
         }
     }
 
@@ -216,15 +216,9 @@ public class ImpactFeedback : MonoBehaviour
             cam.transform.localPosition = Vector3.MoveTowards(cam.transform.localPosition, camBase, 4f * dt);
         }
 
-        if (zoomOffset > 0.0001f)
-        {
-            zoomOffset = Mathf.MoveTowards(zoomOffset, 0f, zoomRecover * dt);
-            cam.orthographicSize = baseSize + zoomOffset;
-        }
-        else if (!Mathf.Approximately(cam.orthographicSize, baseSize))
-        {
-            cam.orthographicSize = baseSize;
-        }
+        // El zoom del golpe lo aplica CameraAspectFitter (sirve igual en perspectiva)
+        if (zoomOffset > 0.0001f) zoomOffset = Mathf.MoveTowards(zoomOffset, 0f, zoomRecover * dt);
+        CameraAspectFitter.ExtraHalfHeight = Mathf.Max(0f, zoomOffset);
     }
 
     /// Si CameraAspectFitter cambia el tamaño de la cámara, avísale con esto.
@@ -232,6 +226,6 @@ public class ImpactFeedback : MonoBehaviour
     {
         if (cam == null) return;
         camBase = cam.transform.localPosition;
-        baseSize = cam.orthographicSize;
+        baseSize = CameraView.HalfHeight(cam);
     }
 }

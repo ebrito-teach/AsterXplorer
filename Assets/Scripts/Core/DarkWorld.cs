@@ -116,7 +116,7 @@ public class DarkWorld : MonoBehaviour
 
         // Cubre lo que ve la cámara con un poco de margen (por el temblor de los golpes)
         const float margin = 1.12f;
-        float viewH = cam.orthographicSize * 2f * margin;
+        float viewH = CameraView.HalfHeight(cam) * 2f * margin;
         float viewW = viewH * cam.aspect;
         Vector3 c = cam.transform.position;
         overlay.transform.position = new Vector3(c.x, c.y, 0f);

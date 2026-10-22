@@ -83,8 +83,32 @@ public class FlowField : MonoBehaviour
         return new Vector2(Mathf.Cos(r), Mathf.Sin(r));
     }
 
+    /// Zona por la que no puede entrar nada (detrás de una rasgadura). Un punto de su línea y
+    /// la normal hacia el lado permitido. La pone FractureDirector
+    public static bool HasBlockedSide;
+    public static Vector2 BlockedPoint, BlockedNormal;
+
+    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
+    static void ResetBlocked() { HasBlockedSide = false; }
+
     /// Punto de entrada en el borde "de donde viene" la corriente, lejos del jugador.
     public Vector2 RandomEntryPoint(Vector2 avoid, float avoidRadius)
+    {
+        Vector2 e = RawEntryPoint(avoid, avoidRadius);
+        if (!HasBlockedSide || Vector2.Dot(e - BlockedPoint, BlockedNormal) >= 0f) return e;
+
+        // Detrás de la rasgadura no entra nada: se cambia por un punto del borde de arriba o
+        // de abajo, en la parte de delante
+        Rect r = SpawnRect;
+        float lineX = BlockedPoint.x;
+        float x0 = BlockedNormal.x < 0f ? r.xMin : Mathf.Max(r.xMin, lineX + 1f);
+        float x1 = BlockedNormal.x < 0f ? Mathf.Min(r.xMax, lineX - 1f) : r.xMax;
+        if (x1 <= x0) { x0 = r.xMin; x1 = r.xMax; }
+        float y = Random.value < 0.5f ? r.yMin : r.yMax;
+        return new Vector2(Random.Range(x0, x1), y);
+    }
+
+    Vector2 RawEntryPoint(Vector2 avoid, float avoidRadius)
     {
         Rect r = SpawnRect;
         Vector2 d = FromAngle(baseAngle);

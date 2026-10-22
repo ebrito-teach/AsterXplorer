@@ -305,7 +305,21 @@ public class AsteroidTypeData : ScriptableObject
     }
 
     public float RandomSize() =>
-        Mathf.Lerp(sizeRange.x, sizeRange.y, Mathf.Pow(Random.value, Mathf.Max(0.1f, sizeSkew)));
+        Mathf.Lerp(sizeRange.x, sizeRange.y, Mathf.Pow(Random.value, Mathf.Max(0.1f, sizeSkew))) * ScaleOf(this);
+
+    /// Multiplicador de tamaño por comportamiento (índice = AsteroidBehavior) y para los
+    /// cometas. Lo pone AsteroidScaleTuner; sirve para probar rocas más grandes sin tocar cada
+    /// tipo. El generador compra menos cuanto más grandes son (el coste crece con el área)
+    public static readonly float[] BehaviorScale = { 1f, 1f, 1f, 1f, 1f, 1f };
+    public static float CometScale = 1f;
+
+    public static float ScaleOf(AsteroidTypeData t)
+    {
+        if (t == null) return 1f;
+        if (t.comet != null) return CometScale;
+        int i = (int)t.behavior;
+        return i >= 0 && i < BehaviorScale.Length ? BehaviorScale[i] : 1f;
+    }
 
     /// Fragmentos que corresponden al sprite que lleva puesto el asteroide.
     public Sprite[] FragmentsFor(int variant)

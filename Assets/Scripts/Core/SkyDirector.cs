@@ -231,7 +231,7 @@ public class SkyDirector : MonoBehaviour
         else
         {
             var c = Camera.main;
-            float h = c != null ? c.orthographicSize * 2f : 9f;
+            float h = c != null ? CameraView.HalfHeight(c) * 2f : 9f;
             screen = new Vector2(h * (c != null ? c.aspect : 2f), h);
             area = new Rect(-screen / 2f, screen);
         }
@@ -560,7 +560,7 @@ public class SkyDirector : MonoBehaviour
     {
         var c = Camera.main;
         if (c == null) return new Vector2(8f, 4f);
-        return new Vector2(c.orthographicSize * c.aspect, c.orthographicSize);
+        return CameraView.Half(c);
     }
 
     void Twinkle(SpriteRenderer sr, Color c, float alpha, float amountScale, bool lensable)

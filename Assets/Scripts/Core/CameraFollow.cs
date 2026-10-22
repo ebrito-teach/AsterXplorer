@@ -59,9 +59,13 @@ public class CameraFollow : MonoBehaviour
     [Tooltip("A cuántas unidades de la grieta empieza (x) y a cuántas es completo (y)")]
     [SerializeField] private Vector2 fractureRange = new Vector2(16f, 7f);
     [Tooltip("Alejamiento máximo (1 = nada). Tope: 1.6")]
-    [Range(1f, 1.6f)] [SerializeField] private float fractureZoom = 1.5f;
+    [Range(1f, 1.6f)] [SerializeField] private float fractureZoom = 1f;
     [Tooltip("Cuánto se desplaza la vista hacia la grieta en vertical (hacia la sección abierta si la hay)")]
-    [Range(0f, 1f)] [SerializeField] private float fracturePull = 0.6f;
+    [Range(0f, 1f)] [SerializeField] private float fracturePull = 0.35f;
+    [Tooltip("Lo que tarda el punto al que mira en pasar de un eslabón a otro (evita saltos)")]
+    [SerializeField] private float fractureFocusSmooth = 0.8f;
+    [Tooltip("Temblor lento cerca de la grieta (unidades), que crece con su latido")]
+    [SerializeField] private float fractureRumble = 0.06f;
 
     [Header("Encuadre de la meta")]
     [Tooltip("Al acercarse al agujero negro, la cámara se desplaza en vertical para dejarlo " +
@@ -135,6 +139,15 @@ public class CameraFollow : MonoBehaviour
         bool arriving = targetPc != null && targetPc.IsExpelling;
         pos = arriving ? Clamp(pos) : Clamp(KeepInView(Clamp(pos), target.position));
 
+        // Presencia de la grieta: un temblor lento y sordo que crece al latir
+        var fdr = FractureDirector.Instance;
+        if (fdr != null && fdr.Presence > 0.01f && fractureRumble > 0f)
+        {
+            float tt = Time.time;
+            float amp = fractureRumble * fdr.Presence * (0.6f + 0.4f * fdr.Heartbeat);
+            pos += new Vector2((Mathf.PerlinNoise(tt * 1.7f, 3.1f) - 0.5f) * 2f, (Mathf.PerlinNoise(7.3f, tt * 1.7f) - 0.5f) * 2f) * amp;
+        }
+
         Velocity = (pos - (Vector2)transform.position) / dt;
         WarnIfOutside(gb);
         transform.position = new Vector3(pos.x, pos.y, transform.position.z);
@@ -190,7 +203,8 @@ public class CameraFollow : MonoBehaviour
 
     // Cerca de la meta, la vista baja o sube para que el agujero quede contra el borde de la
     // pantalla. Keep In View se aplica después: el jugador nunca sale de la vista por esto
-    float zoomNow = 1f;
+    float zoomNow = 1f, focusY, focusVel;
+    bool focusReady;
 
     // Cerca de la grieta: se aleja la cámara y la vista se inclina hacia ella (hacia la sección
     // abierta, si la hay). Keep In View sigue mandando: el jugador nunca sale de la vista
@@ -211,7 +225,11 @@ public class CameraFollow : MonoBehaviour
         float want = Mathf.Lerp(1f, fractureZoom, w);
         zoomNow = Mathf.MoveTowards(zoomNow, want, dt * 0.8f);
         CameraAspectFitter.Zoom = zoomNow;
-        if (w > 0f) p.y = Mathf.Lerp(p.y, focus.y, fracturePull * w);
+        // El punto al que mira se desliza: cambiar de eslabón no da saltos
+        if (!focusReady) { focusY = focus.y; focusReady = true; }
+        focusY = Mathf.SmoothDamp(focusY, focus.y, ref focusVel, fractureFocusSmooth, Mathf.Infinity, dt);
+        if (w > 0f) p.y = Mathf.Lerp(p.y, focusY, fracturePull * w);
+        else focusY = p.y;
         return p;
     }
 
@@ -232,7 +250,7 @@ public class CameraFollow : MonoBehaviour
 
         // Agujero en la mitad de arriba del mundo: queda arriba en la pantalla (la vista baja)
         float side = g.y >= gb.Area.center.y ? 1f : -1f;
-        float camY = g.y - side * (cam.orthographicSize - coreInside * core);
+        float camY = g.y - side * (CameraView.HalfHeight(cam) - coreInside * core);
         p.y = Mathf.Lerp(p.y, camY, w);
         return p;
     }
@@ -241,7 +259,7 @@ public class CameraFollow : MonoBehaviour
     Vector2 KeepInView(Vector2 camPos, Vector2 player)
     {
         if (cam == null || keepInView <= 0f) return camPos;
-        float halfH = cam.orthographicSize;
+        float halfH = CameraView.HalfHeight(cam);
         float halfW = halfH * cam.aspect;
         float mx = Mathf.Max(0f, halfW - keepInView), my = Mathf.Max(0f, halfH - keepInView);
         camPos.x = Mathf.Clamp(camPos.x, player.x - mx, player.x + mx);
@@ -261,7 +279,7 @@ public class CameraFollow : MonoBehaviour
         Rect w = new Rect(gb.Area.xMin - rv, gb.Area.yMin - rv, gb.Area.width + 2f * rv, gb.Area.height + 2f * rv);
         // Lo que ve la cámara AHORA, no el tamaño de pantalla guardado al arrancar: si este se
         // midió antes de que la cámara tomara su tamaño final, el tope dejaba sin ver el borde
-        float halfH = cam.orthographicSize;
+        float halfH = CameraView.HalfHeight(cam);
         float halfW = halfH * cam.aspect;
 
         p.x = w.width  > 2f * halfW ? Mathf.Clamp(p.x, w.xMin + halfW, w.xMax - halfW) : w.center.x;

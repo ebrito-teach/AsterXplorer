@@ -448,7 +448,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.6, y: 1.6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -10652,7 +10652,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CameraAspectFitter
   fitMode: 1
   targetWidth: 6
-  targetHeight: 7
+  targetHeight: 11.5
 --- !u!1 &534132922
 GameObject:
   m_ObjectHideFlags: 0
@@ -10963,19 +10963,25 @@ MonoBehaviour:
   budgetJitter: {x: 0.7, y: 1.35}
   bigSurprise: 0.15
   wavesBySize: {x: 2, y: 3, z: 4}
-  lengthBySize: {x: 1.4, y: 2.2, z: 3.2}
   maxSections: 16
-  farSideChance: 0.5
-  minDistanceFromSpawn: 16
-  edgeMargin: 3
+  riftHeight: {x: 0.62, y: 0.92}
+  riftWidth: 2.4
+  curve: 1.2
+  edgeDistance: 3.5
+  solidFraction: 0.55
   firstDelay: 2.5
   firingTime: {x: 6, y: 12}
   cooldownTime: {x: 3, y: 9}
-  fireInterval: {x: 1.1, y: 0.45}
+  caliberRadius: {x: 0.2, y: 0.36, z: 0.6}
+  smallCooldown: {x: 1.6, y: 3.2}
+  mediumCooldown: {x: 3, y: 5.5}
+  largeCooldown: {x: 6, y: 11}
+  fireRate: {x: 1, y: 1.8}
+  crowdDamping: 0.6
   projectileSpeed: {x: 4.5, y: 7.5}
-  projectileRadius: {x: 0.18, y: 0.34}
   aimAtPlayer: 0.5
   aimSpread: 25
+  frontCone: 55
   waveRange: 8
   maxCharges: 2
   grazeDistance: 0.6
@@ -10984,25 +10990,25 @@ MonoBehaviour:
   pushStun: 0.35
   looks:
   - name: Vacio
-    dust: {fileID: 7103059944399396593, guid: 3e354d435d0eea248ad4e8b4af4cda73, type: 3}
-    core: {fileID: -4748858994290812049, guid: 48c15b3d18f61bf4cb027c3974205c09, type: 3}
+    dust: {fileID: 21300000, guid: 3e354d435d0eea248ad4e8b4af4cda73, type: 3}
+    core: {fileID: 21300000, guid: 48c15b3d18f61bf4cb027c3974205c09, type: 3}
     dustTint: {r: 0, g: 0, b: 0, a: 0.8509804}
     coreTint: {r: 0, g: 0, b: 0, a: 1}
     glowTint: {r: 0, g: 0, b: 0, a: 0.5882353}
   - name: Estrella
-    dust: {fileID: -3661895330407113972, guid: 5c320dbd0dd74cc4bb19e573470199df, type: 3}
-    core: {fileID: 7991314371597583792, guid: 981c1f02036d4594f955e36ed2f3e29a, type: 3}
+    dust: {fileID: 21300000, guid: 5c320dbd0dd74cc4bb19e573470199df, type: 3}
+    core: {fileID: 21300000, guid: 981c1f02036d4594f955e36ed2f3e29a, type: 3}
     dustTint: {r: 0, g: 0, b: 0, a: 0.8509804}
     coreTint: {r: 0, g: 0, b: 0, a: 1}
     glowTint: {r: 0, g: 0, b: 0, a: 0.5882353}
   - name: Nebulosa
-    dust: {fileID: -1048249818481350741, guid: aab0d32e254ff09499fe0800f61532aa, type: 3}
-    core: {fileID: 0}
+    dust: {fileID: 21300000, guid: aab0d32e254ff09499fe0800f61532aa, type: 3}
+    core: {fileID: 21300000, guid: ad05495cc95dd194c922606575ee46d5, type: 3}
     dustTint: {r: 0, g: 0, b: 0, a: 0.8509804}
     coreTint: {r: 0, g: 0, b: 0, a: 1}
     glowTint: {r: 0, g: 0, b: 0, a: 0.5882353}
-  antimatterCore: {fileID: 1129795986167866040, guid: fc37bfbfd4a10314a92d5adb7d516d86, type: 3}
-  antimatterGlow: {fileID: 1678209972965121518, guid: fec8e33897de7a041b2ac4ca2b0bddfc, type: 3}
+  antimatterCore: {fileID: 21300000, guid: fc37bfbfd4a10314a92d5adb7d516d86, type: 3}
+  antimatterGlow: {fileID: 21300000, guid: fec8e33897de7a041b2ac4ca2b0bddfc, type: 3}
   antimatterHalo: {r: 0.85, g: 0.25, b: 1, a: 0.7}
   burstA: {r: 1, g: 0.35, b: 0.95, a: 1}
   burstB: {r: 0.45, g: 0.9, b: 1, a: 1}
@@ -17907,8 +17913,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 679042f115cac6249855afeae289746d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraFollow
-  target: {fileID: 0}
-  cam: {fileID: 0}
+  target: {fileID: 1679237104}
+  cam: {fileID: 519420031}
   lookAheadTime: 0.35
   maxLookAhead: {x: 2.5, y: 1.5}
   lookAheadSmooth: 0.35
@@ -17917,6 +17923,10 @@ MonoBehaviour:
   autoReveal: 1
   extraReveal: 0
   keepInView: 1.2
+  frameFracture: 1
+  fractureRange: {x: 16, y: 7}
+  fractureZoom: 1
+  fracturePull: 0.6
   frameGoal: 1
   frameRange: 6
   frameFullAt: 2.5

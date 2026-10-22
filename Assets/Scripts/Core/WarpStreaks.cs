@@ -95,7 +95,7 @@ public class WarpStreaks : MonoBehaviour
 
     Vector2 Half()
     {
-        float h = cam != null ? cam.orthographicSize : 4f;
+        float h = cam != null ? CameraView.HalfHeight(cam) : 4f;
         float w = h * (cam != null ? cam.aspect : 2f);
         return new Vector2(w + 2f, h + 2f);
     }

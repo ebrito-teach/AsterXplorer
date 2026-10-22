@@ -258,7 +258,18 @@ public class PlayerController : MonoBehaviour
         hasWall = on;
         wallPoint = point;
         wallNormal = normal.sqrMagnitude > 0.0001f ? normal.normalized : Vector2.left;
+        wallXAt = null;
     }
+
+    /// Pared que sigue una curva vertical: para cada altura, la x que no se puede pasar. La
+    /// normal (horizontal) apunta al lado permitido. La usa la rasgadura
+    public void SetWallCurve(System.Func<float, float> xAt, Vector2 normal)
+    {
+        hasWall = xAt != null;
+        wallXAt = xAt;
+        wallNormal = normal.sqrMagnitude > 0.0001f ? normal.normalized : Vector2.left;
+    }
+    System.Func<float, float> wallXAt;
     bool hasWall;
     Vector2 wallPoint, wallNormal;
     /// Tocó la barrera (para el destello)
@@ -630,6 +641,7 @@ public class PlayerController : MonoBehaviour
     {
         if (hasWall)
         {
+            if (wallXAt != null) wallPoint = new Vector2(wallXAt(rb.position.y), rb.position.y);
             float d = Vector2.Dot(rb.position - wallPoint, wallNormal);
             if (d < 0f)
             {

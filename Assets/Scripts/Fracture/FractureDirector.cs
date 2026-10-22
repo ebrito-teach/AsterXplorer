@@ -41,6 +41,9 @@ public class FractureDirector : MonoBehaviour
     public static FractureDirector Instance { get; private set; }
     public static Sprite MarkerSprite { get; private set; }
     public static Color WarningColor { get; private set; } = new Color(1f, 0.25f, 0.35f);
+    /// Profundidad de las capas de la rasgadura (la cámara es en perspectiva): cuánto más
+    /// lejos va el polvo de fondo y cuánto más cerca los jirones de delante, y su opacidad
+    public static float BackDepth = 3f, FrontDepth = 2.5f, FrontAlpha = 0.22f;
 
     [Serializable]
     public class Look
@@ -133,6 +136,12 @@ public class FractureDirector : MonoBehaviour
     [SerializeField] private int sortingOrder = 200;
     [SerializeField] private string projectileLayer = "Asteroids";
     [SerializeField] private int projectileOrder = 400;
+    [Header("Profundidad (cámara en perspectiva)")]
+    [Tooltip("Cuánto más lejos que la grieta va su polvo de fondo (unidades en z)")]
+    [SerializeField] private float backDepth = 3f;
+    [Tooltip("Cuánto más cerca de la cámara van los jirones de delante (pasan por delante del jugador)")]
+    [SerializeField] private float frontDepth = 2.5f;
+    [Range(0f, 0.6f)] [SerializeField] private float frontAlpha = 0.22f;
 
     public bool Active { get; private set; }
     public float Charge { get; private set; }
@@ -140,6 +149,10 @@ public class FractureDirector : MonoBehaviour
     public float GrazeDistance => grazeDistance;
     public Rigidbody2D PlayerBody => player != null ? player.Body : null;
     public float PlayerRadius { get; private set; } = 0.3f;
+    /// 0..1: lo cerca que está el jugador de la rasgadura (temblor y viñeta)
+    public float Presence { get; private set; }
+    /// Latido común de la rasgadura, 0..1 (lub-dub)
+    public float Heartbeat { get; private set; }
     public IReadOnlyList<FractureSection> Sections => sections;
     /// El eslabón vulnerable más cercano al jugador (null si no hay ninguno)
     public FractureSection OpenSection { get; private set; }
@@ -173,6 +186,7 @@ public class FractureDirector : MonoBehaviour
     {
         Instance = this;
         WarningColor = warningColor;
+        BackDepth = backDepth; FrontDepth = Mathf.Clamp(frontDepth, 0f, 8f); FrontAlpha = frontAlpha;
         if (MarkerSprite == null) MarkerSprite = MakeMarker();
         fallbackCore = MakeOrb(64, true);
         fallbackGlow = MakeOrb(64, false);
@@ -215,6 +229,7 @@ public class FractureDirector : MonoBehaviour
         Clear();
         if (player == null) { player = FindFirstObjectByType<PlayerController>(); if (player != null) player.HitWall += OnHitWall; }
         if (player != null) player.SetWall(false, Vector2.zero, Vector2.zero);
+        FlowField.HasBlockedSide = false;
         Active = on;
         Charge = 0f;
         level = lvl;
@@ -224,8 +239,8 @@ public class FractureDirector : MonoBehaviour
         if (!on) return;
         if (player != null)
         {
-            var col = player.GetComponentInChildren<CircleCollider2D>();
-            PlayerRadius = col != null ? col.radius * Mathf.Abs(col.transform.lossyScale.x) : 0.3f;
+            var col = player.GetComponentInChildren<Collider2D>();
+            PlayerRadius = col != null ? Mathf.Min(col.bounds.extents.x, col.bounds.extents.y) : 0.3f;
         }
         Build(new System.Random(layoutSeed), playerSpawn);
         startAt = Time.time + firstDelay + 1.5f;   // la llegada del jugador dura ~1.4 s
@@ -314,9 +329,15 @@ public class FractureDirector : MonoBehaviour
                           float.MaxValue);   // empiezan al terminar la espera inicial
         }
 
-        // No se puede pasar por detrás: pared en el eje de la rasgadura
-        BarrierPoint = new Vector2(edgeX + Front.x * (edgeDistance - curve - riftWidth * 0.25f), axisY);
-        if (player != null) player.SetWall(true, BarrierPoint, Front);
+        // No se puede pasar por detrás: una pared que sigue el eje curvo de la rasgadura, y por
+        // encima y por debajo de ella sigue a la altura de sus extremos. Los espacios de arriba
+        // y de abajo tampoco llevan al otro lado
+        BarrierPoint = new Vector2(edgeX + Front.x * edgeDistance, axisY);
+        if (player != null) player.SetWallCurve(WallX, Front);
+        // Y por detrás de ella no entra ningún asteroide
+        FlowField.HasBlockedSide = true;
+        FlowField.BlockedPoint = new Vector2(edgeX + Front.x * (edgeDistance + curve + riftWidth), axisY);
+        FlowField.BlockedNormal = Front;
 
         // El generador deja libre de estáticos la zona de la rasgadura
         float x0 = edgeX + Front.x * (edgeDistance + curve + riftWidth * 2f);
@@ -329,6 +350,42 @@ public class FractureDirector : MonoBehaviour
     }
 
     float curvePhase, curveFreq, totalLength;
+
+    /// La x que no se puede pasar a una altura dada: el eje de la rasgadura (o el de su
+    /// extremo más cercano, por encima y por debajo de ella)
+    public float WallX(float y)
+    {
+        float top = float.MinValue, bottom = float.MaxValue;
+        foreach (var s in sections)
+        {
+            if (s == null || s.Closed) continue;
+            top = Mathf.Max(top, s.Along + s.Length * 0.5f);
+            bottom = Mathf.Min(bottom, s.Along - s.Length * 0.5f);
+        }
+        if (top < bottom) return edgeX + Front.x * edgeDistance;
+        return PointAt(Mathf.Clamp(y, bottom, top), totalLength).x;
+    }
+
+    // Rocas al otro lado: no pueden estar ahí. Las que crucen por arriba o por abajo se deshacen
+    AsteroidPool pool;
+    float nextSweep;
+    void SweepBehind()
+    {
+        if (Time.time < nextSweep) return;
+        nextSweep = Time.time + 0.15f;
+        if (pool == null) pool = FindFirstObjectByType<AsteroidPool>();
+        if (pool == null) return;
+        var act = pool.Active;
+        for (int i = act.Count - 1; i >= 0; i--)
+        {
+            if (i >= act.Count) continue;
+            var a = act[i];
+            if (a == null || a.Body == null || !a.isActiveAndEnabled) continue;
+            Vector2 p = a.Body.position;
+            float behind = (WallX(p.y) - p.x) * Front.x;   // > 0: detrás
+            if (behind > a.WorldRadius * 0.5f) Disintegrate(a);
+        }
+    }
 
     // Eje curvo de la rasgadura: x según la altura
     Vector2 PointAt(float yAlong, float total)
@@ -362,8 +419,16 @@ public class FractureDirector : MonoBehaviour
     // ------------------------------------------------------------------ ciclo
     void Update()
     {
-        if (!Active || done) return;
-        if (player == null || player.IsDead || player.IsExpelling) return;
+        float ph = Mathf.Repeat(Time.time * 0.9f, 1f);
+        Heartbeat = Mathf.Clamp01(Mathf.Exp(-Mathf.Pow((ph - 0.08f) / 0.05f, 2f)) + 0.6f * Mathf.Exp(-Mathf.Pow((ph - 0.26f) / 0.06f, 2f)));
+        if (!Active || done || player == null) { Presence = Mathf.MoveTowards(Presence, 0f, Time.deltaTime); return; }
+        {
+            float dist = Mathf.Abs(player.transform.position.x - WallX(player.transform.position.y));
+            float want = 1f - Mathf.InverseLerp(4f, 14f, dist);
+            Presence = Mathf.MoveTowards(Presence, want, Time.deltaTime * 0.7f);
+        }
+        SweepBehind();
+        if (player.IsDead || player.IsExpelling) return;
 
         if (!started)
         {
@@ -489,6 +554,7 @@ public class FractureDirector : MonoBehaviour
         foreach (var s in shots) if (s != null && s.Alive && !s.Homing) { Burst(s.transform.position, s.Radius, 6); s.Kill(); }
         Debug.Log("FractureDirector: rasgadura cerrada. Se abre el agujero negro.");
         if (player != null) player.SetWall(false, Vector2.zero, Vector2.zero);
+        FlowField.HasBlockedSide = false;
         Ring(Center, 1f, 14f, new Color(1f, 1f, 1f, 0.8f));
         Closed?.Invoke(Center);
     }
@@ -524,8 +590,17 @@ public class FractureDirector : MonoBehaviour
     {
         if (a == null || a.Body == null || !a.isActiveAndEnabled) return;
         Burst(a.Body.position, a.WorldRadius, Mathf.Clamp(Mathf.RoundToInt(a.WorldRadius * 14f), 5, 30));
-        if (a.Pool == null || !a.Pool.NotifyExited(a)) a.Release();
+        // Sin sustituto inmediato: antes cada trozo destruido (y un cometa suelta muchos) traía
+        // un asteroide nuevo y la pantalla se llenaba. La población la repone el generador poco
+        // a poco, y los cometas su director
+        if (a.Type != null && a.Type.behavior == AsteroidBehavior.Colossus)
+        {
+            if (colossus == null) colossus = FindFirstObjectByType<ColossusDirector>();
+            if (colossus != null) colossus.NotifyGone();
+        }
+        a.Release();
     }
+    ColossusDirector colossus;
 
     /// Antimateria normal contra una roca: se destruyen las dos. La perseguidora sigue
     public void OnShotHitRock(Antimatter shot, Asteroid a)

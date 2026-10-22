@@ -43,7 +43,9 @@ public class FractureSection : MonoBehaviour
     public float Along { get; set; }
 
     FractureDirector owner;
-    SpriteRenderer dust, core, glow, marker;
+    SpriteRenderer dust, core, glow, marker, dustBack, dustFront;
+    Vector3 backScale, frontScale;
+    Color backTint, frontTint;
     Collider2D solid, eater;
     float seed, flash, closing = -1f, warn;
     Color dustTint, coreTint, glowTint, openColor;
@@ -86,6 +88,18 @@ public class FractureSection : MonoBehaviour
         s.dust = s.Layer("Polvo", look.dust, length * 1.35f, thickness * 2.6f, sortingLayer, order, s.dustTint, out s.dustScale);
         s.glow = s.Layer("Brillo", look.core, length * 1.18f, thickness * 1.45f, sortingLayer, order + 1, s.glowTint, out s.glowScale);
         s.core = s.Layer("Desgarro", look.core, length * 1.12f, thickness, sortingLayer, order + 2, s.coreTint, out s.coreScale);
+
+        // Profundidad (la cámara es en perspectiva): un polvo más lejano, detrás, que se mueve
+        // más despacio, y unos jirones más cerca de la cámara que pasan por delante del
+        // jugador, semitransparentes. Al moverse se ve como un volumen enorme, no un dibujo
+        s.backTint = new Color(s.dustTint.r * 0.7f, s.dustTint.g * 0.7f, s.dustTint.b * 0.8f, s.dustTint.a * 0.55f);
+        s.dustBack = s.Layer("PolvoFondo", look.dust, length * 1.7f, thickness * 3.4f, sortingLayer, order - 1, s.backTint, out s.backScale);
+        s.dustBack.transform.localPosition = new Vector3(0f, 0f, FractureDirector.BackDepth);
+        s.frontTint = new Color(s.dustTint.r, s.dustTint.g, s.dustTint.b, FractureDirector.FrontAlpha);
+        s.dustFront = s.Layer("PolvoDelante", look.dust, length * 1.15f, thickness * 1.9f, "Player", 500 + order, s.frontTint, out s.frontScale);
+        s.dustFront.transform.localPosition = new Vector3(Random.Range(-0.3f, 0.3f) * length, 0f, -FractureDirector.FrontDepth);
+        s.dustFront.flipX = Random.value < 0.5f;
+        s.dustFront.flipY = Random.value < 0.5f;
 
         var m = new GameObject("PuntoDebil");
         m.transform.SetParent(go.transform, false);
@@ -277,6 +291,17 @@ public class FractureSection : MonoBehaviour
         {
             dust.color = new Color(dustTint.r, dustTint.g, dustTint.b, dustTint.a * (1f - close * close));
             dust.transform.localRotation = Quaternion.Euler(0f, 0f, Mathf.Sin(t * 0.23f) * 2f);
+        }
+        if (dustBack != null)
+        {
+            dustBack.color = new Color(backTint.r, backTint.g, backTint.b, backTint.a * (1f - close));
+            dustBack.transform.localRotation = Quaternion.Euler(0f, 0f, Mathf.Sin(t * 0.13f + 1f) * 3f);
+            dustBack.transform.localScale = new Vector3(backScale.x * kx, backScale.y * (0.9f + 0.1f * beat), 1f);
+        }
+        if (dustFront != null)
+        {
+            dustFront.color = new Color(frontTint.r, frontTint.g, frontTint.b, frontTint.a * (1f - close) * (0.8f + 0.2f * beat));
+            dustFront.transform.localRotation = Quaternion.Euler(0f, 0f, Mathf.Sin(t * 0.31f + 2f) * 5f);
         }
 
         if (marker != null)

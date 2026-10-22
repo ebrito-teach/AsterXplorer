@@ -425,7 +425,7 @@ public class LevelPopulator : MonoBehaviour
         if (tClosest <= 0f) return true;                 // se aleja: no es amenaza
 
         float missBy = (rel - v * tClosest).magnitude;
-        float hitRadius = playerRadius + type.sizeRange.y * 0.7f;
+        float hitRadius = playerRadius + type.sizeRange.y * AsteroidTypeData.ScaleOf(type) * 0.7f;
         if (missBy > hitRadius) return true;             // no le pasa por encima
 
         return tClosest >= window;
@@ -516,7 +516,13 @@ public class LevelPopulator : MonoBehaviour
         return made;
     }
 
-    static float Cost(AsteroidTypeData t) => Mathf.Max(0.5f, t.cost);
+    // Más grande, más caro: el coste crece con el área, así la densidad se mantiene al
+    // probar rocas más grandes con AsteroidScaleTuner
+    static float Cost(AsteroidTypeData t)
+    {
+        float s = AsteroidTypeData.ScaleOf(t);
+        return Mathf.Max(0.5f, t.cost) * s * s;
+    }
 
     static AsteroidTypeData PickWeighted(List<AsteroidTypeData> list, float maxCost, bool onlyStatic)
     {

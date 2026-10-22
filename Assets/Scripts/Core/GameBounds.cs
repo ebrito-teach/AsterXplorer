@@ -112,7 +112,7 @@ public class GameBounds : MonoBehaviour
     public void RefreshCamera()
     {
         if (cam == null) return;
-        float h = cam.orthographicSize * 2f;
+        float h = CameraView.HalfHeight(cam) * 2f;
         float w = h * cam.aspect;
         Vector2 c = cam.transform.position;
         CameraRect = new Rect(c.x - w / 2f, c.y - h / 2f, w, h);

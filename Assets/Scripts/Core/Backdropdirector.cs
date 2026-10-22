@@ -215,7 +215,7 @@ public class BackdropDirector : MonoBehaviour
         else
         {
             var c = Camera.main;
-            float h = c != null ? c.orthographicSize * 2f : 9f;
+            float h = c != null ? CameraView.HalfHeight(c) * 2f : 9f;
             screen = new Vector2(h * (c != null ? c.aspect : 2f), h);
             area = new Rect(-screen / 2f, screen);
         }
