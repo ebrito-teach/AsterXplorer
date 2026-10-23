@@ -95,12 +95,16 @@ public class Antimatter : MonoBehaviour
 
     public void Kill()
     {
+        Held = false;
         gameObject.SetActive(false);
     }
 
+    /// El primer plano de la muerte lo congela mientras dura
+    public bool Held { get; set; }
+
     void FixedUpdate()
     {
-        if (Asteroid.WorldFrozen) { rb.linearVelocity = Vector2.zero; return; }
+        if (Asteroid.WorldFrozen || Held) { rb.linearVelocity = Vector2.zero; return; }
         if (Homing && target != null)
         {
             Vector2 to = (Vector2)target.position - rb.position;
@@ -118,7 +122,7 @@ public class Antimatter : MonoBehaviour
     void Update()
     {
         float t = Time.time - born;
-        if (!Asteroid.WorldFrozen) sr.transform.Rotate(0f, 0f, spin * Time.deltaTime);
+        if (!Asteroid.WorldFrozen && !Held) sr.transform.Rotate(0f, 0f, spin * Time.deltaTime);
         halo.transform.localRotation = Quaternion.Euler(0f, 0f, -t * 40f);
         var c = halo.color; c.a = Mathf.Clamp01(0.55f + 0.25f * Mathf.Sin(t * 9f)); halo.color = c;
 

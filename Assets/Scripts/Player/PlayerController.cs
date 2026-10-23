@@ -568,13 +568,24 @@ public class PlayerController : MonoBehaviour
         return true;
     }
 
+    [Tooltip("Velocidad mínima de un choque que no mata para que salte la chispa")]
+    [SerializeField] private float bumpSparkSpeed = 1.2f;
+    float nextBumpSpark;
+
     void OnCollisionEnter2D(Collision2D c)
     {
         if (IsDead) return;
         // Con escudo, cualquier choque con una roca cuenta como golpe parado
         var hitRock = c.collider.GetComponentInParent<Asteroid>();
+        Vector2 hitAt = c.contactCount > 0 ? c.GetContact(0).point : (Vector2)transform.position;
         // El escudo solo se gasta con lo que mata (tocar un planeta o un estático no lo gasta)
-        if (HitAbsorber != null && hitRock != null && hitRock.Lethal) HitAbsorber();
+        if (HitAbsorber != null && hitRock != null && hitRock.Lethal && HitAbsorber()) ImpactSparks.Shield(hitAt);
+        // Choque que no mata (estáticos, planetas, rocas no letales): chispa pequeña
+        if (hitRock != null && !hitRock.Lethal && c.relativeVelocity.magnitude >= bumpSparkSpeed && Time.time >= nextBumpSpark)
+        {
+            nextBumpSpark = Time.time + 0.15f;
+            ImpactSparks.Bump(hitAt);
+        }
 
         // Estáticos y planetas: sin rebote. Topas y te quedas pegado a su superficie (pierdes
         // solo la parte de la velocidad que iba hacia ellos), sin empujón ni aturdimiento
@@ -740,12 +751,22 @@ public class PlayerController : MonoBehaviour
     /// La meta tira de ti: aceleración (no fuerza) de este paso de física.
     public void AddGravity(Vector2 acceleration) => gravityAccel += acceleration;
 
+    /// Lo que le mató (roca, antimateria; null si no se sabe) y dónde fue el impacto
+    public Component LastKiller { get; private set; }
+    public Vector2 DeathPoint { get; private set; }
+
     /// Mata al jugador (se ignora si es invulnerable o ya está muerto).
-    public void Kill()
+    public void Kill() => KillBy(null, transform.position);
+
+    /// Mata al jugador sabiendo qué le golpeó y dónde (para el primer plano y la chispa)
+    public void KillBy(Component killer, Vector2 at)
     {
         if (IsDead || IsInvulnerable) return;
-        if (HitAbsorber != null && HitAbsorber()) return;
+        if (HitAbsorber != null && HitAbsorber()) { ImpactSparks.Shield(at); return; }
         IsDead = true;
+        LastKiller = killer;
+        DeathPoint = at;
+        ImpactSparks.Death(at);
 
         controlVel = Vector2.zero;
         turnRate = 0f;

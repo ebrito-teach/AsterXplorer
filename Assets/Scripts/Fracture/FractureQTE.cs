@@ -100,6 +100,7 @@ public class FractureQTE : MonoBehaviour
     readonly List<float> orbBase = new List<float>();
     int chainSize, resolved, misses, passes;
     Coroutine launchRoutine;
+    Antimatter lastResolved;
     bool launching;
     float nextAt = -1f, warnUntil;
     bool warning;
@@ -312,8 +313,13 @@ public class FractureQTE : MonoBehaviour
         if (hit) { fd.Burst(at, (o != null ? o.Radius : 0.4f) * 1.5f, 30); flash = 1f; flashColor = Color.white; }
         else if (!ghostPass) { fd.Burst(at, o != null ? o.Radius : 0.4f, 12); misses++; flash = 1f; flashColor = FractureDirector.WarningColor; }
         else passes++;
-        if (o != null) o.Kill();
+        // Si este fallo pierde la cadena, el orbe se queda para el primer plano (lo quita Fail)
+        int allowedNow = chainSize >= 3 ? 1 : 0;
+        bool losing = !hit && !ghostPass && misses > allowedNow && !IsBuff(BuffType.LightShield) && !IsBuff(BuffType.Ghost);
+        lastResolved = losing ? o : null;
+        if (o != null && !losing) o.Kill();
         RemoveFirst();
+        if (losing && o != null) orbs.Add(o);   // EndChain lo matará salvo que Fail lo reserve
         resolved++;
 
         // ¿Ya está perdida la cadena? simple y doble: un fallo; triple: dos fallos
@@ -379,8 +385,14 @@ public class FractureQTE : MonoBehaviour
         else
         {
             Debug.Log("FractureQTE: fallo.");
+            // El orbe que llegaba primero se queda (lo congela el primer plano); el resto se va
+            Antimatter killer = lastResolved != null && lastResolved.Alive ? lastResolved : null;
+            if (killer != null) orbs.Remove(killer);
             EndChain();
-            player.Kill();
+            Vector2 me = player.transform.position;
+            Vector2 at = killer != null ? (Vector2)killer.transform.position : me;
+            player.KillBy(killer, killer != null ? at + (me - at).normalized * killer.Radius : me);
+            if (killer != null && (!player.IsDead || !DeathCloseUp.WillPlay)) killer.Kill();
         }
     }
 

@@ -565,9 +565,13 @@ public class Asteroid : MonoBehaviour
                 if (tailsPlaying[i] && tails[i] != null && tails[i].gameObject.activeInHierarchy) tails[i].Play(true);
     }
 
+    /// El primer plano de la muerte la congela (solo a esta roca) mientras dura
+    public bool Held { get; set; }
+
     void FixedUpdate()
     {
         if (swallowed) return;
+        if (Held && rb != null) { rb.linearVelocity = Vector2.zero; rb.angularVelocity = 0f; return; }
         if (WorldFrozen && Type != null && rb != null)
         {
             if (frozenUntil <= 0f) EnterFreeze();
@@ -1212,7 +1216,7 @@ public class Asteroid : MonoBehaviour
 
         if (!Lethal) return;
         var player = c.collider.GetComponentInParent<PlayerController>();
-        if (player != null) player.Kill();
+        if (player != null) player.KillBy(this, c.contactCount > 0 ? c.GetContact(0).point : (Vector2)player.transform.position);
     }
 
     /// Energía real del choque: E = ½·m_reducida·v². La dispara solo el más pesado de

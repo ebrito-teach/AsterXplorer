@@ -5,10 +5,10 @@ using UnityEngine;
 /// jugador, una por cada carga completa. La órbita va pegada a la cabeza: si el personaje gira,
 /// gira con él. La que se está llenando crece y se aclara según su parte.
 ///
-///   2 cargas   temblor de cámara
-///   5 cargas   temblor más fuerte
+///   2 cargas   temblor de cámara y 1 rayo azul alrededor del cuerpo
+///   5 cargas   temblor más fuerte y 2 rayos
 ///   7 cargas   onda expansiva desde el personaje y, mientras sigan las 7, un aura de fuego
-///              con llamas en punta que suben alrededor (como la de Critical Explosion)
+///              con llamas en punta que suben alrededor (como la de Critical Explosion) y 4 rayos
 ///
 /// Todo con sprites (sin sistemas de partículas). Solo en mapas con grieta. Va en el mismo
 /// objeto que el FractureDirector.
@@ -45,6 +45,24 @@ public class ChargeOrbs : MonoBehaviour
     [SerializeField] private Color flameEnd = new Color(0.8f, 0.08f, 0.05f, 0f);
     [SerializeField] private Color auraGlow = new Color(1f, 0.3f, 0.08f, 0.5f);
 
+    [Tooltip("Desmarcado: el aura solo lleva los rayos azules, sin llamas")]
+    [SerializeField] private bool flamesOn = true;
+
+    [Header("Rayos azules del aura (FX_Arco_1..3)")]
+    [Tooltip("Los fotogramas de los rayos. Vacío = sin rayos")]
+    [SerializeField] private Sprite[] arcFrames;
+    [Tooltip("Rayos con 2 cargas o más, con 5 o más y con las 7 (con el aura)")]
+    [SerializeField] private int arcsAt2 = 1;
+    [SerializeField] private int arcsAt5 = 2;
+    [SerializeField] private int arcs = 4;
+    [Tooltip("Tamaño de cada rayo en unidades del mundo (para un personaje de escala 1)")]
+    [SerializeField] private float arcSize = 0.6f;
+    [Tooltip("A qué distancia del centro del personaje salen (multiplica Aura Radius)")]
+    [SerializeField] private float arcSpread = 1.5f;
+    [SerializeField] private float arcFrameTime = 0.06f;
+    [SerializeField] private Vector2 arcLife = new Vector2(0.14f, 0.3f);
+    [SerializeField] private Color arcColor = new Color(1f, 1f, 1f, 1f);
+
     [SerializeField] private string sortingLayer = "FX";
     [SerializeField] private int sortingOrder = 50;
 
@@ -54,6 +72,10 @@ public class ChargeOrbs : MonoBehaviour
     readonly List<SpriteRenderer> glows = new List<SpriteRenderer>();
     SpriteRenderer auraBack, shock;
     SpriteRenderer[] flameSr;
+    SpriteRenderer[] arcSr;
+    float[] arcAge, arcMax;
+    int[] arcFrame0;
+    Vector2[] arcOff;
     Vector2[] flamePos, flameVel;
     float[] flameAge, flameMax, flameW, flameH;
     float spin, flash, shockT = -1f;
@@ -80,6 +102,16 @@ public class ChargeOrbs : MonoBehaviour
             // La mitad, detrás del personaje; la otra mitad, delante
             flameSr[i] = NewSr("Llama", spike, i % 2 == 0 ? "Player" : sortingLayer, i % 2 == 0 ? -9 : sortingOrder - 1);
             flameAge[i] = flameMax[i] = 1f;
+        }
+
+        int na = Mathf.Max(0, Mathf.Max(arcs, Mathf.Max(arcsAt2, arcsAt5)));
+        arcSr = new SpriteRenderer[na];
+        arcAge = new float[na]; arcMax = new float[na]; arcFrame0 = new int[na]; arcOff = new Vector2[na];
+        for (int i = 0; i < na; i++)
+        {
+            arcSr[i] = NewSr("Rayo", null, i % 2 == 0 ? "Player" : sortingLayer, i % 2 == 0 ? -8 : sortingOrder + 2);
+            arcAge[i] = arcMax[i] = 1f;
+            arcAge[i] = Random.Range(0f, 1f);   // que no nazcan todos a la vez
         }
     }
 
@@ -147,6 +179,9 @@ public class ChargeOrbs : MonoBehaviour
         }
 
         bool fullCharge = full >= max;
+        // Rayos que crecen con las cargas: 1 con 2, 2 con 5, todos con las 7
+        int nArcs = fullCharge ? arcs : full >= 5 ? arcsAt5 : full >= 2 ? arcsAt2 : 0;
+        UpdateArcs(nArcs, me, s, Time.deltaTime);
         UpdateAura(fullCharge, me, up, s);
         UpdateShock(me);
     }
@@ -167,6 +202,7 @@ public class ChargeOrbs : MonoBehaviour
         float rot = Mathf.Atan2(up.y, up.x) * Mathf.Rad2Deg - 90f;
         for (int i = 0; i < flameSr.Length; i++)
         {
+            if (!flamesOn) { flameSr[i].enabled = false; flameAge[i] = flameMax[i]; continue; }
             flameAge[i] += dt;
             if (flameAge[i] >= flameMax[i])
             {
@@ -191,6 +227,41 @@ public class ChargeOrbs : MonoBehaviour
             sr.transform.localScale = new Vector3(flameW[i] * shrink / spike.bounds.size.x,
                                                   flameH[i] * (0.6f + 0.6f * Mathf.Sin(e * Mathf.PI)) / spike.bounds.size.y, 1f);
             sr.color = e < 0.35f ? Color.Lerp(flameCore, flameMid, e / 0.35f) : Color.Lerp(flameMid, flameEnd, (e - 0.35f) / 0.65f);
+        }
+    }
+
+    // Rayos azules (los primeros Count): aparecen en puntos al azar alrededor del personaje, giran al azar, pasan
+    // por sus fotogramas y se apagan; luego renacen en otro sitio
+    void UpdateArcs(int count, Vector2 me, float s, float dt)
+    {
+        if (arcSr == null) return;
+        bool has = arcFrames != null && arcFrames.Length > 0;
+        for (int i = 0; i < arcSr.Length; i++)
+        {
+            bool on = i < count;
+            var sr = arcSr[i];
+            arcAge[i] += dt;
+            if (arcAge[i] >= arcMax[i])
+            {
+                if (!on || !has) { sr.enabled = false; continue; }
+                float a = Random.Range(0f, Mathf.PI * 2f);
+                arcOff[i] = new Vector2(Mathf.Cos(a), Mathf.Sin(a)) * auraRadius * arcSpread * Random.Range(0.4f, 1f);
+                arcAge[i] = 0f;
+                arcMax[i] = Random.Range(arcLife.x, arcLife.y);
+                arcFrame0[i] = Random.Range(0, arcFrames.Length);
+                sr.transform.rotation = Quaternion.Euler(0f, 0f, Random.Range(0f, 360f));
+                sr.flipX = Random.value < 0.5f;
+            }
+            if (!on || !has) { sr.enabled = false; continue; }
+            var spr = arcFrames[(arcFrame0[i] + Mathf.FloorToInt(arcAge[i] / Mathf.Max(0.01f, arcFrameTime))) % arcFrames.Length];
+            sr.sprite = spr;
+            if (spr == null) { sr.enabled = false; continue; }
+            sr.enabled = true;
+            sr.transform.position = me + arcOff[i] * s;
+            float e = arcAge[i] / arcMax[i];
+            sr.transform.localScale = Vector3.one * (arcSize * s / Mathf.Max(0.01f, spr.bounds.size.x));
+            var c = arcColor; c.a *= e < 0.7f ? 1f : 1f - (e - 0.7f) / 0.3f;
+            sr.color = c;
         }
     }
 
@@ -226,6 +297,7 @@ public class ChargeOrbs : MonoBehaviour
         foreach (var g in glows) g.enabled = false;
         if (auraBack != null) auraBack.enabled = false;
         if (flameSr != null) for (int i = 0; i < flameSr.Length; i++) { flameSr[i].enabled = false; flameAge[i] = flameMax[i]; }
+        if (arcSr != null) for (int i = 0; i < arcSr.Length; i++) { arcSr[i].enabled = false; arcAge[i] = arcMax[i]; }
         lastFull = 0;
     }
 

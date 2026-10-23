@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 
 /// Primer plano al morir: la cámara se acerca al choque (el doble de cerca) y el mundo va a
 /// cámara lenta durante Duration segundos reales. El personaje se queda a la vista, clavado
-/// donde lo tocaron, con lo que le golpeó; al acabar (o al tocar para saltarlo) se rompe y se
+/// donde lo tocaron, con lo que le golpeó también congelado; al acabar (o al tocar para saltarlo) se rompe y se
 /// reaparece.
 ///
 /// Se activa o desactiva en Ajustes (Settings.deathCloseUp, activado por defecto). Apagado,
@@ -30,6 +30,8 @@ public class DeathCloseUp : MonoBehaviour
     public bool Playing { get; private set; }
 
     float baseFixedDelta;
+    Asteroid heldRock;
+    Antimatter heldShot;
 
     void Awake()
     {
@@ -63,6 +65,12 @@ public class DeathCloseUp : MonoBehaviour
     {
         Playing = true;
         CameraFollow.ZoomOverride = zoom;
+        // Lo que le golpeó se queda congelado en el sitio
+        var pcK = FindFirstObjectByType<PlayerController>();
+        heldRock = pcK != null ? pcK.LastKiller as Asteroid : null;
+        heldShot = pcK != null ? pcK.LastKiller as Antimatter : null;
+        if (heldRock != null) heldRock.Held = true;
+        if (heldShot != null) heldShot.Held = true;
         float t = 0f;
         while (t < duration)
         {
@@ -85,6 +93,10 @@ public class DeathCloseUp : MonoBehaviour
         // El personaje se rompe al acabar (o al saltarlo con un toque)
         var pc = FindFirstObjectByType<PlayerController>();
         if (pc != null && pc.IsDead) pc.Shatter();
+        if (heldRock != null) heldRock.Held = false;
+        // El orbe del QTE que mató ya no hace falta
+        if (heldShot != null) { heldShot.Held = false; if (heldShot.Homing) heldShot.Kill(); }
+        heldRock = null; heldShot = null;
         Time.timeScale = 1f;
         Time.fixedDeltaTime = baseFixedDelta;
         CameraFollow.ZoomOverride = -1f;

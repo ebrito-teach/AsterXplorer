@@ -11217,6 +11217,19 @@ MonoBehaviour:
   flameMid: {r: 1, g: 0.5, b: 0.12, a: 0.95}
   flameEnd: {r: 0.8, g: 0.08, b: 0.05, a: 0}
   auraGlow: {r: 1, g: 0.35, b: 0.1, a: 0.45}
+  flamesOn: 0
+  arcFrames:
+  - {fileID: 1354554318970678563, guid: 069b5aa6ffbf12a4886b044cbd94fe29, type: 3}
+  - {fileID: -4694757556679584679, guid: 78077b98585c2014c8b6a0cb5eb49251, type: 3}
+  - {fileID: 304643928840283543, guid: d7e90d97f244ac94eb3dbfc4914d351c, type: 3}
+  arcsAt2: 1
+  arcsAt5: 2
+  arcs: 5
+  arcSize: 0.6
+  arcSpread: 1.5
+  arcFrameTime: 0.06
+  arcLife: {x: 0.14, y: 0.3}
+  arcColor: {r: 1, g: 1, b: 1, a: 1}
   sortingLayer: FX
   sortingOrder: 50
 --- !u!1 &848801468
@@ -12957,6 +12970,7 @@ MonoBehaviour:
   thrustPositionOffset: {x: -0.1, y: -0.06}
   offsetSmoothing: 10
   debugForceThrustPose: 0
+  bumpSparkSpeed: 1.2
 --- !u!70 &1679237102
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -23625,7 +23639,7 @@ MonoBehaviour:
   player: {fileID: 1679237101}
   playerStart: {fileID: 1679237105}
   goal: {fileID: 848801470}
-  startLevel: 30
+  startLevel: 1
   runSeed: 0
   sameLevelOnRetry: 0
   resumeFromSave: 0

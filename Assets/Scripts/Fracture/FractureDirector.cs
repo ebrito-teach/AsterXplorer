@@ -816,7 +816,8 @@ public class FractureDirector : MonoBehaviour
             if (qte == null) qte = GetComponent<FractureQTE>();
             if (qte != null) { qte.OnHomingHit(a); return; }
         }
-        pc.Kill();
+        Vector2 me = pc.transform.position, q = a.transform.position;
+        pc.KillBy(a, q + (me - q).normalized * a.Radius);
     }
     FractureQTE qte;
 
