@@ -43,7 +43,7 @@ public class CameraAspectFitter : MonoBehaviour
     /// cerca de una grieta, para que se vea lo grande que es
     public static float Zoom = 1f;
     /// Lo más que se aleja nunca. El cielo se genera con margen para esto
-    public const float MaxZoom = 1.6f;
+    public const float MaxZoom = 2f;
     /// Alejamiento extra en unidades (el golpe fuerte de ImpactFeedback)
     public static float ExtraHalfHeight;
 

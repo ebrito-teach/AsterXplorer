@@ -56,10 +56,11 @@ public class CameraFollow : MonoBehaviour
     [Tooltip("Cerca de una grieta la cámara se aleja para que se vea lo grande que es, y se " +
              "inclina hacia la sección abierta para que se sepa cuál es la vulnerable")]
     [SerializeField] private bool frameFracture = true;
-    [Tooltip("A cuántas unidades de la grieta empieza (x) y a cuántas es completo (y)")]
-    [SerializeField] private Vector2 fractureRange = new Vector2(16f, 7f);
+    [Tooltip("Distancia a la grieta, en fracción del ancho de la pantalla, a la que empieza el " +
+             "encuadre (x) y a la que es completo (y). 0.4 = a menos del 40 % de la pantalla")]
+    [SerializeField] private Vector2 fractureRangeScreens = new Vector2(0.4f, 0.25f);
     [Tooltip("Alejamiento máximo (1 = nada). Tope: 1.6")]
-    [Range(1f, 1.6f)] [SerializeField] private float fractureZoom = 1f;
+    [Range(1f, 2f)] [SerializeField] private float fractureZoom = 1f;
     [Tooltip("Cuánto se desplaza la vista hacia la grieta en vertical (hacia la sección abierta si la hay)")]
     [Range(0f, 1f)] [SerializeField] private float fracturePull = 0.35f;
     [Tooltip("Lo que tarda el punto al que mira en pasar de un eslabón a otro (evita saltos)")]
@@ -216,8 +217,10 @@ public class CameraFollow : MonoBehaviour
         if (frameFracture && fd != null && fd.Active && target != null)
         {
             Vector2 me = target.position;
-            float dist = Mathf.Abs(Vector2.Dot(me - fd.Center, fd.Front));   // distancia al borde de la grieta
-            w = 1f - Mathf.InverseLerp(fractureRange.y, fractureRange.x, dist);
+            float dist = Mathf.Abs(me.x - fd.WallX(me.y));                     // distancia a la grieta
+            var gbz = GameBounds.Instance;
+            float sw = gbz != null && gbz.IsReady ? gbz.ScreenSize.x : 24f;
+            w = 1f - Mathf.InverseLerp(fractureRangeScreens.y * sw, fractureRangeScreens.x * sw, dist);
             w = w * w * (3f - 2f * w);
             var open = fd.OpenSection;
             focus = open != null ? open.WeakPoint : fd.Center;

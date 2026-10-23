@@ -286,6 +286,8 @@ MonoBehaviour:
   fractureBudgetFactor: 0.6
   fractureLethalFactor: 0.8
   fractureDensity: {x: 0.8, y: 0.95}
+  fractureMapDensity: 0.65
+  fractureOthersSpeed: {x: 0.56, y: 0.63}
   coverageCell: 4.5
   coverageCandidates: 8
   staticClusters: 1
@@ -10972,6 +10974,7 @@ GameObject:
   - component: {fileID: 848169113}
   - component: {fileID: 848169114}
   - component: {fileID: 848169115}
+  - component: {fileID: 848169116}
   m_Layer: 0
   m_Name: Fracture
   m_TagString: Untagged
@@ -11041,7 +11044,8 @@ MonoBehaviour:
   aimSpread: 25
   frontCone: 55
   waveRange: 8
-  maxCharges: 2
+  chargeCap: 7
+  simpleCap: 2
   grazeDistance: 0.6
   grazeGain: {x: 0.1, y: 0.2}
   pushTime: 0.5
@@ -11101,6 +11105,8 @@ MonoBehaviour:
   turnRate: 110
   maxChase: 9
   window: 0.25
+  windowAt60: 0.2
+  windowAt100: 0.16
   idealBeforeContact: 0.18
   slowWindowMultiplier: 2
   successIFrames: 1.6
@@ -11128,21 +11134,80 @@ MonoBehaviour:
   wallLevel: 20
   rowsLevel: 30
   sweepLevel: 50
+  evenFanLevel: 16
+  streamLevel: 25
+  ringLevel: 35
+  spiralLevel: 45
+  kineticLevel: 50
+  gridLevel: 60
+  scatterLevel: 70
   comboLevel: 60
   comboChance: 0.35
-  interval: {x: 2.4, y: 1}
+  perception: 0.25
+  dodgeDistance: 2.5
+  crossFanLevel: 30
+  tripleVolleyLevel: 40
+  chainLevel: 40
+  chainChance: 0.4
+  chainLength: {x: 2, y: 6}
+  patternInterval: {x: 2.4, y: 1.05}
   telegraph: {x: 0.8, y: 0.4}
   speedFactor: 1.6
   maxBullets: 120
   fanCount: {x: 5, y: 15}
   fanSpread: {x: 60, y: 100}
   fanCarriesQte: 0.6
+  volleyGap: 0.22
+  volleyTurn: {x: 12, y: 28}
   wallGap: {x: 3.2, y: 2}
   wallSpeedFactor: 0.8
   rowCount: {x: 3, y: 5}
   rowLength: {x: 4, y: 7}
+  streamTime: {x: 1.4, y: 2.4}
+  streamTurn: 70
+  ringCount: {x: 14, y: 26}
+  ringFuse: {x: 0.7, y: 1.1}
+  spiralArms: {x: 2, y: 4}
+  spiralSpin: {x: 120, y: 200}
+  spiralTime: 2.4
+  kineticChance: 0.3
+  scatterCount: {x: 20, y: 36}
   sweepAngle: 120
   sweepTime: 1.2
+--- !u!114 &848169116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 848169111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8510450abf1d5d4fa55a603c38f2d9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChargeOrbs
+  aboveHead: 0.75
+  orbitRadius: {x: 0.45, y: 0.14}
+  orbitSpeed: 140
+  orbSize: 0.2
+  orbColor: {r: 1, g: 1, b: 1, a: 0.95}
+  orbGlow: {r: 0.75, g: 0.9, b: 1, a: 0.55}
+  shakeAt2: 0.06
+  shakeAt5: 0.14
+  shakeAt7: 0.55
+  shockRadius: 3
+  shockColor: {r: 1, g: 0.75, b: 0.4, a: 0.9}
+  flames: 20
+  auraRadius: 0.4
+  flameLife: {x: 0.3, y: 0.55}
+  flameRise: {x: 1.4, y: 2.6}
+  flameSize: {x: 0.12, y: 0.42}
+  flameCore: {r: 1, g: 0.97, b: 0.85, a: 1}
+  flameMid: {r: 1, g: 0.5, b: 0.12, a: 0.95}
+  flameEnd: {r: 0.8, g: 0.08, b: 0.05, a: 0}
+  auraGlow: {r: 1, g: 0.35, b: 0.1, a: 0.45}
+  sortingLayer: FX
+  sortingOrder: 50
 --- !u!1 &848801468
 GameObject:
   m_ObjectHideFlags: 0
@@ -12848,7 +12913,7 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -18268,8 +18333,8 @@ MonoBehaviour:
   extraReveal: 0
   keepInView: 1.2
   frameFracture: 1
-  fractureRange: {x: 16, y: 7}
-  fractureZoom: 1
+  fractureRangeScreens: {x: 0.4, y: 0.25}
+  fractureZoom: 1.8
   fracturePull: 0.35
   fractureFocusSmooth: 0.8
   fractureRumble: 0.06
@@ -23438,7 +23503,7 @@ MonoBehaviour:
   player: {fileID: 1679237101}
   playerStart: {fileID: 1679237105}
   goal: {fileID: 848801470}
-  startLevel: 50
+  startLevel: 1
   runSeed: 0
   sameLevelOnRetry: 0
   resumeFromSave: 0

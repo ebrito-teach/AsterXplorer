@@ -47,6 +47,10 @@ public class FractureQTE : MonoBehaviour
     [Header("Ventana")]
     [Tooltip("Ancho de la ventana para acertar, en segundos de tiempo real")]
     [SerializeField] private float window = 0.25f;
+    [Tooltip("La ventana se estrecha con el nivel: en el nivel 60 y en el 100 (no baja de ahí). " +
+             "Hasta el 20, la de arriba")]
+    [SerializeField] private float windowAt60 = 0.2f;
+    [SerializeField] private float windowAt100 = 0.16f;
     [Tooltip("Momento ideal: segundos antes del contacto")]
     [SerializeField] private float idealBeforeContact = 0.18f;
     [Tooltip("Multiplicador de la ventana con Slow activo")]
@@ -73,6 +77,14 @@ public class FractureQTE : MonoBehaviour
     [SerializeField] private Vector2 homingEveryHigh = new Vector2(4f, 8f);
     [Tooltip("Un patrón puede llevar dentro el orbe del QTE si al QTE le faltan menos de estos segundos")]
     [SerializeField] private float mixWindow = 3f;
+
+    float WindowNow()
+    {
+        int lvl = fd != null ? fd.Level : 1;
+        if (lvl <= 20) return window;
+        if (lvl <= 60) return Mathf.Lerp(window, windowAt60, (lvl - 20) / 40f);
+        return Mathf.Lerp(windowAt60, windowAt100, Mathf.Clamp01((lvl - 60) / 40f));
+    }
 
     float NextInterval()
     {
@@ -197,7 +209,7 @@ public class FractureQTE : MonoBehaviour
         if (Time.time - chaseStart > maxChase) { fd.Burst(shot.transform.position, shot.Radius, 10); EndShot(false); return; }
 
         float tti = TimeToImpact();
-        float win = window * (IsBuff(BuffType.Slow) ? slowWindowMultiplier : 1f);
+        float win = WindowNow() * (IsBuff(BuffType.Slow) ? slowWindowMultiplier : 1f);
         UpdateRings(tti, win);
 
         // Ghost: lo atraviesa; sin muerte y sin carga

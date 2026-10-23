@@ -91,10 +91,25 @@ public class ImpactFeedback : MonoBehaviour
     float baseSize;
     float shakeAmount, shakeEnds;
     float seedX, seedY;
+    float shakeLen = 0.35f;
     float zoomOffset;
+
+    public static ImpactFeedback Instance { get; private set; }
+
+    /// Temblor de cámara a mano (unidades de mundo y segundos)
+    public void Shake(float amount, float duration)
+    {
+        if (amount <= shakeAmount && Time.unscaledTime < shakeEnds) return;
+        shakeAmount = amount;
+        shakeEnds = Time.unscaledTime + Mathf.Max(0.05f, duration);
+        shakeLen = Mathf.Max(0.05f, duration);
+        seedX = Random.value * 100f;
+        seedY = Random.value * 100f;
+    }
 
     void Awake()
     {
+        Instance = this;
         if (cam == null) cam = Camera.main;
         if (player == null)
         {
@@ -155,6 +170,7 @@ public class ImpactFeedback : MonoBehaviour
         {
             shakeAmount = Mathf.Max(shakeAmount, amount);
             shakeEnds = Time.unscaledTime + shakeDuration;
+            shakeLen = shakeDuration;
             seedX = Random.value * 100f;
             seedY = Random.value * 100f;
         }
@@ -203,7 +219,7 @@ public class ImpactFeedback : MonoBehaviour
 
         if (Time.unscaledTime < shakeEnds && shakeAmount > 0.0001f)
         {
-            float left = (shakeEnds - Time.unscaledTime) / Mathf.Max(0.01f, shakeDuration);
+            float left = (shakeEnds - Time.unscaledTime) / Mathf.Max(0.01f, shakeLen);
             float a = shakeAmount * left * left;
             float fx = Time.unscaledTime * shakeFrequency;
             Vector3 offset = new Vector3((Mathf.PerlinNoise(seedX, fx) - 0.5f) * 2f * a,

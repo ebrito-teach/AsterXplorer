@@ -22,6 +22,8 @@ public class PlanetRing : MonoBehaviour
     static readonly List<PlanetRing> all = new List<PlanetRing>();
 
     float outerA, innerA, flat, slow;
+    Asteroid planet;
+    int planetSerial;
     Vector2 center;
     float angleRad;
 
@@ -61,6 +63,8 @@ public class PlanetRing : MonoBehaviour
         go.transform.position = planet.transform.position;
         go.transform.rotation = Quaternion.Euler(0f, 0f, tiltDeg);
         var r = go.AddComponent<PlanetRing>();
+        r.planet = planet;
+        r.planetSerial = planet.Serial;
 
         Sprite src = look.sprite;
         Rect rect = src.rect;
@@ -105,6 +109,12 @@ public class PlanetRing : MonoBehaviour
     public float OuterRadius => outerA;
 
     void OnDestroy() { all.Remove(this); }
+
+    // Si su planeta ya no está (o el objeto del pool se reutilizó para otra roca), el anillo se va
+    void Update()
+    {
+        if (planet == null || !planet.isActiveAndEnabled || planet.Serial != planetSerial) Destroy(gameObject);
+    }
 
     void OnDrawGizmosSelected()
     {

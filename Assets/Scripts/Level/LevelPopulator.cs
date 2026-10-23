@@ -65,10 +65,12 @@ public class LevelPopulator : MonoBehaviour
     [Tooltip("Densidad de los mapas con grieta, al azar entre estos dos (sobre lo anterior): baja " +
              "para que los patrones de la grieta se lean bien")]
     [SerializeField] private Vector2 fractureDensity = new Vector2(0.8f, 0.95f);
-    [Tooltip("Además, en mapas con grieta: densidad de lo demás (0.85 = un 15 % menos, en todos los niveles)")]
-    [Range(0.3f, 1f)] [SerializeField] private float fractureDensityCut = 0.85f;
-    [Tooltip("Velocidad de lo demás en mapas con grieta, al azar entre estos dos (0.8–0.9 = un 10–20 % más lento)")]
-    [SerializeField] private Vector2 fractureSpeed = new Vector2(0.8f, 0.9f);
+    [Tooltip("Además, en mapas con grieta: densidad de lo demás en todos los niveles (0.65 = los recortes " +
+             "de 15 %, 15 % y 10 % que fuimos pidiendo)")]
+    [Range(0.2f, 1f)] [SerializeField] private float fractureMapDensity = 0.65f;
+    [Tooltip("Velocidad de asteroides, cometas, colosos y meteoros en mapas con grieta, al azar " +
+             "entre estos dos (0.56–0.63 = el 10–20 % menos de antes y otro 30 % menos)")]
+    [SerializeField] private Vector2 fractureOthersSpeed = new Vector2(0.56f, 0.63f);
 
     [Header("Reparto por cobertura")]
     [Tooltip("Lo que se mueve se reparte por sectores de este tamaño (unidades): primero donde no " +
@@ -208,7 +210,7 @@ public class LevelPopulator : MonoBehaviour
         if (comets != null) comets.BeginLevel(currentLevel);
 
         baseSpeedMultiplier = difficulty.SpeedMultiplier(currentLevel)
-                              * (FractureWorld ? Random.Range(fractureSpeed.x, fractureSpeed.y) : 1f);
+                              * (FractureWorld ? Random.Range(fractureOthersSpeed.x, fractureOthersSpeed.y) : 1f);
         Asteroid.SpeedMultiplier = baseSpeedMultiplier * CalibSpeed;
         levelCruise = difficulty.PlayerCruise(currentLevel);
         if (playerCtl == null && player != null) playerCtl = player.GetComponentInParent<PlayerController>();
@@ -234,7 +236,7 @@ public class LevelPopulator : MonoBehaviour
 
         // Compra asteroides con el presupuesto del nivel
         float budget = difficulty.Budget(currentLevel) * CalibDensity * (DarkWorld ? darkBudgetFactor : 1f) * (FractureWorld ? fractureBudgetFactor : 1f)
-                       * (FractureWorld ? Random.Range(fractureDensity.x, fractureDensity.y) * fractureDensityCut : 1f);
+                       * (FractureWorld ? Random.Range(fractureDensity.x, fractureDensity.y) * fractureMapDensity : 1f);
         darkLethal = null;
         nextDarkLethal = Time.time + Random.Range(darkLethalEvery.x, darkLethalEvery.y);
         var shopping = new List<AsteroidTypeData>();

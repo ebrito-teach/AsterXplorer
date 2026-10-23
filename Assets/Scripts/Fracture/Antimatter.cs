@@ -83,6 +83,16 @@ public class Antimatter : MonoBehaviour
         rb.linearVelocity = velocity;
     }
 
+    /// Cambia el rumbo y la velocidad en pleno vuelo (balas cinéticas)
+    public void Redirect(Vector2 dir, float spd)
+    {
+        if (dir.sqrMagnitude < 0.0001f) dir = velocity;
+        speed = spd;
+        velocity = dir.normalized * spd;
+        if (rb != null) rb.linearVelocity = velocity;
+    }
+    public Vector2 Velocity => velocity;
+
     public void Kill()
     {
         gameObject.SetActive(false);

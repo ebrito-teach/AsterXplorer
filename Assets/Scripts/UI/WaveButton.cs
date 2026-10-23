@@ -62,8 +62,14 @@ public class WaveButton : MonoBehaviour, IPointerDownHandler
         button.anchoredPosition = position + new Vector2(sh, 0f);
         button.localScale = Vector3.one * Mathf.SmoothStep(0f, 1f, pop) * (1f + 0.05f * beat);
 
+        int shown = Mathf.Clamp(fd.MaxCharges, 1, pips.Length);
+        float step = size * 0.17f;
         for (int i = 0; i < pips.Length; i++)
         {
+            var back = (RectTransform)pips[i].rectTransform.parent;
+            back.gameObject.SetActive(i < shown);
+            if (i >= shown) continue;
+            back.anchoredPosition = new Vector2((i - (shown - 1) * 0.5f) * step, -size * 0.62f);
             float f = Mathf.Clamp01(fd.Charge - i);
             pips[i].fillAmount = f;
             pips[i].color = f >= 1f ? readyColor : new Color(readyColor.r, readyColor.g, readyColor.b, 0.6f);
@@ -99,15 +105,15 @@ public class WaveButton : MonoBehaviour, IPointerDownHandler
         glyph = NewImage("Icono", button, icon != null ? icon : Burst(128), iconScale, false);
         glyph.preserveAspect = true;
 
-        // Las dos cargas: dos puntos debajo del botón que se van llenando
-        pips = new Image[2];
+        // Las cargas (hasta 7): puntos debajo del botón que se van llenando
+        pips = new Image[7];
         var pipSprite = Disc(64, 0f, 0.9f);
         for (int i = 0; i < pips.Length; i++)
         {
-            var back = NewImage("CargaFondo" + i, button, pipSprite, 0.16f, false);
+            var back = NewImage("CargaFondo" + i, button, pipSprite, 0.13f, false);
             back.color = new Color(0f, 0f, 0f, 0.55f);
             back.rectTransform.anchoredPosition = new Vector2((i - 0.5f) * size * 0.24f, -size * 0.62f);
-            var p = NewImage("Carga" + i, back.rectTransform, pipSprite, 0.16f / 0.16f * 0.85f, false);
+            var p = NewImage("Carga" + i, back.rectTransform, pipSprite, 0.85f, false);
             p.rectTransform.sizeDelta = back.rectTransform.sizeDelta * 0.85f;
             p.type = Image.Type.Filled;
             p.fillMethod = Image.FillMethod.Vertical;

@@ -404,6 +404,7 @@ public class Goal : MonoBehaviour
             Vector2 d = center - a.Body.position;
             float dist = d.magnitude;
 
+            if (a.Type != null && a.Type.planet) continue;   // un planeta no se mueve ni se lo traga
             bool devourable = !a.Unstoppable && a.WorldRadius <= maxSwallowRadius;
             float ah = horizonFromShadow ? Mathf.Max(asteroidHorizon, ShadowRadius() * 1.2f) : asteroidHorizon;
             if (devourable && dist <= ah + a.WorldRadius * 0.5f) { StartCoroutine(Spaghettify(a)); continue; }
