@@ -72,7 +72,19 @@ public class BuffSpawner : MonoBehaviour
 
         var bs = BuffSystem.Instance;
         if (bs == null) return;
-        pendingType = bs.PickRandom();
+        int lvl = level;
+        pendingType = bs.PickRandom(t => TeachingPlan.BuffAllowed(t, lvl));
+
+        // Enseñanza: el buff que se enseña en este nivel sale seguro en el mapa (y si son dos,
+        // el segundo entre los fragmentos)
+        var taught = TeachingPlan.BuffsTaughtAt(level);
+        if (taught.Count > 0)
+        {
+            pendingType = taught[0];
+            PlaceOnMap();
+            if (taught.Count > 1) { pendingType = taught[1]; pending = Pending.Fragment; Log("saldrá entre los fragmentos (enseñanza)"); }
+            return;
+        }
 
         float r = Random.value;
         if (r < mapChance) { PlaceOnMap(); return; }

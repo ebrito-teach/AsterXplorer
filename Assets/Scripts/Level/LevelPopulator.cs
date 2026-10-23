@@ -93,6 +93,8 @@ public class LevelPopulator : MonoBehaviour
     public DifficultyProfile Difficulty => difficulty;
     public int CurrentLevel => currentLevel;
     public int TargetPopulation => targetPopulation;
+    /// Presupuesto final de este nivel, con todos los recortes aplicados
+    public float LastBudget { get; private set; }
 
     [Header("Estáticos agrupados")]
     [Tooltip("Los estáticos no se reparten uniformes: a veces nacen junto a otro, formando grupos con huecos entre ellos")]
@@ -229,6 +231,7 @@ public class LevelPopulator : MonoBehaviour
             if (t == null || t.behavior == AsteroidBehavior.Colossus || t.behavior == AsteroidBehavior.Debris) continue;
             if (t.comet != null) continue;   // los cometas los pone el CometDirector
             if (t.planet) continue;           // los planetas van aparte (Planet Type)
+            if (!TeachingPlan.TypeAllowed(t, currentLevel)) continue;   // aún no se ha enseñado
             if (t.sprites == null || t.sprites.Length == 0 || t.minLevel > currentLevel) continue;
             unlocked.Add(t);
         }
@@ -237,6 +240,7 @@ public class LevelPopulator : MonoBehaviour
         // Compra asteroides con el presupuesto del nivel
         float budget = difficulty.Budget(currentLevel) * CalibDensity * (DarkWorld ? darkBudgetFactor : 1f) * (FractureWorld ? fractureBudgetFactor : 1f)
                        * (FractureWorld ? Random.Range(fractureDensity.x, fractureDensity.y) * fractureMapDensity : 1f);
+        LastBudget = budget;
         darkLethal = null;
         nextDarkLethal = Time.time + Random.Range(darkLethalEvery.x, darkLethalEvery.y);
         var shopping = new List<AsteroidTypeData>();
@@ -690,10 +694,14 @@ public class LevelPopulator : MonoBehaviour
     {
         planets.Clear();
         if (planetType == null || planetType.sprites == null || planetType.sprites.Length == 0) return;
-        if (Random.value >= planetMapChance) return;
+        // Enseñanza: nada hasta el primer planeta; en los niveles que enseñan, uno con su sistema
+        int rule = TeachingPlan.PlanetRule(currentLevel);
+        if (rule < 0) return;
+        if (rule == 0 && Random.value >= planetMapChance) return;
+        forcedSystem = rule;
         int noRoom = 0, tooBig = 0;
 
-        int want = Random.Range(planetCount.x, planetCount.y + 1);
+        int want = rule > 0 ? 1 : Random.Range(planetCount.x, planetCount.y + 1);
         var sprites = new List<Sprite>(planetType.sprites);
         sprites.RemoveAll(x => x == null);
         for (int i = sprites.Count - 1; i > 0; i--) { int j = Random.Range(0, i + 1); (sprites[i], sprites[j]) = (sprites[j], sprites[i]); }
@@ -753,6 +761,8 @@ public class LevelPopulator : MonoBehaviour
                   (tooBig + noRoom > 0 ? $" ({tooBig} demasiado grandes, {noRoom} sin sitio)." : "."));
     }
 
+    int forcedSystem;
+
     PlanetPlan PlanSystem(Asteroid body)
     {
         var plan = new PlanetPlan { body = body, system = PlanetSystem.None };
@@ -764,7 +774,10 @@ public class LevelPopulator : MonoBehaviour
         float wr = canRing ? w.y : 0f, wb = canBelt ? w.z : 0f, wm = canMoons ? w.w : 0f;
         float total = Mathf.Max(0f, w.x) + wr + wb + wm;
         float pick = Random.value * Mathf.Max(0.0001f, total);
-        if (pick < w.x || total <= 0f) plan.system = PlanetSystem.None;
+        if (forcedSystem == 1 && canMoons) plan.system = PlanetSystem.Moons;
+        else if (forcedSystem == 2 && canRing) plan.system = PlanetSystem.Ring;
+        else if (forcedSystem == 3 && canBelt) plan.system = PlanetSystem.Belt;
+        else if (pick < w.x || total <= 0f) plan.system = PlanetSystem.None;
         else if (pick < w.x + wr) plan.system = PlanetSystem.Ring;
         else if (pick < w.x + wr + wb) plan.system = PlanetSystem.Belt;
         else plan.system = PlanetSystem.Moons;

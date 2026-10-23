@@ -83,15 +83,21 @@ public class CalibrationPanel : MonoBehaviour
         int level = director != null ? director.CurrentLevel : (pop != null ? pop.CurrentLevel : 0);
         var diff = pop != null ? pop.Difficulty : null;
         int moving = 0, lethal = 0, orbiters = 0, statics = 0, planets = 0;
+        int nRocks = 0, nComets = 0, nColossus = 0, nDebris = 0, nLoose = 0;
         if (pool != null)
             foreach (var a in pool.Active)
             {
                 if (a == null || a.Type == null) continue;
                 if (a.IsOrbiting) { orbiters++; continue; }
                 if (a.Type.planet) { planets++; continue; }
-                if (a.Type.behavior == AsteroidBehavior.Static) { statics++; continue; }
+                if (a.Type.behavior == AsteroidBehavior.Static && !a.IsDislodged) { statics++; continue; }
                 moving++;
                 if (a.Lethal) lethal++;
+                if (a.IsDislodged) nLoose++;
+                else if (a.Type.comet != null) nComets++;
+                else if (a.Type.behavior == AsteroidBehavior.Colossus) nColossus++;
+                else if (a.Type.behavior == AsteroidBehavior.Debris) nDebris++;
+                else nRocks++;
             }
         var fd = FractureDirector.Instance;
         float pSpeed = player != null && player.Body != null ? player.Body.linearVelocity.magnitude : 0f;
@@ -103,7 +109,8 @@ public class CalibrationPanel : MonoBehaviour
             GUILayout.Label($"Presupuesto {diff.Budget(level) * LevelPopulator.CalibDensity:0.#}   " +
                             $"velocidad x{Asteroid.SpeedMultiplier:0.00}   corriente {diff.FlowAmplitude(level):0}°", small);
         GUILayout.Label($"En movimiento {moving} (matan {lethal})   en órbita {orbiters}", small);
-        GUILayout.Label($"Estáticos {statics}   planetas {planets}   población objetivo {(pop != null ? pop.TargetPopulation : 0)}", small);
+        GUILayout.Label($"  rocas {nRocks} · cometas {nComets} · colosos {nColossus} · restos {nDebris} · estáticos soltados {nLoose}", small);
+        GUILayout.Label($"Estáticos {statics}   planetas {planets}   población objetivo {(pop != null ? pop.TargetPopulation : 0)}   presupuesto final {(pop != null ? pop.LastBudget : 0f):0.#}", small);
         if (fd != null && fd.Active)
             GUILayout.Label($"GRIETA: proyectiles {fd.ShotsAlive}   cargas {fd.Charge:0.00}/{fd.MaxCharges}", small);
         GUILayout.Label($"Velocidad del jugador {pSpeed:0.0} u/s (crucero {(player != null ? player.CruiseSpeed : 0f):0.0})", small);
@@ -146,6 +153,8 @@ public class CalibrationPanel : MonoBehaviour
             lastCopy = $"Nivel {level}: velocidad rocas x{LevelPopulator.CalibSpeed:0.00} (total x{Asteroid.SpeedMultiplier:0.00}), " +
                        $"densidad x{LevelPopulator.CalibDensity:0.00}, cadencia grieta x{FractureDirector.CalibFireRate:0.00}, " +
                        $"proyectiles x{FractureDirector.CalibShotSpeed:0.00}, frecuencia QTE x{1f / Mathf.Max(0.05f, FractureQTE.CalibInterval):0.00}, " +
+                       $"en movimiento {moving} (rocas {nRocks}, cometas {nComets}, colosos {nColossus}, restos {nDebris}, soltados {nLoose}), " +
+                       $"presupuesto final {(pop != null ? pop.LastBudget : 0f):0.#}, " +
                        $"crucero jugador {(player != null ? player.CruiseSpeed : 0f):0.0} (x{LevelPopulator.CalibPlayer:0.00}), mapa {(FractureDirector.Instance != null && FractureDirector.Instance.Active ? "con grieta" : "normal")}, " +
                        $"fps {fps:0}";
             GUIUtility.systemCopyBuffer = lastCopy;

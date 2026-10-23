@@ -120,7 +120,8 @@ public class CometDirector : MonoBehaviour
     }
 
     static bool IsUsable(AsteroidTypeData t, int level) =>
-        t != null && t.comet != null && t.minLevel <= level && t.sprites != null && t.sprites.Length > 0;
+        t != null && t.comet != null && t.minLevel <= level && t.sprites != null && t.sprites.Length > 0
+        && TeachingPlan.TypeAllowed(t, level);
 
     int Range(int min, int max) => rng.Next(Mathf.Min(min, max), Mathf.Max(min, max) + 1);
     float Range(float min, float max) => Mathf.Lerp(min, max, (float)rng.NextDouble());

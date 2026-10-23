@@ -159,13 +159,18 @@ public class BuffSystem : MonoBehaviour
     }
 
     /// Sorteo por rareza
-    public BuffType PickRandom()
+    public BuffType PickRandom() => PickRandom(null);
+
+    /// Sorteo por rareza solo entre los permitidos (los que ya se enseñaron)
+    public BuffType PickRandom(System.Predicate<BuffType> allowed)
     {
         float total = 0f;
-        foreach (var e in catalog) total += Mathf.Max(0f, e.weight);
+        foreach (var e in catalog) if (allowed == null || allowed(e.type)) total += Mathf.Max(0f, e.weight);
+        if (total <= 0f) return catalog[0].type;
         float r = UnityEngine.Random.value * total;
         foreach (var e in catalog)
         {
+            if (allowed != null && !allowed(e.type)) continue;
             r -= Mathf.Max(0f, e.weight);
             if (r <= 0f) return e.type;
         }

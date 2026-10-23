@@ -213,14 +213,17 @@ public class GameDirector : MonoBehaviour
         if (GameBounds.Instance != null) GameBounds.Instance.SetGoalMirrored(GoalMirrored);
 
         // ¿Mundo oscuro? Sale del nivel y la partida, no del intento: reintentar no lo cambia
-        IsDarkWorld = alwaysDark || CurrentLevel == forcedDarkLevel || DarkFor(CurrentLevel);
+        // Enseñanza: en los primeros niveles solo en su nivel garantizado
+        var teachDark = TeachingPlan.Dark(CurrentLevel);
+        IsDarkWorld = alwaysDark || CurrentLevel == forcedDarkLevel || (teachDark ?? DarkFor(CurrentLevel));
         if (goal != null) goal.SizeBoost = IsDarkWorld ? darkGoalBoost : 1f;
         if (populator != null) populator.DarkWorld = IsDarkWorld;
         if (comets != null) comets.Suppressed = IsDarkWorld;
 
         // ¿Fractura? Nunca a la vez que un mundo oscuro. Igual en cada intento
+        var teachFracture = TeachingPlan.Fracture(CurrentLevel);
         IsFractureWorld = !IsDarkWorld && fracture != null &&
-            (alwaysFracture || CurrentLevel == forcedFractureLevel || fracture.RollFor(CurrentLevel, runSeed));
+            (alwaysFracture || CurrentLevel == forcedFractureLevel || (teachFracture ?? fracture.RollFor(CurrentLevel, runSeed)));
         if (populator != null) populator.FractureWorld = IsFractureWorld;
         float cut = IsFractureWorld ? fractureLethalCut : 1f;
         if (colossus != null) colossus.ChanceMultiplier = IsFractureWorld ? fractureColossusChance * cut : 1f;

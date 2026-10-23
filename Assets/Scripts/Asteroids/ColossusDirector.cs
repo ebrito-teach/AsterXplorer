@@ -70,6 +70,17 @@ public class ColossusDirector : MonoBehaviour
         lastSpawnTime = -999f;
         alive = 0;
         spawnedThisLevel = 0;
+        // Enseñanza: en su nivel el primer coloso entra seguro, a los pocos segundos
+        forcedAt = level == TeachingPlan.ColossusForcedLevel ? Time.time + TeachingPlan.ColossusForcedDelay : -1f;
+    }
+
+    float forcedAt = -1f;
+
+    void Update()
+    {
+        if (forcedAt < 0f || Time.time < forcedAt || Asteroid.WorldFrozen) return;
+        forcedAt = -1f;
+        if (alive == 0 && Spawn(currentLevel) == null) forcedAt = Time.time + 2f;   // sin sitio: reintenta
     }
 
     /// ¿Debe entrar un coloso en lugar del próximo asteroide normal?
@@ -187,7 +198,7 @@ public class ColossusDirector : MonoBehaviour
         if (colossusTypes == null) return null;
         float total = 0f;
         foreach (var t in colossusTypes)
-            if (t != null && t.behavior == AsteroidBehavior.Colossus && t.minLevel <= level &&
+            if (t != null && t.behavior == AsteroidBehavior.Colossus && t.minLevel <= level && TeachingPlan.TypeAllowed(t, level) &&
                 t.sprites != null && t.sprites.Length > 0)
                 total += 1f;
         if (total <= 0f) return null;
@@ -195,7 +206,7 @@ public class ColossusDirector : MonoBehaviour
         float pick = Random.value * total;
         foreach (var t in colossusTypes)
         {
-            if (t == null || t.behavior != AsteroidBehavior.Colossus || t.minLevel > level ||
+            if (t == null || t.behavior != AsteroidBehavior.Colossus || t.minLevel > level || !TeachingPlan.TypeAllowed(t, level) ||
                 t.sprites == null || t.sprites.Length == 0) continue;
             pick -= 1f;
             if (pick <= 0f) return t;

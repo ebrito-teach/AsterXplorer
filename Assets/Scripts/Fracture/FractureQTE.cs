@@ -97,6 +97,7 @@ public class FractureQTE : MonoBehaviour
     public bool LaunchWith(FractureSection from)
     {
         if (shot != null || fd == null || !fd.Started || player == null || from == null || from.Closed) return false;
+        if (!TeachingPlan.QteAllowed(fd.Level)) return false;
         if (nextAt < 0f || Time.time < nextAt - mixWindow) return false;
         launcher = from;
         Launch();
@@ -166,7 +167,7 @@ public class FractureQTE : MonoBehaviour
         if (player == null) player = FindFirstObjectByType<PlayerController>();
         flash = Mathf.MoveTowards(flash, 0f, Time.unscaledDeltaTime / 0.35f);
 
-        if (fd == null || !fd.Active || !fd.Started || player == null)
+        if (fd == null || !fd.Active || !fd.Started || player == null || !TeachingPlan.QteAllowed(fd.Level))
         {
             if (shot != null) EndShot(false);
             if (warning) { warning = false; SetWarning(0f); }

@@ -765,6 +765,7 @@ public class FractureDirector : MonoBehaviour
     void PushToCenter(Vector2 from)
     {
         if (player == null || player.IsDead || player.IsExpelling || player.IsAbsorbed) return;
+        if (!TeachingPlan.PushAllowed(level)) return;   // la primera grieta aún no empuja
         var gb = GameBounds.Instance;
         if (gb == null || !gb.IsReady) return;
         Ring(from, 1f, 16f, new Color(1f, 0.8f, 0.95f, 0.85f));
@@ -800,7 +801,7 @@ public class FractureDirector : MonoBehaviour
 
     public void OnGraze(Antimatter a)
     {
-        if (!Active || Time.time < nextGrazeAt) return;
+        if (!Active || Time.time < nextGrazeAt || !TeachingPlan.GrazeAllowed(level)) return;
         nextGrazeAt = Time.time + grazeCooldown;
         float before = Charge;
         AddCharge(Random.Range(grazeGain.x, grazeGain.y));
