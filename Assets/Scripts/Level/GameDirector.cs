@@ -64,6 +64,9 @@ public class GameDirector : MonoBehaviour
     [Tooltip("Recorte extra de lo letal que se mueve en mapas con grieta: asteroides, cometas y colosos " +
              "(0.9 = un 10 % menos). Se suma a los recortes del LevelPopulator")]
     [Range(0.3f, 1f)] [SerializeField] private float fractureLethalCut = 0.9f;
+    [Tooltip("Lo mismo en los mapas normales (ni grieta ni mundo oscuro): asteroides, cometas y " +
+             "colosos (0.9 = un 10 % menos, en todos los niveles)")]
+    [Range(0.3f, 1f)] [SerializeField] private float normalLethalCut = 0.9f;
     [Tooltip("Solo para probar: todos los niveles (que no sean oscuros) son de fractura")]
     [SerializeField] private bool alwaysFracture = false;
 
@@ -225,14 +228,15 @@ public class GameDirector : MonoBehaviour
         IsFractureWorld = !IsDarkWorld && fracture != null &&
             (alwaysFracture || CurrentLevel == forcedFractureLevel || (teachFracture ?? fracture.RollFor(CurrentLevel, runSeed)));
         if (populator != null) populator.FractureWorld = IsFractureWorld;
-        float cut = IsFractureWorld ? fractureLethalCut : 1f;
-        if (colossus != null) colossus.ChanceMultiplier = IsFractureWorld ? fractureColossusChance * cut : 1f;
+        bool normalMap = !IsFractureWorld && !IsDarkWorld;
+        float cut = IsFractureWorld ? fractureLethalCut : normalMap ? normalLethalCut : 1f;
+        if (colossus != null) colossus.ChanceMultiplier = IsFractureWorld ? fractureColossusChance * cut : cut;
         if (comets != null)
         {
             comets.ExtraAlive = IsFractureWorld ? fractureExtraComets : 0;
             comets.DelayMultiplier = 1f / Mathf.Max(0.1f, cut);   // más espera entre cometas = menos cometas
         }
-        if (populator != null) populator.FractureExtraCut = cut;
+        if (populator != null) { populator.FractureExtraCut = IsFractureWorld ? cut : 1f; populator.NormalCut = normalMap ? cut : 1f; }
 
         // 3. Jugador y meta, antes de poblar: el generador evita la zona de los dos. El
         //    jugador aparece cerca de un borde; la meta, en el lado contrario, pegada al
@@ -300,7 +304,7 @@ public class GameDirector : MonoBehaviour
 
     void HandleDied()
     {
-        if (!Running) return;
+        if (!Running) { if (player != null) player.Shatter(); return; }
         Running = false;
         Deaths++;
         retries++;
@@ -313,7 +317,22 @@ public class GameDirector : MonoBehaviour
 
         PlayerDied?.Invoke(CurrentLevel);
         // Mismo nivel: no se pierde el progreso por morir
-        StartCoroutine(Advance(CurrentLevel, respawnDelay));
+        var cu = DeathCloseUp.Instance;
+        if (cu != null && player != null && cu.TryPlay(player.transform.position))
+            StartCoroutine(AfterCloseUp(CurrentLevel, cu));
+        else
+        {
+            if (player != null) player.Shatter();
+            StartCoroutine(Advance(CurrentLevel, respawnDelay));
+        }
+    }
+
+    // Con primer plano: se reaparece en cuanto acaba (o al tocar para saltarlo)
+    IEnumerator AfterCloseUp(int level, DeathCloseUp cu)
+    {
+        if (goal != null) goal.Deactivate();
+        while (cu != null && cu.Playing) yield return null;
+        StartLevel(level);
     }
 
     /// Abandonar la partida: cierra la marca y la mete en el top. Lo llamará el menú de pausa

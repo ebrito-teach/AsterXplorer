@@ -11099,25 +11099,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FractureQTE
   homingEvery: {x: 7, y: 17}
+  homingEveryHigh: {x: 4, y: 8}
   warningTime: 1
+  mixWindow: 3
+  doubleLevel: 30
+  tripleLevel: 60
+  doubleChance: {x: 0.2, y: 0.5}
+  tripleChance: {x: 0.15, y: 0.35}
+  chainGap: {x: 0.22, y: 0.3}
   radii: {x: 0.3, y: 0.45, z: 0.65, w: 0.95}
   speed: {x: 6.5, y: 4.5}
   turnRate: 110
-  maxChase: 9
+  accelAfter: 4
+  accelPerSecond: 0.25
   window: 0.25
   windowAt60: 0.2
   windowAt100: 0.16
   idealBeforeContact: 0.18
   slowWindowMultiplier: 2
   successIFrames: 1.6
+  boostFactor: 1.5
+  boostTime: 0.8
   buffChance: 0.06
   targetColor: {r: 0.45, g: 1, b: 0.6, a: 0.95}
-  closingColor: {r: 1, g: 0.92, b: 0.5, a: 1}
+  orbColors:
+  - {r: 1, g: 0.95, b: 0.55, a: 1}
+  - {r: 1, g: 0.65, b: 0.25, a: 1}
+  - {r: 1, g: 0.35, b: 0.4, a: 1}
   aboveHead: 1.1
   targetRadius: 0.42
   startRadius: 1.6
-  homingEveryHigh: {x: 4, y: 8}
-  mixWindow: 3
 --- !u!114 &848169115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11563,6 +11574,69 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 878006284}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &942210924
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 942210926}
+  - component: {fileID: 942210925}
+  m_Layer: 0
+  m_Name: TeachingPlan
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &942210925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 942210924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0a75d65605c6864dbcad6751f820472, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TeachingPlan
+  enabledPlan: 1
+  fastFrom: 2
+  breakableFrom: 3
+  cometFrom: 4
+  colossusAt: 8
+  colossusDelay: {x: 8, y: 14}
+  planetMoonsAt: 6
+  planetRingAt: 7
+  planetBeltAt: 8
+  planetsRandomFrom: 9
+  darkAt: 10
+  fractureIntroAt: 13
+  fractureFullAt: 16
+  specialsRandomFrom: 21
+  lightShieldAt: 3
+  slowAt: 4
+  ghostAt: 7
+  xlr8dAt: 9
+  timeFreezeAt: 9
+--- !u!4 &942210926
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 942210924}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -12913,7 +12987,7 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -13110,6 +13184,54 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1719222204
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1719222206}
+  - component: {fileID: 1719222205}
+  m_Layer: 0
+  m_Name: DeathCloseUp
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1719222205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1719222204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73218596c74929a4da5579db3d302fbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DeathCloseUp
+  duration: 2
+  zoom: 0.5
+  slowMotion: 0.3
+  skipAfter: 0.3
+--- !u!4 &1719222206
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1719222204}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1744813660
 GameObject:
   m_ObjectHideFlags: 0
@@ -23503,7 +23625,7 @@ MonoBehaviour:
   player: {fileID: 1679237101}
   playerStart: {fileID: 1679237105}
   goal: {fileID: 848801470}
-  startLevel: 1
+  startLevel: 30
   runSeed: 0
   sameLevelOnRetry: 0
   resumeFromSave: 0
@@ -23519,6 +23641,7 @@ MonoBehaviour:
   fractureColossusChance: 3
   fractureExtraComets: 1
   fractureLethalCut: 0.9
+  normalLethalCut: 0.9
   alwaysFracture: 1
   transition: {fileID: 0}
   respawnDelay: 1.4
@@ -23576,3 +23699,5 @@ SceneRoots:
   - {fileID: 878006286}
   - {fileID: 1322686716}
   - {fileID: 1083712102}
+  - {fileID: 942210926}
+  - {fileID: 1719222206}

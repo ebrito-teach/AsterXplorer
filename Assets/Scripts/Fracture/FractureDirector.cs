@@ -841,8 +841,13 @@ public class FractureDirector : MonoBehaviour
     /// Antimateria normal contra una roca: se destruyen las dos. La perseguidora sigue
     public void OnShotHitRock(Antimatter shot, Asteroid a)
     {
-        // Contra un planeta: el proyectil se deshace y el planeta sigue ahí
-        if (a != null && a.Type != null && a.Type.planet) { Burst(shot.transform.position, shot.Radius, 5); shot.Kill(); return; }
+        // Contra un planeta: el perseguidor del QTE lo atraviesa sin chocar; el proyectil normal
+        // se deshace y el planeta sigue ahí
+        if (a != null && a.Type != null && a.Type.planet)
+        {
+            if (shot.Homing) return;
+            Burst(shot.transform.position, shot.Radius, 5); shot.Kill(); return;
+        }
         Disintegrate(a);
         if (!shot.Homing) { Burst(shot.transform.position, shot.Radius, 6); shot.Kill(); }
     }

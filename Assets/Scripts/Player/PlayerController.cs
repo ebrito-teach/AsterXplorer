@@ -229,10 +229,15 @@ public class PlayerController : MonoBehaviour
     public event System.Action<float> OnImpact;
     /// El jugador ha muerto
     public event System.Action OnDied;
+    /// El personaje se rompe y desaparece (explosión). Al morir, o al acabar el primer plano
+    public event System.Action OnShattered;
+    public bool Shattered { get; private set; }
 
     // ---- lo que tocan los buffs (BuffSystem) ----
     /// Multiplica la velocidad de crucero (XLR8D: 2)
     public float SpeedFactor { get; set; } = 1f;
+    /// Empujón de velocidad limpia del QTE doble/triple (1 = nada). Se multiplica con SpeedFactor
+    public float QteBoost { get; set; } = 1f;
     /// 0 = manejo normal, 1 = cuesta maniobrar: arranca, para y gira más torpe (XLR8D)
     public float Clumsiness { get; set; }
     /// Tope de giro de la dirección de avance, en grados por segundo (0 = sin tope). Con
@@ -398,7 +403,7 @@ public class PlayerController : MonoBehaviour
 
         // --- lo que pides ---
         FieldSlowdown = Mathf.Max(StaticField(), PlanetRing.SlowAt(rb.position));
-        float speed = cruiseSpeed * SpeedFactor * (IsFocusing ? focusSpeedFactor : 1f) * (1f - FieldSlowdown);
+        float speed = cruiseSpeed * SpeedFactor * QteBoost * (IsFocusing ? focusSpeedFactor : 1f) * (1f - FieldSlowdown);
         Vector2 target = IsStunned ? Vector2.zero : Vector2.ClampMagnitude(intent, 1f) * speed;
 
         // Arrancar es rápido (precisión), parar es lento (inercia). Ahí está el híbrido.
@@ -748,9 +753,21 @@ public class PlayerController : MonoBehaviour
         rb.linearVelocity = Vector2.zero;
         rb.angularVelocity = 0f;
         rb.simulated = false;
-        if (visual != null) visual.gameObject.SetActive(false);
+        // Con primer plano, el personaje se queda a la vista (clavado donde lo tocaron) y se
+        // rompe al acabar; sin él, se rompe al instante como siempre
+        bool closeUp = DeathCloseUp.WillPlay;
+        if (!closeUp) Shatter();
 
         OnDied?.Invoke();
+    }
+
+    /// Rompe al personaje muerto: lo esconde y avisa (la explosión la pone FxSpawner)
+    public void Shatter()
+    {
+        if (Shattered) return;
+        Shattered = true;
+        if (visual != null) visual.gameObject.SetActive(false);
+        OnShattered?.Invoke();
     }
 
     /// Lo llama el agujero negro al cruzar el horizonte: suelta el control y la física,
@@ -777,6 +794,7 @@ public class PlayerController : MonoBehaviour
         StopAllCoroutines();
         IsExpelling = false;
         IsDead = false;
+        Shattered = false;
         IsAbsorbed = false;
         IsFocusing = false;
         enabled = true;

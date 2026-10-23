@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AsteroidTypeData
   id: fast
   behavior: 2
+  planet: 0
   sprites:
   - {fileID: -754581487715784627, guid: f3341d09dc3ffe140bc91b19efaddac4, type: 3}
   - {fileID: 441404832677507555, guid: f3341d09dc3ffe140bc91b19efaddac4, type: 3}
@@ -135,5 +136,5 @@ MonoBehaviour:
   lifetime: 0
   comet: {fileID: 0}
   cost: 3
-  minLevel: 4
+  minLevel: 1
   spawnWeight: 1.5

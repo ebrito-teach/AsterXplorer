@@ -85,6 +85,9 @@ public class CameraFollow : MonoBehaviour
     /// también por el lado hacia el que viaja la vista.
     public Vector2 Velocity { get; private set; }
 
+    /// Zoom forzado (primer plano al morir). Menor que 0 = sin forzar; 0.5 = el doble de cerca
+    public static float ZoomOverride = -1f;
+
     Rigidbody2D targetRb;
     PlayerController targetPc;
     float playerOverhang;      // lo que el dibujo sobresale de la zona de choque
@@ -164,6 +167,10 @@ public class CameraFollow : MonoBehaviour
         if (target == null || gb == null) return;
 
         lookAhead = lookAheadVel = posVel = Velocity = Vector2.zero;
+        // Al empezar un nivel, sin restos del primer plano de la muerte
+        ZoomOverride = -1f;
+        zoomNow = 1f;
+        CameraAspectFitter.Zoom = 1f;
         // Durante la llegada el jugador aún está fuera: la vista se coloca donde se va a parar
         Vector2 at = target.position;
         var pc = target.GetComponent<PlayerController>();
@@ -226,7 +233,9 @@ public class CameraFollow : MonoBehaviour
             focus = open != null ? open.WeakPoint : fd.Center;
         }
         float want = Mathf.Lerp(1f, fractureZoom, w);
-        zoomNow = Mathf.MoveTowards(zoomNow, want, dt * 0.8f);
+        float rate = 0.8f;
+        if (ZoomOverride > 0f) { want = ZoomOverride; rate = 2.5f; }
+        zoomNow = Mathf.MoveTowards(zoomNow, want, dt * rate);
         CameraAspectFitter.Zoom = zoomNow;
         // El punto al que mira se desliza: cambiar de eslabón no da saltos
         if (!focusReady) { focusY = focus.y; focusReady = true; }

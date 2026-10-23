@@ -69,15 +69,15 @@ public class DifficultyProfile : ScriptableObject
              "interpola; pasado el último sigue la tendencia hasta Speed Cap")]
     public Vector2[] speedKeys =
     {
-        new Vector2(1, 1.5f), new Vector2(10, 1.8f), new Vector2(20, 2.1f), new Vector2(30, 2.4f),
-        new Vector2(50, 2.9f), new Vector2(100, 3.8f), new Vector2(200, 4.6f), new Vector2(500, 5.8f),
-        new Vector2(1000, 6.8f),
+        new Vector2(1, 1.4f), new Vector2(10, 1.67f), new Vector2(20, 1.95f), new Vector2(30, 2.1f),
+        new Vector2(40, 2.15f), new Vector2(60, 2.22f), new Vector2(100, 2.35f), new Vector2(200, 2.55f),
+        new Vector2(500, 2.85f), new Vector2(1000, 3.1f),
     };
     [Tooltip("Techo de la velocidad de las rocas. Más allá deja de poder verse a tiempo: la " +
              "dificultad sigue subiendo por patrones, combinaciones y contenido nuevo")]
-    public float speedCap = 7f;
+    public float speedCap = 3.15f;
     [Tooltip("La velocidad sube en escalones de tantos niveles (saltos cortos y frecuentes)")]
-    public int speedStep = 10;
+    public int speedStep = 1;
     [Tooltip("Velocidad de crucero del jugador (u/s), en escalones: desde el nivel x vale y, hasta " +
              "el siguiente punto. Sube poco a propósito: moverse más rápido es ventaja")]
     public Vector2[] cruiseKeys =
@@ -93,8 +93,8 @@ public class DifficultyProfile : ScriptableObject
              "dificultad la pone la velocidad, y el reparto por cobertura evita huecos")]
     public Vector2[] budgetKeys =
     {
-        new Vector2(1, 46f), new Vector2(10, 58f), new Vector2(20, 100f), new Vector2(30, 110f),
-        new Vector2(60, 115f), new Vector2(100, 120f),
+        new Vector2(1, 41.4f), new Vector2(10, 46.8f), new Vector2(20, 64.8f), new Vector2(30, 68.4f),
+        new Vector2(60, 72f), new Vector2(100, 75.6f),
     };
 
     [Header("Corriente — grados de curvatura")]
@@ -116,10 +116,10 @@ public class DifficultyProfile : ScriptableObject
     public int calmEvery = 7;
     [Tooltip("Un nivel de cada tantos aprieta de golpe. Son los que se recuerdan")]
     public int surgeEvery = 5;
-    [Range(0.3f, 1f)] public float calmFactor = 0.65f;
-    [Range(1f, 2.5f)] public float surgeFactor = 1.45f;
+    [Range(0.3f, 1f)] public float calmFactor = 0.8f;
+    [Range(1f, 2.5f)] public float surgeFactor = 1.2f;
     [Tooltip("Cuánto del pico afecta también a la velocidad (1 = igual que a la cantidad)")]
-    [Range(0f, 1f)] public float moodAffectsSpeed = 0.5f;
+    [Range(0f, 1f)] public float moodAffectsSpeed = 0.25f;
 
     [Header("Justicia — el nivel tiene que ser pasable")]
     [Tooltip("Verifica al generar el nivel que existe al menos un camino hasta la meta, y si " +

@@ -89,6 +89,8 @@ public class LevelPopulator : MonoBehaviour
     public float LevelCruise => levelCruise;
     /// Recorte extra de lo que se mueve en mapas con grieta (lo pone GameDirector; 1 = nada)
     public float FractureExtraCut { get; set; } = 1f;
+    /// Recorte de lo que se mueve en mapas normales (lo pone GameDirector; 1 = nada)
+    public float NormalCut { get; set; } = 1f;
     float baseSpeedMultiplier = 1f;
     public DifficultyProfile Difficulty => difficulty;
     public int CurrentLevel => currentLevel;
@@ -255,8 +257,8 @@ public class LevelPopulator : MonoBehaviour
         }
 
         // Mapa de fractura: un 20 % menos de lo que se mueve (lo letal), además del recorte general
-        float keep = fractureLethalFactor * (FractureWorld ? FractureExtraCut : 1f);
-        if (FractureWorld && keep < 1f)
+        float keep = FractureWorld ? fractureLethalFactor * FractureExtraCut : NormalCut;
+        if (keep < 1f)
         {
             int movingNow = 0;
             foreach (var t in shopping) if (t.behavior != AsteroidBehavior.Static) movingNow++;
@@ -335,7 +337,6 @@ public class LevelPopulator : MonoBehaviour
         foreach (var t in shopping)
         {
             bool isStatic = t.behavior == AsteroidBehavior.Static;
-            int cell = isStatic ? -1 : EmptiestCell(cover);
             float size = t.RandomSize();
             float approxR = size * 0.7f;
             Rect rect = isStatic ? staticRect : movingRect;
@@ -344,12 +345,11 @@ public class LevelPopulator : MonoBehaviour
             for (int attempt = 0; attempt < 40; attempt++)
             {
                 var p = new Vector2(Random.Range(rect.xMin, rect.xMax), Random.Range(rect.yMin, rect.yMax));
-                // Lo que se mueve: dentro del sector más vacío (los primeros intentos)
-                if (cell >= 0 && attempt < 25)
+                // Lo que se mueve: SIEMPRE en su carril (así se sabe por dónde viene cada cosa); y
+                // dentro del carril, en el tramo más vacío de varios candidatos
+                if (!isStatic && lane >= 0)
                 {
-                    float cw = movingRect.width / gcols, ch = movingRect.height / grows;
-                    int cx = cell % gcols, cy = cell / gcols;
-                    p = new Vector2(movingRect.xMin + (cx + Random.value) * cw, movingRect.yMin + (cy + Random.value) * ch);
+                    p = BestInLane(rect, lane, cover, gcols, grows, movingRect);
                 }
                 // Estáticos agrupados: a veces junto a uno ya colocado (varios juntos y huecos)
                 if (isStatic && staticClusters && placedStatics.Count > 0 && Random.value < clusterChance)
@@ -360,7 +360,7 @@ public class LevelPopulator : MonoBehaviour
                     if (!rect.Contains(p)) continue;
                 }
                 // Lo que se mueve nace dentro de su carril (lentos y rápidos por caminos distintos)
-                if (lane >= 0 && attempt < 12 && !FlowField.Instance.InLane(p, lane)) continue;
+                if (lane >= 0 && attempt < 36 && !FlowField.Instance.InLane(p, lane)) continue;
 
                 if (Vector2.Distance(p, playerPos) < playerSafeRadius + approxR) continue;
                 if (isStatic && (goal.Contains(p) || bounds.IsBlocked(p, blockedMargin + approxR))) continue;
@@ -557,6 +557,24 @@ public class LevelPopulator : MonoBehaviour
         return n;
     }
 
+    // Varios puntos al azar dentro del carril; se queda con el del sector con menos rocas
+    Vector2 BestInLane(Rect rect, int lane, int[] cover, int gcols, int grows, Rect mr)
+    {
+        Vector2 best = new Vector2(Random.Range(rect.xMin, rect.xMax), Random.Range(rect.yMin, rect.yMax));
+        int bestN = int.MaxValue, found = 0;
+        for (int i = 0; i < 40 && found < 6; i++)
+        {
+            var q = new Vector2(Random.Range(rect.xMin, rect.xMax), Random.Range(rect.yMin, rect.yMax));
+            if (!FlowField.Instance.InLane(q, lane)) continue;
+            found++;
+            int cx = Mathf.Clamp(Mathf.FloorToInt((q.x - mr.xMin) / mr.width * gcols), 0, gcols - 1);
+            int cy = Mathf.Clamp(Mathf.FloorToInt((q.y - mr.yMin) / mr.height * grows), 0, grows - 1);
+            int n = cover[cy * gcols + cx];
+            if (n < bestN) { bestN = n; best = q; }
+        }
+        return best;
+    }
+
     static int EmptiestCell(int[] cover)
     {
         int min = int.MaxValue;
@@ -701,6 +719,7 @@ public class LevelPopulator : MonoBehaviour
         forcedSystem = rule;
         int noRoom = 0, tooBig = 0;
 
+        tight = false;
         int want = rule > 0 ? 1 : Random.Range(planetCount.x, planetCount.y + 1);
         var sprites = new List<Sprite>(planetType.sprites);
         sprites.RemoveAll(x => x == null);
@@ -710,13 +729,19 @@ public class LevelPopulator : MonoBehaviour
         var fd = FractureDirector.Instance;
         bool fracture = FractureWorld && fd != null && fd.Active;
 
+        int retries = 0;
         for (int k = 0; k < want && k < sprites.Count; k++)
         {
-            var body = pool.Spawn(planetType, sprites[k], area.center, planetType.RandomSize());
+            // El planeta que enseña tiene que salir: si no cabe, se reintenta más pequeño y con
+            // el sistema más ceñido (hasta 3 veces)
+            bool forced = rule > 0;
+            float size = forced ? Mathf.Lerp(planetType.sizeRange.y, planetType.sizeRange.x, retries / 3f) : planetType.RandomSize();
+            tight = forced && retries > 0;
+            var body = pool.Spawn(planetType, sprites[k], area.center, size);
             if (body == null) continue;
             var plan = PlanSystem(body);
             float fp = plan.footprint;
-            if (used + Mathf.PI * fp * fp > worldArea * planetMaxWorldShare)
+            if (!forced && used + Mathf.PI * fp * fp > worldArea * planetMaxWorldShare)
             {
                 tooBig++;
                 Debug.LogWarning($"LevelPopulator: planeta descartado, su sistema ({plan.system}, radio {fp:0.0} u, planeta {body.WorldRadius:0.0} u) " +
@@ -743,6 +768,13 @@ public class LevelPopulator : MonoBehaviour
                 ok = true;
                 break;
             }
+            if (!ok && forced && retries < 3)
+            {
+                retries++;
+                pool.Release(body);
+                k--;
+                continue;
+            }
             if (!ok)
             {
                 noRoom++;
@@ -762,6 +794,7 @@ public class LevelPopulator : MonoBehaviour
     }
 
     int forcedSystem;
+    bool tight;   // reintento de un planeta que enseña: sistema lo más ceñido posible
 
     PlanetPlan PlanSystem(Asteroid body)
     {
@@ -789,11 +822,11 @@ public class LevelPopulator : MonoBehaviour
                 var valid = new List<PlanetRing.Look>();
                 foreach (var l in ringLooks) if (l != null && l.sprite != null) valid.Add(l);
                 plan.ring = valid[Random.Range(0, valid.Count)];
-                plan.ringInner = R * Random.Range(ringInner.x, ringInner.y);
+                plan.ringInner = R * (tight ? ringInner.x : Random.Range(ringInner.x, ringInner.y));
                 plan.footprint = plan.ringInner / Mathf.Max(0.05f, plan.ring.innerRatio);
                 break;
             case PlanetSystem.Belt:
-                plan.beltWidth = Random.Range(beltWidth.x, beltWidth.y);
+                plan.beltWidth = tight ? beltWidth.x : Random.Range(beltWidth.x, beltWidth.y);
                 plan.footprint = R + beltGap + plan.beltWidth + 0.6f;
                 break;
             case PlanetSystem.Moons:

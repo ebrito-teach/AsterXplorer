@@ -23,13 +23,13 @@ public class FxSpawner : MonoBehaviour
     void OnEnable()
     {
         AsteroidBreaker.Broken += OnBroken;
-        if (player != null) player.OnDied += OnPlayerDied;
+        if (player != null) player.OnShattered += OnPlayerDied;
     }
 
     void OnDisable()
     {
         AsteroidBreaker.Broken -= OnBroken;
-        if (player != null) player.OnDied -= OnPlayerDied;
+        if (player != null) player.OnShattered -= OnPlayerDied;
     }
 
     void OnBroken(Vector2 pos, float size, int variant)
@@ -41,7 +41,7 @@ public class FxSpawner : MonoBehaviour
 
     void OnPlayerDied()
     {
-        // El jugador se desactiva al morir pero su transform queda donde murió
+        // Al romperse (al morir, o al acabar el primer plano) su transform queda donde murió
         if (playerDeathFx != null && player != null)
             Play(playerDeathFx, player.transform.position, 1f);
     }

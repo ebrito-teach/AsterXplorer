@@ -122,6 +122,9 @@ public class Antimatter : MonoBehaviour
         halo.transform.localRotation = Quaternion.Euler(0f, 0f, -t * 40f);
         var c = halo.color; c.a = Mathf.Clamp01(0.55f + 0.25f * Mathf.Sin(t * 9f)); halo.color = c;
 
+        // Los perseguidores del QTE nunca desaparecen solos (los resuelve FractureQTE)
+        if (Homing) return;
+
         // Fuera del mundo: se acaba
         var gb = GameBounds.Instance;
         if (gb != null && gb.IsReady)
@@ -132,7 +135,7 @@ public class Antimatter : MonoBehaviour
         }
         if (t > 40f) { Kill(); return; }
 
-        if (!Homing) CheckGraze();
+        CheckGraze();
     }
 
     // Roce: se acerca a menos de Graze Distance del jugador y se aleja sin tocarlo

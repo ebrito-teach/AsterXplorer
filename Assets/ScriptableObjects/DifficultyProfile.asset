@@ -22,17 +22,17 @@ MonoBehaviour:
   speedKnee: 25
   useKeyCurves: 1
   speedKeys:
-  - {x: 1, y: 1.5}
-  - {x: 10, y: 1.8}
-  - {x: 20, y: 2.1}
-  - {x: 30, y: 2.4}
-  - {x: 50, y: 2.9}
-  - {x: 100, y: 3.8}
-  - {x: 200, y: 4.6}
-  - {x: 500, y: 5.8}
-  - {x: 1000, y: 6.8}
-  speedCap: 7
-  speedStep: 10
+  - {x: 1, y: 1.4}
+  - {x: 10, y: 1.67}
+  - {x: 20, y: 1.95}
+  - {x: 30, y: 2.1}
+  - {x: 50, y: 2.15}
+  - {x: 100, y: 2.22}
+  - {x: 200, y: 2.35}
+  - {x: 500, y: 2.55}
+  - {x: 1000, y: 3.1}
+  speedCap: 4
+  speedStep: 1
   cruiseKeys:
   - {x: 1, y: 6}
   - {x: 20, y: 6.5}
@@ -50,12 +50,12 @@ MonoBehaviour:
   - {x: 1000, y: 10}
   cruiseCap: 10
   budgetKeys:
-  - {x: 1, y: 46}
-  - {x: 10, y: 58}
-  - {x: 20, y: 100}
-  - {x: 30, y: 110}
-  - {x: 60, y: 115}
-  - {x: 100, y: 120}
+  - {x: 1, y: 41.1}
+  - {x: 10, y: 46.8}
+  - {x: 20, y: 64.8}
+  - {x: 30, y: 68.4}
+  - {x: 60, y: 72}
+  - {x: 100, y: 75.6}
   flowStart: 32
   flowGrowth: 13
   flowKnee: 22
@@ -63,10 +63,10 @@ MonoBehaviour:
   maxMovingAsteroids: 55
   calmEvery: 10
   surgeEvery: 5
-  calmFactor: 0.65
-  surgeFactor: 1.45
-  moodAffectsSpeed: 0.5
-  enforceSolvable: 1
+  calmFactor: 0.8
+  surgeFactor: 1.2
+  moodAffectsSpeed: 0.25
+  enforceSolvable: 0
   solveHorizon: 12
   solveCell: 0.45
   solveMaxRemovals: 8

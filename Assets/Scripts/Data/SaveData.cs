@@ -127,6 +127,8 @@ public class Settings
     public bool music = true;
     public bool vibration = true;
     public bool screenEffects = true;        // sacudida y destellos
+    /// Primer plano al morir: la cámara se acerca a cámara lenta al choque (saltable al tocar)
+    public bool deathCloseUp = true;
     /// Calidad de gráficos: -1 = Auto (la decide PerformanceManager midiendo), 0 Bajo, 1 Medio, 2 Alto
     public int graphicsQuality = -1;
     public ControlScheme control = ControlScheme.Joystick;
