@@ -89,6 +89,9 @@ public class DifficultyProfile : ScriptableObject
     };
     [Tooltip("Techo del crucero: nunca pasa de aquí")]
     public float cruiseCap = 10f;
+    [Tooltip("Multiplica toda la tabla del crucero (y su techo). 1.04 = un 4 % más rápido en todos los " +
+             "niveles; compensa un mundo más grande")]
+    public float cruiseScale = 1.04f;
     [Tooltip("Cantidad (presupuesto) por nivel. Pasado el último punto se queda ahí: la " +
              "dificultad la pone la velocidad, y el reparto por cobertura evita huecos")]
     public Vector2[] budgetKeys =
@@ -200,7 +203,7 @@ public class DifficultyProfile : ScriptableObject
         if (!useKeyCurves || cruiseKeys == null || cruiseKeys.Length == 0) return 0f;
         float v = cruiseKeys[0].y;
         foreach (var k in cruiseKeys) if (level >= k.x) v = k.y;
-        return Mathf.Min(cruiseCap, v);
+        return Mathf.Min(cruiseCap, v) * Mathf.Max(0.1f, cruiseScale);
     }
 
     // El nivel con el que se lee la tabla: el primero de su escalón (1, 10, 20, 30...)

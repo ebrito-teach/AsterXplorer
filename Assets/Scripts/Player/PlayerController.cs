@@ -55,6 +55,14 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Transform visual;   // el hijo con el sprite (Pj)
     [SerializeField] private Animator animator;  // el Animator de Pj
 
+    [Header("Hitbox")]
+    [Tooltip("Radio del núcleo que mata, en unidades del mundo (≈35 % del ancho del dibujo). " +
+             "Solo el núcleo muere: rocas, balas y orbes tienen que tocarlo a él")]
+    [SerializeField] private float coreRadius = 0.25f;
+    [Tooltip("Capas que NO tocan el cuerpo (la cápsula), solo el núcleo. El cuerpo sigue " +
+             "topando con estáticos y planetas para que el dibujo no se hunda en ellos")]
+    [SerializeField] private string[] bodyIgnoresLayers = { "AsteroidMoving" };
+
     [Header("Control")]
     [SerializeField] private ControlMode controlMode = ControlMode.ShipHybrid;
     [Tooltip("El modo lo decide el esquema de entrada: joystick → direccional, inclinación o " +
@@ -235,6 +243,22 @@ public class PlayerController : MonoBehaviour
 
     // ---- lo que tocan los buffs (BuffSystem) ----
     /// Multiplica la velocidad de crucero (XLR8D: 2)
+    /// Radio del núcleo que mata (unidades del mundo) y su collider
+    public float CoreRadius => coreRadius;
+    public Collider2D Core { get; private set; }
+    /// El jugador de la escena (lo usan las rocas en órbita para no topar con el cuerpo)
+    public static PlayerController Main { get; private set; }
+    Collider2D bodyCol;
+
+    /// Que el cuerpo (la cápsula) no tope con este collider: lo que mata y orbita un planeta
+    /// tiene que llegar al núcleo, o el cuerpo lo frenaría siempre antes y nunca mataría
+    public void SetBodyIgnore(Collider2D c, bool ignore)
+    {
+        if (bodyCol != null && c != null) Physics2D.IgnoreCollision(bodyCol, c, ignore);
+    }
+    /// ¿Este collider del jugador es el que mata? (sin núcleo, cualquiera)
+    public bool IsCore(Collider2D c) => Core == null || c == Core;
+
     public float SpeedFactor { get; set; } = 1f;
     /// Empujón de velocidad limpia del QTE doble/triple (1 = nada). Se multiplica con SpeedFactor
     public float QteBoost { get; set; } = 1f;
@@ -322,6 +346,8 @@ public class PlayerController : MonoBehaviour
 
         if (visual != null) visualRenderer = visual.GetComponent<SpriteRenderer>();
 
+        BuildCore();
+
         // A partir de ahora la velocidad la lleva este script. El amortiguamiento pelearía
         // contra él, así que se apaga aquí y no hay que acordarse de ponerlo en el Inspector.
         //
@@ -333,6 +359,35 @@ public class PlayerController : MonoBehaviour
         rb.angularDamping = 0f;
         rb.freezeRotation = false;
         facing = rb.rotation + 90f;
+    }
+
+    // Dos hitbox: la cápsula de la escena es el CUERPO (topa con estáticos y planetas) y este
+    // círculo pequeño en el centro es el NÚCLEO, lo único que muere. Lo que se mueve (capas de
+    // Body Ignores Layers) atraviesa el cuerpo y solo choca con el núcleo
+    void BuildCore()
+    {
+        var body = GetComponent<Collider2D>();
+        bodyCol = body;
+        Main = this;
+        var go = new GameObject("HitboxNucleo");
+        go.layer = gameObject.layer;
+        go.transform.SetParent(transform, false);
+        var cc = go.AddComponent<CircleCollider2D>();
+        float sc = Mathf.Max(0.0001f, Mathf.Abs(transform.lossyScale.x));
+        cc.radius = coreRadius / sc;
+        if (body != null)
+        {
+            cc.sharedMaterial = body.sharedMaterial;
+            int mask = 0;
+            foreach (var n in bodyIgnoresLayers)
+            {
+                int l = LayerMask.NameToLayer(n);
+                if (l >= 0) mask |= 1 << l;
+                else Debug.LogWarning($"PlayerController: no existe la capa '{n}' (Body Ignores Layers).", this);
+            }
+            body.excludeLayers = body.excludeLayers | mask;
+        }
+        Core = cc;
     }
 
     void Start()
@@ -579,7 +634,7 @@ public class PlayerController : MonoBehaviour
         var hitRock = c.collider.GetComponentInParent<Asteroid>();
         Vector2 hitAt = c.contactCount > 0 ? c.GetContact(0).point : (Vector2)transform.position;
         // El escudo solo se gasta con lo que mata (tocar un planeta o un estático no lo gasta)
-        if (HitAbsorber != null && hitRock != null && hitRock.Lethal && HitAbsorber()) ImpactSparks.Shield(hitAt);
+        if (HitAbsorber != null && hitRock != null && hitRock.Lethal && IsCore(c.otherCollider) && HitAbsorber()) ImpactSparks.Shield(hitAt);
         // Choque que no mata (estáticos, planetas, rocas no letales): chispa pequeña
         if (hitRock != null && !hitRock.Lethal && c.relativeVelocity.magnitude >= bumpSparkSpeed && Time.time >= nextBumpSpark)
         {

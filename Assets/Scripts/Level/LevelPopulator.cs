@@ -52,6 +52,8 @@ public class LevelPopulator : MonoBehaviour
     [Tooltip("Lo que fluye no mata. Cada este rango de segundos entra UNO que sí mata (lento o " +
              "rápido), y nunca hay más de uno a la vez")]
     [SerializeField] private Vector2 darkLethalEvery = new Vector2(20f, 40f);
+    [Tooltip("Letales a la vez en un mundo oscuro al principio; crece con el nivel (DarkLethalCurve)")]
+    [SerializeField] private float darkLethalBase = 2f;
 
     /// Mundo oscuro en este nivel. Lo pone GameDirector antes de StartLevel: sin colosos,
     /// lo que fluye inofensivo salvo raras excepciones; los estáticos y sus satélites, igual
@@ -91,6 +93,24 @@ public class LevelPopulator : MonoBehaviour
     public float FractureExtraCut { get; set; } = 1f;
     /// Recorte de lo que se mueve en mapas normales (lo pone GameDirector; 1 = nada)
     public float NormalCut { get; set; } = 1f;
+    /// Mundos oscuros: frecuencia de las rocas letales sueltas (1.03 = un 3 % más a menudo). Lo pone GameDirector
+    public float DarkLethalRate { get; set; } = 1f;
+    float DarkLethalWait() => Random.Range(darkLethalEvery.x, darkLethalEvery.y) / Mathf.Max(0.1f, DarkLethalRate * DarkLethalCurve(currentLevel));
+
+    /// Mundos oscuros, letales que crecen con el nivel (multiplicador sobre lo de hoy):
+    /// ×1 hasta el 10, ×1.6 al 100, ×1.7 al 200, ×1.8 al 300, ×2 al 500, y luego +0.05 cada 100
+    public static float DarkLethalCurve(int level)
+    {
+        if (level <= 10) return 1f;
+        if (level <= 100) return 1f + 0.6f * (level - 10) / 90f;
+        if (level <= 200) return 1.6f + 0.1f * (level - 100) / 100f;
+        if (level <= 300) return 1.7f + 0.1f * (level - 200) / 100f;
+        if (level <= 500) return 1.8f + 0.2f * (level - 300) / 200f;
+        return 2f + 0.05f * (level - 500) / 100f;
+    }
+
+    /// Cuántas letales a la vez en un mundo oscuro: Dark Lethal Base × curva (2, ~3 al 100, 4 al 500…)
+    int DarkLethalCap() => Mathf.Max(1, Mathf.RoundToInt(darkLethalBase * DarkLethalCurve(currentLevel)));
     float baseSpeedMultiplier = 1f;
     public DifficultyProfile Difficulty => difficulty;
     public int CurrentLevel => currentLevel;
@@ -243,8 +263,8 @@ public class LevelPopulator : MonoBehaviour
         float budget = difficulty.Budget(currentLevel) * CalibDensity * (DarkWorld ? darkBudgetFactor : 1f) * (FractureWorld ? fractureBudgetFactor : 1f)
                        * (FractureWorld ? Random.Range(fractureDensity.x, fractureDensity.y) * fractureMapDensity : 1f);
         LastBudget = budget;
-        darkLethal = null;
-        nextDarkLethal = Time.time + Random.Range(darkLethalEvery.x, darkLethalEvery.y);
+        darkLethals.Clear();
+        nextDarkLethal = Time.time + DarkLethalWait();
         var shopping = new List<AsteroidTypeData>();
         int moving = 0;
         for (int guard = 0; guard < 500; guard++)
@@ -594,16 +614,20 @@ public class LevelPopulator : MonoBehaviour
     }
 
     // Mundo vacío: de vez en cuando entra uno que sí mata, de uno en uno
-    Asteroid darkLethal;
-    int darkLethalSerial;
+    readonly System.Collections.Generic.List<(Asteroid a, int serial)> darkLethals = new System.Collections.Generic.List<(Asteroid a, int serial)>();
     float nextDarkLethal;
 
+    // Varias a la vez: hasta DarkLethalCap; entre una y la siguiente, la espera (más corta con el nivel)
     void TickDarkLethal()
     {
-        bool alive = darkLethal != null && darkLethal.isActiveAndEnabled && darkLethal.Serial == darkLethalSerial;
-        if (alive) return;
-        if (darkLethal != null) { darkLethal = null; nextDarkLethal = Time.time + Random.Range(darkLethalEvery.x, darkLethalEvery.y); return; }
+        for (int i = darkLethals.Count - 1; i >= 0; i--)
+        {
+            var d = darkLethals[i];
+            if (d.a == null || !d.a.isActiveAndEnabled || d.a.Serial != d.serial || d.a.Harmless) darkLethals.RemoveAt(i);
+        }
+        if (darkLethals.Count >= DarkLethalCap()) return;
         if (Time.time < nextDarkLethal || FlowField.Instance == null) return;
+        nextDarkLethal = Time.time + DarkLethalWait();
 
         var type = PickAnyMoving();
         if (type == null) return;
@@ -611,8 +635,7 @@ public class LevelPopulator : MonoBehaviour
         var a = pool.Spawn(type, FlowField.Instance.RandomEntryPoint(avoid, playerSafeRadius, type));
         if (a == null) return;
         a.Harmless = false;
-        darkLethal = a;
-        darkLethalSerial = a.Serial;
+        darkLethals.Add((a, a.Serial));
         Debug.Log($"LevelPopulator: mundo oscuro, entra un '{type.id}' que SÍ mata.");
     }
 

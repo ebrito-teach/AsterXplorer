@@ -65,6 +65,14 @@ public class BackdropDirector : MonoBehaviour
     }
 
     readonly List<Piece> nebulas = new List<Piece>();
+
+    /// Para el fondo vivo: las nebulosas de este mapa (dibujo, profundidad y posición en su capa)
+    public void GetNebulas(List<SpriteRenderer> renderers, List<float> follows, List<Vector2> locals)
+    {
+        renderers.Clear(); follows.Clear(); locals.Clear();
+        foreach (var p in nebulas)
+            if (p.sr != null && p.sr.gameObject.activeSelf && p.sr.sprite != null) { renderers.Add(p.sr); follows.Add(p.follow); locals.Add(p.local); }
+    }
     readonly List<Piece> things = new List<Piece>();
     readonly Dictionary<int, Sprite> loaded = new Dictionary<int, Sprite>();
     System.Random rng;

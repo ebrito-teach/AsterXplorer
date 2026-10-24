@@ -144,6 +144,10 @@ public class SkyDirector : MonoBehaviour
 
     /// Lo que salió en el último mapa (para depurar y para la bitácora, si algún día se usa)
     public string LastReport { get; private set; }
+    /// Para el fondo vivo: las cajas de las constelaciones (y palabras) en coordenadas de la capa
+    /// media, y cuánto acompaña esa capa a la cámara. Mundo = caja + cámara × MidFollow
+    public IReadOnlyList<Rect> ConstellationBoxes => taken;
+    public float MidFollow => midFollow;
 
     // ------------------------------------------------------------------ ciclo de vida
     void OnEnable()

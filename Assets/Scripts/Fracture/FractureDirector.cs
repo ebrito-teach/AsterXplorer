@@ -319,8 +319,8 @@ public class FractureDirector : MonoBehaviour
         if (!on) { Prepared?.Invoke(); return; }
         if (player != null)
         {
-            var col = player.GetComponentInChildren<Collider2D>();
-            PlayerRadius = col != null ? Mathf.Min(col.bounds.extents.x, col.bounds.extents.y) : 0.3f;
+            // El núcleo que mata: con él se miden el roce, el QTE y los choques
+            PlayerRadius = player.CoreRadius > 0f ? player.CoreRadius : 0.3f;
         }
         Build(new System.Random(layoutSeed), playerSpawn);
         startAt = Time.time + firstDelay + 1.5f;   // la llegada del jugador dura ~1.4 s

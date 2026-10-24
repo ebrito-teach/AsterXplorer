@@ -119,6 +119,65 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &4999222
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4999224}
+  - component: {fileID: 4999223}
+  m_Layer: 0
+  m_Name: LivingSky
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &4999223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4999222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9a5116583981e144b478b866b1da1a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LivingSky
+  director: {fileID: 2029263807}
+  lightningChance: 0.6
+  windChance: 0.3
+  magneticChance: 0.2
+  binaryChance: 0.15
+  pulsarChance: 0.12
+  maxAmbient: 2
+  maxAmbientFracture: 1
+  meteorChance: 0.2
+  cometChance: 0.12
+  stormChance: 0.05
+  supernovaChance: 0.01
+  eventTime: {x: 6, y: 40}
+  constellationMargin: 1
+  forceKind: 0
+--- !u!4 &4999224
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4999222}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5571966
 GameObject:
   m_ObjectHideFlags: 0
@@ -281,8 +340,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2f967b436b5f5214f9b62ec7e0e33923, type: 2}
   keplerSpeed: 55
   keplerRefRadius: 2.5
-  darkBudgetFactor: 0.3
-  darkLethalEvery: {x: 20, y: 40}
+  darkBudgetFactor: 0.5
+  darkLethalEvery: {x: 10, y: 20}
+  darkLethalBase: 2
   fractureBudgetFactor: 0.6
   fractureLethalFactor: 0.8
   fractureDensity: {x: 0.8, y: 0.95}
@@ -508,7 +568,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   respectSafeArea: 1
-  worldScreens: {x: 2.3, y: 2.3}
+  worldScreens: {x: 2.7, y: 2.7}
   wallThickness: 2
   padding: 0
   goalCornerNormalized:
@@ -10962,6 +11022,189 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &730454070
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 730454072}
+  - component: {fileID: 730454071}
+  m_Layer: 0
+  m_Name: WorldEdge
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &730454071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 730454070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa86c9a02eacc0a4e857d37334ff316f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WorldEdge
+  cornerRoundness: 0.05
+  cornersOnly: 1
+  pushZone: 1
+  pushStrength: 15
+  goalSafeDistance: 8
+  fogColor: {r: 0.05, g: 0.06, b: 0.12, a: 1}
+  fogAtEdge: 0.6
+  fogZone: 1
+  fogOutside: 13
+  goalClearMargin: 1
+  goalClearSoft: 1
+  fogResolution: 3
+  sortingLayer: Asteroids
+  sortingOrder: 32000
+--- !u!4 &730454072
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 730454070}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &821914647
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 821914649}
+  - component: {fileID: 821914648}
+  m_Layer: 0
+  m_Name: DarkLights
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &821914648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 821914647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd31bae75b1b8f643a9ec7ee02b1ef28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DarkLights
+  director: {fileID: 2029263807}
+  frames:
+  - {fileID: 21300000, guid: 69148317063f3af4fb89f37d552bd9ef, type: 3}
+  - {fileID: 21300000, guid: 1c257c065b9e5d34a94d761f1bd41ea7, type: 3}
+  pickFrames:
+  - {fileID: 21300000, guid: fd6a7b8630b648644a38c1e3b061bda7, type: 3}
+  - {fileID: 21300000, guid: 9fef0010d4ea97f469220ce639ddc149, type: 3}
+  - {fileID: 21300000, guid: 8f96f4aa27d09ce49b3c7ec81b1f1ec7, type: 3}
+  - {fileID: 21300000, guid: 69148317063f3af4fb89f37d552bd9ef, type: 3}
+  - {fileID: 21300000, guid: 1c257c065b9e5d34a94d761f1bd41ea7, type: 3}
+  - {fileID: 21300000, guid: a7ea59e7f8b54244192a8ed26d80c6a7, type: 3}
+  - {fileID: 21300000, guid: 556340a57321bd64483adec748fa4afb, type: 3}
+  pickFrameTime: 0.05
+  maxCount: 10
+  maxVision: 3.2
+  maxOf03: 2
+  maxOf02: 3
+  minFromPlayer: 5
+  minFromGoal: 5
+  minBetween: 4
+  edgeMargin: 2
+  showDistance: 8
+  sizes: {x: 0.9, y: 1.15, z: 1.4}
+  tint: {r: 0.6, g: 0.85, b: 1, a: 1}
+  frameTime: 0.08
+  pickRadius: 0.6
+  growTime: 0.4
+  sortingLayer: Player
+  sortingOrder: 30010
+--- !u!4 &821914649
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 821914647}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &838280324
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 838280326}
+  - component: {fileID: 838280325}
+  m_Layer: 0
+  m_Name: DangerStyle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &838280325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 838280324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c9d3d5e6e25b4747a5fee3994a6631e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DangerStyle
+  silhouette: {fileID: 2100000, guid: 959f6a61dae14be46b252f999928f5f2, type: 2}
+  color: {r: 0.79607844, g: 0.30588236, b: 0.30588236, a: 0.50980395}
+  thickness: 0.05
+  nearDistance: 2.5
+  farDistance: 10
+  farAlpha: 0.25
+  nearAlpha: 1
+  nearThicknessBoost: 1.5
+--- !u!4 &838280326
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 838280324}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &848169111
 GameObject:
   m_ObjectHideFlags: 0
@@ -11203,9 +11446,9 @@ MonoBehaviour:
   orbSize: 0.2
   orbColor: {r: 1, g: 1, b: 1, a: 0.95}
   orbGlow: {r: 0.75, g: 0.9, b: 1, a: 0.55}
-  shakeAt2: 0.06
-  shakeAt5: 0.14
-  shakeAt7: 0.55
+  shakeAt2: 0.3
+  shakeAt5: 0.5
+  shakeAt7: 0.65
   shockRadius: 3
   shockColor: {r: 1, g: 0.75, b: 0.4, a: 0.9}
   flames: 20
@@ -11219,9 +11462,9 @@ MonoBehaviour:
   auraGlow: {r: 1, g: 0.35, b: 0.1, a: 0.45}
   flamesOn: 0
   arcFrames:
-  - {fileID: 1354554318970678563, guid: 069b5aa6ffbf12a4886b044cbd94fe29, type: 3}
-  - {fileID: -4694757556679584679, guid: 78077b98585c2014c8b6a0cb5eb49251, type: 3}
-  - {fileID: 304643928840283543, guid: d7e90d97f244ac94eb3dbfc4914d351c, type: 3}
+  - {fileID: 21300000, guid: 069b5aa6ffbf12a4886b044cbd94fe29, type: 3}
+  - {fileID: 21300000, guid: 78077b98585c2014c8b6a0cb5eb49251, type: 3}
+  - {fileID: 21300000, guid: d7e90d97f244ac94eb3dbfc4914d351c, type: 3}
   arcsAt2: 1
   arcsAt5: 2
   arcs: 5
@@ -12761,6 +13004,66 @@ MonoBehaviour:
         m_CallState: 2
   normalSprite: {fileID: 21300000, guid: e424c68d26573ef429f954554dc247f9, type: 3}
   pressedSprite: {fileID: 21300000, guid: 7b10151b58bb9f344bee0f3a3fac0059, type: 3}
+--- !u!1 &1520762772
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1520762774}
+  - component: {fileID: 1520762773}
+  m_Layer: 0
+  m_Name: ImpactSparks
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1520762773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1520762772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3da027d1bc55304993b1fbc7b054f39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ImpactSparks
+  frames:
+  - {fileID: -1203932541587647088, guid: 3708bf79bea3aed4aa8566bb615e9c0e, type: 3}
+  - {fileID: -3409663732027125337, guid: bc40cc0cd7e670b45a961603772d83f4, type: 3}
+  - {fileID: -9013496595317367196, guid: dd624b2ac51578e4d9b7342935ada4a9, type: 3}
+  - {fileID: 6037410292377223794, guid: 5ec749d4df9c0194cb0583e62c2f0684, type: 3}
+  - {fileID: -6679880347149647269, guid: b43f86f2c700ed5459343f0e0da52986, type: 3}
+  - {fileID: 1488994744354201609, guid: c091c5ad84b8c174dbb5eee99bc3d1a9, type: 3}
+  - {fileID: 8283299444025367629, guid: 52a2fde6ae66d5140b4c90b8ad43e344, type: 3}
+  - {fileID: 6093692322816733117, guid: 7b311c954eda1ed489670dee6209571b, type: 3}
+  frameTime: 0.045
+  sizes: {x: 0.9, y: 0.7, z: 0.6}
+  deathColor: {r: 1, g: 1, b: 1, a: 1}
+  shieldColor: {r: 0.75, g: 0.95, b: 1, a: 1}
+  bumpColor: {r: 1, g: 1, b: 1, a: 1}
+  sortingLayer: FX
+  sortingOrder: 120
+--- !u!4 &1520762774
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1520762772}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1527855971
 GameObject:
   m_ObjectHideFlags: 0
@@ -12926,6 +13229,9 @@ MonoBehaviour:
   input: {fileID: 1262664682}
   visual: {fileID: 1762936118}
   animator: {fileID: 1762936120}
+  coreRadius: 0.25
+  bodyIgnoresLayers:
+  - AsteroidMoving
   controlMode: 0
   followInputScheme: 1
   cruiseSpeed: 6
@@ -23583,7 +23889,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DarkWorld
   visionRadius: 1.5
-  softEdge: 0.6
+  softEdge: 0.5
   darkness: 1
   flicker: 0.04
   goalReveal: 0.3
@@ -23656,7 +23962,8 @@ MonoBehaviour:
   fractureExtraComets: 1
   fractureLethalCut: 0.9
   normalLethalCut: 0.9
-  alwaysFracture: 1
+  darkLethalRate: 1.08
+  alwaysFracture: 0
   transition: {fileID: 0}
   respawnDelay: 1.4
   mirrorWithFlow: 1
@@ -23715,3 +24022,8 @@ SceneRoots:
   - {fileID: 1083712102}
   - {fileID: 942210926}
   - {fileID: 1719222206}
+  - {fileID: 1520762774}
+  - {fileID: 838280326}
+  - {fileID: 821914649}
+  - {fileID: 730454072}
+  - {fileID: 4999224}

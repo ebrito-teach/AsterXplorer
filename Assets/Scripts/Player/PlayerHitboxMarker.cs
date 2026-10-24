@@ -68,13 +68,8 @@ public class PlayerHitboxMarker : MonoBehaviour
         ringDiameter = ringSizeFallback;
         if (ringMatchesCollider)
         {
-            var col = GetComponentInChildren<Collider2D>();
-            if (col != null)
-            {
-                // El lado corto del collider es lo que de verdad limita por dónde cabes
-                var e = col.bounds.extents;
-                ringDiameter = Mathf.Max(0.08f, Mathf.Min(e.x, e.y) * 2f);
-            }
+            // El anillo mide el núcleo que mata (no la cápsula del cuerpo)
+            if (player != null && player.CoreRadius > 0f) ringDiameter = Mathf.Max(0.08f, player.CoreRadius * 2f);
         }
     }
 
@@ -134,10 +129,9 @@ public class PlayerHitboxMarker : MonoBehaviour
 
     void OnDrawGizmosSelected()
     {
-        var col = GetComponentInChildren<Collider2D>();
-        if (col == null) return;
+        var pc = GetComponent<PlayerController>();
+        if (pc == null) return;
         Gizmos.color = new Color(1f, 0.4f, 0.3f, 0.9f);
-        var e = col.bounds.extents;
-        Gizmos.DrawWireSphere(col.bounds.center, Mathf.Min(e.x, e.y));
+        Gizmos.DrawWireSphere(transform.position, pc.CoreRadius);
     }
 }

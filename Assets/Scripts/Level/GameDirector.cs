@@ -63,10 +63,12 @@ public class GameDirector : MonoBehaviour
     [SerializeField] private int fractureExtraComets = 1;
     [Tooltip("Recorte extra de lo letal que se mueve en mapas con grieta: asteroides, cometas y colosos " +
              "(0.9 = un 10 % menos). Se suma a los recortes del LevelPopulator")]
-    [Range(0.3f, 1f)] [SerializeField] private float fractureLethalCut = 0.9f;
+    [Range(0.3f, 1f)] [SerializeField] private float fractureLethalCut = 0.927f;
     [Tooltip("Lo mismo en los mapas normales (ni grieta ni mundo oscuro): asteroides, cometas y " +
              "colosos (0.9 = un 10 % menos, en todos los niveles)")]
-    [Range(0.3f, 1f)] [SerializeField] private float normalLethalCut = 0.9f;
+    [Range(0.3f, 1f)] [SerializeField] private float normalLethalCut = 0.945f;
+    [Tooltip("Mundos oscuros: más o menos rocas letales sueltas (1.08 = un 8 % más a menudo)")]
+    [Range(0.3f, 2f)] [SerializeField] private float darkLethalRate = 1.08f;
     [Tooltip("Solo para probar: todos los niveles (que no sean oscuros) son de fractura")]
     [SerializeField] private bool alwaysFracture = false;
 
@@ -236,7 +238,12 @@ public class GameDirector : MonoBehaviour
             comets.ExtraAlive = IsFractureWorld ? fractureExtraComets : 0;
             comets.DelayMultiplier = 1f / Mathf.Max(0.1f, cut);   // más espera entre cometas = menos cometas
         }
-        if (populator != null) { populator.FractureExtraCut = IsFractureWorld ? cut : 1f; populator.NormalCut = normalMap ? cut : 1f; }
+        if (populator != null)
+        {
+            populator.FractureExtraCut = IsFractureWorld ? cut : 1f;
+            populator.NormalCut = normalMap ? cut : 1f;
+            populator.DarkLethalRate = IsDarkWorld ? darkLethalRate : 1f;
+        }
 
         // 3. Jugador y meta, antes de poblar: el generador evita la zona de los dos. El
         //    jugador aparece cerca de un borde; la meta, en el lado contrario, pegada al

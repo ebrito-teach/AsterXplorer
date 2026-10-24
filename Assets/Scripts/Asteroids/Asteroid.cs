@@ -51,7 +51,15 @@ public class Asteroid : MonoBehaviour
     /// Decide si sus lunas actuales matan, sin mirar al anfitrión (el cinturón de un planeta sí, sus lunas no)
     public void SetMoonsLethal(bool lethal)
     {
-        foreach (var m in moons) if (m != null) m.orbitLethal = lethal ? 1 : 0;
+        foreach (var m in moons) if (m != null) { m.orbitLethal = lethal ? 1 : 0; m.RefreshBodyIgnore(); }
+    }
+
+    // Lo que orbita y mata está en la capa de estáticos: el cuerpo del jugador (la cápsula) lo
+    // pararía siempre antes de que llegara al núcleo. Por eso el cuerpo lo ignora, solo a él
+    void RefreshBodyIgnore()
+    {
+        var pc = PlayerController.Main;
+        if (pc != null && col != null) pc.SetBodyIgnore(col, orbitHost != null && Lethal);
     }
     /// Lo que mata: lo que se mueve por su cuenta, un estático soltado, y las lunas
     /// de un cuerpo que las tenga declaradas mortales (coloso y cometa; el estático no).
@@ -139,6 +147,8 @@ public class Asteroid : MonoBehaviour
         sr = GetComponent<SpriteRenderer>();
         tails = GetComponentsInChildren<ParticleSystem>(true);
         baseOrder = sr != null ? sr.sortingOrder : 0;
+        // Contorno rojo cuando mata (lenguaje visual de peligro)
+        if (GetComponent<DangerOutline>() == null) gameObject.AddComponent<DangerOutline>();
     }
 
     int baseOrder;
@@ -164,6 +174,7 @@ public class Asteroid : MonoBehaviour
         orbitHost = null;
         orbitLethal = -1;
         moons.Clear();
+        RefreshBodyIgnore();   // del pool: sin restos de una órbita anterior
         restoreBlockedUntil = 0f;
         pulledUntil = 0f;
         wakeAccum = 0f;
@@ -848,6 +859,7 @@ public class Asteroid : MonoBehaviour
         SetLayer("AsteroidStatic");
         followsFlow = false;
         targetSpeed = 0f;
+        RefreshBodyIgnore();
 
         // Deja de contar como fragmento vivo: ahora forma parte del cuerpo, no es basura
         if (countedAsDebris)
@@ -870,6 +882,7 @@ public class Asteroid : MonoBehaviour
         if (host != null) host.moons.Remove(this);
         orbitHost = null;
         orbitLethal = -1;
+        RefreshBodyIgnore();
 
         SetLayer("AsteroidMoving");
         rb.bodyType = RigidbodyType2D.Dynamic;
@@ -1216,7 +1229,8 @@ public class Asteroid : MonoBehaviour
 
         if (!Lethal) return;
         var player = c.collider.GetComponentInParent<PlayerController>();
-        if (player != null) player.KillBy(this, c.contactCount > 0 ? c.GetContact(0).point : (Vector2)player.transform.position);
+        // Solo mata si toca el núcleo del jugador (el cuerpo solo topa)
+        if (player != null && player.IsCore(c.collider)) player.KillBy(this, c.contactCount > 0 ? c.GetContact(0).point : (Vector2)player.transform.position);
     }
 
     /// Energía real del choque: E = ½·m_reducida·v². La dispara solo el más pesado de
@@ -1337,7 +1351,7 @@ public class Asteroid : MonoBehaviour
             DebrisAlive = Mathf.Max(0, DebrisAlive - 1);
             countedAsDebris = false;
         }
-        if (orbitHost != null) { orbitHost.moons.Remove(this); orbitHost = null; }
+        if (orbitHost != null) { orbitHost.moons.Remove(this); orbitHost = null; RefreshBodyIgnore(); }
         // Devolverlas a dinámicas: si solo les quitara el anfitrión se quedarían
         // cinemáticas y congeladas para siempre en mitad del nivel.
         ReleaseMoons(Vector2.zero);

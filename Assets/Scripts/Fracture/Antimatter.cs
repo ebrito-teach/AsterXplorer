@@ -162,7 +162,7 @@ public class Antimatter : MonoBehaviour
     {
         if (!Alive || owner == null) return;
         var pc = other.GetComponentInParent<PlayerController>();
-        if (pc != null) { owner.OnHitPlayer(this, pc); return; }
+        if (pc != null) { if (pc.IsCore(other)) owner.OnHitPlayer(this, pc); return; }
         var a = other.GetComponentInParent<Asteroid>();
         if (a != null && a.isActiveAndEnabled) owner.OnShotHitRock(this, a);
     }
